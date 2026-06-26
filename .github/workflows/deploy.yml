@@ -41,6 +41,8 @@ jobs:
       - name: Build hub, feed, sitemap, manifest
         run: node scripts/generate-index.mjs --strict
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "."
