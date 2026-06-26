@@ -1,0 +1,31 @@
+{
+  "_comment": "RSS/Atom feeds per interest id. Fully editable. Validate with: node scripts/ingest.mjs --dry-run. NB: some niche sites (e.g. actuaries.digital, theactuary.com) block scripted requests behind a WAF — use feeds that serve scripts (Google News RSS queries, government/regulator feeds like APRA work well).",
+  "software-ai": [
+    "https://hnrss.org/frontpage",
+    "https://www.theverge.com/rss/index.xml",
+    "https://news.google.com/rss/search?q=%22artificial%20intelligence%22%20OR%20%22software%20engineering%22%20OR%20%22machine%20learning%22&hl=en-AU&gl=AU&ceid=AU:en"
+  ],
+  "finance": [
+    "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+    "https://boredombaron.substack.com/feed",
+    "https://news.google.com/rss/search?q=investing%20OR%20%22stock%20market%22%20OR%20%22interest%20rates%22%20OR%20superannuation%20OR%20RBA&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://news.google.com/rss/search?q=site:afr.com&hl=en-AU&gl=AU&ceid=AU:en"
+  ],
+  "health": [
+    "https://www.sciencedaily.com/rss/health_medicine.xml",
+    "https://news.google.com/rss/search?q=%22health%20research%22%20OR%20nutrition%20OR%20fitness%20OR%20longevity%20OR%20sleep&hl=en-AU&gl=AU&ceid=AU:en"
+  ],
+  "science": [
+    "https://www.sciencedaily.com/rss/top/science.xml",
+    "https://www.quantamagazine.org/feed/",
+    "https://news.google.com/rss/search?q=%22scientific%20research%22%20OR%20physics%20OR%20space%20OR%20biology%20OR%20climate&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://phys.org/rss-feed/"
+  ],
+  "actuarial": [
+    "https://invisiblebalancesheet.substack.com/feed",
+    "https://actuarialnotes.substack.com/feed",
+    "https://insurancenews.com.au/rss/daily",
+    "https://news.google.com/rss/search?q=%22group%20life%20insurance%22%20OR%20actuary%20OR%20%22IFRS%2017%22&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://www.apra.gov.au/rss.xml"
+  ]
+}

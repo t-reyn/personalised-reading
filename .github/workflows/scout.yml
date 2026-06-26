@@ -1,0 +1,57 @@
+name: Scout
+
+# Weekly: let Claude (subscription) propose new candidate feeds, validate them, and grow sources.json.
+# Cheap + bounded; no deploy needed (sources.json doesn't affect the published site at runtime).
+on:
+  schedule:
+    - cron: "0 19 * * 0" # Sundays 19:00 UTC (~Mon 6am AEST)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scout
+  cancel-in-progress: false
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Unit tests
+        run: node --test scripts/lib/*.test.mjs
+
+      # Materialise the private profile (gitignored) so the scout can tailor proposals to the reader.
+      - name: Write reader profile (from secret)
+        env:
+          READER_PROFILE: ${{ secrets.READER_PROFILE }}
+        run: |
+          if [ -n "$READER_PROFILE" ]; then printf '%s' "$READER_PROFILE" > data/profile.local.json; fi
+
+      - name: Propose candidate feeds (Claude, subscription)
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: "Read skills/SCOUT.md and follow it exactly: propose new candidate feeds into data/source-candidates.json, then stop."
+          claude_args: "--max-turns 20 --model claude-sonnet-4-6 --allowedTools Read,Write,Edit,Glob,Grep"
+
+      - name: Validate candidates + append the working ones
+        run: node scripts/validate-sources.mjs
+
+      - name: Commit grown source list
+        run: |
+          git config user.name "reading-bot"
+          git config user.email "noreply@users.noreply.github.com"
+          git add data/sources.json data/source-candidates.json
+          if git diff --cached --quiet; then
+            echo "no new sources this week"
+          else
+            git commit -m "scout: grow sources $(date -u +%Y-%m-%d)"
+            git push
+          fi

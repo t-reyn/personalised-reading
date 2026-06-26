@@ -1,0 +1,48 @@
+name: Deploy
+
+# Rebuild the hub + feed + sitemap and publish to GitHub Pages on every push to main.
+# State files are path-ignored so the browser's read/learnt sync (commits to those files via your
+# token) never triggers a needless rebuild.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "data/reading-state.json"
+      - "data/knowledge.json"
+      - "data/sources.json"
+      - "data/seen.json"
+      - "data/pool.json"
+      - "data/source-candidates.json"
+      - "data/usage-log.jsonl"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Unit tests
+        run: node --test scripts/lib/*.test.mjs
+      - name: Build hub, feed, sitemap, manifest
+        run: node scripts/generate-index.mjs --strict
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+      - id: deploy
+        uses: actions/deploy-pages@v4

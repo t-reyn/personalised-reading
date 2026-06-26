@@ -1,0 +1,14 @@
+{
+  "name": "Personalised Reading",
+  "short_name": "Reading",
+  "description": "A reading list that writes itself and learns what you know.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f6f3eb",
+  "theme_color": "#1f2430",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Why retrieval beats fine-tuning for most apps</title>
+  <meta name="description" content="When you need an LLM to know your data, reach for retrieval before fine-tuning — it is cheaper, fresher, and easier to debug." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="software-ai">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-06-25-retrieval-beats-fine-tuning">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>💻 Software &amp; AI</p>
+        <h1>Why retrieval beats fine-tuning for most apps</h1>
+        <p class="doc-meta">25 June 2026 · synthesised from 2 sources</p>
+        <p class="doc-summary">When you need an LLM to know your data, reach for retrieval before fine-tuning — it is cheaper, fresher, and easier to debug.</p>
+      </header>
+
+      <div class="doc-body">
+        <p>The instinct, when a model doesn't know about your product or your documents, is to fine-tune it on them. For most applications that's the wrong first move. <strong>Retrieval-augmented generation (RAG)</strong> keeps the model fixed and instead, at query time, looks up the most relevant chunks of your data and pastes them into the prompt as context. The model then answers from material it can see in front of it.</p>
+        <p>Because you already work with embeddings to find those chunks, the retrieval step is the easy part: store your documents as vectors, find the nearest few to the question, and hand them over. Nothing about the model changes, so there is no training run to pay for and nothing to re-do when a document is updated — you just re-index.</p>
+        <p>That is the real argument for retrieval over fine-tuning: <em>freshness and debuggability</em>. When an answer is wrong, you can read exactly which passages were retrieved and see whether the problem was bad retrieval or bad reasoning. Fine-tuning bakes knowledge into opaque weights, where the same mistake is far harder to trace. Reach for fine-tuning when you need to change the model's <em>behaviour or format</em>, not when you simply need it to know more facts.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://example.com/rag-vs-ft" target="_blank" rel="noopener">RAG vs fine-tuning, in practice</a></li>
+          <li><a href="https://example.com/vector-search" target="_blank" rel="noopener">Vector search for application developers</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-06-25-retrieval-beats-fine-tuning",
+  "slug": "retrieval-beats-fine-tuning",
+  "interest": "software-ai",
+  "title": "Why retrieval beats fine-tuning for most apps",
+  "summary": "When you need an LLM to know your data, reach for retrieval before fine-tuning — it is cheaper, fresher, and easier to debug.",
+  "tags": ["llm", "rag", "vector-db"],
+  "created_at": "2026-06-25",
+  "expire_at": "2026-07-16",
+  "concepts_taught": ["rag"],
+  "concepts_assumed": ["embeddings"],
+  "sources": [
+    { "title": "RAG vs fine-tuning, in practice", "url": "https://example.com/rag-vs-ft" },
+    { "title": "Vector search for application developers", "url": "https://example.com/vector-search" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    { "q": "What does retrieval-augmented generation do at query time?", "options": ["Re-trains the model on your data", "Fetches relevant documents and adds them to the prompt", "Compresses the model weights", "Caches the model's previous answers"], "correct": 1, "concept": "rag" }
+  ]
+}
+  </script>
+</body>
+</html>

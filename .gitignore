@@ -1,0 +1,17 @@
+# logs & local
+*.log
+.DS_Store
+Thumbs.db
+
+# secrets — never commit a token
+.env
+.env.*
+
+# local reader profile (derived from private context — never publish to the public repo)
+*.local.json
+
+# unpublished drafts
+articles/**/_drafts/
+
+# node (there are no deps, but just in case)
+node_modules/

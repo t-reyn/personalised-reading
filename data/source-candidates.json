@@ -1,0 +1,3 @@
+{
+  "_comment": "The scout writes candidate feeds here as {interestId:[urls]}; validate-sources.mjs validates + appends the working ones to sources.json, then clears this file."
+}

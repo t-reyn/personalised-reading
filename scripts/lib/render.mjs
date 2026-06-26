@@ -1,0 +1,166 @@
+// Build the generated artifacts: manifest.json, feed.xml, sitemap.xml, index.html.
+import { escapeHtml, escapeXml, toRfc822, humanDate } from "./text.mjs";
+
+const live = (items) => items.filter((i) => i.meta && !i.meta.merged_into);
+
+export function buildManifest(items, now) {
+  const articles = items
+    .filter((i) => i.meta)
+    .map(({ meta }) => ({
+      id: meta.id,
+      slug: meta.slug,
+      interest: meta.interest,
+      title: meta.title,
+      summary: meta.summary,
+      tags: meta.tags ?? [],
+      created_at: meta.created_at,
+      expire_at: meta.expire_at ?? null,
+      concepts_taught: meta.concepts_taught ?? [],
+      concepts_assumed: meta.concepts_assumed ?? [],
+      source_count: (meta.sources ?? []).length,
+      merged_from: meta.merged_from ?? [],
+      merged_into: meta.merged_into ?? null,
+      path: meta.path,
+    }));
+  return { version: 1, generatedAt: now, count: articles.length, articles };
+}
+
+export function buildFeedXml(items, config, now) {
+  const site = (config.siteUrl || "").replace(/\/+$/, "");
+  const entries = live(items)
+    .slice(0, 50)
+    .map(({ meta }) => {
+      const url = `${site}/${meta.path}`;
+      return `    <item>
+      <title>${escapeXml(meta.title)}</title>
+      <link>${escapeXml(url)}</link>
+      <guid isPermaLink="true">${escapeXml(url)}</guid>
+      <category>${escapeXml(meta.interest)}</category>
+      <pubDate>${toRfc822(meta.created_at)}</pubDate>
+      <description>${escapeXml(meta.summary || "")}</description>
+    </item>`;
+    })
+    .join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>${escapeXml(config.title || "Reading")}</title>
+    <link>${escapeXml(site)}/</link>
+    <description>${escapeXml(config.tagline || "")}</description>
+    <lastBuildDate>${toRfc822(now)}</lastBuildDate>
+${entries}
+  </channel>
+</rss>
+`;
+}
+
+export function buildSitemapXml(items, config, now) {
+  const site = (config.siteUrl || "").replace(/\/+$/, "");
+  const urls = [`${site}/`, ...live(items).map((i) => `${site}/${i.meta.path}`)];
+  const body = urls.map((u) => `  <url><loc>${escapeXml(u)}</loc></url>`).join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${body}
+</urlset>
+`;
+}
+
+export const buildVersion = (now) => now.replace(/[-:TZ.]/g, "").slice(0, 14);
+
+export function buildIndexHtml(config, stats, now) {
+  const cfgJson = JSON.stringify(config).replace(/</g, "\\u003c");
+  const v = buildVersion(now);
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>${escapeHtml(config.title || "Reading")}</title>
+  <meta name="description" content="${escapeHtml(config.tagline || "")}" />
+  <meta name="theme-color" content="#1f2430" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css?v=${v}" />
+  <script>
+    try { var _t = localStorage.getItem("pr:theme"); if (_t === "dark" || _t === "light") document.documentElement.dataset.theme = _t; } catch (e) {}
+    window.PR_BASE = "./";
+    window.PR_BUILD = ${JSON.stringify(now)};
+    window.PR_CONFIG = ${cfgJson};
+  </script>
+</head>
+<body data-page="hub">
+  <header class="top">
+    <div class="top-row">
+      <h1 class="brand">${escapeHtml(config.title || "Reading")}</h1>
+      <div class="top-actions">
+        <button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+        <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙</button>
+      </div>
+    </div>
+    <p class="tagline">${escapeHtml(config.tagline || "")}</p>
+    <input id="search" class="search" type="search" placeholder="Search ${stats.count} article${stats.count === 1 ? "" : "s"}…" aria-label="Search articles" />
+  </header>
+
+  <nav id="tabs" class="tabs" aria-label="Interests"></nav>
+  <p id="syncline" class="syncline" hidden></p>
+  <main id="list" class="list" aria-live="polite"></main>
+
+  <footer class="foot">
+    <button id="archiveToggle" class="archive-toggle" hidden></button>
+    <span>${stats.count} article${stats.count === 1 ? "" : "s"} · built ${escapeHtml(humanDate(now.slice(0, 10)))}</span>
+    <span class="foot-note">Written for you by Claude · adapts to what you've learnt.</span>
+  </footer>
+
+  <div id="reader" class="overlay" hidden aria-modal="true" role="dialog"></div>
+  <div id="quiz" class="overlay" hidden aria-modal="true" role="dialog"></div>
+  <div id="settings" class="overlay" hidden aria-modal="true" role="dialog"></div>
+
+  <script src="app.js?v=${v}"></script>
+</body>
+</html>
+`;
+}
+
+export function buildServiceWorker(now) {
+  const v = buildVersion(now);
+  return `/* generated by scripts/generate-index.mjs — do not hand-edit.
+   Offline shell + visited articles. Never caches the GitHub API or user-state JSON. */
+const VERSION = "pr-${v}";
+const CORE = ["./", "index.html", "app.js?v=${v}", "styles.css?v=${v}", "favicon.svg", "manifest.webmanifest", "data/manifest.json"];
+
+self.addEventListener("install", (e) => {
+  self.skipWaiting();
+  e.waitUntil(caches.open(VERSION).then((c) => c.addAll(CORE).catch(() => {})));
+});
+self.addEventListener("activate", (e) => {
+  e.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.filter((k) => k !== VERSION).map((k) => caches.delete(k)));
+    await self.clients.claim();
+  })());
+});
+const isStateFile = (url) => /\\/data\\/(reading-state|knowledge)\\.json$/.test(url.pathname);
+self.addEventListener("fetch", (e) => {
+  const req = e.request;
+  if (req.method !== "GET") return;
+  const url = new URL(req.url);
+  if (url.origin !== self.location.origin || isStateFile(url)) return;
+  const isAsset = /\\.(css|js|svg|png|ico|woff2?)$/.test(url.pathname);
+  if (req.mode === "navigate" || url.pathname.endsWith("/data/manifest.json") || url.pathname.includes("/articles/")) {
+    e.respondWith((async () => {
+      try { const fresh = await fetch(req); if (fresh && fresh.ok) (await caches.open(VERSION)).put(req, fresh.clone()); return fresh; }
+      catch { return (await caches.match(req)) || (await caches.match("./")) || Response.error(); }
+    })());
+    return;
+  }
+  if (isAsset) {
+    e.respondWith((async () => {
+      const cached = await caches.match(req);
+      const fetching = fetch(req).then((res) => { if (res && res.ok) caches.open(VERSION).then((c) => c.put(req, res.clone())); return res; }).catch(() => null);
+      return cached || (await fetching) || Response.error();
+    })());
+  }
+});
+`;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<!--
+  ARTICLE TEMPLATE — styling + structure source of truth.
+  When authoring, COPY this file to articles/YYYY-MM-DD/<slug>.html and fill every {{PLACEHOLDER}}
+  and the #meta JSON block at the bottom. Do not hand-edit articles after generation in ways that
+  break the #meta block — scripts/generate-index.mjs parses it to build the hub, feed and manifest.
+
+  HARD RULES for the body (see skills/<interest>/SKILL.md):
+   - Read data/knowledge.json: do NOT re-explain concepts already learnt; do NOT assume concepts
+     not yet learnt (teach an assumed prerequisite briefly inline, or list it in concepts_assumed).
+   - Synthesise multiple sources into ONE original piece; cite them in "sources".
+   - Fold in still-relevant UNREAD pool items where they fit; list their article ids in merged_from.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{SUMMARY}}" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="{{INTEREST_ID}}">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article={{ID}}">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>{{INTEREST_EMOJI}} {{INTEREST_LABEL}}</p>
+        <h1>{{TITLE}}</h1>
+        <p class="doc-meta">{{DATE_HUMAN}} · synthesised from {{SOURCE_COUNT}} sources</p>
+        <p class="doc-summary">{{SUMMARY}}</p>
+      </header>
+
+      <div class="doc-body">
+        {{BODY_HTML}}
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          {{SOURCES_LIST}}
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{{META_JSON}}
+  </script>
+</body>
+</html>

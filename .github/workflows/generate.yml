@@ -1,0 +1,112 @@
+name: Generate
+
+# Writes today's issue on a schedule, billed to your Claude SUBSCRIPTION (no API key, no PC needed).
+# Kept short and bounded because headless OAuth tokens don't refresh mid-run (see CLOUD_SETUP.md).
+on:
+  schedule:
+    # 20:00 UTC = 6:00am AEST (Sydney). Adjust to taste.
+    - cron: "0 20 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: generate
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # 0. Fail fast before spending a Claude run if the build helpers regressed.
+      - name: Unit tests
+        run: node --test scripts/lib/*.test.mjs
+
+      # 1. Refresh the source pool from your feeds (deterministic, no LLM).
+      - name: Ingest feeds
+        run: node scripts/ingest.mjs
+
+      # 2. Materialise the private reader profile from a secret. Gitignored (*.local.json) so it is
+      #    NEVER committed. If the secret is unset, authoring falls back to generic (still works).
+      - name: Write reader profile (from secret)
+        env:
+          READER_PROFILE: ${{ secrets.READER_PROFILE }}
+        run: |
+          if [ -n "$READER_PROFILE" ]; then
+            printf '%s' "$READER_PROFILE" > data/profile.local.json
+            echo "reader profile materialised"
+          else
+            echo "no READER_PROFILE secret set — generic authoring"
+          fi
+
+      # 3. Author today's articles on your subscription. Bounded turns + the run timeout above keep it
+      #    well under the headless-token window.
+      - name: Author articles (Claude, subscription)
+        id: author
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: "Read CLAUDE.md and skills/AUTHORING.md, then write today's issue exactly as they instruct. Stop when the articles, knowledge.json and pool.json are updated."
+          claude_args: "--max-turns 40 --model claude-sonnet-4-6 --allowedTools Read,Write,Edit,Glob,Grep"
+
+      # 3b. Record this run's tokens + cost estimate to data/usage-log.jsonl (token counts are the
+      #     reliable figures; cost_usd is a client-side estimate, fine for trend analysis).
+      - name: Record usage
+        if: always()
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          ART=$(ls articles/"$DATE"/*.html 2>/dev/null | wc -l | tr -d ' ')
+          FILE="$RUNNER_TEMP/claude-execution-output.json"
+          COST=null; IN=null; OUT=null; CR=null; CC=null; TURNS=null
+          if [ -f "$FILE" ]; then
+            R=$(jq -s 'flatten | map(select(.type=="result")) | last // {}' "$FILE" 2>/dev/null || echo '{}')
+            COST=$(printf '%s' "$R" | jq -r '.total_cost_usd // "null"')
+            IN=$(printf  '%s' "$R" | jq -r '.usage.input_tokens // "null"')
+            OUT=$(printf '%s' "$R" | jq -r '.usage.output_tokens // "null"')
+            CR=$(printf  '%s' "$R" | jq -r '.usage.cache_read_input_tokens // "null"')
+            CC=$(printf  '%s' "$R" | jq -r '.usage.cache_creation_input_tokens // "null"')
+            TURNS=$(printf '%s' "$R" | jq -r '.num_turns // "null"')
+          else
+            echo "no execution-output file at $FILE — logging counts only (refine after run 1)"
+          fi
+          printf '{"date":"%s","articles":%s,"cost_usd":%s,"input":%s,"output":%s,"cache_read":%s,"cache_creation":%s,"turns":%s,"model":"claude-sonnet-4-6"}\n' \
+            "$DATE" "${ART:-0}" "$COST" "$IN" "$OUT" "$CR" "$CC" "$TURNS" >> data/usage-log.jsonl
+          echo "usage row: $(tail -1 data/usage-log.jsonl)"
+
+      # 4. Build the hub/feed/sitemap/manifest from the new articles.
+      - name: Build
+        run: node scripts/generate-index.mjs --strict
+
+      # 5. Persist generated content. `git add` is path-scoped and .gitignore protects the profile,
+      #    so the secret-derived profile is never committed.
+      - name: Commit
+        run: |
+          git config user.name "reading-bot"
+          git config user.email "noreply@users.noreply.github.com"
+          git add articles data/pool.json data/seen.json data/knowledge.json data/manifest.json data/usage-log.jsonl index.html feed.xml sitemap.xml sw.js
+          if git diff --cached --quiet; then
+            echo "nothing new to commit"
+          else
+            git commit -m "write: $(date -u +%Y-%m-%d) issue"
+            git push
+          fi
+
+      # 6. Publish.
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+      - id: deploy
+        uses: actions/deploy-pages@v4
