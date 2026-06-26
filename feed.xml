@@ -2,37 +2,37 @@
 <rss version="2.0">
   <channel>
     <title>Reading</title>
-    <link>https://USERNAME.github.io/personalised-reading/</link>
+    <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Fri, 26 Jun 2026 14:51:10 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 15:20:16 GMT</lastBuildDate>
     <item>
       <title>The IFRS 17 CSM, in plain terms</title>
-      <link>https://USERNAME.github.io/personalised-reading/articles/2026-06-25/ifrs17-csm-in-plain-terms.html</link>
-      <guid isPermaLink="true">https://USERNAME.github.io/personalised-reading/articles/2026-06-25/ifrs17-csm-in-plain-terms.html</guid>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-25/ifrs17-csm-in-plain-terms.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-25/ifrs17-csm-in-plain-terms.html</guid>
       <category>actuarial</category>
       <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
       <description>The contractual service margin is how IFRS 17 stops insurers booking profit on day one — and spreads it over the life of the cover instead.</description>
     </item>
     <item>
       <title>What rising real yields mean for your portfolio</title>
-      <link>https://USERNAME.github.io/personalised-reading/articles/2026-06-25/real-yields-and-your-portfolio.html</link>
-      <guid isPermaLink="true">https://USERNAME.github.io/personalised-reading/articles/2026-06-25/real-yields-and-your-portfolio.html</guid>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-25/real-yields-and-your-portfolio.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-25/real-yields-and-your-portfolio.html</guid>
       <category>finance</category>
       <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
       <description>Real yields are the interest rate after inflation — and when they rise, almost every asset you own has to re-price.</description>
     </item>
     <item>
       <title>Why retrieval beats fine-tuning for most apps</title>
-      <link>https://USERNAME.github.io/personalised-reading/articles/2026-06-25/retrieval-beats-fine-tuning.html</link>
-      <guid isPermaLink="true">https://USERNAME.github.io/personalised-reading/articles/2026-06-25/retrieval-beats-fine-tuning.html</guid>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-25/retrieval-beats-fine-tuning.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-25/retrieval-beats-fine-tuning.html</guid>
       <category>software-ai</category>
       <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
       <description>When you need an LLM to know your data, reach for retrieval before fine-tuning — it is cheaper, fresher, and easier to debug.</description>
     </item>
     <item>
       <title>Zone 2 training, explained</title>
-      <link>https://USERNAME.github.io/personalised-reading/articles/2026-06-25/zone-2-training-explained.html</link>
-      <guid isPermaLink="true">https://USERNAME.github.io/personalised-reading/articles/2026-06-25/zone-2-training-explained.html</guid>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-25/zone-2-training-explained.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-25/zone-2-training-explained.html</guid>
       <category>health</category>
       <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
       <description>The slow, conversational pace that builds your aerobic base — what Zone 2 is, why it works, and how to find yours.</description>
