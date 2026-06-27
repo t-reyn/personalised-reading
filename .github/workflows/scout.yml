@@ -45,6 +45,8 @@ jobs:
         run: node scripts/validate-sources.mjs
 
       - name: Commit grown source list
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "reading-bot"
           git config user.email "noreply@users.noreply.github.com"
@@ -53,5 +55,5 @@ jobs:
             echo "no new sources this week"
           else
             git commit -m "scout: grow sources $(date -u +%Y-%m-%d)"
-            git push
+            git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
           fi

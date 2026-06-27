@@ -74,8 +74,6 @@ async function main() {
   const pool = await readJson("data/pool.json", { version: 1, items: [] });
 
   const seen = new Set(seenState.seen || []);
-  const firstEverRun = seen.size === 0;
-  if (firstEverRun) log("first run — baselining feeds (recording as seen, not adding to the pool)");
 
   let added = 0, fetched = 0, failed = 0;
   for (const interest of config.interests || []) {
@@ -90,7 +88,7 @@ async function main() {
         const key = hash(it.guid || it.url);
         if (seen.has(key)) continue;
         seen.add(key);
-        if (firstEverRun || newForFeed >= PER_FEED_CAP) continue; // baseline / cap: mark seen, don't pool
+        if (newForFeed >= PER_FEED_CAP) continue; // cap per feed: mark seen, don't pool beyond the cap
         pool.items.push({
           id: `${interest.id}-${hash(it.guid || it.url)}`,
           interest: interest.id,
