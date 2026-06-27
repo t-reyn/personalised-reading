@@ -1,6 +1,6 @@
 {
-  "name": "Personalised Reading",
-  "short_name": "Reading",
+  "name": "Cairn",
+  "short_name": "Cairn",
   "description": "A reading list that writes itself and learns what you know.",
   "start_url": "./",
   "scope": "./",
