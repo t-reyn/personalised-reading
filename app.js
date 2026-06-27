@@ -29,7 +29,9 @@
   function loadLocal(key, fallback) {
     try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch { return fallback; }
   }
-  const repoCfg = () => loadLocal(LS.repo, null);
+  // Repo coordinates default to config.json so a new device only needs a token pasted.
+  const repoDefault = CONFIG.repo && CONFIG.repo.owner && CONFIG.repo.name ? { branch: "main", ...CONFIG.repo } : null;
+  const repoCfg = () => loadLocal(LS.repo, null) || repoDefault;
   const token = () => { try { return localStorage.getItem(LS.token) || ""; } catch { return ""; } };
 
   async function fetchJson(path) {
