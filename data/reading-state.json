@@ -1,6 +1,26 @@
 {
   "version": 1,
-  "updatedAt": null,
-  "articles": {},
-  "quizzes": {}
+  "updatedAt": "2026-06-27T14:27:45.985Z",
+  "articles": {
+    "2026-06-25-ifrs17-csm-in-plain-terms": {
+      "status": "read",
+      "read_at": "2026-06-27T14:27:36.235Z"
+    },
+    "2026-06-25-zone-2-training-explained": {
+      "status": "read",
+      "read_at": "2026-06-27T14:27:45.985Z"
+    }
+  },
+  "quizzes": {
+    "2026-06-25-ifrs17-csm-in-plain-terms": {
+      "score": 1,
+      "passed": true,
+      "taken_at": "2026-06-27T14:27:36.235Z"
+    },
+    "2026-06-25-zone-2-training-explained": {
+      "score": 1,
+      "passed": true,
+      "taken_at": "2026-06-27T14:27:45.985Z"
+    }
+  }
 }
