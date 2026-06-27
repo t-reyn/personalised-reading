@@ -59,7 +59,7 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: "Read CLAUDE.md and skills/AUTHORING.md, then write today's issue exactly as they instruct. Stop when the articles, knowledge.json and pool.json are updated."
-          claude_args: "--max-turns 40 --model claude-sonnet-4-6 --allowedTools Read,Write,Edit,Glob,Grep"
+          claude_args: "--max-turns 40 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep"
 
       # 3b. Record this run's tokens + cost estimate to data/usage-log.jsonl (token counts are the
       #     reliable figures; cost_usd is a client-side estimate, fine for trend analysis).
@@ -81,7 +81,7 @@ jobs:
           else
             echo "no execution-output file at $FILE — logging counts only (refine after run 1)"
           fi
-          printf '{"date":"%s","articles":%s,"cost_usd":%s,"input":%s,"output":%s,"cache_read":%s,"cache_creation":%s,"turns":%s,"model":"claude-sonnet-4-6"}\n' \
+          printf '{"date":"%s","articles":%s,"cost_usd":%s,"input":%s,"output":%s,"cache_read":%s,"cache_creation":%s,"turns":%s,"model":"sonnet"}\n' \
             "$DATE" "${ART:-0}" "$COST" "$IN" "$OUT" "$CR" "$CC" "$TURNS" >> data/usage-log.jsonl
           echo "usage row: $(tail -1 data/usage-log.jsonl)"
 
