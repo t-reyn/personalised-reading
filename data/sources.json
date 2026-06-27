@@ -27,5 +27,11 @@
     "https://insurancenews.com.au/rss/daily",
     "https://news.google.com/rss/search?q=%22group%20life%20insurance%22%20OR%20actuary%20OR%20%22IFRS%2017%22&hl=en-AU&gl=AU&ceid=AU:en",
     "https://www.apra.gov.au/rss.xml"
+  ],
+  "design": [
+    "https://www.nngroup.com/feed/rss/",
+    "https://www.smashingmagazine.com/feed/",
+    "https://uxdesign.cc/feed",
+    "https://www.joshwcomeau.com/rss.xml"
   ]
 }

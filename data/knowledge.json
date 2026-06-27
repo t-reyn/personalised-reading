@@ -90,6 +90,22 @@
       "review_level": 3,
       "next_review_at": null,
       "learnt_at": "2026-06-27T15:19:35.363Z"
+    },
+    "visual-hierarchy": {
+      "is_learnt": false,
+      "first_taught": "2026-06-28-visual-hierarchy-basics"
+    },
+    "type-scale": {
+      "is_learnt": false,
+      "first_taught": "2026-06-28-visual-hierarchy-basics"
+    },
+    "whitespace-rhythm": {
+      "is_learnt": false,
+      "first_taught": "2026-06-28-visual-hierarchy-basics"
+    },
+    "contrast-for-hierarchy": {
+      "is_learnt": false,
+      "first_taught": "2026-06-28-visual-hierarchy-basics"
     }
   }
 }

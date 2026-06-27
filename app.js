@@ -97,6 +97,7 @@
     sweepExpired();
 
     wireChrome();
+    readHashState();
     renderTabs();
     render();
     handleDeepLink();
@@ -139,7 +140,7 @@
     const mk = (id, label, emoji, n) =>
       `<button class="tab" role="tab" data-tab="${esc(id)}" aria-selected="${activeTab === id}">${emoji ? esc(emoji) + " " : ""}${esc(label)}${n ? ` <span class="count">${n}</span>` : ""}</button>`;
     tabs.innerHTML = mk("all", "All", "", total) + INTERESTS.map((i) => mk(i.id, i.label, i.emoji, counts[i.id] || 0)).join("");
-    tabs.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () => { activeTab = b.dataset.tab; renderTabs(); render(); }));
+    tabs.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () => { activeTab = b.dataset.tab; writeHashState(); renderTabs(); render(); }));
   }
 
   function ageLabel(a) {
@@ -190,11 +191,13 @@
     const arts = visibleArticles();
     const archived = arts.filter((a) => statusOf(a.id) === "archived");
     const active = arts.filter((a) => statusOf(a.id) !== "archived");
+    const rc = $("#resultCount");
+    if (rc) rc.textContent = (query && !viewArchive) ? `${active.length} result${active.length === 1 ? "" : "s"} for “${query}”` : "";
 
     if (viewArchive) {
       list.innerHTML = `<h2 class="shelf-title">Archive · outdated or set aside</h2>` +
         (archived.length
-          ? archived.sort(byNew).map((a) => cardHtml(a, true)).join("")
+          ? `<div class="shelf-grid">${archived.sort(byNew).map((a) => cardHtml(a, true)).join("")}</div>`
           : `<div class="empty"><p>Nothing archived yet. Unread items move here once they pass their freshness date (star one to keep it forever).</p></div>`);
       bindCards(list);
       updateArchiveToggle();
@@ -208,7 +211,7 @@
     }
     const buckets = { normal: [], review: [], blocked: [], read: [] };
     active.forEach((a) => { if (isRead(a.id)) buckets.read.push(a); else buckets[category(a)].push(a); });
-    const shelf = (title, items) => items.length ? `<h2 class="shelf-title">${title}</h2>` + items.sort(byNew).map((a) => cardHtml(a)).join("") : "";
+    const shelf = (title, items) => items.length ? `<h2 class="shelf-title">${title}</h2><div class="shelf-grid">${items.sort(byNew).map((a) => cardHtml(a)).join("")}</div>` : "";
     list.innerHTML =
       shelf("To read", buckets.normal) +
       shelf("Worth a review", buckets.review) +
@@ -480,9 +483,39 @@
     if (tb) { tb.textContent = currentTheme() === "dark" ? "☀" : "☾"; tb.addEventListener("click", () => applyTheme(currentTheme() === "dark" ? "light" : "dark")); }
     $("#archiveToggle")?.addEventListener("click", () => { viewArchive = !viewArchive; render(); window.scrollTo(0, 0); });
     const s = $("#search");
-    s.addEventListener("input", () => { query = s.value.trim(); render(); });
+    s.addEventListener("input", () => { query = s.value.trim(); writeHashState(); render(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") document.querySelectorAll(".overlay:not([hidden])").forEach(hide); });
+    document.addEventListener("keydown", onShortcutKey);
     if ("serviceWorker" in navigator) navigator.serviceWorker.register(BASE + "sw.js").catch(() => {});
+  }
+  // Keyboard: / focuses search, j/k (or arrows) move a roving selection through cards, o opens.
+  // Enter is intentionally NOT handled here — cards bind their own Enter (avoids a double-open).
+  function onShortcutKey(e) {
+    if (document.querySelector(".overlay:not([hidden])")) return;
+    const typing = /^(INPUT|TEXTAREA)$/.test(e.target.tagName);
+    if (e.key === "/" && !typing) { e.preventDefault(); $("#search")?.focus(); return; }
+    if (typing) return;
+    const cards = [...document.querySelectorAll("#list .card")];
+    if (!cards.length) return;
+    const cur = cards.indexOf(document.activeElement);
+    if (e.key === "j" || e.key === "ArrowDown") { e.preventDefault(); (cards[cur + 1] || cards[0]).focus(); }
+    else if (e.key === "k" || e.key === "ArrowUp") { e.preventDefault(); (cards[Math.max(cur - 1, 0)] || cards[0]).focus(); }
+    else if (e.key === "o" && cur >= 0) { e.preventDefault(); openReader(cards[cur].dataset.id); }
+  }
+  // Filter state (tab + search) lives in the URL hash so a filtered view is bookmarkable/shareable across devices.
+  function readHashState() {
+    const h = new URLSearchParams((location.hash || "").replace(/^#/, ""));
+    const t = h.get("t");
+    if (t && (t === "all" || INTERESTS.some((i) => i.id === t))) activeTab = t;
+    const q = h.get("q");
+    if (q) { query = q; const s = $("#search"); if (s) s.value = q; }
+  }
+  function writeHashState() {
+    const p = new URLSearchParams();
+    if (activeTab && activeTab !== "all") p.set("t", activeTab);
+    if (query) p.set("q", query);
+    const hash = p.toString();
+    try { history.replaceState(null, "", hash ? "#" + hash : location.pathname + location.search); } catch {}
   }
   function handleDeepLink() {
     const id = new URLSearchParams(location.search).get("article");

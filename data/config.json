@@ -15,7 +15,8 @@
     { "id": "finance",      "label": "Finance & Investing",  "emoji": "📈", "accent": "#3f9b6e", "ttlDays": 21 },
     { "id": "health",       "label": "Health & Fitness",     "emoji": "🏃", "accent": "#d08a3e", "ttlDays": 45 },
     { "id": "science",      "label": "Science & World",      "emoji": "🔬", "accent": "#8e6fb0", "ttlDays": 21 },
-    { "id": "actuarial",    "label": "Actuarial & Group Life","emoji": "📊", "accent": "#b5524a", "ttlDays": null }
+    { "id": "actuarial",    "label": "Actuarial & Group Life","emoji": "📊", "accent": "#b5524a", "ttlDays": null },
+    { "id": "design",       "label": "Design & Craft",       "emoji": "🎨", "accent": "#c77d8e", "ttlDays": 60 }
   ],
   "freshness": {
     "agingAfterDays": 3,

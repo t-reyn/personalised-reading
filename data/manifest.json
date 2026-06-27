@@ -1,8 +1,35 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-27T15:31:06.362Z",
-  "count": 8,
+  "generatedAt": "2026-06-27T16:15:46.315Z",
+  "count": 9,
   "articles": [
+    {
+      "id": "2026-06-28-visual-hierarchy-basics",
+      "slug": "visual-hierarchy-basics",
+      "interest": "design",
+      "title": "Visual Hierarchy: Making the Eye Land Where You Want",
+      "summary": "The single skill that separates a polished interface from a homemade one. Four levers — size, weight, contrast, and space — that tell a reader what to look at first, and how to test it in seconds.",
+      "tags": [
+        "visual design",
+        "hierarchy",
+        "typography",
+        "whitespace",
+        "UI"
+      ],
+      "created_at": "2026-06-28",
+      "expire_at": "2026-08-27",
+      "concepts_taught": [
+        "visual-hierarchy",
+        "type-scale",
+        "whitespace-rhythm",
+        "contrast-for-hierarchy"
+      ],
+      "concepts_assumed": [],
+      "source_count": 3,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-06-28/visual-hierarchy-basics.html"
+    },
     {
       "id": "2026-06-27-apra-quarterly-june-2026",
       "slug": "apra-quarterly-june-2026",

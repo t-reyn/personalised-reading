@@ -78,9 +78,14 @@ export function buildIndexHtml(config, stats, now) {
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>${escapeHtml(config.title || "Reading")}</title>
   <meta name="description" content="${escapeHtml(config.tagline || "")}" />
-  <meta name="theme-color" content="#1f2430" />
+  <meta name="theme-color" content="#f6f3eb" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#16140f" media="(prefers-color-scheme: dark)" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="alternate" type="application/rss+xml" title="${escapeHtml(config.title || "Reading")}" href="feed.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" />
   <link rel="stylesheet" href="styles.css?v=${v}" />
   <script>
     try { var _t = localStorage.getItem("pr:theme"); if (_t === "dark" || _t === "light") document.documentElement.dataset.theme = _t; } catch (e) {}
@@ -90,27 +95,33 @@ export function buildIndexHtml(config, stats, now) {
   </script>
 </head>
 <body data-page="hub">
-  <header class="top">
-    <div class="top-row">
-      <h1 class="brand">${escapeHtml(config.title || "Reading")}</h1>
-      <div class="top-actions">
-        <button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
-        <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙</button>
-      </div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <header class="top">
+        <div class="top-row">
+          <h1 class="brand">${escapeHtml(config.title || "Reading")}</h1>
+          <div class="top-actions">
+            <button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+            <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙</button>
+          </div>
+        </div>
+        <p class="tagline">${escapeHtml(config.tagline || "")}</p>
+        <input id="search" class="search" type="search" placeholder="Search ${stats.count} article${stats.count === 1 ? "" : "s"}…" aria-label="Search articles" />
+      </header>
+      <nav id="tabs" class="tabs" aria-label="Interests"></nav>
+      <button id="archiveToggle" class="archive-toggle" hidden></button>
+      <p id="syncline" class="syncline" hidden></p>
+    </aside>
+
+    <div class="content">
+      <main id="list" class="list" aria-live="polite"></main>
+      <footer class="foot">
+        <span id="resultCount" class="result-count"></span>
+        <span>${stats.count} article${stats.count === 1 ? "" : "s"} · built ${escapeHtml(humanDate(now.slice(0, 10)))}</span>
+        <span class="foot-note">Written for you by Claude · adapts to what you've learnt.</span>
+      </footer>
     </div>
-    <p class="tagline">${escapeHtml(config.tagline || "")}</p>
-    <input id="search" class="search" type="search" placeholder="Search ${stats.count} article${stats.count === 1 ? "" : "s"}…" aria-label="Search articles" />
-  </header>
-
-  <nav id="tabs" class="tabs" aria-label="Interests"></nav>
-  <p id="syncline" class="syncline" hidden></p>
-  <main id="list" class="list" aria-live="polite"></main>
-
-  <footer class="foot">
-    <button id="archiveToggle" class="archive-toggle" hidden></button>
-    <span>${stats.count} article${stats.count === 1 ? "" : "s"} · built ${escapeHtml(humanDate(now.slice(0, 10)))}</span>
-    <span class="foot-note">Written for you by Claude · adapts to what you've learnt.</span>
-  </footer>
+  </div>
 
   <div id="reader" class="overlay" hidden aria-modal="true" role="dialog"></div>
   <div id="quiz" class="overlay" hidden aria-modal="true" role="dialog"></div>
