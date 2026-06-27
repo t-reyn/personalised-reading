@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-27T14:27:45.985Z",
+  "updatedAt": "2026-06-27T15:19:35.362Z",
   "articles": {
     "2026-06-25-ifrs17-csm-in-plain-terms": {
       "status": "read",
@@ -9,6 +9,10 @@
     "2026-06-25-zone-2-training-explained": {
       "status": "read",
       "read_at": "2026-06-27T14:27:45.985Z"
+    },
+    "2026-06-25-real-yields-and-your-portfolio": {
+      "status": "read",
+      "read_at": "2026-06-27T15:19:35.362Z"
     }
   },
   "quizzes": {
@@ -21,6 +25,11 @@
       "score": 1,
       "passed": true,
       "taken_at": "2026-06-27T14:27:45.985Z"
+    },
+    "2026-06-25-real-yields-and-your-portfolio": {
+      "score": 1,
+      "passed": true,
+      "taken_at": "2026-06-27T15:19:35.362Z"
     }
   }
 }
