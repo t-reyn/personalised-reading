@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-27T14:30:00.000Z",
+  "updatedAt": "2026-06-27T15:19:35.363Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": false,
@@ -81,6 +81,15 @@
     "super-fund-performance-metrics": {
       "is_learnt": false,
       "first_taught": "2026-06-27-apra-quarterly-june-2026"
+    },
+    "real-yields": {
+      "label": "real-yields",
+      "interest": "finance",
+      "prerequisite_ids": [],
+      "is_learnt": true,
+      "review_level": 3,
+      "next_review_at": null,
+      "learnt_at": "2026-06-27T15:19:35.363Z"
     }
   }
 }
