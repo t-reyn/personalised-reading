@@ -1,8 +1,44 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-27T13:11:51.952Z",
-  "count": 5,
+  "generatedAt": "2026-06-27T14:18:59.266Z",
+  "count": 8,
   "articles": [
+    {
+      "id": "2026-06-27-apra-quarterly-june-2026",
+      "slug": "apra-quarterly-june-2026",
+      "interest": "actuarial",
+      "title": "Reading APRA's June 2026 Quarterly Data: Life, Super, GI and Health",
+      "summary": "APRA's June 2026 quarterly statistical releases cover superannuation, life insurance, general insurance and private health. Here's what each set of numbers actually tells a practitioner — and what signals to watch.",
+      "tags": [
+        "APRA",
+        "statistics",
+        "life insurance",
+        "superannuation",
+        "general insurance",
+        "private health",
+        "DI",
+        "combined ratio"
+      ],
+      "created_at": "2026-06-27",
+      "expire_at": null,
+      "concepts_taught": [
+        "apra-quarterly-statistics",
+        "life-insurance-loss-ratio",
+        "combined-ratio",
+        "di-remediation",
+        "super-fund-performance-metrics"
+      ],
+      "concepts_assumed": [
+        "apra-prudential",
+        "group-life-mechanics",
+        "reserving-basics",
+        "ifrs17-basics"
+      ],
+      "source_count": 6,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-06-27/apra-quarterly-june-2026.html"
+    },
     {
       "id": "2026-06-27-sleep-science-for-recovery",
       "slug": "sleep-science-for-recovery",
@@ -36,6 +72,64 @@
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-27/sleep-science-for-recovery.html"
+    },
+    {
+      "id": "2026-06-27-ai-infrastructure-cost-surge",
+      "slug": "ai-infrastructure-cost-surge",
+      "interest": "software-ai",
+      "title": "The Infrastructure Bill Behind AI: Why Your Tech Is Getting More Expensive",
+      "summary": "AI isn't just a software upgrade — it's a trillion-dollar infrastructure build that's landing on consumer price tags. Here's the cost chain from data centres to your next MacBook.",
+      "tags": [
+        "AI",
+        "infrastructure",
+        "hardware",
+        "energy",
+        "Apple",
+        "HBM",
+        "cost"
+      ],
+      "created_at": "2026-06-27",
+      "expire_at": "2026-07-18",
+      "concepts_taught": [
+        "ai-compute-infrastructure",
+        "high-bandwidth-memory",
+        "ai-energy-demand",
+        "ai-cost-passthrough"
+      ],
+      "concepts_assumed": [],
+      "source_count": 3,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-06-27/ai-infrastructure-cost-surge.html"
+    },
+    {
+      "id": "2026-06-27-rba-rate-cycle-june-2026",
+      "slug": "rba-rate-cycle-june-2026",
+      "interest": "finance",
+      "title": "The RBA's Tightening Cycle: Three Hikes In, What Comes Next?",
+      "summary": "The Reserve Bank has raised the cash rate for a third consecutive meeting. What's driving it, how it flows through to your mortgage and super, and when the market thinks rates might finally fall.",
+      "tags": [
+        "RBA",
+        "interest rates",
+        "inflation",
+        "monetary policy",
+        "Australia",
+        "mortgage",
+        "superannuation"
+      ],
+      "created_at": "2026-06-27",
+      "expire_at": "2026-07-18",
+      "concepts_taught": [
+        "rba-cash-rate",
+        "monetary-policy-transmission",
+        "inflation-targeting",
+        "trimmed-mean-inflation"
+      ],
+      "concepts_assumed": [],
+      "source_count": 5,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-06-27/rba-rate-cycle-june-2026.html"
     },
     {
       "id": "2026-06-25-ifrs17-csm-in-plain-terms",

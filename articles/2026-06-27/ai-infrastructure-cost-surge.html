@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Infrastructure Bill Behind AI: Why Your Tech Is Getting More Expensive</title>
+  <meta name="description" content="AI isn't just a software upgrade — it's a trillion-dollar infrastructure build that's landing on consumer price tags. Here's the cost chain from data centres to your next MacBook." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="software-ai">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-06-27-ai-infrastructure-cost-surge">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>💻 Software &amp; AI</p>
+        <h1>The Infrastructure Bill Behind AI: Why Your Tech Is Getting More Expensive</h1>
+        <p class="doc-meta">27 June 2026 · synthesised from 3 sources</p>
+        <p class="doc-summary">AI isn't just a software upgrade — it's a trillion-dollar infrastructure build that's landing on consumer price tags. Here's the cost chain from data centres to your next MacBook.</p>
+      </header>
+
+      <div class="doc-body">
+        <p>When Tim Cook told analysts that Apple's price increases were "unavoidable" and its pricing "unsustainable," he was being unusually direct. The 16-inch MacBook Pro went up $300. The 11-inch iPad Air climbed $150. Even the HomePod Mini got a $30 bump. Cook pointed squarely at AI infrastructure costs. This piece explains what's actually in that supply chain — and why it's so expensive.</p>
+
+        <h2>What "AI infrastructure" actually means</h2>
+        <p>When you use an AI tool — asking Claude a question, generating an image, using Siri with on-device intelligence — that work happens on specialised hardware called <strong>AI compute infrastructure</strong>. Think of it as the engine room: racks of GPUs (graphics processors repurposed for AI math), custom silicon (like Google's TPUs or Apple's Neural Engine), plus the switches, cables, and power systems holding it all together.</p>
+        <p>Running a large language model requires thousands of these chips working in concert. The math involves multiplying enormous matrices (grids of numbers) billions of times per second. This is fundamentally different from running a website or serving a file — it's compute-heavy in a way that stresses every layer of the hardware stack.</p>
+
+        <h2>The choke point nobody talks about: memory bandwidth</h2>
+        <p>One of the most surprising bottlenecks has become a component most people have never heard of: <strong>high-bandwidth memory (HBM)</strong>. Unlike the RAM in your laptop, HBM is a specialised type of memory stacked in vertical layers directly on top of (or beside) an AI chip. It allows the GPU to shuttle data at extraordinary speeds — hundreds of gigabytes per second.</p>
+        <p>The problem is that HBM is extraordinarily difficult to manufacture. It requires advanced packaging techniques where memory dies are literally stacked and bonded together. Only a handful of companies in the world can make it (primarily SK Hynix, Samsung, and Micron), and demand has massively outstripped supply as every major tech company simultaneously tries to build out AI compute capacity. When a single component in a multi-billion-chip supply chain becomes constrained, prices ripple everywhere — including into the finished products that ship to consumers.</p>
+        <p>The NYT recently described how a "niche technology" — the interconnects and memory that link AI chips together — had become a strategic chokepoint for the entire AI industry. This is that story: the difference between a fast and slow AI system often comes down to how quickly data can move between chips, and that infrastructure is expensive and scarce.</p>
+
+        <h2>The electricity problem</h2>
+        <p>Even if you could solve the chip shortage overnight, there's another constraint: power. <strong>AI inference</strong> (generating a response to your query) consumes roughly 10–100× more electricity per transaction than a traditional Google search. A search query might use a fraction of a watt-second; generating a paragraph of text from a large model can use several watt-seconds across many chips.</p>
+        <p>This matters at scale. OpenAI, Google, Microsoft, and Amazon are collectively spending hundreds of billions of dollars building or expanding data centres — and a significant portion of that cost is power infrastructure: substations, cooling systems, backup generators. In Australia, while direct AI data centre investment is still emerging, the global electricity demand surge is already influencing wholesale energy markets and utility capital plans.</p>
+        <p>For consumers, this manifests as higher operating costs for the cloud services baked into the devices you buy. Apple Intelligence, for instance, routes many tasks to Apple's own servers. Those servers cost money to run — and that cost flows back to the product margin.</p>
+
+        <h2>The cost chain in three steps</h2>
+        <ol>
+          <li><strong>Chip scarcity → higher component costs.</strong> AI chips and HBM are supply-constrained. Apple competes with every other hyperscaler for the same manufacturing capacity from TSMC and the same HBM from SK Hynix.</li>
+          <li><strong>Power and cooling → higher cloud operating costs.</strong> AI-grade data centres cost 3–5× more per megawatt to build and operate than conventional cloud infrastructure.</li>
+          <li><strong>Product integration → higher device prices.</strong> When Apple builds on-device AI hardware (the Neural Engine) and funds cloud AI (Apple Intelligence), both costs end up in the bill-of-materials or operating overhead that ultimately shapes retail pricing.</li>
+        </ol>
+
+        <h2>What it means for you as a builder</h2>
+        <p>If you build apps on top of AI APIs (whether that's OpenAI, Anthropic, Google, or others), you're already absorbing some of these costs as per-token pricing. As the infrastructure build-out matures over the next several years, costs should fall — more chip supply, more efficient models, better inference optimisation. But the current cycle (2024–2027) is characterised by demand wildly outpacing supply, which is why pricing is elevated and passing through to every layer of the stack.</p>
+        <p>The practical upshot: when evaluating AI features for a product you ship, the compute cost is a real variable — not just a rounding error. And when that $300 MacBook Pro price hike lands, you now know exactly what's paying for it.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://www.theverge.com/report/958678/apple-consumer-price-increase-ai-big-tech" target="_blank" rel="noopener">Why is Apple asking me to pay more for Big Tech's AI obsession? — The Verge</a></li>
+          <li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQZDY2b0dkMnlab3hRRXdtQldLUE1XRU5ReDhtLUNzalBiQ1FiVjVxWG80Unl6WDRMYS1OTktObXRJZVRfTkE3NmQ1ODh1Zi1BMkQ5ZGxlU29nZGVHWG1DRGVSQ0FZaXpTXzdBMnlwRk9DaTh6TVlBajMxUzZkTEt0clNoRUJoNEdHMkNxd2pvVE5RdXVVMlczSjdjeThDSmtKUWJiZm5B?oc=5" target="_blank" rel="noopener">What the Tech: Could artificial intelligence raise your electric bill? — WRDW</a></li>
+          <li><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQWWR0RnpqZnpUN2NoVktOR05SWTVHZVd1UkRRanFQVk51czB6bWF3VGR6VWRLMEw2UUk2bmJGSUNweC1BZi1tTFVoUmlRaVM3d1h5ZnhiemJkUkFYNGlDTUFQR2ZJMjBrcmZ3b25LWUJEYndlODVEdjMtd2JmY2JObzg3U0pIbjVQR2c?oc=5" target="_blank" rel="noopener">How a Niche Technology Became a Choke Point for A.I. — The New York Times</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-06-27-ai-infrastructure-cost-surge",
+  "slug": "ai-infrastructure-cost-surge",
+  "interest": "software-ai",
+  "title": "The Infrastructure Bill Behind AI: Why Your Tech Is Getting More Expensive",
+  "summary": "AI isn't just a software upgrade — it's a trillion-dollar infrastructure build that's landing on consumer price tags. Here's the cost chain from data centres to your next MacBook.",
+  "tags": ["AI", "infrastructure", "hardware", "energy", "Apple", "HBM", "cost"],
+  "created_at": "2026-06-27",
+  "expire_at": "2026-07-18",
+  "concepts_taught": ["ai-compute-infrastructure", "high-bandwidth-memory", "ai-energy-demand", "ai-cost-passthrough"],
+  "concepts_assumed": [],
+  "sources": [
+    { "title": "Why is Apple asking me to pay more for Big Tech's AI obsession?", "url": "https://www.theverge.com/report/958678/apple-consumer-price-increase-ai-big-tech" },
+    { "title": "What the Tech: Could artificial intelligence raise your electric bill?", "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZDY2b0dkMnlab3hRRXdtQldLUE1XRU5ReDhtLUNzalBiQ1FiVjVxWG80Unl6WDRMYS1OTktObXRJZVRfTkE3NmQ1ODh1Zi1BMkQ5ZGxlU29nZGVHWG1DRGVSQ0FZaXpTXzdBMnlwRk9DaTh6TVlBajMxUzZkTEt0clNoRUJoNEdHMkNxd2pvVE5RdXVVMlczSjdjeThDSmtKUWJiZm5B?oc=5" },
+    { "title": "How a Niche Technology Became a Choke Point for A.I.", "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWWR0RnpqZnpUN2NoVktOR05SWTVHZVd1UkRRanFQVk51czB6bWF3VGR6VWRLMEw2UUk2bmJGSUNweC1BZi1tTFVoUmlRaVM3d1h5ZnhiemJkUkFYNGlDTUFQR2ZJMjBrcmZ3b25LWUJEYndlODVEdjMtd2JmY2JObzg3U0pIbjVQR2c?oc=5" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "High-bandwidth memory (HBM) became a chokepoint for AI because:",
+      "options": [
+        "It is manufactured by only a few companies and demand far exceeds supply",
+        "It is incompatible with modern GPUs",
+        "It consumes too much electricity to run in data centres",
+        "Software models have not been optimised to use it"
+      ],
+      "correct": 0,
+      "concept": "high-bandwidth-memory"
+    },
+    {
+      "q": "Compared to a traditional web search, generating a paragraph of text with a large AI model typically uses:",
+      "options": [
+        "A similar amount of electricity",
+        "Less electricity, because AI models are more efficient",
+        "Roughly 10–100× more electricity per transaction",
+        "More electricity only if the query is long"
+      ],
+      "correct": 2,
+      "concept": "ai-energy-demand"
+    }
+  ]
+}
+  </script>
+</body>
+</html>

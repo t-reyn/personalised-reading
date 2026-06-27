@@ -4,7 +4,15 @@
     <title>Reading</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Sat, 27 Jun 2026 13:11:51 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 14:18:59 GMT</lastBuildDate>
+    <item>
+      <title>Reading APRA&#39;s June 2026 Quarterly Data: Life, Super, GI and Health</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-27/apra-quarterly-june-2026.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-27/apra-quarterly-june-2026.html</guid>
+      <category>actuarial</category>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
+      <description>APRA&#39;s June 2026 quarterly statistical releases cover superannuation, life insurance, general insurance and private health. Here&#39;s what each set of numbers actually tells a practitioner — and what signals to watch.</description>
+    </item>
     <item>
       <title>Sleep Science for Recovery: What the Evidence Actually Says</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-27/sleep-science-for-recovery.html</link>
@@ -12,6 +20,22 @@
       <category>health</category>
       <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
       <description>Sleep is the recovery layer that makes training stick. Covers sleep architecture, the U-shaped dose-response curve, temperature, nutrition, magnesium, and the myths worth ditching.</description>
+    </item>
+    <item>
+      <title>The Infrastructure Bill Behind AI: Why Your Tech Is Getting More Expensive</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-27/ai-infrastructure-cost-surge.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-27/ai-infrastructure-cost-surge.html</guid>
+      <category>software-ai</category>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
+      <description>AI isn&#39;t just a software upgrade — it&#39;s a trillion-dollar infrastructure build that&#39;s landing on consumer price tags. Here&#39;s the cost chain from data centres to your next MacBook.</description>
+    </item>
+    <item>
+      <title>The RBA&#39;s Tightening Cycle: Three Hikes In, What Comes Next?</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-27/rba-rate-cycle-june-2026.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-27/rba-rate-cycle-june-2026.html</guid>
+      <category>finance</category>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
+      <description>The Reserve Bank has raised the cash rate for a third consecutive meeting. What&#39;s driving it, how it flows through to your mortgage and super, and when the market thinks rates might finally fall.</description>
     </item>
     <item>
       <title>The IFRS 17 CSM, in plain terms</title>
