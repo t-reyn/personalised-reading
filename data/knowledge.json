@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-27T14:27:45.985Z",
+  "updatedAt": "2026-06-27T14:30:00.000Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": false,
@@ -30,23 +30,57 @@
       "is_learnt": false,
       "first_taught": "2026-06-27-sleep-science-for-recovery"
     },
-    "ifrs17-csm": {
-      "label": "ifrs17-csm",
-      "interest": "actuarial",
-      "prerequisite_ids": [],
-      "is_learnt": true,
-      "review_level": 3,
-      "next_review_at": null,
-      "learnt_at": "2026-06-27T14:27:36.235Z"
+    "ai-compute-infrastructure": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-ai-infrastructure-cost-surge"
     },
-    "zone-2-training": {
-      "label": "zone-2-training",
-      "interest": "health",
-      "prerequisite_ids": [],
-      "is_learnt": true,
-      "review_level": 3,
-      "next_review_at": null,
-      "learnt_at": "2026-06-27T14:27:45.985Z"
+    "high-bandwidth-memory": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-ai-infrastructure-cost-surge"
+    },
+    "ai-energy-demand": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-ai-infrastructure-cost-surge"
+    },
+    "ai-cost-passthrough": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-ai-infrastructure-cost-surge"
+    },
+    "rba-cash-rate": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-rba-rate-cycle-june-2026"
+    },
+    "monetary-policy-transmission": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-rba-rate-cycle-june-2026"
+    },
+    "inflation-targeting": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-rba-rate-cycle-june-2026"
+    },
+    "trimmed-mean-inflation": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-rba-rate-cycle-june-2026"
+    },
+    "apra-quarterly-statistics": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-apra-quarterly-june-2026"
+    },
+    "life-insurance-loss-ratio": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-apra-quarterly-june-2026"
+    },
+    "combined-ratio": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-apra-quarterly-june-2026"
+    },
+    "di-remediation": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-apra-quarterly-june-2026"
+    },
+    "super-fund-performance-metrics": {
+      "is_learnt": false,
+      "first_taught": "2026-06-27-apra-quarterly-june-2026"
     }
   }
 }
