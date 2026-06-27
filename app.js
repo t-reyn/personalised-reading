@@ -38,6 +38,47 @@
     return r.json();
   }
 
+  /* ---------- merge (never clobber across devices) ----------
+     State syncs as a per-item union: an article/concept missing on one side
+     never deletes it; on conflict the most recently touched entry wins. This
+     makes an empty or stale device incapable of wiping another device's reads. */
+  const stamp = (e) => e?.t || e?.read_at || e?.archived_at || "";
+  function mergeEntry(x, y) {
+    if (!x) return y; if (!y) return x;
+    const tx = stamp(x), ty = stamp(y);
+    if (tx === ty) return (y.status === "read" && x.status !== "read") ? y : x;
+    return ty > tx ? y : x;
+  }
+  function mergeStates(a, b) {
+    const A = a || {}, B = b || {}, out = { version: 1, updatedAt: null, articles: {}, quizzes: {} };
+    new Set([...Object.keys(A.articles || {}), ...Object.keys(B.articles || {})]).forEach((id) =>
+      (out.articles[id] = mergeEntry((A.articles || {})[id], (B.articles || {})[id])));
+    new Set([...Object.keys(A.quizzes || {}), ...Object.keys(B.quizzes || {})]).forEach((id) => {
+      const x = (A.quizzes || {})[id], y = (B.quizzes || {})[id];
+      out.quizzes[id] = !x ? y : !y ? x : ((y.taken_at || "") >= (x.taken_at || "") ? y : x);
+    });
+    out.updatedAt = [A.updatedAt, B.updatedAt].filter(Boolean).sort().pop() || now();
+    return out;
+  }
+  function mergeKnowledge(a, b) {
+    const A = a || {}, B = b || {}, out = { version: 1, updatedAt: null, concepts: {} };
+    new Set([...Object.keys(A.concepts || {}), ...Object.keys(B.concepts || {})]).forEach((id) => {
+      const x = (A.concepts || {})[id], y = (B.concepts || {})[id];
+      if (!x || !y) { out.concepts[id] = x || y; return; }
+      if (x.is_learnt !== y.is_learnt) { out.concepts[id] = x.is_learnt ? x : y; return; } // learnt always wins
+      out.concepts[id] = (y.learnt_at || "") >= (x.learnt_at || "") ? y : x;
+    });
+    out.updatedAt = [A.updatedAt, B.updatedAt].filter(Boolean).sort().pop() || now();
+    return out;
+  }
+  const isKnow = (file) => file === "knowledge.json";
+  const localFor = (file) => (isKnow(file) ? knowledge : state);
+  const mergeFor = (file, remote, local) => (isKnow(file) ? mergeKnowledge(remote, local) : mergeStates(remote, local));
+  function adoptMerged(file, merged) {
+    if (isKnow(file)) { knowledge = merged; try { localStorage.setItem(LS.know, JSON.stringify(knowledge)); } catch {} }
+    else { state = merged; try { localStorage.setItem(LS.state, JSON.stringify(state)); } catch {} }
+  }
+
   async function boot() {
     // Data (committed artifacts)
     try { manifest = await fetchJson("data/manifest.json"); } catch { manifest = { articles: [] }; }
@@ -189,15 +230,15 @@
 
   function toggleStar(id) {
     const a = (state.articles[id] ||= { status: "backlog" });
-    a.starred = !a.starred; saveState(); renderTabs(); render();
+    a.starred = !a.starred; a.t = now(); saveState(); renderTabs(); render();
   }
   function markRead(id) {
     const a = (state.articles[id] ||= {});
-    a.status = "read"; a.read_at = now(); saveState(); renderTabs();
+    a.status = "read"; a.read_at = now(); a.t = now(); saveState(); renderTabs();
   }
   function restore(id) {
     const a = (state.articles[id] ||= {});
-    a.status = "backlog"; a.archived_at = null; a.keep = true; // keep: the freshness sweep won't re-archive it
+    a.status = "backlog"; a.archived_at = null; a.keep = true; a.t = now(); // keep: the freshness sweep won't re-archive it
     saveState(); renderTabs(); render();
   }
   // Freshness: move unread, unstarred, un-kept items to the archive once they pass their expire_at.
@@ -209,7 +250,7 @@
       const st = state.articles[a.id];
       const status = st?.status || "backlog";
       if (status === "backlog" && !st?.starred && !st?.keep) {
-        state.articles[a.id] = { ...(st || {}), status: "archived", archived_at: now(), expired: true };
+        state.articles[a.id] = { ...(st || {}), status: "archived", archived_at: now(), t: now(), expired: true };
         changed = true;
       }
     }
@@ -252,7 +293,7 @@
     show(ov);
     ov.querySelector(".close").onclick = () => hide(ov);
     ov.querySelector('[data-act="read"]')?.addEventListener("click", () => { markRead(id); if (hasQuiz) openQuiz(a, meta); else { hide(ov); render(); } });
-    ov.querySelector('[data-act="unread"]')?.addEventListener("click", () => { (state.articles[id] ||= {}).status = "backlog"; saveState(); renderTabs(); hide(ov); render(); });
+    ov.querySelector('[data-act="unread"]')?.addEventListener("click", () => { const e = (state.articles[id] ||= {}); e.status = "backlog"; e.t = now(); saveState(); renderTabs(); hide(ov); render(); });
     ov.querySelector('[data-act="quiz"]')?.addEventListener("click", () => openQuiz(a, meta));
   }
 
@@ -342,37 +383,41 @@
   const ghHeaders = () => ({ Authorization: `Bearer ${token()}`, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" });
   function b64(str) { const bytes = new TextEncoder().encode(str); let bin = ""; const C = 0x8000; for (let i = 0; i < bytes.length; i += C) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + C)); return btoa(bin); }
 
-  async function getSha(file) {
-    const base = apiBase(); const r = repoCfg();
-    const res = await fetch(`${base}${file}?ref=${r.branch}`, { headers: ghHeaders(), cache: "no-store" });
-    if (res.status === 404) return null;
+  // Read a state file from the repo → { obj, sha }. obj is null if the file doesn't exist.
+  async function getFile(file) {
+    const r = repoCfg();
+    const res = await fetch(`${apiBase()}${file}?ref=${r.branch}`, { headers: ghHeaders(), cache: "no-store" });
+    if (res.status === 404) return { obj: null, sha: null };
     if (!res.ok) throw new Error(`read ${res.status}`);
-    return (await res.json()).sha;
+    const j = await res.json();
+    let obj = null;
+    try { obj = JSON.parse(decodeURIComponent(escape(atob((j.content || "").replace(/\n/g, ""))))); } catch {}
+    return { obj, sha: j.sha };
   }
-  async function pushJson(file, obj) {
+  // Push = pull-merge-push: fetch remote, union with local, adopt the merge locally, write it.
+  // This can only ever ADD to the repo, so a stale/empty device can never wipe another's reads.
+  async function pushJson(file, _ignored) {
     if (!token() || !apiBase()) return; // local-only mode — no-op
     const r = repoCfg();
-    const body = (sha) => JSON.stringify({ message: `state: update ${file}`, content: b64(JSON.stringify(obj, null, 2) + "\n"), branch: r.branch, ...(sha ? { sha } : {}) });
-    let sha = await getSha(file);
-    let res = await fetch(`${apiBase()}${file}`, { method: "PUT", headers: ghHeaders(), body: body(sha) });
-    if (res.status === 409) { sha = await getSha(file); res = await fetch(`${apiBase()}${file}`, { method: "PUT", headers: ghHeaders(), body: body(sha) }); }
-    if (!res.ok) throw new Error(`write ${res.status}`);
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const { obj: remote, sha } = await getFile(file);
+      const merged = mergeFor(file, remote, localFor(file));
+      adoptMerged(file, merged);
+      const body = JSON.stringify({ message: `state: update ${file}`, content: b64(JSON.stringify(merged, null, 2) + "\n"), branch: r.branch, ...(sha ? { sha } : {}) });
+      const res = await fetch(`${apiBase()}${file}`, { method: "PUT", headers: ghHeaders(), body });
+      if (res.ok) return;
+      if (res.status !== 409) throw new Error(`write ${res.status}`); // 409 = sha race → re-merge & retry
+    }
+    throw new Error("write conflict");
   }
   async function pullRemote() {
     if (!token() || !apiBase()) return false;
-    const r = repoCfg();
-    const get = async (file) => {
-      const res = await fetch(`${apiBase()}${file}?ref=${r.branch}`, { headers: ghHeaders(), cache: "no-store" });
-      if (!res.ok) return null;
-      const j = await res.json();
-      return JSON.parse(decodeURIComponent(escape(atob(j.content.replace(/\n/g, "")))));
-    };
-    let changed = false;
-    const rs = await get("reading-state.json");
-    if (rs && (!state.updatedAt || (rs.updatedAt || "") > state.updatedAt)) { state = rs; state.articles ||= {}; state.quizzes ||= {}; try { localStorage.setItem(LS.state, JSON.stringify(state)); } catch {} changed = true; }
-    const kn = await get("knowledge.json");
-    if (kn && (!knowledge.updatedAt || (kn.updatedAt || "") > knowledge.updatedAt)) { knowledge = kn; knowledge.concepts ||= {}; try { localStorage.setItem(LS.know, JSON.stringify(knowledge)); } catch {} changed = true; }
-    return changed;
+    const before = JSON.stringify([state.articles, state.quizzes, knowledge.concepts]);
+    const { obj: rs } = await getFile("reading-state.json");
+    if (rs) adoptMerged("reading-state.json", mergeStates(rs, state));
+    const { obj: kn } = await getFile("knowledge.json");
+    if (kn) adoptMerged("knowledge.json", mergeKnowledge(kn, knowledge));
+    return JSON.stringify([state.articles, state.quizzes, knowledge.concepts]) !== before;
   }
 
   // Debounced background sync so rapid reads don't spam commits.
