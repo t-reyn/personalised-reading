@@ -304,7 +304,7 @@
         <div class="field"><label>Repository owner</label><input id="s-owner" value="${esc(r.owner)}" placeholder="your-github-username" /></div>
         <div class="field"><label>Repository name</label><input id="s-name" value="${esc(r.name)}" placeholder="personalised-reading" /></div>
         <div class="field"><label>Branch</label><input id="s-branch" value="${esc(r.branch || "main")}" placeholder="main" /></div>
-        <div class="field"><label>Access token</label><input id="s-token" type="password" value="${esc(token())}" placeholder="github_pat_…" />
+        <div class="field"><label>Access token</label><input id="s-token" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" value="${esc(token())}" placeholder="github_pat_…" />
           <p class="hint">A <b>fine-grained</b> token scoped to this one repo with <b>Contents: Read and write</b>. Create one at <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings</a>. Stored only in this browser.</p></div>
         <div class="ov-actions" style="padding-left:0;padding-right:0">
           <button class="btn" data-act="pull">Pull</button>
@@ -314,13 +314,21 @@
       </div></div>`;
     show(ov);
     ov.querySelector(".close").onclick = () => hide(ov);
-    ov.querySelector('[data-act="save"]').addEventListener("click", () => {
+    ov.querySelector('[data-act="save"]').addEventListener("click", async () => {
       const owner = $("#s-owner").value.trim(), name = $("#s-name").value.trim(), branch = $("#s-branch").value.trim() || "main", tk = $("#s-token").value.trim();
-      try { localStorage.setItem(LS.repo, JSON.stringify({ owner, name, branch })); tk ? localStorage.setItem(LS.token, tk) : localStorage.removeItem(LS.token); } catch {}
-      $("#s-status").textContent = "Saved. Syncing…";
-      Promise.all([pushJson("reading-state.json", state), pushJson("knowledge.json", knowledge)])
-        .then(() => { $("#s-status").textContent = "Synced ✓"; })
-        .catch((e) => { $("#s-status").textContent = "Saved locally. Sync failed: " + e.message; });
+      const status = $("#s-status");
+      try { localStorage.setItem(LS.repo, JSON.stringify({ owner, name, branch })); tk ? localStorage.setItem(LS.token, tk) : localStorage.removeItem(LS.token); }
+      catch { status.textContent = "This browser blocked saving (private mode?)."; return; }
+      if (!token()) { status.textContent = "No token saved — paste your github_pat_… token, then Save."; return; }
+      if (!apiBase()) { status.textContent = "Fill in repository owner and name, then Save."; return; }
+      status.textContent = "Saving…";
+      try {
+        await pushJson("reading-state.json", state);
+        await pushJson("knowledge.json", knowledge);
+        status.textContent = "Synced ✓ — your reading now syncs to GitHub.";
+      } catch (e) {
+        status.textContent = "Sync failed (" + e.message + ") — token needs Contents: Read and write on this repo.";
+      }
     });
     ov.querySelector('[data-act="pull"]').addEventListener("click", () => {
       $("#s-status").textContent = "Pulling…";
