@@ -60,7 +60,7 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: "Read CLAUDE.md and skills/AUTHORING.md, then write today's issue exactly as they instruct. Stop when the articles, knowledge.json and pool.json are updated."
-          claude_args: "--max-turns 30 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep"
+          claude_args: "--max-turns 45 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep"
 
       # 3b. Record this run's tokens + cost estimate to data/usage-log.jsonl (token counts are the
       #     reliable figures; cost_usd is a client-side estimate, fine for trend analysis).
