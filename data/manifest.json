@@ -1,8 +1,42 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-27T12:23:02.912Z",
-  "count": 4,
+  "generatedAt": "2026-06-27T13:11:51.952Z",
+  "count": 5,
   "articles": [
+    {
+      "id": "2026-06-27-sleep-science-for-recovery",
+      "slug": "sleep-science-for-recovery",
+      "interest": "health",
+      "title": "Sleep Science for Recovery: What the Evidence Actually Says",
+      "summary": "Sleep is the recovery layer that makes training stick. Covers sleep architecture, the U-shaped dose-response curve, temperature, nutrition, magnesium, and the myths worth ditching.",
+      "tags": [
+        "sleep",
+        "recovery",
+        "nutrition",
+        "strength-training",
+        "circadian-rhythm"
+      ],
+      "created_at": "2026-06-27",
+      "expire_at": "2026-08-11",
+      "concepts_taught": [
+        "sleep-architecture",
+        "sleep-stages",
+        "circadian-rhythm",
+        "sleep-hygiene",
+        "sleep-nutrition-link",
+        "magnesium-sleep",
+        "sleep-temperature"
+      ],
+      "concepts_assumed": [
+        "rpe",
+        "progressive-overload",
+        "training-volume"
+      ],
+      "source_count": 6,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-06-27/sleep-science-for-recovery.html"
+    },
     {
       "id": "2026-06-25-ifrs17-csm-in-plain-terms",
       "slug": "ifrs17-csm-in-plain-terms",
