@@ -8,7 +8,7 @@
     "guidance": "Write for an Australia-based reader. Apply an Australian lens where relevant — local bodies and regulation (APRA, ASIC, ATO, RBA, Actuaries Institute), $AUD, ASX / superannuation, Australian health and policy context, AEST timing, and Australian spelling — but do NOT be parochial: cover global affairs and developments too, framed for an Australian reader where it helps. Per tab: Finance leans AU (RBA, ASX, super) while tracking global macro; Actuarial leans AU group life + APRA while tracking IFRS 17 / global practice; Software/AI and Science are mostly global."
   },
   "passThreshold": 0.75,
-  "maxArticlesPerRun": 2,
+  "maxArticlesPerRun": 1,
   "interests": [
     { "id": "software-ai",  "label": "Software & AI",        "emoji": "💻", "accent": "#4f7cac", "ttlDays": 21 },
     { "id": "finance",      "label": "Finance & Investing",  "emoji": "📈", "accent": "#3f9b6e", "ttlDays": 21 },

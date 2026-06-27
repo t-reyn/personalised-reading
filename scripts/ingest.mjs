@@ -12,7 +12,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const DRY = process.argv.includes("--dry-run");
 const PER_FEED_CAP = 25; // bound how many new items one feed can add per run
 const POOL_TTL_DAYS = 21; // candidates not used within this window age out, keeping the pool fresh
-const MAX_PENDING_PER_INTEREST = 40; // hard cap: the pool is the authoring input, so keep it small + cheap
+const MAX_PENDING_PER_INTEREST = 20; // hard cap: the pool is the authoring input, so keep it small + cheap
 
 const readJson = async (p, fallback) => {
   try { return JSON.parse(await readFile(join(ROOT, p), "utf8")); } catch { return fallback; }
