@@ -33,5 +33,21 @@
     "https://www.smashingmagazine.com/feed/",
     "https://uxdesign.cc/feed",
     "https://www.joshwcomeau.com/rss.xml"
+  ],
+  "indie-income": [
+    "https://news.google.com/rss/search?q=%22indie%20hacker%22%20OR%20bootstrapped%20OR%20microsaas%20OR%20%22app%20revenue%22%20OR%20%22solo%20founder%22&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://news.google.com/rss/search?q=%22side%20project%22%20income%20OR%20solopreneur%20OR%20%22SaaS%20pricing%22%20OR%20%22app%20store%20optimization%22%20OR%20%22build%20in%20public%22&hl=en-AU&gl=AU&ceid=AU:en"
+  ],
+  "mortgage-broking": [
+    "https://news.google.com/rss/search?q=%22mortgage%20broker%22%20OR%20%22home%20loan%22%20OR%20refinancing%20OR%20%22serviceability%22%20OR%20%22lending%20policy%22&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://news.google.com/rss/search?q=site:brokerdaily.au%20OR%20site:mortgagebusiness.com.au%20OR%20site:theadviser.com.au&hl=en-AU&gl=AU&ceid=AU:en"
+  ],
+  "property": [
+    "https://news.google.com/rss/search?q=%22investment%20property%22%20OR%20%22negative%20gearing%22%20OR%20%22capital%20gains%20tax%22%20OR%20%22property%20investing%22%20Australia&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://news.google.com/rss/search?q=site:yourinvestmentpropertymag.com.au%20OR%20site:apimagazine.com.au&hl=en-AU&gl=AU&ceid=AU:en"
+  ],
+  "videography": [
+    "https://nofilmschool.com/rss.xml",
+    "https://news.google.com/rss/search?q=cinematography%20OR%20%22colour%20grading%22%20OR%20%22color%20grading%22%20OR%20filmmaking%20OR%20%22video%20composition%22&hl=en-AU&gl=AU&ceid=AU:en"
   ]
 }

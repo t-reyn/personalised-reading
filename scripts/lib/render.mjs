@@ -10,6 +10,8 @@ export function buildManifest(items, now) {
       id: meta.id,
       slug: meta.slug,
       interest: meta.interest,
+      interests: meta.interests && meta.interests.length ? meta.interests : [meta.interest],
+      mode: meta.mode ?? null,
       title: meta.title,
       summary: meta.summary,
       tags: meta.tags ?? [],
@@ -108,6 +110,11 @@ export function buildIndexHtml(config, stats, now) {
         <p class="tagline">${escapeHtml(config.tagline || "")}</p>
         <input id="search" class="search" type="search" placeholder="Search ${stats.count} article${stats.count === 1 ? "" : "s"}…" aria-label="Search articles" />
       </header>
+      <div id="modeFilter" class="mode-filter" role="group" aria-label="Reading mode">
+        <button class="mode-seg" data-mode="all" aria-pressed="true">All</button>
+        <button class="mode-seg" data-mode="current" aria-pressed="false">Current</button>
+        <button class="mode-seg" data-mode="learn" aria-pressed="false">Learn</button>
+      </div>
       <nav id="tabs" class="tabs" aria-label="Interests"></nav>
       <div class="nav-views">
         <button id="libraryToggle" class="archive-toggle" hidden></button>

@@ -23,6 +23,7 @@
   let activeTab = "all";
   let query = "";
   let view = "reading"; // reading | library | stats | discover | archive
+  let modeFilter = "all"; // all | current | learn
   const metaCache = {}; // articleId -> #meta (lazy)
 
   /* ---------- storage ---------- */
@@ -121,7 +122,8 @@
   /* ---------- render ---------- */
   function visibleArticles() {
     let arts = manifest.articles.filter((a) => !a.merged_into);
-    if (activeTab !== "all") arts = arts.filter((a) => a.interest === activeTab);
+    if (activeTab !== "all") arts = arts.filter((a) => interestsOf(a).includes(activeTab));
+    if (modeFilter !== "all") arts = arts.filter((a) => articleMode(a) === modeFilter);
     if (query) {
       const q = query.toLowerCase();
       arts = arts.filter((a) => (a.title + " " + a.summary + " " + (a.tags || []).join(" ")).toLowerCase().includes(q));
@@ -131,6 +133,15 @@
 
   function statusOf(id) { return state.articles[id]?.status || "backlog"; }
   function isRead(id) { return statusOf(id) === "read"; }
+
+  // An article can belong to several interests (primary first); its mode is current/learn.
+  const interestsOf = (a) => (a.interests && a.interests.length ? a.interests : [a.interest]);
+  function articleMode(a) {
+    if (a.mode === "current" || a.mode === "learn") return a.mode;
+    const m = (INTEREST_BY_ID[a.interest] || {}).mode;
+    if (m === "current" || m === "learn") return m;
+    return a.expire_at ? "current" : "learn"; // 'both'/unknown → infer from whether it expires
+  }
 
   /* ---------- spaced repetition (renudge) ----------
      A learnt concept resurfaces for review once its interval has elapsed. Passing the
@@ -155,8 +166,13 @@
   function renderTabs() {
     const tabs = $("#tabs");
     const counts = {};
-    manifest.articles.forEach((a) => { if (!a.merged_into && !isRead(a.id)) counts[a.interest] = (counts[a.interest] || 0) + 1; });
-    const total = Object.values(counts).reduce((s, n) => s + n, 0);
+    let total = 0;
+    manifest.articles.forEach((a) => {
+      if (a.merged_into || isRead(a.id)) return;
+      if (modeFilter !== "all" && articleMode(a) !== modeFilter) return;
+      total++;
+      interestsOf(a).forEach((id) => { counts[id] = (counts[id] || 0) + 1; });
+    });
     const mk = (id, label, emoji, n) =>
       `<button class="tab" role="tab" data-tab="${esc(id)}" aria-selected="${activeTab === id}">${emoji ? esc(emoji) + " " : ""}${esc(label)}${n ? ` <span class="count">${n}</span>` : ""}</button>`;
     tabs.innerHTML = mk("all", "All", "", total) + INTERESTS.map((i) => mk(i.id, i.label, i.emoji, counts[i.id] || 0)).join("");
@@ -180,6 +196,7 @@
     const star = state.articles[a.id]?.starred;
     const age = ageLabel(a);
     const merged = (a.merged_from || []).length;
+    const secondary = interestsOf(a).slice(1).map((id) => INTEREST_BY_ID[id]).filter(Boolean);
     const dim = opts.archive || (read && !opts.review);   // review nudges stay bright, not greyed-out
     const tier = opts.library
       ? (articleReviewDue(a) ? { c: "due", t: "Review due" } : articleLearnt(a) ? { c: "learnt", t: "Learnt" } : { c: "read", t: "Read" })
@@ -192,6 +209,7 @@
       <h3>${esc(a.title)}</h3>
       <p>${esc(a.summary)}</p>
       <div class="card-foot">
+        ${secondary.map((s) => `<span class="xtag">${esc((s.emoji ? s.emoji + " " : "") + s.label)}</span>`).join("")}
         ${(a.tags || []).slice(0, 3).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}
         ${opts.review ? `<span class="due-note">⟳ time to review</span>` : (read ? `<span class="readtick">✓ read</span>` : "")}
         ${merged ? `<span class="merged-note">↳ consolidates ${merged}</span>` : ""}
@@ -258,7 +276,8 @@
   function renderLibrary() {
     const list = $("#list");
     let reads = manifest.articles.filter((a) => !a.merged_into && isRead(a.id));
-    if (activeTab !== "all") reads = reads.filter((a) => a.interest === activeTab);
+    if (activeTab !== "all") reads = reads.filter((a) => interestsOf(a).includes(activeTab));
+    if (modeFilter !== "all") reads = reads.filter((a) => articleMode(a) === modeFilter);
     if (query) { const q = query.toLowerCase(); reads = reads.filter((a) => (a.title + " " + a.summary + " " + (a.tags || []).join(" ")).toLowerCase().includes(q)); }
     const learntCount = Object.values(knowledge.concepts).filter((c) => c.is_learnt).length;
     const due = reads.filter(articleReviewDue);
@@ -616,6 +635,9 @@
     $("#statsToggle")?.addEventListener("click", () => setView("stats"));
     $("#discoverToggle")?.addEventListener("click", () => setView("discover"));
     $("#archiveToggle")?.addEventListener("click", () => setView("archive"));
+    $("#modeFilter")?.querySelectorAll(".mode-seg").forEach((b) => b.addEventListener("click", () => {
+      modeFilter = b.dataset.mode || "all"; syncModeSeg(); writeHashState(); renderTabs(); render();
+    }));
     const s = $("#search");
     s.addEventListener("input", () => { query = s.value.trim(); writeHashState(); render(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") document.querySelectorAll(".overlay:not([hidden])").forEach(hide); });
@@ -637,16 +659,24 @@
     else if (e.key === "o" && cur >= 0) { e.preventDefault(); openReader(cards[cur].dataset.id); }
   }
   // Filter state (tab + search) lives in the URL hash so a filtered view is bookmarkable/shareable across devices.
+  function syncModeSeg() {
+    const mf = $("#modeFilter"); if (!mf) return;
+    mf.querySelectorAll(".mode-seg").forEach((x) => { const on = x.dataset.mode === modeFilter; x.classList.toggle("on", on); x.setAttribute("aria-pressed", on ? "true" : "false"); });
+  }
   function readHashState() {
     const h = new URLSearchParams((location.hash || "").replace(/^#/, ""));
     const t = h.get("t");
     if (t && (t === "all" || INTERESTS.some((i) => i.id === t))) activeTab = t;
+    const m = h.get("m");
+    if (m === "current" || m === "learn") modeFilter = m;
     const q = h.get("q");
     if (q) { query = q; const s = $("#search"); if (s) s.value = q; }
+    syncModeSeg();
   }
   function writeHashState() {
     const p = new URLSearchParams();
     if (activeTab && activeTab !== "all") p.set("t", activeTab);
+    if (modeFilter !== "all") p.set("m", modeFilter);
     if (query) p.set("q", query);
     const hash = p.toString();
     try { history.replaceState(null, "", hash ? "#" + hash : location.pathname + location.search); } catch {}

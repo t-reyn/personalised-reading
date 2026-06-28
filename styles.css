@@ -143,6 +143,16 @@ button { font: inherit; cursor: pointer; }
 .nav-views { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 16px 8px; max-width: var(--maxw); margin: 0 auto; }
 .nav-views .archive-toggle { margin: 0; }
 
+/* Current / Learn mode filter */
+.mode-filter { display: flex; gap: 4px; padding: 0 16px 10px; max-width: var(--maxw); margin: 0 auto; }
+.mode-seg { flex: 1; border: 1px solid var(--line-strong); background: var(--paper); color: var(--muted); border-radius: 999px; padding: 6px 10px; font-size: 12.5px; font-weight: 600; transition: all .15s; }
+.mode-seg.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.mode-seg:hover { background: var(--bg); }
+.mode-seg.on:hover { background: var(--ink); }
+
+/* Secondary-interest chip on multi-topic cards */
+.xtag { background: color-mix(in srgb, var(--ink) 6%, var(--paper)); border: 1px solid var(--line-strong); border-radius: 6px; padding: 1px 7px; font-size: 11px; color: var(--ink); font-family: var(--font-mono); }
+
 /* ---------- Stats ---------- */
 .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 6px 0 8px; }
 .stat { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
@@ -288,6 +298,7 @@ button { font: inherit; cursor: pointer; }
   body[data-page="hub"] .tab[aria-selected="true"] .count { background: color-mix(in srgb, var(--accent) 22%, transparent); }
   body[data-page="hub"] .nav-views { flex-direction: column; gap: 4px; padding: 0; max-width: none; margin: 0; }
   body[data-page="hub"] .nav-views .archive-toggle { align-self: stretch; text-align: left; margin: 0; }
+  body[data-page="hub"] .mode-filter { padding: 0; max-width: none; }
   body[data-page="hub"] .syncline { padding: 0; }
 
   /* The actual space fix: each shelf flows into a responsive grid */

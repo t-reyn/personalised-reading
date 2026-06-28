@@ -11,12 +11,16 @@
   "passThreshold": 0.75,
   "maxArticlesPerRun": 2,
   "interests": [
-    { "id": "software-ai",  "label": "Software & AI",        "emoji": "💻", "accent": "#4f7cac", "ttlDays": 21 },
-    { "id": "finance",      "label": "Finance & Investing",  "emoji": "📈", "accent": "#3f9b6e", "ttlDays": 21 },
-    { "id": "health",       "label": "Health & Fitness",     "emoji": "🏃", "accent": "#d08a3e", "ttlDays": 45 },
-    { "id": "science",      "label": "Science & World",      "emoji": "🔬", "accent": "#8e6fb0", "ttlDays": 21 },
-    { "id": "actuarial",    "label": "Actuarial & Group Life","emoji": "📊", "accent": "#b5524a", "ttlDays": null },
-    { "id": "design",       "label": "Design & Craft",       "emoji": "🎨", "accent": "#c77d8e", "ttlDays": 60 }
+    { "id": "software-ai",     "label": "Software, AI & App-building", "emoji": "💻", "accent": "#4f7cac", "ttlDays": 21,   "mode": "both" },
+    { "id": "design",          "label": "Design & Craft",              "emoji": "🎨", "accent": "#c77d8e", "ttlDays": 60,   "mode": "learn" },
+    { "id": "indie-income",    "label": "Indie Income",                "emoji": "🚀", "accent": "#1f9e8f", "ttlDays": 90,   "mode": "learn" },
+    { "id": "mortgage-broking","label": "Mortgage Broking",            "emoji": "🏦", "accent": "#5a5fb0", "ttlDays": 21,   "mode": "both" },
+    { "id": "property",        "label": "Property & Tax",              "emoji": "🏠", "accent": "#a86b46", "ttlDays": 45,   "mode": "both" },
+    { "id": "actuarial",       "label": "Actuarial & Group Life",      "emoji": "📊", "accent": "#b5524a", "ttlDays": null, "mode": "both" },
+    { "id": "finance",         "label": "Finance & Markets",           "emoji": "📈", "accent": "#3f9b6e", "ttlDays": 21,   "mode": "current" },
+    { "id": "health",          "label": "Health & Performance",        "emoji": "🏃", "accent": "#d08a3e", "ttlDays": 45,   "mode": "learn" },
+    { "id": "videography",     "label": "Videography",                 "emoji": "🎬", "accent": "#a8497f", "ttlDays": null, "mode": "learn" },
+    { "id": "science",         "label": "Science & World",             "emoji": "🔬", "accent": "#8e6fb0", "ttlDays": 21,   "mode": "current" }
   ],
   "freshness": {
     "agingAfterDays": 3,

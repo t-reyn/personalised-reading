@@ -1,12 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-28T14:38:57.919Z",
+  "generatedAt": "2026-06-28T15:58:46.411Z",
   "count": 9,
   "articles": [
     {
       "id": "2026-06-28-visual-hierarchy-basics",
       "slug": "visual-hierarchy-basics",
       "interest": "design",
+      "interests": [
+        "design",
+        "software-ai"
+      ],
+      "mode": "learn",
       "title": "Visual Hierarchy: Making the Eye Land Where You Want",
       "summary": "The single skill that separates a polished interface from a homemade one. Four levers — size, weight, contrast, and space — that tell a reader what to look at first, and how to test it in seconds.",
       "tags": [
@@ -34,6 +39,10 @@
       "id": "2026-06-27-apra-quarterly-june-2026",
       "slug": "apra-quarterly-june-2026",
       "interest": "actuarial",
+      "interests": [
+        "actuarial"
+      ],
+      "mode": null,
       "title": "Reading APRA's June 2026 Quarterly Data: Life, Super, GI and Health",
       "summary": "APRA's June 2026 quarterly statistical releases cover superannuation, life insurance, general insurance and private health. Here's what each set of numbers actually tells a practitioner — and what signals to watch.",
       "tags": [
@@ -70,6 +79,10 @@
       "id": "2026-06-27-sleep-science-for-recovery",
       "slug": "sleep-science-for-recovery",
       "interest": "health",
+      "interests": [
+        "health"
+      ],
+      "mode": null,
       "title": "Sleep Science for Recovery: What the Evidence Actually Says",
       "summary": "Sleep is the recovery layer that makes training stick. Covers sleep architecture, the U-shaped dose-response curve, temperature, nutrition, magnesium, and the myths worth ditching.",
       "tags": [
@@ -104,6 +117,10 @@
       "id": "2026-06-27-ai-infrastructure-cost-surge",
       "slug": "ai-infrastructure-cost-surge",
       "interest": "software-ai",
+      "interests": [
+        "software-ai"
+      ],
+      "mode": null,
       "title": "The Infrastructure Bill Behind AI: Why Your Tech Is Getting More Expensive",
       "summary": "AI isn't just a software upgrade — it's a trillion-dollar infrastructure build that's landing on consumer price tags. Here's the cost chain from data centres to your next MacBook.",
       "tags": [
@@ -133,6 +150,10 @@
       "id": "2026-06-27-rba-rate-cycle-june-2026",
       "slug": "rba-rate-cycle-june-2026",
       "interest": "finance",
+      "interests": [
+        "finance"
+      ],
+      "mode": null,
       "title": "The RBA's Tightening Cycle: Three Hikes In, What Comes Next?",
       "summary": "The Reserve Bank has raised the cash rate for a third consecutive meeting. What's driving it, how it flows through to your mortgage and super, and when the market thinks rates might finally fall.",
       "tags": [
@@ -162,6 +183,10 @@
       "id": "2026-06-25-ifrs17-csm-in-plain-terms",
       "slug": "ifrs17-csm-in-plain-terms",
       "interest": "actuarial",
+      "interests": [
+        "actuarial"
+      ],
+      "mode": null,
       "title": "The IFRS 17 CSM, in plain terms",
       "summary": "The contractual service margin is how IFRS 17 stops insurers booking profit on day one — and spreads it over the life of the cover instead.",
       "tags": [
@@ -186,6 +211,10 @@
       "id": "2026-06-25-real-yields-and-your-portfolio",
       "slug": "real-yields-and-your-portfolio",
       "interest": "finance",
+      "interests": [
+        "finance"
+      ],
+      "mode": null,
       "title": "What rising real yields mean for your portfolio",
       "summary": "Real yields are the interest rate after inflation — and when they rise, almost every asset you own has to re-price.",
       "tags": [
@@ -210,6 +239,10 @@
       "id": "2026-06-25-retrieval-beats-fine-tuning",
       "slug": "retrieval-beats-fine-tuning",
       "interest": "software-ai",
+      "interests": [
+        "software-ai"
+      ],
+      "mode": null,
       "title": "Why retrieval beats fine-tuning for most apps",
       "summary": "When you need an LLM to know your data, reach for retrieval before fine-tuning — it is cheaper, fresher, and easier to debug.",
       "tags": [
@@ -234,6 +267,10 @@
       "id": "2026-06-25-zone-2-training-explained",
       "slug": "zone-2-training-explained",
       "interest": "health",
+      "interests": [
+        "health"
+      ],
+      "mode": null,
       "title": "Zone 2 training, explained",
       "summary": "The slow, conversational pace that builds your aerobic base — what Zone 2 is, why it works, and how to find yours.",
       "tags": [

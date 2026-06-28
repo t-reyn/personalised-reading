@@ -76,7 +76,8 @@ limits). See `CLOUD_SETUP.md`.
 
 ```json
 {
-  "id": "2026-06-25-slug", "slug": "slug", "interest": "software-ai",
+  "id": "2026-06-25-slug", "slug": "slug",
+  "interest": "software-ai", "interests": ["software-ai", "design"], "mode": "learn",
   "title": "…", "summary": "…", "tags": ["…"],
   "created_at": "2026-06-25", "expire_at": "2026-07-16",
   "concepts_taught": ["concept-id"], "concepts_assumed": ["prereq-id"],
@@ -85,8 +86,11 @@ limits). See `CLOUD_SETUP.md`.
   "quick_check": [{ "q": "…", "options": ["…","…","…","…"], "correct": 0, "concept": "concept-id" }]
 }
 ```
-`expire_at` follows the interest's `ttlDays` in `config.json` (`null` ttl ⇒ omit `expire_at` = never
-expires; e.g. actuarial foundations).
+- `interest` = primary interest id; `interests` = all interest ids it fits (primary first, 1–3) so one
+  article can appear under several tabs. `mode` = `"current"` (timely, expires) or `"learn"` (evergreen,
+  builds the knowledge graph) — drives the Current/Learn filter. See `skills/AUTHORING.md`.
+- `expire_at` follows the interest's `ttlDays` in `config.json` (`null` ttl ⇒ omit `expire_at` = never
+  expires; e.g. `learn` pieces and actuarial foundations).
 
 ## Conventions
 
