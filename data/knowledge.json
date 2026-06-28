@@ -130,6 +130,30 @@
     "zone-2-training": {
       "is_learnt": false,
       "first_taught": "2026-06-25-zone-2-training-explained"
+    },
+    "app-monetisation-models": {
+      "is_learnt": false,
+      "first_taught": "2026-06-28-app-monetisation-models"
+    },
+    "freemium-conversion": {
+      "is_learnt": false,
+      "first_taught": "2026-06-28-app-monetisation-models"
+    },
+    "subscription-vs-one-time": {
+      "is_learnt": false,
+      "first_taught": "2026-06-28-app-monetisation-models"
+    },
+    "lrba": {
+      "is_learnt": false,
+      "first_taught": "2026-06-28-broker-brief-june-2026"
+    },
+    "negative-gearing-reform-2026": {
+      "is_learnt": false,
+      "first_taught": "2026-06-28-broker-brief-june-2026"
+    },
+    "major-bank-rate-forecasting": {
+      "is_learnt": false,
+      "first_taught": "2026-06-28-broker-brief-june-2026"
     }
   }
 }
