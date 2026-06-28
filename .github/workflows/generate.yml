@@ -20,7 +20,9 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 14
+    # Backstop only — authoring is bounded by the step-level timeout below so a slow run
+    # still reaches Build + Commit (a job-level timeout would cancel those and commit nothing).
+    timeout-minutes: 22
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
@@ -56,11 +58,12 @@ jobs:
       - name: Author articles (Claude, subscription)
         id: author
         continue-on-error: true # a partial/over-budget authoring run should still commit what it wrote
+        timeout-minutes: 13 # stop authoring under the headless-token window; the run continues to Build + Commit
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: "Read CLAUDE.md and skills/AUTHORING.md, then write today's issue exactly as they instruct. Stop when the articles, knowledge.json and pool.json are updated."
-          claude_args: "--max-turns 45 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep"
+          claude_args: "--max-turns 38 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep"
 
       # 3b. Record this run's tokens + cost estimate to data/usage-log.jsonl (token counts are the
       #     reliable figures; cost_usd is a client-side estimate, fine for trend analysis).
