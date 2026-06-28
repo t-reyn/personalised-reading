@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-28T16:06:44.044Z",
+  "updatedAt": "2026-06-28T16:07:09.915Z",
   "articles": {
     "2026-06-25-ifrs17-csm-in-plain-terms": {
       "status": "read",
@@ -16,8 +16,8 @@
     },
     "2026-06-28-visual-hierarchy-basics": {
       "status": "read",
-      "read_at": "2026-06-28T16:06:44.044Z",
-      "t": "2026-06-28T16:06:44.044Z"
+      "read_at": "2026-06-28T16:07:09.915Z",
+      "t": "2026-06-28T16:07:09.915Z"
     }
   },
   "quizzes": {
@@ -35,6 +35,11 @@
       "score": 1,
       "passed": true,
       "taken_at": "2026-06-27T15:19:35.362Z"
+    },
+    "2026-06-28-visual-hierarchy-basics": {
+      "score": 1,
+      "passed": true,
+      "taken_at": "2026-06-28T16:07:09.914Z"
     }
   }
 }
