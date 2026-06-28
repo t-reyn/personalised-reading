@@ -1,6 +1,6 @@
 {
-  "name": "Cairn",
-  "short_name": "Cairn",
+  "name": "Cortex",
+  "short_name": "Cortex",
   "description": "A reading list that writes itself and learns what you know.",
   "start_url": "./",
   "scope": "./",
