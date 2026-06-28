@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-27T15:19:35.363Z",
+  "updatedAt": "2026-06-28T16:07:09.915Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": false,
@@ -92,20 +92,32 @@
       "learnt_at": "2026-06-27T15:19:35.363Z"
     },
     "visual-hierarchy": {
-      "is_learnt": false,
-      "first_taught": "2026-06-28-visual-hierarchy-basics"
+      "is_learnt": true,
+      "first_taught": "2026-06-28-visual-hierarchy-basics",
+      "learnt_at": "2026-06-28T16:07:09.915Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-01T16:07:09.915Z"
     },
     "type-scale": {
-      "is_learnt": false,
-      "first_taught": "2026-06-28-visual-hierarchy-basics"
+      "is_learnt": true,
+      "first_taught": "2026-06-28-visual-hierarchy-basics",
+      "learnt_at": "2026-06-28T16:07:09.915Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-01T16:07:09.915Z"
     },
     "whitespace-rhythm": {
-      "is_learnt": false,
-      "first_taught": "2026-06-28-visual-hierarchy-basics"
+      "is_learnt": true,
+      "first_taught": "2026-06-28-visual-hierarchy-basics",
+      "learnt_at": "2026-06-28T16:07:09.915Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-01T16:07:09.915Z"
     },
     "contrast-for-hierarchy": {
-      "is_learnt": false,
-      "first_taught": "2026-06-28-visual-hierarchy-basics"
+      "is_learnt": true,
+      "first_taught": "2026-06-28-visual-hierarchy-basics",
+      "learnt_at": "2026-06-28T16:07:09.915Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-01T16:07:09.915Z"
     },
     "ifrs17-csm": {
       "is_learnt": false,
