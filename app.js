@@ -23,6 +23,7 @@
   let activeTab = "all";
   let query = "";
   let viewArchive = false;
+  let viewLibrary = false;
   const metaCache = {}; // articleId -> #meta (lazy)
 
   /* ---------- storage ---------- */
@@ -132,6 +133,26 @@
   function statusOf(id) { return state.articles[id]?.status || "backlog"; }
   function isRead(id) { return statusOf(id) === "read"; }
 
+  /* ---------- spaced repetition (renudge) ----------
+     A learnt concept resurfaces for review once its interval has elapsed. Passing the
+     quiz again lengthens the next interval; legacy learnt concepts with no schedule
+     fall back to a default gap so they still come back around. */
+  const REVIEW_INTERVALS = [3, 7, 16, 35, 90, 180]; // days, indexed by review_level - 1
+  const DEFAULT_REVIEW_DAYS = 21;
+  function conceptDue(cid) {
+    const c = knowledge.concepts[cid];
+    if (!c || !c.is_learnt) return false;
+    if (c.next_review_at) return c.next_review_at <= now();
+    return c.learnt_at ? daysBetween(now(), c.learnt_at) >= DEFAULT_REVIEW_DAYS : false;
+  }
+  function articleReviewDue(a) {
+    return isRead(a.id) && !a.merged_into && (a.concepts_taught || []).some(conceptDue);
+  }
+  function articleLearnt(a) {
+    const t = a.concepts_taught || [];
+    return !!state.quizzes[a.id]?.passed || (t.length > 0 && t.every(isLearnt));
+  }
+
   function renderTabs() {
     const tabs = $("#tabs");
     const counts = {};
@@ -154,22 +175,26 @@
     return { txt: `${age}d ago`, aging: false };
   }
 
-  function cardHtml(a, inArchive) {
+  function cardHtml(a, opts = {}) {
     const it = INTEREST_BY_ID[a.interest] || {};
     const read = isRead(a.id);
     const star = state.articles[a.id]?.starred;
     const age = ageLabel(a);
     const merged = (a.merged_from || []).length;
-    return `<article class="card${read || inArchive ? " read" : ""}" style="--accent:${esc(it.accent || "#4f7cac")}" data-id="${esc(a.id)}" tabindex="0" role="button">
-      ${inArchive
+    const dim = opts.archive || (read && !opts.review);   // review nudges stay bright, not greyed-out
+    const tier = opts.library
+      ? (articleReviewDue(a) ? { c: "due", t: "Review due" } : articleLearnt(a) ? { c: "learnt", t: "Learnt" } : { c: "read", t: "Read" })
+      : null;
+    return `<article class="card${dim ? " read" : ""}${opts.review ? " due" : ""}" style="--accent:${esc(it.accent || "#4f7cac")}" data-id="${esc(a.id)}" tabindex="0" role="button">
+      ${opts.archive
         ? `<button class="restore" data-restore="${esc(a.id)}" aria-label="Restore" title="Restore to your list">↩</button>`
         : `<button class="star${star ? " on" : ""}" data-star="${esc(a.id)}" aria-label="${star ? "Unstar" : "Star"}" title="Keep / star">${star ? "★" : "☆"}</button>`}
-      <div class="card-eyebrow"><span class="emoji">${esc(it.emoji || "")}</span>${esc(it.label || a.interest)}<span class="age${age.aging ? " aging" : ""}">${esc(age.txt)}</span></div>
+      <div class="card-eyebrow"><span class="emoji">${esc(it.emoji || "")}</span>${esc(it.label || a.interest)}${tier ? `<span class="tier ${tier.c}">${tier.t}</span>` : ""}<span class="age${age.aging ? " aging" : ""}">${esc(age.txt)}</span></div>
       <h3>${esc(a.title)}</h3>
       <p>${esc(a.summary)}</p>
       <div class="card-foot">
         ${(a.tags || []).slice(0, 3).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}
-        ${read ? `<span class="readtick">✓ read</span>` : ""}
+        ${opts.review ? `<span class="due-note">⟳ time to review</span>` : (read ? `<span class="readtick">✓ read</span>` : "")}
         ${merged ? `<span class="merged-note">↳ consolidates ${merged}</span>` : ""}
       </div>
     </article>`;
@@ -192,41 +217,77 @@
     const archived = arts.filter((a) => statusOf(a.id) === "archived");
     const active = arts.filter((a) => statusOf(a.id) !== "archived");
     const rc = $("#resultCount");
-    if (rc) rc.textContent = (query && !viewArchive) ? `${active.length} result${active.length === 1 ? "" : "s"} for “${query}”` : "";
+    if (rc) rc.textContent = (query && !viewArchive && !viewLibrary) ? `${active.length} result${active.length === 1 ? "" : "s"} for “${query}”` : "";
+
+    if (viewLibrary) { renderLibrary(); return; }
 
     if (viewArchive) {
       list.innerHTML = `<h2 class="shelf-title">Archive · outdated or set aside</h2>` +
         (archived.length
-          ? `<div class="shelf-grid">${archived.sort(byNew).map((a) => cardHtml(a, true)).join("")}</div>`
+          ? `<div class="shelf-grid">${archived.sort(byNew).map((a) => cardHtml(a, { archive: true })).join("")}</div>`
           : `<div class="empty"><p>Nothing archived yet. Unread items move here once they pass their freshness date (star one to keep it forever).</p></div>`);
       bindCards(list);
-      updateArchiveToggle();
+      updateToggles();
       return;
     }
 
     if (!active.length) {
       list.innerHTML = `<div class="empty"><div class="big">📭</div><p>${query ? "No articles match your search." : "Nothing here yet. New reading is written each morning."}</p></div>`;
-      updateArchiveToggle();
+      updateToggles();
       return;
     }
     const buckets = { normal: [], review: [], blocked: [], read: [] };
-    active.forEach((a) => { if (isRead(a.id)) buckets.read.push(a); else buckets[category(a)].push(a); });
-    const shelf = (title, items) => items.length ? `<h2 class="shelf-title">${title}</h2><div class="shelf-grid">${items.sort(byNew).map((a) => cardHtml(a)).join("")}</div>` : "";
+    const reviewDue = [];
+    active.forEach((a) => {
+      if (isRead(a.id)) { if (articleReviewDue(a)) reviewDue.push(a); else buckets.read.push(a); }
+      else buckets[category(a)].push(a);
+    });
+    const shelf = (title, items, opts) => items.length ? `<h2 class="shelf-title">${title}</h2><div class="shelf-grid">${items.sort(byNew).map((a) => cardHtml(a, opts)).join("")}</div>` : "";
     list.innerHTML =
+      shelf("⟳ Time to review", reviewDue, { review: true }) +
       shelf("To read", buckets.normal) +
       shelf("Worth a review", buckets.review) +
       shelf("Locked until you learn the basics", buckets.blocked) +
       shelf("Read", buckets.read);
     bindCards(list);
-    updateArchiveToggle();
+    updateToggles();
   }
 
-  function updateArchiveToggle() {
-    const b = $("#archiveToggle"); if (!b) return;
-    const n = manifest.articles.filter((a) => !a.merged_into && statusOf(a.id) === "archived").length;
-    if (viewArchive) { b.hidden = false; b.textContent = "← Back to reading"; }
-    else if (n > 0) { b.hidden = false; b.textContent = `🗄 Archive (${n})`; }
-    else { b.hidden = true; }
+  const byReadDesc = (x, y) => (state.articles[y.id]?.read_at || "").localeCompare(state.articles[x.id]?.read_at || "");
+  function renderLibrary() {
+    const list = $("#list");
+    let reads = manifest.articles.filter((a) => !a.merged_into && isRead(a.id));
+    if (activeTab !== "all") reads = reads.filter((a) => a.interest === activeTab);
+    if (query) { const q = query.toLowerCase(); reads = reads.filter((a) => (a.title + " " + a.summary + " " + (a.tags || []).join(" ")).toLowerCase().includes(q)); }
+    const learntCount = Object.values(knowledge.concepts).filter((c) => c.is_learnt).length;
+    const due = reads.filter(articleReviewDue);
+    const learnt = reads.filter((a) => !articleReviewDue(a) && articleLearnt(a));
+    const plain = reads.filter((a) => !articleReviewDue(a) && !articleLearnt(a));
+    const shelf = (title, items, opts) => items.length ? `<h2 class="shelf-title">${title}</h2><div class="shelf-grid">${items.sort(byReadDesc).map((a) => cardHtml(a, opts)).join("")}</div>` : "";
+    list.innerHTML =
+      `<div class="lib-summary"><b>${reads.length}</b> read · <b>${learntCount}</b> concept${learntCount === 1 ? "" : "s"} learnt${due.length ? ` · <b>${due.length}</b> due for review` : ""}</div>` +
+      (reads.length
+        ? shelf("Due for review", due, { library: true, review: true }) + shelf("Learnt", learnt, { library: true }) + shelf("Read", plain, { library: true })
+        : `<div class="empty"><div class="big">📚</div><p>${query ? "No read articles match your search." : "Your library fills up as you read. Open an article, mark it read — it lives here with what you've learnt."}</p></div>`);
+    bindCards(list);
+    updateToggles();
+  }
+
+  function updateToggles() {
+    const ab = $("#archiveToggle"), lb = $("#libraryToggle");
+    const archN = manifest.articles.filter((a) => !a.merged_into && statusOf(a.id) === "archived").length;
+    const dueN = manifest.articles.filter((a) => articleReviewDue(a)).length;
+    if (lb) {
+      lb.hidden = viewArchive;
+      lb.textContent = viewLibrary ? "← Back to reading" : (dueN > 0 ? `📚 My Library · ${dueN} to review` : "📚 My Library");
+      lb.classList.toggle("on", viewLibrary);
+    }
+    if (ab) {
+      if (viewLibrary) ab.hidden = true;
+      else if (viewArchive) { ab.hidden = false; ab.textContent = "← Back to reading"; }
+      else if (archN > 0) { ab.hidden = false; ab.textContent = `🗄 Archive (${archN})`; }
+      else ab.hidden = true;
+    }
   }
 
   /* ---------- mutations ---------- */
@@ -265,8 +326,11 @@
   function learnConcepts(article, passed) {
     (article.concepts_taught || []).forEach((cid) => {
       const c = (knowledge.concepts[cid] ||= { label: cid, interest: article.interest, prerequisite_ids: [], is_learnt: false, review_level: 0, next_review_at: null });
-      if (passed) { c.is_learnt = true; c.learnt_at = now(); c.review_level = 3; c.next_review_at = null; }
-      else { c.is_learnt = false; c.review_level = Math.max(1, c.review_level || 0); c.next_review_at = new Date(Date.now() + 3 * 86400000).toISOString(); }
+      if (passed) {
+        c.is_learnt = true; c.learnt_at = c.learnt_at || now();
+        c.review_level = Math.min((c.review_level || 0) + 1, REVIEW_INTERVALS.length); // each pass lengthens the gap
+        c.next_review_at = new Date(Date.now() + REVIEW_INTERVALS[c.review_level - 1] * 86400000).toISOString();
+      } else { c.is_learnt = false; c.review_level = Math.max(1, c.review_level || 0); c.next_review_at = new Date(Date.now() + 3 * 86400000).toISOString(); }
     });
     saveKnowledge();
   }
@@ -481,7 +545,8 @@
     $("#settingsBtn").addEventListener("click", openSettings);
     const tb = $("#themeBtn");
     if (tb) { tb.textContent = currentTheme() === "dark" ? "☀" : "☾"; tb.addEventListener("click", () => applyTheme(currentTheme() === "dark" ? "light" : "dark")); }
-    $("#archiveToggle")?.addEventListener("click", () => { viewArchive = !viewArchive; render(); window.scrollTo(0, 0); });
+    $("#archiveToggle")?.addEventListener("click", () => { viewArchive = !viewArchive; viewLibrary = false; render(); window.scrollTo(0, 0); });
+    $("#libraryToggle")?.addEventListener("click", () => { viewLibrary = !viewLibrary; viewArchive = false; render(); window.scrollTo(0, 0); });
     const s = $("#search");
     s.addEventListener("input", () => { query = s.value.trim(); writeHashState(); render(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") document.querySelectorAll(".overlay:not([hidden])").forEach(hide); });

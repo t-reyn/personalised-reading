@@ -109,6 +109,7 @@ export function buildIndexHtml(config, stats, now) {
         <input id="search" class="search" type="search" placeholder="Search ${stats.count} article${stats.count === 1 ? "" : "s"}…" aria-label="Search articles" />
       </header>
       <nav id="tabs" class="tabs" aria-label="Interests"></nav>
+      <button id="libraryToggle" class="archive-toggle library-toggle" hidden></button>
       <button id="archiveToggle" class="archive-toggle" hidden></button>
       <p id="syncline" class="syncline" hidden></p>
     </aside>
