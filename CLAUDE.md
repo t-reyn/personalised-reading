@@ -2,6 +2,10 @@
 
 Guidance for Claude Code working in this repo — **and the authoring contract for the daily routine**.
 
+> **Continuing development / picking up cold?** Read [`HANDOFF.md`](HANDOFF.md) first — it's the full
+> project state: architecture, the profile-driven content model, how the daily run works, local-dev +
+> verify commands, redesign guardrails, and the solved gotchas.
+
 ## What this is
 
 A personal, single-user "reading list that writes itself and learns what you know." It is a **static
