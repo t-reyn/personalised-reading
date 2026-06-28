@@ -13,11 +13,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" />
-  <link rel="stylesheet" href="styles.css?v=20260628135436" />
+  <link rel="stylesheet" href="styles.css?v=20260628141133" />
   <script>
     try { var _t = localStorage.getItem("pr:theme"); if (_t === "dark" || _t === "light") document.documentElement.dataset.theme = _t; } catch (e) {}
     window.PR_BASE = "./";
-    window.PR_BUILD = "2026-06-28T13:54:36.769Z";
+    window.PR_BUILD = "2026-06-28T14:11:33.896Z";
     window.PR_CONFIG = {"siteUrl":"https://t-reyn.github.io/personalised-reading","repo":{"owner":"t-reyn","name":"personalised-reading","branch":"main"},"title":"Cortex","tagline":"A reading list that writes itself, and learns what you know.","audience":{"location":"Australia","english":"en-AU","guidance":"Write for an Australia-based reader. Apply an Australian lens where relevant — local bodies and regulation (APRA, ASIC, ATO, RBA, Actuaries Institute), $AUD, ASX / superannuation, Australian health and policy context, AEST timing, and Australian spelling — but do NOT be parochial: cover global affairs and developments too, framed for an Australian reader where it helps. Per tab: Finance leans AU (RBA, ASX, super) while tracking global macro; Actuarial leans AU group life + APRA while tracking IFRS 17 / global practice; Software/AI and Science are mostly global."},"passThreshold":0.75,"maxArticlesPerRun":3,"interests":[{"id":"software-ai","label":"Software & AI","emoji":"💻","accent":"#4f7cac","ttlDays":21},{"id":"finance","label":"Finance & Investing","emoji":"📈","accent":"#3f9b6e","ttlDays":21},{"id":"health","label":"Health & Fitness","emoji":"🏃","accent":"#d08a3e","ttlDays":45},{"id":"science","label":"Science & World","emoji":"🔬","accent":"#8e6fb0","ttlDays":21},{"id":"actuarial","label":"Actuarial & Group Life","emoji":"📊","accent":"#b5524a","ttlDays":null},{"id":"design","label":"Design & Craft","emoji":"🎨","accent":"#c77d8e","ttlDays":60}],"freshness":{"agingAfterDays":3,"archiveSweep":true}};
   </script>
 </head>
@@ -36,8 +36,12 @@
         <input id="search" class="search" type="search" placeholder="Search 9 articles…" aria-label="Search articles" />
       </header>
       <nav id="tabs" class="tabs" aria-label="Interests"></nav>
-      <button id="libraryToggle" class="archive-toggle library-toggle" hidden></button>
-      <button id="archiveToggle" class="archive-toggle" hidden></button>
+      <div class="nav-views">
+        <button id="libraryToggle" class="archive-toggle" hidden></button>
+        <button id="statsToggle" class="archive-toggle" hidden></button>
+        <button id="discoverToggle" class="archive-toggle" hidden></button>
+        <button id="archiveToggle" class="archive-toggle" hidden></button>
+      </div>
       <p id="syncline" class="syncline" hidden></p>
     </aside>
 
@@ -55,6 +59,6 @@
   <div id="quiz" class="overlay" hidden aria-modal="true" role="dialog"></div>
   <div id="settings" class="overlay" hidden aria-modal="true" role="dialog"></div>
 
-  <script src="app.js?v=20260628135436"></script>
+  <script src="app.js?v=20260628141133"></script>
 </body>
 </html>

@@ -106,6 +106,18 @@
     "contrast-for-hierarchy": {
       "is_learnt": false,
       "first_taught": "2026-06-28-visual-hierarchy-basics"
+    },
+    "ifrs17-csm": {
+      "is_learnt": false,
+      "first_taught": "2026-06-25-ifrs17-csm-in-plain-terms"
+    },
+    "rag": {
+      "is_learnt": false,
+      "first_taught": "2026-06-25-retrieval-beats-fine-tuning"
+    },
+    "zone-2-training": {
+      "is_learnt": false,
+      "first_taught": "2026-06-25-zone-2-training-explained"
     }
   }
 }

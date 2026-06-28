@@ -1,0 +1,23 @@
+name: Health check
+
+# Daily integrity check of the generated site + state. Uses zero Claude/LLM budget.
+# Runs ~1.5h after the morning generate; if anything is broken or no fresh article
+# was produced, the job fails and GitHub emails the repo owner.
+on:
+  schedule:
+    - cron: "30 21 * * *" # 21:30 UTC, ~1.5h after the 20:00 UTC generate run
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run integrity + freshness check
+        run: node scripts/health-check.mjs

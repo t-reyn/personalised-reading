@@ -22,8 +22,7 @@
   let knowledge = { version: 1, updatedAt: null, concepts: {} };
   let activeTab = "all";
   let query = "";
-  let viewArchive = false;
-  let viewLibrary = false;
+  let view = "reading"; // reading | library | stats | discover | archive
   const metaCache = {}; // articleId -> #meta (lazy)
 
   /* ---------- storage ---------- */
@@ -217,11 +216,13 @@
     const archived = arts.filter((a) => statusOf(a.id) === "archived");
     const active = arts.filter((a) => statusOf(a.id) !== "archived");
     const rc = $("#resultCount");
-    if (rc) rc.textContent = (query && !viewArchive && !viewLibrary) ? `${active.length} result${active.length === 1 ? "" : "s"} for “${query}”` : "";
+    if (rc) rc.textContent = (query && view === "reading") ? `${active.length} result${active.length === 1 ? "" : "s"} for “${query}”` : "";
 
-    if (viewLibrary) { renderLibrary(); return; }
+    if (view === "library") { renderLibrary(); return; }
+    if (view === "stats") { renderStats(); return; }
+    if (view === "discover") { renderDiscover(); return; }
 
-    if (viewArchive) {
+    if (view === "archive") {
       list.innerHTML = `<h2 class="shelf-title">Archive · outdated or set aside</h2>` +
         (archived.length
           ? `<div class="shelf-grid">${archived.sort(byNew).map((a) => cardHtml(a, { archive: true })).join("")}</div>`
@@ -274,20 +275,85 @@
   }
 
   function updateToggles() {
-    const ab = $("#archiveToggle"), lb = $("#libraryToggle");
     const archN = manifest.articles.filter((a) => !a.merged_into && statusOf(a.id) === "archived").length;
-    const dueN = manifest.articles.filter((a) => articleReviewDue(a)).length;
-    if (lb) {
-      lb.hidden = viewArchive;
-      lb.textContent = viewLibrary ? "← Back to reading" : (dueN > 0 ? `📚 My Library · ${dueN} to review` : "📚 My Library");
-      lb.classList.toggle("on", viewLibrary);
-    }
+    const dueN = manifest.articles.filter(articleReviewDue).length;
+    const btn = (sel, v, label) => { const b = $(sel); if (!b) return; b.hidden = false; b.classList.toggle("on", view === v); b.textContent = label; };
+    btn("#libraryToggle", "library", dueN > 0 ? `📚 Library · ${dueN} due` : "📚 Library");
+    btn("#statsToggle", "stats", "📊 Stats");
+    btn("#discoverToggle", "discover", "🛰 Discover");
+    const ab = $("#archiveToggle");
     if (ab) {
-      if (viewLibrary) ab.hidden = true;
-      else if (viewArchive) { ab.hidden = false; ab.textContent = "← Back to reading"; }
-      else if (archN > 0) { ab.hidden = false; ab.textContent = `🗄 Archive (${archN})`; }
+      if (archN > 0 || view === "archive") { ab.hidden = false; ab.classList.toggle("on", view === "archive"); ab.textContent = `🗄 Archive${archN ? ` (${archN})` : ""}`; }
       else ab.hidden = true;
     }
+  }
+
+  /* ---------- stats ---------- */
+  function conceptInterest(cid, c) { return c.interest || (manifest.articles.find((a) => a.id === c.first_taught) || {}).interest || "other"; }
+  function renderStats() {
+    const list = $("#list");
+    const reads = manifest.articles.filter((a) => !a.merged_into && isRead(a.id));
+    const learnt = Object.entries(knowledge.concepts).filter(([, c]) => c.is_learnt);
+    const dueN = manifest.articles.filter(articleReviewDue).length;
+    // Day streak: consecutive days (ending today or yesterday) with at least one read.
+    const days = new Set(Object.values(state.articles).filter((a) => a.read_at).map((a) => a.read_at.slice(0, 10)));
+    let streak = 0, d = new Date(now().slice(0, 10) + "T00:00:00Z");
+    if (!days.has(d.toISOString().slice(0, 10))) d.setUTCDate(d.getUTCDate() - 1);
+    while (days.has(d.toISOString().slice(0, 10))) { streak++; d.setUTCDate(d.getUTCDate() - 1); }
+    const byTopic = {}; reads.forEach((a) => (byTopic[a.interest] = (byTopic[a.interest] || 0) + 1));
+    const learntByTopic = {}; learnt.forEach(([cid, c]) => { const i = conceptInterest(cid, c); learntByTopic[i] = (learntByTopic[i] || 0) + 1; });
+    const stat = (label, val) => `<div class="stat"><div class="stat-num">${val}</div><div class="stat-label">${label}</div></div>`;
+    const bars = (data) => {
+      const rows = INTERESTS.filter((i) => data[i.id]);
+      if (!rows.length) return `<p class="muted-note">Nothing here yet — read a few articles and this fills in.</p>`;
+      const max = Math.max(1, ...rows.map((i) => data[i.id]));
+      return rows.map((i) => `<div class="bar-row"><span class="bar-label">${esc(i.emoji)} ${esc(i.label)}</span><span class="bar-track"><span class="bar-fill" style="width:${Math.round(data[i.id] / max * 100)}%;background:${esc(i.accent)}"></span></span><span class="bar-val">${data[i.id]}</span></div>`).join("");
+    };
+    list.innerHTML =
+      `<div class="stats-grid">${stat("Day streak", streak)}${stat("Articles read", reads.length)}${stat("Concepts learnt", learnt.length)}${stat("Due for review", dueN)}</div>` +
+      `<h2 class="shelf-title">Reading by topic</h2><div class="bars">${bars(byTopic)}</div>` +
+      `<h2 class="shelf-title">Concepts learnt by topic</h2><div class="bars">${bars(learntByTopic)}</div>`;
+    updateToggles();
+  }
+
+  /* ---------- discover (scout queue) ---------- */
+  function dismissDiscover(id) {
+    let arr; try { arr = JSON.parse(localStorage.getItem("pr:discover-dismissed") || "[]"); } catch { arr = []; }
+    if (!arr.includes(id)) arr.push(id);
+    try { localStorage.setItem("pr:discover-dismissed", JSON.stringify(arr)); } catch {}
+    renderDiscover();
+  }
+  async function renderDiscover() {
+    const list = $("#list");
+    list.innerHTML = `<div class="lib-summary">Loading fresh reads from your feeds…</div>`;
+    let pool = [];
+    try { pool = (await fetchJson("data/pool.json")).items || []; } catch {}
+    if (view !== "discover") return; // user navigated away during the fetch
+    let dismissed; try { dismissed = new Set(JSON.parse(localStorage.getItem("pr:discover-dismissed") || "[]")); } catch { dismissed = new Set(); }
+    let items = pool.filter((it) => it.status !== "used" && it.url && !dismissed.has(it.id));
+    if (activeTab !== "all") items = items.filter((it) => it.interest === activeTab);
+    if (query) { const q = query.toLowerCase(); items = items.filter((it) => (it.title || "").toLowerCase().includes(q)); }
+    items.sort((a, b) => (b.added_at || b.published_at || "").localeCompare(a.added_at || a.published_at || ""));
+    items = items.slice(0, 80);
+    if (!items.length) {
+      list.innerHTML = `<div class="empty"><div class="big">🛰</div><p>${query ? "No discoveries match your search." : "No fresh external reads right now — the scout refreshes your feeds each morning."}</p></div>`;
+      updateToggles(); return;
+    }
+    const dash = /\s+[-–—|]\s+([^-–—|]{2,42})$/;
+    const cleanTitle = (t) => { t = (t || "").trim(); const m = t.match(dash); return m ? t.slice(0, m.index).trim() : t; };
+    const srcOf = (it) => { const m = (it.title || "").match(dash); if (m) return m[1].trim(); try { return new URL(it.url).hostname.replace(/^www\./, ""); } catch { return ""; } };
+    const ageOf = (it) => { const x = it.published_at || it.added_at; if (!x) return ""; const n = daysBetween(now(), new Date(x).toISOString()); return n <= 0 ? "today" : n === 1 ? "yesterday" : `${n}d ago`; };
+    const byInterest = {}; items.forEach((it) => (byInterest[it.interest] ||= []).push(it));
+    const card = (it) => `<article class="disc-card" style="--accent:${esc((INTEREST_BY_ID[it.interest] || {}).accent || "#4f7cac")}">
+        <button class="disc-x" data-dismiss="${esc(it.id)}" aria-label="Dismiss" title="Hide this">✕</button>
+        <div class="disc-src">${esc(srcOf(it))}${srcOf(it) && ageOf(it) ? " · " : ""}${esc(ageOf(it))}</div>
+        <a class="disc-title" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(cleanTitle(it.title))}</a>
+      </article>`;
+    list.innerHTML =
+      `<div class="lib-summary">Fresh from your feeds — <b>${items.length}</b> unread from the web. Open one to read the original.</div>` +
+      INTERESTS.filter((i) => byInterest[i.id]).map((i) => `<h2 class="shelf-title">${esc(i.emoji)} ${esc(i.label)}</h2><div class="shelf-grid">${byInterest[i.id].map(card).join("")}</div>`).join("");
+    list.querySelectorAll("[data-dismiss]").forEach((b) => b.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); dismissDiscover(b.dataset.dismiss); }));
+    updateToggles();
   }
 
   /* ---------- mutations ---------- */
@@ -545,8 +611,11 @@
     $("#settingsBtn").addEventListener("click", openSettings);
     const tb = $("#themeBtn");
     if (tb) { tb.textContent = currentTheme() === "dark" ? "☀" : "☾"; tb.addEventListener("click", () => applyTheme(currentTheme() === "dark" ? "light" : "dark")); }
-    $("#archiveToggle")?.addEventListener("click", () => { viewArchive = !viewArchive; viewLibrary = false; render(); window.scrollTo(0, 0); });
-    $("#libraryToggle")?.addEventListener("click", () => { viewLibrary = !viewLibrary; viewArchive = false; render(); window.scrollTo(0, 0); });
+    const setView = (v) => { view = view === v ? "reading" : v; render(); window.scrollTo(0, 0); };
+    $("#libraryToggle")?.addEventListener("click", () => setView("library"));
+    $("#statsToggle")?.addEventListener("click", () => setView("stats"));
+    $("#discoverToggle")?.addEventListener("click", () => setView("discover"));
+    $("#archiveToggle")?.addEventListener("click", () => setView("archive"));
     const s = $("#search");
     s.addEventListener("input", () => { query = s.value.trim(); writeHashState(); render(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") document.querySelectorAll(".overlay:not([hidden])").forEach(hide); });
