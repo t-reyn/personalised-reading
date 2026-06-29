@@ -34,6 +34,16 @@ worked AU examples — not general overviews.
 - Copy `templates/article.html` → `articles/YYYY-MM-DD/<slug>.html` (today's date; `<slug>` kebab-case).
 - **Synthesise** several sources into one original ~500–700 word piece (don't summarise one link). For a
   `learn` piece with a thin pool, it's fine to write from your own knowledge of the topic.
+- **Use the real data — don't write a generic overview.** For a `current` piece built on a statistics or
+  regulator release (APRA, ABS, RBA, ASIC), the article MUST state the actual figures and what they show
+  (the direction, the number, the so-what), not just explain what the series is. The pool excerpt is
+  often already enriched with the release's highlights — lead with those. If the excerpt is still thin
+  (bare title, page chrome, or a link with no numbers), **`WebFetch` the source URL** to read the
+  highlights or the linked data, then draw the conclusions. WebFetch can read the linked PDF/page too.
+  - **Fetch sparingly (token + time budget):** only fetch sources you're actually citing in the piece
+    you're writing, prefer the enriched excerpt when it already has the numbers, and don't fetch more
+    than ~3 pages per run. The run is on a tight headless-token window — a handful of targeted fetches
+    is fine; broad crawling is not.
 - **Knowledge-aware:** never re-explain an `is_learnt` concept; briefly teach an assumed prerequisite inline
   rather than assuming it. For software/AI the reader "vibecodes" — explain fundamentals + the *why*.
 - **Australian lens** per `config.audience` where relevant; cover global developments too. Subtly honour the
