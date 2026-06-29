@@ -199,6 +199,22 @@
     "major-bank-rate-forecasting": {
       "is_learnt": false,
       "first_taught": "2026-06-28-broker-brief-june-2026"
+    },
+    "early-customer-acquisition": {
+      "is_learnt": false,
+      "first_taught": "2026-06-29-first-ten-users"
+    },
+    "product-taste": {
+      "is_learnt": false,
+      "first_taught": "2026-06-29-first-ten-users"
+    },
+    "apra-presale-requirements": {
+      "is_learnt": false,
+      "first_taught": "2026-06-29-broker-brief-fy26-end"
+    },
+    "lender-servicing-update": {
+      "is_learnt": false,
+      "first_taught": "2026-06-29-broker-brief-fy26-end"
     }
   }
 }

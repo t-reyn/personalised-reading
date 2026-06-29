@@ -1,8 +1,71 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-29T17:26:14.253Z",
-  "count": 11,
+  "generatedAt": "2026-06-29T21:30:33.280Z",
+  "count": 13,
   "articles": [
+    {
+      "id": "2026-06-29-broker-brief-fy26-end",
+      "slug": "broker-brief-fy26-end",
+      "interest": "mortgage-broking",
+      "interests": [
+        "mortgage-broking",
+        "property"
+      ],
+      "mode": "current",
+      "title": "Broker Brief: End of FY26 — Tax Reform Fallout, APRA's Presale Shakeup, SME Arrears",
+      "summary": "Three developments every AU broker needs to track as the financial year closes: lenders revising servicing calculators after Labor's investor tax reforms, APRA proposing new presale rules for development finance, and SME payment arrears on the rise.",
+      "tags": [
+        "apra",
+        "servicing",
+        "negative-gearing",
+        "sme",
+        "presale",
+        "fy26"
+      ],
+      "created_at": "2026-06-29",
+      "expire_at": "2026-07-20",
+      "concepts_taught": [
+        "apra-presale-requirements",
+        "lender-servicing-update"
+      ],
+      "concepts_assumed": [
+        "negative-gearing-reform-2026",
+        "rba-cash-rate"
+      ],
+      "source_count": 5,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-06-29/broker-brief-fy26-end.html"
+    },
+    {
+      "id": "2026-06-29-first-ten-users",
+      "slug": "first-ten-users",
+      "interest": "indie-income",
+      "interests": [
+        "indie-income"
+      ],
+      "mode": "learn",
+      "title": "Your First 10 Users: The Only Number That Matters at Launch",
+      "summary": "Getting early users for a consumer app is less about marketing and more about manual, targeted outreach — and in an AI world, taste is the skill that separates winners.",
+      "tags": [
+        "early-stage",
+        "user-acquisition",
+        "consumer-apps",
+        "product-taste",
+        "indie"
+      ],
+      "created_at": "2026-06-29",
+      "expire_at": null,
+      "concepts_taught": [
+        "early-customer-acquisition",
+        "product-taste"
+      ],
+      "concepts_assumed": [],
+      "source_count": 4,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-06-29/first-ten-users.html"
+    },
     {
       "id": "2026-06-28-broker-brief-june-2026",
       "slug": "broker-brief-june-2026",
