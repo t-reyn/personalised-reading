@@ -363,9 +363,9 @@
       if (archN > 0 || view === "archive") { ab.hidden = false; ab.classList.toggle("on", view === "archive"); ab.innerHTML = ICON_ARCHIVE + `<span>Archive${archN ? ` (${archN})` : ""}</span>`; }
       else ab.hidden = true;
     }
-    // Mobile bottom tab bar active state (HOME = reading; secondary views highlight nothing).
-    const navFor = { reading: "navHome", library: "navLibrary", stats: "navStats" };
-    ["navHome", "navLibrary", "navStats"].forEach((id) => {
+    // Mobile bottom tab bar active state (HOME = reading; archive highlights nothing).
+    const navFor = { reading: "navHome", library: "navLibrary", stats: "navStats", discover: "navDiscover", corpus: "navCorpus" };
+    ["navHome", "navLibrary", "navStats", "navDiscover", "navCorpus"].forEach((id) => {
       const b = document.getElementById(id); if (!b) return;
       const on = navFor[view] === id;
       b.classList.toggle("on", on);
@@ -832,6 +832,8 @@
     $("#navHome")?.addEventListener("click", () => { view = "reading"; render(); window.scrollTo(0, 0); });
     $("#navLibrary")?.addEventListener("click", () => setView("library"));
     $("#navStats")?.addEventListener("click", () => setView("stats"));
+    $("#navDiscover")?.addEventListener("click", () => setView("discover"));
+    $("#navCorpus")?.addEventListener("click", () => setView("corpus"));
     $("#modeFilter")?.querySelectorAll(".mode-seg").forEach((b) => b.addEventListener("click", () => {
       modeFilter = b.dataset.mode || "all"; syncModeSeg(); writeHashState(); renderTabs(); render();
     }));

@@ -383,6 +383,14 @@ body[data-interest="science"]          { --accent: #a06ff0; }
 .app-shell, .sidebar { display: contents; }
 .shelf-grid { display: block; }
 
+/* Mobile: the bottom tab bar now carries Library/Stats/Discover/Corpus, so the secondary chip strip
+   is redundant — show only Archive there (rare), and collapse the row's padding when it's empty. */
+@media (max-width: 1023px) {
+  #libraryToggle, #statsToggle, #discoverToggle, #corpusToggle { display: none; }
+  .nav-views { padding: 0 16px; }
+  .nav-views .archive-toggle { margin-top: 10px; }
+}
+
 @media (min-width: 1024px) {
   .tabbar { display: none; }
   body[data-page="hub"] .app-shell {
