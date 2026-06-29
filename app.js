@@ -126,7 +126,11 @@
     state.articles ||= {}; state.quizzes ||= {}; knowledge.concepts ||= {};
 
     // If synced, pull remote and adopt if newer (cross-device).
-    if (token() && repoCfg()) { await pullRemote().catch(() => {}); }
+    if (token() && apiBase()) {
+      await pullRemote().then(() => setSync("Synced ✓")).catch(() => setSync("Sync error — check token in Settings", true));
+    } else if (apiBase() && !token()) {
+      setSync("Not syncing — add your GitHub token in Settings", true);
+    }
     sweepExpired();
 
     wireChrome();
@@ -629,20 +633,42 @@
   // Debounced background sync so rapid reads don't spam commits.
   const pending = {}; let syncTimer = null;
   function scheduleSync(file, obj) {
-    if (!token() || !apiBase()) return;
-    pending[file] = obj;
+    if (!apiBase()) return;                 // no repo configured → pure local mode, nothing to surface
+    pending[file] = obj;                    // queue regardless of token so it survives a token re-add
+    if (!token()) { setSync("Not syncing — add your GitHub token in Settings", true); return; }
     clearTimeout(syncTimer);
     syncTimer = setTimeout(flushSync, 8000);
   }
   function flushSync() {
-    const files = Object.keys(pending); const jobs = files.map((f) => pushJson(f, pending[f]));
-    Object.keys(pending).forEach((k) => delete pending[k]);
-    Promise.allSettled(jobs).then((rs) => { setSync(rs.every((x) => x.status === "fulfilled") ? "Synced ✓" : "Sync error — will retry"); });
+    const files = Object.keys(pending);
+    if (!files.length) return;
+    if (!token() || !apiBase()) { setSync("Not syncing — add your GitHub token in Settings", true); return; } // keep pending
+    files.forEach((k) => delete pending[k]);
+    Promise.allSettled(files.map((f) => pushJson(f, localFor(f)))).then((rs) => {
+      const failed = files.filter((_, i) => rs[i].status === "rejected");
+      if (!failed.length) { setSync("Synced ✓"); return; }
+      failed.forEach((f) => { pending[f] = localFor(f); });   // re-queue so a failed push is never lost
+      setSync("Sync error — check token in Settings", true);
+      clearTimeout(syncTimer); syncTimer = setTimeout(flushSync, 30000); // back off, then retry
+    });
   }
   window.addEventListener("pagehide", () => { if (Object.keys(pending).length) flushSync(); });
-  window.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden" && Object.keys(pending).length) flushSync(); });
+  window.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") { if (Object.keys(pending).length) flushSync(); }
+    else { refreshFromRemote(); }
+  });
+  window.addEventListener("focus", refreshFromRemote);
 
-  function setSync(msg) { const el = $("#syncline"); if (!el) return; el.textContent = msg; el.hidden = false; }
+  function setSync(msg, isError) { const el = $("#syncline"); if (!el) return; el.textContent = msg; el.hidden = false; el.classList.toggle("error", !!isError); }
+  // Pull remote state when the app regains focus, so a read on another device shows up
+  // without a cold relaunch. Guarded so rapid focus/visibility events don't double-pull.
+  let lastRemotePull = 0;
+  async function refreshFromRemote() {
+    if (!token() || !apiBase()) return;
+    const t = Date.now(); if (t - lastRemotePull < 4000) return; lastRemotePull = t;
+    try { const changed = await pullRemote(); setSync("Synced ✓"); if (changed) { sweepExpired(); renderTabs(); render(); } }
+    catch { setSync("Sync error — check token in Settings", true); }
+  }
 
   /* ---------- chrome ---------- */
   function currentTheme() {

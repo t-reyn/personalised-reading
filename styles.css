@@ -253,6 +253,7 @@ button { font: inherit; cursor: pointer; }
 
 /* ---------- Sync line ---------- */
 .syncline { max-width: var(--maxw); margin: 0 auto; padding: 6px 16px 0; font-size: 11px; color: var(--faint); }
+.syncline.error { color: var(--accent); font-weight: 600; }
 
 /* ---------- Footer ---------- */
 .foot { max-width: var(--maxw); margin: 0 auto; padding: 26px 16px; display: flex; flex-direction: column; gap: 4px; color: var(--faint); font-size: 12px; border-top: 1px solid var(--line); }
