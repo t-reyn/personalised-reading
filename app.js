@@ -476,16 +476,28 @@
     if (!a) return;
     const meta = await loadMeta(a);
     const hasQuiz = Array.isArray(meta.quick_check) && meta.quick_check.length > 0;
+    const it = INTEREST_BY_ID[a.interest] || {};
     const ov = $("#reader");
+    ov.style.setProperty("--accent", it.accent || "#ff8a5b");
+    const star = !!state.articles[id]?.starred;
     ov.innerHTML = `
-      <div class="ov-bar"><button class="close" aria-label="Close">✕</button><span class="ov-title">${esc(a.title)}</span></div>
+      <div class="ov-bar">
+        <button class="back" data-act="back" aria-label="Back to reading">← ${esc((it.emoji ? it.emoji + " " : "") + (it.label || a.interest))}</button>
+        <span class="ov-title">${esc(a.title)}</span>
+        <button class="ovstar${star ? " on" : ""}" data-act="star" aria-label="${star ? "Unsave" : "Save"}" title="Save / keep">${star ? "★" : "☆"}</button>
+      </div>
       <div class="ov-body"><iframe class="reader-frame" title="${esc(a.title)}" src="${esc(BASE + a.path)}" sandbox="allow-popups allow-popups-to-escape-sandbox"></iframe></div>
       <div class="ov-actions">
-        ${isRead(id) ? `<button class="btn" data-act="unread">Mark unread</button>` : `<button class="btn primary" data-act="read">Mark as read</button>`}
-        ${hasQuiz ? `<button class="btn good" data-act="quiz">Test me</button>` : ""}
+        ${isRead(id) ? `<button class="btn" data-act="unread">Mark unread</button>` : `<button class="btn good" data-act="read">✓ Mark read</button>`}
+        ${hasQuiz ? `<button class="btn primary" data-act="quiz">Take quiz →</button>` : ""}
       </div>`;
     show(ov);
-    ov.querySelector(".close").onclick = () => hide(ov);
+    ov.querySelector('[data-act="back"]').onclick = () => hide(ov);
+    ov.querySelector('[data-act="star"]')?.addEventListener("click", () => {
+      toggleStar(id);
+      const b = ov.querySelector('[data-act="star"]'); const on = !!state.articles[id]?.starred;
+      b.classList.toggle("on", on); b.textContent = on ? "★" : "☆"; b.setAttribute("aria-label", on ? "Unsave" : "Save");
+    });
     ov.querySelector('[data-act="read"]')?.addEventListener("click", () => { markRead(id); if (hasQuiz) openQuiz(a, meta); else { hide(ov); render(); } });
     ov.querySelector('[data-act="unread"]')?.addEventListener("click", () => { const e = (state.articles[id] ||= {}); e.status = "backlog"; e.t = now(); saveState(); renderTabs(); hide(ov); render(); });
     ov.querySelector('[data-act="quiz"]')?.addEventListener("click", () => openQuiz(a, meta));

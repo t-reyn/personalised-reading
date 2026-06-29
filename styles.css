@@ -1,5 +1,6 @@
 /* Cortex — retro-terminal reskin. Mobile-first, zero-dependency.
-   Light = warm-paper retro; dark = the design's exact terminal palette. */
+   Light = warm-paper retro; dark = the design's exact terminal palette.
+   Fonts are loaded via <link> in each page's <head> (hub shell + article template). */
 :root {
   /* warm-paper retro (light) */
   --bg: #e7dcc4;
@@ -287,9 +288,14 @@ button { font: inherit; cursor: pointer; }
   border-bottom: 1px solid var(--line); background: var(--paper);
 }
 .ov-bar .close { border: 1px solid var(--line-strong); background: var(--panel); color: var(--ink); border-radius: 8px; width: 36px; height: 36px; font-size: 17px; }
+/* Reader chrome: ← back-to-topic + save-star */
+.ov-bar .back { display: inline-flex; align-items: center; gap: 7px; max-width: 46%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; border: 1px solid var(--line-strong); background: var(--panel); color: var(--muted); border-radius: 7px; padding: 7px 12px; font: 600 12px var(--font-mono); letter-spacing: .03em; }
+.ov-bar .back:hover { color: var(--ink); border-color: color-mix(in srgb, var(--accent) 45%, var(--line-strong)); }
+.ov-bar .ovstar { margin-left: auto; flex: 0 0 auto; border: 1px solid var(--line-strong); background: var(--panel); color: var(--faint); border-radius: 8px; width: 36px; height: 36px; font-size: 17px; line-height: 1; }
+.ov-bar .ovstar.on { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 45%, var(--line-strong)); }
 .ov-bar .ov-title { font-family: var(--font-mono); font-weight: 700; font-size: 14px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ov-body { flex: 1; overflow: auto; }
-.reader-frame { width: 100%; height: 100%; border: 0; background: var(--bg); }
+.reader-frame { display: block; width: 100%; height: 100%; border: 0; background: var(--bg); }
 .ov-actions { display: flex; gap: 10px; padding: 12px 14px calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: var(--paper); }
 .btn {
   flex: 1; border: 1px solid var(--line-strong); background: var(--panel); color: var(--ink);
@@ -319,24 +325,44 @@ button { font: inherit; cursor: pointer; }
 .q .opt.correct { border-color: var(--good); background: color-mix(in srgb, var(--good) 16%, var(--paper)); }
 .q .opt.wrong { border-color: var(--danger); background: color-mix(in srgb, var(--danger) 14%, var(--paper)); }
 
-/* ---------- Standalone article page ---------- */
-.doc-wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px 18px calc(40px + env(safe-area-inset-bottom)); }
-.doc-back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 13px; margin-bottom: 18px; }
-.doc-back:hover { color: var(--ink); }
-.doc .eyebrow { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); margin: 0 0 8px; font-weight: 600; }
-.doc .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); display: inline-block; }
-.doc-head h1 { font-size: 27px; line-height: 1.2; letter-spacing: -.01em; margin: 0 0 8px; font-weight: 700; }
-.doc-meta { color: var(--faint); font-size: 13px; margin: 0 0 14px; }
-.doc-summary { font-size: 17px; color: var(--muted); margin: 0 0 22px; line-height: 1.5; max-width: 68ch; }
-.doc-body { font-size: 16.5px; line-height: 1.7; max-width: 68ch; }
-.doc-body p { margin: 0 0 16px; }
-.doc-body strong { color: var(--ink); }
-.doc-foot { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); }
-.doc-foot-title { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--faint); margin: 0 0 8px; }
-.doc-sources { margin: 0 0 18px; padding-left: 18px; font-size: 14px; }
-.doc-sources li { margin-bottom: 5px; }
-.doc-sources a { color: var(--accent); }
-.doc-poweredby { font-size: 12px; color: var(--faint); }
+/* ---------- Article reader (iframe content + standalone page) ---------- */
+/* Per-interest accent so the eyebrow, summary rail and links match the topic. */
+body[data-interest="software-ai"]      { --accent: #5a93f0; }
+body[data-interest="design"]           { --accent: #ec6fa6; }
+body[data-interest="indie-income"]     { --accent: #16b8c8; }
+body[data-interest="mortgage-broking"] { --accent: #7b80f0; }
+body[data-interest="property"]         { --accent: #d6a233; }
+body[data-interest="actuarial"]        { --accent: #f4625a; }
+body[data-interest="finance"]          { --accent: #34c47e; }
+body[data-interest="health"]           { --accent: #f59440; }
+body[data-interest="videography"]      { --accent: #d869e0; }
+body[data-interest="science"]          { --accent: #a06ff0; }
+
+.doc-wrap { max-width: 800px; margin: 0 auto; padding: 28px 22px calc(48px + env(safe-area-inset-bottom)); }
+.doc-back { display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line-strong); background: var(--panel); color: var(--muted); border-radius: 7px; padding: 7px 13px; font: 600 12px var(--font-mono); letter-spacing: .03em; text-decoration: none; margin-bottom: 22px; }
+.doc-back:hover { color: var(--ink); border-color: color-mix(in srgb, var(--accent) 45%, var(--line-strong)); }
+.doc .eyebrow { display: flex; align-items: center; gap: 10px; font: 600 11px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px; }
+.doc .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); display: inline-block; flex: 0 0 auto; }
+.doc-head h1 { font: 700 28px/1.18 var(--font-mono); color: var(--ink); letter-spacing: -.01em; margin: 0 0 16px; }
+.doc-meta { color: var(--faint); font: 400 12px var(--font-mono); margin: 0 0 22px; }
+.doc-summary { margin: 0 0 28px; padding: 14px 18px; border-left: 3px solid var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); border-radius: 0 6px 6px 0; box-shadow: 0 0 30px color-mix(in srgb, var(--accent) 6%, transparent); font: 500 16px/1.6 var(--font-body); color: var(--ink); max-width: none; }
+.doc-body { font-family: var(--font-body); }
+.doc-body h2 { font: 600 16px var(--font-mono); color: var(--ink); letter-spacing: .01em; margin: 28px 0 10px; padding-top: 14px; border-top: 1px solid var(--line); }
+.doc-body h3 { font: 600 14px var(--font-mono); color: var(--ink); margin: 22px 0 8px; }
+.doc-body p { margin: 0 0 15px; font: 400 16px/1.72 var(--font-body); color: var(--muted); max-width: none; }
+.doc-body ul, .doc-body ol { padding-left: 22px; margin: 0 0 15px; }
+.doc-body li { font: 400 16px/1.65 var(--font-body); color: var(--muted); margin-bottom: 8px; }
+.doc-body strong { color: var(--ink); font-weight: 700; }
+.doc-body em { color: color-mix(in srgb, var(--ink) 78%, var(--muted)); }
+.doc-body a { color: var(--accent); }
+.doc-foot { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+.doc-foot-title { font: 400 16px var(--font-screen); text-transform: uppercase; letter-spacing: .1em; color: var(--faint); margin: 0 0 10px; }
+.doc-foot-title::before { content: "// "; color: color-mix(in srgb, var(--accent) 75%, var(--faint)); }
+.doc-sources { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+.doc-sources li { margin: 0; }
+.doc-sources a { color: var(--accent); font: 400 12px var(--font-mono); text-decoration: none; }
+.doc-sources a:hover { text-decoration: underline; }
+.doc-poweredby { font: 400 11px var(--font-mono); color: var(--faint); }
 
 /* ---------- Desktop shell (PC) ----------
    Wrappers are invisible on mobile (display:contents) so phone layout is byte-identical. */
