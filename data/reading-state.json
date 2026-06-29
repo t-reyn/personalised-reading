@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-29T06:00:04.843Z",
+  "updatedAt": "2026-06-29T16:49:21.925Z",
   "articles": {
     "2026-06-25-ifrs17-csm-in-plain-terms": {
       "status": "read",
@@ -29,6 +29,11 @@
       "status": "read",
       "read_at": "2026-06-29T06:00:04.843Z",
       "t": "2026-06-29T06:00:04.843Z"
+    },
+    "2026-06-27-sleep-science-for-recovery": {
+      "status": "read",
+      "read_at": "2026-06-29T16:49:21.925Z",
+      "t": "2026-06-29T16:49:21.925Z"
     }
   },
   "quizzes": {
@@ -61,6 +66,11 @@
       "score": 1,
       "passed": true,
       "taken_at": "2026-06-29T06:00:04.843Z"
+    },
+    "2026-06-27-sleep-science-for-recovery": {
+      "score": 1,
+      "passed": true,
+      "taken_at": "2026-06-29T16:49:21.925Z"
     }
   }
 }
