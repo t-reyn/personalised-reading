@@ -13,7 +13,7 @@
   "interests": [
     { "id": "software-ai",     "label": "Software, AI & App-building", "emoji": "💻", "accent": "#5a93f0", "ttlDays": 21,   "mode": "both" },
     { "id": "design",          "label": "Design & Craft",              "emoji": "🎨", "accent": "#ec6fa6", "ttlDays": 60,   "mode": "learn" },
-    { "id": "indie-income",    "label": "Indie Income",                "emoji": "🚀", "accent": "#16b8c8", "ttlDays": 90,   "mode": "learn" },
+    { "id": "indie-income",    "label": "Indie Income",                "emoji": "🌱", "accent": "#16b8c8", "ttlDays": 90,   "mode": "learn" },
     { "id": "mortgage-broking","label": "Mortgage Broking",            "emoji": "🏦", "accent": "#7b80f0", "ttlDays": 21,   "mode": "both" },
     { "id": "property",        "label": "Property & Tax",              "emoji": "🏠", "accent": "#d6a233", "ttlDays": 45,   "mode": "both" },
     { "id": "actuarial",       "label": "Actuarial & Group Life",      "emoji": "📊", "accent": "#f4625a", "ttlDays": null, "mode": "both" },
