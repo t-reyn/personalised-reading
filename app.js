@@ -108,7 +108,7 @@
       const col = ch === "s" ? pal.s : ch === "e" ? pal.e : ch === "w" ? pal.w : edge ? pal.o : ch === "d" ? pal.d : pal.m;
       rects += `<rect x='${c}' y='${r}' width='1' height='1' fill='${col}'/>`;
     }
-    const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'>${rects}</svg>`;
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' shape-rendering='crispEdges'>${rects}</svg>`;
     return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
   }
 
