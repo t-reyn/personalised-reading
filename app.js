@@ -311,19 +311,20 @@
       updateToggles();
       return;
     }
-    const buckets = { normal: [], review: [], blocked: [], read: [] };
+    const buckets = { normal: [], review: [], blocked: [] };
     const reviewDue = [];
     active.forEach((a) => {
-      if (isRead(a.id)) { if (articleReviewDue(a)) reviewDue.push(a); else buckets.read.push(a); }
+      // Read articles live in Library; on Home only re-surface ones whose concepts are due for review.
+      if (isRead(a.id)) { if (articleReviewDue(a)) reviewDue.push(a); }
       else buckets[category(a)].push(a);
     });
     const shelf = (title, items, opts) => items.length ? `<h2 class="shelf-title">${title}</h2><div class="shelf-grid">${items.sort(byNew).map((a) => cardHtml(a, opts)).join("")}</div>` : "";
-    list.innerHTML =
+    const shelves =
       shelf("⟳ Time to review", reviewDue, { review: true }) +
       shelf("To read", buckets.normal) +
       shelf("Worth a review", buckets.review) +
-      shelf("Locked until you learn the basics", buckets.blocked) +
-      shelf("Read", buckets.read);
+      shelf("Locked until you learn the basics", buckets.blocked);
+    list.innerHTML = shelves || `<div class="empty"><div class="big">✓</div><p>${query ? "No unread articles match your search." : "You're all caught up. New reading is written each morning — your read articles live in Library."}</p></div>`;
     bindCards(list);
     updateToggles();
   }
