@@ -328,13 +328,13 @@
   function updateToggles() {
     const archN = manifest.articles.filter((a) => !a.merged_into && statusOf(a.id) === "archived").length;
     const dueN = manifest.articles.filter(articleReviewDue).length;
-    const btn = (sel, v, label) => { const b = $(sel); if (!b) return; b.hidden = false; b.classList.toggle("on", view === v); b.textContent = label; };
-    btn("#libraryToggle", "library", dueN > 0 ? `📚 Library · ${dueN} due` : "📚 Library");
-    btn("#statsToggle", "stats", "📊 Stats");
-    btn("#discoverToggle", "discover", "🛰 Discover");
+    const btn = (sel, v, icon, label) => { const b = $(sel); if (!b) return; b.hidden = false; b.classList.toggle("on", view === v); b.innerHTML = icon + `<span>${esc(label)}</span>`; };
+    btn("#libraryToggle", "library", ICON_LIBRARY, dueN > 0 ? `Library · ${dueN} due` : "Library");
+    btn("#statsToggle", "stats", ICON_CHART, "Stats");
+    btn("#discoverToggle", "discover", ICON_DISCOVER, "Discover");
     const ab = $("#archiveToggle");
     if (ab) {
-      if (archN > 0 || view === "archive") { ab.hidden = false; ab.classList.toggle("on", view === "archive"); ab.textContent = `🗄 Archive${archN ? ` (${archN})` : ""}`; }
+      if (archN > 0 || view === "archive") { ab.hidden = false; ab.classList.toggle("on", view === "archive"); ab.innerHTML = ICON_ARCHIVE + `<span>Archive${archN ? ` (${archN})` : ""}</span>`; }
       else ab.hidden = true;
     }
     // Mobile bottom tab bar active state (HOME = reading; secondary views highlight nothing).
@@ -654,6 +654,12 @@
   const ICON_SUN = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" /></svg>`;
   const ICON_MOON = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" /></svg>`;
   const setThemeIcon = (t) => { const b = $("#themeBtn"); if (b) b.innerHTML = t === "dark" ? ICON_SUN : ICON_MOON; };
+  // Nav-view line icons (Heroicons outline), matching the design's icon language.
+  const svgIco = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="${d}" /></svg>`;
+  const ICON_LIBRARY = svgIco("M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122");
+  const ICON_CHART = svgIco("M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z");
+  const ICON_DISCOVER = svgIco("M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z");
+  const ICON_ARCHIVE = svgIco("m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z");
   function applyTheme(t) {
     document.documentElement.dataset.theme = t;
     try { localStorage.setItem("pr:theme", t); } catch {}
