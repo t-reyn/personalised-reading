@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-28T16:07:09.915Z",
+  "updatedAt": "2026-06-29T02:29:48.519Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": false,
@@ -63,24 +63,39 @@
       "first_taught": "2026-06-27-rba-rate-cycle-june-2026"
     },
     "apra-quarterly-statistics": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-apra-quarterly-june-2026"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-apra-quarterly-june-2026",
+      "learnt_at": "2026-06-29T02:29:48.519Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T02:29:48.519Z"
     },
     "life-insurance-loss-ratio": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-apra-quarterly-june-2026"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-apra-quarterly-june-2026",
+      "learnt_at": "2026-06-29T02:29:48.519Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T02:29:48.519Z"
     },
     "combined-ratio": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-apra-quarterly-june-2026"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-apra-quarterly-june-2026",
+      "learnt_at": "2026-06-29T02:29:48.519Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T02:29:48.519Z"
     },
     "di-remediation": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-apra-quarterly-june-2026"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-apra-quarterly-june-2026",
+      "learnt_at": "2026-06-29T02:29:48.519Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T02:29:48.519Z"
     },
     "super-fund-performance-metrics": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-apra-quarterly-june-2026"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-apra-quarterly-june-2026",
+      "learnt_at": "2026-06-29T02:29:48.519Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T02:29:48.519Z"
     },
     "real-yields": {
       "label": "real-yields",
