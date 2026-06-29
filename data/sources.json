@@ -39,7 +39,9 @@
     "https://www.nngroup.com/feed/rss/",
     "https://www.smashingmagazine.com/feed/",
     "https://uxdesign.cc/feed",
-    "https://www.joshwcomeau.com/rss.xml"
+    "https://www.joshwcomeau.com/rss.xml",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC-b3c7kxa5vU-bnmaROgvog",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCVyRiMvfUNMA1UPlDPzG5Ow"
   ],
   "indie-income": [
     "https://news.google.com/rss/search?q=%22indie%20hacker%22%20OR%20bootstrapped%20OR%20microsaas%20OR%20%22app%20revenue%22%20OR%20%22solo%20founder%22&hl=en-AU&gl=AU&ceid=AU:en",
@@ -53,10 +55,13 @@
   ],
   "property": [
     "https://news.google.com/rss/search?q=%22investment%20property%22%20OR%20%22negative%20gearing%22%20OR%20%22capital%20gains%20tax%22%20OR%20%22property%20investing%22%20Australia&hl=en-AU&gl=AU&ceid=AU:en",
-    "https://news.google.com/rss/search?q=site:yourinvestmentpropertymag.com.au%20OR%20site:apimagazine.com.au&hl=en-AU&gl=AU&ceid=AU:en"
+    "https://news.google.com/rss/search?q=site:yourinvestmentpropertymag.com.au%20OR%20site:apimagazine.com.au&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCo_nWik261ZKSnjgoaIjz0w"
   ],
   "videography": [
     "https://nofilmschool.com/rss.xml",
-    "https://news.google.com/rss/search?q=cinematography%20OR%20%22colour%20grading%22%20OR%20%22color%20grading%22%20OR%20filmmaking%20OR%20%22video%20composition%22&hl=en-AU&gl=AU&ceid=AU:en"
+    "https://news.google.com/rss/search?q=cinematography%20OR%20%22colour%20grading%22%20OR%20%22color%20grading%22%20OR%20filmmaking%20OR%20%22video%20composition%22&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC3DkFux8Iv-aYnTRWzwaiBA",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCUodELQsFwF8dq0X-bK9FQQ"
   ]
 }

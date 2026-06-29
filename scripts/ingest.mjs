@@ -63,6 +63,21 @@ const linkOf = (block) => {
 // YouTube channel feeds (https://www.youtube.com/feeds/videos.xml?channel_id=…) → tag items as video.
 const isYouTubeFeed = (u) => /youtube\.com\/feeds\/videos\.xml/i.test(u);
 
+// Raw inner text of a tag with NEWLINES PRESERVED (decode() collapses them) — for line-based cleaning.
+const rawInner = (block, name) => {
+  const m = new RegExp(`<${name}[^>]*>([\\s\\S]*?)</${name}>`, "i").exec(block);
+  return m ? m[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1") : "";
+};
+// YouTube/video descriptions bury the substance under sponsor reads, promo codes, link dumps, hashtag
+// piles and "chapters/socials" tails — each typically its own line. Drop those lines so the pooled
+// excerpt LEADS with the actual topic. Falls back to the raw text if cleaning would gut it.
+const JUNK_LINE = /https?:\/\/|www\.|[\w.+-]+@[\w-]+\.[\w.]+|sponsor|thanks to .*for|promo ?code|use code|coupon|\d+\s*% ?off|sign ?up|free trial|patreon|join (this|the) (channel|membership)|merch|my (course|newsletter|gear|kit)|newsletter|subscribe|follow (me|us)|email me|e-?mail|as featured|book a (call|consult|strategy|chat)|dm me|business (enquir|inquir)|socials?\b|instagram|twitter|tiktok|discord|^\s*#|want more|^\s*[-*•▶📸🎥🔗🗞🧠📚🔖👉🎬🛒💸▶️]|^\s*(chapters?|timestamps?)\b|^\s*\d{1,2}:\d{2}\b/i;
+function cleanVideoDesc(raw) {
+  const kept = raw.split(/\r?\n/).map((l) => l.trim()).filter((l) => l && !JUNK_LINE.test(l));
+  const cleaned = decode(kept.join("\n"));
+  return cleaned.length >= 60 ? cleaned : decode(raw); // if we stripped too much, keep the original body
+}
+
 function parseFeed(xml) {
   const items = [];
   const blocks = xml.match(/<(item|entry)\b[\s\S]*?<\/\1>/gi) || [];
@@ -71,9 +86,11 @@ function parseFeed(xml) {
     const url = linkOf(b);
     const guid = tag(b, "guid") || tag(b, "id") || url;
     const published = tag(b, "pubDate") || tag(b, "published") || tag(b, "updated") || "";
-    // media:description is where YouTube (and other media RSS) carry the body — fall back to it so
-    // video items don't land with an empty excerpt.
-    const excerpt = (tag(b, "description") || tag(b, "summary") || tag(b, "content") || tag(b, "media:description")).slice(0, EXCERPT_CHARS);
+    // media:description is where YouTube (and other media RSS) carry the body — fall back to it (cleaned
+    // of sponsor/link noise) so video items lead with substance instead of an empty or promo-laden excerpt.
+    const articleDesc = tag(b, "description") || tag(b, "summary") || tag(b, "content");
+    const mediaRaw = articleDesc ? "" : rawInner(b, "media:description");
+    const excerpt = (articleDesc || (mediaRaw ? cleanVideoDesc(mediaRaw) : "")).slice(0, EXCERPT_CHARS);
     // Atom <author><name> holds the channel/creator — used to attribute video sources.
     const author = tag(b, "name");
     if (!title || !guid) continue;
