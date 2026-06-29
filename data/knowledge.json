@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-29T02:29:48.519Z",
+  "updatedAt": "2026-06-29T06:00:04.843Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": false,
@@ -147,16 +147,25 @@
       "first_taught": "2026-06-25-zone-2-training-explained"
     },
     "app-monetisation-models": {
-      "is_learnt": false,
-      "first_taught": "2026-06-28-app-monetisation-models"
+      "is_learnt": true,
+      "first_taught": "2026-06-28-app-monetisation-models",
+      "learnt_at": "2026-06-29T06:00:04.843Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T06:00:04.843Z"
     },
     "freemium-conversion": {
-      "is_learnt": false,
-      "first_taught": "2026-06-28-app-monetisation-models"
+      "is_learnt": true,
+      "first_taught": "2026-06-28-app-monetisation-models",
+      "learnt_at": "2026-06-29T06:00:04.843Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T06:00:04.843Z"
     },
     "subscription-vs-one-time": {
-      "is_learnt": false,
-      "first_taught": "2026-06-28-app-monetisation-models"
+      "is_learnt": true,
+      "first_taught": "2026-06-28-app-monetisation-models",
+      "learnt_at": "2026-06-29T06:00:04.843Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T06:00:04.843Z"
     },
     "lrba": {
       "is_learnt": false,
