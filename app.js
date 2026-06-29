@@ -11,18 +11,21 @@
   const PASS = CONFIG.passThreshold ?? 0.75;
   const AGING_DAYS = CONFIG.freshness?.agingAfterDays ?? 3;
 
-  const LS = { state: "pr:reading-state", know: "pr:knowledge", token: "pr:gh-token", repo: "pr:gh-repo" };
+  const LS = { state: "pr:reading-state", know: "pr:knowledge", corpus: "pr:corpus", token: "pr:gh-token", repo: "pr:gh-repo" };
   const $ = (sel) => document.querySelector(sel);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const now = () => new Date().toISOString();
   const daysBetween = (a, b) => Math.round((new Date(a) - new Date(b)) / 86400000);
+  const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } };
+  const strHash = (s) => { let h = 5381; for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) >>> 0; return h.toString(36); };
 
   let manifest = { articles: [] };
   let state = { version: 1, updatedAt: null, articles: {}, quizzes: {} };
   let knowledge = { version: 1, updatedAt: null, concepts: {} };
+  let corpus = { version: 1, updatedAt: null, items: [] }; // user-curated permanent sources (synced)
   let activeTab = "all";
   let query = "";
-  let view = "reading"; // reading | library | stats | discover | archive
+  let view = "reading"; // reading | library | stats | discover | corpus | archive
   let modeFilter = "all"; // all | current | learn
   const metaCache = {}; // articleId -> #meta (lazy)
 
@@ -74,11 +77,24 @@
     out.updatedAt = [A.updatedAt, B.updatedAt].filter(Boolean).sort().pop() || now();
     return out;
   }
+  // Corpus syncs as a per-item union keyed by id; soft-deletes carry a `deleted` flag so a removal on
+  // one device propagates instead of being resurrected by a stale device. Most-recently-touched wins.
+  function mergeCorpus(a, b) {
+    const A = a || {}, B = b || {}, by = {};
+    for (const it of [...(A.items || []), ...(B.items || [])]) {
+      if (!it || !it.id) continue;
+      const prev = by[it.id];
+      if (!prev || (it.t || "") >= (prev.t || "")) by[it.id] = it;
+    }
+    return { version: 1, updatedAt: [A.updatedAt, B.updatedAt].filter(Boolean).sort().pop() || now(), items: Object.values(by) };
+  }
   const isKnow = (file) => file === "knowledge.json";
-  const localFor = (file) => (isKnow(file) ? knowledge : state);
-  const mergeFor = (file, remote, local) => (isKnow(file) ? mergeKnowledge(remote, local) : mergeStates(remote, local));
+  const isCorpus = (file) => file === "corpus.json";
+  const localFor = (file) => (isKnow(file) ? knowledge : isCorpus(file) ? corpus : state);
+  const mergeFor = (file, remote, local) => (isKnow(file) ? mergeKnowledge(remote, local) : isCorpus(file) ? mergeCorpus(remote, local) : mergeStates(remote, local));
   function adoptMerged(file, merged) {
     if (isKnow(file)) { knowledge = merged; try { localStorage.setItem(LS.know, JSON.stringify(knowledge)); } catch {} }
+    else if (isCorpus(file)) { corpus = merged; try { localStorage.setItem(LS.corpus, JSON.stringify(corpus)); } catch {} }
     else { state = merged; try { localStorage.setItem(LS.state, JSON.stringify(state)); } catch {} }
   }
 
@@ -123,7 +139,9 @@
     state = localState || (await fetchJson("data/reading-state.json").catch(() => state));
     const localKnow = loadLocal(LS.know, null);
     knowledge = localKnow || (await fetchJson("data/knowledge.json").catch(() => knowledge));
-    state.articles ||= {}; state.quizzes ||= {}; knowledge.concepts ||= {};
+    const localCorpus = loadLocal(LS.corpus, null);
+    corpus = localCorpus || (await fetchJson("data/corpus.json").catch(() => corpus));
+    state.articles ||= {}; state.quizzes ||= {}; knowledge.concepts ||= {}; corpus.items ||= [];
 
     // If synced, pull remote and adopt if newer (cross-device).
     if (token() && apiBase()) {
@@ -276,6 +294,7 @@
     if (view === "library") { renderLibrary(); return; }
     if (view === "stats") { renderStats(); return; }
     if (view === "discover") { renderDiscover(); return; }
+    if (view === "corpus") { renderCorpus(); return; }
 
     if (view === "archive") {
       list.innerHTML = `<h2 class="shelf-title">Archive · outdated or set aside</h2>` +
@@ -334,9 +353,11 @@
     const archN = manifest.articles.filter((a) => !a.merged_into && statusOf(a.id) === "archived").length;
     const dueN = manifest.articles.filter(articleReviewDue).length;
     const btn = (sel, v, icon, label) => { const b = $(sel); if (!b) return; b.hidden = false; b.classList.toggle("on", view === v); b.innerHTML = icon + `<span>${esc(label)}</span>`; };
+    const corpusN = corpus.items.filter((x) => !x.deleted).length;
     btn("#libraryToggle", "library", ICON_LIBRARY, dueN > 0 ? `Library · ${dueN} due` : "Library");
     btn("#statsToggle", "stats", ICON_CHART, "Stats");
     btn("#discoverToggle", "discover", ICON_DISCOVER, "Discover");
+    btn("#corpusToggle", "corpus", ICON_CORPUS, corpusN ? `Corpus (${corpusN})` : "Corpus");
     const ab = $("#archiveToggle");
     if (ab) {
       if (archN > 0 || view === "archive") { ab.hidden = false; ab.classList.toggle("on", view === "archive"); ab.innerHTML = ICON_ARCHIVE + `<span>Archive${archN ? ` (${archN})` : ""}</span>`; }
@@ -408,21 +429,78 @@
     const srcOf = (it) => { const m = (it.title || "").match(dash); if (m) return m[1].trim(); try { return new URL(it.url).hostname.replace(/^www\./, ""); } catch { return ""; } };
     const ageOf = (it) => { const x = it.published_at || it.added_at; if (!x) return ""; const n = daysBetween(now(), new Date(x).toISOString()); return n <= 0 ? "today" : n === 1 ? "yesterday" : `${n}d ago`; };
     const byInterest = {}; items.forEach((it) => (byInterest[it.interest] ||= []).push(it));
-    const card = (it) => `<article class="disc-card" style="--accent:${esc((INTEREST_BY_ID[it.interest] || {}).accent || "#4f7cac")}">
+    const card = (it) => { const saved = corpusHas(it.url); return `<article class="disc-card has-save" style="--accent:${esc((INTEREST_BY_ID[it.interest] || {}).accent || "#4f7cac")}">
+        <button class="disc-save${saved ? " saved" : ""}" data-save="${esc(it.id)}" aria-label="Save to corpus" title="${saved ? "Saved to corpus" : "Save to corpus"}"${saved ? " disabled" : ""}>${saved ? "✓" : "＋"}</button>
         <button class="disc-x" data-dismiss="${esc(it.id)}" aria-label="Dismiss" title="Hide this">✕</button>
         <div class="disc-src">${esc(srcOf(it))}${srcOf(it) && ageOf(it) ? " · " : ""}${esc(ageOf(it))}</div>
         <a class="disc-title" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(cleanTitle(it.title))}</a>
-      </article>`;
+      </article>`; };
     list.innerHTML =
       `<div class="lib-summary">Fresh from your feeds — <b>${items.length}</b> unread from the web. Open one to read the original.</div>` +
       INTERESTS.filter((i) => byInterest[i.id]).map((i) => `<h2 class="shelf-title">${esc(i.emoji)} ${esc(i.label)}</h2><div class="shelf-grid">${byInterest[i.id].map(card).join("")}</div>`).join("");
     list.querySelectorAll("[data-dismiss]").forEach((b) => b.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); dismissDiscover(b.dataset.dismiss); }));
+    list.querySelectorAll("[data-save]").forEach((b) => b.addEventListener("click", (e) => {
+      e.preventDefault(); e.stopPropagation();
+      const it = items.find((x) => x.id === b.dataset.save);
+      if (it && addToCorpus({ url: it.url, title: cleanTitle(it.title), interest: it.interest })) { b.textContent = "✓"; b.classList.add("saved"); b.disabled = true; b.title = "Saved to corpus"; }
+    }));
+    updateToggles();
+  }
+
+  /* ---------- corpus (durable, user-curated sources) ---------- */
+  function renderCorpus() {
+    const list = $("#list");
+    let items = corpus.items.filter((x) => !x.deleted);
+    if (activeTab !== "all") items = items.filter((x) => x.interest === activeTab);
+    if (query) { const q = query.toLowerCase(); items = items.filter((x) => (`${x.title} ${x.url} ${x.note || ""}`).toLowerCase().includes(q)); }
+    items.sort((a, b) => (b.added_at || "").localeCompare(a.added_at || ""));
+    const addBar = `<div class="corpus-add">
+        <input id="corpus-url" type="url" placeholder="Paste a URL to save…" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" />
+        <button class="btn primary" id="corpus-add-btn">Save</button>
+      </div>
+      <p class="corpus-hint" id="corpus-msg">Your hand-picked sources — they sync across devices and feed the writer. Tap “＋” on a Discover card to add one here.</p>`;
+    const card = (x) => `<article class="disc-card has-save" style="--accent:${esc((INTEREST_BY_ID[x.interest] || {}).accent || "#4f7cac")}">
+        <button class="disc-x" data-remove="${esc(x.id)}" aria-label="Remove" title="Remove from corpus">✕</button>
+        <div class="disc-src">${esc(hostOf(x.url))}${x.interest && INTEREST_BY_ID[x.interest] ? " · " + esc(INTEREST_BY_ID[x.interest].label) : ""}</div>
+        <a class="disc-title" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title || x.url)}</a>
+        ${x.note ? `<div class="disc-note">${esc(x.note)}</div>` : ""}
+      </article>`;
+    list.innerHTML = addBar + (items.length
+      ? `<div class="lib-summary"><b>${items.length}</b> saved source${items.length === 1 ? "" : "s"}${activeTab !== "all" ? " in this topic" : ""}</div><div class="shelf-grid">${items.map(card).join("")}</div>`
+      : `<div class="empty"><div class="big">🔖</div><p>${query ? "No saved sources match your search." : "Nothing saved yet. Paste a URL above, or tap “＋” on a Discover card to keep a source here."}</p></div>`);
+    const input = $("#corpus-url"), msg = $("#corpus-msg");
+    const doAdd = () => {
+      if (addToCorpus({ url: input.value, interest: activeTab !== "all" ? activeTab : null })) { input.value = ""; renderCorpus(); }
+      else { msg.textContent = "Enter a full URL (https://…)."; msg.classList.add("error"); }
+    };
+    $("#corpus-add-btn")?.addEventListener("click", doAdd);
+    input?.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); doAdd(); } });
+    list.querySelectorAll("[data-remove]").forEach((b) => b.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); removeFromCorpus(b.dataset.remove); }));
     updateToggles();
   }
 
   /* ---------- mutations ---------- */
   function saveState() { state.updatedAt = now(); try { localStorage.setItem(LS.state, JSON.stringify(state)); } catch {} scheduleSync("reading-state.json", state); }
   function saveKnowledge() { knowledge.updatedAt = now(); try { localStorage.setItem(LS.know, JSON.stringify(knowledge)); } catch {} scheduleSync("knowledge.json", knowledge); }
+  function saveCorpus() { corpus.updatedAt = now(); try { localStorage.setItem(LS.corpus, JSON.stringify(corpus)); } catch {} scheduleSync("corpus.json", corpus); }
+  const corpusHas = (url) => corpus.items.some((x) => x.url === url && !x.deleted);
+  // Save an external source to the durable corpus (deduped by url; un-deletes if it was removed before).
+  function addToCorpus({ url, title, interest, note }) {
+    url = (url || "").trim();
+    if (!/^https?:\/\//i.test(url)) return false;
+    const id = strHash(url);
+    const existing = corpus.items.find((x) => x.id === id);
+    if (existing) Object.assign(existing, { deleted: false, t: now() }, (title && title.trim()) ? { title: title.trim() } : {});
+    else corpus.items.push({ id, url, title: (title || "").trim() || hostOf(url), interest: interest || null, note: (note || "").trim(), added_at: now(), t: now(), deleted: false });
+    saveCorpus();
+    return true;
+  }
+  function removeFromCorpus(id) {
+    const it = corpus.items.find((x) => x.id === id);
+    if (!it) return;
+    it.deleted = true; it.t = now(); saveCorpus();
+    if (view === "corpus") renderCorpus();
+  }
 
   function toggleStar(id) {
     const a = (state.articles[id] ||= { status: "backlog" });
@@ -634,12 +712,14 @@
   }
   async function pullRemote() {
     if (!token() || !apiBase()) return false;
-    const before = JSON.stringify([state.articles, state.quizzes, knowledge.concepts]);
+    const before = JSON.stringify([state.articles, state.quizzes, knowledge.concepts, corpus.items]);
     const { obj: rs } = await getFile("reading-state.json");
     if (rs) adoptMerged("reading-state.json", mergeStates(rs, state));
     const { obj: kn } = await getFile("knowledge.json");
     if (kn) adoptMerged("knowledge.json", mergeKnowledge(kn, knowledge));
-    return JSON.stringify([state.articles, state.quizzes, knowledge.concepts]) !== before;
+    const { obj: cp } = await getFile("corpus.json");
+    if (cp) adoptMerged("corpus.json", mergeCorpus(cp, corpus));
+    return JSON.stringify([state.articles, state.quizzes, knowledge.concepts, corpus.items]) !== before;
   }
 
   // Debounced background sync so rapid reads don't spam commits.
@@ -707,6 +787,7 @@
   const ICON_CHART = svgIco("M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z");
   const ICON_DISCOVER = svgIco("M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z");
   const ICON_ARCHIVE = svgIco("m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z");
+  const ICON_CORPUS = svgIco("M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"); // bookmark
   function applyTheme(t) {
     document.documentElement.dataset.theme = t;
     try { localStorage.setItem("pr:theme", t); } catch {}
@@ -745,6 +826,7 @@
     $("#libraryToggle")?.addEventListener("click", () => setView("library"));
     $("#statsToggle")?.addEventListener("click", () => setView("stats"));
     $("#discoverToggle")?.addEventListener("click", () => setView("discover"));
+    $("#corpusToggle")?.addEventListener("click", () => setView("corpus"));
     $("#archiveToggle")?.addEventListener("click", () => setView("archive"));
     // Mobile bottom tab bar: HOME always returns to the feed; LIBRARY/STATS toggle.
     $("#navHome")?.addEventListener("click", () => { view = "reading"; render(); window.scrollTo(0, 0); });

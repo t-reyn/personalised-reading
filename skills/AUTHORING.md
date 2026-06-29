@@ -49,6 +49,13 @@ worked AU examples — not general overviews.
   ("channel X is covering topic Y"), not quotable text: use them to spot what's current and to corroborate
   a cluster, fold them into a piece **with attribution** (name the channel in `sources`), and don't build an
   article solely off one video's thin description. They're great for `current` framing alongside article sources.
+- **Live market data (`data/live.json`)** — when writing a `current` finance / markets / property piece, read
+  it and **lead with the actual figures** (it carries ASX 200, S&P 500, AUD/USD, Gold, WTI, VIX, BTC, ETH with
+  % change, plus a ready `summary` line and an `asOf` AEST stamp). Quote the real numbers and the "as of" time;
+  if `live.json` is missing or its arrays are empty (a fetch failed), just write without it — don't invent figures.
+- **Corpus (`data/corpus.json`)** — the reader's durable, hand-picked sources (URLs they saved on purpose).
+  Treat these as **high-trust signal**: when an item matches the interest you're writing, prefer drawing on it
+  and cite it in `sources`. Unlike the pool, corpus items don't expire — they're a standing reading list to mine.
 - **Knowledge-aware:** never re-explain an `is_learnt` concept; briefly teach an assumed prerequisite inline
   rather than assuming it. For software/AI the reader "vibecodes" — explain fundamentals + the *why*.
 - **Australian lens** per `config.audience` where relevant; cover global developments too. Subtly honour the

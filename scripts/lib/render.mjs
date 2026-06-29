@@ -135,6 +135,7 @@ export function buildIndexHtml(config, stats, now) {
         <button id="libraryToggle" class="archive-toggle" hidden></button>
         <button id="statsToggle" class="archive-toggle" hidden></button>
         <button id="discoverToggle" class="archive-toggle" hidden></button>
+        <button id="corpusToggle" class="archive-toggle" hidden></button>
         <button id="archiveToggle" class="archive-toggle" hidden></button>
       </div>
       <p id="syncline" class="syncline" hidden></p>

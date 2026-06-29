@@ -247,6 +247,16 @@ button { font: inherit; cursor: pointer; }
 .disc-title:hover { color: var(--accent); text-decoration: underline; }
 .disc-x { position: absolute; top: 8px; right: 8px; border: 1px solid var(--line-strong); background: var(--panel); color: var(--faint); border-radius: 8px; width: 26px; height: 26px; font-size: 12px; line-height: 1; }
 .disc-x:hover { color: var(--ink); }
+.disc-card.has-save { padding-right: 64px; }
+.disc-save { position: absolute; top: 8px; right: 38px; border: 1px solid var(--line-strong); background: var(--panel); color: var(--faint); border-radius: 8px; width: 26px; height: 26px; font-size: 15px; line-height: 1; }
+.disc-save:hover { color: var(--accent); border-color: var(--accent); }
+.disc-save.saved { color: var(--accent); border-color: var(--accent); }
+.disc-note { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+.corpus-add { display: flex; gap: 8px; padding: 8px 4px 0; }
+.corpus-add input { flex: 1; min-width: 0; padding: 9px 12px; border: 1px solid var(--line-strong); border-radius: 10px; background: var(--paper); color: var(--ink); font-family: var(--font-mono); font-size: 13px; }
+.corpus-add input:focus { outline: none; border-color: var(--accent); }
+.corpus-hint { font-size: 12px; color: var(--faint); padding: 4px 4px 0; margin: 0 0 4px; }
+.corpus-hint.error { color: var(--accent); }
 
 .empty { text-align: center; color: var(--faint); padding: 48px 20px; }
 .empty .big { font-size: 30px; margin-bottom: 8px; }

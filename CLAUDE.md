@@ -53,9 +53,13 @@ authoring time, and the finished articles + synced state are what reach the phon
 never holds the profile. Cloud runs on the Claude subscription (no API key); keep them short (token
 limits). See `CLOUD_SETUP.md`.
 
-1. `node scripts/ingest.mjs` — refresh `data/pool.json` from feeds.
+1. `node scripts/ingest.mjs` — refresh `data/pool.json` from feeds. Then
+   `node scripts/fetch-live.mjs` — refresh `data/live.json` (keyless live market datapoints for
+   grounding time-sensitive pieces; best-effort, never fatal).
 2. Read `data/pool.json` (pending items), `data/knowledge.json` (what's learnt),
-   `data/reading-state.json` (what's unread, for carry-forward), and **`data/profile.local.json` if
+   `data/reading-state.json` (what's unread, for carry-forward), `data/corpus.json` (the reader's
+   durable hand-picked sources — vetted signal to weave in), `data/live.json` (current figures for
+   `current` finance/markets/property pieces), and **`data/profile.local.json` if
    present** (gitignored reader profile: background + per-tab pitch level + concepts already known —
    don't re-explain those; pitch each tab to the stated level).
 3. Cluster related pending items per interest. For each cluster, **author one article**:
