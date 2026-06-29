@@ -127,6 +127,7 @@
 
     // If synced, pull remote and adopt if newer (cross-device).
     if (token() && apiBase()) {
+      requestPersistentStorage();
       await pullRemote().then(() => setSync("Synced ✓")).catch(() => setSync("Sync error — check token in Settings", true));
     } else if (apiBase() && !token()) {
       setSync("Not syncing — add your GitHub token in Settings", true);
@@ -556,15 +557,24 @@
         <div class="field"><label>Repository name</label><input id="s-name" value="${esc(r.name)}" placeholder="personalised-reading" /></div>
         <div class="field"><label>Branch</label><input id="s-branch" value="${esc(r.branch || "main")}" placeholder="main" /></div>
         <div class="field"><label>Access token</label><input id="s-token" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" value="${esc(token())}" placeholder="github_pat_…" />
-          <p class="hint">A <b>fine-grained</b> token scoped to this one repo with <b>Contents: Read and write</b>. Create one at <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings</a>. Stored only in this browser.</p></div>
+          <p class="hint">A <b>fine-grained</b> token scoped to this one repo with <b>Contents: Read and write</b>. Set the expiry to <b>No expiration</b> (or 1 year) so it doesn't lapse. Create one at <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings</a>. Stored only in this browser — paste once.</p></div>
         <div class="ov-actions" style="padding-left:0;padding-right:0">
           <button class="btn" data-act="pull">Pull</button>
           <button class="btn primary" data-act="save">Save</button>
         </div>
         <p class="hint" id="s-status"></p>
+        <p class="hint" id="s-storage"></p>
       </div></div>`;
     show(ov);
     ov.querySelector(".close").onclick = () => hide(ov);
+    (async () => {
+      const el = $("#s-storage"); if (!el) return;
+      try {
+        if (navigator.storage && navigator.storage.persisted) {
+          el.textContent = (await navigator.storage.persisted()) ? "Storage: protected ✓ — your token won't be evicted." : "Storage: not yet protected — press Save (or install to home screen) to keep your token.";
+        }
+      } catch {}
+    })();
     ov.querySelector('[data-act="save"]').addEventListener("click", async () => {
       const owner = $("#s-owner").value.trim(), name = $("#s-name").value.trim(), branch = $("#s-branch").value.trim() || "main", tk = $("#s-token").value.trim();
       const status = $("#s-status");
@@ -573,10 +583,12 @@
       if (!token()) { status.textContent = "No token saved — paste your github_pat_… token, then Save."; return; }
       if (!apiBase()) { status.textContent = "Fill in repository owner and name, then Save."; return; }
       status.textContent = "Saving…";
+      await requestPersistentStorage();   // user gesture → best chance the browser keeps the token
       try {
         await pushJson("reading-state.json", state);
         await pushJson("knowledge.json", knowledge);
         status.textContent = "Synced ✓ — your reading now syncs to GitHub.";
+        try { const se = $("#s-storage"); if (se && navigator.storage?.persisted) se.textContent = (await navigator.storage.persisted()) ? "Storage: protected ✓ — your token won't be evicted." : "Storage: not protected — install to home screen to keep your token."; } catch {}
       } catch (e) {
         status.textContent = "Sync failed (" + e.message + ") — token needs Contents: Read and write on this repo.";
       }
@@ -668,6 +680,15 @@
     const t = Date.now(); if (t - lastRemotePull < 4000) return; lastRemotePull = t;
     try { const changed = await pullRemote(); setSync("Synced ✓"); if (changed) { sweepExpired(); renderTabs(); render(); } }
     catch { setSync("Sync error — check token in Settings", true); }
+  }
+  // Ask the browser to keep our storage so the saved token isn't evicted — the cause of
+  // having to re-paste it. Best granted from a user gesture / installed PWA; safe to call often.
+  async function requestPersistentStorage() {
+    try {
+      if (!navigator.storage || !navigator.storage.persist) return;
+      if (await navigator.storage.persisted()) return;
+      await navigator.storage.persist();
+    } catch {}
   }
 
   /* ---------- chrome ---------- */
