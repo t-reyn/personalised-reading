@@ -164,6 +164,17 @@
   const isLearnt = (cid) => !!knowledge.concepts[cid]?.is_learnt;
   const taughtSomewhere = (cid) => manifest.articles.some((a) => !a.merged_into && (a.concepts_taught || []).includes(cid));
 
+  // The article to read first to unlock a blocked one — it teaches the missing, not-yet-learnt prereq.
+  function prereqArticleFor(a) {
+    for (const c of (a.concepts_assumed || [])) {
+      if (knowledge.concepts[c] && !isLearnt(c) && taughtSomewhere(c)) {
+        const t = manifest.articles.find((x) => !x.merged_into && (x.concepts_taught || []).includes(c));
+        if (t) return t;
+      }
+    }
+    return null;
+  }
+
   // Conservative gating: block only when a prerequisite genuinely exists and isn't learnt.
   function category(a) {
     const assumed = a.concepts_assumed || [];
@@ -256,6 +267,7 @@
     const tier = opts.library
       ? (articleReviewDue(a) ? { c: "due", t: "Review due" } : articleLearnt(a) ? { c: "learnt", t: "Learnt" } : { c: "read", t: "Read" })
       : null;
+    const prereq = opts?.locked ? prereqArticleFor(a) : null;
     return `<article class="card${dim ? " read" : ""}${opts.review ? " due" : ""}" style="--accent:${esc(it.accent || "#4f7cac")}" data-id="${esc(a.id)}" tabindex="0" role="button">
       ${opts.archive
         ? `<button class="restore" data-restore="${esc(a.id)}" aria-label="Restore" title="Restore to your list">↩</button>`
@@ -268,6 +280,7 @@
         ${(a.tags || []).slice(0, 3).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}
         ${opts.review ? `<span class="due-note">⟳ time to review</span>` : (read ? `<span class="readtick">✓ read</span>` : "")}
         ${merged ? `<span class="merged-note">↳ consolidates ${merged}</span>` : ""}
+        ${prereq ? `<button class="prereq" type="button" data-prereq="${esc(prereq.id)}" title="Open the prerequisite article">🔒 Read "${esc(prereq.title)}" first</button>` : ""}
       </div>
     </article>`;
   }
@@ -276,11 +289,12 @@
 
   function bindCards(root) {
     root.querySelectorAll(".card").forEach((el) => {
-      el.addEventListener("click", (e) => { if (e.target.closest(".star,.restore")) return; openReader(el.dataset.id); });
+      el.addEventListener("click", (e) => { if (e.target.closest(".star,.restore,.prereq")) return; openReader(el.dataset.id); });
       el.addEventListener("keydown", (e) => { if (e.key === "Enter") openReader(el.dataset.id); });
     });
     root.querySelectorAll(".star").forEach((b) => b.addEventListener("click", (e) => { e.stopPropagation(); toggleStar(b.dataset.star); }));
     root.querySelectorAll(".restore").forEach((b) => b.addEventListener("click", (e) => { e.stopPropagation(); restore(b.dataset.restore); }));
+    root.querySelectorAll("[data-prereq]").forEach((b) => b.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); openReader(b.dataset.prereq); }));
   }
 
   function render() {
@@ -323,7 +337,7 @@
       shelf("⟳ Time to review", reviewDue, { review: true }) +
       shelf("To read", buckets.normal) +
       shelf("Worth a review", buckets.review) +
-      shelf("Locked until you learn the basics", buckets.blocked);
+      shelf("Locked until you learn the basics", buckets.blocked, { locked: true });
     list.innerHTML = shelves || `<div class="empty"><div class="big">✓</div><p>${query ? "No unread articles match your search." : "You're all caught up. New reading is written each morning — your read articles live in Library."}</p></div>`;
     bindCards(list);
     updateToggles();

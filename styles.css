@@ -221,6 +221,8 @@ button { font: inherit; cursor: pointer; }
 .tier.read { color: var(--faint); background: color-mix(in srgb, var(--faint) 16%, transparent); }
 .card.due { opacity: 1; border-left-color: var(--warn); }
 .due-note { color: var(--warn); font-weight: 700; }
+.prereq { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line-strong)); background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--accent); border-radius: 999px; padding: 4px 10px; font-family: var(--font-mono); font-size: 11px; line-height: 1.2; text-align: left; }
+.prereq:hover { background: color-mix(in srgb, var(--accent) 18%, transparent); }
 .lib-summary { font-size: 13px; color: var(--muted); padding: 6px 4px 0; margin-bottom: 2px; }
 .lib-summary b { color: var(--ink); font-weight: 700; }
 
