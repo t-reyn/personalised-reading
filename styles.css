@@ -283,6 +283,7 @@ button { font: inherit; cursor: pointer; }
 }
 .tabbar-btn.on { color: var(--accent); }
 .tabbar-btn svg { width: 20px; height: 20px; }
+.tabbar-brain { display: block; width: 22px; height: 22px; }
 .tabbar-btn .icon-solid { display: none; }
 .tabbar-btn.on .icon-outline { display: none; }
 .tabbar-btn.on .icon-solid { display: block; }
