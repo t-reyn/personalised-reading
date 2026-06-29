@@ -272,8 +272,9 @@ button { font: inherit; cursor: pointer; }
 }
 .tabbar-btn.on { color: var(--accent); }
 .tabbar-btn svg { width: 20px; height: 20px; }
-.tabbar-brain { width: 22px; height: 22px; display: block; }
-.tabbar-btn.on .tabbar-brain { filter: drop-shadow(0 0 5px color-mix(in srgb, var(--accent) 50%, transparent)); }
+.tabbar-btn .icon-solid { display: none; }
+.tabbar-btn.on .icon-outline { display: none; }
+.tabbar-btn.on .icon-solid { display: block; }
 
 /* Install bar floats above the tab bar on mobile */
 .install-bar { position: fixed; left: 0; right: 0; bottom: calc(env(safe-area-inset-bottom) + 60px); z-index: 31; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; background: var(--paper); border-top: 1px solid var(--line-strong); box-shadow: 0 -4px 16px rgba(0, 0, 0, .18); font-size: 13.5px; color: var(--ink); }
