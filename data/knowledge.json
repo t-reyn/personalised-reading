@@ -1,34 +1,55 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-29T06:00:04.843Z",
+  "updatedAt": "2026-06-29T16:49:21.929Z",
   "concepts": {
     "sleep-architecture": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-sleep-science-for-recovery"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-sleep-science-for-recovery",
+      "learnt_at": "2026-06-29T16:49:21.928Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T16:49:21.928Z"
     },
     "sleep-stages": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-sleep-science-for-recovery"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-sleep-science-for-recovery",
+      "learnt_at": "2026-06-29T16:49:21.928Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T16:49:21.928Z"
     },
     "circadian-rhythm": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-sleep-science-for-recovery"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-sleep-science-for-recovery",
+      "learnt_at": "2026-06-29T16:49:21.928Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T16:49:21.928Z"
     },
     "sleep-hygiene": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-sleep-science-for-recovery"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-sleep-science-for-recovery",
+      "learnt_at": "2026-06-29T16:49:21.928Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T16:49:21.928Z"
     },
     "sleep-nutrition-link": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-sleep-science-for-recovery"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-sleep-science-for-recovery",
+      "learnt_at": "2026-06-29T16:49:21.928Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T16:49:21.928Z"
     },
     "magnesium-sleep": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-sleep-science-for-recovery"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-sleep-science-for-recovery",
+      "learnt_at": "2026-06-29T16:49:21.928Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T16:49:21.928Z"
     },
     "sleep-temperature": {
-      "is_learnt": false,
-      "first_taught": "2026-06-27-sleep-science-for-recovery"
+      "is_learnt": true,
+      "first_taught": "2026-06-27-sleep-science-for-recovery",
+      "learnt_at": "2026-06-29T16:49:21.928Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-02T16:49:21.928Z"
     },
     "ai-compute-infrastructure": {
       "is_learnt": false,
