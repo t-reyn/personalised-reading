@@ -82,7 +82,39 @@
     else { state = merged; try { localStorage.setItem(LS.state, JSON.stringify(state)); } catch {} }
   }
 
+  /* ---------- pixel-brain logo ----------
+     Renders the 16×16 brain as a crisp-edges SVG data-URL and exposes it as --brain.
+     Ported from the Cortex Hub design; colours are baked in (theme-independent). */
+  function brainDataUrl() {
+    const BODY = [
+      "    mmm  mmm    ", "  mmmmm  mmmmm  ", "  mmmmmmmmmmmm  ", " mmmmmmmmmmmmmm ",
+      " mmmmmmmmmmmmmm ", "mmmmmmmmmmmmmmmm", "mmmmmmmmmmmmmmmm", "mmmmmmmmmmmmmmmm",
+      " mmmmmmmmmmmmmm ", " mmmmmmmmmmmmmm ", "  mmmmmmmmmmmm  ", "   mmmmmmmmmmm  ",
+      "    mmmmmmmmmm  ", "      mmmmm     ", "      mmm       ", "      mmm       ",
+    ].map((r) => (r + "                ").slice(0, 16).split(""));
+    const set = (pts, ch) => pts.forEach(([r, c]) => { if (BODY[r] && BODY[r][c] && BODY[r][c] !== " ") BODY[r][c] = ch; });
+    set([[3, 3], [5, 2], [5, 3], [7, 3], [9, 2], [9, 3], [3, 12], [5, 12], [5, 13], [7, 12], [9, 12], [9, 13]], "d");
+    for (let r = 2; r <= 6; r++) set([[r, 7], [r, 8]], "s");
+    set([[6, 4], [6, 5], [7, 4], [7, 5], [6, 10], [6, 11], [7, 10], [7, 11]], "e");
+    set([[6, 4], [6, 10]], "w");
+    const pal = { o: "#241509", m: "#ff8a5b", d: "#e06a38", s: "#e06a38", e: "#241509", w: "#ffe0d2" };
+    const H = BODY.length, W = BODY[0].length;
+    const at = (r, c) => (r < 0 || c < 0 || r >= H || c >= W) ? " " : BODY[r][c];
+    let rects = "";
+    for (let r = 0; r < H; r++) for (let c = 0; c < W; c++) {
+      const ch = BODY[r][c];
+      if (ch === " ") continue;
+      const edge = at(r - 1, c) === " " || at(r + 1, c) === " " || at(r, c - 1) === " " || at(r, c + 1) === " ";
+      const col = ch === "s" ? pal.s : ch === "e" ? pal.e : ch === "w" ? pal.w : edge ? pal.o : ch === "d" ? pal.d : pal.m;
+      rects += `<rect x='${c}' y='${r}' width='1' height='1' fill='${col}'/>`;
+    }
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'>${rects}</svg>`;
+    return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+  }
+
   async function boot() {
+    document.documentElement.style.setProperty("--brain", brainDataUrl());
+
     // Data (committed artifacts)
     try { manifest = await fetchJson("data/manifest.json"); } catch { manifest = { articles: [] }; }
 
@@ -173,9 +205,9 @@
       total++;
       interestsOf(a).forEach((id) => { counts[id] = (counts[id] || 0) + 1; });
     });
-    const mk = (id, label, emoji, n) =>
-      `<button class="tab" role="tab" data-tab="${esc(id)}" aria-selected="${activeTab === id}">${emoji ? esc(emoji) + " " : ""}${esc(label)}${n ? ` <span class="count">${n}</span>` : ""}</button>`;
-    tabs.innerHTML = mk("all", "All", "", total) + INTERESTS.map((i) => mk(i.id, i.label, i.emoji, counts[i.id] || 0)).join("");
+    const mk = (id, label, emoji, n, accent) =>
+      `<button class="tab" role="tab" data-tab="${esc(id)}" aria-selected="${activeTab === id}"${accent ? ` style="--accent:${esc(accent)}"` : ""}>${emoji ? esc(emoji) + " " : ""}${esc(label)}${n ? ` <span class="count">${n}</span>` : ""}</button>`;
+    tabs.innerHTML = mk("all", "All", "", total) + INTERESTS.map((i) => mk(i.id, i.label, i.emoji, counts[i.id] || 0, i.accent)).join("");
     tabs.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () => { activeTab = b.dataset.tab; writeHashState(); renderTabs(); render(); }));
   }
 
@@ -305,6 +337,14 @@
       if (archN > 0 || view === "archive") { ab.hidden = false; ab.classList.toggle("on", view === "archive"); ab.textContent = `🗄 Archive${archN ? ` (${archN})` : ""}`; }
       else ab.hidden = true;
     }
+    // Mobile bottom tab bar active state (HOME = reading; secondary views highlight nothing).
+    const navFor = { reading: "navHome", library: "navLibrary", stats: "navStats" };
+    ["navHome", "navLibrary", "navStats"].forEach((id) => {
+      const b = document.getElementById(id); if (!b) return;
+      const on = navFor[view] === id;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-current", on ? "page" : "false");
+    });
   }
 
   /* ---------- stats ---------- */
@@ -606,14 +646,16 @@
   function isStandalone() {
     return matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
   }
+  // The install bar is a phone "add to home screen" affordance — never show it on the desktop layout.
+  const isDesktop = () => matchMedia("(min-width: 1024px)").matches;
   function initInstallPrompt() {
-    if (isStandalone()) return;
+    if (isStandalone() || isDesktop()) return;
     try { if (localStorage.getItem("pr:install-dismissed")) return; } catch {}
     let deferred = null;
     window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); deferred = e; });
     const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent);
     setTimeout(() => {
-      if (isStandalone() || document.querySelector(".install-bar")) return;
+      if (isStandalone() || isDesktop() || document.querySelector(".install-bar")) return;
       const bar = document.createElement("div");
       bar.className = "install-bar";
       bar.innerHTML = `<span>${isIos ? "Add to your home screen — tap Share, then “Add to Home Screen”." : "Install this as an app for one-tap reading."}</span>` +
@@ -635,6 +677,10 @@
     $("#statsToggle")?.addEventListener("click", () => setView("stats"));
     $("#discoverToggle")?.addEventListener("click", () => setView("discover"));
     $("#archiveToggle")?.addEventListener("click", () => setView("archive"));
+    // Mobile bottom tab bar: HOME always returns to the feed; LIBRARY/STATS toggle.
+    $("#navHome")?.addEventListener("click", () => { view = "reading"; render(); window.scrollTo(0, 0); });
+    $("#navLibrary")?.addEventListener("click", () => setView("library"));
+    $("#navStats")?.addEventListener("click", () => setView("stats"));
     $("#modeFilter")?.querySelectorAll(".mode-seg").forEach((b) => b.addEventListener("click", () => {
       modeFilter = b.dataset.mode || "all"; syncModeSeg(); writeHashState(); renderTabs(); render();
     }));
@@ -647,6 +693,7 @@
   // Keyboard: / focuses search, j/k (or arrows) move a roving selection through cards, o opens.
   // Enter is intentionally NOT handled here — cards bind their own Enter (avoids a double-open).
   function onShortcutKey(e) {
+    if ((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K")) { e.preventDefault(); $("#search")?.focus(); return; }
     if (document.querySelector(".overlay:not([hidden])")) return;
     const typing = /^(INPUT|TEXTAREA)$/.test(e.target.tagName);
     if (e.key === "/" && !typing) { e.preventDefault(); $("#search")?.focus(); return; }

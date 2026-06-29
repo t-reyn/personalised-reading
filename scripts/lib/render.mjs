@@ -80,14 +80,14 @@ export function buildIndexHtml(config, stats, now) {
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>${escapeHtml(config.title || "Reading")}</title>
   <meta name="description" content="${escapeHtml(config.tagline || "")}" />
-  <meta name="theme-color" content="#f6f3eb" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#16140f" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#ece3cf" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#14100b" media="(prefers-color-scheme: dark)" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="alternate" type="application/rss+xml" title="${escapeHtml(config.title || "Reading")}" href="feed.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
   <link rel="stylesheet" href="styles.css?v=${v}" />
   <script>
     try { var _t = localStorage.getItem("pr:theme"); if (_t === "dark" || _t === "light") document.documentElement.dataset.theme = _t; } catch (e) {}
@@ -100,15 +100,30 @@ export function buildIndexHtml(config, stats, now) {
   <div class="app-shell">
     <aside class="sidebar">
       <header class="top">
+        <div class="scanlines" aria-hidden="true"></div>
+        <div class="scanbeam" aria-hidden="true"></div>
         <div class="top-row">
-          <h1 class="brand">${escapeHtml(config.title || "Reading")}</h1>
+          <div class="logo">
+            <div class="logo-brain" aria-hidden="true">
+              <div class="brain glitch"></div>
+              <div class="brain main"></div>
+            </div>
+            <div class="logo-text">
+              <h1 class="brand">${escapeHtml(config.title || "Reading")}</h1>
+              <p class="tagline">${escapeHtml(config.tagline || "")}</p>
+            </div>
+          </div>
           <div class="top-actions">
             <button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
             <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙</button>
           </div>
         </div>
-        <p class="tagline">${escapeHtml(config.tagline || "")}</p>
-        <input id="search" class="search" type="search" placeholder="Search ${stats.count} article${stats.count === 1 ? "" : "s"}…" aria-label="Search articles" />
+        <div class="search-term">
+          <span class="term-prompt" aria-hidden="true">&gt;</span>
+          <input id="search" class="search" type="search" placeholder="search ${stats.count} article${stats.count === 1 ? "" : "s"}" aria-label="Search articles" />
+          <span class="term-caret" aria-hidden="true">_</span>
+          <span class="term-kbd" aria-hidden="true">⌘K</span>
+        </div>
       </header>
       <div id="modeFilter" class="mode-filter" role="group" aria-label="Reading mode">
         <button class="mode-seg" data-mode="all" aria-pressed="true">All</button>
@@ -134,6 +149,18 @@ export function buildIndexHtml(config, stats, now) {
       </footer>
     </div>
   </div>
+
+  <nav class="tabbar" aria-label="Primary navigation">
+    <button id="navHome" class="tabbar-btn" data-view="reading" aria-current="page">
+      <span class="brain tabbar-brain" aria-hidden="true"></span><span class="tabbar-lbl">HOME</span>
+    </button>
+    <button id="navLibrary" class="tabbar-btn" data-view="library">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg><span class="tabbar-lbl">LIBRARY</span>
+    </button>
+    <button id="navStats" class="tabbar-btn" data-view="stats">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z" /></svg><span class="tabbar-lbl">STATS</span>
+    </button>
+  </nav>
 
   <div id="reader" class="overlay" hidden aria-modal="true" role="dialog"></div>
   <div id="quiz" class="overlay" hidden aria-modal="true" role="dialog"></div>

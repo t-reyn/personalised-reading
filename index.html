@@ -5,35 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Cortex</title>
   <meta name="description" content="A reading list that writes itself, and learns what you know." />
-  <meta name="theme-color" content="#f6f3eb" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#16140f" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#ece3cf" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#14100b" media="(prefers-color-scheme: dark)" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="alternate" type="application/rss+xml" title="Cortex" href="feed.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" />
-  <link rel="stylesheet" href="styles.css?v=20260628210539" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="styles.css?v=20260629034749" />
   <script>
     try { var _t = localStorage.getItem("pr:theme"); if (_t === "dark" || _t === "light") document.documentElement.dataset.theme = _t; } catch (e) {}
     window.PR_BASE = "./";
-    window.PR_BUILD = "2026-06-28T21:05:39.079Z";
-    window.PR_CONFIG = {"siteUrl":"https://t-reyn.github.io/personalised-reading","repo":{"owner":"t-reyn","name":"personalised-reading","branch":"main"},"title":"Cortex","tagline":"A reading list that writes itself, and learns what you know.","audience":{"location":"Australia","english":"en-AU","guidance":"Write for an Australia-based reader. Apply an Australian lens where relevant — local bodies and regulation (APRA, ASIC, ATO, RBA, Actuaries Institute), $AUD, ASX / superannuation, Australian health and policy context, AEST timing, and Australian spelling — but do NOT be parochial: cover global affairs and developments too, framed for an Australian reader where it helps. Per tab: Finance leans AU (RBA, ASX, super) while tracking global macro; Actuarial leans AU group life + APRA while tracking IFRS 17 / global practice; Software/AI and Science are mostly global."},"passThreshold":0.75,"maxArticlesPerRun":2,"interests":[{"id":"software-ai","label":"Software, AI & App-building","emoji":"💻","accent":"#4f7cac","ttlDays":21,"mode":"both"},{"id":"design","label":"Design & Craft","emoji":"🎨","accent":"#c77d8e","ttlDays":60,"mode":"learn"},{"id":"indie-income","label":"Indie Income","emoji":"🚀","accent":"#1f9e8f","ttlDays":90,"mode":"learn"},{"id":"mortgage-broking","label":"Mortgage Broking","emoji":"🏦","accent":"#5a5fb0","ttlDays":21,"mode":"both"},{"id":"property","label":"Property & Tax","emoji":"🏠","accent":"#a86b46","ttlDays":45,"mode":"both"},{"id":"actuarial","label":"Actuarial & Group Life","emoji":"📊","accent":"#b5524a","ttlDays":null,"mode":"both"},{"id":"finance","label":"Finance & Markets","emoji":"📈","accent":"#3f9b6e","ttlDays":21,"mode":"current"},{"id":"health","label":"Health & Performance","emoji":"🏃","accent":"#d08a3e","ttlDays":45,"mode":"learn"},{"id":"videography","label":"Videography","emoji":"🎬","accent":"#a8497f","ttlDays":null,"mode":"learn"},{"id":"science","label":"Science & World","emoji":"🔬","accent":"#8e6fb0","ttlDays":21,"mode":"current"}],"freshness":{"agingAfterDays":3,"archiveSweep":true}};
+    window.PR_BUILD = "2026-06-29T03:47:49.535Z";
+    window.PR_CONFIG = {"siteUrl":"https://t-reyn.github.io/personalised-reading","repo":{"owner":"t-reyn","name":"personalised-reading","branch":"main"},"title":"Cortex","tagline":"A reading list that writes itself, and learns what you know.","audience":{"location":"Australia","english":"en-AU","guidance":"Write for an Australia-based reader. Apply an Australian lens where relevant — local bodies and regulation (APRA, ASIC, ATO, RBA, Actuaries Institute), $AUD, ASX / superannuation, Australian health and policy context, AEST timing, and Australian spelling — but do NOT be parochial: cover global affairs and developments too, framed for an Australian reader where it helps. Per tab: Finance leans AU (RBA, ASX, super) while tracking global macro; Actuarial leans AU group life + APRA while tracking IFRS 17 / global practice; Software/AI and Science are mostly global."},"passThreshold":0.75,"maxArticlesPerRun":2,"interests":[{"id":"software-ai","label":"Software, AI & App-building","emoji":"💻","accent":"#5a93f0","ttlDays":21,"mode":"both"},{"id":"design","label":"Design & Craft","emoji":"🎨","accent":"#ec6fa6","ttlDays":60,"mode":"learn"},{"id":"indie-income","label":"Indie Income","emoji":"🚀","accent":"#16b8c8","ttlDays":90,"mode":"learn"},{"id":"mortgage-broking","label":"Mortgage Broking","emoji":"🏦","accent":"#7b80f0","ttlDays":21,"mode":"both"},{"id":"property","label":"Property & Tax","emoji":"🏠","accent":"#d6a233","ttlDays":45,"mode":"both"},{"id":"actuarial","label":"Actuarial & Group Life","emoji":"📊","accent":"#f4625a","ttlDays":null,"mode":"both"},{"id":"finance","label":"Finance & Markets","emoji":"📈","accent":"#34c47e","ttlDays":21,"mode":"current"},{"id":"health","label":"Health & Performance","emoji":"🏃","accent":"#f59440","ttlDays":45,"mode":"learn"},{"id":"videography","label":"Videography","emoji":"🎬","accent":"#d869e0","ttlDays":null,"mode":"learn"},{"id":"science","label":"Science & World","emoji":"🔬","accent":"#a06ff0","ttlDays":21,"mode":"current"}],"freshness":{"agingAfterDays":3,"archiveSweep":true}};
   </script>
 </head>
 <body data-page="hub">
   <div class="app-shell">
     <aside class="sidebar">
       <header class="top">
+        <div class="scanlines" aria-hidden="true"></div>
+        <div class="scanbeam" aria-hidden="true"></div>
         <div class="top-row">
-          <h1 class="brand">Cortex</h1>
+          <div class="logo">
+            <div class="logo-brain" aria-hidden="true">
+              <div class="brain glitch"></div>
+              <div class="brain main"></div>
+            </div>
+            <div class="logo-text">
+              <h1 class="brand">Cortex</h1>
+              <p class="tagline">A reading list that writes itself, and learns what you know.</p>
+            </div>
+          </div>
           <div class="top-actions">
             <button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
             <button id="settingsBtn" class="icon-btn" aria-label="Settings" title="Settings">⚙</button>
           </div>
         </div>
-        <p class="tagline">A reading list that writes itself, and learns what you know.</p>
-        <input id="search" class="search" type="search" placeholder="Search 11 articles…" aria-label="Search articles" />
+        <div class="search-term">
+          <span class="term-prompt" aria-hidden="true">&gt;</span>
+          <input id="search" class="search" type="search" placeholder="search 11 articles" aria-label="Search articles" />
+          <span class="term-caret" aria-hidden="true">_</span>
+          <span class="term-kbd" aria-hidden="true">⌘K</span>
+        </div>
       </header>
       <div id="modeFilter" class="mode-filter" role="group" aria-label="Reading mode">
         <button class="mode-seg" data-mode="all" aria-pressed="true">All</button>
@@ -54,16 +69,28 @@
       <main id="list" class="list" aria-live="polite"></main>
       <footer class="foot">
         <span id="resultCount" class="result-count"></span>
-        <span>11 articles · built 28 June 2026</span>
+        <span>11 articles · built 29 June 2026</span>
         <span class="foot-note">Written for you by Claude · adapts to what you've learnt.</span>
       </footer>
     </div>
   </div>
 
+  <nav class="tabbar" aria-label="Primary navigation">
+    <button id="navHome" class="tabbar-btn" data-view="reading" aria-current="page">
+      <span class="brain tabbar-brain" aria-hidden="true"></span><span class="tabbar-lbl">HOME</span>
+    </button>
+    <button id="navLibrary" class="tabbar-btn" data-view="library">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" /></svg><span class="tabbar-lbl">LIBRARY</span>
+    </button>
+    <button id="navStats" class="tabbar-btn" data-view="stats">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z" /></svg><span class="tabbar-lbl">STATS</span>
+    </button>
+  </nav>
+
   <div id="reader" class="overlay" hidden aria-modal="true" role="dialog"></div>
   <div id="quiz" class="overlay" hidden aria-modal="true" role="dialog"></div>
   <div id="settings" class="overlay" hidden aria-modal="true" role="dialog"></div>
 
-  <script src="app.js?v=20260628210539"></script>
+  <script src="app.js?v=20260629034749"></script>
 </body>
 </html>
