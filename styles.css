@@ -39,6 +39,10 @@
 }
 .top-actions { display: flex; align-items: center; gap: 8px; }
 * { box-sizing: border-box; }
+/* Reinforce the HTML `hidden` attribute — author CSS `display` rules can silently override
+   the UA stylesheet's [hidden]{display:none} when specificity is equal. */
+[hidden] { display: none !important; }
+
 html, body { margin: 0; padding: 0; }
 body {
   background: var(--bg);
@@ -262,7 +266,7 @@ button { font: inherit; cursor: pointer; }
   }
   body[data-page="hub"] .sidebar {
     display: flex; flex-direction: column; gap: 14px;
-    position: sticky; top: 0; align-self: start; height: 100vh; overflow-y: auto;
+    position: sticky; top: 0; align-self: start; height: 100vh; overflow-y: hidden;
     padding: 22px 16px calc(16px + env(safe-area-inset-bottom));
     border-right: 1px solid var(--line);
     background: color-mix(in srgb, var(--bg) 55%, var(--paper));
@@ -278,9 +282,11 @@ button { font: inherit; cursor: pointer; }
   body[data-page="hub"] .list { max-width: var(--content-maxw); margin: 0 auto; padding: 0; }
   body[data-page="hub"] .foot { max-width: var(--content-maxw); margin: 24px auto 0; padding: 22px 0; }
 
-  /* Tabs become a vertical nav rail */
+  /* Tabs become a vertical nav rail — flex: 1 + min-height: 0 lets it grow and scroll
+     so Library/Stats/Discover/Archive buttons stay visible below the fold */
   body[data-page="hub"] .tabs {
-    flex-direction: column; align-items: stretch; gap: 3px; overflow: visible; padding: 0; max-width: none;
+    flex: 1; min-height: 0; overflow-y: auto;
+    flex-direction: column; align-items: stretch; gap: 3px; padding: 0; max-width: none;
   }
   body[data-page="hub"] .tab {
     width: 100%; justify-content: flex-start; border: 1px solid transparent;
