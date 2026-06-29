@@ -1,25 +1,32 @@
 {
   "_comment": "RSS/Atom feeds per interest id. Fully editable. Validate with: node scripts/ingest.mjs --dry-run. NB: some niche sites (e.g. actuaries.digital, theactuary.com) block scripted requests behind a WAF — use feeds that serve scripts (Google News RSS queries, government/regulator feeds like APRA work well).",
+  "_comment_youtube": "YouTube channels are valid sources: add https://www.youtube.com/feeds/videos.xml?channel_id=CHANNEL_ID — items are tagged kind:\"video\" with the channel as source. Find a channel_id by opening the channel and reading the UC… id from page source, or fetch the feed URL to confirm it isn't a 404. The feed gives title + description only (no transcript), so videos seed the pool as leads to weave in with attribution, not full-text sources.",
   "software-ai": [
     "https://hnrss.org/frontpage",
     "https://www.theverge.com/rss/index.xml",
-    "https://news.google.com/rss/search?q=%22artificial%20intelligence%22%20OR%20%22software%20engineering%22%20OR%20%22machine%20learning%22&hl=en-AU&gl=AU&ceid=AU:en"
+    "https://news.google.com/rss/search?q=%22artificial%20intelligence%22%20OR%20%22software%20engineering%22%20OR%20%22machine%20learning%22&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXl4i9dYBrFOabk0xGmbkRA"
   ],
   "finance": [
     "https://www.cnbc.com/id/100003114/device/rss/rss.html",
     "https://boredombaron.substack.com/feed",
     "https://news.google.com/rss/search?q=investing%20OR%20%22stock%20market%22%20OR%20%22interest%20rates%22%20OR%20superannuation%20OR%20RBA&hl=en-AU&gl=AU&ceid=AU:en",
-    "https://news.google.com/rss/search?q=site:afr.com&hl=en-AU&gl=AU&ceid=AU:en"
+    "https://news.google.com/rss/search?q=site:afr.com&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCESLZhusAkFfsNsApnjF_Cg"
   ],
   "health": [
     "https://www.sciencedaily.com/rss/health_medicine.xml",
-    "https://news.google.com/rss/search?q=%22health%20research%22%20OR%20nutrition%20OR%20fitness%20OR%20longevity%20OR%20sleep&hl=en-AU&gl=AU&ceid=AU:en"
+    "https://news.google.com/rss/search?q=%22health%20research%22%20OR%20nutrition%20OR%20fitness%20OR%20longevity%20OR%20sleep&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC2D2CMWXMOVWx7giW1n3LIg",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC68TLK0mAEzUyHx5x5k-S1Q"
   ],
   "science": [
     "https://www.sciencedaily.com/rss/top/science.xml",
     "https://www.quantamagazine.org/feed/",
     "https://news.google.com/rss/search?q=%22scientific%20research%22%20OR%20physics%20OR%20space%20OR%20biology%20OR%20climate&hl=en-AU&gl=AU&ceid=AU:en",
-    "https://phys.org/rss-feed/"
+    "https://phys.org/rss-feed/",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q"
   ],
   "actuarial": [
     "https://invisiblebalancesheet.substack.com/feed",
@@ -36,7 +43,9 @@
   ],
   "indie-income": [
     "https://news.google.com/rss/search?q=%22indie%20hacker%22%20OR%20bootstrapped%20OR%20microsaas%20OR%20%22app%20revenue%22%20OR%20%22solo%20founder%22&hl=en-AU&gl=AU&ceid=AU:en",
-    "https://news.google.com/rss/search?q=%22side%20project%22%20income%20OR%20solopreneur%20OR%20%22SaaS%20pricing%22%20OR%20%22app%20store%20optimization%22%20OR%20%22build%20in%20public%22&hl=en-AU&gl=AU&ceid=AU:en"
+    "https://news.google.com/rss/search?q=%22side%20project%22%20income%20OR%20solopreneur%20OR%20%22SaaS%20pricing%22%20OR%20%22app%20store%20optimization%22%20OR%20%22build%20in%20public%22&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCcefcZRL2oaA_uBNeo5UOWg",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC6t1O76G0jYXOAoYCm153dA"
   ],
   "mortgage-broking": [
     "https://news.google.com/rss/search?q=%22mortgage%20broker%22%20OR%20%22home%20loan%22%20OR%20refinancing%20OR%20%22serviceability%22%20OR%20%22lending%20policy%22&hl=en-AU&gl=AU&ceid=AU:en",

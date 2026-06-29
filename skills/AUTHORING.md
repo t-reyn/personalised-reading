@@ -44,6 +44,11 @@ worked AU examples — not general overviews.
     you're writing, prefer the enriched excerpt when it already has the numbers, and don't fetch more
     than ~3 pages per run. The run is on a tight headless-token window — a handful of targeted fetches
     is fine; broad crawling is not.
+- **Video pool items (`kind:"video"`, with a `source` channel)** are YouTube uploads — their excerpt is the
+  video *description* (often sponsor blurb + links), not a transcript. Treat them as **leads/signal**
+  ("channel X is covering topic Y"), not quotable text: use them to spot what's current and to corroborate
+  a cluster, fold them into a piece **with attribution** (name the channel in `sources`), and don't build an
+  article solely off one video's thin description. They're great for `current` framing alongside article sources.
 - **Knowledge-aware:** never re-explain an `is_learnt` concept; briefly teach an assumed prerequisite inline
   rather than assuming it. For software/AI the reader "vibecodes" — explain fundamentals + the *why*.
 - **Australian lens** per `config.audience` where relevant; cover global developments too. Subtly honour the

@@ -4,6 +4,7 @@
 //   node scripts/ingest.mjs            fetch + update pool.json + seen.json
 //   node scripts/ingest.mjs --dry-run  fetch + report, write nothing
 import { readFile, writeFile } from "node:fs/promises";
+import { realpathSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
@@ -59,6 +60,8 @@ const linkOf = (block) => {
   if (href) return href[1];
   return tag(block, "link");
 };
+// YouTube channel feeds (https://www.youtube.com/feeds/videos.xml?channel_id=…) → tag items as video.
+const isYouTubeFeed = (u) => /youtube\.com\/feeds\/videos\.xml/i.test(u);
 
 function parseFeed(xml) {
   const items = [];
@@ -68,9 +71,13 @@ function parseFeed(xml) {
     const url = linkOf(b);
     const guid = tag(b, "guid") || tag(b, "id") || url;
     const published = tag(b, "pubDate") || tag(b, "published") || tag(b, "updated") || "";
-    const excerpt = (tag(b, "description") || tag(b, "summary") || tag(b, "content")).slice(0, EXCERPT_CHARS);
+    // media:description is where YouTube (and other media RSS) carry the body — fall back to it so
+    // video items don't land with an empty excerpt.
+    const excerpt = (tag(b, "description") || tag(b, "summary") || tag(b, "content") || tag(b, "media:description")).slice(0, EXCERPT_CHARS);
+    // Atom <author><name> holds the channel/creator — used to attribute video sources.
+    const author = tag(b, "name");
     if (!title || !guid) continue;
-    items.push({ title, url, guid, published, excerpt });
+    items.push({ title, url, guid, published, excerpt, author });
   }
   return items;
 }
@@ -216,11 +223,15 @@ async function main() {
         if (seen.has(key)) continue;
         seen.add(key);
         if (newForFeed >= PER_FEED_CAP) continue; // cap per feed: mark seen, don't pool beyond the cap
+        const kind = isYouTubeFeed(url) ? "video" : "article";
+        if (kind === "video" && /\/shorts\//i.test(it.url)) continue; // skip YouTube Shorts — too thin to synthesise (already marked seen above)
         const item = {
           id: `${interest.id}-${hash(it.guid || it.url)}`,
           interest: interest.id,
+          kind,
           title: it.title,
           url: it.url,
+          ...(kind === "video" && it.author ? { source: it.author } : {}),
           excerpt: it.excerpt,
           published_at: it.published,
           added_at: new Date().toISOString(),
@@ -296,4 +307,10 @@ async function main() {
   await writeFile(join(ROOT, "data/pool.json"), JSON.stringify(pool, null, 2) + "\n");
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+export { parseFeed, isYouTubeFeed };
+
+// Run the pipeline only when invoked directly (node scripts/ingest.mjs), so tests can import
+// parseFeed without triggering a live fetch + file writes.
+let invokedDirectly = false;
+try { invokedDirectly = realpathSync(process.argv[1] || "") === realpathSync(fileURLToPath(import.meta.url)); } catch {}
+if (invokedDirectly) main().catch((e) => { console.error(e); process.exit(1); });
