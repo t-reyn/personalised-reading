@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-28T16:07:44.754Z",
+  "updatedAt": "2026-06-29T02:29:05.559Z",
   "articles": {
     "2026-06-25-ifrs17-csm-in-plain-terms": {
       "status": "read",
@@ -20,9 +20,10 @@
       "t": "2026-06-28T16:07:09.915Z"
     },
     "2026-06-27-apra-quarterly-june-2026": {
-      "status": "backlog",
+      "status": "read",
       "starred": true,
-      "t": "2026-06-28T16:07:44.754Z"
+      "t": "2026-06-29T02:29:05.559Z",
+      "read_at": "2026-06-29T02:29:05.559Z"
     }
   },
   "quizzes": {
