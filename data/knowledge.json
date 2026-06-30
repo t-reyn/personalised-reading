@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-30T02:48:07.927Z",
+  "updatedAt": "2026-06-30T17:19:40.690Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -69,19 +69,27 @@
     },
     "rba-cash-rate": {
       "is_learnt": false,
-      "first_taught": "2026-06-27-rba-rate-cycle-june-2026"
+      "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
+      "review_level": 1,
+      "next_review_at": "2026-07-03T17:19:40.689Z"
     },
     "monetary-policy-transmission": {
       "is_learnt": false,
-      "first_taught": "2026-06-27-rba-rate-cycle-june-2026"
+      "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
+      "review_level": 1,
+      "next_review_at": "2026-07-03T17:19:40.689Z"
     },
     "inflation-targeting": {
       "is_learnt": false,
-      "first_taught": "2026-06-27-rba-rate-cycle-june-2026"
+      "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
+      "review_level": 1,
+      "next_review_at": "2026-07-03T17:19:40.690Z"
     },
     "trimmed-mean-inflation": {
       "is_learnt": false,
-      "first_taught": "2026-06-27-rba-rate-cycle-june-2026"
+      "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
+      "review_level": 1,
+      "next_review_at": "2026-07-03T17:19:40.690Z"
     },
     "apra-quarterly-statistics": {
       "is_learnt": true,
