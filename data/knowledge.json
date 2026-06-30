@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-29T16:49:21.929Z",
+  "updatedAt": "2026-06-30T02:48:07.927Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -201,12 +201,18 @@
       "first_taught": "2026-06-28-broker-brief-june-2026"
     },
     "early-customer-acquisition": {
-      "is_learnt": false,
-      "first_taught": "2026-06-29-first-ten-users"
+      "is_learnt": true,
+      "first_taught": "2026-06-29-first-ten-users",
+      "learnt_at": "2026-06-30T02:48:07.927Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-03T02:48:07.927Z"
     },
     "product-taste": {
-      "is_learnt": false,
-      "first_taught": "2026-06-29-first-ten-users"
+      "is_learnt": true,
+      "first_taught": "2026-06-29-first-ten-users",
+      "learnt_at": "2026-06-30T02:48:07.927Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-03T02:48:07.927Z"
     },
     "apra-presale-requirements": {
       "is_learnt": false,
