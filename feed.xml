@@ -4,7 +4,23 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Mon, 29 Jun 2026 21:30:33 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 21:30:14 GMT</lastBuildDate>
+    <item>
+      <title>The Jagged Frontier: Why Your AI Feature Needs an Eval, Not Just a Vibe Check</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-30/ai-evals-jagged-frontier.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-30/ai-evals-jagged-frontier.html</guid>
+      <category>software-ai</category>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <description>AI capability is uneven across domains and tasks — what works brilliantly in one context fails unpredictably in another. Here&#39;s how to build a lightweight eval set so you know your AI feature actually works, instead of hoping it does.</description>
+    </item>
+    <item>
+      <title>The Life Insurance Code Gets 85 New Teeth — Kell&#39;s Final Report Lands</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-30/life-insurance-code-kell-review.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-30/life-insurance-code-kell-review.html</guid>
+      <category>actuarial</category>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Peter Kell&#39;s final review of the Life Insurance Code of Practice lands with 85 recommendations — up from 72 in April — centred on mental health claims handling, plus same-day evidence that code governance committees are actively enforcing, not just writing rules.</description>
+    </item>
     <item>
       <title>Broker Brief: End of FY26 — Tax Reform Fallout, APRA&#39;s Presale Shakeup, SME Arrears</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-29/broker-brief-fy26-end.html</link>

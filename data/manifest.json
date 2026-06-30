@@ -1,8 +1,71 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-29T21:30:33.280Z",
-  "count": 13,
+  "generatedAt": "2026-06-30T21:30:14.431Z",
+  "count": 15,
   "articles": [
+    {
+      "id": "2026-06-30-ai-evals-jagged-frontier",
+      "slug": "ai-evals-jagged-frontier",
+      "interest": "software-ai",
+      "interests": [
+        "software-ai"
+      ],
+      "mode": "learn",
+      "title": "The Jagged Frontier: Why Your AI Feature Needs an Eval, Not Just a Vibe Check",
+      "summary": "AI capability is uneven across domains and tasks — what works brilliantly in one context fails unpredictably in another. Here's how to build a lightweight eval set so you know your AI feature actually works, instead of hoping it does.",
+      "tags": [
+        "ai-evals",
+        "llm",
+        "jagged-frontier",
+        "robustness",
+        "vibecoding",
+        "testing"
+      ],
+      "created_at": "2026-06-30",
+      "expire_at": null,
+      "concepts_taught": [
+        "jagged-frontier",
+        "llm-evals"
+      ],
+      "concepts_assumed": [],
+      "source_count": 1,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-06-30/ai-evals-jagged-frontier.html"
+    },
+    {
+      "id": "2026-06-30-life-insurance-code-kell-review",
+      "slug": "life-insurance-code-kell-review",
+      "interest": "actuarial",
+      "interests": [
+        "actuarial"
+      ],
+      "mode": "current",
+      "title": "The Life Insurance Code Gets 85 New Teeth — Kell's Final Report Lands",
+      "summary": "Peter Kell's final review of the Life Insurance Code of Practice lands with 85 recommendations — up from 72 in April — centred on mental health claims handling, plus same-day evidence that code governance committees are actively enforcing, not just writing rules.",
+      "tags": [
+        "life-insurance",
+        "code-of-practice",
+        "kell-review",
+        "mental-health",
+        "conduct-regulation",
+        "cali"
+      ],
+      "created_at": "2026-06-30",
+      "expire_at": null,
+      "concepts_taught": [
+        "life-insurance-code-of-practice",
+        "code-governance-enforcement"
+      ],
+      "concepts_assumed": [
+        "apra-prudential",
+        "group-insurance-pricing"
+      ],
+      "source_count": 3,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-06-30/life-insurance-code-kell-review.html"
+    },
     {
       "id": "2026-06-29-broker-brief-fy26-end",
       "slug": "broker-brief-fy26-end",

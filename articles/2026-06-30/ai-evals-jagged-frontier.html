@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Jagged Frontier: Why Your AI Feature Needs an Eval, Not Just a Vibe Check</title>
+  <meta name="description" content="AI capability is uneven across domains and tasks — what works brilliantly in one context fails unpredictably in another. Here's how to build a lightweight eval set so you know your AI feature actually works, instead of hoping it does." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="software-ai">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-06-30-ai-evals-jagged-frontier">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>💻 Software, AI & App-building</p>
+        <h1>The Jagged Frontier: Why Your AI Feature Needs an Eval, Not Just a Vibe Check</h1>
+        <p class="doc-meta">30 June 2026 · synthesised from 1 source + first-principles</p>
+        <p class="doc-summary">AI capability is uneven across domains and tasks — what works brilliantly in one context fails unpredictably in another. Here's how to build a lightweight eval set so you know your AI feature actually works, instead of hoping it does.</p>
+      </header>
+
+      <div class="doc-body">
+        <p>In a recent conversation with Dwarkesh Patel, mathematician Grant Sanderson (3Blue1Brown) made an observation worth sitting with: AI has made far faster progress in mathematics than in most other fields — and even within maths, progress is uneven. Some sub-areas are essentially solved by current models; others remain hard. That unevenness is the rule, not the exception, and it's the single most useful idea to internalise if you're shipping AI features without a formal ML background.</p>
+
+        <h2>The jagged frontier</h2>
+        <p>Call it the <strong>jagged frontier</strong>: AI competence doesn't rise smoothly across domains, or even within one task category. A model can be near-superhuman at competition maths and unreliable at a task that looks simpler to a human — extracting a date from a messy invoice, say — because the skill distributions in training data, and how a task rewards exact correctness versus "plausible-sounding," don't line up with how hard the task looks from the outside. The boundary between "this just works" and "this fails in ways you won't predict" is invisible until you actually probe it.</p>
+        <p><strong>Why this matters for you:</strong> when you vibecode an AI feature — a chatbot, a categoriser, a summary generator — you're implicitly betting your specific use case sits on the "works" side of that frontier. General benchmarks, the ones that justify a model's marketing, tell you almost nothing about where your particular prompt, in your particular domain, with your particular edge cases, actually lands.</p>
+
+        <h2>The fix: evals, not vibes</h2>
+        <p>The standard engineering answer is an <strong>eval</strong> — short for evaluation — a fixed, repeatable test set for an AI feature, the same way unit tests are a repeatable test set for ordinary code. "I tried it a few times and it looked good" isn't good enough: a handful of manual checks samples only the inputs you thought to try, doesn't survive someone editing the prompt next week, and tells you nothing when you swap to a cheaper model six months from now to cut costs.</p>
+        <p>A minimal eval set for an indie app looks like this:</p>
+        <ul>
+          <li><strong>20–50 representative inputs</strong> — pulled from real usage if you have it, written by hand if you don't. Skew toward the edge cases that worry you: empty input, adversarial input, the weird formatting a real user will inevitably paste in.</li>
+          <li><strong>A scoring method.</strong> For tasks with a clear right answer, exact match works. For open-ended output — a generated summary, a tone-matched reply — use an <strong>LLM-as-judge</strong>: a second model call that grades the first model's output against a rubric you write, calibrated against a small sample you grade by hand first so you trust the judge.</li>
+          <li><strong>A re-run trigger.</strong> Run the eval set every time you touch the prompt, change the model, or change the surrounding code that builds the prompt. Track the score over time the way you'd track a build passing or failing.</li>
+        </ul>
+        <p>Concretely: say you've built a feature that parses a free-text workout note ("3x8 bench 60kg") into structured sets. Your eval set is 30 real or synthetic notes — including ones with typos, mixed units (kg vs lb), supersets, and a blank field. You score "did it produce the correct structured output" as exact match, and run it before every prompt change. The first time you do this, you'll usually find your feature was silently failing on 10–20% of inputs you'd never tried by hand — that gap is the jagged frontier showing up in your own product.</p>
+        <p><strong>What this buys you:</strong> the difference between "I shipped a feature that mostly works" and "I shipped a feature I can prove works, and I'll know within minutes if a change breaks it." That second sentence is what "robustness" means for an AI feature — it's not a different skill from the software fundamentals you're already building toward, it's the same discipline (repeatable tests, regression detection) applied to a non-deterministic component. Next time you ship an AI feature, write the eval set before you ship, not after something breaks in production.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://www.youtube.com/watch?v=TfyPshgMbug" target="_blank" rel="noopener">Grant Sanderson (3Blue1Brown) — AI and the future of math, on Dwarkesh Patel</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-06-30-ai-evals-jagged-frontier",
+  "slug": "ai-evals-jagged-frontier",
+  "interest": "software-ai",
+  "interests": ["software-ai"],
+  "mode": "learn",
+  "title": "The Jagged Frontier: Why Your AI Feature Needs an Eval, Not Just a Vibe Check",
+  "summary": "AI capability is uneven across domains and tasks — what works brilliantly in one context fails unpredictably in another. Here's how to build a lightweight eval set so you know your AI feature actually works, instead of hoping it does.",
+  "tags": ["ai-evals", "llm", "jagged-frontier", "robustness", "vibecoding", "testing"],
+  "created_at": "2026-06-30",
+  "concepts_taught": ["jagged-frontier", "llm-evals"],
+  "concepts_assumed": [],
+  "sources": [
+    { "title": "Grant Sanderson (3Blue1Brown) — AI and the future of math, on Dwarkesh Patel", "url": "https://www.youtube.com/watch?v=TfyPshgMbug" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "Grant Sanderson's observation that AI has progressed faster in mathematics than in many other domains illustrates what concept?",
+      "options": [
+        "AI capability gains are uniform across all domains",
+        "The \"jagged frontier\" — AI competence is uneven across domains and tasks, and the boundary isn't obvious without testing",
+        "Mathematical tasks are inherently easier for any software to perform",
+        "AI progress has stalled in technical domains"
+      ],
+      "correct": 1,
+      "concept": "jagged-frontier"
+    },
+    {
+      "q": "Why can't a vibecoder rely on a handful of manual test prompts to know an AI feature is production-ready?",
+      "options": [
+        "Manual testing is fine as long as the model is a recent one",
+        "A small number of manual checks won't catch edge cases, doesn't scale, and breaks silently when you change the prompt or swap models — you need a repeatable eval set",
+        "AI features never need testing because the model is pre-trained",
+        "Evals are only relevant for fine-tuned models, not API-based ones"
+      ],
+      "correct": 1,
+      "concept": "llm-evals"
+    }
+  ]
+}
+  </script>
+</body>
+</html>

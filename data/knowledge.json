@@ -229,6 +229,22 @@
     "lender-servicing-update": {
       "is_learnt": false,
       "first_taught": "2026-06-29-broker-brief-fy26-end"
+    },
+    "life-insurance-code-of-practice": {
+      "is_learnt": false,
+      "first_taught": "2026-06-30-life-insurance-code-kell-review"
+    },
+    "code-governance-enforcement": {
+      "is_learnt": false,
+      "first_taught": "2026-06-30-life-insurance-code-kell-review"
+    },
+    "jagged-frontier": {
+      "is_learnt": false,
+      "first_taught": "2026-06-30-ai-evals-jagged-frontier"
+    },
+    "llm-evals": {
+      "is_learnt": false,
+      "first_taught": "2026-06-30-ai-evals-jagged-frontier"
     }
   }
 }
