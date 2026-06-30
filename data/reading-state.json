@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-29T16:49:21.925Z",
+  "updatedAt": "2026-06-30T02:48:07.926Z",
   "articles": {
     "2026-06-25-ifrs17-csm-in-plain-terms": {
       "status": "read",
@@ -34,6 +34,11 @@
       "status": "read",
       "read_at": "2026-06-29T16:49:21.925Z",
       "t": "2026-06-29T16:49:21.925Z"
+    },
+    "2026-06-29-first-ten-users": {
+      "status": "read",
+      "read_at": "2026-06-30T02:48:07.926Z",
+      "t": "2026-06-30T02:48:07.926Z"
     }
   },
   "quizzes": {
@@ -71,6 +76,11 @@
       "score": 1,
       "passed": true,
       "taken_at": "2026-06-29T16:49:21.925Z"
+    },
+    "2026-06-29-first-ten-users": {
+      "score": 1,
+      "passed": true,
+      "taken_at": "2026-06-30T02:48:07.925Z"
     }
   }
 }
