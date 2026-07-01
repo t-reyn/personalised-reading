@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-30T17:19:40.688Z",
+  "updatedAt": "2026-07-01T05:34:34.762Z",
   "articles": {
     "2026-06-25-ifrs17-csm-in-plain-terms": {
       "status": "read",
@@ -44,6 +44,11 @@
       "status": "read",
       "read_at": "2026-06-30T17:19:40.688Z",
       "t": "2026-06-30T17:19:40.688Z"
+    },
+    "2026-06-30-life-insurance-code-kell-review": {
+      "status": "read",
+      "read_at": "2026-07-01T05:34:34.762Z",
+      "t": "2026-07-01T05:34:34.762Z"
     }
   },
   "quizzes": {
@@ -91,6 +96,11 @@
       "score": 0.5,
       "passed": false,
       "taken_at": "2026-06-30T17:19:40.687Z"
+    },
+    "2026-06-30-life-insurance-code-kell-review": {
+      "score": 1,
+      "passed": true,
+      "taken_at": "2026-07-01T05:34:34.762Z"
     }
   }
 }
