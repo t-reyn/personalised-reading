@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-30T17:19:40.690Z",
+  "updatedAt": "2026-07-01T05:34:34.764Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -231,12 +231,18 @@
       "first_taught": "2026-06-29-broker-brief-fy26-end"
     },
     "life-insurance-code-of-practice": {
-      "is_learnt": false,
-      "first_taught": "2026-06-30-life-insurance-code-kell-review"
+      "is_learnt": true,
+      "first_taught": "2026-06-30-life-insurance-code-kell-review",
+      "learnt_at": "2026-07-01T05:34:34.764Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-04T05:34:34.764Z"
     },
     "code-governance-enforcement": {
-      "is_learnt": false,
-      "first_taught": "2026-06-30-life-insurance-code-kell-review"
+      "is_learnt": true,
+      "first_taught": "2026-06-30-life-insurance-code-kell-review",
+      "learnt_at": "2026-07-01T05:34:34.764Z",
+      "review_level": 1,
+      "next_review_at": "2026-07-04T05:34:34.764Z"
     },
     "jagged-frontier": {
       "is_learnt": false,
