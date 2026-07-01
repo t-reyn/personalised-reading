@@ -251,6 +251,26 @@
     "llm-evals": {
       "is_learnt": false,
       "first_taught": "2026-06-30-ai-evals-jagged-frontier"
+    },
+    "small-business-cgt-concessions": {
+      "is_learnt": false,
+      "first_taught": "2026-07-01-cgt-negative-gearing-carve-outs"
+    },
+    "cgt-grandfathering": {
+      "is_learnt": false,
+      "first_taught": "2026-07-01-cgt-negative-gearing-carve-outs"
+    },
+    "color-theory-basics": {
+      "is_learnt": false,
+      "first_taught": "2026-07-01-color-theory-for-interfaces"
+    },
+    "color-harmony-schemes": {
+      "is_learnt": false,
+      "first_taught": "2026-07-01-color-theory-for-interfaces"
+    },
+    "semantic-color-mapping": {
+      "is_learnt": false,
+      "first_taught": "2026-07-01-color-theory-for-interfaces"
     }
   }
 }

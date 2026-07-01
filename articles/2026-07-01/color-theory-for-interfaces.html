@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Color Theory for Interfaces: Picking a Palette That Actually Works</title>
+  <meta name="description" content="Visual hierarchy told you what to make loud. Color is how you decide which loud thing means what. Hue/saturation/lightness, harmony schemes, and the semantic-color rule most beginner palettes break." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="design">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-07-01-color-theory-for-interfaces">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>🎨 Design &amp; Craft</p>
+        <h1>Color Theory for Interfaces: Picking a Palette That Actually Works</h1>
+        <p class="doc-meta">1 July 2026 · synthesised from 1 source</p>
+        <p class="doc-summary">Visual hierarchy told you what to make loud. Color is how you decide which loud thing means what. Hue/saturation/lightness, harmony schemes, and the semantic-color rule most beginner palettes break.</p>
+      </header>
+
+      <div class="doc-body">
+        <p>Visual hierarchy told you <em>what</em> to make loud — size, weight, contrast, space. Color is a different question: <em>which</em> loud thing gets which meaning. Most beginner palettes don't fail because the colors are ugly. They fail because the colors were chosen for vibes instead of a system — five pretty hues thrown at a screen with no rule for which one means what.</p>
+
+        <h2>The only three levers: hue, saturation, lightness</h2>
+        <p>Every color you'll pick is describable with three numbers (this is the HSL model, and it's far more useful for design than RGB). <strong>Hue</strong> is the actual color — its position on the color wheel, 0–360°. <strong>Saturation</strong> is how intense or washed-out it is: 100% is vivid, 0% is grey. <strong>Lightness</strong> is how close it sits to black or white. The move beginners miss: to build a <em>family</em> of related colors — the ten shades you need for a hover state, an active state, a disabled state, a subtle background tint — you don't pick ten different hues. You hold the hue fixed and step saturation and lightness. One blue, ten shades of it. That's exactly what a per-topic accent color and its hover/tint variants are doing in the app you're reading this in right now: each tab gets one hue, and every other visual state off that tab is a saturation/lightness step from the same number, not a new color someone had to invent.</p>
+
+        <h2>Picking a scheme: harmony beats guessing</h2>
+        <p>Once you're choosing more than one hue, the color wheel gives you three reliable starting points instead of trial and error:</p>
+        <ul>
+          <li><strong>Complementary</strong> — two hues opposite each other on the wheel. Maximum contrast, great for making one call-to-action unmissable against a calm base. Easy to overdo — use it for one thing, not the whole screen.</li>
+          <li><strong>Analogous</strong> — hues that sit next to each other. Calm, cohesive, low-risk. The safe default for content-heavy apps where nothing should be fighting for attention.</li>
+          <li><strong>Triadic</strong> — three hues evenly spaced around the wheel. Playful and energetic, but only works if one hue clearly dominates and the other two are used sparingly — used equally, it turns busy fast.</li>
+        </ul>
+        <p>For a solo builder, the reliable default is simpler than any of these: pick <strong>one</strong> accent hue, keep everything else neutral grey, and only introduce a second hue when you need to encode a genuinely different <em>meaning</em> — not to add more decoration.</p>
+
+        <h2>Semantic color: color as a signal, not a decoration</h2>
+        <p>This is the rule most beginner interfaces break. <strong>Semantic color</strong> means specific hues are reserved for specific meanings, everywhere in the app, without exception: red for danger or destructive actions, green for success, amber for warnings, and your accent hue for neutral primary actions. The trap is reusing your pretty brand accent for a "success" toast, or for a decorative card border — the moment a color appears in more than one role, it stops reliably telling the user anything. A user who's learnt that red means "this deletes something" will hesitate at a red badge that actually just means "new," and that hesitation is the palette failing at its actual job.</p>
+
+        <h2>Contrast still applies — especially here</h2>
+        <p>You already know the accessibility floor from visual hierarchy: body text needs roughly 4.5:1 contrast against its background. Color choices are exactly where that rule gets quietly broken — a pastel amber warning badge, a soft grey-on-white "disabled" label, a light accent on a light card. Every semantic color needs to clear the same bar its neutral text does, or the signal you just built becomes invisible to exactly the users who need it most.</p>
+
+        <h2>A palette you can actually ship in five minutes</h2>
+        <p>Most apps need less than you think: one accent hue (your brand, stepped through saturation/lightness for its states), one neutral scale of five to seven greys from near-white to near-black, and three semantic colors — success, warning, danger — kept deliberately off your accent hue so they never get confused with a primary action. That's the whole palette. Resist adding a second "pretty" color until you have an actual meaning that needs one.</p>
+
+        <h2>The bottom line</h2>
+        <p>Color theory for interfaces isn't about taste — it's a small, learnable system: one hue per meaning, saturation and lightness for state, and contrast checked on every combination you ship. Get that right and a one-hue palette will look more considered than five hues chosen by eye.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://uxdesign.cc/exploring-comprehensive-data-color-scheme-design-with-genai-099d543df4ba?source=rss----138adf9c44c---4" target="_blank" rel="noopener">Exploring comprehensive data color scheme design with GenAI — UX Collective</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-07-01-color-theory-for-interfaces",
+  "slug": "color-theory-for-interfaces",
+  "interest": "design",
+  "interests": ["design", "software-ai"],
+  "mode": "learn",
+  "title": "Color Theory for Interfaces: Picking a Palette That Actually Works",
+  "summary": "Visual hierarchy told you what to make loud. Color is how you decide which loud thing means what. Hue/saturation/lightness, harmony schemes, and the semantic-color rule most beginner palettes break.",
+  "tags": ["color theory", "visual design", "accessibility", "UI", "palette"],
+  "created_at": "2026-07-01",
+  "expire_at": "2026-08-30",
+  "concepts_taught": ["color-theory-basics", "color-harmony-schemes", "semantic-color-mapping"],
+  "concepts_assumed": ["visual-hierarchy", "contrast-for-hierarchy"],
+  "sources": [
+    { "title": "Exploring comprehensive data color scheme design with GenAI", "url": "https://uxdesign.cc/exploring-comprehensive-data-color-scheme-design-with-genai-099d543df4ba?source=rss----138adf9c44c---4" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "In the HSL color model, which two properties do you adjust to create a family of shades from ONE accent hue (for hover, active, disabled states)?",
+      "options": [
+        "Hue and opacity",
+        "Saturation and lightness",
+        "Contrast and font weight",
+        "RGB and CMYK"
+      ],
+      "correct": 1,
+      "concept": "color-theory-basics"
+    },
+    {
+      "q": "Why shouldn't your brand's accent color also be reused for a 'success' state?",
+      "options": [
+        "Accent colors are always too saturated to render as text",
+        "Reusing one color for two different meanings makes it stop reliably signalling either one",
+        "It violates copyright on color palettes",
+        "It doesn't matter — semantic and brand colors are interchangeable"
+      ],
+      "correct": 1,
+      "concept": "semantic-color-mapping"
+    }
+  ]
+}
+  </script>
+</body>
+</html>

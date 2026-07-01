@@ -4,7 +4,23 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Tue, 30 Jun 2026 21:30:14 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 21:30:51 GMT</lastBuildDate>
+    <item>
+      <title>Color Theory for Interfaces: Picking a Palette That Actually Works</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-01/color-theory-for-interfaces.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-01/color-theory-for-interfaces.html</guid>
+      <category>design</category>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Visual hierarchy told you what to make loud. Color is how you decide which loud thing means what. Hue/saturation/lightness, harmony schemes, and the semantic-color rule most beginner palettes break.</description>
+    </item>
+    <item>
+      <title>Negative Gearing Reform Is Law — What the Carve-Outs Actually Change</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-01/cgt-negative-gearing-carve-outs.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-01/cgt-negative-gearing-carve-outs.html</guid>
+      <category>property</category>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The negative gearing and CGT reform has passed — then the government announced small-business carve-outs and denied it&#39;s a backdown. What&#39;s actually different, what isn&#39;t, and what to check before you act.</description>
+    </item>
     <item>
       <title>The Jagged Frontier: Why Your AI Feature Needs an Eval, Not Just a Vibe Check</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-30/ai-evals-jagged-frontier.html</link>
