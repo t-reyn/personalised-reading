@@ -280,7 +280,7 @@
         ${(a.tags || []).slice(0, 3).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}
         ${opts.review ? `<span class="due-note">⟳ time to review</span>` : (read ? `<span class="readtick">✓ read</span>` : "")}
         ${merged ? `<span class="merged-note">↳ consolidates ${merged}</span>` : ""}
-        ${prereq ? `<button class="prereq" type="button" data-prereq="${esc(prereq.id)}" title="Open the prerequisite article">🔒 Read "${esc(prereq.title)}" first</button>` : ""}
+        ${prereq ? `<button class="prereq" type="button" data-prereq="${esc(prereq.id)}" data-prereq-read="${isRead(prereq.id) ? "1" : ""}" title="${isRead(prereq.id) ? "Take the quick-check to unlock this" : "Open the prerequisite article"}">🔒 ${isRead(prereq.id) ? `Pass the quick-check in "${esc(prereq.title)}" to unlock` : `Read "${esc(prereq.title)}" first`}</button>` : ""}
       </div>
     </article>`;
   }
@@ -294,7 +294,7 @@
     });
     root.querySelectorAll(".star").forEach((b) => b.addEventListener("click", (e) => { e.stopPropagation(); toggleStar(b.dataset.star); }));
     root.querySelectorAll(".restore").forEach((b) => b.addEventListener("click", (e) => { e.stopPropagation(); restore(b.dataset.restore); }));
-    root.querySelectorAll("[data-prereq]").forEach((b) => b.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); openReader(b.dataset.prereq); }));
+    root.querySelectorAll("[data-prereq]").forEach((b) => b.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); openReader(b.dataset.prereq, { quiz: !!b.dataset.prereqRead }); }));
   }
 
   function render() {
@@ -569,7 +569,7 @@
     return metaCache[a.id];
   }
 
-  async function openReader(id) {
+  async function openReader(id, opts) {
     const a = manifest.articles.find((x) => x.id === id);
     if (!a) return;
     const meta = await loadMeta(a);
@@ -599,6 +599,7 @@
     ov.querySelector('[data-act="read"]')?.addEventListener("click", () => { markRead(id); if (hasQuiz) openQuiz(a, meta); else { hide(ov); render(); } });
     ov.querySelector('[data-act="unread"]')?.addEventListener("click", () => { const e = (state.articles[id] ||= {}); e.status = "backlog"; e.t = now(); saveState(); renderTabs(); hide(ov); render(); });
     ov.querySelector('[data-act="quiz"]')?.addEventListener("click", () => openQuiz(a, meta));
+    if (opts?.quiz && hasQuiz) openQuiz(a, meta); // jumped here to unlock a gated article — go straight to the quick-check
   }
 
   /* ---------- quiz ---------- */
