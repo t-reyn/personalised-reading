@@ -29,7 +29,8 @@ app.js, styles.css      the app layer (hub UI, reader overlay, quiz, state sync)
 manifest.webmanifest, sw.js, favicon.svg
 articles/YYYY-MM-DD/<slug>.html   committed articles (from templates/article.html); inline #meta JSON
 templates/article.html  styling + structure source of truth + the #meta contract
-skills/<interest>/SKILL.md   per-interest authoring contract
+skills/AUTHORING.md          daily authoring contract
+skills/SCOUT.md              feed-discovery contract
 scripts/
   generate-index.mjs    scan articles/ → build index.html, feed.xml, sitemap.xml, data/manifest.json
   ingest.mjs            fetch RSS per source → dedup (data/seen.json) → append to data/pool.json
@@ -56,12 +57,13 @@ limits). See `CLOUD_SETUP.md`.
 1. `node scripts/ingest.mjs` — refresh `data/pool.json` from feeds. Then
    `node scripts/fetch-live.mjs` — refresh `data/live.json` (keyless live market datapoints for
    grounding time-sensitive pieces; best-effort, never fatal).
-2. Read `data/pool.json` (pending items), `data/knowledge.json` (what's learnt),
-   `data/reading-state.json` (what's unread, for carry-forward), `data/corpus.json` (the reader's
-   durable hand-picked sources — vetted signal to weave in), `data/live.json` (current figures for
-   `current` finance/markets/property pieces), and **`data/profile.local.json` if
-   present** (gitignored reader profile: background + per-tab pitch level + concepts already known —
-   don't re-explain those; pitch each tab to the stated level).
+2. Read `data/pool-digest.json` (pre-digested candidate items per interest; fall back to
+   `data/pool.json` if absent), `data/knowledge.json` (what's learnt),
+   `data/reading-state.json` (read/quiz history — a failed quiz is the strongest re-teach signal),
+   `data/corpus.json` (the reader's durable hand-picked sources — vetted signal to weave in),
+   `data/live.json` (current figures for `current` finance/markets/property pieces), and
+   **`data/profile.local.json` if present** (gitignored reader profile: background + per-tab pitch
+   level + concepts already known — don't re-explain those; pitch each tab to the stated level).
 3. Cluster related pending items per interest. For each cluster, **author one article**:
    - Copy `templates/article.html` → `articles/YYYY-MM-DD/<slug>.html`, fill every `{{PLACEHOLDER}}`
      and the `#meta` JSON.
@@ -70,12 +72,12 @@ limits). See `CLOUD_SETUP.md`.
      inline, or hold the article if it depends on an unlearnt prereq (list assumed concepts so the
      app can gate it). Record `concepts_taught` / `concepts_assumed` (stable kebab-case ids).
    - **Synthesis:** merge multiple sources into one original piece; list them in `sources`.
-   - **Carry-forward:** fold still-relevant **unread** pool items in where they fit; put the
-     superseded article ids in `merged_from`; set the old article's `merged_into` (in its #meta) and
-     flip its pool items to `used`. Only merge unread, unstarred items; never across interests.
+   - **Carry-forward:** suspended for now — write fresh pieces; leave `merged_from: []` and
+     `merged_into: null` (see `skills/AUTHORING.md`).
    - **Quick-check:** add 1–2 MCQs in `quick_check`, each tagged with the `concept` it tests.
 4. Update `data/knowledge.json` with any **new** concepts (default `is_learnt:false`). Update
-   `data/pool.json` item statuses (`pending`→`used`).
+   `data/pool.json` item statuses (`pending`→`used`). Update `data/quizbank.json` with one fresh
+   application-level MCQ for each concept whose `next_review_at` falls within the next 7 days.
 5. `node scripts/generate-index.mjs --strict` — rebuild the hub/feed/sitemap/manifest; fix any
    extraction warnings before committing.
 6. Commit + push `main`.
