@@ -20,4 +20,6 @@ jobs:
         with:
           node-version: 20
       - name: Run integrity + freshness check
+        env:
+          HEALTH_REQUIRE_TODAY: "1"
         run: node scripts/health-check.mjs

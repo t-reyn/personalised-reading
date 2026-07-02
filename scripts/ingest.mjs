@@ -14,6 +14,9 @@ const DRY = process.argv.includes("--dry-run");
 const PER_FEED_CAP = 25; // bound how many new items one feed can add per run
 const POOL_TTL_DAYS = 21; // candidates not used within this window age out, keeping the pool fresh
 const MAX_PENDING_PER_INTEREST = 20; // hard cap: the pool is the authoring input, so keep it small + cheap
+const SEEN_TTL_DAYS = 180; // dedup keys older than this are pruned from seen.json (bounds its growth)
+const DIGEST_PER_INTEREST = 8; // freshest pending items per interest in the author-facing pool digest
+const DIGEST_EXCERPT_CHARS = 300; // trim digest excerpts to a word boundary near this length
 
 // Enrichment: some feeds (regulators / statistics publishers) announce a release via RSS but the
 // <description> is just rendered page chrome — no numbers, no findings. We fetch the landing page and
@@ -217,13 +220,75 @@ function needsEnrich(item) {
   } catch { return false; }
 }
 
+// Trim to a word boundary at or before `max` chars (never mid-word); append an ellipsis when cut.
+function trimExcerpt(s = "", max = DIGEST_EXCERPT_CHARS) {
+  const t = s.trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max);
+  const sp = cut.lastIndexOf(" ");
+  return (sp > 0 ? cut.slice(0, sp) : cut).replace(/[\s.,;:—-]+$/, "") + "…";
+}
+
+// Days since the interest last had a published article, from data/manifest.json. An article counts for
+// an interest when the id appears in its `interests[]` (falling back to the primary `interest` field).
+// null when the interest has never had an article.
+function daysSinceLastArticle(manifest, interestId) {
+  const arts = (manifest && manifest.articles) || [];
+  let newest = "";
+  for (const a of arts) {
+    const ids = Array.isArray(a.interests) && a.interests.length ? a.interests : (a.interest ? [a.interest] : []);
+    if (ids.includes(interestId) && a.created_at && a.created_at > newest) newest = a.created_at;
+  }
+  if (!newest) return null;
+  return Math.floor((Date.now() - new Date(newest + "T00:00:00Z").getTime()) / 86400000);
+}
+
+// Author-facing pre-digested view of the pool: the freshest pending items per interest with trimmed
+// excerpts, plus recency signal. The author reads this small file instead of re-parsing all of
+// pool.json (only the excerpt is signal; the rest is bookkeeping), so cost stops scaling with pool size.
+async function writePoolDigest(config, pool) {
+  const manifest = await readJson("data/manifest.json", { articles: [] });
+  const groups = {};
+  for (const it of pool.items) if (it.status === "pending") (groups[it.interest] ||= []).push(it);
+  const interests = {};
+  for (const interest of config.interests || []) {
+    const items = (groups[interest.id] || [])
+      .sort((a, b) => (b.added_at || "").localeCompare(a.added_at || "")) // freshest first (matches the pool prune)
+      .slice(0, DIGEST_PER_INTEREST)
+      .map((it) => ({
+        id: it.id,
+        title: it.title,
+        excerpt: trimExcerpt(it.excerpt),
+        url: it.url,
+        kind: it.kind,
+        ...(it.source ? { source: it.source } : {}),
+      }));
+    interests[interest.id] = {
+      days_since_last_article: daysSinceLastArticle(manifest, interest.id),
+      items,
+    };
+  }
+  const digest = { version: 1, generatedAt: new Date().toISOString(), interests };
+  await writeFile(join(ROOT, "data/pool-digest.json"), JSON.stringify(digest, null, 2) + "\n");
+  log(`  wrote pool-digest.json — ${Object.keys(interests).length} interest(s)`);
+}
+
 async function main() {
   const config = await readJson("data/config.json", { interests: [] });
   const sources = await readJson("data/sources.json", {});
   const seenState = await readJson("data/seen.json", { version: 1, seen: [] });
   const pool = await readJson("data/pool.json", { version: 1, items: [] });
 
-  const seen = new Set(seenState.seen || []);
+  // seen.json dedup keys carry a timestamp so we can prune stale ones (it was an unbounded flat array,
+  // committed every run). Accept BOTH the legacy flat string form and the new [{k, t}] form on load;
+  // membership is still by key. `now` timestamps any legacy key + every newly-seen key.
+  const now = new Date().toISOString();
+  const seenTs = new Map();
+  for (const e of seenState.seen || []) {
+    if (typeof e === "string") seenTs.set(e, now);
+    else if (e && typeof e.k === "string") seenTs.set(e.k, e.t || now);
+  }
+  const seen = { has: (k) => seenTs.has(k), add: (k) => seenTs.set(k, now) };
 
   let added = 0, fetched = 0, failed = 0;
   const freshlyAdded = [];
@@ -316,12 +381,18 @@ async function main() {
   pool.items = kept;
 
   log(`\n${fetched} feed(s) fetched, ${failed} failed, ${added} new pending item(s), ${enriched} enriched, ${pruned} pruned, ${pool.items.length} in pool${DRY ? " (dry-run — nothing written)" : ""}`);
-  if (DRY) return;
+  if (DRY) { log("  (dry-run: skipping pool-digest.json write)"); return; }
 
-  seenState.seen = [...seen];
+  // Prune dedup keys not seen within the retention window, then persist the new [{k, t}] form. Keeps
+  // seen.json from growing without bound; membership semantics are unchanged (still keyed on k).
+  const seenCutoff = Date.now() - SEEN_TTL_DAYS * 86400000;
+  seenState.seen = [...seenTs.entries()]
+    .filter(([, t]) => { const ms = new Date(t).getTime(); return !Number.isFinite(ms) || ms >= seenCutoff; })
+    .map(([k, t]) => ({ k, t }));
   pool.updatedAt = new Date().toISOString();
   await writeFile(join(ROOT, "data/seen.json"), JSON.stringify(seenState, null, 2) + "\n");
   await writeFile(join(ROOT, "data/pool.json"), JSON.stringify(pool, null, 2) + "\n");
+  await writePoolDigest(config, pool);
 }
 
 export { parseFeed, isYouTubeFeed };

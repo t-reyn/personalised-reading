@@ -6,6 +6,9 @@ on:
   schedule:
     # 20:00 UTC = 6:00am AEST (Sydney). Adjust to taste.
     - cron: "0 20 * * *"
+    # Catch-up: GitHub silently drops scheduled runs under load. A second attempt ~45min later
+    # re-authors only if today's issue is still missing (the guard step below short-circuits otherwise).
+    - cron: "45 21 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -32,17 +35,44 @@ jobs:
         with:
           node-version: "20"
 
-      # 0. Fail fast before spending a Claude run if the build helpers regressed.
+      # 0a. Catch-up guard: if today's issue already exists, skip authoring so a re-run (the second
+      #     cron, or a duplicate delivery) is a cheap no-op. workflow_dispatch always forces a run.
+      #     Checks both the Sydney date and the UTC date to cover the day-boundary transition.
+      - name: Guard — skip if today's issue exists
+        id: guard
+        run: |
+          skip=false
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            for d in "$(TZ=Australia/Sydney date +%F)" "$(date -u +%F)"; do
+              if ls articles/"$d"/*.html >/dev/null 2>&1; then
+                echo "today's issue already exists ($d) — skipping"
+                skip=true
+                break
+              fi
+            done
+          fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
+
+      # 0b. Fail fast before spending a Claude run if the build helpers regressed.
       - name: Unit tests
+        if: steps.guard.outputs.skip != 'true'
         run: node --test scripts/lib/*.test.mjs
 
       # 1. Refresh the source pool from your feeds (deterministic, no LLM).
       - name: Ingest feeds
+        if: steps.guard.outputs.skip != 'true'
         run: node scripts/ingest.mjs
+
+      # 1b. Refresh live market datapoints (keyless grounding for time-sensitive pieces). Best-effort:
+      #     a failure here must never abort the run, so it swallows its own errors.
+      - name: Fetch live datapoints
+        if: steps.guard.outputs.skip != 'true'
+        run: node scripts/fetch-live.mjs || true
 
       # 2. Materialise the private reader profile from a secret. Gitignored (*.local.json) so it is
       #    NEVER committed. If the secret is unset, authoring falls back to generic (still works).
       - name: Write reader profile (from secret)
+        if: steps.guard.outputs.skip != 'true'
         env:
           READER_PROFILE: ${{ secrets.READER_PROFILE }}
         run: |
@@ -57,6 +87,7 @@ jobs:
       #    well under the headless-token window.
       - name: Author articles (Claude, subscription)
         id: author
+        if: steps.guard.outputs.skip != 'true'
         continue-on-error: true # a partial/over-budget authoring run should still commit what it wrote
         timeout-minutes: 13 # stop authoring under the headless-token window; the run continues to Build + Commit
         uses: anthropics/claude-code-action@v1
@@ -68,13 +99,17 @@ jobs:
       # 3b. Record this run's tokens + cost estimate to data/usage-log.jsonl (token counts are the
       #     reliable figures; cost_usd is a client-side estimate, fine for trend analysis).
       - name: Record usage
-        if: always()
+        if: always() && steps.guard.outputs.skip != 'true'
         run: |
           DATE=$(date -u +%Y-%m-%d)
-          ART=$(ls articles/"$DATE"/*.html 2>/dev/null | wc -l | tr -d ' ')
-          FILE="$RUNNER_TEMP/claude-execution-output.json"
+          SYD=$(TZ=Australia/Sydney date +%F)
+          # Issues are dated in AEST (with UTC tolerated during transition) — count both.
+          ART=$(ls articles/"$DATE"/*.html articles/"$SYD"/*.html 2>/dev/null | sort -u | wc -l | tr -d ' ')
+          # The action's output path isn't stable across versions/runners, so discover it instead of
+          # assuming a fixed name — a missing file was logging null token rows.
+          FILE=$(find "$RUNNER_TEMP" -name claude-execution-output.json 2>/dev/null | head -1)
           COST=null; IN=null; OUT=null; CR=null; CC=null; TURNS=null
-          if [ -f "$FILE" ]; then
+          if [ -n "$FILE" ] && [ -f "$FILE" ]; then
             R=$(jq -s 'flatten | map(select(.type=="result")) | last // {}' "$FILE" 2>/dev/null || echo '{}')
             COST=$(printf '%s' "$R" | jq -r '.total_cost_usd // "null"')
             IN=$(printf  '%s' "$R" | jq -r '.usage.input_tokens // "null"')
@@ -83,7 +118,7 @@ jobs:
             CC=$(printf  '%s' "$R" | jq -r '.usage.cache_creation_input_tokens // "null"')
             TURNS=$(printf '%s' "$R" | jq -r '.num_turns // "null"')
           else
-            echo "no execution-output file at $FILE — logging counts only (refine after run 1)"
+            echo "no claude-execution-output.json under $RUNNER_TEMP — logging counts only"
           fi
           printf '{"date":"%s","articles":%s,"cost_usd":%s,"input":%s,"output":%s,"cache_read":%s,"cache_creation":%s,"turns":%s,"model":"sonnet"}\n' \
             "$DATE" "${ART:-0}" "$COST" "$IN" "$OUT" "$CR" "$CC" "$TURNS" >> data/usage-log.jsonl
@@ -91,30 +126,55 @@ jobs:
 
       # 4. Build the hub/feed/sitemap/manifest from the new articles.
       - name: Build
+        if: steps.guard.outputs.skip != 'true'
         run: node scripts/generate-index.mjs --strict
 
       # 5. Persist generated content. `git add` is path-scoped and .gitignore protects the profile,
       #    so the secret-derived profile is never committed.
       - name: Commit
+        if: steps.guard.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "reading-bot"
           git config user.email "noreply@users.noreply.github.com"
-          git add articles data/pool.json data/seen.json data/knowledge.json data/manifest.json data/usage-log.jsonl index.html feed.xml sitemap.xml sw.js
+          # Tolerate optional artifacts (e.g. a digest that wasn't produced) — a missing pathspec
+          # must never abort the commit and lose the issue.
+          for f in articles data/pool.json data/pool-digest.json data/seen.json data/knowledge.json data/manifest.json data/usage-log.jsonl data/live.json index.html feed.xml sitemap.xml sw.js; do
+            [ -e "$f" ] && git add "$f"
+          done
           if git diff --cached --quiet; then
             echo "nothing new to commit"
           else
             git commit -m "write: $(date -u +%Y-%m-%d) issue"
-            git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
+            # Race-safe: the browser writes data/*.json to main via the Contents API at any time, so a
+            # mid-run sync would reject a bare push and lose the whole issue. Rebase-and-retry, then
+            # fail the step if all attempts lose the race.
+            URL="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+            pushed=false
+            for i in 1 2 3; do
+              if git pull --rebase --autostash "$URL" main && git push "$URL" HEAD:main; then
+                pushed=true
+                break
+              fi
+              sleep 10
+            done
+            if [ "$pushed" != "true" ]; then
+              echo "push failed after retries (persistent race or rejected update)"
+              exit 1
+            fi
           fi
 
-      # 6. Publish.
+      # 6. Publish. Gated on the guard too: a skipped catch-up run has nothing new to publish
+      #    (the run that wrote today's issue already deployed it).
       - uses: actions/configure-pages@v5
+        if: steps.guard.outputs.skip != 'true'
         with:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
+        if: steps.guard.outputs.skip != 'true'
         with:
           path: "."
       - id: deploy
+        if: steps.guard.outputs.skip != 'true'
         uses: actions/deploy-pages@v4
