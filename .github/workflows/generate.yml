@@ -124,6 +124,29 @@ jobs:
             "$DATE" "${ART:-0}" "$COST" "$IN" "$OUT" "$CR" "$CC" "$TURNS" >> data/usage-log.jsonl
           echo "usage row: $(tail -1 data/usage-log.jsonl)"
 
+      # 3c. Quarantine unpublishable drafts. A timed-out author step can leave a half-written
+      #     article (e.g. no #meta block); --strict would then fail the Build and discard the WHOLE
+      #     issue, good articles included. Delete today's defective drafts so the rest publishes.
+      - name: Quarantine defective drafts
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          for d in "$(TZ=Australia/Sydney date +%F)" "$(date -u +%F)"; do
+            [ -d "articles/$d" ] || continue
+            for f in articles/"$d"/*.html; do
+              [ -e "$f" ] || continue
+              if ! node -e '
+                const html = require("fs").readFileSync(process.argv[1], "utf8");
+                const m = html.match(/<script[^>]*id="meta"[^>]*>([\s\S]*?)<\/script>/);
+                if (!m) process.exit(1);
+                const j = JSON.parse(m[1]);
+                if (!j.id || !j.title || !j.interest) process.exit(1);
+              ' "$f" 2>/dev/null; then
+                echo "quarantining unpublishable draft: $f"
+                rm -f "$f"
+              fi
+            done
+          done
+
       # 4. Build the hub/feed/sitemap/manifest from the new articles.
       - name: Build
         if: steps.guard.outputs.skip != 'true'
