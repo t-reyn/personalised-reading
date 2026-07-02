@@ -271,6 +271,36 @@
     "semantic-color-mapping": {
       "is_learnt": false,
       "first_taught": "2026-07-01-color-theory-for-interfaces"
+    },
+    "apra-prudential": {
+      "is_learnt": false
+    },
+    "bond-yields-basics": {
+      "is_learnt": false
+    },
+    "embeddings": {
+      "is_learnt": false
+    },
+    "group-insurance-pricing": {
+      "is_learnt": false
+    },
+    "group-life-mechanics": {
+      "is_learnt": false
+    },
+    "ifrs17-basics": {
+      "is_learnt": false
+    },
+    "progressive-overload": {
+      "is_learnt": false
+    },
+    "reserving-basics": {
+      "is_learnt": false
+    },
+    "rpe": {
+      "is_learnt": false
+    },
+    "training-volume": {
+      "is_learnt": false
     }
   }
 }
