@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-01T21:30:51.252Z",
+  "generatedAt": "2026-07-02T02:47:18.010Z",
   "count": 17,
   "articles": [
     {
@@ -12,8 +12,8 @@
         "software-ai"
       ],
       "mode": "learn",
-      "title": "Color Theory for Interfaces: Picking a Palette That Actually Works",
-      "summary": "Visual hierarchy told you what to make loud. Color is how you decide which loud thing means what. Hue/saturation/lightness, harmony schemes, and the semantic-color rule most beginner palettes break.",
+      "title": "Colour Theory for Interfaces: Picking a Palette That Actually Works",
+      "summary": "Visual hierarchy told you what to make loud. Colour is how you decide which loud thing means what. Hue/saturation/lightness, harmony schemes, and the semantic-colour rule most beginner palettes break.",
       "tags": [
         "color theory",
         "visual design",
@@ -22,7 +22,7 @@
         "palette"
       ],
       "created_at": "2026-07-01",
-      "expire_at": "2026-08-30",
+      "expire_at": null,
       "concepts_taught": [
         "color-theory-basics",
         "color-harmony-schemes",
@@ -33,6 +33,7 @@
         "contrast-for-hierarchy"
       ],
       "source_count": 1,
+      "word_count": 733,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-07-01/color-theory-for-interfaces.html"
@@ -66,6 +67,7 @@
         "negative-gearing-reform-2026"
       ],
       "source_count": 7,
+      "word_count": 771,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-07-01/cgt-negative-gearing-carve-outs.html"
@@ -96,6 +98,7 @@
       ],
       "concepts_assumed": [],
       "source_count": 1,
+      "word_count": 667,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-30/ai-evals-jagged-frontier.html"
@@ -129,6 +132,7 @@
         "group-insurance-pricing"
       ],
       "source_count": 3,
+      "word_count": 511,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-30/life-insurance-code-kell-review.html"
@@ -163,6 +167,7 @@
         "rba-cash-rate"
       ],
       "source_count": 5,
+      "word_count": 705,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-29/broker-brief-fy26-end.html"
@@ -192,6 +197,7 @@
       ],
       "concepts_assumed": [],
       "source_count": 4,
+      "word_count": 851,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-29/first-ten-users.html"
@@ -227,6 +233,7 @@
         "rba-cash-rate"
       ],
       "source_count": 6,
+      "word_count": 973,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-28/broker-brief-june-2026.html"
@@ -259,6 +266,7 @@
       ],
       "concepts_assumed": [],
       "source_count": 5,
+      "word_count": 973,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-28/app-monetisation-models.html"
@@ -291,6 +299,7 @@
       ],
       "concepts_assumed": [],
       "source_count": 3,
+      "word_count": 875,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-28/visual-hierarchy-basics.html"
@@ -302,9 +311,9 @@
       "interests": [
         "actuarial"
       ],
-      "mode": null,
-      "title": "Reading APRA's June 2026 Quarterly Data: Life, Super, GI and Health",
-      "summary": "APRA's June 2026 quarterly statistical releases cover superannuation, life insurance, general insurance and private health. Here's what each set of numbers actually tells a practitioner — and what signals to watch.",
+      "mode": "learn",
+      "title": "How to read APRA's quarterly statistics",
+      "summary": "APRA publishes a quarterly statistical suite covering superannuation, life insurance, general insurance and private health. Here's what each set of numbers actually tells a practitioner — and what signals to watch.",
       "tags": [
         "APRA",
         "statistics",
@@ -331,6 +340,7 @@
         "ifrs17-basics"
       ],
       "source_count": 6,
+      "word_count": 1059,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-27/apra-quarterly-june-2026.html"
@@ -342,7 +352,7 @@
       "interests": [
         "health"
       ],
-      "mode": null,
+      "mode": "learn",
       "title": "Sleep Science for Recovery: What the Evidence Actually Says",
       "summary": "Sleep is the recovery layer that makes training stick. Covers sleep architecture, the U-shaped dose-response curve, temperature, nutrition, magnesium, and the myths worth ditching.",
       "tags": [
@@ -353,7 +363,7 @@
         "circadian-rhythm"
       ],
       "created_at": "2026-06-27",
-      "expire_at": "2026-08-11",
+      "expire_at": null,
       "concepts_taught": [
         "sleep-architecture",
         "sleep-stages",
@@ -369,6 +379,7 @@
         "training-volume"
       ],
       "source_count": 6,
+      "word_count": 1545,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-27/sleep-science-for-recovery.html"
@@ -380,7 +391,7 @@
       "interests": [
         "software-ai"
       ],
-      "mode": null,
+      "mode": "current",
       "title": "The Infrastructure Bill Behind AI: Why Your Tech Is Getting More Expensive",
       "summary": "AI isn't just a software upgrade — it's a trillion-dollar infrastructure build that's landing on consumer price tags. Here's the cost chain from data centres to your next MacBook.",
       "tags": [
@@ -402,6 +413,7 @@
       ],
       "concepts_assumed": [],
       "source_count": 3,
+      "word_count": 797,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-27/ai-infrastructure-cost-surge.html"
@@ -411,9 +423,10 @@
       "slug": "rba-rate-cycle-june-2026",
       "interest": "finance",
       "interests": [
-        "finance"
+        "finance",
+        "mortgage-broking"
       ],
-      "mode": null,
+      "mode": "current",
       "title": "The RBA's Tightening Cycle: Three Hikes In, What Comes Next?",
       "summary": "The Reserve Bank has raised the cash rate for a third consecutive meeting. What's driving it, how it flows through to your mortgage and super, and when the market thinks rates might finally fall.",
       "tags": [
@@ -435,6 +448,7 @@
       ],
       "concepts_assumed": [],
       "source_count": 5,
+      "word_count": 813,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-27/rba-rate-cycle-june-2026.html"
@@ -446,7 +460,7 @@
       "interests": [
         "actuarial"
       ],
-      "mode": null,
+      "mode": "learn",
       "title": "The IFRS 17 CSM, in plain terms",
       "summary": "The contractual service margin is how IFRS 17 stops insurers booking profit on day one — and spreads it over the life of the cover instead.",
       "tags": [
@@ -462,7 +476,8 @@
       "concepts_assumed": [
         "ifrs17-basics"
       ],
-      "source_count": 2,
+      "source_count": 0,
+      "word_count": 188,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-25/ifrs17-csm-in-plain-terms.html"
@@ -474,7 +489,7 @@
       "interests": [
         "finance"
       ],
-      "mode": null,
+      "mode": "learn",
       "title": "What rising real yields mean for your portfolio",
       "summary": "Real yields are the interest rate after inflation — and when they rise, almost every asset you own has to re-price.",
       "tags": [
@@ -483,14 +498,15 @@
         "rates"
       ],
       "created_at": "2026-06-25",
-      "expire_at": "2026-07-16",
+      "expire_at": null,
       "concepts_taught": [
         "real-yields"
       ],
       "concepts_assumed": [
         "bond-yields-basics"
       ],
-      "source_count": 2,
+      "source_count": 0,
+      "word_count": 190,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-25/real-yields-and-your-portfolio.html"
@@ -502,7 +518,7 @@
       "interests": [
         "software-ai"
       ],
-      "mode": null,
+      "mode": "learn",
       "title": "Why retrieval beats fine-tuning for most apps",
       "summary": "When you need an LLM to know your data, reach for retrieval before fine-tuning — it is cheaper, fresher, and easier to debug.",
       "tags": [
@@ -511,14 +527,15 @@
         "vector-db"
       ],
       "created_at": "2026-06-25",
-      "expire_at": "2026-07-16",
+      "expire_at": null,
       "concepts_taught": [
         "rag"
       ],
       "concepts_assumed": [
         "embeddings"
       ],
-      "source_count": 2,
+      "source_count": 0,
+      "word_count": 205,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-25/retrieval-beats-fine-tuning.html"
@@ -530,7 +547,7 @@
       "interests": [
         "health"
       ],
-      "mode": null,
+      "mode": "learn",
       "title": "Zone 2 training, explained",
       "summary": "The slow, conversational pace that builds your aerobic base — what Zone 2 is, why it works, and how to find yours.",
       "tags": [
@@ -539,12 +556,13 @@
         "training"
       ],
       "created_at": "2026-06-25",
-      "expire_at": "2026-08-09",
+      "expire_at": null,
       "concepts_taught": [
         "zone-2-training"
       ],
       "concepts_assumed": [],
-      "source_count": 2,
+      "source_count": 0,
+      "word_count": 175,
       "merged_from": [],
       "merged_into": null,
       "path": "articles/2026-06-25/zone-2-training-explained.html"
