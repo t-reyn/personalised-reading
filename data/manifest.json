@@ -1,8 +1,73 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-02T11:15:59.770Z",
-  "count": 17,
+  "generatedAt": "2026-07-02T16:15:13.196Z",
+  "count": 19,
   "articles": [
+    {
+      "id": "2026-07-02-third-interstellar-comet-3i-atlas",
+      "slug": "third-interstellar-comet-3i-atlas",
+      "interest": "science",
+      "interests": [
+        "science"
+      ],
+      "mode": "current",
+      "title": "The Third Interstellar Comet Turns Out to Be 12 Billion Years Old",
+      "summary": "New James Webb spectroscopy on 3I/Atlas, only the third confirmed interstellar visitor, shows chemistry that doesn't match anything born in our solar system, and puts its age at up to 12 billion years.",
+      "tags": [
+        "astronomy",
+        "interstellar objects",
+        "3I/Atlas",
+        "James Webb Space Telescope",
+        "cosmochemistry"
+      ],
+      "created_at": "2026-07-02",
+      "expire_at": "2026-07-23",
+      "concepts_taught": [
+        "interstellar-objects",
+        "isotope-ratio-fingerprinting"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 2,
+      "word_count": 640,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-02/third-interstellar-comet-3i-atlas.html"
+    },
+    {
+      "id": "2026-07-02-ankle-sprain-rehab-return-to-play",
+      "slug": "ankle-sprain-rehab-return-to-play",
+      "interest": "health",
+      "interests": [
+        "health"
+      ],
+      "mode": "learn",
+      "title": "What Actually Speeds Up Recovery From a Bad Ankle Sprain",
+      "summary": "The three-grade system, why RICE alone is outdated, and the return-to-play numbers that matter more than how many weeks have passed since the injury.",
+      "tags": [
+        "ankle sprain",
+        "injury rehab",
+        "return to play",
+        "sports medicine",
+        "proprioception"
+      ],
+      "created_at": "2026-07-02",
+      "expire_at": null,
+      "concepts_taught": [
+        "ankle-sprain-grading",
+        "functional-rehab-progression",
+        "proprioception-training"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "zone-2-training"
+      ],
+      "source_count": 1,
+      "word_count": 743,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-02/ankle-sprain-rehab-return-to-play.html"
+    },
     {
       "id": "2026-07-01-color-theory-for-interfaces",
       "slug": "color-theory-for-interfaces",
