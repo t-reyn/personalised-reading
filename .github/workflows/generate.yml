@@ -16,8 +16,10 @@ permissions:
   pages: write
   id-token: write
 
+# Shares the "pages" group with deploy.yml so this run's deploy never collides with a
+# browser-sync-triggered deploy (Pages rejects concurrent deployments outright).
 concurrency:
-  group: generate
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -43,15 +45,17 @@ jobs:
         run: |
           skip=false
           if [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
-            for d in "$(TZ=Australia/Sydney date +%F)" "$(date -u +%F)"; do
-              if ls articles/"$d"/*.html >/dev/null 2>&1; then
-                echo "today's issue already exists ($d) — skipping"
-                skip=true
-                break
-              fi
-            done
+            # Sydney date ONLY: issues are dated in AEST (the date step below pins the author to
+            # it). Checking the UTC date too would false-positive at the 20:00/21:45 UTC crons,
+            # where UTC is still "yesterday" and yesterday's issue of course exists.
+            d="$(TZ=Australia/Sydney date +%F)"
+            if ls articles/"$d"/*.html >/dev/null 2>&1; then
+              echo "today's issue already exists ($d) — skipping"
+              skip=true
+            fi
           fi
           echo "skip=$skip" >> "$GITHUB_OUTPUT"
+          echo "syd=$(TZ=Australia/Sydney date +%F)" >> "$GITHUB_OUTPUT"
 
       # 0b. Fail fast before spending a Claude run if the build helpers regressed.
       - name: Unit tests
@@ -93,7 +97,7 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          prompt: "Read CLAUDE.md and skills/AUTHORING.md, then write today's issue exactly as they instruct. Stop when the articles, knowledge.json and pool.json are updated."
+          prompt: "Read CLAUDE.md and skills/AUTHORING.md, then write today's issue exactly as they instruct. Today's issue date is ${{ steps.guard.outputs.syd }} (AEST) — put the articles in that dated folder. Stop when the articles, knowledge.json, pool.json and quizbank.json are updated."
           claude_args: "--max-turns 44 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep,WebFetch"
 
       # 3b. Record this run's tokens + cost estimate to data/usage-log.jsonl (token counts are the
