@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-02T02:47:18.010Z",
+  "generatedAt": "2026-07-02T11:15:59.770Z",
   "count": 17,
   "articles": [
     {
@@ -32,6 +32,7 @@
         "visual-hierarchy",
         "contrast-for-hierarchy"
       ],
+      "concepts_reinforced": [],
       "source_count": 1,
       "word_count": 733,
       "merged_from": [],
@@ -66,6 +67,7 @@
       "concepts_assumed": [
         "negative-gearing-reform-2026"
       ],
+      "concepts_reinforced": [],
       "source_count": 7,
       "word_count": 771,
       "merged_from": [],
@@ -97,6 +99,7 @@
         "llm-evals"
       ],
       "concepts_assumed": [],
+      "concepts_reinforced": [],
       "source_count": 1,
       "word_count": 667,
       "merged_from": [],
@@ -131,6 +134,7 @@
         "apra-prudential",
         "group-insurance-pricing"
       ],
+      "concepts_reinforced": [],
       "source_count": 3,
       "word_count": 511,
       "merged_from": [],
@@ -166,6 +170,7 @@
         "negative-gearing-reform-2026",
         "rba-cash-rate"
       ],
+      "concepts_reinforced": [],
       "source_count": 5,
       "word_count": 705,
       "merged_from": [],
@@ -196,6 +201,7 @@
         "product-taste"
       ],
       "concepts_assumed": [],
+      "concepts_reinforced": [],
       "source_count": 4,
       "word_count": 851,
       "merged_from": [],
@@ -232,6 +238,7 @@
       "concepts_assumed": [
         "rba-cash-rate"
       ],
+      "concepts_reinforced": [],
       "source_count": 6,
       "word_count": 973,
       "merged_from": [],
@@ -265,6 +272,7 @@
         "subscription-vs-one-time"
       ],
       "concepts_assumed": [],
+      "concepts_reinforced": [],
       "source_count": 5,
       "word_count": 973,
       "merged_from": [],
@@ -298,6 +306,7 @@
         "contrast-for-hierarchy"
       ],
       "concepts_assumed": [],
+      "concepts_reinforced": [],
       "source_count": 3,
       "word_count": 875,
       "merged_from": [],
@@ -339,6 +348,7 @@
         "reserving-basics",
         "ifrs17-basics"
       ],
+      "concepts_reinforced": [],
       "source_count": 6,
       "word_count": 1059,
       "merged_from": [],
@@ -378,6 +388,7 @@
         "progressive-overload",
         "training-volume"
       ],
+      "concepts_reinforced": [],
       "source_count": 6,
       "word_count": 1545,
       "merged_from": [],
@@ -412,6 +423,7 @@
         "ai-cost-passthrough"
       ],
       "concepts_assumed": [],
+      "concepts_reinforced": [],
       "source_count": 3,
       "word_count": 797,
       "merged_from": [],
@@ -447,6 +459,7 @@
         "trimmed-mean-inflation"
       ],
       "concepts_assumed": [],
+      "concepts_reinforced": [],
       "source_count": 5,
       "word_count": 813,
       "merged_from": [],
@@ -476,6 +489,7 @@
       "concepts_assumed": [
         "ifrs17-basics"
       ],
+      "concepts_reinforced": [],
       "source_count": 0,
       "word_count": 188,
       "merged_from": [],
@@ -505,6 +519,7 @@
       "concepts_assumed": [
         "bond-yields-basics"
       ],
+      "concepts_reinforced": [],
       "source_count": 0,
       "word_count": 190,
       "merged_from": [],
@@ -534,6 +549,7 @@
       "concepts_assumed": [
         "embeddings"
       ],
+      "concepts_reinforced": [],
       "source_count": 0,
       "word_count": 205,
       "merged_from": [],
@@ -561,6 +577,7 @@
         "zone-2-training"
       ],
       "concepts_assumed": [],
+      "concepts_reinforced": [],
       "source_count": 0,
       "word_count": 175,
       "merged_from": [],

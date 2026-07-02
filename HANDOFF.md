@@ -7,8 +7,9 @@ Continuation notes so a fresh chat can pick up Cortex without prior context. Las
 **Cortex** — a personal, single-user "reading list that writes itself and learns what you know." A
 static, **zero-dependency** vanilla-JS PWA. Claude (on the user's **subscription**, via GitHub Actions —
 never the paid API) authors articles as committed HTML each morning; deterministic Node scripts build
-the hub/feed/sitemap; a thin app layer adds read-tracking, a quiz→learnt knowledge graph, spaced-
-repetition, tabs, and cross-device sync. Phone-first, also used on PC. Australian (en-AU) reader.
+the hub/feed/sitemap; a thin app layer adds read-tracking, a quiz→learnt knowledge graph, difficulty-
+scaled spaced repetition delivered through future articles (not old-article resurfacing), tabs, and
+cross-device sync. Phone-first, also used on PC. Australian (en-AU) reader.
 
 - **Live:** https://t-reyn.github.io/personalised-reading/
 - **Repo:** `t-reyn/personalised-reading` (PUBLIC — content + state are world-readable; the personal
@@ -58,15 +59,39 @@ Reshaped 2026-06-29 to be **profile-driven** rather than fixed-sources-per-topic
   software-ai, design, indie-income, mortgage-broking, property, actuarial, finance, health, videography,
   science.
 - **Modes:** every interest has `mode` = `current` (timely, expires) | `learn` (evergreen, builds the
-  knowledge graph, spaced-repetition renudged) | `both`. Every **article** carries its own `mode`
-  (`current`|`learn`) in `#meta`. The app's **Current/Learn segmented filter** (`#modeFilter`,
-  URL-hash `m=`) splits the feed; `articleMode()` falls back to the interest's mode then expiry for
-  legacy articles.
+  knowledge graph) | `both`. Every **article** carries its own `mode` (`current`|`learn`) in `#meta`.
+  The app's **Current/Learn segmented filter** (`#modeFilter`, URL-hash `m=`) splits the feed;
+  `articleMode()` falls back to the interest's mode then expiry for legacy articles.
 - **Multi-topic:** `#meta.interests` is an array (primary first, 1–3); manifest carries it; a multi-topic
   card appears under every matching tab and shows a secondary-topic `.xtag` chip. `interestsOf(a)` is the
   helper; tab counts use unique-unread.
 - The **profile** (`data/profile.local.json`) is the steering wheel: per-interest mode/level/priority/
   want, plus goals + tone. The author reads it to choose topics, pitch, and write applied where asked.
+
+## Spaced repetition (review model)
+Reworked 2026-07-02 — reviews no longer resurface old articles; they're woven into *future* ones.
+- Each learnt concept in `knowledge.json` carries a `difficulty` (`easy`/`medium`/`hard`, set by the
+  author at teach time, judged against the reader's pitch level) and steps through a difficulty-keyed
+  ladder in `app.js` (`REVIEW_LADDERS`): `easy: []` (never resurfaces — one read is enough), `medium:
+  [90, 180]` days, `hard: [60, 120, 240]` days. Past the ladder's end (or for `easy`) the concept
+  *retires*: `next_review_at` is set to `null` and it never comes due again. `scheduleNextReview(c,
+  fromMs)` computes the next step from `review_level`.
+- **Passing** a tagged quiz question (whether the concept was freshly taught or reinforced) sets
+  `is_learnt:true`, bumps `review_level`, and reschedules via the ladder. **Failing** keeps
+  `is_learnt:false`, forces a same-article retry in 3 days (unchanged), and *escalates* difficulty one
+  step (`easy→medium→hard`) so a shaky concept comes back sooner next time.
+- **Delivery:** the app never again shows a "time to review" shelf for a learnt concept. Instead, per
+  `skills/AUTHORING.md`, the daily author checks which learnt concepts have `next_review_at` within the
+  next 14 days and — where a topically-suitable new article exists — references and builds on the
+  concept, lists it in that article's `#meta.concepts_reinforced`, and adds one application-level
+  `quick_check` question tagged with it. `learnConcepts()`/`reconcileQuizKnowledge()` in `app.js` grade
+  `concepts_taught` and `concepts_reinforced` on the exact same path (see `gradableConcepts()`). If no
+  article fits, the concept is just carried (still due) and `data/quizbank.json` still gets a fresh MCQ
+  for it.
+- **What still resurfaces an old article:** only a **failed quiz retry** — the "↻ Try again" shelf on
+  Home (`articleRetryDue()`), unchanged from before. The old "⟳ Time to review" shelf, `articleReviewDue`,
+  `conceptLearntDue`, `REVIEW_INTERVALS`, and the Library "Review due" tier are all gone; Library now
+  splits only into Learnt / Read.
 
 ## How the daily run works
 `.github/workflows/generate.yml` — cron `0 20 * * *` (6am AEST) + manual dispatch:
@@ -125,8 +150,8 @@ then regenerate. It MUST preserve (or update `app.js` in lockstep with) these lo
 - Each cloud run commits to main → the local clone must `git fetch && git rebase origin/main` before every
   push. `data/knowledge.json` is the usual rebase conflict (browser quiz commits) — keep BOTH sides
   (remote learnt-flags + your new concepts).
-- **health-check enforces** that every `concepts_taught` id is registered in `knowledge.json` (assumed
-  concepts may be external, not checked) + freshness ≤ `HEALTH_FRESH_DAYS` (2).
+- **health-check enforces** that every `concepts_taught`, `concepts_assumed`, and `concepts_reinforced`
+  id is registered in `knowledge.json` + freshness ≤ `HEALTH_FRESH_DAYS` (2).
 - `data/pool.json` IS served on Pages (Discover needs it) even though it's in `deploy.yml`'s
   `paths-ignore` (ignore only affects which pushes TRIGGER deploy, not what's uploaded).
 - Shojin/SeatFlow note: a parallel session may hold port 4317 — use `reading2` (4319).

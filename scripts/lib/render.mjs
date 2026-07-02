@@ -35,6 +35,7 @@ export function buildManifest(items, now) {
         expire_at: meta.expire_at ?? null,
         concepts_taught: meta.concepts_taught ?? [],
         concepts_assumed: meta.concepts_assumed ?? [],
+        concepts_reinforced: meta.concepts_reinforced ?? [],
         source_count: (meta.sources ?? []).length,
         ...(words != null ? { word_count: words } : {}),
         merged_from: meta.merged_from ?? [],

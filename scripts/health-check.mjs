@@ -82,6 +82,11 @@ if (manifest && Array.isArray(manifest.articles)) {
     for (const cid of meta.concepts_assumed || []) {
       if (!concepts[cid]) fail(`article ${a.id} assumes unregistered concept "${cid}" (add it to knowledge.json)`);
     }
+    // 3c. Every REINFORCED concept (spaced-repetition review woven into a later article) must also
+    //     be registered — it's meant to reference an already-taught concept, never a new one.
+    for (const cid of meta.concepts_reinforced || []) {
+      if (!concepts[cid]) fail(`article ${a.id} reinforces unregistered concept "${cid}" (add it to knowledge.json)`);
+    }
     // 4. Quick-check well-formedness for EVERY article: a non-empty question, exactly four options,
     //    and an integer answer index in range — a malformed quiz breaks the "learnt" gate.
     (meta.quick_check || []).forEach((q, i) => {

@@ -73,6 +73,12 @@ worked AU examples — not general overviews.
   prerequisite inline rather than assuming it. For software/AI the reader "vibecodes" — explain
   fundamentals + the *why*. Where a learnt concept exists, **build upward from it** — reference it and
   go deeper, don't sidestep it.
+- **Difficulty (new concepts only):** when you register a genuinely new concept in `data/knowledge.json`
+  (see "Three quick updates" below), assign it a `difficulty` judged against the reader's stated pitch
+  level for that interest: `"easy"` — a broad, intuitive idea the reader will retain from one read (it
+  never resurfaces for review); `"medium"` — the typical case (first review after ~3 months); `"hard"` —
+  technical, quantitative, regulatory-detail, or counter-intuitive (first review after ~2 months). This
+  drives how soon (if ever) the concept comes due for the reinforcement-weaving rule below.
 - **Australian lens** per `config.audience` where relevant; cover global developments too. Subtly honour the
   profile's `flavour` only where it fits naturally — never force it.
 - Fill the `#meta` JSON fully:
@@ -80,8 +86,12 @@ worked AU examples — not general overviews.
     first (1–3). **`mode`** — `"current"` or `"learn"` for THIS article.
   - **`concepts_taught`** — max **3** per article, stable kebab-case ids. **`concepts_assumed`** — the
     prerequisites you leaned on (also registered in knowledge.json — see updates below).
+    **`concepts_reinforced`** — already-learnt concept ids this article deliberately weaves in and
+    builds on for spaced review (see the reinforcement rule under "Three quick updates" below); `[]`
+    when this article isn't reinforcing anything.
   - `expire_at` per mode + the interest's `ttlDays` (omit for `learn` / when ttl is `null`).
-  - **`quick_check`** — **one question per taught concept** (so 1–3), each tagged with its `concept`.
+  - **`quick_check`** — **one question per taught concept** (so 1–3), each tagged with its `concept`,
+    **plus one application-level question per reinforced concept** (tagged with that concept's id).
     Quiz craft rules: every distractor must be a plausible misconception a reader of this article could
     hold, within ±30% of the correct option's length; at least one question must require APPLYING the
     idea to a new scenario (a calculation, a case, a decision), not recalling the article's wording;
@@ -113,14 +123,26 @@ Re-read each article you wrote, as an editor, fix what fails, and state ONE pass
 8. **Meta** — `mode`, `interests`, `expire_at` per rules; concept ids kebab-case; taught ≤3.
 
 ## Three quick updates, then stop
-1. `data/knowledge.json` — add any genuinely new concept ids you **taught OR assumed**, `is_learnt:false`
-   (never flip to learnt — only the reader's quizzes do that). **Every `concepts_taught` AND
-   `concepts_assumed` id MUST exist here** (health-check fails the build otherwise).
+1. `data/knowledge.json` — add any genuinely new concept ids you **taught OR assumed**, `is_learnt:false`,
+   with a `difficulty` (`"easy"`/`"medium"`/`"hard"`, see the Knowledge-aware rule above; never flip
+   `is_learnt` — only the reader's quizzes do that). **Every `concepts_taught`, `concepts_assumed`, AND
+   `concepts_reinforced` id MUST exist here** (health-check fails the build otherwise — reinforced ids
+   should already exist since they're already-learnt concepts).
 2. `data/pool.json` — **remove the items you used** (delete those entries from the `items` array).
-3. `data/quizbank.json` — for each concept whose `next_review_at` falls within the next 7 days (check
-   `data/knowledge.json`), append ONE fresh application-level MCQ testing it (same shape as
-   `quick_check` entries, keyed by concept id). Reviews must test retention, not memory of the old
-   answer key. Skip silently if none are due.
+3. **Reinforcement + quizbank** — check `data/knowledge.json` for learnt concepts whose `next_review_at`
+   falls within the **next 14 days**. The app no longer resurfaces old articles for review — reviews
+   happen by weaving due concepts into new articles instead:
+   - For each due concept that fits a topic you're writing about today, weave it into that article:
+     reference it and build on it (don't re-explain it from scratch), list its id in that article's
+     `concepts_reinforced`, and include one application-level `quick_check` question tagged with it.
+     Passing that question advances the concept's review schedule exactly like a taught concept.
+   - `data/quizbank.json` — for **every** concept due within the next 14 days (whether or not you found
+     an article to reinforce it in today), append ONE fresh application-level MCQ testing it (same shape
+     as `quick_check` entries, keyed by concept id). Reviews must test retention, not memory of the old
+     answer key.
+   - If no new article fits a due concept this run, that's fine — just carry it (it stays due; the
+     quizbank entry above still gets added, and a future run can pick it up). Skip silently if none are
+     due at all.
 
 Then you're done — the workflow builds the index, commits, and deploys.
 

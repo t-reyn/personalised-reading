@@ -217,7 +217,6 @@ button { font: inherit; cursor: pointer; }
 /* ---------- Library tiers + review nudge ---------- */
 .tier { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; border-radius: 999px; padding: 1px 7px; margin-left: 8px; }
 .tier.learnt { color: var(--good); background: color-mix(in srgb, var(--good) 16%, transparent); }
-.tier.due { color: var(--warn); background: color-mix(in srgb, var(--warn) 18%, transparent); }
 .tier.read { color: var(--faint); background: color-mix(in srgb, var(--faint) 16%, transparent); }
 .card.due { opacity: 1; border-left-color: var(--warn); }
 .due-note { color: var(--warn); font-weight: 700; }

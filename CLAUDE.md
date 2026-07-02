@@ -70,14 +70,20 @@ limits). See `CLOUD_SETUP.md`.
    - **Knowledge rules:** read `knowledge.json`. Do **not** re-explain concepts where `is_learnt`.
      Do **not** assume concepts that are not learnt — either teach an assumed prerequisite briefly
      inline, or hold the article if it depends on an unlearnt prereq (list assumed concepts so the
-     app can gate it). Record `concepts_taught` / `concepts_assumed` (stable kebab-case ids).
+     app can gate it). Record `concepts_taught` / `concepts_assumed` / `concepts_reinforced` (stable
+     kebab-case ids).
    - **Synthesis:** merge multiple sources into one original piece; list them in `sources`.
    - **Carry-forward:** suspended for now — write fresh pieces; leave `merged_from: []` and
      `merged_into: null` (see `skills/AUTHORING.md`).
    - **Quick-check:** add 1–2 MCQs in `quick_check`, each tagged with the `concept` it tests.
-4. Update `data/knowledge.json` with any **new** concepts (default `is_learnt:false`). Update
-   `data/pool.json` item statuses (`pending`→`used`). Update `data/quizbank.json` with one fresh
-   application-level MCQ for each concept whose `next_review_at` falls within the next 7 days.
+4. Update `data/knowledge.json` with any **new** concepts (default `is_learnt:false`, plus a
+   `difficulty` of `easy`/`medium`/`hard` judged against the reader's pitch level — it sets how soon,
+   if ever, the concept comes up for review). Update `data/pool.json` item statuses (`pending`→`used`).
+   **Reviews no longer resurface old articles** — instead, for each learnt concept whose
+   `next_review_at` falls within the **next 14 days**, weave it into a topically-suitable article from
+   today's run (reference and build on it, list it in that article's `concepts_reinforced`, add one
+   application-level `quick_check` question tagged with it) and/or add a fresh MCQ for it to
+   `data/quizbank.json`; carry it if nothing fits today. See `skills/AUTHORING.md`.
 5. `node scripts/generate-index.mjs --strict` — rebuild the hub/feed/sitemap/manifest; fix any
    extraction warnings before committing.
 6. Commit + push `main`.
@@ -90,7 +96,7 @@ limits). See `CLOUD_SETUP.md`.
   "interest": "software-ai", "interests": ["software-ai", "design"], "mode": "learn",
   "title": "…", "summary": "…", "tags": ["…"],
   "created_at": "2026-06-25", "expire_at": "2026-07-16",
-  "concepts_taught": ["concept-id"], "concepts_assumed": ["prereq-id"],
+  "concepts_taught": ["concept-id"], "concepts_assumed": ["prereq-id"], "concepts_reinforced": [],
   "sources": [{ "title": "…", "url": "https://…" }],
   "merged_from": [], "merged_into": null,
   "quick_check": [{ "q": "…", "options": ["…","…","…","…"], "correct": 0, "concept": "concept-id" }]
@@ -101,6 +107,11 @@ limits). See `CLOUD_SETUP.md`.
   builds the knowledge graph) — drives the Current/Learn filter. See `skills/AUTHORING.md`.
 - `expire_at` follows the interest's `ttlDays` in `config.json` (`null` ttl ⇒ omit `expire_at` = never
   expires; e.g. `learn` pieces and actuarial foundations).
+- `concepts_reinforced` = already-learnt concept ids this article deliberately weaves in and builds on
+  for spaced review (default `[]`); the app grades them exactly like `concepts_taught` via a tagged
+  `quick_check` question, but never re-explains them. This is how spaced review is delivered now — the
+  app no longer resurfaces old articles for a learnt-concept review (only a failed-quiz retry resurfaces
+  the original article).
 
 ## Conventions
 

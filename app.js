@@ -216,11 +216,21 @@
   }
 
   /* ---------- spaced repetition (renudge) ----------
-     A learnt concept resurfaces for review once its interval has elapsed. Passing the
-     quiz again lengthens the next interval; legacy learnt concepts with no schedule
-     fall back to a default gap so they still come back around. */
-  const REVIEW_INTERVALS = [3, 7, 16, 35, 90, 180]; // days, indexed by review_level - 1
-  const DEFAULT_REVIEW_DAYS = 21;
+     Learnt concepts do NOT resurface old articles any more — they wait out a difficulty-scaled
+     ladder, then get woven into a FUTURE article via that article's concepts_reinforced (see
+     skills/AUTHORING.md). Only a FAILED quiz still resurfaces the original article, as a same-
+     article "↻ Try again" retry a few days later. */
+  const REVIEW_LADDERS = { easy: [], medium: [90, 180], hard: [60, 120, 240] }; // days; empty = never resurfaces
+  const DEFAULT_DIFFICULTY = "medium";
+  const LEGACY_REVIEW_DAYS = 90; // learnt concepts with no schedule fall due after this (authoring-side only)
+  // Advance a concept's schedule from `fromMs` using its difficulty's ladder at its current review_level.
+  // Past the ladder's end (or for "easy", which has an empty ladder) the concept retires: next_review_at
+  // stays null and it never comes due again.
+  function scheduleNextReview(c, fromMs) {
+    const ladder = REVIEW_LADDERS[c.difficulty] || REVIEW_LADDERS[DEFAULT_DIFFICULTY];
+    const idx = (c.review_level || 1) - 1;
+    c.next_review_at = idx < ladder.length ? new Date(fromMs + ladder[idx] * 86400000).toISOString() : null;
+  }
   function conceptDue(cid) {
     const c = knowledge.concepts[cid];
     if (!c) return false;
@@ -228,18 +238,17 @@
       // A failed concept was rescheduled (review_level ≥ 1) — resurface it once its retry gap elapses.
       return c.review_level >= 1 && !!c.next_review_at && c.next_review_at <= now();
     }
+    if (c.next_review_at === null) return false; // retired: ladder exhausted, or difficulty "easy" — never resurfaces
     if (c.next_review_at) return c.next_review_at <= now();
-    return c.learnt_at ? daysBetween(now(), c.learnt_at) >= DEFAULT_REVIEW_DAYS : false;
+    // Legacy learnt concept with no schedule at all (pre-migration data): authoring-side awareness only.
+    return c.learnt_at ? daysBetween(now(), c.learnt_at) >= LEGACY_REVIEW_DAYS : false;
   }
   // A concept that's due specifically because a quiz was failed (vs a learnt one up for spaced review).
   const conceptFailedDue = (cid) => { const c = knowledge.concepts[cid]; return !!c && !c.is_learnt && conceptDue(cid); };
-  // An already-read article whose failed concepts are due for another attempt.
+  // An already-read article whose failed concepts are due for another attempt. This is the ONLY
+  // way an old article resurfaces on Home — learnt-concept review no longer does (see above).
   function articleRetryDue(a) {
     return isRead(a.id) && !a.merged_into && (a.concepts_taught || []).some(conceptFailedDue);
-  }
-  const conceptLearntDue = (cid) => { const c = knowledge.concepts[cid]; return !!c && !!c.is_learnt && conceptDue(cid); };
-  function articleReviewDue(a) {
-    return isRead(a.id) && !a.merged_into && (a.concepts_taught || []).some(conceptLearntDue);
   }
   function articleLearnt(a) {
     const t = a.concepts_taught || [];
@@ -282,7 +291,7 @@
     const secondary = interestsOf(a).slice(1).map((id) => INTEREST_BY_ID[id]).filter(Boolean);
     const dim = opts.archive || (read && !opts.review);   // review nudges stay bright, not greyed-out
     const tier = opts.library
-      ? (articleReviewDue(a) ? { c: "due", t: "Review due" } : articleLearnt(a) ? { c: "learnt", t: "Learnt" } : { c: "read", t: "Read" })
+      ? (articleLearnt(a) ? { c: "learnt", t: "Learnt" } : { c: "read", t: "Read" })
       : null;
     const prereq = opts?.locked ? prereqArticleFor(a) : null;
     const readMin = a.word_count ? Math.ceil(a.word_count / 200) : 0; // ~200 wpm; only when the manifest carries a count
@@ -345,17 +354,16 @@
       return;
     }
     const buckets = { normal: [], review: [], blocked: [] };
-    const reviewDue = [];
     const retryDue = [];
     active.forEach((a) => {
-      // Read articles live in Library; on Home only re-surface ones due for review or a failed-quiz retry.
-      if (isRead(a.id)) { if (articleRetryDue(a)) retryDue.push(a); else if (articleReviewDue(a)) reviewDue.push(a); }
+      // Read articles live in Library; on Home only re-surface ones due for a failed-quiz retry.
+      // Learnt-concept review no longer resurfaces old articles — it's woven into future ones instead.
+      if (isRead(a.id)) { if (articleRetryDue(a)) retryDue.push(a); }
       else buckets[category(a)].push(a);
     });
     const shelf = (title, items, opts) => items.length ? `<h2 class="shelf-title">${title}</h2><div class="shelf-grid">${items.sort(byNew).map((a) => cardHtml(a, opts)).join("")}</div>` : "";
     const shelves =
       shelf("↻ Try again", retryDue, { review: true }) +
-      shelf("⟳ Time to review", reviewDue, { review: true }) +
       shelf("To read", buckets.normal) +
       shelf("Worth a review", buckets.review) +
       shelf("Locked until you learn the basics", buckets.blocked, { locked: true });
@@ -372,14 +380,13 @@
     if (modeFilter !== "all") reads = reads.filter((a) => articleMode(a) === modeFilter);
     if (query) { const q = query.toLowerCase(); reads = reads.filter((a) => (a.title + " " + a.summary + " " + (a.tags || []).join(" ")).toLowerCase().includes(q)); }
     const learntCount = Object.values(knowledge.concepts).filter((c) => c.is_learnt).length;
-    const due = reads.filter(articleReviewDue);
-    const learnt = reads.filter((a) => !articleReviewDue(a) && articleLearnt(a));
-    const plain = reads.filter((a) => !articleReviewDue(a) && !articleLearnt(a));
+    const learnt = reads.filter(articleLearnt);
+    const plain = reads.filter((a) => !articleLearnt(a));
     const shelf = (title, items, opts) => items.length ? `<h2 class="shelf-title">${title}</h2><div class="shelf-grid">${items.sort(byReadDesc).map((a) => cardHtml(a, opts)).join("")}</div>` : "";
     list.innerHTML =
-      `<div class="lib-summary"><b>${reads.length}</b> read · <b>${learntCount}</b> concept${learntCount === 1 ? "" : "s"} learnt${due.length ? ` · <b>${due.length}</b> due for review` : ""}</div>` +
+      `<div class="lib-summary"><b>${reads.length}</b> read · <b>${learntCount}</b> concept${learntCount === 1 ? "" : "s"} learnt</div>` +
       (reads.length
-        ? shelf("Due for review", due, { library: true, review: true }) + shelf("Learnt", learnt, { library: true }) + shelf("Read", plain, { library: true })
+        ? shelf("Learnt", learnt, { library: true }) + shelf("Read", plain, { library: true })
         : `<div class="empty"><div class="big">📚</div><p>${query ? "No read articles match your search." : "Your library fills up as you read. Open an article, mark it read — it lives here with what you've learnt."}</p></div>`);
     bindCards(list);
     updateToggles();
@@ -387,10 +394,10 @@
 
   function updateToggles() {
     const archN = manifest.articles.filter((a) => !a.merged_into && statusOf(a.id) === "archived").length;
-    const dueN = manifest.articles.filter(articleReviewDue).length;
+    const retryN = manifest.articles.filter(articleRetryDue).length;
     const btn = (sel, v, icon, label) => { const b = $(sel); if (!b) return; b.hidden = false; b.classList.toggle("on", view === v); b.innerHTML = icon + `<span>${esc(label)}</span>`; };
     const corpusN = corpus.items.filter((x) => !x.deleted).length;
-    btn("#libraryToggle", "library", ICON_LIBRARY, dueN > 0 ? `Library · ${dueN} due` : "Library");
+    btn("#libraryToggle", "library", ICON_LIBRARY, retryN > 0 ? `Library · ${retryN} to retry` : "Library");
     btn("#statsToggle", "stats", ICON_CHART, "Stats");
     btn("#discoverToggle", "discover", ICON_DISCOVER, "Discover");
     btn("#corpusToggle", "corpus", ICON_CORPUS, corpusN ? `Corpus (${corpusN})` : "Corpus");
@@ -415,7 +422,7 @@
     const list = $("#list");
     const reads = manifest.articles.filter((a) => !a.merged_into && isRead(a.id));
     const learnt = Object.entries(knowledge.concepts).filter(([, c]) => c.is_learnt);
-    const dueN = manifest.articles.filter(articleReviewDue).length;
+    const retryN = manifest.articles.filter(articleRetryDue).length;
     // Day streak: consecutive days (ending today or yesterday) with at least one read.
     const days = new Set(Object.values(state.articles).filter((a) => a.read_at).map((a) => a.read_at.slice(0, 10)));
     let streak = 0, d = new Date(now().slice(0, 10) + "T00:00:00Z");
@@ -431,7 +438,7 @@
       return rows.map((i) => `<div class="bar-row"><span class="bar-label">${esc(i.emoji)} ${esc(i.label)}</span><span class="bar-track"><span class="bar-fill" style="width:${Math.round(data[i.id] / max * 100)}%;background:${esc(i.accent)}"></span></span><span class="bar-val">${data[i.id]}</span></div>`).join("");
     };
     list.innerHTML =
-      `<div class="stats-grid">${stat("Day streak", streak)}${stat("Articles read", reads.length)}${stat("Concepts learnt", learnt.length)}${stat("Due for review", dueN)}</div>` +
+      `<div class="stats-grid">${stat("Day streak", streak)}${stat("Articles read", reads.length)}${stat("Concepts learnt", learnt.length)}${stat("Due for retry", retryN)}</div>` +
       `<h2 class="shelf-title">Reading by topic</h2><div class="bars">${bars(byTopic)}</div>` +
       `<h2 class="shelf-title">Concepts learnt by topic</h2><div class="bars">${bars(learntByTopic)}</div>`;
     updateToggles();
@@ -567,40 +574,59 @@
     if (changed) saveState();
   }
 
-  // Grade each taught concept on its own tagged questions. `passMap` is { conceptId: bool }; a taught
-  // concept with no tagged question is absent from the map and left untouched (neither credited nor failed).
+  // Union of an article's taught + reinforced concept ids (no duplicates) — reinforced concepts
+  // (woven into a later article per skills/AUTHORING.md) are graded on exactly the same path as
+  // freshly-taught ones.
+  const gradableConcepts = (article) => {
+    const out = [];
+    const seen = new Set();
+    for (const cid of [...(article.concepts_taught || []), ...(article.concepts_reinforced || [])]) {
+      if (!seen.has(cid)) { seen.add(cid); out.push(cid); }
+    }
+    return out;
+  };
+
+  // Grade each taught/reinforced concept on its own tagged questions. `passMap` is { conceptId: bool };
+  // a concept with no tagged question is absent from the map and left untouched (neither credited nor
+  // failed).
   function learnConcepts(article, passMap) {
     let touched = false;
-    (article.concepts_taught || []).forEach((cid) => {
+    gradableConcepts(article).forEach((cid) => {
       if (!(cid in passMap)) return; // untested this quiz — the authoring contract now requires one question per concept
-      const c = (knowledge.concepts[cid] ||= { label: cid, interest: article.interest, prerequisite_ids: [], is_learnt: false, review_level: 0, next_review_at: null });
+      const c = (knowledge.concepts[cid] ||= { label: cid, interest: article.interest, prerequisite_ids: [], is_learnt: false, review_level: 0, next_review_at: null, difficulty: DEFAULT_DIFFICULTY });
       if (passMap[cid]) {
         c.is_learnt = true; c.learnt_at = c.learnt_at || now();
-        c.review_level = Math.min((c.review_level || 0) + 1, REVIEW_INTERVALS.length); // each pass lengthens the gap
-        c.next_review_at = new Date(Date.now() + REVIEW_INTERVALS[c.review_level - 1] * 86400000).toISOString();
-      } else { c.is_learnt = false; c.review_level = Math.max(1, c.review_level || 0); c.next_review_at = new Date(Date.now() + 3 * 86400000).toISOString(); }
+        c.review_level = (c.review_level || 0) + 1; // each pass advances the ladder
+        scheduleNextReview(c, Date.now());
+      } else {
+        c.is_learnt = false; c.review_level = Math.max(1, c.review_level || 0); c.next_review_at = new Date(Date.now() + 3 * 86400000).toISOString();
+        // A failed quiz escalates difficulty a step — it comes back sooner (or for the first time) next round.
+        const d = c.difficulty || DEFAULT_DIFFICULTY;
+        c.difficulty = d === "easy" ? "medium" : "hard";
+      }
       touched = true;
     });
     if (touched) saveKnowledge();
   }
 
   // Boot-time repair: a passed quiz and its concepts' is_learnt can diverge (state + knowledge are written
-  // separately and synced separately). For every passed quiz, credit any taught concept still not learnt —
-  // stamping learnt_at from the quiz's taken_at and initialising review fields like a normal pass. Idempotent.
+  // separately and synced separately). For every passed quiz, credit any taught/reinforced concept still
+  // not learnt — stamping learnt_at from the quiz's taken_at and initialising review fields like a normal
+  // pass. Idempotent.
   function reconcileQuizKnowledge() {
     let changed = false;
     for (const [id, qz] of Object.entries(state.quizzes || {})) {
       if (!qz?.passed) continue;
       const art = manifest.articles.find((x) => x.id === id);
       if (!art) continue;
-      for (const cid of (art.concepts_taught || [])) {
+      for (const cid of gradableConcepts(art)) {
         const c = knowledge.concepts[cid];
         if (c && c.is_learnt) continue;
-        const base = c || (knowledge.concepts[cid] = { label: cid, interest: art.interest, prerequisite_ids: [], is_learnt: false, review_level: 0, next_review_at: null });
+        const base = c || (knowledge.concepts[cid] = { label: cid, interest: art.interest, prerequisite_ids: [], is_learnt: false, review_level: 0, next_review_at: null, difficulty: DEFAULT_DIFFICULTY });
         base.is_learnt = true;
         base.learnt_at = base.learnt_at || qz.taken_at || now();
-        base.review_level = Math.min((base.review_level || 0) + 1, REVIEW_INTERVALS.length);
-        base.next_review_at = new Date(new Date(base.learnt_at).getTime() + REVIEW_INTERVALS[base.review_level - 1] * 86400000).toISOString();
+        base.review_level = (base.review_level || 0) + 1;
+        scheduleNextReview(base, new Date(base.learnt_at).getTime());
         changed = true;
       }
     }
@@ -687,7 +713,7 @@
 
   async function openQuiz(a, meta) {
     const ov = $("#quiz");
-    const isReview = !!state.quizzes[a.id]?.passed || articleReviewDue(a) || articleRetryDue(a);
+    const isReview = !!state.quizzes[a.id]?.passed || articleRetryDue(a);
     let qs = meta.quick_check || [];
     if (isReview) { try { qs = reviewQuestions(a, meta, await loadQuizbank()); } catch {} }
     const daySeed = strHashNum(now().slice(0, 10));
