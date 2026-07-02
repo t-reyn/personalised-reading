@@ -109,9 +109,10 @@ jobs:
           SYD=$(TZ=Australia/Sydney date +%F)
           # Issues are dated in AEST (with UTC tolerated during transition) — count both.
           ART=$(ls articles/"$DATE"/*.html articles/"$SYD"/*.html 2>/dev/null | sort -u | wc -l | tr -d ' ')
-          # The action's output path isn't stable across versions/runners, so discover it instead of
-          # assuming a fixed name — a missing file was logging null token rows.
-          FILE=$(find "$RUNNER_TEMP" -name claude-execution-output.json 2>/dev/null | head -1)
+          # The action declares the path as an output; fall back to searching the runner temp for
+          # timed-out runs where the output may be unset — a missing file was logging null token rows.
+          FILE="${{ steps.author.outputs.execution_file }}"
+          [ -n "$FILE" ] && [ -f "$FILE" ] || FILE=$(find "$RUNNER_TEMP" -name 'claude-execution-output*.json' 2>/dev/null | head -1)
           COST=null; IN=null; OUT=null; CR=null; CC=null; TURNS=null
           if [ -n "$FILE" ] && [ -f "$FILE" ]; then
             R=$(jq -s 'flatten | map(select(.type=="result")) | last // {}' "$FILE" 2>/dev/null || echo '{}')
