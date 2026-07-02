@@ -4,309 +4,366 @@
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
+      "difficulty": "medium",
       "first_taught": "2026-06-27-sleep-science-for-recovery",
       "learnt_at": "2026-06-29T16:49:21.928Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T16:49:21.928Z"
+      "next_review_at": "2026-09-27T16:49:21.928Z"
     },
     "sleep-stages": {
       "is_learnt": true,
+      "difficulty": "medium",
       "first_taught": "2026-06-27-sleep-science-for-recovery",
       "learnt_at": "2026-06-29T16:49:21.928Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T16:49:21.928Z"
+      "next_review_at": "2026-09-27T16:49:21.928Z"
     },
     "circadian-rhythm": {
       "is_learnt": true,
+      "difficulty": "easy",
       "first_taught": "2026-06-27-sleep-science-for-recovery",
       "learnt_at": "2026-06-29T16:49:21.928Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T16:49:21.928Z"
+      "next_review_at": null
     },
     "sleep-hygiene": {
       "is_learnt": true,
+      "difficulty": "easy",
       "first_taught": "2026-06-27-sleep-science-for-recovery",
       "learnt_at": "2026-06-29T16:49:21.928Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T16:49:21.928Z"
+      "next_review_at": null
     },
     "sleep-nutrition-link": {
       "is_learnt": true,
+      "difficulty": "medium",
       "first_taught": "2026-06-27-sleep-science-for-recovery",
       "learnt_at": "2026-06-29T16:49:21.928Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T16:49:21.928Z"
+      "next_review_at": "2026-09-27T16:49:21.928Z"
     },
     "magnesium-sleep": {
       "is_learnt": true,
+      "difficulty": "medium",
       "first_taught": "2026-06-27-sleep-science-for-recovery",
       "learnt_at": "2026-06-29T16:49:21.928Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T16:49:21.928Z"
+      "next_review_at": "2026-09-27T16:49:21.928Z"
     },
     "sleep-temperature": {
       "is_learnt": true,
+      "difficulty": "easy",
       "first_taught": "2026-06-27-sleep-science-for-recovery",
       "learnt_at": "2026-06-29T16:49:21.928Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T16:49:21.928Z"
+      "next_review_at": null
     },
     "ai-compute-infrastructure": {
       "is_learnt": false,
+      "difficulty": "hard",
       "first_taught": "2026-06-27-ai-infrastructure-cost-surge"
     },
     "high-bandwidth-memory": {
       "is_learnt": false,
+      "difficulty": "hard",
       "first_taught": "2026-06-27-ai-infrastructure-cost-surge"
     },
     "ai-energy-demand": {
       "is_learnt": false,
+      "difficulty": "medium",
       "first_taught": "2026-06-27-ai-infrastructure-cost-surge"
     },
     "ai-cost-passthrough": {
       "is_learnt": false,
+      "difficulty": "medium",
       "first_taught": "2026-06-27-ai-infrastructure-cost-surge"
     },
     "rba-cash-rate": {
       "is_learnt": false,
+      "difficulty": "hard",
       "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
       "review_level": 1,
       "next_review_at": "2026-07-03T17:19:40.689Z"
     },
     "monetary-policy-transmission": {
       "is_learnt": false,
+      "difficulty": "hard",
       "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
       "review_level": 1,
       "next_review_at": "2026-07-03T17:19:40.689Z"
     },
     "inflation-targeting": {
       "is_learnt": false,
+      "difficulty": "hard",
       "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
       "review_level": 1,
       "next_review_at": "2026-07-03T17:19:40.690Z"
     },
     "trimmed-mean-inflation": {
       "is_learnt": false,
+      "difficulty": "hard",
       "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
       "review_level": 1,
       "next_review_at": "2026-07-03T17:19:40.690Z"
     },
     "apra-quarterly-statistics": {
       "is_learnt": true,
+      "difficulty": "hard",
       "first_taught": "2026-06-27-apra-quarterly-june-2026",
       "learnt_at": "2026-06-29T02:29:48.519Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T02:29:48.519Z"
+      "next_review_at": "2026-08-28T02:29:48.519Z"
     },
     "life-insurance-loss-ratio": {
       "is_learnt": true,
+      "difficulty": "hard",
       "first_taught": "2026-06-27-apra-quarterly-june-2026",
       "learnt_at": "2026-06-29T02:29:48.519Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T02:29:48.519Z"
+      "next_review_at": "2026-08-28T02:29:48.519Z"
     },
     "combined-ratio": {
       "is_learnt": true,
+      "difficulty": "hard",
       "first_taught": "2026-06-27-apra-quarterly-june-2026",
       "learnt_at": "2026-06-29T02:29:48.519Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T02:29:48.519Z"
+      "next_review_at": "2026-08-28T02:29:48.519Z"
     },
     "di-remediation": {
       "is_learnt": true,
+      "difficulty": "hard",
       "first_taught": "2026-06-27-apra-quarterly-june-2026",
       "learnt_at": "2026-06-29T02:29:48.519Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T02:29:48.519Z"
+      "next_review_at": "2026-08-28T02:29:48.519Z"
     },
     "super-fund-performance-metrics": {
       "is_learnt": true,
+      "difficulty": "hard",
       "first_taught": "2026-06-27-apra-quarterly-june-2026",
       "learnt_at": "2026-06-29T02:29:48.519Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T02:29:48.519Z"
+      "next_review_at": "2026-08-28T02:29:48.519Z"
     },
     "real-yields": {
       "label": "real-yields",
       "interest": "finance",
       "prerequisite_ids": [],
       "is_learnt": true,
+      "difficulty": "hard",
       "review_level": 3,
-      "next_review_at": null,
+      "next_review_at": "2027-02-22T15:19:35.363Z",
       "learnt_at": "2026-06-27T15:19:35.363Z"
     },
     "visual-hierarchy": {
       "is_learnt": true,
+      "difficulty": "easy",
       "first_taught": "2026-06-28-visual-hierarchy-basics",
       "learnt_at": "2026-06-28T16:07:09.915Z",
       "review_level": 1,
-      "next_review_at": "2026-07-01T16:07:09.915Z"
+      "next_review_at": null
     },
     "type-scale": {
       "is_learnt": true,
+      "difficulty": "medium",
       "first_taught": "2026-06-28-visual-hierarchy-basics",
       "learnt_at": "2026-06-28T16:07:09.915Z",
       "review_level": 1,
-      "next_review_at": "2026-07-01T16:07:09.915Z"
+      "next_review_at": "2026-09-26T16:07:09.915Z"
     },
     "whitespace-rhythm": {
       "is_learnt": true,
+      "difficulty": "easy",
       "first_taught": "2026-06-28-visual-hierarchy-basics",
       "learnt_at": "2026-06-28T16:07:09.915Z",
       "review_level": 1,
-      "next_review_at": "2026-07-01T16:07:09.915Z"
+      "next_review_at": null
     },
     "contrast-for-hierarchy": {
       "is_learnt": true,
+      "difficulty": "easy",
       "first_taught": "2026-06-28-visual-hierarchy-basics",
       "learnt_at": "2026-06-28T16:07:09.915Z",
       "review_level": 1,
-      "next_review_at": "2026-07-01T16:07:09.915Z"
+      "next_review_at": null
     },
     "ifrs17-csm": {
       "is_learnt": true,
+      "difficulty": "hard",
       "first_taught": "2026-06-25-ifrs17-csm-in-plain-terms",
       "learnt_at": "2026-06-27T14:27:36.235Z",
       "review_level": 1,
-      "next_review_at": "2026-06-30T14:27:36.235Z"
+      "next_review_at": "2026-08-26T14:27:36.235Z"
     },
     "rag": {
       "is_learnt": false,
+      "difficulty": "hard",
       "first_taught": "2026-06-25-retrieval-beats-fine-tuning"
     },
     "zone-2-training": {
       "is_learnt": true,
+      "difficulty": "medium",
       "first_taught": "2026-06-25-zone-2-training-explained",
       "learnt_at": "2026-06-27T14:27:45.985Z",
       "review_level": 1,
-      "next_review_at": "2026-06-30T14:27:45.985Z"
+      "next_review_at": "2026-09-25T14:27:45.985Z"
     },
     "app-monetisation-models": {
       "is_learnt": true,
+      "difficulty": "medium",
       "first_taught": "2026-06-28-app-monetisation-models",
       "learnt_at": "2026-06-29T06:00:04.843Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T06:00:04.843Z"
+      "next_review_at": "2026-09-27T06:00:04.843Z"
     },
     "freemium-conversion": {
       "is_learnt": true,
+      "difficulty": "medium",
       "first_taught": "2026-06-28-app-monetisation-models",
       "learnt_at": "2026-06-29T06:00:04.843Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T06:00:04.843Z"
+      "next_review_at": "2026-09-27T06:00:04.843Z"
     },
     "subscription-vs-one-time": {
       "is_learnt": true,
+      "difficulty": "easy",
       "first_taught": "2026-06-28-app-monetisation-models",
       "learnt_at": "2026-06-29T06:00:04.843Z",
       "review_level": 1,
-      "next_review_at": "2026-07-02T06:00:04.843Z"
+      "next_review_at": null
     },
     "lrba": {
       "is_learnt": false,
+      "difficulty": "hard",
       "first_taught": "2026-06-28-broker-brief-june-2026"
     },
     "negative-gearing-reform-2026": {
       "is_learnt": false,
+      "difficulty": "medium",
       "first_taught": "2026-06-28-broker-brief-june-2026"
     },
     "major-bank-rate-forecasting": {
       "is_learnt": false,
+      "difficulty": "medium",
       "first_taught": "2026-06-28-broker-brief-june-2026"
     },
     "early-customer-acquisition": {
       "is_learnt": true,
+      "difficulty": "easy",
       "first_taught": "2026-06-29-first-ten-users",
       "learnt_at": "2026-06-30T02:48:07.927Z",
       "review_level": 1,
-      "next_review_at": "2026-07-03T02:48:07.927Z"
+      "next_review_at": null
     },
     "product-taste": {
       "is_learnt": true,
+      "difficulty": "medium",
       "first_taught": "2026-06-29-first-ten-users",
       "learnt_at": "2026-06-30T02:48:07.927Z",
       "review_level": 1,
-      "next_review_at": "2026-07-03T02:48:07.927Z"
+      "next_review_at": "2026-09-28T02:48:07.927Z"
     },
     "apra-presale-requirements": {
       "is_learnt": false,
+      "difficulty": "hard",
       "first_taught": "2026-06-29-broker-brief-fy26-end"
     },
     "lender-servicing-update": {
       "is_learnt": false,
+      "difficulty": "medium",
       "first_taught": "2026-06-29-broker-brief-fy26-end"
     },
     "life-insurance-code-of-practice": {
       "is_learnt": true,
+      "difficulty": "hard",
       "first_taught": "2026-06-30-life-insurance-code-kell-review",
       "learnt_at": "2026-07-01T05:34:34.764Z",
       "review_level": 1,
-      "next_review_at": "2026-07-04T05:34:34.764Z"
+      "next_review_at": "2026-08-30T05:34:34.764Z"
     },
     "code-governance-enforcement": {
       "is_learnt": true,
+      "difficulty": "hard",
       "first_taught": "2026-06-30-life-insurance-code-kell-review",
       "learnt_at": "2026-07-01T05:34:34.764Z",
       "review_level": 1,
-      "next_review_at": "2026-07-04T05:34:34.764Z"
+      "next_review_at": "2026-08-30T05:34:34.764Z"
     },
     "jagged-frontier": {
       "is_learnt": false,
+      "difficulty": "medium",
       "first_taught": "2026-06-30-ai-evals-jagged-frontier"
     },
     "llm-evals": {
       "is_learnt": false,
+      "difficulty": "medium",
       "first_taught": "2026-06-30-ai-evals-jagged-frontier"
     },
     "small-business-cgt-concessions": {
       "is_learnt": false,
+      "difficulty": "hard",
       "first_taught": "2026-07-01-cgt-negative-gearing-carve-outs"
     },
     "cgt-grandfathering": {
       "is_learnt": false,
+      "difficulty": "hard",
       "first_taught": "2026-07-01-cgt-negative-gearing-carve-outs"
     },
     "color-theory-basics": {
       "is_learnt": false,
+      "difficulty": "easy",
       "first_taught": "2026-07-01-color-theory-for-interfaces"
     },
     "color-harmony-schemes": {
       "is_learnt": false,
+      "difficulty": "easy",
       "first_taught": "2026-07-01-color-theory-for-interfaces"
     },
     "semantic-color-mapping": {
       "is_learnt": false,
+      "difficulty": "medium",
       "first_taught": "2026-07-01-color-theory-for-interfaces"
     },
     "apra-prudential": {
-      "is_learnt": false
+      "is_learnt": false,
+      "difficulty": "hard"
     },
     "bond-yields-basics": {
-      "is_learnt": false
+      "is_learnt": false,
+      "difficulty": "medium"
     },
     "embeddings": {
-      "is_learnt": false
+      "is_learnt": false,
+      "difficulty": "hard"
     },
     "group-insurance-pricing": {
-      "is_learnt": false
+      "is_learnt": false,
+      "difficulty": "hard"
     },
     "group-life-mechanics": {
-      "is_learnt": false
+      "is_learnt": false,
+      "difficulty": "medium"
     },
     "ifrs17-basics": {
-      "is_learnt": false
+      "is_learnt": false,
+      "difficulty": "hard"
     },
     "progressive-overload": {
-      "is_learnt": false
+      "is_learnt": false,
+      "difficulty": "easy"
     },
     "reserving-basics": {
-      "is_learnt": false
+      "is_learnt": false,
+      "difficulty": "hard"
     },
     "rpe": {
-      "is_learnt": false
+      "is_learnt": false,
+      "difficulty": "easy"
     },
     "training-volume": {
-      "is_learnt": false
+      "is_learnt": false,
+      "difficulty": "easy"
     }
   }
 }
