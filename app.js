@@ -18,11 +18,13 @@
   const daysBetween = (a, b) => Math.round((new Date(a) - new Date(b)) / 86400000);
   const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } };
   const strHash = (s) => { let h = 5381; for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) >>> 0; return h.toString(36); };
+  const strHashNum = (s) => { let h = 5381; for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) >>> 0; return h >>> 0; };
 
   let manifest = { articles: [] };
   let state = { version: 1, updatedAt: null, articles: {}, quizzes: {} };
   let knowledge = { version: 1, updatedAt: null, concepts: {} };
   let corpus = { version: 1, updatedAt: null, items: [] }; // user-curated permanent sources (synced)
+  let quizbank = null; // { version, questions: { conceptId: [{q,options,correct}] } } — lazy-loaded, committed (not synced)
   let activeTab = "all";
   let query = "";
   let view = "reading"; // reading | library | stats | discover | corpus | archive
@@ -61,7 +63,9 @@
       (out.articles[id] = mergeEntry((A.articles || {})[id], (B.articles || {})[id])));
     new Set([...Object.keys(A.quizzes || {}), ...Object.keys(B.quizzes || {})]).forEach((id) => {
       const x = (A.quizzes || {})[id], y = (B.quizzes || {})[id];
-      out.quizzes[id] = !x ? y : !y ? x : ((y.taken_at || "") >= (x.taken_at || "") ? y : x);
+      if (!x || !y) { out.quizzes[id] = x || y; return; }
+      if (x.passed !== y.passed) { out.quizzes[id] = x.passed ? x : y; return; } // best-ever wins: a pass never regresses to a fail
+      out.quizzes[id] = (y.taken_at || "") >= (x.taken_at || "") ? y : x;
     });
     out.updatedAt = [A.updatedAt, B.updatedAt].filter(Boolean).sort().pop() || now();
     return out;
@@ -146,11 +150,12 @@
     // If synced, pull remote and adopt if newer (cross-device).
     if (token() && apiBase()) {
       requestPersistentStorage();
-      await pullRemote().then(() => setSync("Synced ✓")).catch(() => setSync("Sync error — check token in Settings", true));
+      await pullRemote().then(() => setSync("Synced ✓")).catch((e) => setSync(e?.auth ? AUTH_MSG : "Sync error — check token in Settings", true));
     } else if (apiBase() && !token()) {
       setSync("Not syncing — add your GitHub token in Settings", true);
     }
     sweepExpired();
+    reconcileQuizKnowledge();
 
     wireChrome();
     readHashState();
@@ -179,7 +184,8 @@
   function category(a) {
     const assumed = a.concepts_assumed || [];
     const taught = a.concepts_taught || [];
-    const blocked = assumed.some((c) => knowledge.concepts[c] && !isLearnt(c) && taughtSomewhere(c));
+    // Current (perishable) briefs never hard-lock — they expire faster than prereqs get learnt. Gate learn-mode only.
+    const blocked = articleMode(a) !== "current" && assumed.some((c) => knowledge.concepts[c] && !isLearnt(c) && taughtSomewhere(c));
     if (blocked) return "blocked";
     if (taught.length && taught.every(isLearnt)) return "review";
     return "normal";
@@ -217,12 +223,23 @@
   const DEFAULT_REVIEW_DAYS = 21;
   function conceptDue(cid) {
     const c = knowledge.concepts[cid];
-    if (!c || !c.is_learnt) return false;
+    if (!c) return false;
+    if (!c.is_learnt) {
+      // A failed concept was rescheduled (review_level ≥ 1) — resurface it once its retry gap elapses.
+      return c.review_level >= 1 && !!c.next_review_at && c.next_review_at <= now();
+    }
     if (c.next_review_at) return c.next_review_at <= now();
     return c.learnt_at ? daysBetween(now(), c.learnt_at) >= DEFAULT_REVIEW_DAYS : false;
   }
+  // A concept that's due specifically because a quiz was failed (vs a learnt one up for spaced review).
+  const conceptFailedDue = (cid) => { const c = knowledge.concepts[cid]; return !!c && !c.is_learnt && conceptDue(cid); };
+  // An already-read article whose failed concepts are due for another attempt.
+  function articleRetryDue(a) {
+    return isRead(a.id) && !a.merged_into && (a.concepts_taught || []).some(conceptFailedDue);
+  }
+  const conceptLearntDue = (cid) => { const c = knowledge.concepts[cid]; return !!c && !!c.is_learnt && conceptDue(cid); };
   function articleReviewDue(a) {
-    return isRead(a.id) && !a.merged_into && (a.concepts_taught || []).some(conceptDue);
+    return isRead(a.id) && !a.merged_into && (a.concepts_taught || []).some(conceptLearntDue);
   }
   function articleLearnt(a) {
     const t = a.concepts_taught || [];
@@ -268,6 +285,7 @@
       ? (articleReviewDue(a) ? { c: "due", t: "Review due" } : articleLearnt(a) ? { c: "learnt", t: "Learnt" } : { c: "read", t: "Read" })
       : null;
     const prereq = opts?.locked ? prereqArticleFor(a) : null;
+    const readMin = a.word_count ? Math.ceil(a.word_count / 200) : 0; // ~200 wpm; only when the manifest carries a count
     return `<article class="card${dim ? " read" : ""}${opts.review ? " due" : ""}" style="--accent:${esc(it.accent || "#4f7cac")}" data-id="${esc(a.id)}" tabindex="0" role="button">
       ${opts.archive
         ? `<button class="restore" data-restore="${esc(a.id)}" aria-label="Restore" title="Restore to your list">↩</button>`
@@ -278,6 +296,7 @@
       <div class="card-foot">
         ${secondary.map((s) => `<span class="xtag">${esc((s.emoji ? s.emoji + " " : "") + s.label)}</span>`).join("")}
         ${(a.tags || []).slice(0, 3).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}
+        ${readMin ? `<span class="tag">${readMin} min</span>` : ""}
         ${opts.review ? `<span class="due-note">⟳ time to review</span>` : (read ? `<span class="readtick">✓ read</span>` : "")}
         ${merged ? `<span class="merged-note">↳ consolidates ${merged}</span>` : ""}
         ${prereq ? `<button class="prereq" type="button" data-prereq="${esc(prereq.id)}" title="Open the prerequisite article">🔒 Read "${esc(prereq.title)}" first</button>` : ""}
@@ -327,13 +346,15 @@
     }
     const buckets = { normal: [], review: [], blocked: [] };
     const reviewDue = [];
+    const retryDue = [];
     active.forEach((a) => {
-      // Read articles live in Library; on Home only re-surface ones whose concepts are due for review.
-      if (isRead(a.id)) { if (articleReviewDue(a)) reviewDue.push(a); }
+      // Read articles live in Library; on Home only re-surface ones due for review or a failed-quiz retry.
+      if (isRead(a.id)) { if (articleRetryDue(a)) retryDue.push(a); else if (articleReviewDue(a)) reviewDue.push(a); }
       else buckets[category(a)].push(a);
     });
     const shelf = (title, items, opts) => items.length ? `<h2 class="shelf-title">${title}</h2><div class="shelf-grid">${items.sort(byNew).map((a) => cardHtml(a, opts)).join("")}</div>` : "";
     const shelves =
+      shelf("↻ Try again", retryDue, { review: true }) +
       shelf("⟳ Time to review", reviewDue, { review: true }) +
       shelf("To read", buckets.normal) +
       shelf("Worth a review", buckets.review) +
@@ -546,16 +567,44 @@
     if (changed) saveState();
   }
 
-  function learnConcepts(article, passed) {
+  // Grade each taught concept on its own tagged questions. `passMap` is { conceptId: bool }; a taught
+  // concept with no tagged question is absent from the map and left untouched (neither credited nor failed).
+  function learnConcepts(article, passMap) {
+    let touched = false;
     (article.concepts_taught || []).forEach((cid) => {
+      if (!(cid in passMap)) return; // untested this quiz — the authoring contract now requires one question per concept
       const c = (knowledge.concepts[cid] ||= { label: cid, interest: article.interest, prerequisite_ids: [], is_learnt: false, review_level: 0, next_review_at: null });
-      if (passed) {
+      if (passMap[cid]) {
         c.is_learnt = true; c.learnt_at = c.learnt_at || now();
         c.review_level = Math.min((c.review_level || 0) + 1, REVIEW_INTERVALS.length); // each pass lengthens the gap
         c.next_review_at = new Date(Date.now() + REVIEW_INTERVALS[c.review_level - 1] * 86400000).toISOString();
       } else { c.is_learnt = false; c.review_level = Math.max(1, c.review_level || 0); c.next_review_at = new Date(Date.now() + 3 * 86400000).toISOString(); }
+      touched = true;
     });
-    saveKnowledge();
+    if (touched) saveKnowledge();
+  }
+
+  // Boot-time repair: a passed quiz and its concepts' is_learnt can diverge (state + knowledge are written
+  // separately and synced separately). For every passed quiz, credit any taught concept still not learnt —
+  // stamping learnt_at from the quiz's taken_at and initialising review fields like a normal pass. Idempotent.
+  function reconcileQuizKnowledge() {
+    let changed = false;
+    for (const [id, qz] of Object.entries(state.quizzes || {})) {
+      if (!qz?.passed) continue;
+      const art = manifest.articles.find((x) => x.id === id);
+      if (!art) continue;
+      for (const cid of (art.concepts_taught || [])) {
+        const c = knowledge.concepts[cid];
+        if (c && c.is_learnt) continue;
+        const base = c || (knowledge.concepts[cid] = { label: cid, interest: art.interest, prerequisite_ids: [], is_learnt: false, review_level: 0, next_review_at: null });
+        base.is_learnt = true;
+        base.learnt_at = base.learnt_at || qz.taken_at || now();
+        base.review_level = Math.min((base.review_level || 0) + 1, REVIEW_INTERVALS.length);
+        base.next_review_at = new Date(new Date(base.learnt_at).getTime() + REVIEW_INTERVALS[base.review_level - 1] * 86400000).toISOString();
+        changed = true;
+      }
+    }
+    if (changed) saveKnowledge(); // persist + queue a sync only when something actually diverged
   }
 
   /* ---------- reader ---------- */
@@ -602,9 +651,47 @@
   }
 
   /* ---------- quiz ---------- */
-  function openQuiz(a, meta) {
-    const qs = meta.quick_check || [];
+  // Deterministic seeded shuffle of a question's options, remapping the correct index. Seeded on the
+  // article id + question index + the calendar day, so a re-render is stable within a day but not gameable.
+  function shuffleOptions(q, seed) {
+    let s = seed >>> 0; const rnd = () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296; // LCG
+    const idx = q.options.map((_, i) => i);
+    for (let i = idx.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
+    return { ...q, options: idx.map((i) => q.options[i]), correct: idx.indexOf(q.correct) };
+  }
+  async function loadQuizbank() {
+    if (quizbank) return quizbank;
+    quizbank = await fetchJson("data/quizbank.json").catch(() => ({ version: 1, questions: {} }));
+    quizbank.questions ||= {};
+    return quizbank;
+  }
+  // Build the question list for a quiz. First reads use the article's own questions. Reviews prefer a
+  // fresh quizbank question per due concept (rotated by review_level) so spaced repetition doesn't just
+  // re-serve the graded answer key; concepts with no bank entry fall back to the article's own question.
+  function reviewQuestions(a, meta, bank) {
+    const own = meta.quick_check || [];
+    const byConcept = {};
+    own.forEach((q) => { if (q.concept && !(q.concept in byConcept)) byConcept[q.concept] = q; });
+    const dueConcepts = (a.concepts_taught || []).filter((cid) => byConcept[cid] || (bank.questions[cid] || []).length);
+    if (!dueConcepts.length) return own;
+    return dueConcepts.map((cid) => {
+      const pool = bank.questions[cid] || [];
+      if (pool.length) {
+        const lvl = knowledge.concepts[cid]?.review_level || 1;
+        const pick = pool[(pool.length - 1 - (lvl - 1)) % pool.length] || pool[pool.length - 1]; // rotate from newest
+        return { ...pick, concept: cid };
+      }
+      return byConcept[cid];
+    });
+  }
+
+  async function openQuiz(a, meta) {
     const ov = $("#quiz");
+    const isReview = !!state.quizzes[a.id]?.passed || articleReviewDue(a) || articleRetryDue(a);
+    let qs = meta.quick_check || [];
+    if (isReview) { try { qs = reviewQuestions(a, meta, await loadQuizbank()); } catch {} }
+    const daySeed = strHashNum(now().slice(0, 10));
+    qs = qs.map((q, qi) => shuffleOptions(q, strHashNum(a.id) ^ (qi + 1) * 2654435761 ^ daySeed)); // render-time only; never mutates meta
     const answers = new Array(qs.length).fill(null);
     const render = (graded) => {
       ov.innerHTML = `
@@ -626,7 +713,10 @@
           const score = correct / qs.length, passed = score >= PASS;
           state.quizzes[a.id] = { score, passed, taken_at: now() };
           markRead(a.id); // engaging with the quiz implies the article was read
-          learnConcepts(a, passed);
+          // Per-concept grading: a concept is learnt only when every question tagged with it is correct.
+          const passMap = {};
+          qs.forEach((q, i) => { if (!q.concept) return; const ok = answers[i] === q.correct; passMap[q.concept] = (q.concept in passMap ? passMap[q.concept] : true) && ok; });
+          learnConcepts(a, passMap);
           render(true);
         });
       } else {
@@ -698,15 +788,36 @@
   const ghHeaders = () => ({ Authorization: `Bearer ${token()}`, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" });
   function b64(str) { const bytes = new TextEncoder().encode(str); let bin = ""; const C = 0x8000; for (let i = 0; i < bytes.length; i += C) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + C)); return btoa(bin); }
 
-  // Read a state file from the repo → { obj, sha }. obj is null if the file doesn't exist.
+  // Auth failures (bad/expired/revoked token) must be distinguished from transient ones so we stop
+  // retrying instead of hammering 401s. A 403 that carries a rate-limit signal is transient, not auth.
+  const AUTH_MSG = "Sync paused — your GitHub token expired or was revoked. Paste a new one in Settings.";
+  function isAuthError(res) {
+    if (res.status === 401) return true;
+    // A 403 is transient (rate limit / secondary limit) when it carries a limit signal; otherwise it's auth.
+    if (res.status === 403) return !(res.headers.get("x-ratelimit-remaining") === "0" || res.headers.has("retry-after"));
+    return false;
+  }
+  const mkErr = (msg, auth) => { const e = new Error(msg); if (auth) e.auth = true; return e; };
+  // file -> { etag, sha }: the ETag lets an unchanged GET 304 (no body, no rate-limit cost); the blob
+  // sha is what a subsequent PUT needs, and stays valid while the file is unchanged (304).
+  const remoteRef = {};
+
+  // Read a state file from the repo → { obj, sha } (or { notModified:true, sha } on a 304).
+  // obj is null if the file doesn't exist.
   async function getFile(file) {
     const r = repoCfg();
-    const res = await fetch(`${apiBase()}${file}?ref=${r.branch}`, { headers: ghHeaders(), cache: "no-store" });
-    if (res.status === 404) return { obj: null, sha: null };
+    const headers = ghHeaders();
+    const ref = remoteRef[file];
+    if (ref?.etag) headers["If-None-Match"] = ref.etag;
+    const res = await fetch(`${apiBase()}${file}?ref=${r.branch}`, { headers, cache: "no-store" });
+    if (res.status === 304) return { notModified: true, sha: ref?.sha ?? null }; // unchanged → last blob sha still valid
+    if (res.status === 404) { delete remoteRef[file]; return { obj: null, sha: null }; }
+    if (isAuthError(res)) throw mkErr(AUTH_MSG, true);
     if (!res.ok) throw new Error(`read ${res.status}`);
     const j = await res.json();
+    remoteRef[file] = { etag: res.headers.get("etag") || null, sha: j.sha };
     let obj = null;
-    try { obj = JSON.parse(decodeURIComponent(escape(atob((j.content || "").replace(/\n/g, ""))))); } catch {}
+    try { obj = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob((j.content || "").replace(/\n/g, "")), (c) => c.charCodeAt(0)))); } catch {}
     return { obj, sha: j.sha };
   }
   // Push = pull-merge-push: fetch remote, union with local, adopt the merge locally, write it.
@@ -715,12 +826,13 @@
     if (!token() || !apiBase()) return; // local-only mode — no-op
     const r = repoCfg();
     for (let attempt = 0; attempt < 3; attempt++) {
-      const { obj: remote, sha } = await getFile(file);
-      const merged = mergeFor(file, remote, localFor(file));
+      const { obj: remote, sha } = await getFile(file); // remote is undefined on a 304 (unchanged → local already reflects it)
+      const merged = mergeFor(file, remote ?? null, localFor(file));
       adoptMerged(file, merged);
       const body = JSON.stringify({ message: `state: update ${file}`, content: b64(JSON.stringify(merged, null, 2) + "\n"), branch: r.branch, ...(sha ? { sha } : {}) });
       const res = await fetch(`${apiBase()}${file}`, { method: "PUT", headers: ghHeaders(), body });
-      if (res.ok) return;
+      if (res.ok) { try { remoteRef[file] = { etag: null, sha: (await res.json())?.content?.sha || null }; } catch { delete remoteRef[file]; } return; } // new blob sha for the next PUT; drop the ETag so the next GET re-reads once
+      if (isAuthError(res)) throw mkErr(AUTH_MSG, true);
       if (res.status !== 409) throw new Error(`write ${res.status}`); // 409 = sha race → re-merge & retry
     }
     throw new Error("write conflict");
@@ -728,12 +840,13 @@
   async function pullRemote() {
     if (!token() || !apiBase()) return false;
     const before = JSON.stringify([state.articles, state.quizzes, knowledge.concepts, corpus.items]);
-    const { obj: rs } = await getFile("reading-state.json");
-    if (rs) adoptMerged("reading-state.json", mergeStates(rs, state));
-    const { obj: kn } = await getFile("knowledge.json");
-    if (kn) adoptMerged("knowledge.json", mergeKnowledge(kn, knowledge));
-    const { obj: cp } = await getFile("corpus.json");
-    if (cp) adoptMerged("corpus.json", mergeCorpus(cp, corpus));
+    // Each getFile sends If-None-Match; an unchanged file 304s (no body, no rate-limit cost) → skip its merge.
+    const rs = await getFile("reading-state.json");
+    if (rs.obj) adoptMerged("reading-state.json", mergeStates(rs.obj, state));
+    const kn = await getFile("knowledge.json");
+    if (kn.obj) adoptMerged("knowledge.json", mergeKnowledge(kn.obj, knowledge));
+    const cp = await getFile("corpus.json");
+    if (cp.obj) adoptMerged("corpus.json", mergeCorpus(cp.obj, corpus));
     return JSON.stringify([state.articles, state.quizzes, knowledge.concepts, corpus.items]) !== before;
   }
 
@@ -754,9 +867,11 @@
     Promise.allSettled(files.map((f) => pushJson(f, localFor(f)))).then((rs) => {
       const failed = files.filter((_, i) => rs[i].status === "rejected");
       if (!failed.length) { setSync("Synced ✓"); return; }
+      const auth = rs.some((r) => r.status === "rejected" && r.reason?.auth);
       failed.forEach((f) => { pending[f] = localFor(f); });   // re-queue so a failed push is never lost
+      if (auth) { setSync(AUTH_MSG, true); clearTimeout(syncTimer); return; } // token is dead — stop hammering 401s until it's re-pasted
       setSync("Sync error — check token in Settings", true);
-      clearTimeout(syncTimer); syncTimer = setTimeout(flushSync, 30000); // back off, then retry
+      clearTimeout(syncTimer); syncTimer = setTimeout(flushSync, 30000); // back off, then retry transient failures
     });
   }
   window.addEventListener("pagehide", () => { if (Object.keys(pending).length) flushSync(); });
@@ -774,7 +889,7 @@
     if (!token() || !apiBase()) return;
     const t = Date.now(); if (t - lastRemotePull < 4000) return; lastRemotePull = t;
     try { const changed = await pullRemote(); setSync("Synced ✓"); if (changed) { sweepExpired(); renderTabs(); render(); } }
-    catch { setSync("Sync error — check token in Settings", true); }
+    catch (e) { setSync(e?.auth ? AUTH_MSG : "Sync error — check token in Settings", true); }
   }
   // Ask the browser to keep our storage so the saved token isn't evicted — the cause of
   // having to re-paste it. Best granted from a user gesture / installed PWA; safe to call often.

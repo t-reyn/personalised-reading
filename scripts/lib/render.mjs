@@ -1,29 +1,47 @@
 // Build the generated artifacts: manifest.json, feed.xml, sitemap.xml, index.html.
-import { escapeHtml, escapeXml, toRfc822, humanDate } from "./text.mjs";
+import { readFileSync } from "node:fs";
+import { escapeHtml, escapeXml, toRfc822, humanDate, stripHtml } from "./text.mjs";
 
 const live = (items) => items.filter((i) => i.meta && !i.meta.merged_into);
+
+// Word count of an article's prose: drop script/style blocks, strip the rest to plain text, count words.
+// Read from disk by the manifest path (repo-root-relative; generate-index runs from the repo root).
+function wordCount(item) {
+  try {
+    const html = readFileSync(item.path, "utf8");
+    const body = /<div\s+class="doc-body">([\s\S]*?)<\/div>\s*<footer/i.exec(html); // the prose, minus header/sources footer
+    const src = (body ? body[1] : html).replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, " ");
+    const text = stripHtml(src);
+    return text ? text.split(/\s+/).length : 0;
+  } catch { return null; }
+}
 
 export function buildManifest(items, now) {
   const articles = items
     .filter((i) => i.meta)
-    .map(({ meta }) => ({
-      id: meta.id,
-      slug: meta.slug,
-      interest: meta.interest,
-      interests: meta.interests && meta.interests.length ? meta.interests : [meta.interest],
-      mode: meta.mode ?? null,
-      title: meta.title,
-      summary: meta.summary,
-      tags: meta.tags ?? [],
-      created_at: meta.created_at,
-      expire_at: meta.expire_at ?? null,
-      concepts_taught: meta.concepts_taught ?? [],
-      concepts_assumed: meta.concepts_assumed ?? [],
-      source_count: (meta.sources ?? []).length,
-      merged_from: meta.merged_from ?? [],
-      merged_into: meta.merged_into ?? null,
-      path: meta.path,
-    }));
+    .map((item) => {
+      const { meta } = item;
+      const words = wordCount(item);
+      return {
+        id: meta.id,
+        slug: meta.slug,
+        interest: meta.interest,
+        interests: meta.interests && meta.interests.length ? meta.interests : [meta.interest],
+        mode: meta.mode ?? null,
+        title: meta.title,
+        summary: meta.summary,
+        tags: meta.tags ?? [],
+        created_at: meta.created_at,
+        expire_at: meta.expire_at ?? null,
+        concepts_taught: meta.concepts_taught ?? [],
+        concepts_assumed: meta.concepts_assumed ?? [],
+        source_count: (meta.sources ?? []).length,
+        ...(words != null ? { word_count: words } : {}),
+        merged_from: meta.merged_from ?? [],
+        merged_into: meta.merged_into ?? null,
+        path: meta.path,
+      };
+    });
   return { version: 1, generatedAt: now, count: articles.length, articles };
 }
 
@@ -197,7 +215,7 @@ self.addEventListener("activate", (e) => {
     await self.clients.claim();
   })());
 });
-const isStateFile = (url) => /\\/data\\/(reading-state|knowledge)\\.json$/.test(url.pathname);
+const isStateFile = (url) => /\\/data\\/(reading-state|knowledge|corpus)\\.json$/.test(url.pathname);
 self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET") return;
