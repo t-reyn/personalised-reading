@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-01T05:34:34.764Z",
+  "updatedAt": "2026-07-02T06:58:33.259Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -164,16 +164,22 @@
       "next_review_at": "2026-07-01T16:07:09.915Z"
     },
     "ifrs17-csm": {
-      "is_learnt": false,
-      "first_taught": "2026-06-25-ifrs17-csm-in-plain-terms"
+      "is_learnt": true,
+      "first_taught": "2026-06-25-ifrs17-csm-in-plain-terms",
+      "learnt_at": "2026-06-27T14:27:36.235Z",
+      "review_level": 1,
+      "next_review_at": "2026-06-30T14:27:36.235Z"
     },
     "rag": {
       "is_learnt": false,
       "first_taught": "2026-06-25-retrieval-beats-fine-tuning"
     },
     "zone-2-training": {
-      "is_learnt": false,
-      "first_taught": "2026-06-25-zone-2-training-explained"
+      "is_learnt": true,
+      "first_taught": "2026-06-25-zone-2-training-explained",
+      "learnt_at": "2026-06-27T14:27:45.985Z",
+      "review_level": 1,
+      "next_review_at": "2026-06-30T14:27:45.985Z"
     },
     "app-monetisation-models": {
       "is_learnt": true,
