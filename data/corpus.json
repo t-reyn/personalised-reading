@@ -1,5 +1,16 @@
 {
   "version": 1,
-  "updatedAt": null,
-  "items": []
+  "updatedAt": "2026-07-02T16:12:00.886Z",
+  "items": [
+    {
+      "id": "i9cjtb",
+      "url": "https://open.substack.com/pub/invisiblebalancesheet/p/the-chart-that-changed-an-industry?publication_id=8403068&post_id=203079402&isFreemail=true&r=81yue6&token=eyJ1c2VyX2lkIjo0ODcwMzQ3MTgsInBvc3RfaWQiOjIwMzA3OTQwMiwiaWF0IjoxNzgyOTcyNTA2LCJleHAiOjE3ODU1NjQ1MDYsImlzcyI6InB1Yi04NDAzMDY4Iiwic3ViIjoicG9zdC1yZWFjdGlvbiJ9.4tLfnrY_QnpJQ6e8w85OY8SDXLd-JLqvFThxR5gBPs0",
+      "title": "open.substack.com",
+      "interest": null,
+      "note": "",
+      "added_at": "2026-07-02T16:12:00.886Z",
+      "t": "2026-07-02T16:12:00.886Z",
+      "deleted": false
+    }
+  ]
 }
