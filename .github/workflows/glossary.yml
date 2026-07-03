@@ -1,0 +1,97 @@
+name: Glossary top-up
+
+# Keeps the "dev term of the day" list ahead of the calendar. The banner consumes
+# data/glossary.json one term per day in order; this workflow checks the runway weekly
+# (deterministic, zero tokens) and only when fewer than topup.min_runway_days of unseen
+# terms remain does it spend a short Claude (subscription) run appending a fresh batch —
+# in practice every ~2-3 months. Manual dispatch always tops up (for testing / on demand).
+on:
+  schedule:
+    - cron: "30 22 * * 1" # Mondays 22:30 UTC — clear of the daily 20:00/21:45 author runs
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: glossary
+  cancel-in-progress: false
+
+jobs:
+  topup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Fail fast before any Claude spend.
+      - name: Unit tests
+        run: node --test scripts/lib/*.test.mjs
+
+      # Deterministic gate: most weeks this is the whole run. Also validates the committed
+      # glossary — a defective file fails here (defects on stderr) before any tokens are spent.
+      - name: Check runway
+        id: runway
+        run: |
+          R=$(node scripts/glossary-check.mjs --runway)
+          MIN=$(node -p 'JSON.parse(require("fs").readFileSync("data/glossary.json","utf8")).topup?.min_runway_days ?? 30')
+          echo "runway: $R day(s) of unseen terms left (top-up below $MIN)"
+          if [ "$R" -lt "$MIN" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+          fi
+          echo "syd=$(TZ=Australia/Sydney date +%F)" >> "$GITHUB_OUTPUT"
+
+      # Snapshot the pre-top-up glossary so the validator can enforce append-only.
+      - name: Snapshot glossary
+        if: steps.runway.outputs.needed == 'true'
+        run: cp data/glossary.json "$RUNNER_TEMP/glossary.prev.json"
+
+      - name: Author term batch (Claude, subscription)
+        if: steps.runway.outputs.needed == 'true'
+        timeout-minutes: 10
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: "Read skills/GLOSSARY.md, then append one top-up batch to data/glossary.json exactly as it instructs. Today's date is ${{ steps.runway.outputs.syd }} (AEST) — use it for the batches log entry. Stop when data/glossary.json is updated."
+          claude_args: "--max-turns 16 --model sonnet --allowedTools Read,Write,Edit"
+
+      # Gate: structure, no dupes, append-only vs the snapshot. Nothing commits if this fails.
+      - name: Validate batch
+        if: steps.runway.outputs.needed == 'true'
+        run: node scripts/glossary-check.mjs --prev "$RUNNER_TEMP/glossary.prev.json"
+
+      # Race-safe like generate.yml: the browser writes data/*.json to main at any time.
+      # Note: GITHUB_TOKEN pushes don't trigger other workflows, so deploy.yml won't fire —
+      # the next daily generate run deploys the new glossary. With a ≥30-day runway buffer,
+      # a one-day lag before the live site sees the batch is immaterial.
+      - name: Commit
+        if: steps.runway.outputs.needed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "reading-bot"
+          git config user.email "noreply@users.noreply.github.com"
+          git add data/glossary.json
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "glossary: top-up batch (${{ steps.runway.outputs.syd }})"
+            URL="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+            pushed=false
+            for i in 1 2 3; do
+              if git pull --rebase --autostash "$URL" main && git push "$URL" HEAD:main; then
+                pushed=true
+                break
+              fi
+              sleep 10
+            done
+            if [ "$pushed" != "true" ]; then
+              echo "push failed after retries"
+              exit 1
+            fi
+          fi

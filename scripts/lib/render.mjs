@@ -161,6 +161,7 @@ export function buildIndexHtml(config, stats, now) {
     </aside>
 
     <div class="content">
+      <div id="termBanner" class="term-banner" hidden></div>
       <main id="list" class="list" aria-live="polite"></main>
       <footer class="foot">
         <span id="resultCount" class="result-count"></span>
@@ -223,7 +224,7 @@ self.addEventListener("fetch", (e) => {
   const url = new URL(req.url);
   if (url.origin !== self.location.origin || isStateFile(url)) return;
   const isAsset = /\\.(css|js|svg|png|ico|woff2?)$/.test(url.pathname);
-  if (req.mode === "navigate" || url.pathname.endsWith("/data/manifest.json") || url.pathname.includes("/articles/")) {
+  if (req.mode === "navigate" || url.pathname.endsWith("/data/manifest.json") || url.pathname.endsWith("/data/glossary.json") || url.pathname.includes("/articles/")) {
     e.respondWith((async () => {
       try { const fresh = await fetch(req); if (fresh && fresh.ok) (await caches.open(VERSION)).put(req, fresh.clone()); return fresh; }
       catch { return (await caches.match(req)) || (await caches.match("./")) || Response.error(); }

@@ -262,6 +262,25 @@ button { font: inherit; cursor: pointer; }
 .empty { text-align: center; color: var(--faint); padding: 48px 20px; }
 .empty .big { font-size: 30px; margin-bottom: 8px; }
 
+/* ---------- Dev term of the day ---------- */
+.term-banner { max-width: var(--maxw); margin: 10px auto 0; padding: 0 16px; }
+.term-card {
+  background: var(--term-bg); border: 1px solid var(--line-strong); border-left: 3px solid var(--accent);
+  border-radius: var(--radius); padding: 9px 12px 10px; font-family: var(--font-mono); cursor: pointer;
+}
+.term-top { display: flex; align-items: center; gap: 7px; font-size: 13px; min-width: 0; }
+.term-ps1 { color: var(--accent); font-weight: 700; flex: 0 0 auto; }
+.term-cmd { color: var(--muted); flex: 0 0 auto; }
+.term-word { color: var(--accent); font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.term-tod { margin-left: auto; flex: 0 0 auto; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--faint); }
+.term-x { flex: 0 0 auto; border: none; background: transparent; color: var(--faint); font-size: 12px; line-height: 1; padding: 4px 5px; margin: -4px -5px -4px 0; border-radius: 5px; }
+.term-x:hover { color: var(--ink); }
+.term-def { margin: 5px 0 0; font-family: var(--font-body); font-size: 13px; line-height: 1.45; color: var(--muted); }
+.term-eg { margin: 5px 0 0; font-family: var(--font-body); font-style: italic; font-size: 12.5px; line-height: 1.45; color: var(--faint); }
+.term-eg::before { content: "e.g. "; font-family: var(--font-mono); font-style: normal; color: var(--accent); }
+.term-more { display: inline-block; margin-top: 4px; font-size: 10px; letter-spacing: .05em; text-transform: uppercase; color: var(--faint); }
+.term-card:hover .term-more { color: var(--accent); }
+
 /* ---------- Sync line ---------- */
 .syncline { max-width: var(--maxw); margin: 0 auto; padding: 6px 16px 0; font-size: 11px; color: var(--faint); }
 .syncline.error { color: var(--accent); font-weight: 600; }
@@ -418,6 +437,7 @@ body[data-interest="science"]          { --accent: #a06ff0; }
   body[data-page="hub"] .syncline { padding: 0; }
 
   body[data-page="hub"] .content { padding: 26px 32px 60px; min-width: 0; }
+  body[data-page="hub"] .term-banner { max-width: var(--content-maxw); margin: 0 auto 16px; padding: 0; }
   body[data-page="hub"] .list { max-width: var(--content-maxw); margin: 0 auto; padding: 0; }
   body[data-page="hub"] .foot { max-width: var(--content-maxw); margin: 24px auto 0; padding: 22px 0; }
 
