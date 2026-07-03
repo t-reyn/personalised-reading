@@ -31,6 +31,7 @@ articles/YYYY-MM-DD/<slug>.html   committed articles (from templates/article.htm
 templates/article.html  styling + structure source of truth + the #meta contract
 skills/AUTHORING.md          daily authoring contract
 skills/SCOUT.md              feed-discovery contract
+skills/GLOSSARY.md           glossary top-up contract (dev term of the day)
 scripts/
   generate-index.mjs    scan articles/ → build index.html, feed.xml, sitemap.xml, data/manifest.json
   ingest.mjs            fetch RSS per source → dedup (data/seen.json) → append to data/pool.json
@@ -43,7 +44,8 @@ data/
   manifest.json         GENERATED catalog the app reads
   knowledge.json        concept graph + learnt state (the model the generator reads)
   reading-state.json    user-owned: read/unread/backlog/starred + quiz results
-  glossary.json         dev "term of the day" — rotated daily by the hub banner (app.js)
+  glossary.json         dev "term of the day" — consumed one/day in order by the hub banner (app.js);
+                        topped up in batches by .github/workflows/glossary.yml (see skills/GLOSSARY.md)
 ```
 
 ## The daily authoring routine (what the scheduled run does)

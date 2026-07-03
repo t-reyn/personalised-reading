@@ -1,6 +1,11 @@
 {
-  "version": 1,
-  "note": "Dev term of the day — rotated one per day by the hub banner (app.js). Plain-English definitions aimed at understanding what Claude Code and developers say. Committed, read-only; add terms freely (order only affects which day a term lands on).",
+  "version": 2,
+  "note": "Dev term of the day — shown one per day by the hub banner (app.js): the term for a date is terms[days since start_date], so the list is consumed in order and a given date always maps to the same term on every device. Topped up in batches by .github/workflows/glossary.yml per skills/GLOSSARY.md. APPEND new terms to the END only — never reorder, remove, or rename existing entries, and never change start_date (either would silently change which term shows on which day). If top-ups lapse and the list runs out, the banner wraps back to the oldest terms rather than going dark.",
+  "start_date": "2026-07-03",
+  "topup": { "min_runway_days": 30, "batch_min": 60, "batch_max": 90 },
+  "batches": [
+    { "added": "2026-07-03", "count": 199, "by": "seed" }
+  ],
   "terms": [
     { "term": "repo", "def": "Short for repository: the folder of a project that git tracks — all the code plus the full history of every change ever made to it.", "eg": "\"I cloned the repo\" = downloaded the project and its whole history." },
     { "term": "commit", "def": "A saved snapshot of your changes, with a message describing them. A project's history is a chain of commits.", "eg": "\"Committed the fix\" = the change is now recorded in the project's history." },

@@ -169,10 +169,12 @@
   }
 
   /* ---------- dev term of the day ----------
-     A one-per-day rotation through data/glossary.json, rendered as a compact "$ whatis <term>"
-     strip above the Home list. Deterministic on the local date (same term on every device),
-     tap to reveal the example, ✕ hides it for the rest of the day — tomorrow brings a new term. */
-  let glossary = null; // { version, terms: [{term, def, eg}] } — committed, read-only
+     A one-per-day walk through data/glossary.json, rendered as a compact "$ whatis <term>"
+     strip above the Home list. The term for a date is terms[days since glossary.start_date] —
+     deterministic on the local date (same term on every device), and stable under batch appends
+     (skills/GLOSSARY.md tops the list up before it runs out; if that lapses, wrap to the oldest).
+     Tap to reveal the example, ✕ hides it for the rest of the day — tomorrow brings a new term. */
+  let glossary = null; // { version, start_date, terms: [{term, def, eg}] } — committed, read-only
   const TERM_DISMISS_LS = "pr:term-dismissed";
   const localDayStr = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
   function renderTermBanner() {
@@ -182,7 +184,11 @@
     const day = localDayStr();
     let dismissed = null; try { dismissed = localStorage.getItem(TERM_DISMISS_LS); } catch {}
     if (view !== "reading" || !terms.length || dismissed === day) { el.hidden = true; return; }
-    const t = terms[Math.floor(Date.parse(day) / 86400000) % terms.length]; // YYYY-MM-DD parses as UTC midnight → exact day index
+    // Both dates parse as UTC midnight, so the difference is an exact day count. An unparsable
+    // start_date falls back to index 0 rather than crashing the banner.
+    const startMs = Date.parse(glossary.start_date || "");
+    const idx = Number.isFinite(startMs) ? Math.max(0, Math.round((Date.parse(day) - startMs) / 86400000)) : 0;
+    const t = terms[idx % terms.length];
     el.innerHTML = `
       <div class="term-card" role="button" tabindex="0" aria-expanded="false" title="Tap for an example">
         <div class="term-top">

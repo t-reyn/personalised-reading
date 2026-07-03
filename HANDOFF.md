@@ -41,6 +41,7 @@ templates/article.html  article template + the inline #meta contract
 articles/YYYY-MM-DD/*.html   committed articles, each with a <script id="meta"> JSON block
 skills/AUTHORING.md     daily author contract (profile-driven, mode-aware, multi-topic)
 skills/SCOUT.md         feed-discovery contract
+skills/GLOSSARY.md      glossary top-up contract (dev term-of-the-day banner)
 data/
   config.json           interests (tabs), audience, passThreshold, maxArticlesPerRun, siteUrl, repo
   sources.json          RSS feeds per interest
@@ -50,7 +51,10 @@ data/
   reading-state.json    user read/quiz state (synced from the browser)
   seen.json             ingest dedup keys
   profile.local.json    PRIVATE reader profile — GITIGNORED, never committed (see Privacy)
-.github/workflows/      generate.yml (daily author), deploy.yml, ci.yml, health-check.yml, scout.yml
+  glossary.json         dev term-of-the-day list — consumed one/day in order by the hub banner;
+                        topped up in batches by glossary.yml (contract: skills/GLOSSARY.md)
+.github/workflows/      generate.yml (daily author), deploy.yml, ci.yml, health-check.yml, scout.yml,
+                        glossary.yml (weekly runway check → Claude batch top-up when <30 days left)
 ```
 
 ## Content model (current)

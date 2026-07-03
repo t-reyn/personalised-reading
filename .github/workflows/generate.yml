@@ -175,7 +175,7 @@ jobs:
           git config user.email "noreply@users.noreply.github.com"
           # Tolerate optional artifacts (e.g. a digest that wasn't produced) — a missing pathspec
           # must never abort the commit and lose the issue.
-          for f in articles data/pool.json data/pool-digest.json data/seen.json data/knowledge.json data/manifest.json data/usage-log.jsonl data/live.json index.html feed.xml sitemap.xml sw.js; do
+          for f in articles data/pool.json data/pool-digest.json data/seen.json data/knowledge.json data/quizbank.json data/manifest.json data/usage-log.jsonl data/live.json index.html feed.xml sitemap.xml sw.js; do
             [ -e "$f" ] && git add "$f"
           done
           if git diff --cached --quiet; then
