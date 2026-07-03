@@ -27,11 +27,12 @@ jobs:
         with:
           node-version: "20"
 
-      # Fail fast (and validate the committed glossary) before any Claude spend.
+      # Fail fast before any Claude spend.
       - name: Unit tests
         run: node --test scripts/lib/*.test.mjs
 
-      # Deterministic gate: most weeks this is the whole run.
+      # Deterministic gate: most weeks this is the whole run. Also validates the committed
+      # glossary — a defective file fails here (defects on stderr) before any tokens are spent.
       - name: Check runway
         id: runway
         run: |
@@ -65,6 +66,9 @@ jobs:
         run: node scripts/glossary-check.mjs --prev "$RUNNER_TEMP/glossary.prev.json"
 
       # Race-safe like generate.yml: the browser writes data/*.json to main at any time.
+      # Note: GITHUB_TOKEN pushes don't trigger other workflows, so deploy.yml won't fire —
+      # the next daily generate run deploys the new glossary. With a ≥30-day runway buffer,
+      # a one-day lag before the live site sees the batch is immaterial.
       - name: Commit
         if: steps.runway.outputs.needed == 'true'
         env:

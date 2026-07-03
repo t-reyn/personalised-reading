@@ -44,5 +44,7 @@ vocabulary that appears **earlier in the list** (and only on that).
   `def`/`eg` is allowed.)
 - No duplicate `term` (case-insensitive, trimmed).
 - Every entry has non-empty `term`, `def`, and `eg`.
+- **The header is frozen and the log must be truthful**: do not touch `topup`, and the `batches`
+  entry you append must record exactly the number of terms you added (`added` in YYYY-MM-DD).
 - The file must remain valid JSON. `node scripts/glossary-check.mjs --prev <snapshot>` is the
   gate the workflow runs; nothing commits if it fails.

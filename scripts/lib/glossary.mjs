@@ -13,6 +13,12 @@ export function glossaryDefects(g, prev = null) {
   if (!ISO_DAY.test(g.start_date || "") || !Number.isFinite(Date.parse(g.start_date))) {
     out.push(`invalid start_date "${g.start_date}" (need YYYY-MM-DD)`);
   }
+  const batches = Array.isArray(g.batches) ? g.batches : null;
+  if (!batches || !batches.length) out.push("batches must be a non-empty array");
+  else batches.forEach((b, i) => {
+    if (!ISO_DAY.test(b?.added || "")) out.push(`batches[${i}]: invalid "added" date "${b?.added}"`);
+    if (!Number.isInteger(b?.count) || b.count < 1) out.push(`batches[${i}]: "count" must be a positive integer`);
+  });
   const terms = Array.isArray(g.terms) ? g.terms : null;
   if (!terms || !terms.length) return [...out, "terms must be a non-empty array"];
   const seen = new Map();
@@ -38,6 +44,17 @@ export function glossaryDefects(g, prev = null) {
       }
     }
     if (terms.length === p.length && !out.length) out.push("no terms appended — the top-up did nothing");
+    // The header is frozen too: topup config must survive a batch, and the batches log must
+    // truthfully record exactly this top-up (it's the audit trail of what ran when).
+    if (JSON.stringify(g.topup ?? null) !== JSON.stringify(prev.topup ?? null)) {
+      out.push("topup config changed — a top-up may only append terms and log its batch");
+    }
+    const pb = Array.isArray(prev.batches) ? prev.batches : [];
+    if (batches && terms.length > p.length) {
+      const last = batches[batches.length - 1];
+      if (batches.length !== pb.length + 1) out.push(`batches log must gain exactly one entry per top-up (${pb.length} → ${batches.length})`);
+      else if (last?.count !== terms.length - p.length) out.push(`batches log entry says count ${last?.count} but ${terms.length - p.length} term(s) were appended`);
+    }
   }
   return out;
 }

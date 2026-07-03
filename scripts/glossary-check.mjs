@@ -21,10 +21,12 @@ const prev = prevPath ? JSON.parse(await readFile(prevPath, "utf8")) : null;
 const defects = glossaryDefects(g, prev);
 const runway = glossaryRunway(g, today);
 
+// Defects always go to stderr — in --runway mode stdout is captured by a shell substitution
+// in glossary.yml, so this is the only way a failing check is diagnosable from the Actions log.
+for (const d of defects) console.error(`⛔ glossary: ${d}`);
 if (args.includes("--runway")) {
   console.log(runway);
 } else {
-  for (const d of defects) console.error(`⛔ glossary: ${d}`);
   console.log(`glossary: ${g.terms?.length ?? 0} term(s), ${runway} day(s) of unseen terms left as of ${today}` +
     (prev ? ` (+${(g.terms?.length ?? 0) - (prev.terms?.length ?? 0)} this top-up)` : ""));
 }

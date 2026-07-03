@@ -6,8 +6,16 @@ import { glossaryDefects, glossaryRunway } from "./glossary.mjs";
 const mk = (n, start = "2026-07-03") => ({
   version: 2,
   start_date: start,
+  topup: { min_runway_days: 30, batch_min: 60, batch_max: 90 },
+  batches: [{ added: start, count: n }],
   terms: Array.from({ length: n }, (_, i) => ({ term: `term-${i}`, def: `def ${i}`, eg: `eg ${i}` })),
 });
+// A well-formed top-up of `prev`: terms appended AND the batch logged, as GLOSSARY.md requires.
+const topup = (prev, n) => {
+  const g = mk(prev.terms.length + n, prev.start_date);
+  g.batches = [...prev.batches, { added: "2026-12-21", count: n }];
+  return g;
+};
 
 test("glossaryDefects passes a well-formed glossary", () => {
   assert.deepEqual(glossaryDefects(mk(3)), []);
@@ -30,18 +38,35 @@ test("glossaryDefects flags duplicate terms case-insensitively", () => {
 
 test("glossaryDefects enforces append-only against a previous snapshot", () => {
   const prev = mk(3);
-  assert.deepEqual(glossaryDefects(mk(5), prev), []); // clean append
+  assert.deepEqual(glossaryDefects(topup(prev, 2), prev), []); // clean append + logged batch
   assert.match(glossaryDefects(mk(2), prev)[0], /shrank/);
-  assert.match(glossaryDefects(mk(5, "2026-07-04"), prev)[0], /start_date changed/);
-  const reordered = mk(5);
+  assert.match(glossaryDefects(topup({ ...prev, start_date: "2026-07-04" }, 2), { ...prev })[0], /start_date changed/);
+  const reordered = topup(prev, 2);
   [reordered.terms[0], reordered.terms[1]] = [reordered.terms[1], reordered.terms[0]];
   assert.match(glossaryDefects(reordered, prev)[0], /renamed\/reordered/);
   assert.match(glossaryDefects(mk(3), prev)[0], /no terms appended/);
 });
 
+test("glossaryDefects enforces a truthful batches log and frozen topup config", () => {
+  const prev = mk(3);
+  const unlogged = mk(5); // terms appended but batches log untouched
+  assert.match(glossaryDefects(unlogged, prev)[0], /batches log must gain exactly one entry/);
+  const miscounted = topup(prev, 2);
+  miscounted.batches[miscounted.batches.length - 1].count = 9;
+  assert.match(glossaryDefects(miscounted, prev)[0], /says count 9 but 2/);
+  const tampered = topup(prev, 2);
+  tampered.topup = { min_runway_days: 1 };
+  assert.match(glossaryDefects(tampered, prev)[0], /topup config changed/);
+  const badLog = mk(3);
+  badLog.batches = [{ added: "yesterday", count: 0 }];
+  const ds = glossaryDefects(badLog);
+  assert.match(ds[0], /invalid "added" date/);
+  assert.match(ds[1], /"count" must be a positive integer/);
+});
+
 test("glossaryDefects allows def/eg touch-ups to existing entries", () => {
   const prev = mk(3);
-  const g = mk(4);
+  const g = topup(prev, 1);
   g.terms[1].def = "a clearer definition"; // typo fixes are fine — only term names are frozen
   assert.deepEqual(glossaryDefects(g, prev), []);
 });
