@@ -106,9 +106,9 @@ jobs:
         if: always() && steps.guard.outputs.skip != 'true'
         run: |
           DATE=$(date -u +%Y-%m-%d)
+          # Issues are dated in AEST (pinned in the author prompt) — count that folder only.
           SYD=$(TZ=Australia/Sydney date +%F)
-          # Issues are dated in AEST (with UTC tolerated during transition) — count both.
-          ART=$(ls articles/"$DATE"/*.html articles/"$SYD"/*.html 2>/dev/null | sort -u | wc -l | tr -d ' ')
+          ART=$(ls articles/"$SYD"/*.html 2>/dev/null | wc -l | tr -d ' ')
           # The action declares the path as an output; fall back to searching the runner temp for
           # timed-out runs where the output may be unset — a missing file was logging null token rows.
           FILE="${{ steps.author.outputs.execution_file }}"
@@ -128,6 +128,13 @@ jobs:
           printf '{"date":"%s","articles":%s,"cost_usd":%s,"input":%s,"output":%s,"cache_read":%s,"cache_creation":%s,"turns":%s,"model":"sonnet"}\n' \
             "$DATE" "${ART:-0}" "$COST" "$IN" "$OUT" "$CR" "$CC" "$TURNS" >> data/usage-log.jsonl
           echo "usage row: $(tail -1 data/usage-log.jsonl)"
+
+      # 3b2. Register any taught/assumed concepts the author forgot to add to knowledge.json
+      #      (additive only). Both first contract-v2 runs skipped this step, failing the morning
+      #      health check — don't let it depend on author discipline.
+      - name: Register concepts
+        if: steps.guard.outputs.skip != 'true'
+        run: node scripts/register-concepts.mjs
 
       # 3c. Quarantine unpublishable drafts. A timed-out author step can leave a half-written
       #     article (e.g. no #meta block); --strict would then fail the Build and discard the WHOLE
@@ -174,7 +181,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "nothing new to commit"
           else
-            git commit -m "write: $(date -u +%Y-%m-%d) issue"
+            git commit -m "write: $(TZ=Australia/Sydney date +%F) issue"
             # Race-safe: the browser writes data/*.json to main via the Contents API at any time, so a
             # mid-run sync would reject a bare push and lose the whole issue. Rebase-and-retry, then
             # fail the step if all attempts lose the race.

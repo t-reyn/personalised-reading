@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-02T15:04:48.532Z",
+  "updatedAt": "2026-07-03T00:16:03.303Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -309,6 +309,30 @@
       "is_learnt": false
     },
     "training-volume": {
+      "is_learnt": false
+    },
+    "ankle-sprain-grading": {
+      "is_learnt": false
+    },
+    "functional-rehab-progression": {
+      "is_learnt": false
+    },
+    "proprioception-training": {
+      "is_learnt": false
+    },
+    "interstellar-objects": {
+      "is_learnt": false
+    },
+    "isotope-ratio-fingerprinting": {
+      "is_learnt": false
+    },
+    "exposure-triangle": {
+      "is_learnt": false
+    },
+    "180-degree-shutter-rule": {
+      "is_learnt": false
+    },
+    "iso-noise-tradeoff": {
       "is_learnt": false
     }
   }
