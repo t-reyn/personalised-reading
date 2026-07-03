@@ -1,8 +1,73 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-03T08:32:56.836Z",
-  "count": 21,
+  "generatedAt": "2026-07-03T21:07:00.939Z",
+  "count": 23,
   "articles": [
+    {
+      "id": "2026-07-04-channel-decay-and-the-unscalable-launch",
+      "slug": "channel-decay-and-the-unscalable-launch",
+      "interest": "indie-income",
+      "interests": [
+        "indie-income"
+      ],
+      "mode": "learn",
+      "title": "Every Channel Decays — The Manual Work That Buys You Time First",
+      "summary": "Every acquisition channel decays from the day you find it. The founders who last are the ones who do the unscalable, manual work first, and use it to build the taste that picks the next channel well.",
+      "tags": [
+        "distribution",
+        "growth-channels",
+        "indie-apps",
+        "early-stage",
+        "customer-acquisition"
+      ],
+      "created_at": "2026-07-04",
+      "expire_at": null,
+      "concepts_taught": [
+        "channel-decay",
+        "narrow-launch-sequencing"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "early-customer-acquisition",
+        "product-taste"
+      ],
+      "source_count": 2,
+      "word_count": 662,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-04/channel-decay-and-the-unscalable-launch.html"
+    },
+    {
+      "id": "2026-07-04-embeddings-explained",
+      "slug": "embeddings-explained",
+      "interest": "software-ai",
+      "interests": [
+        "software-ai"
+      ],
+      "mode": "learn",
+      "title": "How Embeddings Make 'Relevant' a Computable Thing",
+      "summary": "Retrieval-augmented generation depends on one mechanism to decide what counts as relevant: turning meaning into vectors you can measure the distance between. Here's how that works, and where it lives in a Next.js/Supabase stack.",
+      "tags": [
+        "embeddings",
+        "vector-search",
+        "rag",
+        "llm",
+        "machine-learning"
+      ],
+      "created_at": "2026-07-04",
+      "expire_at": null,
+      "concepts_taught": [
+        "embeddings",
+        "vector-similarity"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 2,
+      "word_count": 580,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-04/embeddings-explained.html"
+    },
     {
       "id": "2026-07-03-exposure-triangle-for-video",
       "slug": "exposure-triangle-for-video",

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>How Embeddings Make 'Relevant' a Computable Thing</title>
+  <meta name="description" content="Retrieval-augmented generation depends on one mechanism to decide what counts as relevant: turning meaning into vectors you can measure the distance between. Here's how that works, and where it lives in a Next.js/Supabase stack." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="software-ai">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-07-04-embeddings-explained">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>💻 Software, AI &amp; App-building</p>
+        <h1>How Embeddings Make 'Relevant' a Computable Thing</h1>
+        <p class="doc-meta">4 July 2026 · synthesised from 2 sources</p>
+        <p class="doc-summary">Retrieval-augmented generation depends on one mechanism to decide what counts as relevant: turning meaning into vectors you can measure the distance between. Here's how that works, and where it lives in a Next.js/Supabase stack.</p>
+      </header>
+
+      <div class="doc-body">
+        <h2>Where meaning becomes math</h2>
+        <p>You've already covered why retrieval beats fine-tuning for keeping an LLM current: fetch the relevant chunks of your own data, then let the model reason over them, instead of trying to bake everything into its weights. The piece that makes "relevant" a computable idea, rather than a vibe, is the embedding. A model turns every chunk of text, and your search query, into a long list of numbers called a vector, arranged so that text with similar meaning lands near other text with similar meaning in that numerical space. Data scientist Vicki Boykis, whose widely read explainer on the subject treats embeddings as one of the foundational structures under most modern machine learning, makes the point that text, images and audio all get compressed into the same kind of object once they've been embedded: a point in space with hundreds or even thousands of dimensions.</p>
+
+        <h2>Distance is the whole trick</h2>
+        <p>Once meaning is a point in space, "relevant" becomes a distance calculation. Vector database provider Pinecone's explainer on the topic notes that embeddings produced by deep neural networks are commonly high-dimensional, up to two thousand dimensions is typical, and that finding matches means running a nearest-neighbour search: measuring the distance between your query's vector and every candidate vector, then returning the closest ones. Two algorithm families do that work. KNN checks every candidate and is exact; ANN is approximate, trading a sliver of accuracy for being fast enough to search millions of vectors in milliseconds. Cosine similarity, the most common distance measure, ignores how long two vectors are and asks only whether they point in a similar direction, which turns out to line up well with "these two pieces of text mean similar things".</p>
+        <p>A toy example makes it concrete. Embed the words "kelpie" and "cattle dog" and they land close together in that vector space, because they're used in similar contexts and mean related things. Embed "kelpie" and "quarterly tax return" and they land nowhere near each other. That distance calculation, run automatically across every chunk in a knowledge base, is the entire mechanism a RAG pipeline depends on to decide which paragraph is worth showing the model, at a scale no human could manage by hand.</p>
+
+        <h2>Applying it in your stack</h2>
+        <p>For a Next.js and Supabase build this is concrete rather than theoretical. Supabase ships pgvector, a Postgres extension that stores embeddings as a native column type and lets you run a nearest-neighbour query with ordinary SQL. The pipeline is: call an embeddings API on each chunk of your content once, store the resulting vector alongside the text, then embed the user's query at search time and ask Postgres for the closest rows. No separate vector database to run, because the vectors live next to the rest of your data. The quality of the whole RAG pipeline you already know about rests entirely on this step: bad chunking or the wrong embedding model gives you a search that returns confidently wrong context, and the model downstream reasons well over rubbish.</p>
+
+        <h2>What to check next</h2>
+        <p>If you've shipped a RAG feature already, check two things this week: which embedding model you're calling (a general-purpose one is usually good enough to start; a domain-specific one matters once your content is technical or jargon-heavy) and whether you're re-embedding content that hasn't changed. Both are common, quiet sources of bad retrieval that look like a prompting problem but are a maths problem, several layers upstream of the model.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://vickiboykis.com/what_are_embeddings/" target="_blank" rel="noopener">What are Embeddings? — Vicki Boykis</a></li>
+          <li><a href="https://www.pinecone.io/learn/vector-embeddings/" target="_blank" rel="noopener">Vector Embeddings for Machine Learning — Pinecone</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-07-04-embeddings-explained",
+  "slug": "embeddings-explained",
+  "interest": "software-ai",
+  "interests": ["software-ai"],
+  "mode": "learn",
+  "title": "How Embeddings Make 'Relevant' a Computable Thing",
+  "summary": "Retrieval-augmented generation depends on one mechanism to decide what counts as relevant: turning meaning into vectors you can measure the distance between. Here's how that works, and where it lives in a Next.js/Supabase stack.",
+  "tags": ["embeddings", "vector-search", "rag", "llm", "machine-learning"],
+  "created_at": "2026-07-04",
+  "concepts_taught": ["embeddings", "vector-similarity"],
+  "concepts_assumed": [],
+  "concepts_reinforced": [],
+  "sources": [
+    { "title": "What are Embeddings?", "url": "https://vickiboykis.com/what_are_embeddings/" },
+    { "title": "Vector Embeddings for Machine Learning", "url": "https://www.pinecone.io/learn/vector-embeddings/" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "What does an embedding do to a piece of text, image, or audio?",
+      "options": [
+        "It converts it into a vector of numbers placed near similar-meaning content",
+        "It compresses the file size for cheaper storage",
+        "It translates it into a different human language automatically",
+        "It encrypts the content so only the model can read it"
+      ],
+      "correct": 0,
+      "concept": "embeddings"
+    },
+    {
+      "q": "A search feature embeds a user's query and needs to find the three most relevant stored chunks out of two million. Which technique is most likely doing the matching under the hood?",
+      "options": [
+        "Exact keyword string matching across all two million rows",
+        "A manual ranking created by the content's original author",
+        "A random sample of ten chunks, checked by a human reviewer",
+        "An approximate nearest-neighbour (ANN) search comparing vector distances"
+      ],
+      "correct": 3,
+      "concept": "vector-similarity"
+    }
+  ]
+}
+  </script>
+</body>
+</html>

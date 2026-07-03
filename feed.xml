@@ -4,7 +4,23 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Fri, 03 Jul 2026 08:32:56 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 21:07:00 GMT</lastBuildDate>
+    <item>
+      <title>Every Channel Decays — The Manual Work That Buys You Time First</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-04/channel-decay-and-the-unscalable-launch.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-04/channel-decay-and-the-unscalable-launch.html</guid>
+      <category>indie-income</category>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Every acquisition channel decays from the day you find it. The founders who last are the ones who do the unscalable, manual work first, and use it to build the taste that picks the next channel well.</description>
+    </item>
+    <item>
+      <title>How Embeddings Make &#39;Relevant&#39; a Computable Thing</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-04/embeddings-explained.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-04/embeddings-explained.html</guid>
+      <category>software-ai</category>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Retrieval-augmented generation depends on one mechanism to decide what counts as relevant: turning meaning into vectors you can measure the distance between. Here&#39;s how that works, and where it lives in a Next.js/Supabase stack.</description>
+    </item>
     <item>
       <title>Aperture, ISO, and the Shutter Speed Rule Unique to Video</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-03/exposure-triangle-for-video.html</link>

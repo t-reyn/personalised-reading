@@ -334,6 +334,26 @@
     },
     "iso-noise-tradeoff": {
       "is_learnt": false
+    },
+    "channel-decay": {
+      "is_learnt": false,
+      "first_taught": "2026-07-04-channel-decay-and-the-unscalable-launch",
+      "difficulty": "easy"
+    },
+    "narrow-launch-sequencing": {
+      "is_learnt": false,
+      "first_taught": "2026-07-04-channel-decay-and-the-unscalable-launch",
+      "difficulty": "medium"
+    },
+    "embeddings": {
+      "is_learnt": false,
+      "first_taught": "2026-07-04-embeddings-explained",
+      "difficulty": "medium"
+    },
+    "vector-similarity": {
+      "is_learnt": false,
+      "first_taught": "2026-07-04-embeddings-explained",
+      "difficulty": "hard"
     }
   }
 }
