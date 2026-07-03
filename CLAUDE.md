@@ -43,6 +43,7 @@ data/
   manifest.json         GENERATED catalog the app reads
   knowledge.json        concept graph + learnt state (the model the generator reads)
   reading-state.json    user-owned: read/unread/backlog/starred + quiz results
+  glossary.json         dev "term of the day" — rotated daily by the hub banner (app.js)
 ```
 
 ## The daily authoring routine (what the scheduled run does)

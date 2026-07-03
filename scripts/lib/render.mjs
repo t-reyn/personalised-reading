@@ -161,6 +161,7 @@ export function buildIndexHtml(config, stats, now) {
     </aside>
 
     <div class="content">
+      <div id="termBanner" class="term-banner" hidden></div>
       <main id="list" class="list" aria-live="polite"></main>
       <footer class="foot">
         <span id="resultCount" class="result-count"></span>
