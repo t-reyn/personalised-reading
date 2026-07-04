@@ -1,8 +1,74 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-03T21:07:00.939Z",
-  "count": 23,
+  "generatedAt": "2026-07-04T20:57:13.935Z",
+  "count": 25,
   "articles": [
+    {
+      "id": "2026-07-05-underwriting-margins-and-broker-consolidation-fy26",
+      "slug": "underwriting-margins-and-broker-consolidation-fy26",
+      "interest": "actuarial",
+      "interests": [
+        "actuarial",
+        "finance"
+      ],
+      "mode": "current",
+      "title": "General Insurance's FY26 Squeeze: Underwriting Tightens, Distribution Consolidates",
+      "summary": "Suncorp's FY26 trading update shows a $250m natural hazard miss and falling investment income squeezing underwriting margin, while Austbrokers Countrywide's post-merger leadership reshuffle shows distribution consolidating around the same pressure.",
+      "tags": [
+        "general-insurance",
+        "suncorp",
+        "reinsurance",
+        "insurance-trading-ratio",
+        "broker-consolidation"
+      ],
+      "created_at": "2026-07-05",
+      "expire_at": null,
+      "concepts_taught": [
+        "insurance-trading-ratio",
+        "catastrophe-allowance-reinsurance"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "combined-ratio"
+      ],
+      "source_count": 2,
+      "word_count": 590,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-05/underwriting-margins-and-broker-consolidation-fy26.html"
+    },
+    {
+      "id": "2026-07-05-lender-leadership-reshuffle-and-broker-time-blocking",
+      "slug": "lender-leadership-reshuffle-and-broker-time-blocking",
+      "interest": "mortgage-broking",
+      "interests": [
+        "mortgage-broking",
+        "finance"
+      ],
+      "mode": "current",
+      "title": "Two Lenders Just Changed Leaders — Most Brokers Won't Notice In Time",
+      "summary": "ANZ picked up a new board director from NAB's business bank and Bank of Sydney made its acting CEO permanent — plus the time-blocking habit that decides whether you're the broker who actually benefits from it.",
+      "tags": [
+        "mortgage-broking",
+        "anz",
+        "bank-of-sydney",
+        "leadership",
+        "time-blocking",
+        "practice-management"
+      ],
+      "created_at": "2026-07-05",
+      "expire_at": "2026-07-26",
+      "concepts_taught": [
+        "broker-time-blocking"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 591,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-05/lender-leadership-reshuffle-and-broker-time-blocking.html"
+    },
     {
       "id": "2026-07-04-channel-decay-and-the-unscalable-launch",
       "slug": "channel-decay-and-the-unscalable-launch",

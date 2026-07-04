@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-03T00:16:03.303Z",
+  "updatedAt": "2026-07-04T20:57:13.772Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -288,7 +288,9 @@
       "is_learnt": false
     },
     "embeddings": {
-      "is_learnt": false
+      "is_learnt": false,
+      "first_taught": "2026-07-04-embeddings-explained",
+      "difficulty": "medium"
     },
     "group-insurance-pricing": {
       "is_learnt": false
@@ -345,15 +347,19 @@
       "first_taught": "2026-07-04-channel-decay-and-the-unscalable-launch",
       "difficulty": "medium"
     },
-    "embeddings": {
-      "is_learnt": false,
-      "first_taught": "2026-07-04-embeddings-explained",
-      "difficulty": "medium"
-    },
     "vector-similarity": {
       "is_learnt": false,
       "first_taught": "2026-07-04-embeddings-explained",
       "difficulty": "hard"
+    },
+    "broker-time-blocking": {
+      "is_learnt": false
+    },
+    "insurance-trading-ratio": {
+      "is_learnt": false
+    },
+    "catastrophe-allowance-reinsurance": {
+      "is_learnt": false
     }
   }
 }
