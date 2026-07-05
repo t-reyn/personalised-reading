@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>AI Can Draw The Screen Now — Your Job Is Judging Which One's Right</title>
+  <meta name="description" content="Two design essays published this week converge on the same shift: once AI generates the screen and the code behind it, the designer's real work becomes judgment and explanation, not production." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="design">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-07-06-judging-ai-generated-design">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>🎨 Design & Craft</p>
+        <h1>AI Can Draw The Screen Now — Your Job Is Judging Which One's Right</h1>
+        <p class="doc-meta">6 July 2026 · synthesised from 2 sources</p>
+        <p class="doc-summary">Two design essays published this week converge on the same shift: once AI generates the screen and the code behind it, the designer's real work becomes judgment and explanation, not production.</p>
+      </header>
+
+      <div class="doc-body">
+        <p>Two design essays published this week land on the same point from opposite directions: AI can now generate the screen and the code behind it, but nobody has automated the judgment call of which output to trust, or how to explain it to the person asking why.</p>
+
+        <h2>What AI took off your plate</h2>
+        <p>UX Collective's Christine Vallaure breaks the Figma-to-code AI stack into four layers, and the breakdown matters because skipping one has a specific, predictable cost. The first layer is MCP (Model Context Protocol), the wiring that lets an assistant like Claude read a design file's real properties, spacing, colour tokens, component structure, instead of guessing from a screenshot. The second is markdown files that hold the "why" behind design decisions, so you stop re-explaining the same rule every session. The third is skills: repeatable workflows that run the same way each time rather than one-off guidance you retype. The fourth, and the one Vallaure calls critical, is Code Connect, the mapping layer that ties a Figma component to the code shipping in production.</p>
+        <p>Skip that mapping layer and you get what's worth naming on its own: design-code drift. You change a button's padding in Figma, the change never propagates because nothing but that mapping layer enforces the link, and three sprints later the design file and the running app have quietly stopped agreeing with each other. Vallaure's other point is just as useful for a solo builder: don't over-build the stack. A one-person project needs layers one and two; only a large team running a shared design system needs all four.</p>
+
+        <h2>The explaining problem didn't disappear, it moved</h2>
+        <p>Nielsen Norman Group's Katie Schmidt, Jessa Anderson and Hayley Mortin published a framework on 3 July mapping three roles inside a business that each need a different kind of explanation from the same AI system, using an AI help-desk agent as the example. A governance lead wants a global, static explanation: audit trails, edge-case handling, compliance documentation covering the whole system. A builder, the person configuring or debugging it, wants a local, interactive explanation tied to one specific output: "escalated because: account flagged for multi-factor review." A domain expert wants something in between: a local, static explanation anchored to precedent, like "based on 14 similar past tickets," plus a lightweight way to flag when it's wrong.</p>
+        <p>Hand a governance lead a builder's debug log and they'll disengage, because none of it maps to what they're accountable for. Hand a builder an audit summary and they can't fix anything, because there's no specific output to trace. The three explanations aren't three drafts of the same document — they're genuinely different information, tiered to what each reader needs to act.</p>
+
+        <h2>It's the hierarchy skill you already have</h2>
+        <p>This is the same instinct behind visual hierarchy, just applied one layer up. Deciding what a screen's primary, secondary and tertiary information is, what the eye lands on first, what waits, is the same decision as deciding what a governance lead needs first versus what a builder needs first. The skill isn't new; the object you're applying it to is. Sorting an explanation by audience is an information-hierarchy problem before it's a writing problem, and you've already built the muscle for solving those.</p>
+
+        <h2>Try this on your next AI-assisted build</h2>
+        <p>Next time an AI assistant generates a screen or feature for one of your own apps, name which of Vallaure's four layers you're touching, wiring, rules, workflow or mapping, before you decide how much scaffolding it deserves. And before you ship anything that makes a decision a user might question, write one line for each audience who could ask why: what would the audit view, the debug view and the plain-language view of this decision look like. That forces the judgment call up front — instead of shipping whatever AI drafted first and explaining it later under pressure.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://www.nngroup.com/articles/crafting-ai-explanations/" target="_blank" rel="noopener">Crafting AI Explanations for Every Role in Your Enterprise — Nielsen Norman Group</a></li>
+          <li><a href="https://uxdesign.cc/you-design-it-then-what-a-clear-map-of-the-figma-to-code-ai-mess-954a4084175f" target="_blank" rel="noopener">You design it. Then what? A clear map of the Figma-to-code AI mess — UX Collective</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-07-06-judging-ai-generated-design",
+  "slug": "judging-ai-generated-design",
+  "interest": "design",
+  "interests": ["design", "software-ai"],
+  "mode": "learn",
+  "title": "AI Can Draw The Screen Now — Your Job Is Judging Which One's Right",
+  "summary": "Two design essays published this week converge on the same shift: once AI generates the screen and the code behind it, the designer's real work becomes judgment and explanation, not production.",
+  "tags": ["design", "ai-tools", "design-systems", "explainability", "figma"],
+  "created_at": "2026-07-06",
+  "expire_at": "2026-09-04",
+  "concepts_taught": ["design-code-drift", "tiered-ai-explanations"],
+  "concepts_assumed": [],
+  "concepts_reinforced": ["visual-hierarchy"],
+  "sources": [
+    { "title": "Crafting AI Explanations for Every Role in Your Enterprise", "url": "https://www.nngroup.com/articles/crafting-ai-explanations/" },
+    { "title": "You design it. Then what? A clear map of the Figma-to-code AI mess", "url": "https://uxdesign.cc/you-design-it-then-what-a-clear-map-of-the-figma-to-code-ai-mess-954a4084175f" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "You're using Claude to build a Shojin feature with a Code-Connect-style mapping layer wired in. Three sprints later you change a card's border-radius in Figma but never touch the mapping layer. What happens?",
+      "options": [
+        "The Figma file and the shipped app quietly diverge, because nothing but the mapping layer enforces the link",
+        "Claude automatically re-reads Figma before every build, so production updates itself",
+        "The app fails to compile until the mapping layer is manually deleted",
+        "Claude flags the mismatch the moment you commit, blocking the build"
+      ],
+      "correct": 0,
+      "concept": "design-code-drift"
+    },
+    {
+      "q": "Your app auto-declines a refund request. A support-desk operator — a 'builder' in NN Group's three-role framework — asks why. Which explanation fits what a builder actually needs?",
+      "options": [
+        "A static compliance report showing the quarter's overall approval-rate trend",
+        "A plain-language note citing past similar refund decisions as precedent",
+        "No explanation — builders should trust the system output without detail",
+        "A local, interactive explanation linking the decline to the specific rule it tripped, like the refund window being missed by four days"
+      ],
+      "correct": 3,
+      "concept": "tiered-ai-explanations"
+    },
+    {
+      "q": "You're designing three views of the same AI decision — for an auditor, a support agent, and a customer. Applying visual-hierarchy thinking here means:",
+      "options": [
+        "Using identical layout and detail for all three, since consistency always wins",
+        "Deciding what matters most to that specific viewer first, then building secondary and tertiary detail around it",
+        "Giving the customer view the deepest technical detail, since they're affected most",
+        "Skipping hierarchy for explanation screens, since they aren't really \"UI\""
+      ],
+      "correct": 1,
+      "concept": "visual-hierarchy"
+    }
+  ]
+}
+  </script>
+</body>
+</html>

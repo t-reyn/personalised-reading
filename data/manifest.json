@@ -1,8 +1,42 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-04T20:57:13.935Z",
-  "count": 25,
+  "generatedAt": "2026-07-05T20:58:30.426Z",
+  "count": 26,
   "articles": [
+    {
+      "id": "2026-07-06-judging-ai-generated-design",
+      "slug": "judging-ai-generated-design",
+      "interest": "design",
+      "interests": [
+        "design",
+        "software-ai"
+      ],
+      "mode": "learn",
+      "title": "AI Can Draw The Screen Now — Your Job Is Judging Which One's Right",
+      "summary": "Two design essays published this week converge on the same shift: once AI generates the screen and the code behind it, the designer's real work becomes judgment and explanation, not production.",
+      "tags": [
+        "design",
+        "ai-tools",
+        "design-systems",
+        "explainability",
+        "figma"
+      ],
+      "created_at": "2026-07-06",
+      "expire_at": "2026-09-04",
+      "concepts_taught": [
+        "design-code-drift",
+        "tiered-ai-explanations"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "visual-hierarchy"
+      ],
+      "source_count": 2,
+      "word_count": 643,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-06/judging-ai-generated-design.html"
+    },
     {
       "id": "2026-07-05-underwriting-margins-and-broker-consolidation-fy26",
       "slug": "underwriting-margins-and-broker-consolidation-fy26",

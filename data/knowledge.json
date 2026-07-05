@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-04T20:57:13.772Z",
+  "updatedAt": "2026-07-05T20:58:30.309Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -359,6 +359,12 @@
       "is_learnt": false
     },
     "catastrophe-allowance-reinsurance": {
+      "is_learnt": false
+    },
+    "design-code-drift": {
+      "is_learnt": false
+    },
+    "tiered-ai-explanations": {
       "is_learnt": false
     }
   }
