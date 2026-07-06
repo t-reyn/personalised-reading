@@ -1,8 +1,80 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-05T20:58:30.426Z",
-  "count": 26,
+  "generatedAt": "2026-07-06T21:34:53.536Z",
+  "count": 28,
   "articles": [
+    {
+      "id": "2026-07-07-new-build-depreciation-edge-and-the-spruiker-pitch",
+      "slug": "new-build-depreciation-edge-and-the-spruiker-pitch",
+      "interest": "property",
+      "interests": [
+        "property",
+        "mortgage-broking"
+      ],
+      "mode": "current",
+      "title": "The New-Build Tax Edge Is Real — So Is the Sales Pitch Riding On It",
+      "summary": "A buyer's agency is marketing new builds hard off last week's negative gearing news, with a July 2027 date attached. The underlying tax edge checks out — the pitch built on top of it needs a harder look.",
+      "tags": [
+        "negative gearing",
+        "depreciation",
+        "division 43",
+        "property investing",
+        "Australia",
+        "tax"
+      ],
+      "created_at": "2026-07-07",
+      "expire_at": "2026-08-21",
+      "concepts_taught": [
+        "capital-works-deduction",
+        "advice-conflict-of-interest"
+      ],
+      "concepts_assumed": [
+        "negative-gearing-reform-2026"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 1,
+      "word_count": 602,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-07/new-build-depreciation-edge-and-the-spruiker-pitch.html"
+    },
+    {
+      "id": "2026-07-07-return-to-play-hop-test-numbers",
+      "slug": "return-to-play-hop-test-numbers",
+      "interest": "health",
+      "interests": [
+        "health"
+      ],
+      "mode": "learn",
+      "title": "The Numbers That Actually Clear You to Play Again",
+      "summary": "'Ease back in' isn't a return-to-play criterion. Sports medicine has a harder one: the limb symmetry index and a battery of hop tests — and even a passing score has a catch worth knowing.",
+      "tags": [
+        "injury rehab",
+        "return to play",
+        "ankle",
+        "basketball",
+        "sports science"
+      ],
+      "created_at": "2026-07-07",
+      "expire_at": "2026-08-21",
+      "concepts_taught": [
+        "limb-symmetry-index",
+        "hop-test-battery"
+      ],
+      "concepts_assumed": [
+        "ankle-sprain-grading",
+        "functional-rehab-progression",
+        "proprioception-training"
+      ],
+      "concepts_reinforced": [
+        "zone-2-training"
+      ],
+      "source_count": 2,
+      "word_count": 572,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-07/return-to-play-hop-test-numbers.html"
+    },
     {
       "id": "2026-07-06-judging-ai-generated-design",
       "slug": "judging-ai-generated-design",

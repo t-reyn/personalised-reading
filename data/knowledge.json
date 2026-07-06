@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-05T20:58:30.309Z",
+  "updatedAt": "2026-07-06T21:34:53.391Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -365,6 +365,18 @@
       "is_learnt": false
     },
     "tiered-ai-explanations": {
+      "is_learnt": false
+    },
+    "capital-works-deduction": {
+      "is_learnt": false
+    },
+    "advice-conflict-of-interest": {
+      "is_learnt": false
+    },
+    "limb-symmetry-index": {
+      "is_learnt": false
+    },
+    "hop-test-battery": {
       "is_learnt": false
     }
   }
