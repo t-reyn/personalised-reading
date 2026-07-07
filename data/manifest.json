@@ -1,8 +1,74 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-06T21:34:53.536Z",
-  "count": 28,
+  "generatedAt": "2026-07-07T21:26:15.156Z",
+  "count": 30,
   "articles": [
+    {
+      "id": "2026-07-08-ai-automating-the-grunt-work-of-science",
+      "slug": "ai-automating-the-grunt-work-of-science",
+      "interest": "science",
+      "interests": [
+        "science",
+        "software-ai"
+      ],
+      "mode": "current",
+      "title": "AI Isn't Discovering New Science Yet — It's Automating the Grunt Work Behind It",
+      "summary": "A new Argonne National Laboratory framework runs chemistry experiments from plain English, and a University of Tokyo team upgraded nanoparticle analysis with pure software. Neither discovers anything new — and that's exactly why the pattern matters.",
+      "tags": [
+        "ai",
+        "computational-chemistry",
+        "research-tools",
+        "automation",
+        "materials-science"
+      ],
+      "created_at": "2026-07-08",
+      "expire_at": "2026-07-29",
+      "concepts_taught": [
+        "ai-agent-orchestration",
+        "software-only-instrument-upgrades"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 2,
+      "word_count": 662,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-08/ai-automating-the-grunt-work-of-science.html"
+    },
+    {
+      "id": "2026-07-08-programmatic-seo-and-search-intent",
+      "slug": "programmatic-seo-and-search-intent",
+      "interest": "indie-income",
+      "interests": [
+        "indie-income"
+      ],
+      "mode": "learn",
+      "title": "Why Some Indie Apps Rank for Thousands of Searches and Yours Doesn't",
+      "summary": "Programmatic SEO built Wise's 4.67 million monthly organic visits from one template. The difference between that and a Google spam penalty comes down to two things most indie builders skip: real data, and matching the page to what the searcher wants.",
+      "tags": [
+        "seo",
+        "programmatic-seo",
+        "distribution",
+        "indie-apps",
+        "search-intent"
+      ],
+      "created_at": "2026-07-08",
+      "expire_at": null,
+      "concepts_taught": [
+        "programmatic-seo",
+        "search-intent-matching"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "app-monetisation-models",
+        "subscription-vs-one-time"
+      ],
+      "source_count": 2,
+      "word_count": 613,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-08/programmatic-seo-and-search-intent.html"
+    },
     {
       "id": "2026-07-07-new-build-depreciation-edge-and-the-spruiker-pitch",
       "slug": "new-build-depreciation-edge-and-the-spruiker-pitch",

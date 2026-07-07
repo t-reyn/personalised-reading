@@ -378,6 +378,26 @@
     },
     "hop-test-battery": {
       "is_learnt": false
+    },
+    "ai-agent-orchestration": {
+      "is_learnt": false,
+      "first_taught": "2026-07-08-ai-automating-the-grunt-work-of-science",
+      "difficulty": "medium"
+    },
+    "software-only-instrument-upgrades": {
+      "is_learnt": false,
+      "first_taught": "2026-07-08-ai-automating-the-grunt-work-of-science",
+      "difficulty": "easy"
+    },
+    "programmatic-seo": {
+      "is_learnt": false,
+      "first_taught": "2026-07-08-programmatic-seo-and-search-intent",
+      "difficulty": "medium"
+    },
+    "search-intent-matching": {
+      "is_learnt": false,
+      "first_taught": "2026-07-08-programmatic-seo-and-search-intent",
+      "difficulty": "easy"
     }
   }
 }
