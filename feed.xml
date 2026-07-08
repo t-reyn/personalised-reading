@@ -4,7 +4,23 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Tue, 07 Jul 2026 21:26:15 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 21:08:23 GMT</lastBuildDate>
+    <item>
+      <title>Every Shot You Take Comes Down To Three Dials Fighting Each Other</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-09/exposure-triangle-for-beginners.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-09/exposure-triangle-for-beginners.html</guid>
+      <category>videography</category>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Aperture, shutter speed and ISO trade off against each other in every frame you shoot, and video adds a fourth rule photography doesn&#39;t need. Here&#39;s how the three dials work, and why pushing ISO to fix a dark shot makes it look worse, not better.</description>
+    </item>
+    <item>
+      <title>Why Some Screens Feel Instantly Organised And Others Feel Like A Wall Of Buttons</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-09/gestalt-grouping-proximity-and-similarity.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-09/gestalt-grouping-proximity-and-similarity.html</guid>
+      <category>design</category>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Two Nielsen Norman Group breakdowns of Gestalt grouping explain why some interfaces read as organised at a glance: proximity and similarity are doing the work before anyone reads a word, whether or not you designed for them.</description>
+    </item>
     <item>
       <title>AI Isn&#39;t Discovering New Science Yet — It&#39;s Automating the Grunt Work Behind It</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-08/ai-automating-the-grunt-work-of-science.html</link>

@@ -398,6 +398,31 @@
       "is_learnt": false,
       "first_taught": "2026-07-08-programmatic-seo-and-search-intent",
       "difficulty": "easy"
+    },
+    "exposure-triangle": {
+      "is_learnt": false,
+      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
+      "difficulty": "medium"
+    },
+    "iso-noise-tradeoff": {
+      "is_learnt": false,
+      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
+      "difficulty": "easy"
+    },
+    "180-degree-shutter-rule": {
+      "is_learnt": false,
+      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
+      "difficulty": "hard"
+    },
+    "gestalt-proximity": {
+      "is_learnt": false,
+      "first_taught": "2026-07-09-gestalt-grouping-proximity-and-similarity",
+      "difficulty": "easy"
+    },
+    "gestalt-similarity": {
+      "is_learnt": false,
+      "first_taught": "2026-07-09-gestalt-grouping-proximity-and-similarity",
+      "difficulty": "medium"
     }
   }
 }

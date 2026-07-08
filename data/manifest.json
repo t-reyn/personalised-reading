@@ -1,8 +1,74 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-07T21:26:15.156Z",
-  "count": 30,
+  "generatedAt": "2026-07-08T21:08:23.655Z",
+  "count": 32,
   "articles": [
+    {
+      "id": "2026-07-09-exposure-triangle-for-beginners",
+      "slug": "exposure-triangle-for-beginners",
+      "interest": "videography",
+      "interests": [
+        "videography"
+      ],
+      "mode": "learn",
+      "title": "Every Shot You Take Comes Down To Three Dials Fighting Each Other",
+      "summary": "Aperture, shutter speed and ISO trade off against each other in every frame you shoot, and video adds a fourth rule photography doesn't need. Here's how the three dials work, and why pushing ISO to fix a dark shot makes it look worse, not better.",
+      "tags": [
+        "videography",
+        "cinematography",
+        "exposure",
+        "camera-settings",
+        "fundamentals"
+      ],
+      "created_at": "2026-07-09",
+      "expire_at": null,
+      "concepts_taught": [
+        "exposure-triangle",
+        "iso-noise-tradeoff",
+        "180-degree-shutter-rule"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 2,
+      "word_count": 650,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-09/exposure-triangle-for-beginners.html"
+    },
+    {
+      "id": "2026-07-09-gestalt-grouping-proximity-and-similarity",
+      "slug": "gestalt-grouping-proximity-and-similarity",
+      "interest": "design",
+      "interests": [
+        "design",
+        "software-ai"
+      ],
+      "mode": "learn",
+      "title": "Why Some Screens Feel Instantly Organised And Others Feel Like A Wall Of Buttons",
+      "summary": "Two Nielsen Norman Group breakdowns of Gestalt grouping explain why some interfaces read as organised at a glance: proximity and similarity are doing the work before anyone reads a word, whether or not you designed for them.",
+      "tags": [
+        "design",
+        "ux",
+        "gestalt-principles",
+        "visual-design",
+        "ui-fundamentals"
+      ],
+      "created_at": "2026-07-09",
+      "expire_at": "2026-09-07",
+      "concepts_taught": [
+        "gestalt-proximity",
+        "gestalt-similarity"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "whitespace-rhythm"
+      ],
+      "source_count": 2,
+      "word_count": 577,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-09/gestalt-grouping-proximity-and-similarity.html"
+    },
     {
       "id": "2026-07-08-ai-automating-the-grunt-work-of-science",
       "slug": "ai-automating-the-grunt-work-of-science",
