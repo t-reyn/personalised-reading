@@ -1,8 +1,76 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-09T21:23:11.406Z",
-  "count": 32,
+  "generatedAt": "2026-07-09T23:08:57.661Z",
+  "count": 34,
   "articles": [
+    {
+      "id": "2026-07-10-brokings-next-growth-line-isnt-home-loans",
+      "slug": "brokings-next-growth-line-isnt-home-loans",
+      "interest": "mortgage-broking",
+      "interests": [
+        "mortgage-broking",
+        "property"
+      ],
+      "mode": "current",
+      "title": "Broking's Next Growth Line Isn't Home Loans Anymore",
+      "summary": "Three Broker Daily stories published the same day describe one shift: SME clients are borrowing to survive rather than grow, aggregators are racing into commercial and SMSF lending to catch them, and none of it works on top of a dirty CRM.",
+      "tags": [
+        "mortgage-broking",
+        "sme-lending",
+        "smsf",
+        "crm",
+        "broker-technology"
+      ],
+      "created_at": "2026-07-10",
+      "expire_at": "2026-07-31",
+      "concepts_taught": [
+        "sme-defensive-borrowing",
+        "commercial-smsf-broker-expansion",
+        "crm-data-hygiene"
+      ],
+      "concepts_assumed": [
+        "lrba"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 609,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-10/brokings-next-growth-line-isnt-home-loans.html"
+    },
+    {
+      "id": "2026-07-10-what-ai-is-actually-doing-inside-life-insurers",
+      "slug": "what-ai-is-actually-doing-inside-life-insurers",
+      "interest": "actuarial",
+      "interests": [
+        "actuarial",
+        "software-ai"
+      ],
+      "mode": "current",
+      "title": "What AI Is Actually Doing Inside Australian Life Insurers",
+      "summary": "The Actuaries Institute's Life Insurance Data and AI Working Group named six live AI use cases in Australian life insurers — and none of them makes a pricing or reserving call. A second Institute session the same fortnight explains why that gap matters.",
+      "tags": [
+        "actuarial",
+        "life-insurance",
+        "artificial-intelligence",
+        "protection-gap",
+        "risk-frameworks"
+      ],
+      "created_at": "2026-07-10",
+      "expire_at": null,
+      "concepts_taught": [
+        "life-insurance-ai-applications",
+        "insurance-protection-gap",
+        "risk-cycle-compression"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 2,
+      "word_count": 677,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-10/what-ai-is-actually-doing-inside-life-insurers.html"
+    },
     {
       "id": "2026-07-09-exposure-triangle-for-beginners",
       "slug": "exposure-triangle-for-beginners",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-06T21:34:53.391Z",
+  "updatedAt": "2026-07-09T23:08:57.539Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -329,13 +329,19 @@
       "is_learnt": false
     },
     "exposure-triangle": {
-      "is_learnt": false
+      "is_learnt": false,
+      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
+      "difficulty": "medium"
     },
     "180-degree-shutter-rule": {
-      "is_learnt": false
+      "is_learnt": false,
+      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
+      "difficulty": "hard"
     },
     "iso-noise-tradeoff": {
-      "is_learnt": false
+      "is_learnt": false,
+      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
+      "difficulty": "easy"
     },
     "channel-decay": {
       "is_learnt": false,
@@ -399,21 +405,6 @@
       "first_taught": "2026-07-08-programmatic-seo-and-search-intent",
       "difficulty": "easy"
     },
-    "exposure-triangle": {
-      "is_learnt": false,
-      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
-      "difficulty": "medium"
-    },
-    "iso-noise-tradeoff": {
-      "is_learnt": false,
-      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
-      "difficulty": "easy"
-    },
-    "180-degree-shutter-rule": {
-      "is_learnt": false,
-      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
-      "difficulty": "hard"
-    },
     "gestalt-proximity": {
       "is_learnt": false,
       "first_taught": "2026-07-09-gestalt-grouping-proximity-and-similarity",
@@ -423,6 +414,24 @@
       "is_learnt": false,
       "first_taught": "2026-07-09-gestalt-grouping-proximity-and-similarity",
       "difficulty": "medium"
+    },
+    "sme-defensive-borrowing": {
+      "is_learnt": false
+    },
+    "commercial-smsf-broker-expansion": {
+      "is_learnt": false
+    },
+    "crm-data-hygiene": {
+      "is_learnt": false
+    },
+    "life-insurance-ai-applications": {
+      "is_learnt": false
+    },
+    "insurance-protection-gap": {
+      "is_learnt": false
+    },
+    "risk-cycle-compression": {
+      "is_learnt": false
     }
   }
 }
