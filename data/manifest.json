@@ -1,8 +1,73 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-09T23:08:57.661Z",
-  "count": 34,
+  "generatedAt": "2026-07-10T21:13:39.311Z",
+  "count": 36,
   "articles": [
+    {
+      "id": "2026-07-11-the-two-numbers-that-tell-you-if-growth-is-working",
+      "slug": "the-two-numbers-that-tell-you-if-growth-is-working",
+      "interest": "indie-income",
+      "interests": [
+        "indie-income"
+      ],
+      "mode": "learn",
+      "title": "The Two Numbers That Tell You If Your App Is Actually Working",
+      "summary": "A side project can gain users every week and still lose money on each one. Customer acquisition cost and the LTV:CAC ratio are the two numbers that tell the difference — and why the manual, unscalable acquisition phase is what makes them trustworthy.",
+      "tags": [
+        "indie-income",
+        "metrics",
+        "growth",
+        "pricing"
+      ],
+      "created_at": "2026-07-11",
+      "expire_at": null,
+      "concepts_taught": [
+        "customer-acquisition-cost",
+        "ltv-cac-ratio"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "early-customer-acquisition"
+      ],
+      "source_count": 0,
+      "word_count": 504,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-11/the-two-numbers-that-tell-you-if-growth-is-working.html"
+    },
+    {
+      "id": "2026-07-11-vix-drop-and-the-ai-capex-bet",
+      "slug": "vix-drop-and-the-ai-capex-bet",
+      "interest": "finance",
+      "interests": [
+        "finance"
+      ],
+      "mode": "current",
+      "title": "Volatility Just Cratered — Here's What Markets Are Betting On",
+      "summary": "The VIX fell to a 2026 low of 15.03 overnight while the S&P 500 and ASX 200 both pushed higher. Read together with a firmer AUD and softer gold, it's a textbook risk-on signal — and it says something specific about how markets are pricing the AI capex build-out.",
+      "tags": [
+        "finance",
+        "markets",
+        "volatility",
+        "asx",
+        "super"
+      ],
+      "created_at": "2026-07-11",
+      "expire_at": "2026-08-01",
+      "concepts_taught": [
+        "vix-fear-gauge",
+        "risk-on-risk-off-signal"
+      ],
+      "concepts_assumed": [
+        "ai-compute-infrastructure"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 1,
+      "word_count": 668,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-11/vix-drop-and-the-ai-capex-bet.html"
+    },
     {
       "id": "2026-07-10-brokings-next-growth-line-isnt-home-loans",
       "slug": "brokings-next-growth-line-isnt-home-loans",

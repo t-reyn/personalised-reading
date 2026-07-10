@@ -17,3 +17,4 @@
 {"date":"2026-07-08","articles":2,"cost_usd":3.6740641000000007,"input":5293,"output":49410,"cache_read":4993237,"cache_creation":220199,"turns":45,"model":"sonnet"}
 {"date":"2026-07-09","articles":0,"cost_usd":3.673283099999999,"input":4261,"output":40021,"cache_read":5148727,"cache_creation":242477,"turns":45,"model":"sonnet"}
 {"date":"2026-07-09","articles":2,"cost_usd":3.666231,"input":6275,"output":52421,"cache_read":4614430,"cache_creation":215384,"turns":45,"model":"sonnet"}
+{"date":"2026-07-10","articles":2,"cost_usd":4.263274400000001,"input":9426,"output":58734,"cache_read":5828570,"cache_creation":218438,"turns":45,"model":"sonnet"}
