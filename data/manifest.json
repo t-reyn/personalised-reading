@@ -1,8 +1,75 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-10T21:13:39.311Z",
-  "count": 36,
+  "generatedAt": "2026-07-11T20:49:43.513Z",
+  "count": 38,
   "articles": [
+    {
+      "id": "2026-07-12-cold-exposure-and-hrv-what-the-evidence-says",
+      "slug": "cold-exposure-and-hrv-what-the-evidence-says",
+      "interest": "health",
+      "interests": [
+        "health"
+      ],
+      "mode": "learn",
+      "title": "What Cold Exposure and HRV Actually Do For Recovery",
+      "summary": "Two biohacks with real physiology behind them: cold exposure measurably changes your metabolism, and a wearable turns heart rate variability into a daily readiness signal. Here's what the evidence supports and how to use both while you're rebuilding from injury.",
+      "tags": [
+        "biohacking",
+        "cold exposure",
+        "HRV",
+        "recovery",
+        "sleep"
+      ],
+      "created_at": "2026-07-12",
+      "expire_at": "2026-08-26",
+      "concepts_taught": [
+        "cold-exposure-adaptation",
+        "hrv-recovery-tracking"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "sleep-temperature"
+      ],
+      "source_count": 2,
+      "word_count": 749,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-12/cold-exposure-and-hrv-what-the-evidence-says.html"
+    },
+    {
+      "id": "2026-07-12-what-iags-rac-remedy-offer-tells-you-about-merger-review",
+      "slug": "what-iags-rac-remedy-offer-tells-you-about-merger-review",
+      "interest": "actuarial",
+      "interests": [
+        "actuarial"
+      ],
+      "mode": "current",
+      "title": "What IAG's RAC Remedy Offer Tells You About Merger Review",
+      "summary": "IAG has tabled a competitiveness framework and a repair-facility commitment to get its $1.35 billion RAC Insurance deal past the ACCC. The mechanics of a merger remedy, and why competition regulators care about your combined ratio, in one live case study.",
+      "tags": [
+        "ACCC",
+        "IAG",
+        "RAC Insurance",
+        "merger review",
+        "general insurance",
+        "competition"
+      ],
+      "created_at": "2026-07-12",
+      "expire_at": null,
+      "concepts_taught": [
+        "merger-remedies",
+        "market-concentration-pricing-power"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "combined-ratio"
+      ],
+      "source_count": 2,
+      "word_count": 578,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-12/what-iags-rac-remedy-offer-tells-you-about-merger-review.html"
+    },
     {
       "id": "2026-07-11-the-two-numbers-that-tell-you-if-growth-is-working",
       "slug": "the-two-numbers-that-tell-you-if-growth-is-working",
