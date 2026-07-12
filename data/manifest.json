@@ -1,8 +1,75 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-11T20:49:43.513Z",
-  "count": 38,
+  "generatedAt": "2026-07-12T20:47:47.189Z",
+  "count": 40,
   "articles": [
+    {
+      "id": "2026-07-13-the-design-system-a-solo-builder-actually-needs",
+      "slug": "the-design-system-a-solo-builder-actually-needs",
+      "interest": "design",
+      "interests": [
+        "design",
+        "software-ai"
+      ],
+      "mode": "learn",
+      "title": "The Design System a Solo Builder Actually Needs",
+      "summary": "Design systems sound like a big-company problem, but the two dimensions that stop an app looking inconsistent — tokens and governance — fit in one file, even for a team of one.",
+      "tags": [
+        "design-systems",
+        "design-tokens",
+        "ux-fundamentals",
+        "ai-assisted-design"
+      ],
+      "created_at": "2026-07-13",
+      "expire_at": null,
+      "concepts_taught": [
+        "design-tokens",
+        "design-system-governance"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "visual-hierarchy",
+        "contrast-for-hierarchy"
+      ],
+      "source_count": 2,
+      "word_count": 704,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-13/the-design-system-a-solo-builder-actually-needs.html"
+    },
+    {
+      "id": "2026-07-13-why-speed-is-beating-the-rate-sheet-in-commercial-lending",
+      "slug": "why-speed-is-beating-the-rate-sheet-in-commercial-lending",
+      "interest": "mortgage-broking",
+      "interests": [
+        "mortgage-broking"
+      ],
+      "mode": "current",
+      "title": "Why Speed Is Beating the Rate Sheet in Commercial Lending",
+      "summary": "A June 2026 broker survey shows ANZ and Westpac topping usage share in commercial lending — but the numbers that actually decide a deal are turnaround time and credit-assessment satisfaction, not brand habit.",
+      "tags": [
+        "commercial-lending",
+        "broker-panel",
+        "lender-turnaround",
+        "mortgage-broking",
+        "Australia"
+      ],
+      "created_at": "2026-07-13",
+      "expire_at": "2026-08-03",
+      "concepts_taught": [
+        "panel-lender-selection",
+        "loan-turnaround-benchmarking"
+      ],
+      "concepts_assumed": [
+        "lrba"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 2,
+      "word_count": 666,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-13/why-speed-is-beating-the-rate-sheet-in-commercial-lending.html"
+    },
     {
       "id": "2026-07-12-cold-exposure-and-hrv-what-the-evidence-says",
       "slug": "cold-exposure-and-hrv-what-the-evidence-says",

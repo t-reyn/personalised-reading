@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-11T20:49:43.362Z",
+  "updatedAt": "2026-07-13T00:00:00.000Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -464,6 +464,26 @@
     },
     "market-concentration-pricing-power": {
       "is_learnt": false
+    },
+    "panel-lender-selection": {
+      "is_learnt": false,
+      "first_taught": "2026-07-13-why-speed-is-beating-the-rate-sheet-in-commercial-lending",
+      "difficulty": "medium"
+    },
+    "loan-turnaround-benchmarking": {
+      "is_learnt": false,
+      "first_taught": "2026-07-13-why-speed-is-beating-the-rate-sheet-in-commercial-lending",
+      "difficulty": "medium"
+    },
+    "design-tokens": {
+      "is_learnt": false,
+      "first_taught": "2026-07-13-the-design-system-a-solo-builder-actually-needs",
+      "difficulty": "medium"
+    },
+    "design-system-governance": {
+      "is_learnt": false,
+      "first_taught": "2026-07-13-the-design-system-a-solo-builder-actually-needs",
+      "difficulty": "medium"
     }
   }
 }

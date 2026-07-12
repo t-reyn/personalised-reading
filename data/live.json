@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-11T20:39:16.602Z",
-  "asOf": "12 July 2026, 6:39 am AEST",
+  "updatedAt": "2026-07-12T20:35:53.635Z",
+  "asOf": "13 July 2026, 6:35 am AEST",
   "markets": [
     {
       "symbol": "^AXJO",
@@ -26,9 +26,9 @@
       "label": "AUD/USD",
       "currency": "USD",
       "unit": null,
-      "price": 0.6955,
-      "changePct": 0.27,
-      "display": "0.6955 (+0.3%)"
+      "price": 0.6948,
+      "changePct": 0.17,
+      "display": "0.6948 (+0.2%)"
     },
     {
       "symbol": "GC=F",
@@ -36,8 +36,8 @@
       "currency": "USD",
       "unit": "USD/oz",
       "price": 4113.7,
-      "changePct": -0.41,
-      "display": "4,113.7 (-0.4%)"
+      "changePct": 0.23,
+      "display": "4,113.7 (+0.2%)"
     },
     {
       "symbol": "CL=F",
@@ -45,8 +45,8 @@
       "currency": "USD",
       "unit": "USD/bbl",
       "price": 71.41,
-      "changePct": -0.93,
-      "display": "71.41 (-0.9%)"
+      "changePct": 0,
+      "display": "71.41 (+0.0%)"
     },
     {
       "symbol": "^VIX",
@@ -62,19 +62,19 @@
     {
       "id": "bitcoin",
       "label": "Bitcoin",
-      "aud": 92482,
-      "usd": 64302,
-      "changePct": 0.73,
-      "display": "A$92,482 (+0.7%)"
+      "aud": 92353,
+      "usd": 64145,
+      "changePct": -0.14,
+      "display": "A$92,353 (-0.1%)"
     },
     {
       "id": "ethereum",
       "label": "Ethereum",
-      "aud": 2624.09,
-      "usd": 1824.53,
-      "changePct": 1.79,
-      "display": "A$2,624 (+1.8%)"
+      "aud": 2618,
+      "usd": 1818.37,
+      "changePct": -0.23,
+      "display": "A$2,618 (-0.2%)"
     }
   ],
-  "summary": "ASX 200 8,806.0 (+0.2%) · S&P 500 7,575.4 (+1.2%) · AUD/USD 0.6955 (+0.3%) · Gold 4,113.7 (-0.4%) · WTI 71.41 (-0.9%) · VIX 15.03 (-5.1%) · Bitcoin A$92,482 (+0.7%) · Ethereum A$2,624 (+1.8%)"
+  "summary": "ASX 200 8,806.0 (+0.2%) · S&P 500 7,575.4 (+1.2%) · AUD/USD 0.6948 (+0.2%) · Gold 4,113.7 (+0.2%) · WTI 71.41 (+0.0%) · VIX 15.03 (-5.1%) · Bitcoin A$92,353 (-0.1%) · Ethereum A$2,618 (-0.2%)"
 }

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Design System a Solo Builder Actually Needs</title>
+  <meta name="description" content="Design systems sound like a big-company problem, but the two dimensions that stop an app looking inconsistent — tokens and governance — fit in one file, even for a team of one." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="design">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-07-13-the-design-system-a-solo-builder-actually-needs">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>🎨 Design & Craft</p>
+        <h1>The Design System a Solo Builder Actually Needs</h1>
+        <p class="doc-meta">13 July 2026 · synthesised from 2 sources</p>
+        <p class="doc-summary">Design systems sound like a big-company problem, but the two dimensions that stop an app looking inconsistent — tokens and governance — fit in one file, even for a team of one.</p>
+      </header>
+
+      <div class="doc-body">
+        <p>Every app that grows past a handful of screens starts to drift: one screen's button is 8px more rounded than another's, a heading is 22px on one page and 24px on the next, a "warning" colour shows up as three different shades of amber. Nielsen Norman Group's design-system maturity framework, published this month, breaks the fix into six dimensions — organisational alignment, team effectiveness, infrastructure, governance, support and adoption — scored independently on a 1-to-5 scale rather than as one linear ladder. Most of those dimensions assume a company with multiple design and engineering teams. Two of them don't, and they're the two that actually stop the drift: infrastructure and governance.</p>
+
+        <h2>Infrastructure: design tokens</h2>
+        <p><strong>Design tokens</strong> are the mechanism, and they're simpler than the name suggests. A token is a named, reusable value — a colour, a spacing amount, a type size — that every screen references instead of a hard-coded number. Rather than one screen using <code>#3B82F6</code> and another using <code>#3A82F5</code> for the same "primary" blue, both reference a single token called something like <code>color-primary</code>. Change the token once, and every screen that uses it updates together. This is the same vocabulary you've already got — visual hierarchy, a type scale, whitespace rhythm, contrast for readability — just packaged as variables instead of left to memory. You already know a type scale should step predictably (say 14 / 16 / 20 / 28px) and that hierarchy comes from consistently applying size, weight and spacing together, not randomly per screen; a token file is what turns "I try to keep it consistent" into "it's structurally impossible to be inconsistent," because there's only one number to pull from. The same discipline applies to contrast: pick your text-on-background pairs once, token them, and every new screen inherits a pairing you've already checked is readable, rather than re-guessing it each time.</p>
+
+        <h2>Governance: the rules AI (or a future you) actually follows</h2>
+        <p>NN/g's governance dimension is about who can add or change something in the system and how exceptions get handled — sounds corporate, but it maps directly onto a problem solo builders hit constantly. Patrick Neeman, writing in UX Collective this month, makes the case that AI tools have shifted design craft away from producing pixels and toward judgement — deciding which of a thousand plausible AI-generated options actually deserves to exist. His practical fix is a standing "scaffolding" document (he cites Google's internal DESIGN.md format) that states the rules explicitly, because — his phrase — "the machine cannot read your hands; it can only read your words." For a one-person team, governance doesn't need a review board. It needs one short file: your token values, your spacing scale, three or four sentences on when a new colour or component is allowed versus when you should reuse what exists. That file is what an AI coding assistant reads before generating a new screen, and it's what stops "just this once" exceptions from quietly becoming the new default three features later.</p>
+
+        <h2>Skip the other four dimensions — for now</h2>
+        <p>NN/g's organisational-alignment, team-effectiveness, support and adoption dimensions matter once a system has to survive multiple contributors and leadership turnover. They're close to irrelevant to a single builder shipping fast — there's no one else's adoption to drive, no leadership sponsorship to secure. Trying to build all six dimensions before shipping a feature is how design systems become a procrastination device. A maturity-2 system — a token file and a one-page rules doc, both genuinely used — beats a maturity-5 framework that exists only as an aspiration.</p>
+
+        <h2>What to do with the next screen you build</h2>
+        <p>Open a single file and write down your actual tokens: two or three colours (primary, background, one semantic warning/error/success set), three or four type sizes, and a spacing scale of four or five steps. Add three sentences on when you're allowed to introduce a new value versus reuse an existing one. Reference that file — or paste it into context — every time you or an AI assistant builds a new screen. That's the whole system. It won't win a design award, but it's the difference between an app that looks like one product and one that looks like four screens stitched together.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://www.nngroup.com/articles/design-system-maturity/" target="_blank" rel="noopener">Design-System Maturity: A 6-Dimension Framework — Nielsen Norman Group</a></li>
+          <li><a href="https://uxdesign.cc/craft-still-matters-but-its-not-about-pixels-anymore-ai-can-help-you-keep-it-e542cac33d12" target="_blank" rel="noopener">Craft Still Matters, but It's About Outcomes — UX Collective</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-07-13-the-design-system-a-solo-builder-actually-needs",
+  "slug": "the-design-system-a-solo-builder-actually-needs",
+  "interest": "design",
+  "interests": ["design", "software-ai"],
+  "mode": "learn",
+  "title": "The Design System a Solo Builder Actually Needs",
+  "summary": "Design systems sound like a big-company problem, but the two dimensions that stop an app looking inconsistent — tokens and governance — fit in one file, even for a team of one.",
+  "tags": ["design-systems", "design-tokens", "ux-fundamentals", "ai-assisted-design"],
+  "created_at": "2026-07-13",
+  "concepts_taught": ["design-tokens", "design-system-governance"],
+  "concepts_assumed": [],
+  "concepts_reinforced": ["visual-hierarchy", "contrast-for-hierarchy"],
+  "sources": [
+    { "title": "Design-System Maturity: A 6-Dimension Framework", "url": "https://www.nngroup.com/articles/design-system-maturity/" },
+    { "title": "Craft Still Matters, but It's About Outcomes", "url": "https://uxdesign.cc/craft-still-matters-but-its-not-about-pixels-anymore-ai-can-help-you-keep-it-e542cac33d12" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "Two screens in an app show slightly different shades of blue for the same 'primary' button. What does a design token fix, and how?",
+      "options": [
+        "It hides the inconsistency by blurring the colours together",
+        "It removes colour from the interface entirely to avoid the problem",
+        "It requires a designer to manually check every screen before each release",
+        "It replaces both hard-coded colours with one named, reusable value that both screens reference, so a single change updates them together"
+      ],
+      "correct": 3,
+      "concept": "design-tokens"
+    },
+    {
+      "q": "A solo builder wants the 'governance' dimension of a design system without a review board. What's the practical equivalent?",
+      "options": [
+        "Hiring a second designer purely to approve changes",
+        "A short rules file stating token values and when a new colour or component is allowed versus reused",
+        "Skipping governance entirely, since it only applies to large teams",
+        "A weekly meeting to vote on every new UI element"
+      ],
+      "correct": 1,
+      "concept": "design-system-governance"
+    },
+    {
+      "q": "A habit-tracking app's home screen uses large bold numbers for the streak count and small grey text for settings links. A new screen the builder adds uses the same font size and weight for a key stat and a footer link. What's gone wrong?",
+      "options": [
+        "Nothing — hierarchy only applies to the home screen",
+        "The app has too many screens, which is the real problem",
+        "This is a contrast issue, not a hierarchy issue",
+        "Visual hierarchy has broken down — nothing signals which element matters most, since size and weight no longer differ by importance"
+      ],
+      "correct": 3,
+      "concept": "visual-hierarchy"
+    },
+    {
+      "q": "A screen uses light-grey body text (roughly a 2:1 contrast ratio) on a white background because it 'looks clean.' What's the practical risk, applying what you know about contrast for hierarchy?",
+      "options": [
+        "The text becomes hard to read for many users, especially in bright light or with lower vision, undermining the whole point of hierarchy signalling what to read first",
+        "None — contrast ratio only matters for headings, not body text",
+        "It will make the page load more slowly",
+        "It automatically fixes any spacing problems on the page"
+      ],
+      "correct": 0,
+      "concept": "contrast-for-hierarchy"
+    }
+  ]
+}
+  </script>
+</body>
+</html>
