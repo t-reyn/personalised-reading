@@ -1,8 +1,78 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-13T11:15:15.795Z",
-  "count": 40,
+  "generatedAt": "2026-07-13T21:02:55.126Z",
+  "count": 42,
   "articles": [
+    {
+      "id": "2026-07-14-benchmarking-your-app-against-what-actually-converts",
+      "slug": "benchmarking-your-app-against-what-actually-converts",
+      "interest": "indie-income",
+      "interests": [
+        "indie-income",
+        "software-ai"
+      ],
+      "mode": "learn",
+      "title": "Benchmarking Your App Against What Actually Converts",
+      "summary": "A 2025 benchmark of thousands of live subscription apps found a 400x gap between the top and bottom performers in year-one revenue. The gap isn't the idea — it's three measurable choices you can check against real numbers.",
+      "tags": [
+        "app-monetisation",
+        "benchmarks",
+        "subscriptions",
+        "paywalls",
+        "indie-income"
+      ],
+      "created_at": "2026-07-14",
+      "expire_at": null,
+      "concepts_taught": [
+        "revenue-per-install",
+        "paywall-strategy"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "app-monetisation-models",
+        "subscription-vs-one-time",
+        "freemium-conversion"
+      ],
+      "source_count": 2,
+      "word_count": 773,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-14/benchmarking-your-app-against-what-actually-converts.html"
+    },
+    {
+      "id": "2026-07-14-putting-numbers-on-ais-biggest-costs",
+      "slug": "putting-numbers-on-ais-biggest-costs",
+      "interest": "science",
+      "interests": [
+        "science",
+        "software-ai"
+      ],
+      "mode": "current",
+      "title": "Putting Numbers on AI's Biggest Costs",
+      "summary": "Two studies landed this week trying to quantify what AI actually costs — one on jobs, signed by 200+ economists and 16 Nobel laureates, one on emissions, from a Rice University team measuring how much of a data centre's carbon output could be buried underground.",
+      "tags": [
+        "artificial-intelligence",
+        "climate",
+        "labour-economics",
+        "carbon-capture",
+        "data-centres"
+      ],
+      "created_at": "2026-07-14",
+      "expire_at": "2026-08-04",
+      "concepts_taught": [
+        "carbon-capture-and-storage",
+        "technological-unemployment"
+      ],
+      "concepts_assumed": [
+        "ai-energy-demand"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 2,
+      "word_count": 731,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-14/putting-numbers-on-ais-biggest-costs.html"
+    },
     {
       "id": "2026-07-13-the-design-system-a-solo-builder-actually-needs",
       "slug": "the-design-system-a-solo-builder-actually-needs",

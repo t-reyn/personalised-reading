@@ -20,3 +20,4 @@
 {"date":"2026-07-10","articles":2,"cost_usd":4.263274400000001,"input":9426,"output":58734,"cache_read":5828570,"cache_creation":218438,"turns":45,"model":"sonnet"}
 {"date":"2026-07-11","articles":2,"cost_usd":3.1230791999999994,"input":2744,"output":50134,"cache_read":4623884,"cache_creation":140983,"turns":45,"model":"sonnet"}
 {"date":"2026-07-12","articles":2,"cost_usd":3.423788,"input":2958,"output":55567,"cache_read":5485030,"cache_creation":146406,"turns":45,"model":"sonnet"}
+{"date":"2026-07-13","articles":2,"cost_usd":4.309199200000001,"input":8066,"output":62516,"cache_read":6696234,"cache_creation":210788,"turns":45,"model":"sonnet"}

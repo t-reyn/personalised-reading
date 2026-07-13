@@ -484,6 +484,26 @@
       "is_learnt": false,
       "first_taught": "2026-07-13-the-design-system-a-solo-builder-actually-needs",
       "difficulty": "medium"
+    },
+    "carbon-capture-and-storage": {
+      "is_learnt": false,
+      "first_taught": "2026-07-14-putting-numbers-on-ais-biggest-costs",
+      "difficulty": "medium"
+    },
+    "technological-unemployment": {
+      "is_learnt": false,
+      "first_taught": "2026-07-14-putting-numbers-on-ais-biggest-costs",
+      "difficulty": "easy"
+    },
+    "revenue-per-install": {
+      "is_learnt": false,
+      "first_taught": "2026-07-14-benchmarking-your-app-against-what-actually-converts",
+      "difficulty": "medium"
+    },
+    "paywall-strategy": {
+      "is_learnt": false,
+      "first_taught": "2026-07-14-benchmarking-your-app-against-what-actually-converts",
+      "difficulty": "medium"
     }
   }
 }

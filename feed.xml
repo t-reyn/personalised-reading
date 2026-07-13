@@ -4,7 +4,23 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Mon, 13 Jul 2026 11:15:15 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 21:02:55 GMT</lastBuildDate>
+    <item>
+      <title>Benchmarking Your App Against What Actually Converts</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-14/benchmarking-your-app-against-what-actually-converts.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-14/benchmarking-your-app-against-what-actually-converts.html</guid>
+      <category>indie-income</category>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A 2025 benchmark of thousands of live subscription apps found a 400x gap between the top and bottom performers in year-one revenue. The gap isn&#39;t the idea — it&#39;s three measurable choices you can check against real numbers.</description>
+    </item>
+    <item>
+      <title>Putting Numbers on AI&#39;s Biggest Costs</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-14/putting-numbers-on-ais-biggest-costs.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-14/putting-numbers-on-ais-biggest-costs.html</guid>
+      <category>science</category>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Two studies landed this week trying to quantify what AI actually costs — one on jobs, signed by 200+ economists and 16 Nobel laureates, one on emissions, from a Rice University team measuring how much of a data centre&#39;s carbon output could be buried underground.</description>
+    </item>
     <item>
       <title>The Design System a Solo Builder Actually Needs</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-13/the-design-system-a-solo-builder-actually-needs.html</link>

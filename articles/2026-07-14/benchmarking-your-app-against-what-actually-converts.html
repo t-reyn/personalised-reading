@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Benchmarking Your App Against What Actually Converts</title>
+  <meta name="description" content="A 2025 benchmark of thousands of live subscription apps found a 400x gap between the top and bottom performers in year-one revenue. The gap isn't the idea — it's three measurable choices you can check against real numbers." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="indie-income">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-07-14-benchmarking-your-app-against-what-actually-converts">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>🌱 Indie Income</p>
+        <h1>Benchmarking Your App Against What Actually Converts</h1>
+        <p class="doc-meta">14 July 2026 · synthesised from 2 sources</p>
+        <p class="doc-summary">A 2025 benchmark of thousands of live subscription apps found a 400x gap between the top and bottom performers in year-one revenue. The gap isn't the idea — it's three measurable choices you can check against real numbers.</p>
+      </header>
+
+      <div class="doc-body">
+        <p>RevenueCat's 2025 State of Subscription Apps report, drawn from data across thousands of live apps, put an exact number on the spread between winners and losers: the top 5% of newly launched apps earn $8,880 in their first year; the bottom 25% earn no more than $19. Same app stores, same distribution rules, often solving genuinely similar problems. That's a roughly 400x gap. That pattern isn't specific to apps, either. Shopify's 2026 side-business survey shows the same shape everywhere solo builders sell direct: early bloggers average $1,000–3,000 a month, self-published authors average $82,607 a year against a $2,940–5,560 upfront cost. Wide, power-law outcomes for the same category of work. What the app data adds that the general side-hustle data doesn't is enough volume to show <em>which</em> choices move you up that curve.</p>
+
+        <h2>Revenue per install: size the idea before you build it</h2>
+        <p>Revenue per install (RPI), total revenue from a cohort divided by how many people installed it, is the metric that lets you sanity-check an idea before you spend a month building it, because it's stated per-user rather than as a lump MRR figure that hides how many installs it took to get there. RevenueCat's day-60 median across all categories is $0.31. It varies by category: Health & Fitness apps sit at $0.63 (top decile $4.19), Education at $0.40 (top decile $3.13), Business tools at a lower $0.29. AI-powered apps land at $0.63 too, double the all-category median: a genuine sign the "AI wrapper" positioning still carries a monetisation premium, not just a marketing one.</p>
+        <p>The practical use: before committing real build time to a gym-tracking app or a wedding-planning tool, estimate a realistic install count from your actual reach (an existing audience, a niche subreddit, organic search volume for the problem) and multiply by the category's median RPI. If a gym app expects 2,000 installs from a modest launch and Health & Fitness clears $0.63 per install at day 60, that's roughly $1,260 in the first two months — useful as a floor, not a promise, but a number you can act on instead of a hope.</p>
+
+        <h2>Paywall design outweighs almost every other lever</h2>
+        <p>The clearest single number in the report: apps with a hard paywall (pay before you get in) convert 12.11% of downloads to paid by day 35. Apps with freemium (a permanent free tier) convert 2.18% over the same window — a 5.5x gap, wider than the earlier estimate that freemium typically nets 2–5%. A hard paywall filters harder at the top of the funnel: fewer people ever open the paid product. But the ones who convert already decided the problem was worth paying for, so the rate that follows is much higher. Freemium maximises the top of the funnel and dilutes intent at the bottom. Trial length matters inside that choice too: trials of 17–32 days convert at 45.7% trial-to-paid, meaningfully better than shorter windows, because it gives the product time to hit the moment the user actually needed it.</p>
+        <p>Neither model is universally correct — it comes back to the job-to-be-done test from choosing a subscription over a one-time price in the first place. A tool people only need once (that wedding seating chart) shouldn't be freemium at all; a tool people need weekly earns the right to a longer trial rather than a hard wall.</p>
+
+        <h2>Annual billing is a retention lever, not a discount</h2>
+        <p>The report's retention numbers make the case harder than "offer 20% off for annual" ever did on its own: weekly plans retain 3.4% of subscribers into year two, monthly plans 17.0%, yearly plans 44.1%. Annual retains roughly 2.6x better than monthly and 13x better than weekly. That's not a marginal nudge; it's the difference between a subscriber base that survives and one that doesn't. A third of apps now blend a subscription with a one-time consumable or lifetime-purchase option, which is worth noting if a pure subscription is fighting for conversions: it isn't all-or-nothing, and hybrid pricing exists precisely because the churn maths on short-cycle plans is this brutal.</p>
+
+        <h2>Run these two numbers on your own app this week</h2>
+        <p>Pull your app's actual revenue per install at day 60 and compare it against the category median above — if you're well under it, the problem is more likely pricing or paywall placement than the product itself. Then check what share of your trial or free users convert by day 35 against the 12.11% hard-paywall / 2.18% freemium benchmarks, and be honest about which model you're running versus which one you intended to run. Both numbers are things you can pull from your own analytics today; neither requires a redesign to test.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://www.revenuecat.com/state-of-subscription-apps-2025/" target="_blank" rel="noopener">State of Subscription Apps 2025 — RevenueCat</a></li>
+          <li><a href="https://www.shopify.com/blog/side-business-ideas" target="_blank" rel="noopener">35 Side Business Ideas (With Earnings Data) — Shopify</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-07-14-benchmarking-your-app-against-what-actually-converts",
+  "slug": "benchmarking-your-app-against-what-actually-converts",
+  "interest": "indie-income",
+  "interests": ["indie-income", "software-ai"],
+  "mode": "learn",
+  "title": "Benchmarking Your App Against What Actually Converts",
+  "summary": "A 2025 benchmark of thousands of live subscription apps found a 400x gap between the top and bottom performers in year-one revenue. The gap isn't the idea — it's three measurable choices you can check against real numbers.",
+  "tags": ["app-monetisation", "benchmarks", "subscriptions", "paywalls", "indie-income"],
+  "created_at": "2026-07-14",
+  "concepts_taught": ["revenue-per-install", "paywall-strategy"],
+  "concepts_assumed": [],
+  "concepts_reinforced": ["app-monetisation-models", "subscription-vs-one-time", "freemium-conversion"],
+  "sources": [
+    { "title": "State of Subscription Apps 2025", "url": "https://www.revenuecat.com/state-of-subscription-apps-2025/" },
+    { "title": "35 Side Business Ideas (With Earnings Data)", "url": "https://www.shopify.com/blog/side-business-ideas" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "A Health & Fitness app expects 3,000 installs from its launch. Using the category's day-60 median revenue per install of $0.63, what's a reasonable revenue floor to expect by day 60?",
+      "options": ["Roughly $630", "Roughly $1,890", "Roughly $18,900", "Roughly $300"],
+      "correct": 1,
+      "concept": "revenue-per-install"
+    },
+    {
+      "q": "A founder is deciding between a hard paywall and freemium for a new habit-tracking app people would use daily. Based on the day-35 conversion gap (12.11% hard paywall vs 2.18% freemium), what's the accurate trade-off?",
+      "options": [
+        "Freemium always wins because more people see the product",
+        "Hard paywall always wins regardless of the product",
+        "A hard paywall converts a much higher share of downloads, but freemium reaches a larger top-of-funnel — the right call depends on whether the app needs volume or committed payers",
+        "The two convert identically once you account for trial length"
+      ],
+      "correct": 2,
+      "concept": "paywall-strategy"
+    },
+    {
+      "q": "A builder is choosing between a one-off tax-estimator tool and a daily habit-tracking app. Applying the model-to-usage-pattern framework, which pairing is correct?",
+      "options": [
+        "Both should be freemium, since freemium always maximises reach",
+        "The tax estimator suits a one-time price (finite job-to-be-done); the habit tracker suits subscription or freemium (high return frequency)",
+        "The tax estimator suits subscription because taxes recur annually",
+        "The habit tracker suits a one-time price because habits are personal, not recurring purchases"
+      ],
+      "correct": 1,
+      "concept": "app-monetisation-models"
+    },
+    {
+      "q": "A subscription app currently offers only monthly billing. Based on the 2025 retention data (weekly 3.4%, monthly 17.0%, yearly 44.1% year-one retention), what's the single highest-leverage change to test first?",
+      "options": [
+        "Switch entirely to a weekly plan to increase billing frequency",
+        "Remove monthly billing entirely with no replacement",
+        "Add a well-discounted annual plan and steer new subscribers toward it, since it retains roughly 2.6x better than monthly",
+        "Retention doesn't meaningfully differ by billing cycle, so focus elsewhere"
+      ],
+      "correct": 2,
+      "concept": "subscription-vs-one-time"
+    },
+    {
+      "q": "A freemium app has 8,000 monthly active users and converts at the day-35 freemium benchmark of 2.18% to a $12/month plan. Approximately what monthly recurring revenue does that produce?",
+      "options": ["$960", "$174", "$8,000", "$2,093"],
+      "correct": 3,
+      "concept": "freemium-conversion"
+    }
+  ]
+}
+  </script>
+</body>
+</html>
