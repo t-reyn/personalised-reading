@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "note": "Dev term of the day — shown one per day by the hub banner (app.js): the term for a date is terms[days since start_date], so the list is consumed in order and a given date always maps to the same term on every device. Topped up in batches by .github/workflows/glossary.yml per skills/GLOSSARY.md. APPEND new terms to the END only — never reorder, remove, or rename existing entries, and never change start_date (either would silently change which term shows on which day). If top-ups lapse and the list runs out, the banner wraps back to the oldest terms rather than going dark.",
+  "note": "Dev term of the day — shown by the hub banner (app.js): the list is consumed in order, one term per day the banner is actually seen (seen days are tracked in reading-state.json and synced across devices), so a day the site isn't opened doesn't skip a term — the walk pauses and resumes. Topped up in batches by .github/workflows/glossary.yml per skills/GLOSSARY.md. APPEND new terms to the END only — never reorder, remove, or rename existing entries, and never change start_date (reordering would silently change the sequence mid-walk; start_date anchors the runway check and the one-time seen-day seed). If top-ups lapse and the list runs out, the banner wraps back to the oldest terms rather than going dark.",
   "start_date": "2026-07-03",
   "topup": { "min_runway_days": 30, "batch_min": 60, "batch_max": 90 },
   "batches": [

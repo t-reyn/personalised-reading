@@ -61,6 +61,9 @@
     const A = a || {}, B = b || {}, out = { version: 1, updatedAt: null, articles: {}, quizzes: {} };
     new Set([...Object.keys(A.articles || {}), ...Object.keys(B.articles || {})]).forEach((id) =>
       (out.articles[id] = mergeEntry((A.articles || {})[id], (B.articles || {})[id])));
+    if (A.glossary || B.glossary) { // grow-only union: a day seen on any device stays seen
+      out.glossary = { seen_days: [...new Set([...(A.glossary?.seen_days || []), ...(B.glossary?.seen_days || [])])].sort() };
+    }
     new Set([...Object.keys(A.quizzes || {}), ...Object.keys(B.quizzes || {})]).forEach((id) => {
       const x = (A.quizzes || {})[id], y = (B.quizzes || {})[id];
       if (!x || !y) { out.quizzes[id] = x || y; return; }
@@ -169,14 +172,33 @@
   }
 
   /* ---------- dev term of the day ----------
-     A one-per-day walk through data/glossary.json, rendered as a compact "$ whatis <term>"
-     strip above the Home list. The term for a date is terms[days since glossary.start_date] —
-     deterministic on the local date (same term on every device), and stable under batch appends
-     (skills/GLOSSARY.md tops the list up before it runs out; if that lapses, wrap to the oldest).
-     Tap to reveal the example, ✕ hides it for the rest of the day — tomorrow brings a new term. */
+     A walk through data/glossary.json that advances one term per day the banner is actually
+     seen, rendered as a compact "$ whatis <term>" strip above the Home list. Days the site
+     isn't opened don't consume a term — the walk pauses and resumes on the next visit, so a
+     missed day's term shows up then instead of being skipped forever. Seen days live in
+     reading-state (state.glossary.seen_days) and union-merge across devices like the rest of
+     the state; today's term is terms[seen days before today], so synced devices agree and the
+     index is stable however many times today re-renders. skills/GLOSSARY.md tops the list up
+     before it runs out; if that lapses, wrap to the oldest. Tap to reveal the example, ✕ hides
+     it for the rest of the day. */
   let glossary = null; // { version, start_date, terms: [{term, def, eg}] } — committed, read-only
   const TERM_DISMISS_LS = "pr:term-dismissed";
-  const localDayStr = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
+  const localDayStr = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  // One-time seed for state that predates seen-day tracking: approximate past open-days from
+  // recorded activity (reads, archives, quizzes) since the glossary began, so the walk resumes
+  // near where the old calendar walk left off instead of replaying from term 0.
+  function seedSeenDays() {
+    const start = glossary?.start_date || "", today = localDayStr(), days = new Set();
+    const add = (ts) => {
+      const ms = Date.parse(ts || "");
+      if (!Number.isFinite(ms)) return;
+      const d = localDayStr(new Date(ms));
+      if (d >= start && d < today) days.add(d);
+    };
+    Object.values(state.articles || {}).forEach((a) => { add(a.read_at); add(a.archived_at); add(a.t); });
+    Object.values(state.quizzes || {}).forEach((q) => add(q.taken_at));
+    return [...days].sort();
+  }
   function renderTermBanner() {
     const el = $("#termBanner");
     if (!el) return;
@@ -184,11 +206,10 @@
     const day = localDayStr();
     let dismissed = null; try { dismissed = localStorage.getItem(TERM_DISMISS_LS); } catch {}
     if (view !== "reading" || !terms.length || dismissed === day) { el.hidden = true; return; }
-    // Both dates parse as UTC midnight, so the difference is an exact day count. An unparsable
-    // start_date falls back to index 0 rather than crashing the banner.
-    const startMs = Date.parse(glossary.start_date || "");
-    const idx = Number.isFinite(startMs) ? Math.max(0, Math.round((Date.parse(day) - startMs) / 86400000)) : 0;
-    const t = terms[idx % terms.length];
+    if (!Array.isArray(state.glossary?.seen_days)) { state.glossary = { seen_days: seedSeenDays() }; saveState(); }
+    const seen = state.glossary.seen_days;
+    const idx = seen.filter((d) => d < day).length % terms.length;
+    const t = terms[idx];
     el.innerHTML = `
       <div class="term-card" role="button" tabindex="0" aria-expanded="false" title="Tap for an example">
         <div class="term-top">
@@ -202,6 +223,7 @@
         ${t.eg ? `<p class="term-eg" hidden>${esc(t.eg)}</p><span class="term-more" aria-hidden="true">▸ example</span>` : ""}
       </div>`;
     el.hidden = false;
+    if (!seen.includes(day)) { seen.push(day); seen.sort(); saveState(); } // today's term is now seen — the walk advances tomorrow
     const card = el.querySelector(".term-card");
     const toggle = () => {
       const eg = el.querySelector(".term-eg"), more = el.querySelector(".term-more");
@@ -920,7 +942,7 @@
   }
   async function pullRemote() {
     if (!token() || !apiBase()) return false;
-    const before = JSON.stringify([state.articles, state.quizzes, knowledge.concepts, corpus.items]);
+    const before = JSON.stringify([state.articles, state.quizzes, state.glossary, knowledge.concepts, corpus.items]);
     // Each getFile sends If-None-Match; an unchanged file 304s (no body, no rate-limit cost) → skip its merge.
     const rs = await getFile("reading-state.json");
     if (rs.obj) adoptMerged("reading-state.json", mergeStates(rs.obj, state));
@@ -928,7 +950,7 @@
     if (kn.obj) adoptMerged("knowledge.json", mergeKnowledge(kn.obj, knowledge));
     const cp = await getFile("corpus.json");
     if (cp.obj) adoptMerged("corpus.json", mergeCorpus(cp.obj, corpus));
-    return JSON.stringify([state.articles, state.quizzes, knowledge.concepts, corpus.items]) !== before;
+    return JSON.stringify([state.articles, state.quizzes, state.glossary, knowledge.concepts, corpus.items]) !== before;
   }
 
   // Debounced background sync so rapid reads don't spam commits.

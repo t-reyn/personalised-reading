@@ -51,8 +51,10 @@ data/
   reading-state.json    user read/quiz state (synced from the browser)
   seen.json             ingest dedup keys
   profile.local.json    PRIVATE reader profile — GITIGNORED, never committed (see Privacy)
-  glossary.json         dev term-of-the-day list — consumed one/day in order by the hub banner;
-                        topped up in batches by glossary.yml (contract: skills/GLOSSARY.md)
+  glossary.json         dev term-of-the-day list — consumed in order by the hub banner, one term
+                        per day the site is opened (seen days live in reading-state.json and sync;
+                        a missed day pauses the walk, never skips a term); topped up in batches
+                        by glossary.yml (contract: skills/GLOSSARY.md)
 .github/workflows/      generate.yml (daily author), deploy.yml, ci.yml, health-check.yml, scout.yml,
                         glossary.yml (weekly runway check → Claude batch top-up when <30 days left)
 ```

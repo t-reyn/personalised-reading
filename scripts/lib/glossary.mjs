@@ -60,7 +60,9 @@ export function glossaryDefects(g, prev = null) {
 }
 
 // Days of not-yet-shown terms remaining as of `today` (YYYY-MM-DD), counting today's term.
-// 0 means the banner is already wrapping back to the oldest terms.
+// Counts every calendar day since start_date as consumed — the app actually advances only on
+// days the banner is seen (app.js seen_days), so this is a conservative floor: real runway is
+// never shorter. 0 means the banner is already wrapping back to the oldest terms.
 export function glossaryRunway(g, today) {
   const start = Date.parse(g?.start_date || "");
   if (!Number.isFinite(start) || !Number.isFinite(Date.parse(today || ""))) return 0;

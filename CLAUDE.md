@@ -44,8 +44,10 @@ data/
   manifest.json         GENERATED catalog the app reads
   knowledge.json        concept graph + learnt state (the model the generator reads)
   reading-state.json    user-owned: read/unread/backlog/starred + quiz results
-  glossary.json         dev "term of the day" — consumed one/day in order by the hub banner (app.js);
-                        topped up in batches by .github/workflows/glossary.yml (see skills/GLOSSARY.md)
+  glossary.json         dev "term of the day" — consumed in order by the hub banner (app.js), one term
+                        per day the site is opened (seen days tracked in reading-state.json, synced;
+                        missed days pause the walk rather than skip a term); topped up in batches
+                        by .github/workflows/glossary.yml (see skills/GLOSSARY.md)
 ```
 
 ## The daily authoring routine (what the scheduled run does)

@@ -1,7 +1,8 @@
 # Glossary top-up — append a batch of dev terms (keep it lean)
 
-You extend `data/glossary.json`, the "dev term of the day" list the hub banner walks through one
-term per day. This runs unattended on a tight budget: read the file once, append one batch, stop.
+You extend `data/glossary.json`, the "dev term of the day" list the hub banner walks through in
+order — one term per day the reader actually opens the site (missed days don't skip a term).
+This runs unattended on a tight budget: read the file once, append one batch, stop.
 
 ## The reader
 
@@ -40,8 +41,8 @@ vocabulary that appears **earlier in the list** (and only on that).
 ## Hard rules (CI enforces these — a violation throws the whole batch away)
 
 - **Append-only.** Never remove, reorder, or rename existing entries; never change `start_date`.
-  Both would silently change which term shows on which day. (Fixing a typo inside an existing
-  `def`/`eg` is allowed.)
+  Reordering silently changes the reader's sequence mid-walk; `start_date` anchors the runway
+  check. (Fixing a typo inside an existing `def`/`eg` is allowed.)
 - No duplicate `term` (case-insensitive, trimmed).
 - Every entry has non-empty `term`, `def`, and `eg`.
 - **The header is frozen and the log must be truthful**: do not touch `topup`, and the `batches`
