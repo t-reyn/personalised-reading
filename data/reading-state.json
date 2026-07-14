@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-14T10:49:02.105Z",
+  "updatedAt": "2026-07-14T14:18:35.428Z",
   "articles": {
     "2026-06-25-ifrs17-csm-in-plain-terms": {
       "status": "read",
@@ -136,7 +136,8 @@
   "glossary": {
     "seen_days": [
       "2026-07-03",
-      "2026-07-14"
+      "2026-07-14",
+      "2026-07-15"
     ]
   }
 }
