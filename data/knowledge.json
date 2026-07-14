@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-14T03:10:42.382Z",
+  "updatedAt": "2026-07-14T03:42:27.579Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -272,16 +272,22 @@
       "first_taught": "2026-07-01-cgt-negative-gearing-carve-outs"
     },
     "color-theory-basics": {
-      "is_learnt": false,
-      "first_taught": "2026-07-01-color-theory-for-interfaces"
+      "is_learnt": true,
+      "first_taught": "2026-07-01-color-theory-for-interfaces",
+      "learnt_at": "2026-07-14T03:42:27.579Z",
+      "review_level": 1,
+      "next_review_at": "2026-10-12T03:42:27.579Z"
     },
     "color-harmony-schemes": {
       "is_learnt": false,
       "first_taught": "2026-07-01-color-theory-for-interfaces"
     },
     "semantic-color-mapping": {
-      "is_learnt": false,
-      "first_taught": "2026-07-01-color-theory-for-interfaces"
+      "is_learnt": true,
+      "first_taught": "2026-07-01-color-theory-for-interfaces",
+      "learnt_at": "2026-07-14T03:42:27.579Z",
+      "review_level": 1,
+      "next_review_at": "2026-10-12T03:42:27.579Z"
     },
     "apra-prudential": {
       "is_learnt": false
