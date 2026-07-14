@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-13T00:00:00.000Z",
+  "updatedAt": "2026-07-14T03:10:42.382Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -74,10 +74,11 @@
       "next_review_at": "2026-07-03T17:19:40.689Z"
     },
     "monetary-policy-transmission": {
-      "is_learnt": false,
+      "is_learnt": true,
       "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
-      "review_level": 1,
-      "next_review_at": "2026-07-03T17:19:40.689Z"
+      "review_level": 2,
+      "next_review_at": "2027-01-10T03:10:42.382Z",
+      "learnt_at": "2026-07-14T03:10:42.382Z"
     },
     "inflation-targeting": {
       "is_learnt": false,
@@ -86,10 +87,11 @@
       "next_review_at": "2026-07-03T17:19:40.690Z"
     },
     "trimmed-mean-inflation": {
-      "is_learnt": false,
+      "is_learnt": true,
       "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
-      "review_level": 1,
-      "next_review_at": "2026-07-03T17:19:40.690Z"
+      "review_level": 2,
+      "next_review_at": "2027-01-10T03:10:42.382Z",
+      "learnt_at": "2026-07-14T03:10:42.382Z"
     },
     "apra-quarterly-statistics": {
       "is_learnt": true,
@@ -288,9 +290,7 @@
       "is_learnt": false
     },
     "embeddings": {
-      "is_learnt": false,
-      "first_taught": "2026-07-04-embeddings-explained",
-      "difficulty": "medium"
+      "is_learnt": false
     },
     "group-insurance-pricing": {
       "is_learnt": false
@@ -329,19 +329,13 @@
       "is_learnt": false
     },
     "exposure-triangle": {
-      "is_learnt": false,
-      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
-      "difficulty": "medium"
+      "is_learnt": false
     },
     "180-degree-shutter-rule": {
-      "is_learnt": false,
-      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
-      "difficulty": "hard"
+      "is_learnt": false
     },
     "iso-noise-tradeoff": {
-      "is_learnt": false,
-      "first_taught": "2026-07-09-exposure-triangle-for-beginners",
-      "difficulty": "easy"
+      "is_learnt": false
     },
     "channel-decay": {
       "is_learnt": false,
