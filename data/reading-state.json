@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-14T03:10:42.380Z",
+  "updatedAt": "2026-07-14T03:42:27.577Z",
   "articles": {
     "2026-06-25-ifrs17-csm-in-plain-terms": {
       "status": "read",
@@ -54,6 +54,11 @@
       "status": "read",
       "read_at": "2026-07-02T15:04:48.529Z",
       "t": "2026-07-02T15:04:48.529Z"
+    },
+    "2026-07-01-color-theory-for-interfaces": {
+      "status": "read",
+      "read_at": "2026-07-14T03:42:27.577Z",
+      "t": "2026-07-14T03:42:27.577Z"
     }
   },
   "quizzes": {
@@ -111,6 +116,11 @@
       "score": 1,
       "passed": true,
       "taken_at": "2026-07-02T15:04:48.529Z"
+    },
+    "2026-07-01-color-theory-for-interfaces": {
+      "score": 1,
+      "passed": true,
+      "taken_at": "2026-07-14T03:42:27.577Z"
     }
   },
   "glossary": {
