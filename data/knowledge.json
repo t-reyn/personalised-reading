@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-14T03:42:27.579Z",
+  "updatedAt": "2026-07-14T08:23:53.182Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -68,10 +68,11 @@
       "first_taught": "2026-06-27-ai-infrastructure-cost-surge"
     },
     "rba-cash-rate": {
-      "is_learnt": false,
+      "is_learnt": true,
       "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
-      "review_level": 1,
-      "next_review_at": "2026-07-03T17:19:40.689Z"
+      "review_level": 2,
+      "next_review_at": "2027-01-10T03:10:42.380Z",
+      "learnt_at": "2026-07-14T03:10:42.380Z"
     },
     "monetary-policy-transmission": {
       "is_learnt": true,
@@ -81,10 +82,11 @@
       "learnt_at": "2026-07-14T03:10:42.382Z"
     },
     "inflation-targeting": {
-      "is_learnt": false,
+      "is_learnt": true,
       "first_taught": "2026-06-27-rba-rate-cycle-june-2026",
-      "review_level": 1,
-      "next_review_at": "2026-07-03T17:19:40.690Z"
+      "review_level": 2,
+      "next_review_at": "2027-01-10T03:10:42.380Z",
+      "learnt_at": "2026-07-14T03:10:42.380Z"
     },
     "trimmed-mean-inflation": {
       "is_learnt": true,
@@ -279,8 +281,11 @@
       "next_review_at": "2026-10-12T03:42:27.579Z"
     },
     "color-harmony-schemes": {
-      "is_learnt": false,
-      "first_taught": "2026-07-01-color-theory-for-interfaces"
+      "is_learnt": true,
+      "first_taught": "2026-07-01-color-theory-for-interfaces",
+      "learnt_at": "2026-07-14T03:42:27.577Z",
+      "review_level": 1,
+      "next_review_at": "2026-10-12T03:42:27.577Z"
     },
     "semantic-color-mapping": {
       "is_learnt": true,
