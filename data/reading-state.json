@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-14T02:51:48.310Z",
+  "updatedAt": "2026-07-14T03:10:42.380Z",
   "articles": {
     "2026-06-25-ifrs17-csm-in-plain-terms": {
       "status": "read",
@@ -42,8 +42,8 @@
     },
     "2026-06-27-rba-rate-cycle-june-2026": {
       "status": "read",
-      "read_at": "2026-06-30T17:19:40.688Z",
-      "t": "2026-06-30T17:19:40.688Z"
+      "read_at": "2026-07-14T03:10:42.380Z",
+      "t": "2026-07-14T03:10:42.380Z"
     },
     "2026-06-30-life-insurance-code-kell-review": {
       "status": "read",
@@ -98,9 +98,9 @@
       "taken_at": "2026-06-30T02:48:07.925Z"
     },
     "2026-06-27-rba-rate-cycle-june-2026": {
-      "score": 0.5,
-      "passed": false,
-      "taken_at": "2026-06-30T17:19:40.687Z"
+      "score": 1,
+      "passed": true,
+      "taken_at": "2026-07-14T03:10:42.380Z"
     },
     "2026-06-30-life-insurance-code-kell-review": {
       "score": 1,
