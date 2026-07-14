@@ -1,8 +1,72 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-13T21:02:55.126Z",
-  "count": 42,
+  "generatedAt": "2026-07-14T21:02:34.800Z",
+  "count": 44,
   "articles": [
+    {
+      "id": "2026-07-15-the-shot-size-ladder-that-tells-you-where-to-point-the-camera",
+      "slug": "the-shot-size-ladder-that-tells-you-where-to-point-the-camera",
+      "interest": "videography",
+      "interests": [
+        "videography"
+      ],
+      "mode": "learn",
+      "title": "The Shot-Size Ladder That Tells You Where to Point the Camera",
+      "summary": "Every frame sits somewhere on a seven-step scale from a tiny figure in a landscape to a single trembling eye. Which rung you pick decides how an audience feels about a moment, before colour, sound or performance ever come into it.",
+      "tags": [
+        "cinematography",
+        "composition",
+        "shot-sizes",
+        "close-ups",
+        "videography-fundamentals"
+      ],
+      "created_at": "2026-07-15",
+      "expire_at": null,
+      "concepts_taught": [
+        "shot-size-grammar"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 2,
+      "word_count": 602,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-15/the-shot-size-ladder-that-tells-you-where-to-point-the-camera.html"
+    },
+    {
+      "id": "2026-07-15-the-three-phase-framework-for-an-ankle-sprain-comeback",
+      "slug": "the-three-phase-framework-for-an-ankle-sprain-comeback",
+      "interest": "health",
+      "interests": [
+        "health"
+      ],
+      "mode": "learn",
+      "title": "The Three-Phase Framework for an Ankle Sprain Comeback",
+      "summary": "Most rolled ankles get the same blanket advice regardless of how bad the damage actually is. Grading the sprain properly, then progressing by criteria rather than the calendar, is what actually gets you back to cutting and landing safely.",
+      "tags": [
+        "injury-rehab",
+        "ankle-sprain",
+        "return-to-play",
+        "proprioception",
+        "running"
+      ],
+      "created_at": "2026-07-15",
+      "expire_at": null,
+      "concepts_taught": [
+        "ankle-sprain-grading",
+        "functional-rehab-progression",
+        "proprioception-training"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "zone-2-training"
+      ],
+      "source_count": 1,
+      "word_count": 623,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-15/the-three-phase-framework-for-an-ankle-sprain-comeback.html"
+    },
     {
       "id": "2026-07-14-benchmarking-your-app-against-what-actually-converts",
       "slug": "benchmarking-your-app-against-what-actually-converts",

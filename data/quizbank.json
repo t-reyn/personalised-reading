@@ -1,4 +1,269 @@
 {
   "version": 1,
-  "questions": {}
+  "questions": {
+    "sleep-architecture": [
+      {
+        "q": "You track your sleep and notice deep slow-wave sleep dominates the first half of the night while REM periods lengthen toward morning. What does this reflect?",
+        "options": [
+          "Normal sleep architecture — deep NREM concentrates early in the night while REM proportion rises toward morning",
+          "A sign of insomnia that needs immediate treatment",
+          "A random pattern with no consistent structure night to night",
+          "REM only occurs if total sleep time exceeds ten hours"
+        ],
+        "correct": 0
+      }
+    ],
+    "sleep-stages": [
+      {
+        "q": "Which stage of sleep is primarily responsible for physical tissue repair and growth hormone release?",
+        "options": [
+          "Light N1 sleep, the transition into rest",
+          "Deep N3 slow-wave sleep",
+          "REM sleep, when most dreaming occurs",
+          "The exact stage doesn't matter for physical recovery"
+        ],
+        "correct": 1
+      }
+    ],
+    "circadian-rhythm": [
+      {
+        "q": "After a week of getting bright sunlight first thing each morning, you notice you're falling asleep earlier without trying. What explains this?",
+        "options": [
+          "Sunlight has no real effect on sleep timing, only screens do",
+          "Your body is simply more tired from being outdoors",
+          "Morning light exposure resets your internal clock, shifting your circadian rhythm earlier",
+          "Circadian rhythm can't shift once you're an adult"
+        ],
+        "correct": 2
+      }
+    ],
+    "sleep-hygiene": [
+      {
+        "q": "Which of these is a genuine sleep hygiene improvement, rather than a common myth?",
+        "options": [
+          "Watching TV in bed to wind down before sleep",
+          "Sleeping in on weekends to fully 'repay' a sleep debt with no downside",
+          "Keeping the bedroom warm and brightly lit for comfort",
+          "Keeping a consistent wake-up time every day, including weekends"
+        ],
+        "correct": 3
+      }
+    ],
+    "sleep-nutrition-link": [
+      {
+        "q": "You have a coffee at 4pm and struggle to fall asleep at 10:30pm. What's the most likely nutritional driver?",
+        "options": [
+          "Caffeine's half-life keeps a meaningful dose active in your system into the evening",
+          "Coffee has no measurable effect on sleep after midday",
+          "The cause is almost certainly stress, not the coffee",
+          "Caffeine only disrupts sleep if it's consumed after 8pm"
+        ],
+        "correct": 0
+      }
+    ],
+    "magnesium-sleep": [
+      {
+        "q": "A friend starts a high-dose magnesium supplement expecting it to fix insomnia caused by an irregular shift-work schedule. What's the accurate take?",
+        "options": [
+          "Magnesium is a reliable cure for any form of insomnia",
+          "Magnesium may modestly support relaxation, but it won't fix sleep problems driven by circadian or schedule issues",
+          "Magnesium has no relationship to sleep whatsoever",
+          "Only injectable magnesium has any measurable effect on sleep"
+        ],
+        "correct": 1
+      }
+    ],
+    "sleep-temperature": [
+      {
+        "q": "Why does a cooler bedroom, around 18–19°C, generally help you fall asleep faster?",
+        "options": [
+          "Cold air significantly raises the oxygen level in the room",
+          "Warmer rooms are actually the better-evidenced choice for sleep onset",
+          "It supports the natural drop in core body temperature that helps trigger sleep onset",
+          "Room temperature has no physiological link to sleep onset"
+        ],
+        "correct": 2
+      }
+    ],
+    "apra-quarterly-statistics": [
+      {
+        "q": "APRA's quarterly life insurance statistics show a rising loss ratio alongside a stable combined ratio. What's the most defensible read of that combination?",
+        "options": [
+          "The insurer is definitely about to fail",
+          "The two ratios always move together, so this combination is impossible",
+          "Underwriting performance is unrelated to claims experience",
+          "Claims cost pressure is building, but expense and reinsurance management are offsetting it enough to hold the combined ratio steady"
+        ],
+        "correct": 3
+      }
+    ],
+    "life-insurance-loss-ratio": [
+      {
+        "q": "A group life portfolio pays $68m in claims against $80m in earned premium for the quarter. What's the loss ratio, and what does it tell you on its own?",
+        "options": [
+          "85% — high, but not conclusive about profitability without expense and reinsurance costs factored in",
+          "85% — which on its own confirms the book is unprofitable",
+          "15% — the portfolio is comfortably profitable",
+          "You cannot calculate a loss ratio from premium and claims alone"
+        ],
+        "correct": 0
+      }
+    ],
+    "combined-ratio": [
+      {
+        "q": "An insurer reports a combined ratio of 104% for the quarter. What does that figure mean?",
+        "options": [
+          "The insurer made a 4% underwriting profit",
+          "Claims and expenses together exceeded premium income — an underwriting loss before investment returns",
+          "104% is a data error since ratios can't exceed 100%",
+          "The insurer's reserves grew by 4% during the quarter"
+        ],
+        "correct": 1
+      }
+    ],
+    "di-remediation": [
+      {
+        "q": "A life insurer announces a disability income (DI) remediation program after years of underpriced legacy policies caused sustained losses. What is that program most likely addressing?",
+        "options": [
+          "A marketing campaign to sell more DI cover",
+          "A one-off reinsurance transaction unrelated to pricing",
+          "Repricing, product redesign, or portfolio actions to fix a structurally loss-making DI book",
+          "A change to APRA's reporting template only"
+        ],
+        "correct": 2
+      }
+    ],
+    "super-fund-performance-metrics": [
+      {
+        "q": "Comparing two super funds, Fund A returns 8.2% net of fees over five years and Fund B returns 8.9% gross of fees with a higher fee load. Which comparison is actually valid?",
+        "options": [
+          "Fund B is definitely better since its headline return is higher",
+          "Fees don't matter when comparing long-term super performance",
+          "Gross and net returns are interchangeable for comparison purposes",
+          "You need both returns on the same net-of-fees basis before concluding which fund performed better"
+        ],
+        "correct": 3
+      }
+    ],
+    "visual-hierarchy": [
+      {
+        "q": "A settings screen has every label in the same size, weight and colour. A user says they can't tell what to tap first. What's missing?",
+        "options": [
+          "Visual hierarchy — nothing differentiates the primary action from secondary ones",
+          "Colour theory, since only colour affects perceived importance",
+          "Nothing; hierarchy is a subjective, unfixable preference",
+          "White space, since hierarchy is purely about spacing"
+        ],
+        "correct": 0
+      }
+    ],
+    "type-scale": [
+      {
+        "q": "A design uses seven different font sizes chosen ad hoc across a screen, and it looks chaotic. What's the fix a type scale provides?",
+        "options": [
+          "Adding more font weights to compensate",
+          "A small set of proportionally related sizes, used consistently for the same role each time",
+          "Switching every size to the same value",
+          "Using a different typeface for every heading level"
+        ],
+        "correct": 1
+      }
+    ],
+    "whitespace-rhythm": [
+      {
+        "q": "Two sections of a page use inconsistent gaps — 12px in one place, 40px in another, with no clear pattern. What principle is being violated?",
+        "options": [
+          "Contrast, since spacing has nothing to do with contrast",
+          "Type scale, since spacing is a typography-only concept",
+          "Whitespace rhythm — consistent, intentional spacing intervals that group related content and separate unrelated content",
+          "Visual hierarchy, since spacing can't signal importance"
+        ],
+        "correct": 2
+      }
+    ],
+    "contrast-for-hierarchy": [
+      {
+        "q": "A call-to-action button is styled in a colour only slightly darker than the background, at the same size as surrounding text. Why does it get missed?",
+        "options": [
+          "It's actually well-designed and should stay as is",
+          "White space around it is insufficient, which is unrelated to why it gets missed",
+          "The button's type scale is too large",
+          "It lacks sufficient contrast against its surroundings to visually stand out as the primary action"
+        ],
+        "correct": 3
+      }
+    ],
+    "ifrs17-csm": [
+      {
+        "q": "Under IFRS 17, an insurer's Contractual Service Margin (CSM) is released to profit over the coverage period rather than recognised upfront at policy issue. What's the reason for that treatment?",
+        "options": [
+          "The CSM represents unearned future profit, recognised as services (coverage) are actually provided",
+          "IFRS 17 bans insurers from ever recognising profit on insurance contracts",
+          "The CSM is identical in concept to a claims reserve",
+          "CSM release timing is arbitrary and unrelated to when coverage is provided"
+        ],
+        "correct": 0
+      }
+    ],
+    "zone-2-training": [
+      {
+        "q": "Two runners do the same 10km loop. Runner A can hold a full conversation throughout; Runner B is breathing too hard to talk. Only one is training in zone 2. Which, and why?",
+        "options": [
+          "Runner B, because zone 2 means working as hard as sustainably possible",
+          "Runner A, because zone 2 is an easy, conversational aerobic intensity, not a hard effort",
+          "Neither — zone 2 is defined purely by pace, not effort or breathing",
+          "Both are in zone 2, since zone 2 covers any continuous run"
+        ],
+        "correct": 1
+      }
+    ],
+    "early-customer-acquisition": [
+      {
+        "q": "A solo founder with zero audience is choosing between running paid ads immediately or manually reaching out to 20 people who fit their target user. Which approach fits early customer acquisition best, and why?",
+        "options": [
+          "Paid ads, since scale should come before validation",
+          "Neither — wait until the product is 'finished' before acquiring any users",
+          "Manual outreach to a small, well-targeted group, since early customers are won through direct, unscalable effort before any channel can scale",
+          "Paid ads, since manual outreach can never produce reliable customers"
+        ],
+        "correct": 2
+      }
+    ],
+    "product-taste": [
+      {
+        "q": "Two founders ship near-identical feature sets, but one product feels coherent and delightful while the other feels bolted-together. What's the most likely differentiator?",
+        "options": [
+          "Marketing budget alone explains the difference",
+          "Pricing strategy alone explains the difference",
+          "Feature count, since more features always feel more polished",
+          "Product taste — the accumulated judgment calls on what to cut, refine and prioritise that a feature checklist doesn't capture"
+        ],
+        "correct": 3
+      }
+    ],
+    "life-insurance-code-of-practice": [
+      {
+        "q": "A life insurer delays a claim decision well beyond the timeframe set out in the Life Insurance Code of Practice, with no communication to the claimant. What has occurred?",
+        "options": [
+          "A breach of the Code's claims-handling standards, which set enforceable service timeframes and communication obligations",
+          "Nothing actionable, since the Code is a voluntary guideline with no real standards",
+          "A breach of APRA capital requirements specifically",
+          "A pricing issue rather than a conduct issue"
+        ],
+        "correct": 0
+      }
+    ],
+    "code-governance-enforcement": [
+      {
+        "q": "A Code of Practice exists but insurers routinely miss its standards with no consequences. What does 'code governance enforcement' actually add?",
+        "options": [
+          "Nothing — codes are self-policing by design and need no external mechanism",
+          "Independent oversight, monitoring and consequences (such as sanctions or public reporting) that give the code's standards real teeth",
+          "A requirement that only applies to APRA-regulated banks, not insurers",
+          "A purely marketing function with no compliance role"
+        ],
+        "correct": 1
+      }
+    ]
+  }
 }

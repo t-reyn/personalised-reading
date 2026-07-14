@@ -325,13 +325,19 @@
       "is_learnt": false
     },
     "ankle-sprain-grading": {
-      "is_learnt": false
+      "is_learnt": false,
+      "first_taught": "2026-07-15-the-three-phase-framework-for-an-ankle-sprain-comeback",
+      "difficulty": "medium"
     },
     "functional-rehab-progression": {
-      "is_learnt": false
+      "is_learnt": false,
+      "first_taught": "2026-07-15-the-three-phase-framework-for-an-ankle-sprain-comeback",
+      "difficulty": "medium"
     },
     "proprioception-training": {
-      "is_learnt": false
+      "is_learnt": false,
+      "first_taught": "2026-07-15-the-three-phase-framework-for-an-ankle-sprain-comeback",
+      "difficulty": "medium"
     },
     "interstellar-objects": {
       "is_learnt": false
@@ -498,6 +504,11 @@
     "technological-unemployment": {
       "is_learnt": false,
       "first_taught": "2026-07-14-putting-numbers-on-ais-biggest-costs",
+      "difficulty": "easy"
+    },
+    "shot-size-grammar": {
+      "is_learnt": false,
+      "first_taught": "2026-07-15-the-shot-size-ladder-that-tells-you-where-to-point-the-camera",
       "difficulty": "easy"
     },
     "revenue-per-install": {
