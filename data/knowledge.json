@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-14T08:23:53.182Z",
+  "updatedAt": "2026-07-14T10:49:02.107Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -192,22 +192,22 @@
       "is_learnt": true,
       "first_taught": "2026-06-28-app-monetisation-models",
       "learnt_at": "2026-06-29T06:00:04.843Z",
-      "review_level": 1,
-      "next_review_at": "2026-07-02T06:00:04.843Z"
+      "review_level": 2,
+      "next_review_at": "2027-01-10T10:49:02.107Z"
     },
     "freemium-conversion": {
       "is_learnt": true,
       "first_taught": "2026-06-28-app-monetisation-models",
       "learnt_at": "2026-06-29T06:00:04.843Z",
-      "review_level": 1,
-      "next_review_at": "2026-07-02T06:00:04.843Z"
+      "review_level": 2,
+      "next_review_at": "2027-01-10T10:49:02.107Z"
     },
     "subscription-vs-one-time": {
       "is_learnt": true,
       "first_taught": "2026-06-28-app-monetisation-models",
       "learnt_at": "2026-06-29T06:00:04.843Z",
-      "review_level": 1,
-      "next_review_at": "2026-07-02T06:00:04.843Z"
+      "review_level": 2,
+      "next_review_at": "2027-01-10T10:49:02.107Z"
     },
     "lrba": {
       "is_learnt": false,
@@ -501,14 +501,20 @@
       "difficulty": "easy"
     },
     "revenue-per-install": {
-      "is_learnt": false,
+      "is_learnt": true,
       "first_taught": "2026-07-14-benchmarking-your-app-against-what-actually-converts",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "learnt_at": "2026-07-14T10:49:02.107Z",
+      "review_level": 1,
+      "next_review_at": "2026-10-12T10:49:02.107Z"
     },
     "paywall-strategy": {
-      "is_learnt": false,
+      "is_learnt": true,
       "first_taught": "2026-07-14-benchmarking-your-app-against-what-actually-converts",
-      "difficulty": "medium"
+      "difficulty": "medium",
+      "learnt_at": "2026-07-14T10:49:02.107Z",
+      "review_level": 1,
+      "next_review_at": "2026-10-12T10:49:02.107Z"
     }
   }
 }
