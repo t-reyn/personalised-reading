@@ -1,8 +1,77 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-14T21:02:34.800Z",
-  "count": 44,
+  "generatedAt": "2026-07-15T21:04:18.079Z",
+  "count": 46,
   "articles": [
+    {
+      "id": "2026-07-16-negative-gearing-runway-before-2027",
+      "slug": "negative-gearing-runway-before-2027",
+      "interest": "property",
+      "interests": [
+        "property"
+      ],
+      "mode": "current",
+      "title": "Negative Gearing Doesn't Bite Until 1 July 2027 — Fix Your Structure Before Then",
+      "summary": "The reform passed a fortnight ago, but the rules that actually change your tax bill don't start until 1 July 2027. That gap is the best window to get title ownership and trust decisions right before the grandfathering window closes.",
+      "tags": [
+        "negative gearing",
+        "property investing",
+        "trusts",
+        "joint tenants",
+        "tenants in common",
+        "Australia",
+        "tax"
+      ],
+      "created_at": "2026-07-16",
+      "expire_at": "2026-08-30",
+      "concepts_taught": [
+        "property-ownership-structures",
+        "trust-trapped-losses"
+      ],
+      "concepts_assumed": [
+        "negative-gearing-reform-2026",
+        "cgt-grandfathering"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 701,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-16/negative-gearing-runway-before-2027.html"
+    },
+    {
+      "id": "2026-07-16-task-driven-to-intent-driven-interfaces",
+      "slug": "task-driven-to-intent-driven-interfaces",
+      "interest": "design",
+      "interests": [
+        "design",
+        "software-ai"
+      ],
+      "mode": "learn",
+      "title": "The Shift From Task-Driven To Intent-Driven Interfaces",
+      "summary": "AI is quietly replacing the desktop metaphor that's run software for forty years. What intent-driven design actually means, why interaction patterns are fragmenting like the 1990s browser wars, and why \"faster\" AI features often aren't.",
+      "tags": [
+        "interaction design",
+        "AI interfaces",
+        "design systems",
+        "web standards",
+        "UX"
+      ],
+      "created_at": "2026-07-16",
+      "expire_at": "2026-09-14",
+      "concepts_taught": [
+        "intent-driven-interfaces",
+        "ai-interaction-standards",
+        "ai-verification-tax"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 727,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-16/task-driven-to-intent-driven-interfaces.html"
+    },
     {
       "id": "2026-07-15-the-shot-size-ladder-that-tells-you-where-to-point-the-camera",
       "slug": "the-shot-size-ladder-that-tells-you-where-to-point-the-camera",

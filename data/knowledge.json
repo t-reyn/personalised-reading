@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-14T10:49:02.107Z",
+  "updatedAt": "2026-07-15T21:04:17.923Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -526,6 +526,21 @@
       "learnt_at": "2026-07-14T10:49:02.107Z",
       "review_level": 1,
       "next_review_at": "2026-10-12T10:49:02.107Z"
+    },
+    "property-ownership-structures": {
+      "is_learnt": false
+    },
+    "trust-trapped-losses": {
+      "is_learnt": false
+    },
+    "intent-driven-interfaces": {
+      "is_learnt": false
+    },
+    "ai-interaction-standards": {
+      "is_learnt": false
+    },
+    "ai-verification-tax": {
+      "is_learnt": false
     }
   }
 }

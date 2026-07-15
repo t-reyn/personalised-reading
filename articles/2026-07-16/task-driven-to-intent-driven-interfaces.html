@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Shift From Task-Driven To Intent-Driven Interfaces</title>
+  <meta name="description" content="AI is quietly replacing the desktop metaphor that's run software for forty years. What intent-driven design actually means, why interaction patterns are fragmenting like the 1990s browser wars, and why 'faster' AI features often aren't." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="design">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-07-16-task-driven-to-intent-driven-interfaces">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>🎨 Design &amp; Craft</p>
+        <h1>The Shift From Task-Driven To Intent-Driven Interfaces</h1>
+        <p class="doc-meta">16 July 2026 · synthesised from 3 sources</p>
+        <p class="doc-summary">AI is quietly replacing the desktop metaphor that's run software for forty years. What intent-driven design actually means, why interaction patterns are fragmenting like the 1990s browser wars, and why "faster" AI features often aren't.</p>
+      </header>
+
+      <div class="doc-body">
+        <p>The desktop metaphor (folders, buttons, one click triggers one action) has run software for four decades, and it's quietly being replaced. Not by a chatbot bolted onto the side of your app, but by a genuine shift in what an interface is <em>for</em>. If you're building your own product with AI assistance, this shift changes what you should be designing.</p>
+
+        <h2>From operating steps to stating outcomes</h2>
+        <p>The old model is task-driven: you decide the goal, then operate every step yourself, opening the folder, selecting the files, dragging them, renaming them. The emerging model is intent-driven: you state the outcome, and the system executes the steps. Type "archive last month's invoices" into a file assistant and it finds the matching files, creates the folder, and moves them; you never touch the folder tree. Designer Arin Bhowmick, writing on the shift, points to systems like Thinking Machines Lab's multimodal interface (built by former OpenAI CTO Mira Murati's team), which processes audio, video and text together in real time rather than routing each input through a separate screen.</p>
+        <p>That reframes the designer's job. It's no longer "make each step obvious"; it's four narrower problems: giving users a way to see the system's reasoning instead of a folder-and-file mental model, making entry points fluid across generated screens and chat, deliberately choosing <em>where</em> a human reviews, undoes or confirms an action before it happens, and routing accountability back to a person when something needs auditing. That last one matters most in anything enterprise or regulated: a system can move fast, but someone still has to own the outcome, and the interface is what makes that ownership visible or invisible.</p>
+
+        <h2>A standards vacuum, and we've been here before</h2>
+        <p>Right now, ask ChatGPT, Claude, Gemini and Copilot to show their reasoning, cite a source, or signal how confident they are in an answer, and you'll get four incompatible answers. Designer Patrick Neeman calls this the browser wars of the 1990s repeating itself: Netscape and Internet Explorer rendered pages so differently that every site got rebuilt twice, until Jeffrey Zeldman's Web Standards Project, backed by the magazine A List Apart and the conference An Event Apart, convinced the industry that shared conventions were worth adopting, not by mandate but by making the economic case. The fix wasn't a single company dictating the rules; it was practitioners publishing patterns and other practitioners adopting them.</p>
+        <p>The AI equivalent is already forming, just unevenly: the Model Context Protocol (launched 2024) standardises how models connect to tools, and newer efforts like A2UI and Agent2Agent aim to do the same for agent-generated interfaces and cross-agent handoffs. Neeman's practical suggestion for a solo builder is smaller and more useful than waiting for any of that to mature: keep a Markdown file, genuinely just a plain-text file, that documents your design system, your content rules and your accessibility requirements, and feed it to whatever AI coding tool you're using before it generates UI. It's the same instinct behind Brad Frost's atomic design: separate the structure from the presentation, write it down once, and reuse it, rather than re-explaining your design intent to the model in every prompt.</p>
+
+        <h2>The verification tax</h2>
+        <p>None of this lands if people don't want the AI feature in the first place, and mostly they don't, not because they're anti-AI, but because of what design writer Vitaly Friedman calls a verification tax. An IBM study from 2026 documents a persistent "AI adoption gap": teams add an AI feature expecting time saved, and instead see email volume up 104%, chat volume up 145%, and costly mistakes up 39%, because every AI output still has to be skimmed, checked and corrected before anyone trusts it. Faster drafting isn't the same as less work if the reviewing step gets bigger than the step it replaced.</p>
+        <p>That's the one question worth asking before you ship an AI feature in your own product: does it remove a step the user used to do, or does it just add a new "check the AI's work" step on top of the old one? An intent-driven interface earns its keep when the control point you designed — the place where a human confirms or undoes — is quick enough that the net effort drops. If checking the output takes as long as doing the task did, you've shipped a slower feature wearing a faster feature's name.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://uxdesign.cc/ai-systems-are-demanding-new-interaction-models-are-designers-ready-d8a95f5e55a9" target="_blank" rel="noopener">AI systems are demanding new interaction models. Are designers ready? — UX Collective</a></li>
+          <li><a href="https://uxdesign.cc/designing-with-web-standards-the-playbook-for-this-ai-moment-92394884dc0d" target="_blank" rel="noopener">Designing with web standards: the playbook for this AI moment — UX Collective</a></li>
+          <li><a href="https://smashingmagazine.com/2026/07/people-dont-want-more-ai/" target="_blank" rel="noopener">No, People Don't Want More AI In Their Life — Smashing Magazine</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-07-16-task-driven-to-intent-driven-interfaces",
+  "slug": "task-driven-to-intent-driven-interfaces",
+  "interest": "design",
+  "interests": ["design", "software-ai"],
+  "mode": "learn",
+  "title": "The Shift From Task-Driven To Intent-Driven Interfaces",
+  "summary": "AI is quietly replacing the desktop metaphor that's run software for forty years. What intent-driven design actually means, why interaction patterns are fragmenting like the 1990s browser wars, and why \"faster\" AI features often aren't.",
+  "tags": ["interaction design", "AI interfaces", "design systems", "web standards", "UX"],
+  "created_at": "2026-07-16",
+  "expire_at": "2026-09-14",
+  "concepts_taught": ["intent-driven-interfaces", "ai-interaction-standards", "ai-verification-tax"],
+  "concepts_assumed": [],
+  "concepts_reinforced": [],
+  "sources": [
+    { "title": "AI systems are demanding new interaction models. Are designers ready?", "url": "https://uxdesign.cc/ai-systems-are-demanding-new-interaction-models-are-designers-ready-d8a95f5e55a9" },
+    { "title": "Designing with web standards: the playbook for this AI moment", "url": "https://uxdesign.cc/designing-with-web-standards-the-playbook-for-this-ai-moment-92394884dc0d" },
+    { "title": "No, People Don't Want More AI In Their Life", "url": "https://smashingmagazine.com/2026/07/people-dont-want-more-ai/" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "A file manager app adds an AI assistant that, when you type 'archive last month's invoices', finds the matching files, creates a folder, and moves them — without you clicking through the folder tree. What interaction shift does this represent?",
+      "options": [
+        "An intent-driven interface — you stated the outcome you wanted and the system executed the steps, rather than you operating each step yourself",
+        "A task-driven interface, since a file operation still happened on screen",
+        "A bug, since the user should have had to confirm each file individually before any action",
+        "A backend automation change with no real interaction-design implications"
+      ],
+      "correct": 0,
+      "concept": "intent-driven-interfaces"
+    },
+    {
+      "q": "Four AI products each show their reasoning, cite sources, and signal confidence in completely different, incompatible ways. What historical parallel does this resemble, and what actually fixed it last time?",
+      "options": [
+        "The dot-com crash — the fix was fewer products entering the market, not shared conventions",
+        "Y2K — the fix required a single global regulator approving every interface",
+        "The 1990s browser wars, where incompatible rendering forced designers to rebuild sites — fixed by practitioner-led shared conventions rather than a vendor mandate",
+        "There's no useful historical parallel; AI interfaces are too new to compare to anything"
+      ],
+      "correct": 2,
+      "concept": "ai-interaction-standards"
+    },
+    {
+      "q": "A team adds an AI drafting tool that writes customer emails in half the time. Six months later, email volume is up and 'costly mistakes' have risen too. What does the verification tax concept say is most likely happening?",
+      "options": [
+        "The tool is broken and should be switched off immediately",
+        "Staff have simply become lazier since the tool arrived",
+        "Faster drafting has no bearing on error rates; the two trends are unrelated",
+        "The time saved drafting is being spent (and then some) on skimming, checking and correcting AI output — a review cost that can outweigh the drafting time saved"
+      ],
+      "correct": 3,
+      "concept": "ai-verification-tax"
+    }
+  ]
+}
+  </script>
+</body>
+</html>
