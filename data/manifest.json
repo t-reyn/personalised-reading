@@ -1,8 +1,75 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-15T21:04:18.079Z",
-  "count": 46,
+  "generatedAt": "2026-07-16T21:01:47.873Z",
+  "count": 48,
   "articles": [
+    {
+      "id": "2026-07-17-one-ai-earnings-miss-moved-more-than-one-stock",
+      "slug": "one-ai-earnings-miss-moved-more-than-one-stock",
+      "interest": "finance",
+      "interests": [
+        "finance"
+      ],
+      "mode": "current",
+      "title": "One AI Earnings Miss Moved More Than One Stock",
+      "summary": "Alphabet's Gemini 3.5 Pro delay helped push the VIX up 6.8% on Thursday even as the ASX 200 climbed — a live lesson in how concentrated an index has to be before one company's news becomes everyone's volatility.",
+      "tags": [
+        "finance",
+        "markets",
+        "vix",
+        "ai-earnings",
+        "index-risk",
+        "Australia"
+      ],
+      "created_at": "2026-07-17",
+      "expire_at": "2026-08-07",
+      "concepts_taught": [
+        "index-concentration-risk"
+      ],
+      "concepts_assumed": [
+        "vix-fear-gauge",
+        "risk-on-risk-off-signal"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 571,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-17/one-ai-earnings-miss-moved-more-than-one-stock.html"
+    },
+    {
+      "id": "2026-07-17-the-protection-gap-behind-tarees-283-million-flood-bill",
+      "slug": "the-protection-gap-behind-tarees-283-million-flood-bill",
+      "interest": "actuarial",
+      "interests": [
+        "actuarial"
+      ],
+      "mode": "current",
+      "title": "The Protection Gap Behind Taree's $283 Million Flood Bill",
+      "summary": "Taree's flood claims are 92% finalised and the mud is gone — but a $8bn annual insurance tax load and a workers' comp scheme reshuffling its claims managers both point at the same underlying question: who actually carries the risk that goes unpriced.",
+      "tags": [
+        "actuarial",
+        "general-insurance",
+        "protection-gap",
+        "workers-compensation",
+        "Australia"
+      ],
+      "created_at": "2026-07-17",
+      "expire_at": null,
+      "concepts_taught": [
+        "insurance-protection-gap",
+        "statutory-underwriting-scheme"
+      ],
+      "concepts_assumed": [
+        "catastrophe-allowance-reinsurance"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 2,
+      "word_count": 568,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-17/the-protection-gap-behind-tarees-283-million-flood-bill.html"
+    },
     {
       "id": "2026-07-16-negative-gearing-runway-before-2027",
       "slug": "negative-gearing-runway-before-2027",

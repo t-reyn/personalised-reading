@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-15T21:04:17.923Z",
+  "updatedAt": "2026-07-16T21:01:47.697Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -540,6 +540,12 @@
       "is_learnt": false
     },
     "ai-verification-tax": {
+      "is_learnt": false
+    },
+    "index-concentration-risk": {
+      "is_learnt": false
+    },
+    "statutory-underwriting-scheme": {
       "is_learnt": false
     }
   }

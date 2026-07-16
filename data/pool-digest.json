@@ -1,71 +1,70 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-15T20:51:04.453Z",
+  "generatedAt": "2026-07-16T20:48:34.369Z",
   "interests": {
     "software-ai": {
-      "days_since_last_article": 1,
+      "days_since_last_article": 0,
       "items": [
         {
-          "id": "software-ai-3ebc823d580e",
-          "title": "The most controversial rewrite in history just shipped...",
-          "excerpt": "Bun just refactored their entire codebase from Zig to Rust in just 11 days. But not everybody is celebrating...",
-          "url": "https://www.youtube.com/watch?v=CXSvKcLovAk",
-          "kind": "video",
-          "source": "Fireship"
-        },
-        {
-          "id": "software-ai-4f438877c05c",
-          "title": "Human-machine learning boosts noninvasive brain-computer control in untrained users - Tech Xplore",
-          "excerpt": "Human-machine learning boosts noninvasive brain-computer control in untrained users &nbsp;&nbsp; Tech Xplore",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQUFNmUWlITjZIWGhDdkVfZVRoWi04cXBpQVRXU0UtUkpIR0hYcTVjU29KajZsdnYzaHNXQXRsUFpfczJfc2lVQkNaMi02NmpNcmRLSGF1eFRYMjVBYnRkQmhMSkkxMlAyUkhka3J2UEdHVHFWWF82RHFrMWRLdm9PNzd1bXhCQQ?oc=5",
+          "id": "software-ai-85525f6b8187",
+          "title": "Netflix says around 300 titles used generative AI",
+          "excerpt": "Netflix says roughly 300 titles on its platform used generative AI, most of which occurred in post-production. The streaming service revealed the news in its second-quarter earnings report released on Thursday, saying it's \"increasingly leveraging these tools to deliver higher quality output more…",
+          "url": "https://www.theverge.com/streaming/966633/netflix-ai-titles-q2-2026-earnings",
           "kind": "article"
         },
         {
-          "id": "software-ai-58fc4085eebc",
-          "title": "Agentic vision: Building visual intelligence with Amazon Bedrock and MCP servers - Amazon Web Services (AWS)",
-          "excerpt": "Agentic vision: Building visual intelligence with Amazon Bedrock and MCP servers &nbsp;&nbsp; Amazon Web Services (AWS)",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNdERNRmdkOTNUaWNHRE5tcXl5cXRSNDl4eElySzNKQnBkc0luempRdFNBeGE4anltTW85QmRYVVlfcHc3dWFvOUdPR25VYXp0QkE5RTNadm5zZ1JMM3V0V3lpQlZnRzdmSEw4Vl9SNzE2VDR5YkpoazVSbWp1Tk0xNW84MkpJQzd6TWdVU19BaG5iUVIwSXJac3NQVUhic2xlaUNQZlR0azRndElSLS1tRHlodklrUERDcFREYzd0VXBmZUti?oc=5",
+          "id": "software-ai-ac13e99b3ff6",
+          "title": "Why are CD sales suddenly growing again?",
+          "excerpt": "CD sales are apparently going up, reportedly thanks to fans realizing they're an affordable way to support their favorite artists. According to a new report from research firm Luminate, 16.3 million CDs were sold in the first half of 2026 in the US, a 16 percent increase year-over-year. The growth…",
+          "url": "https://www.theverge.com/entertainment/966726/cd-sales-vinyl-physical-media-luminate",
           "kind": "article"
         },
         {
-          "id": "software-ai-681ecc5b18c8",
-          "title": "Aligning Brain Waves and Machine Learning - Neuroscience News",
-          "excerpt": "Aligning Brain Waves and Machine Learning &nbsp;&nbsp; Neuroscience News",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBpQXJRVGFHcGtLUm05NVo0YklDUW1sak5ETGl3dlFKYWh4bk5yOVloNVFEUzRoNURSMDl3SDVOQXRZYkZ4WmpzWElJWDdjQXBqSXFSWmNYdWVLWDMtRXg0YmdwMmd5MXBKWGItNDlzYkJTRHZYcl9qcUNqcw?oc=5",
+          "id": "software-ai-e126ab8ba81a",
+          "title": "Kalshi says it caught Trump’s teleprompter operator insider trading",
+          "excerpt": "Kalshi users betting on what President Donald Trump would say during his speeches were reportedly up against tough competition: the president's teleprompter operator. ABC News reports that federal investigators believe Gabriel Perez - Trump's teleprompter operator since 2016 - used inside…",
+          "url": "https://www.theverge.com/news/966676/trump-teleprompter-operator-kalshi-bets-mention-markets-investigation",
           "kind": "article"
         },
         {
-          "id": "software-ai-cdc7826a7f42",
-          "title": "New machine-learning equation accurately assess LDL cholesterol risk - Medical Xpress",
-          "excerpt": "New machine-learning equation accurately assess LDL cholesterol risk &nbsp;&nbsp; Medical Xpress",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQV2RWTDktQnBBdHdZbWt5a3pRX0lLaFVJc1p0b0FqVnB5Smh4OXBsODFOSldHZ3QwVHNrcWZCU280N2tQanpuamcyQUtiWVRPU1QtS3I5UUs5d3pvOTBlcVAwYjRtOWRtbmhmQnpheF9sOXM5aEZUYmpodDAtY2VOZ1RZbVJOSkRLUk5RTVB2VFU?oc=5",
+          "id": "software-ai-a151e0b83008",
+          "title": "New York governor says she’s using AI to analyze ‘every single rule’ in the state",
+          "excerpt": "New York Governor Kathy Hochul might have just signed a moratorium on new AI data centers in the state, but she's not against using the technology herself. During an interview with Bloomberg's Odd Lots podcast, Hochul said that her team is using \"AI to analyze every single rule, regulation, [and]…",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/966647/new-york-governor-kathy-hochul-ai-policies",
           "kind": "article"
         },
         {
-          "id": "software-ai-aee4b2808cc5",
-          "title": "Better Artificial Intelligence (AI) Stock: Alphabet Versus Meta Platforms - The Motley Fool",
-          "excerpt": "Better Artificial Intelligence (AI) Stock: Alphabet Versus Meta Platforms &nbsp;&nbsp; The Motley Fool",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPZ3pyaVJNaFVoc3c1c0xnOGNZaXBDdUhTVFlKcUpJR3REbDd5SFgyQ2NaWVNLYWJocGF1STFWUDQxenF2V2RKdFVUQlNxR0w2UzZqcThZZTZJSGdHNU13N0NzQ3UyaHlkTDhONTV5QnpGNjRNcEo1ekFFV1I2N0Z1R3JnRVhLcXd6eGx0UlhwVDVfWDA?oc=5",
+          "id": "software-ai-4769232d0248",
+          "title": "Ecovacs’ self-cleaning Deebot X11 has hit a new low price",
+          "excerpt": "Sometimes it feels like keeping your floors clean is one of those never-ending chores, which is why it's nice to have a versatile robot vacuum take it off your hands. The Ecovacs Deebot X11 robovac / mop hybrid is designed to do just that, and it's now $699 ($400 off) at Amazon and directly from […]",
+          "url": "https://www.theverge.com/gadgets/966651/ecovacs-deebot-x11-robot-vacuum-deal-sale",
           "kind": "article"
         },
         {
-          "id": "software-ai-f448c3992d60",
-          "title": "AI boom bumping up gas prices - The Nightly",
-          "excerpt": "AI boom bumping up gas prices &nbsp;&nbsp; The Nightly",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPYnpfZ1lBMllTcWhsQlk1cGJMd09aX0xqVGd1alItOTdpZGNRREM5MTVGV2FHcHZMQ2tkSUhGaFRwLXc4cHdOaXJmaDN3c0JtenBJR2hYbWdUWFowMnYyNnFvakhRME9mTzZBdU5OeG5QcXRVa29EVnJrZnY4YUp0UnpzR3dFRW1TOFVPT2ZWTjNlSm8zSFQ1d2VmaVF1MU8xZG9kcFAyUE9iTEY5b0JfY1Uybmp4VjVXNGtwdjdfbGcwUHN0MTYwSExmbzA?oc=5",
+          "id": "software-ai-96e79c4d1bee",
+          "title": "Google is better than Apple at playing the AI regulations game",
+          "excerpt": "Today, the European Union ordered Google to give its AI rivals greater access to Android, the open-source operating system that powers billions of devices worldwide. The demand is hardly surprising. It may look like a defeat on paper for Google, which has spent years resisting exactly this kind of…",
+          "url": "https://www.theverge.com/policy/966588/eu-dma-ai-android-siri-ai",
           "kind": "article"
         },
         {
-          "id": "software-ai-bfd6cc9af89b",
-          "title": "Artificial Intelligence will test India’s conscience - Herald Malaysia Online",
-          "excerpt": "Artificial Intelligence will test India’s conscience &nbsp;&nbsp; Herald Malaysia Online",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQUFGb3NkbUdCQkgySjJlMHRyMWNITHN6X3JNUkNQSTRXS0ZxOFg3QUNrTTdUZTJjbjhUZy1hdmMzdl90VW1oMjQ0SE0ybk05d3cwdS1ybXNXWXRwZzlKX09VWlp6T2VMNGM3czkyOW5jc29rMUU4UjBQSjJCdnRTeU91STJzYm5ZMmFoX2loRV81dHRvZHM3OVptQQ?oc=5",
+          "id": "software-ai-10df2d62b8fa",
+          "title": "Roblox will let people use AI to make games on their phone",
+          "excerpt": "Roblox is about to let people make games with AI right inside its mobile app, which could make a platform that's already filled with content of questionable quality feel even more overloaded. The company has embraced AI with open arms, including a preview of an ambitious take on AI world models…",
+          "url": "https://www.theverge.com/games/966589/roblox-build-ai-phone-moblie-games",
+          "kind": "article"
+        },
+        {
+          "id": "software-ai-0b85f7551edc",
+          "title": "Google is renaming NotebookLM to Gemini Notebook",
+          "excerpt": "Google is giving its AI note-taking app a new name. The company announced on Thursday that NotebookLM is becoming Gemini Notebook, but will remain a standalone app even as it integrates more deeply across Gemini and Google Search. Google first revealed Gemini Notebook - then called Project Tailwind…",
+          "url": "https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm",
           "kind": "article"
         }
       ]
     },
     "design": {
-      "days_since_last_article": 2,
+      "days_since_last_article": 0,
       "items": [
         {
           "id": "design-399e8e1b4b7a",
@@ -126,7 +125,7 @@
       ]
     },
     "indie-income": {
-      "days_since_last_article": 1,
+      "days_since_last_article": 2,
       "items": [
         {
           "id": "indie-income-90a4678a086b",
@@ -187,7 +186,7 @@
       ]
     },
     "mortgage-broking": {
-      "days_since_last_article": 2,
+      "days_since_last_article": 3,
       "items": [
         {
           "id": "mortgage-broking-340bd555ba57",
@@ -248,8 +247,16 @@
       ]
     },
     "property": {
-      "days_since_last_article": 5,
+      "days_since_last_article": 0,
       "items": [
+        {
+          "id": "property-34711da334b4",
+          "title": "The Rental Crisis Gets Worse!",
+          "excerpt": "AFR, Sunrise Show - Channel 7, Channel 7 News, Business News Australia AFR Best Place to Work - 2026 Finalist Financial Times High-Growth Companies Asia-Pacific 2026 - #43 REB's Buyers Agent of The Year 2025 - Finalist \"FAST 100 AFR 2025 | #15 Fasting Growing Company\" “REB’s Best Buyer’s Agency…",
+          "url": "https://www.youtube.com/watch?v=_4dXk_U0VV4",
+          "kind": "video",
+          "source": "Personal Finance with Ravi Sharma"
+        },
         {
           "id": "property-7126941f1009",
           "title": "Logan Central, QLD 4114: Suburb Profile & Property Report - Your Investment Property Magazine",
@@ -299,19 +306,40 @@
           "excerpt": "Beachlands, WA 6530: Suburb Profile & Property Report &nbsp;&nbsp; Your Investment Property Magazine",
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYzhtdXpWTFJjc2JTSEJpX1ZPRjNZcU00Z3d2bHVYREJlckdxMkZGQkwtSHNZZ2pKMnFrRmhUQ25TSm8xcmJFZUlBWVJjVkRoemFUd1dzUVpvdWpXQmEwRlZmMFg0Y0RyUmNSMEozTFFzeWo1NllNVkNfajFpbWhMaA?oc=5",
           "kind": "article"
-        },
-        {
-          "id": "property-ffd89b2356bc",
-          "title": "Albion, VIC 3020: Suburb Profile & Property Report - Your Investment Property Magazine",
-          "excerpt": "Albion, VIC 3020: Suburb Profile & Property Report &nbsp;&nbsp; Your Investment Property Magazine",
-          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBFLURwZWt3Q1NweDFsV3dsLUZOSVVKSkIwRG5BZkxiU3dmb0dCR01xRWoyS1pva2FiQjVjOURWd2ZueVoweUNzbW94elpJcFNvUVRVSHZSWUk5ampRQjlxZVVFcXVQalNVZVg3aGRhdzZoMmJlT09tekh0WnU?oc=5",
-          "kind": "article"
         }
       ]
     },
     "actuarial": {
-      "days_since_last_article": 3,
+      "days_since_last_article": 4,
       "items": [
+        {
+          "id": "actuarial-55768dad102b",
+          "title": "‘Mud is gone’ but Taree still exposed, roundtable hears",
+          "excerpt": "Insurance Council CEO Andrew Hall has co-hosted a roundtable in Taree, bringing together business and council leaders after May 2025 floods led to more than 14,000 claims and nearly $283 million in claim payments...",
+          "url": "https://www.insurancenews.com.au/daily/mud-is-gone-but-taree-still-exposed-roundtable-hears",
+          "kind": "article"
+        },
+        {
+          "id": "actuarial-eb84d39cbcb7",
+          "title": "SA workers’ comp scheme seeks new claims managers",
+          "excerpt": "ReturnToWorkSA has launched a tender for workers&rsquo; compensation claims management groups to start handling caseloads from July 1 next year...",
+          "url": "https://www.insurancenews.com.au/daily/sa-workers-comp-scheme-seeks-new-claims-managers",
+          "kind": "article"
+        },
+        {
+          "id": "actuarial-ecf49f738a68",
+          "title": "Lockton taps ‘incredibly dynamic market’ with NZ expansion",
+          "excerpt": "Lockton has expanded in New Zealand with the opening of an office in Queenstown...",
+          "url": "https://www.insurancenews.com.au/daily/lockton-taps-incredibly-dynamic-market-with-nz-expansion",
+          "kind": "article"
+        },
+        {
+          "id": "actuarial-a3b245461ee7",
+          "title": "Travel insurer told to cover cruise voucher value",
+          "excerpt": "Unlucky travellers who missed two cruise ship departures due to mechanical issues and then a broken bone have won a claim dispute with their insurer...",
+          "url": "https://www.insurancenews.com.au/daily/travel-insurer-told-to-cover-cruise-voucher-value",
+          "kind": "article"
+        },
         {
           "id": "actuarial-182b14b46bab",
           "title": "All about The Ultimatum’s Edris, the 38-year-old actuary with a unique outlook on love - The Tab",
@@ -339,101 +367,103 @@
           "excerpt": "Two Aon managers have been crowned broker and young broker of the year for Queensland...",
           "url": "https://www.insurancenews.com.au/daily/aon-doubles-up-as-queensland-crowns-top-brokers",
           "kind": "article"
-        },
-        {
-          "id": "actuarial-a9639912e409",
-          "title": "AFCA backs insurer after flood payout fuels family feud",
-          "excerpt": "An estate executor has lost a dispute with IAG after his brother made off with a $373,000 cash settlement for flood damage to their late father&rsquo;s home...",
-          "url": "https://www.insurancenews.com.au/daily/afca-backs-insurer-after-flood-payout-fuels-family-feud",
-          "kind": "article"
-        },
-        {
-          "id": "actuarial-b75306094e21",
-          "title": "INsight podcast: broker remuneration row resurfaces",
-          "excerpt": "The National Insurance Brokers Assocation U-turn on remuneration disclosure requirements for small businesses is one of the main subjects discussed on the latest Insurance News podcast...",
-          "url": "https://www.insurancenews.com.au/daily/insight-podcast-broker-remuneration-row-resurfaces",
-          "kind": "article"
-        },
-        {
-          "id": "actuarial-2d273d019a5c",
-          "title": "InEvo Re brings in Monument Re veteran to lead underwriting - Insurance Business",
-          "excerpt": "InEvo Re brings in Monument Re veteran to lead underwriting &nbsp;&nbsp; Insurance Business",
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPcTFVU3JSVlRGMGE4d01kT2R2clROS1VIOHRlNDhOM2UtN3dMbkRfaGM3RHZ6c2I4MTJjZGlSZEo2RXZuNDZ5eUhueGNvdmtfekZyVlpLbTlTRlV4LU0wbEkyUnl3Wk8tS2F2Q3pUUUx1N003dGZVVzk2Z1RWdE5DQzBEUG9yNTZDZWhpSzkwbDYxSGc0Z3pkZEpUU25KUDZyeTlPeTMxczJ3ZEJkd1lFYk9zUFc4N1BXSW14eF9STVliU0hsT2Rtamo0V0ExVDd5RTVLR3J3?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "actuarial-e32d2d43414c",
-          "title": "Who Is Carolyn Bavington From Jeopardy? Meet the Actuary and Retirement Consulting Expert from Philadelphia - IMDb",
-          "excerpt": "Who Is Carolyn Bavington From Jeopardy? Meet the Actuary and Retirement Consulting Expert from Philadelphia &nbsp;&nbsp; IMDb",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1URzRWeF9lak9ydW15em1ZME5GSEhVRnhHN0lEd0ctRktrUVQ1NGtibHo2VThQcnhISExYSUpJNzZtV0psWkNwT2I2RXRDbU52U3FacXlNRkdWbm9kN1dTSkJoQUx5UDA?oc=5",
-          "kind": "article"
         }
       ]
     },
     "finance": {
-      "days_since_last_article": 4,
+      "days_since_last_article": 5,
       "items": [
         {
-          "id": "finance-8680131238df",
-          "title": "Westpac chief tells Labor to stay out of super - afr.com",
-          "excerpt": "Westpac chief tells Labor to stay out of super &nbsp;&nbsp; afr.com",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQnBSWWloZ2U1LVZCQzUtODNVZFJ2RGxVMWNzWWdVTzhMcFdCU3QwanlBRGNyRzhPZ3lZLW5uV1h0S1MxYkM3V3dOaWF3OXhxM1puakdsMXhXa1NSQzBiLTVYeEJ2NEdIeU1LSVZMeUVLZjZoMUJKVlVWZ3c4TTNWanVUMTRfNDNJU1lQZ2lOS1A4TEJYbW92LU5pblJuYy1EZmpjeXlpdzNPQy0wTHFiWTRVY0hyaWc?oc=5",
+          "id": "finance-309c090f0aac",
+          "title": "Former Intel CEO on What Went Wrong, What's Next + Lovable CEO on the Real Promise of Vibe Coding",
+          "excerpt": "(0:00) Former Intel CEO Pat Gelsinger joins Jason! (1:41) What Went Wrong at Intel (15:19) Why a Taiwan Blockade Would Cripple the US Economy (25:00) Lovable's Anton Osika: One Million New Apps a Week (33:38) How Lovable is Bringing Down Builder Costs Follow Pat: Follow Anton: Follow the besties…",
+          "url": "https://www.youtube.com/watch?v=-ILKiOU5iAQ",
+          "kind": "video",
+          "source": "All-In Podcast"
+        },
+        {
+          "id": "finance-9e8d3bc175f7",
+          "title": "Netflix reports earnings in line with expectations, says company will give fewer engagement updates",
+          "excerpt": "Investors will be looking for updates on Netflix's ad-supported business, engagement metrics and how the streaming giant continues to consider potential M&A.",
+          "url": "https://www.cnbc.com/2026/07/16/netflix-nflx-earnings-q2-2026.html",
           "kind": "article"
         },
         {
-          "id": "finance-0877227f8bde",
-          "title": "Data centres face new regulation as government pivots on AI - afr.com",
-          "excerpt": "Data centres face new regulation as government pivots on AI &nbsp;&nbsp; afr.com",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZkk3OEpGN29rSTV3dkM5ZVFmcUVmN1B2OEtGbjhCSWNUenJvSG00clcyaU0wRTVESTFSVWxfV2hicDl4dG93QTMzSWZlUEZiTVh4NDhXR3duYWZKelBhQnVvSlE1TTJ4VnNaNU1xU1NCYVBmWkNGLUVSTnZSX3FkT0llYjk5alhXeW9hQ3hWYThucG43UkdZRnRoZ1JHcWpWMU1RaDhtVWFXWnRJOFE?oc=5",
+          "id": "finance-ae839b3d357f",
+          "title": "Here's why the housing market is hurting so much this summer",
+          "excerpt": "Mortgage rates are high, home prices at record levels, and consumers stressed — all contributing to a drop in existing home sales and builder sentiment.",
+          "url": "https://www.cnbc.com/2026/07/16/housing-market-mortgages-homebuilding.html",
           "kind": "article"
         },
         {
-          "id": "finance-7fc52f5d2ab5",
-          "title": "US ticketing giant buys Sydney venue to win contract from Ticketek - afr.com",
-          "excerpt": "US ticketing giant buys Sydney venue to win contract from Ticketek &nbsp;&nbsp; afr.com",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOcmFGVjgxVVhnVjhUNk4yVVJTOXczNGJQWWtfT2V0aHJ3ZUJsWDZYMG8weEVDVHRpVEJaSk1MSmtiYXZzdmtvV1FGRnNMZzRGaG5PWWRvRG1vQkp5ZFEzVmE4ejR5WXhnOTRUek53UG5IUzBZaGp2MXNwZ2NCMVVJcWI2d19TWFlJZTNKSTZtSFp4WFZJb2QwelpPcy1rZmVsLS1uUFRDa0J3X2NUcDZKeHFfOU5LaVpoSHpoM2VtV21BX3lURDR1QXplSnU?oc=5",
+          "id": "finance-1c400fc885fd",
+          "title": "Trump is set to deliver an election-focused national address tonight. Here's what to know",
+          "excerpt": "\"Without free and fair elections, you don't have a country,\" Trump said this week when asked to preview the speech.",
+          "url": "https://www.cnbc.com/2026/07/16/trump-primetime-address-elections-2020.html",
           "kind": "article"
         },
         {
-          "id": "finance-f4525061e699",
-          "title": "Highest-paid ASX 200 CEOs revealed - afr.com",
-          "excerpt": "Highest-paid ASX 200 CEOs revealed &nbsp;&nbsp; afr.com",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQOVZxNGJwNlNKZ1UxLTNxNHN5U1dGS3hZVk5pb3hHT1ZGbEdzY3VIQTlSa2pYS0J4clRsRndfV3dqX3h5dWJNWUhYTHJkS1JObFhuREUxU01EV2x3aFVRcW1vOXRTZ1QwSG5BUlkyaGd1bGNFNHE5SjExOFlHaWF5eEtxT2I4SGllNC0zYkhvMEpjS3R6cGFXNUNhM2VLRzhUOUVPVWhjX3ZNTGRQMFVMNWkxVzk0QQ?oc=5",
+          "id": "finance-daa0e5d8bc6e",
+          "title": "Alphabet shares fall on report its most powerful AI model Gemini 3.5 Pro is delayed",
+          "excerpt": "Alphabet announced the Gemini 3.5 Pro AI in May, saying it was being used internally but wouldn't be ready for a broader rollout until the following month.",
+          "url": "https://www.cnbc.com/2026/07/16/alphabet-stock-gemini-3-5-pro-ai.html",
           "kind": "article"
         },
         {
-          "id": "finance-bb15d4f0156b",
-          "title": "Leaked polling flags Victorian electoral chaos - afr.com",
-          "excerpt": "Leaked polling flags Victorian electoral chaos &nbsp;&nbsp; afr.com",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPeno2S2xCNFJLQm5PaURhSUdfX1BtbVRINk5PQmVUbTN2Ums3XzZORUR5UVNoNURRNTNnWHEwV3Z2bFIzMDRLenVjUDhvRDVpSjNWRlBqYzFKMWtobU1xNDhRSUxhWHFaWHg1T203eDBBVUtTRG1YMzVTdFU4Q1NONnpmdV9pWkRtWlMwSnlxdmw5Z2tCSnc?oc=5",
+          "id": "finance-304c9b1be5b4",
+          "title": "AG pick Blanche to meet with Epstein survivors after 2 GOP senators hedge on nomination",
+          "excerpt": "Sen. Thom Tillis, R-N.C., wants Todd Blanche to meet with victims of sex offender Jeffrey Epstein before committing his support for the nomination.",
+          "url": "https://www.cnbc.com/2026/07/16/todd-blanche-attorney-general-nomination-cornyn.html",
           "kind": "article"
         },
         {
-          "id": "finance-75df2ee3957b",
-          "title": "Albanese seizes control of AI agenda in major policy pivot - afr.com",
-          "excerpt": "Albanese seizes control of AI agenda in major policy pivot &nbsp;&nbsp; afr.com",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZWNaYkJtLVBpdGNBZ1ZsV0lMV0lRN1lPYzdTLUhPa09yMV9SVlN5YzR2Q2ZOaXpJZVl2ZWNYbHdWUUo1MHlCOTRQak1uRXROOTljYnBIbUR4LUphWEFUZ2VkaGxlU2FIdHQ3WW5TUm5PM2ZodEI2c3JLZzdLX3hRTzhRWEw0ekhuVlFPcl9yQUxxN29EYTVDX0dIQTRpaEZTelJVbGVScGs?oc=5",
+          "id": "finance-17d68c7e8157",
+          "title": "Trump suspends teleprompter operator over Kalshi bets allegations, White House says",
+          "excerpt": "Kalshi retained most of the profits, which were more than $90,000, from the trades made on public statements by President Trump.",
+          "url": "https://www.cnbc.com/2026/07/16/trump-kalshi-teleprompter-cftc-investigation.html",
           "kind": "article"
         },
         {
-          "id": "finance-02a944248eda",
-          "title": "Pauline Hanson’s secret Italian rendezvous with Gina Rinehart - afr.com",
-          "excerpt": "Pauline Hanson’s secret Italian rendezvous with Gina Rinehart &nbsp;&nbsp; afr.com",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQdG1hNmNJY2U3bnBsd21MOHZyWVJDRTJrWnNTdmV3T2FZa1VIZDZFUkhCNWtDaUduUTJ3bDVNTTd3di1FYlp2RmgxX0pVUWxqWUIxQ1FnZHBMbjRySWtMbnQ2SmFndDR3ZUFVZHBpaGZMNXVWU19YdlpRV2szUHYtdjh3UXBXUjUyY3dOd01DZ3NQREd5WUdvQ3NHbHotcVFFcnRkMnJydjdVeG4zZFE?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "finance-e64233e84f35",
-          "title": "Rudd fears China may move to seize Taiwan in 2028 - afr.com",
-          "excerpt": "Rudd fears China may move to seize Taiwan in 2028 &nbsp;&nbsp; afr.com",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVmJEcVV0VnRsdWx6VWZZei1IM3B0QXlZMDNuSHVPZmxwdW4zc0lYLV9xRm9pQzNIaEtzVXJVSXNrZTZpNnZKbVR3dHpZOFFXOVFTQmFHSlJ1MjBXUjM5eENuZUxXY3pWVkJJTGh2WnBRTTVaMDRDbTJxVVFHLUxrZnRYd1pOb2JhUlJZZnp3cWhOQl9tQTYzQmwyV3FUSW5UZnEtTnZfZkVGV2JN?oc=5",
+          "id": "finance-75f8dd5eda79",
+          "title": "Oil pipelines around the Strait of Hormuz won't end the threat Iran poses to Middle East crude exports",
+          "excerpt": "Oil producers are building or contemplating new pipeline projects to bypass the Strait of Hormuz, but this infrastructure is still vulnerable, analysts said.",
+          "url": "https://www.cnbc.com/2026/07/16/oil-pipeline-iran-strait-hormuz-red-sea-iraq-uae-saudi.html",
           "kind": "article"
         }
       ]
     },
     "health": {
-      "days_since_last_article": 0,
+      "days_since_last_article": 1,
       "items": [
+        {
+          "id": "health-53f820026470",
+          "title": "The Science & Treatment of Bipolar Disorder | Huberman Lab Essentials",
+          "excerpt": "In this ⁠Huberman Lab Essentials⁠ episode, I explain the biology, symptoms and types of bipolar disorder (sometimes called bipolar depression), a condition characterized by extreme, maladaptive shifts in energy, mood and perception. I describe the diagnostic criteria that distinguish bipolar I from…",
+          "url": "https://www.youtube.com/watch?v=UTB5gAkjevk",
+          "kind": "video",
+          "source": "Andrew Huberman"
+        },
+        {
+          "id": "health-58517bbec11e",
+          "title": "More than 400 sick as CDC searches for the source of a mystery outbreak",
+          "excerpt": "A growing Cyclospora outbreak has sickened more than 400 people in four states, and investigators are still searching for the contaminated food responsible. The CDC warns the actual number of cases is likely much higher and urges anyone with symptoms to seek medical care.",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260715083530.htm",
+          "kind": "article"
+        },
+        {
+          "id": "health-21f9b5279233",
+          "title": "Scientists finally solved how a common gut bacterium triggers colon cancer",
+          "excerpt": "Researchers solved a long-standing mystery behind how a bacterial toxin associated with colorectal cancer damages the colon. The toxin first binds to a receptor called claudin-4, giving it access to attack the cells' protective barrier. After identifying this weak point, the team designed a decoy…",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260713084910.htm",
+          "kind": "article"
+        },
+        {
+          "id": "health-af7c44b40c17",
+          "title": "Common constipation drug may help clear depression brain fog",
+          "excerpt": "An existing constipation drug may have an unexpected new use: helping clear the \"brain fog\" that often lingers after depression. In a small clinical trial, people with a history of depression who took the medication prucalopride for about a week performed better on tests of memory, attention, and…",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260712011751.htm",
+          "kind": "article"
+        },
         {
           "id": "health-7956dbf4fdbf",
           "title": "FIU Study: Sleep Disorders Alter Brain Function - Mirage News",
@@ -461,39 +491,11 @@
           "excerpt": "PAN International urges system-wide nutrition training, not just more medical school hours &nbsp;&nbsp; Nutrition Insight",
           "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUEhaX3Z3bF9ZUy1mQ09ySmJocjUzODNKYndfd1h5TVNfMndrWnVzblIxYXptVVExRHVQV1VyRmFKUmhzVzlkcUJxZzlWNzJ5R1VWSnVScWRQV2R1VkQtMlNhLWpnLXV0MmJnRm95ZVlEdmtWY2stajlEaEd5WVdYOFJNVGJtLXBId0FUdlk1NFVTNUJmbFE?oc=5",
           "kind": "article"
-        },
-        {
-          "id": "health-b79255a85a6b",
-          "title": "Gen Z Fitness Trend: Are Group Workouts Better? - Medscape",
-          "excerpt": "Gen Z Fitness Trend: Are Group Workouts Better? &nbsp;&nbsp; Medscape",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOeko4RVBOS0U4NzRqVW1FcjNvcWV4VVhZS0dSYXp1QXNWdmtfMTQzWGJiazE3Vm9INE5tRlNIaTJzV1h2NEd5VmVXUHEwWGZCNzZtTTFBckQzSnkzNktfUTlJUE5zRDQ3dUJsUFk4eWNiLW5ScFVCNkFEdVhjNlZTTkhSMHhmTjBoTFVON1pjcEdqUFh6Z1BpT08xMA?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "health-203cd0b5435f",
-          "title": "Losing Even 80 Minutes of Sleep a Night Linked to Weight Gain - Sci.News",
-          "excerpt": "Losing Even 80 Minutes of Sleep a Night Linked to Weight Gain &nbsp;&nbsp; Sci.News",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5yUXBKcUxDcjJCc2NEOHdpZWdTUWZBMVpVZjdmMXAyNlhGSXFzU1Z4XzdsR3U3RUNpa056SDZWdjM4UjM4b1RoYTVhdENJQy1ycTlBZ2RKWnZtWHBRY1pWV3Y4TUJ3TEZRRTgxTlFDR0FEWUFCX0h1Y1dBU0F1aTA?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "health-4105a8179ee2",
-          "title": "Health Check: Restless investors question sleep giant Resmed’s short-term prospects - Stockhead",
-          "excerpt": "Health Check: Restless investors question sleep giant Resmed’s short-term prospects &nbsp;&nbsp; Stockhead",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPT3VMa0ZwdDNZVFVfeGF0ZEQtZ19nQ2NPVjdjYko3M2FPQ3h5S2ZJaWRtSWU2T1BEMEdOa0x0eWtVdktpaGZ5RXl0bzltZk80QmdnOHpkWnpZcXBOb1N6bERPSWpKbzNxMzFNb2luSUh6YmM3UkVMLTFfTVk3NFY2VHJSODNPbEo3ZU8tel80UEh0OEZWQ1dpTEh0Q1dRc281Rmo4Z2Q0YlJZX3oyNVNsR0RDWXk?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "health-1e74d3ca7cac",
-          "title": "Surprising food combinations that boost every bite - The Australian",
-          "excerpt": "Surprising food combinations that boost every bite &nbsp;&nbsp; The Australian",
-          "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPUEFaaWJBTml6OWdFN1I4Q3J5UFc0QkdrdWR0TFI4RlNYLV9LM20yN2JpS3BKbWNEdy05NHVaMjV0LXdsR3VhRGpOS1cyby1QUTVmblhCeDhiY2RZLWpwQlFKLUZoSThhOXJ1eEUwdXBCVnc4TmtYcUI2Wi1IN0xUZW9vcTRlbmduUXh4T25kMmM2VzBmVC1kTU4xcmQtR1hoUVdiVzhmbkFFcFU5UnRHbnF6SDZOa1ZxWUJhZlBLWjR6THBUMUxaeG9fT253VlY2WGVLY25JNkZ1cGdMN0xQcjh3enowUHBTZ2FkdFp1Q1UxQkNQaEpnS9IB_gFBVV95cUxQejFGME8xY2NfRmJFSjAwdzM3M3VNakw1RUdMZTJzRXo3bTFHTGFqaHY1bEJvb1J4OUdfQ2dsOVp2WUR3SU9ZaUV5eUItQnR1cDZZWlVWZDRrVEtmZl96T0ZJeG1vWVB0dHlPZC03NTJXZjhod3VCUFFLWS01ZmhtTFlJVkVNM05TT1VicjltUV96TkVwZUc1TUtGa3kyLVNUT2pUa2lhVVUwa1V3UUNGbFczYmNPckRpWUZ3eWlsWEJoRkY2dlRQRG5HN29kQlBjZF84RUY3YUlJTVBLa2ZOaGZQOW9MMU9SenJwQ2FVSmFSUndNUElzMnBUcTJ5Zw?oc=5",
-          "kind": "article"
         }
       ]
     },
     "videography": {
-      "days_since_last_article": 0,
+      "days_since_last_article": 1,
       "items": [
         {
           "id": "videography-4fae74a49e43",
@@ -554,62 +556,62 @@
       ]
     },
     "science": {
-      "days_since_last_article": 1,
+      "days_since_last_article": 2,
       "items": [
         {
-          "id": "science-8fab06451286",
-          "title": "Helpful microbes could battle pathogens in our hospitals and schools—with the help of AI to make it work",
-          "excerpt": "Helpful microbes that combat harmful pathogens could be the answer to rising antimicrobial resistance—particularly within built environments such as hospitals, homes and schools.",
-          "url": "https://phys.org/news/2026-07-microbes-pathogens-hospitals-schools-ai.html",
+          "id": "science-36e4ad49df1f",
+          "title": "Graphene nanoribbons survive gamma radiation, revealing potential sensors for fusion reactors",
+          "excerpt": "University of Arizona researchers have demonstrated a promising new application for graphene nanoribbons, a nanoscale semiconductor material with the potential to withstand extreme environments. The team's findings could help clear a key hurdle to bringing fusion energy to the electric grid.",
+          "url": "https://phys.org/news/2026-07-graphene-nanoribbons-survive-gamma-revealing.html",
           "kind": "article"
         },
         {
-          "id": "science-daa373cb043a",
-          "title": "Epigenetic mechanism explains how some plants cope with salt stress",
-          "excerpt": "Due to artificial irrigation and rising temperatures, the concentration of salts (including sodium chloride, or \"table salt\") is increasing in soils worldwide. This is not only an environmental problem but also a challenge for agriculture. For example, increased salinity can disrupt the water…",
-          "url": "https://phys.org/news/2026-07-epigenetic-mechanism-cope-salt-stress.html",
+          "id": "science-251933e5c64f",
+          "title": "Climate change reshapes waterborne disease risks as pathogens respond differently, review finds",
+          "excerpt": "Climate change is altering the spread of waterborne diseases around the world, according to a comprehensive review published today in Nature Reviews Microbiology. The publication is the most up-to-date, comprehensive analysis examining how climate change influences waterborne diseases.",
+          "url": "https://phys.org/news/2026-07-climate-reshapes-waterborne-disease-pathogens.html",
           "kind": "article"
         },
         {
-          "id": "science-2c5f57e085f5",
-          "title": "Bacteria form 'herds' to survive predators, offering fresh insight into Earth's carbon cycle",
-          "excerpt": "Researchers at Queen Mary University of London have discovered that tiny photosynthetic bacteria band together into protective \"herds\" when attacked by predators—a survival strategy that could also influence how carbon is stored in the world's waters.",
-          "url": "https://phys.org/news/2026-07-bacteria-herds-survive-predators-fresh.html",
+          "id": "science-5230927bd99b",
+          "title": "The starry night redux: Dark energy camera captures stars, nebulae, clusters, and more in a rich, van Gogh-esque scene",
+          "excerpt": "The 570-megapixel Department of Energy-fabricated Dark Energy Camera (DECam) captures a vibrant scene filled with swirls and stars reminiscent of Van Gogh's The Starry Night. This new cosmic masterpiece features the glowing nebula NGC 6729 on the left and the globular star cluster NGC 6723 on the…",
+          "url": "https://phys.org/news/2026-07-starry-night-redux-dark-energy.html",
           "kind": "article"
         },
         {
-          "id": "science-f8dcb007fa72",
-          "title": "After traveling a billion kilometers, China's asteroid hunter finally arrives",
-          "excerpt": "What does it take to catch up with a small, tumbling rock hundreds of thousands of kilometers from Earth? For China's Tianwen-2 mission, the answer was a 400-day chase covering roughly 1 billion kilometers (621 million miles) of deep space—one that has just ended in success. The China National…",
-          "url": "https://phys.org/news/2026-07-billion-kilometers-china-asteroid-hunter.html",
+          "id": "science-767c590a9d8a",
+          "title": "Can bacteria reveal hidden pollution? New river study says yes",
+          "excerpt": "The Guadalquivir is the most important river in Andalusia. Stretching 657 kilometers (408 miles), it forms the backbone of Andalusia, from its source in the Sierra de Cazorla mountains to its mouth in Sanlúcar de Barrameda. These facts, along with its name of Arabic origin (Wadi al-Kabir) and its…",
+          "url": "https://phys.org/news/2026-07-bacteria-reveal-hidden-pollution-river.html",
           "kind": "article"
         },
         {
-          "id": "science-1ce9ab13607a",
-          "title": "Marsupial newborns get early arms as embryos bypass usual limb-building sequence",
-          "excerpt": "Scientists have discovered that marsupial forelimbs (arms) develop much earlier before birth than previously thought, providing new insights into evolutionary innovation and biology.",
-          "url": "https://phys.org/news/2026-07-marsupial-newborns-early-arms-embryos.html",
+          "id": "science-f5eef51802ef",
+          "title": "How the trend for turning front gardens into driveways is adding to night‑time heat",
+          "excerpt": "Warm, sticky nights are becoming increasingly common in the UK.",
+          "url": "https://phys.org/news/2026-07-trend-front-gardens-driveways-adding.html",
           "kind": "article"
         },
         {
-          "id": "science-fc9cab2d0f77",
-          "title": "Tiny water droplets convert stubborn plastic waste into valuable acids, study finds",
-          "excerpt": "A new way of converting stubborn plastic waste into high-value chemicals using only water and oxygen has been developed by an international team of scientists.",
-          "url": "https://phys.org/news/2026-07-tiny-droplets-stubborn-plastic-valuable.html",
+          "id": "science-72ca8997da8d",
+          "title": "Glyphosate ban could cost Illinois farmers millions annually",
+          "excerpt": "A new analysis from the University of Illinois Urbana-Champaign and the Illinois Soybean Association finds that Illinois corn and soybean farmers could lose up to $609 million per year—representing a 3.6% revenue loss—if the state banned the weedkiller glyphosate. The study is published in the…",
+          "url": "https://phys.org/news/2026-07-glyphosate-illinois-farmers-millions-annually.html",
           "kind": "article"
         },
         {
-          "id": "science-f06954863620",
-          "title": "New algorithm improves gene expression marker identification across diverse biological systems",
-          "excerpt": "Researchers have developed a new computational approach that enables more accurate selection of genes that characterize different cellular states from mRNA-seq data, offering a more interpretable way to analyze complex biological data. The study, published in Frontiers in Immunology, involved…",
-          "url": "https://phys.org/news/2026-07-algorithm-gene-marker-identification-diverse.html",
+          "id": "science-f00f42007f1e",
+          "title": "Living alligators expose why juvenile fossils can fool classification methods",
+          "excerpt": "Fossil finds are exciting moments that sometimes introduce the world to an ancient mammal or dinosaur that existed millions of years ago. But a longstanding problem in paleontology is that fossils are often incomplete, and subtle differences between certain species, along with major changes that…",
+          "url": "https://phys.org/news/2026-07-alligators-expose-juvenile-fossils-classification.html",
           "kind": "article"
         },
         {
-          "id": "science-0da0e7565c08",
-          "title": "A new class of root-dwelling fungi named after the King of Sweden",
-          "excerpt": "Researchers at Uppsala University have discovered a completely new fungal species, which they named after the king of Sweden. The species has been given the Latin name Semicentenialea rex, which means the king's 50th anniversary. It is the first known representative of a new class of fungi called…",
-          "url": "https://phys.org/news/2026-07-class-root-fungi-king-sweden.html",
+          "id": "science-4270e892c1d9",
+          "title": "Young people are among the most at risk of stalking, but many don't recognize it",
+          "excerpt": "In everyday life, people often joke about \"stalking\" someone on social media or describe someone's behavior as a bit \"stalky.\" But these casual uses of the word can blur the reality of stalking as a serious crime.",
+          "url": "https://phys.org/news/2026-07-young-people-stalking-dont.html",
           "kind": "article"
         }
       ]
