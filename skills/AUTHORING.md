@@ -55,7 +55,12 @@ Respect each interest's **mode**:
   **The current bar:** a `current` piece must contain **at least 3 concrete, dated facts** (a number,
   a named decision, a quoted figure) traceable to its listed sources. If after one fetch you cannot
   state the actual figures, do NOT write it as current — write the honest `learn` version or pick
-  another cluster. Never write "the data should show…" about a release you claim just happened.
+  another cluster.
+  **The current bar does NOT apply to a `position` piece** (see *Actuarial* below), and you must not
+  use it to rank candidates. It is a floor for news pieces, not a scoring function: fact-density is the
+  one axis on which a trade-press brief always beats an argued essay, so ranking by it silently picks
+  the brief every time. Judge a candidate on whether it has something worth saying, then apply the bar
+  that matches the shape you chose. Never write "the data should show…" about a release you claim just happened.
 - **`learn`** — teach a foundation. Evergreen, builds the knowledge graph, does NOT need fresh news (write it
   even if the pool is thin — draw on the topic itself). Omit `expire_at` (or set it far out per `ttlDays`).
   Style: teach one idea well, from the reader's stated level up. Prefer teaching a concept that
@@ -83,15 +88,8 @@ worked AU examples — not general overviews.
   - **Fetch budget:** you are writing ONE piece, so actually read for it — fetch the **3–6** sources
     that carry your key claims rather than stretching a single excerpt into an article. Prefer an
     enriched excerpt when it already has the numbers. Targeted fetching, not broad crawling.
-- **Actuarial: the Actuaries Institute is the anchor.** For an `actuarial` piece, look first at digest
-  items from `actuaries.asn.au` (Actuaries Digital — the Institute's own publication; its items carry a
-  `topics` field from the Institute's practice-area taxonomy, e.g. *Life Insurance*, *Superannuation and
-  Investments*, *Data Science and AI*) and at press coverage of Institute research such as its Green
-  Papers and Dialogue papers. Build on the Institute's position — that's the profession's own voice and
-  the reader's own body. Insurance trade press (broker appointments, M&A, award roundups) is background
-  colour at best: it can support a piece, never carry one. The Institute also publishes community
-  material — exam results, puzzles, event recaps, "5 minutes with" profiles — which is **not** article
-  material; skip it. Weight *Life Insurance* and *Superannuation and Investments* items most heavily.
+- **Actuarial has its own contract — see the section below.** It is the reader's own profession, so the
+  bar is different there.
 - **Video pool items (`kind:"video"`)** are YouTube uploads — their excerpt is the video *description*,
   not a transcript. Treat them as leads/signal, fold in **with attribution** (name the channel in
   `sources`), and don't build an article solely off one video's thin description.
@@ -132,6 +130,63 @@ worked AU examples — not general overviews.
     as often as 1 and 2.
   - Leave `merged_from: []`, `merged_into: null`.
 
+## Actuarial — the position piece
+This is the reader's own profession. He is a FIAA in **group life** (life insurance inside super),
+deepest on **pricing**, moving into consulting. He does not need the news; he needs the argument. The
+two actuarial pieces he has actually named as good are a practitioner essay re-opening the 2019
+PYS/PMIF reforms, and an Actuaries Institute submission to the Life Insurance Code review. Both are
+**life** policy with a thesis. Neither is a trade brief.
+
+**Source ladder — obey it in order.** This binds at topic-pick, not after:
+1. **`kind:"policy"`** digest items — the Institute's own submissions, dialogue/discussion papers,
+   reports and position statements. Their `topics` name the genre and practice area
+   (e.g. *{Submission, Life Insurance}*). Their excerpt is real extracted text from the document.
+2. **Practitioner essays** that argue a case (the Substack items — invisiblebalancesheet, actuarialnotes).
+   If the digest holds one with a thesis, that beats any news item that week. **WebFetch it and read the
+   whole argument** before writing — the digest carries only a blurb.
+3. **Actuaries Digital** (`actuaries.asn.au` articles) — the profession's magazine.
+4. **Trade press** (insurancenews.com.au, *The Actuary*, broker titles) — background colour only. It may
+   supply a fact inside a piece; it may **never** be the reason a piece exists. Personnel moves, M&A,
+   award roundups, event notices and scheme-administrator news are not actuarial articles.
+Weight *Life Insurance* and *Superannuation and Investments* above *General Insurance*: the tab has been
+drifting to GI news, which is not his book. Institute community material — exam results, puzzles, event
+recaps, "5 minutes with" profiles — is never article material.
+
+**If a tier-1 or tier-2 item is in the digest, write about it.** A general-insurance brief may only win
+when tiers 1–3 are genuinely empty that day.
+
+**Shape: `position`.** When the piece is built on tier 1 or 2, set `"shape": "position"` in `#meta` and
+write an argued piece, not a report. A position piece:
+- **Answers a contested question** the profession has not settled — one where a competent actuary could
+  hold the other view. If the question has an agreed answer, you are writing a summary; find the live
+  question or drop to a `learn` piece.
+- **Steelmans first.** State the opposing case at its strongest — ideally as the question the reader
+  would ask — and concede it in a plain sentence *before* you turn. At least one unhedged concession
+  must appear before the main turn.
+- **Does one piece of original arithmetic**, with every input stated, so the reader could re-run it
+  against his own book. Borrowed figures are not enough — the value is the five minutes of work nobody
+  was paid to do. State the inputs even when they are indicative.
+- **Restates the key number in three units** — absolute, per member, and as a share of the relevant base
+  (per week, or as a % of balances/premium). The same number in the units of three different rooms.
+- **Counts what the data cannot see** where it applies: the population absent from an experience study
+  by construction (lives never insured, claims never made) is the strongest thing you can hand him.
+- **Names one real case** if one exists, in ~90 flat words. Mechanism and facts only. No grief narration.
+- **Hands off inside his authority** — trustees, appointed actuaries, pricing teams — and closes forward
+  on what should change, not on a diary date.
+- **Does not apologise for jargon.** TPD, cross-subsidy, default cover, CSM, SPS 250 all stand
+  unglossed. The absence of definitions is what tells him the piece is for him.
+- Writes as an insider (`we`), implicated in the problem — never as a critic throwing rocks at the
+  industry, and never blaming named people.
+- **Length: 1,000–1,400 words of body text** (the normal 600–900 target does NOT apply). The floor is
+  the point: you cannot steelman, model, restate in three units and hand off in 600 words. If the piece
+  cannot honestly reach 1,000, it has failed the position bar — do the arithmetic, do not pad. If it
+  will not pass 1,400, split it.
+- **Concepts:** teach the **reframe**, not a new noun. A position piece usually teaches 1 concept (e.g.
+  `cross-subsidy-as-product`), sometimes 0. Do NOT reach for an adjacent general-insurance definition
+  just to have something quiz-able — that is how this tab drifted. If `concepts_taught` is empty, tag
+  the `quick_check` question to a `concepts_reinforced` id and make it test the ARGUMENT (given these
+  inputs, what follows?), not a definition.
+
 ## House style
 - Voice: confident, plain, Australian — a sharp analyst briefing a smart friend. No throat-clearing.
 - Open with the single most newsworthy or useful sentence. Close with a specific next action or a
@@ -155,11 +210,17 @@ pass/fail line per check:
    title state the finding rather than the topic? (See "Earn the open".)
 2. **Cut it** — tighten by roughly 10–15%: delete every sentence that restates the previous one, every
    throat-clearing lead-in, every "in this article we'll". Length is a budget, not a target; if the
-   piece is done at 620 words, it's done. Never pad to reach a number.
+   piece is done at 620 words, it's done. Never pad to reach a number. (On a `position` piece, cut for
+   density but respect the 1,000-word floor — if cutting takes it under, the argument was too thin to
+   be a position piece.)
 3. **Substance** — does it make a claim the reader couldn't have guessed from the title? If it only
    confirms the obvious, find the sharper angle or the surprising figure and lead with that instead.
 4. **Current bar** — `current` pieces: ≥3 dated, concrete facts present; live.json quoted for
-   finance/markets/property (or say why not relevant).
+   finance/markets/property (or say why not relevant). **Skip for `shape: position`** — use step 4b.
+4b. **Position bar** (`shape: position` only) — contested question stated; opposing case steelmanned
+   and conceded before the turn; one original calculation with ALL inputs stated; key number given in
+   three units; closes inside the reader's authority. If any is missing, fix it — a position piece that
+   fails this is a summary wearing a thesis.
 5. **en-AU** — no US spellings (color, center, organize, analyze, behavior, -ize verbs) in body or headings.
 6. **Privacy** — no proper noun from `profile.local.json` appears anywhere (project names, employer,
    people, places). Articles are PUBLIC.
@@ -168,8 +229,11 @@ pass/fail line per check:
 8. **Voice** — house style above: banned-phrase count, fresh closing heading, ≤2 em-dash constructions.
 9. **Quiz** — one question per taught concept; correct indices vary; correct option not the longest;
    distractors plausible.
-10. **Length** — 450–1,100 words of body text (target 600–900), after the cut in step 2.
-11. **Meta** — `mode`, `interests`, `expire_at` per rules; concept ids kebab-case; taught ≤3.
+10. **Length** — 450–1,100 words of body text (target 600–900), after the cut in step 2. For
+   `shape: position`: **1,000–1,400**.
+11. **Meta** — `mode`, `interests`, `expire_at` per rules; concept ids kebab-case; taught ≤3; on a
+   position piece `shape` is present and set to `"position"` (every length and bar rule keys on it —
+   omit it and the piece silently reverts to the news-brief rules).
 
 ## Three quick updates, then stop
 1. `data/knowledge.json` — add any genuinely new concept ids you **taught OR assumed**, `is_learnt:false`,

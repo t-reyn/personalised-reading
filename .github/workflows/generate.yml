@@ -99,7 +99,12 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: "Read CLAUDE.md and skills/AUTHORING.md, then write today's issue exactly as they instruct. It is ONE article — pick its interest by the cadence rule in AUTHORING.md, research it properly, and run the full Editor pass on it. Today's issue date is ${{ steps.guard.outputs.syd }} (AEST) — put the article in that dated folder. Stop when the article, knowledge.json, pool.json and quizbank.json are updated."
-          claude_args: "--max-turns 44 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep,WebFetch"
+          # 60, not 44: usage-log.jsonl shows nine consecutive runs pinning exactly 45 turns against the
+          # old 44 cap (16 of 20 runs >= 40), i.e. the cap was binding and 4 of 26 runs shipped nothing.
+          # One article frees some of that, but a position piece spends it back on 3-6 source fetches and
+          # a real editor pass. The 13-min step timeout still bounds wall-clock inside the headless-token
+          # window — turns are the budget being raised here, not time.
+          claude_args: "--max-turns 60 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep,WebFetch"
 
       # 3b. Record this run's tokens + cost estimate to data/usage-log.jsonl (token counts are the
       #     reliable figures; cost_usd is a client-side estimate, fine for trend analysis).

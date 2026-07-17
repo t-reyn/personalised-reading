@@ -2,7 +2,7 @@
 // `node --test scripts/lib/*.test.mjs`; ingest.mjs guards its main() so importing it is side-effect free.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { parseKontent, isKontentFeed, capRoundRobin, itemTime } from "../ingest.mjs";
+import { parseKontent, isKontentFeed, capRoundRobin, itemTime, isLegible, trimPdfLead } from "../ingest.mjs";
 
 const KONTENT_URL =
   "https://deliver.kontent.ai/4f4649d8-6df9-023d-bb6c-14e842b8aadb/items?system.type=article&order=elements.publish_date[desc]";
@@ -39,6 +39,7 @@ test("parseKontent maps Delivery API items onto the feed item shape", () => {
     published: "2026-07-14T14:00:00Z",
     excerpt: "Quantum computers could soon break today's encryption.",
     source: "Actuaries Digital (Actuaries Institute)",
+    kind: "article",
     topics: ["Life Insurance", "Risk Management"],
   });
 });
@@ -112,6 +113,85 @@ test("capRoundRobin takes newest first within a feed and returns newest-first ov
 test("capRoundRobin terminates when the cap exceeds the item count", () => {
   const kept = capRoundRobin([{ feed: "a", published_at: "2026-07-01T00:00:00Z" }], 50);
   assert.equal(kept.length, 1);
+});
+
+test("parseKontent reads a policy `resource` item and resolves the asset placeholder", () => {
+  const items = parseKontent(
+    JSON.stringify({
+      items: [
+        {
+          system: { id: "res-1", name: "sys name" },
+          elements: {
+            name: { value: "Life Insurance Code of Practice Review - Interim Report Response" },
+            description: { value: "Our submission focuses on mental health." },
+            created_date: { value: "2026-05-12T00:00:00Z" },
+            // The API returns this literal placeholder, not a usable URL.
+            url: { value: "{{ACTUARIES_ASSET_SUBDOMAIN}}/resources/resource-ce6yyqn64sx3-2093352434-60809" },
+            content_types: { value: [{ name: "Submission" }] },
+            practice_areas: { value: [{ name: "Life Insurance" }] },
+          },
+        },
+      ],
+    })
+  );
+  assert.equal(items.length, 1);
+  assert.equal(items[0].url, "https://content.actuaries.asn.au/resources/resource-ce6yyqn64sx3-2093352434-60809");
+  assert.equal(items[0].kind, "policy");
+  assert.equal(items[0].source, "Actuaries Institute");
+  assert.equal(items[0].published, "2026-05-12T00:00:00Z");
+  // genre first, then practice area — the author reads this to judge register + relevance
+  assert.deepEqual(items[0].topics, ["Submission", "Life Insurance"]);
+});
+
+test("parseKontent still marks magazine articles as kind:article, not policy", () => {
+  const items = parseKontent(
+    JSON.stringify({
+      items: [{ system: { id: "a1" }, elements: { title: { value: "T" }, slug: { value: "s" } } }],
+    })
+  );
+  assert.equal(items[0].kind, "article");
+  assert.equal(items[0].url, "https://www.actuaries.asn.au/research-analysis/s");
+});
+
+test("parseKontent skips a resource with no usable url", () => {
+  const items = parseKontent(
+    JSON.stringify({
+      items: [
+        { system: { id: "x" }, elements: { name: { value: "No url" }, url: { value: "" } } },
+        { system: { id: "y" }, elements: { name: { value: "Offsite" }, url: { value: "https://elsewhere.example/x.pdf" } } },
+      ],
+    })
+  );
+  assert.equal(items.length, 0);
+});
+
+test("isLegible rejects CID-font mojibake and accepts prose", () => {
+  // The real failure mode: one of five Institute PDFs decodes to glyph indices, not text. It is long,
+  // so length alone would pass it — this gate is the only thing standing between it and the pool.
+  const mojibake = "1 1 &330553==:      662996,, lí" .repeat(40);
+  assert.equal(isLegible(mojibake), false);
+  const prose = "The Actuaries Institute welcomes the opportunity to respond to this consultation on genetic testing protections in life insurance. ".repeat(12);
+  assert.equal(isLegible(prose), true);
+  assert.equal(isLegible(""), false);
+  // Real prose but too short to be a document we can write from.
+  assert.equal(isLegible("The Institute welcomes the opportunity to respond."), false);
+});
+
+test("trimPdfLead drops the letterhead so the excerpt opens on the position", () => {
+  const raw =
+    "Actuaries Institute Level 34, Australia Square, 264 George Street, Sydney NSW 2000, Australia " +
+    "P +61 (0) 2 9239 6100 | actuaries.asn.au 25 June 2026 Insurance Unit The Treasury Langton Crescent " +
+    "Parkes ACT 2600 Via Treasury Consultation Hub Dear Sir/Madam, Consultation: Genetic testing " +
+    "protections in life insurance The Actuaries Institute welcomes the opportunity to provide feedback.";
+  const out = trimPdfLead(raw);
+  assert.ok(out.startsWith("Dear Sir/Madam,"), `expected to start at the salutation, got: ${out.slice(0, 40)}`);
+  assert.ok(!out.includes("Australia Square"), "postal address must be gone");
+});
+
+test("trimPdfLead leaves a media release (no letterhead) alone, minus the lang token", () => {
+  const raw = "en-AUActuaries Institute Maps the Generational Flow of Australia's $1 trillion Tax and Spending System. Government spending follows a U-shaped pattern.";
+  const out = trimPdfLead(raw);
+  assert.ok(out.startsWith("Actuaries Institute Maps"), out.slice(0, 40));
 });
 
 test("capRoundRobin buckets legacy items with no feed together", () => {

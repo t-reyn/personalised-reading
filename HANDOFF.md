@@ -85,6 +85,33 @@ Reshaped 2026-06-29 to be **profile-driven** rather than fixed-sources-per-topic
   over-subscribed so something is always due; a 90-day sim holds every topic near its target gap with
   none starved. **To see a topic more often, lower its `cadenceDays`** — that's the only knob.
 
+## Actuarial: the position piece (2026-07-17)
+The reader named two actuarial pieces he likes — a practitioner essay re-opening the 2019 PYS/PMIF
+reforms (invisiblebalancesheet, ~1,850w) and an **Actuaries Institute submission** to the Life Insurance
+Code review. Both are **life** policy with a thesis; neither is a trade brief.
+- **Root cause of the gap (verified, not guessed):** every binding rule rewarded fact-density and new
+  quiz-able nouns; nothing rewarded a thesis. The **current bar** ("≥3 dated facts, else pick another
+  cluster") is the exact axis on which a trade brief always beats an essay — on 17 July the author
+  skipped "Did We Solve the Wrong Problem?" sitting at **position 1 of the actuarial digest** and wrote
+  a 568-word Taree flood brief instead. 5 of 7 actuarial pieces were GI news; 4 of 5 fell *below* the
+  600-word target. Nothing was ever pressing the 1,100 ceiling — **the missing floor was the problem.**
+- **Fix:** the current bar is now explicitly *not* a ranking function; a **source ladder** (policy >
+  essay > Actuaries Digital > trade press) binds at topic-pick; and a new `shape: "position"` carries
+  its own bar (contested question · steelman-then-concede · one original calculation with all inputs ·
+  the key number in three units · counts what the data can't see · hands off inside his authority ·
+  no jargon apology) and its own band, **1,000–1,400 words**.
+- **Length call:** 1,000–1,400, NOT the exemplar's 1,850. The only *measured* datum is that he starred
+  the 1,059-word APRA piece — the longest actuarial article ever written; 1,850 is inferred from someone
+  else's Substack. A draft-once run cannot buy 1,850 honestly, and the property he liked is density, not
+  word count. Revisit if position pieces land well.
+- `shape` is optional #meta, read ONLY by AUTHORING.md + health-check.mjs (app/render/generator ignore
+  it, so it cannot break the hub). **health-check counts a different region than the contract** — it
+  includes the h1/summary/sources footer and runs ~**+101 words** above "body text" (measured 57–111).
+  Its thresholds are therefore 1,200 / 1,500, matching contract bands of 1,100 / 1,400. Keep in step.
+  NB health-check is **post-hoc detection, not enforcement** — separate workflow, 1.5h after deploy.
+- `--max-turns` 44 → **60**: usage-log.jsonl showed nine consecutive runs pinning exactly 45 turns
+  against the 44 cap (16/20 ≥40) and 4/26 runs shipping zero articles. The cap was binding.
+
 ## Sourcing (how the pool gets its material)
 - **The Actuaries Institute is the actuarial anchor (2026-07-17).** actuaries.digital folded into
   `actuaries.asn.au`, which is why its old feed 503s — the site has **no RSS at all** (every `/feed` and
@@ -96,6 +123,24 @@ Reshaped 2026-06-29 to be **profile-driven** rather than fixed-sources-per-topic
   `actuaries.asn.au/research-analysis/<slug>` (verified) so authoring-time WebFetch works. A
   `"Actuaries Institute"` Google-News query sits alongside it to catch press coverage of Institute
   research (Green Papers) that the Institute's own API never carries.
+- **The Institute POLICY LIBRARY is the top actuarial source (2026-07-17).** Separate from the magazine:
+  `system.type=resource` on the same Kontent API = submissions, dialogue/discussion papers, reports,
+  position statements, media releases (~8/month public, ~3/month Life Ins or Super). Pool items get
+  `kind:"policy"` and `topics:["Submission","Life Insurance"]`.
+  - **GOTCHA — `content_types` is a NESTED taxonomy and Kontent's `[any]` does NOT roll up children.**
+    Filtering on the `Publication` parent returns **zero** of the 403 Submissions. The query must list
+    CHILD codenames explicitly (see the comment in sources.json). This silently cost the reader's own
+    exemplar type on the first attempt.
+  - Their `url` element contains the literal placeholder `{{ACTUARIES_ASSET_SUBDOMAIN}}` → resolve to
+    `https://content.actuaries.asn.au`. Targets are **PDFs**, and the API `description` is a ~170-char
+    blurb, so **without ingest-time extraction the source is decorative** — the author's WebFetch returns
+    undecoded binary for a PDF.
+  - `pdfToText` is ~40 lines of zlib (zero-dep, in keeping with the hand-rolled RSS/HTML parsers).
+    **`isLegible` is not optional:** 1 of 5 real Institute PDFs uses CID/Identity-H fonts and decodes to
+    long, plausible-looking mojibake — it fails silently, not loudly, and would poison the pool. ~half of
+    Submissions are `/Encrypt`ed and are skipped (kept as blurb, never dropped). A 3MB cap skips the one
+    5.4MB chart-heavy Report (its media release covers the same findings). `trimPdfLead` strips the ~400
+    chars of letterhead/addressee — without it the digest's 300-char window shows a postal address.
 - **Round-robin per feed (`capRoundRobin`) — load-bearing, don't "simplify" back to recency.** The pool
   and digest caps used to keep the most recent items across all of an interest's feeds, which handed
   every slot to whichever source posts most: a daily insurance trade wire (~15/day) filled 6 of the

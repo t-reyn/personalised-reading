@@ -105,8 +105,16 @@ if (manifest && Array.isArray(manifest.articles)) {
       }
       const body = bodyText(html);
       const wc = wordCount(body);
+      // NB these thresholds are in THIS function's units, which are NOT the contract's. bodyText()
+      // counts the whole <article> region — h1, summary and the sources footer included — and measures
+      // ~100 words above the "body text" AUTHORING.md bands refer to (measured 57–111, median 101
+      // across the actuarial set). So the contract's 1,100 ceiling is ~1,200 here, and a position
+      // piece's 1,000-word floor is ~1,100 here. Keep the two in step if either band moves.
+      const position = meta.shape === "position";
+      const ceiling = position ? 1500 : 1200;
       if (wc < 450) fail(`${a.id}: body word count ${wc} < 450`);
-      else if (wc > 1100) warn(`${a.id}: body word count ${wc} > 1100`);
+      else if (position && wc < 1100) warn(`${a.id}: position piece word count ${wc} — under the ~1,000-word floor`);
+      else if (wc > ceiling) warn(`${a.id}: body word count ${wc} > ${ceiling}`);
       if (AU_DRIFT.test(body)) warn(`${a.id}: body contains US spelling (color/center/organiz/analyz/behavior)`);
     }
   }

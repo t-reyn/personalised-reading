@@ -103,7 +103,7 @@ limits). See `CLOUD_SETUP.md`.
 ```json
 {
   "id": "2026-06-25-slug", "slug": "slug",
-  "interest": "software-ai", "interests": ["software-ai", "design"], "mode": "learn",
+  "interest": "software-ai", "interests": ["software-ai", "design"], "mode": "learn", "shape": "position",
   "title": "…", "summary": "…", "tags": ["…"],
   "created_at": "2026-06-25", "expire_at": "2026-07-16",
   "concepts_taught": ["concept-id"], "concepts_assumed": ["prereq-id"], "concepts_reinforced": [],
@@ -115,6 +115,10 @@ limits). See `CLOUD_SETUP.md`.
 - `interest` = primary interest id; `interests` = all interest ids it fits (primary first, 1–3) so one
   article can appear under several tabs. `mode` = `"current"` (timely, expires) or `"learn"` (evergreen,
   builds the knowledge graph) — drives the Current/Learn filter. See `skills/AUTHORING.md`.
+- `shape` is **optional** and currently only `"position"` — an argued actuarial piece built on the
+  Institute's policy work or a practitioner essay (see `skills/AUTHORING.md` → *Actuarial*). It relaxes
+  the current bar and moves the length band to 1,000–1,400 words. Nothing in the app or generator reads
+  it; only `skills/AUTHORING.md` and `scripts/health-check.mjs` do. Omit it on every other article.
 - `expire_at` follows the interest's `ttlDays` in `config.json` (`null` ttl ⇒ omit `expire_at` = never
   expires; e.g. `learn` pieces and actuarial foundations).
 - `concepts_reinforced` = already-learnt concept ids this article deliberately weaves in and builds on

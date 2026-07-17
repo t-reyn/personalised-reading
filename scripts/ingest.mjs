@@ -8,6 +8,7 @@ import { realpathSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
+import zlib from "node:zlib";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const DRY = process.argv.includes("--dry-run");
@@ -25,6 +26,18 @@ const DATA_SOURCE_HOSTS = ["apra.gov.au"]; // hosts whose RSS is known to carry 
 const MAX_ENRICH = 8;       // bound page fetches per run (network time + politeness)
 const ENRICH_CHARS = 2200;  // cap the extracted body kept on the pool item (keeps pool.json lean)
 const EXCERPT_CHARS = 400;  // default cap for ordinary feed excerpts
+
+// The Actuaries Institute publishes its policy work (submissions, dialogue papers, reports) as PDFs on
+// this host, and its API `description` is a ~170-char blurb — too thin to write from. The author's
+// WebFetch returns undecoded binary for a PDF, so if the substance isn't extracted HERE the source is
+// decorative. Kept to its own budget so a slow PDF can't starve the APRA path (or vice versa).
+const POLICY_ASSET_HOSTS = ["content.actuaries.asn.au"];
+const MAX_POLICY_ENRICH = 4;        // policy items arrive ~8/month; 4 per run is ample headroom
+const PDF_MAX_BYTES = 3_000_000;    // skip the occasional chart-heavy Report (one is 5.3MB) — its
+                                    // media release covers the same findings and extracts fine
+const PDF_TIMEOUT_MS = 15000;       // PDFs are bigger than pages; 8s isn't enough at ~250KB+
+const PDF_MIN_WORDS = 150;          // below this the extraction is a failure, not a short document
+const PDF_MIN_LEGIBLE = 0.5;        // letters / total chars — see pdfToText
 
 const readJson = async (p, fallback) => {
   try { return JSON.parse(await readFile(join(ROOT, p), "utf8")); } catch { return fallback; }
@@ -91,28 +104,53 @@ const isKontentFeed = (u) => /^https?:\/\/deliver\.kontent\.ai\//i.test(u);
 // the live site); if the Institute ever restructures, article URLs 404 and the author drops the source.
 const KONTENT_ARTICLE_BASE = "https://www.actuaries.asn.au/research-analysis/";
 const KONTENT_PUBLICATION = "Actuaries Digital (Actuaries Institute)";
+// The Institute's `resource` items (submissions, dialogue/discussion papers, reports, media releases)
+// store a URL with this literal placeholder in it, which the site resolves to its asset host.
+const KONTENT_ASSET_TOKEN = "{{ACTUARIES_ASSET_SUBDOMAIN}}";
+const KONTENT_ASSET_HOST = "https://content.actuaries.asn.au";
+const KONTENT_POLICY_PUBLICATION = "Actuaries Institute";
 
 // Map Delivery API JSON onto the same item shape parseFeed returns, so the rest of the pipeline
-// (dedup, pooling, digest) treats it exactly like a feed. Throws on malformed JSON — the caller
-// already logs a failed source and moves on.
+// (dedup, pooling, digest) treats it exactly like a feed. Handles BOTH Institute content types:
+//   `article`  — the Actuaries Digital magazine. Has title + slug; URL is built from the slug.
+//   `resource` — the policy/research library (Submissions, Dialogue Papers, Reports, Media Releases).
+//                Has name + description + a url element; the target is a PDF on the asset host.
+// Throws on malformed JSON — the caller already logs a failed source and moves on.
 function parseKontent(text) {
   const json = JSON.parse(text);
   const items = [];
   for (const it of json.items || []) {
     const e = it.elements || {};
-    const title = decode(e.title?.value || it.system?.name || "");
-    const slug = (e.slug?.value || "").trim();
-    if (!title || !slug) continue; // no slug ⇒ no resolvable URL ⇒ not citable
+    const title = decode(e.title?.value || e.name?.value || it.system?.name || "");
+    if (!title) continue;
     // practice_areas is the Institute's own taxonomy (Life Insurance, Superannuation and Investments,
-    // Data Science and AI, …) — kept so the author can judge relevance before spending a fetch.
-    const topics = (e.practice_areas?.value || []).map((t) => t.name).filter(Boolean);
+    // Data Science and AI, …); content_types names the genre (Submission, Report, …). Both are kept so
+    // the author can judge relevance and register before spending a fetch.
+    const topics = [
+      ...(e.content_types?.value || []).map((t) => t.name),
+      ...(e.practice_areas?.value || []).map((t) => t.name),
+    ].filter(Boolean);
+    const slug = (e.slug?.value || "").trim();
+    const rawUrl = (e.url?.value || "").trim();
+    let url, kind, source;
+    if (slug) {
+      url = KONTENT_ARTICLE_BASE + slug;
+      kind = "article";
+      source = KONTENT_PUBLICATION;
+    } else if (rawUrl.includes(KONTENT_ASSET_TOKEN) || rawUrl.startsWith(KONTENT_ASSET_HOST)) {
+      // `policy` marks the profession's own position papers — the author's top-tier actuarial source.
+      url = rawUrl.replace(KONTENT_ASSET_TOKEN, KONTENT_ASSET_HOST);
+      kind = "policy";
+      source = KONTENT_POLICY_PUBLICATION;
+    } else continue; // no resolvable URL ⇒ not citable
     items.push({
       title,
-      url: KONTENT_ARTICLE_BASE + slug,
-      guid: it.system?.id || slug,
-      published: e.publish_date?.value || "",
+      url,
+      guid: it.system?.id || slug || url,
+      published: e.publish_date?.value || e.created_date?.value || "",
       excerpt: decode(e.description?.value || "").slice(0, EXCERPT_CHARS),
-      source: KONTENT_PUBLICATION,
+      source,
+      kind,
       ...(topics.length ? { topics } : {}),
     });
   }
@@ -214,6 +252,85 @@ function trimToBody(text, title = "") {
 // Boundary-aware host check: "apra.gov.au" matches itself and "www.apra.gov.au", NOT "evil-apra.gov.au".
 const hostMatches = (hostname, h) => hostname === h || hostname.endsWith("." + h);
 
+// --- Minimal PDF text extraction (zero-dep; zlib is stdlib) --------------------------------------
+// Enough to read the Institute's policy PDFs, and deliberately no more. It inflates each Flate stream
+// and pulls the strings out of the text-showing operators (Tj / TJ / ' / "). It does NOT handle
+// encryption, and it does NOT map CID/Identity-H fonts — those PDFs decode to glyph indices, which
+// come out as mojibake rather than an error. Measured on 5 real Institute PDFs: 4 extract at 75-83%
+// letters, 1 (CID-encoded) yields 0 real words. Hence isLegible below: the caller MUST gate on it,
+// because the failure mode is silent garbage, and garbage in the pool is worse than a thin blurb.
+function pdfToText(buf) {
+  const out = [];
+  let i = 0;
+  for (;;) {
+    const s = buf.indexOf("stream", i);
+    if (s === -1) break;
+    let start = s + 6;
+    if (buf[start] === 0x0d) start++;
+    if (buf[start] === 0x0a) start++;
+    const end = buf.indexOf("endstream", start);
+    if (end === -1) break;
+    const raw = buf.subarray(start, end);
+    i = end + 9;
+    let txt = null;
+    for (const inflate of [zlib.inflateSync, zlib.inflateRawSync]) {
+      try { txt = inflate(raw).toString("latin1"); break; } catch {} // not a Flate stream (image/font) — skip
+    }
+    if (!txt) continue;
+    const parts = [];
+    const re = /\(((?:\\.|[^\\()])*)\)\s*(?:Tj|'|")|\[([\s\S]*?)\]\s*TJ/g;
+    let m;
+    while ((m = re.exec(txt))) {
+      if (m[1] !== undefined) parts.push(m[1]);
+      else if (m[2] !== undefined) {
+        const inner = /\(((?:\\.|[^\\()])*)\)/g;
+        let k;
+        while ((k = inner.exec(m[2]))) parts.push(k[1]);
+      }
+    }
+    if (parts.length) {
+      out.push(
+        parts.join("")
+          .replace(/\\(\d{1,3})/g, (_, o) => String.fromCharCode(parseInt(o, 8)))
+          .replace(/\\([()\\])/g, "$1")
+      );
+    }
+  }
+  return out.join("\n").replace(/\s+/g, " ").trim();
+}
+
+// An encrypted PDF inflates fine but every string is ciphertext, so this must be checked BEFORE
+// trusting pdfToText. Roughly half the Institute's submissions carry /Encrypt.
+const isEncryptedPdf = (buf) => buf.subarray(0, 2000).toString("latin1").includes("/Encrypt") ||
+  buf.subarray(-2000).toString("latin1").includes("/Encrypt");
+
+// Institute submissions open with ~400 chars of letterhead — postal address, phone, date, the
+// addressee's department — before the position starts. The author's digest shows only the first 300
+// chars of an excerpt, so without this it reads an address block instead of an argument. Same job as
+// trimToBody does for HTML. Media releases have no letterhead and fall through unchanged.
+const PDF_LEAD_MARKERS = ["Dear ", "welcomes the opportunity", "Executive summary", "Executive Summary", "Our submission"];
+function trimPdfLead(text) {
+  const t = text.replace(/^(?:en-[A-Z]{2})\s*/, ""); // stray xml:lang token from the content stream
+  let start = -1;
+  for (const m of PDF_LEAD_MARKERS) {
+    const i = t.indexOf(m);
+    if (i > 0 && i < 1500 && (start < 0 || i < start)) start = i;
+  }
+  if (start < 0) return t;
+  // Back up to the start of the sentence so the excerpt doesn't open mid-clause.
+  const stop = t.lastIndexOf(". ", start);
+  return stop > 0 && start - stop < 200 ? t.slice(stop + 2) : t.slice(start);
+}
+
+// The garbage gate. CID-font PDFs return plenty of "text" that is not words, so length alone proves
+// nothing — require that it reads like prose.
+function isLegible(text) {
+  if (!text) return false;
+  const letters = (text.match(/[A-Za-z]/g) || []).length;
+  const words = (text.match(/\b[A-Za-z]{3,}\b/g) || []).length;
+  return words >= PDF_MIN_WORDS && letters / text.length >= PDF_MIN_LEGIBLE;
+}
+
 // Links we must never follow as a "release" (social share, print, archive, off-domain CDNs, etc.).
 const SKIP_LINK = /\b(archive|share|print)\b|twitter|x\.com|linkedin|facebook|whatsapp|mailto:/i;
 
@@ -258,6 +375,35 @@ function needsEnrich(item) {
   } catch { return false; }
 }
 
+// Institute policy PDFs — same idea as needsEnrich, separate host list + separate budget.
+function needsPolicyEnrich(item) {
+  try {
+    const hostname = new URL(item.url).hostname;
+    return POLICY_ASSET_HOSTS.some((h) => hostMatches(hostname, h));
+  } catch { return false; }
+}
+
+// Fetch a policy PDF and return its readable text, or null with a reason. Never throws for an expected
+// condition — the caller keeps the API description when this returns null.
+async function fetchPdfText(url) {
+  const res = await fetch(url, {
+    headers: { "User-Agent": UA, Accept: "application/pdf,*/*" },
+    redirect: "follow",
+    signal: AbortSignal.timeout(PDF_TIMEOUT_MS),
+  });
+  if (!res.ok) return { text: null, reason: `HTTP ${res.status}` };
+  // Bail on the outsized ones before buying the download.
+  const declared = Number(res.headers.get("content-length") || 0);
+  if (declared > PDF_MAX_BYTES) return { text: null, reason: `${(declared / 1e6).toFixed(1)}MB > cap` };
+  const buf = Buffer.from(await res.arrayBuffer());
+  if (buf.length > PDF_MAX_BYTES) return { text: null, reason: `${(buf.length / 1e6).toFixed(1)}MB > cap` };
+  if (buf.subarray(0, 5).toString("latin1") !== "%PDF-") return { text: null, reason: "not a PDF" };
+  if (isEncryptedPdf(buf)) return { text: null, reason: "encrypted" };
+  const text = pdfToText(buf);
+  if (!isLegible(text)) return { text: null, reason: "unreadable fonts (CID/Identity-H)" };
+  return { text: trimPdfLead(text), reason: null };
+}
+
 // Recency of an ITEM, for ranking the pool + digest. Prefer the article's own publication date over
 // added_at (when we happened to fetch it): sorting on added_at ranks by feed position in sources.json,
 // because every feed in a run is fetched seconds apart, so whichever source is listed LAST wins the
@@ -276,8 +422,10 @@ const byNewestFirst = (a, b) => itemTime(b) - itemTime(a);
 // each feed, rather than by pure recency across all of them. Recency alone hands every slot to whichever
 // source publishes most: a daily trade wire posting 15 items/day buried the Actuaries Institute (~4 a
 // week) completely — the author's digest held zero Institute items while the Institute was nominally a
-// source. Round-robin means volume buys reach, not exclusivity. Feeds are visited in sources.json order,
-// so the anchor source listed first also gets first pick. Legacy items with no `feed` share one bucket.
+// source. Round-robin means volume buys reach, not exclusivity. The property that matters: when the cap
+// is >= the feed count, EVERY feed gets at least one slot. (Feed visit order follows the items array —
+// newest-item-first once the pool has been pruned once — so it is not sources.json order; that only
+// decides who wins a leftover slot.) Legacy items with no `feed` share one bucket.
 function capRoundRobin(items, cap) {
   const byFeed = new Map();
   for (const it of items) {
@@ -391,7 +539,7 @@ async function main() {
         if (seen.has(key)) continue;
         seen.add(key);
         if (newForFeed >= PER_FEED_CAP) continue; // cap per feed: mark seen, don't pool beyond the cap
-        const kind = isYouTubeFeed(url) ? "video" : "article";
+        const kind = it.kind || (isYouTubeFeed(url) ? "video" : "article");
         if (kind === "video" && /\/shorts\//i.test(it.url)) continue; // skip YouTube Shorts — too thin to synthesise (already marked seen above)
         const item = {
           id: `${interest.id}-${hash(it.guid || it.url)}`,
@@ -422,10 +570,29 @@ async function main() {
   // This phase runs BEFORE the authoring step, so it must never approach its timeout: we bound the
   // number of ATTEMPTS (not just successes — a run of failing fetches must still stop) and enforce a
   // hard wall-clock budget. Skipped under --dry-run so source validation has no live side effects.
-  let enriched = 0, attempts = 0;
-  const enrichDeadline = Date.now() + 90_000;
+  let enriched = 0, attempts = 0, policyAttempts = 0;
+  const enrichDeadline = Date.now() + 120_000;
   if (!DRY) for (const item of freshlyAdded) {
-    if (attempts >= MAX_ENRICH || Date.now() > enrichDeadline) break;
+    if (Date.now() > enrichDeadline) break;
+    // Institute policy PDFs: own budget, so neither path can exhaust the other's attempts.
+    if (needsPolicyEnrich(item)) {
+      if (policyAttempts >= MAX_POLICY_ENRICH) continue;
+      policyAttempts++;
+      try {
+        const { text, reason } = await fetchPdfText(item.url);
+        if (text) {
+          item.excerpt = text.slice(0, ENRICH_CHARS);
+          item.enriched_at = new Date().toISOString();
+          enriched++;
+          log(`  ↪ policy ${item.id} — ${item.excerpt.length} chars from PDF`);
+        } else {
+          // Keep the item: an Institute title + blurb is still a real lead the author can judge.
+          log(`  · policy ${item.id} — ${reason}, kept API description`);
+        }
+      } catch (e) { log(`  ✗ policy ${item.id} — ${e.message}`); }
+      continue;
+    }
+    if (attempts >= MAX_ENRICH) continue;
     if (!needsEnrich(item)) continue;
     attempts++;
     try {
@@ -450,7 +617,9 @@ async function main() {
     } catch (e) { log(`  ✗ enrich ${item.id} — ${e.message}`); }
   } else if (DRY) {
     const would = freshlyAdded.filter(needsEnrich).length;
-    log(`  (dry-run: would attempt enrichment on up to ${Math.min(would, MAX_ENRICH)} of ${would} data-source item(s))`);
+    const wouldPolicy = freshlyAdded.filter(needsPolicyEnrich).length;
+    log(`  (dry-run: would attempt enrichment on up to ${Math.min(would, MAX_ENRICH)} of ${would} data-source item(s)` +
+        `, and up to ${Math.min(wouldPolicy, MAX_POLICY_ENRICH)} of ${wouldPolicy} policy PDF(s))`);
   }
 
   // Keep the pool small — it's the authoring input. Retain only fresh PENDING candidates (drop used /
@@ -483,7 +652,7 @@ async function main() {
   await writePoolDigest(config, pool);
 }
 
-export { parseFeed, parseKontent, isYouTubeFeed, isKontentFeed, capRoundRobin, itemTime };
+export { parseFeed, parseKontent, isYouTubeFeed, isKontentFeed, capRoundRobin, itemTime, pdfToText, isLegible, trimPdfLead };
 
 // Run the pipeline only when invoked directly (node scripts/ingest.mjs), so tests can import
 // parseFeed without triggering a live fetch + file writes.

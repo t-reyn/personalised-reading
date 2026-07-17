@@ -603,13 +603,33 @@
   function saveState() { state.updatedAt = now(); try { localStorage.setItem(LS.state, JSON.stringify(state)); } catch {} scheduleSync("reading-state.json", state); }
   function saveKnowledge() { knowledge.updatedAt = now(); try { localStorage.setItem(LS.know, JSON.stringify(knowledge)); } catch {} scheduleSync("knowledge.json", knowledge); }
   function saveCorpus() { corpus.updatedAt = now(); try { localStorage.setItem(LS.corpus, JSON.stringify(corpus)); } catch {} scheduleSync("corpus.json", corpus); }
-  const corpusHas = (url) => corpus.items.some((x) => x.url === url && !x.deleted);
+  // Share links carry tracking junk in the query string, and a Substack share URL's `token` is a signed
+  // blob whose payload contains your numeric Substack user_id. corpus.json is committed to a PUBLIC
+  // repo, so a pasted share link publishes that id forever. Drop the query string and the fragment —
+  // nothing we save needs either — and prefer the publication's own host over the share redirector.
+  function canonicalUrl(raw) {
+    try {
+      const u = new URL(raw);
+      u.search = "";
+      u.hash = "";
+      // open.substack.com/pub/<pub>/p/<slug> -> <pub>.substack.com/p/<slug>
+      const m = /^\/pub\/([^/]+)(\/p\/.+)$/.exec(u.pathname);
+      if (u.hostname === "open.substack.com" && m) {
+        u.hostname = `${m[1]}.substack.com`;
+        u.pathname = m[2];
+      }
+      return u.toString().replace(/\/$/, "");
+    } catch { return raw; }
+  }
+  const corpusHas = (url) => { const c = canonicalUrl(url); return corpus.items.some((x) => x.url === c && !x.deleted); };
   // Save an external source to the durable corpus (deduped by url; un-deletes if it was removed before).
   function addToCorpus({ url, title, interest, note }) {
-    url = (url || "").trim();
+    url = canonicalUrl((url || "").trim());
     if (!/^https?:\/\//i.test(url)) return false;
     const id = strHash(url);
-    const existing = corpus.items.find((x) => x.id === id);
+    // Match on url too: ids of pre-canonicalisation entries were hashed from the raw share URL, so an
+    // id-only lookup would miss them and push a duplicate card for the same article.
+    const existing = corpus.items.find((x) => x.id === id || x.url === url);
     if (existing) Object.assign(existing, { deleted: false, t: now() }, (title && title.trim()) ? { title: title.trim() } : {});
     else corpus.items.push({ id, url, title: (title || "").trim() || hostOf(url), interest: interest || null, note: (note || "").trim(), added_at: now(), t: now(), deleted: false });
     saveCorpus();
