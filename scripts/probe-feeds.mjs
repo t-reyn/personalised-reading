@@ -1,74 +1,63 @@
 #!/usr/bin/env node
 // TEMPORARY diagnostic — delete once the blocked feeds are fixed.
-// Round 2: the candidate fix is a global User-Agent change (an honest self-identifying bot UA beat the
-// Chrome UA on nofilmschool: 403 -> 200). A global UA swap touches EVERY feed, so before shipping it we
-// must prove it regresses nothing — especially the Google News queries that supply most interests.
-// Fetches every feed in sources.json under both UAs, from a datacenter IP, and flags any regression.
-import { readFile } from "node:fs/promises";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+// Round 3: rescue attempts for the three Substacks, which 403 on /feed for every UA from a runner.
+// Two leads, both of which MUST be measured from the datacenter IP — they all "work" from a home IP,
+// which is exactly the trap that makes this bug invisible locally:
+//   (a) Substack's public keyless JSON archive endpoint, across every UA (round 2 only tried one).
+//   (b) Feedly's keyless cloud stream API — Feedly's crawlers are Cloudflare-allowlisted, so it can
+//       fetch what we cannot; the question is whether OUR runner can read Feedly's cached copy.
+const UAS = {
+  browser: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+  bot: "CortexReader/1.0 (+https://t-reyn.github.io/personalised-reading/; personal reading list)",
+  feedly_like: "Feedly/1.0 (+http://www.feedly.com/fetcher.html; like FeedFetcher-Google)",
+  curl: "curl/8.4.0",
+  none: null,
+};
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-
-const CURRENT_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
-const CANDIDATE_UA = "CortexReader/1.0 (+https://t-reyn.github.io/personalised-reading/; personal reading list; contact via repo)";
-
+const PUBS = ["invisiblebalancesheet", "actuarialnotes", "boredombaron"];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function probe(url, ua) {
+  const headers = { Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, */*" };
+  if (ua) headers["User-Agent"] = ua;
   try {
-    const res = await fetch(url, {
-      headers: { "User-Agent": ua, Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, */*" },
-      redirect: "follow",
-      signal: AbortSignal.timeout(20000),
-    });
+    const res = await fetch(url, { headers, redirect: "follow", signal: AbortSignal.timeout(20000) });
     const body = await res.text();
-    // A 200 carrying no items is a failure dressed as success (challenge page / empty shell).
     let items = (body.match(/<item\b|<entry\b/gi) || []).length;
-    if (body.trimStart().startsWith("{")) {
-      try { items = JSON.parse(body)?.items?.length ?? 0; } catch { items = 0; }
+    let sample = "";
+    const t = body.trimStart();
+    if (t.startsWith("{") || t.startsWith("[")) {
+      try {
+        const j = JSON.parse(body);
+        const arr = Array.isArray(j) ? j : j.items || [];
+        items = arr.length;
+        sample = arr[0]?.title || "";
+      } catch { items = 0; }
     }
-    return { ok: res.ok, status: res.status, items };
+    return { status: res.status, items, bytes: body.length, sample: sample.slice(0, 40) };
   } catch (e) {
-    return { ok: false, status: "ERR", items: 0, err: e.message };
+    return { status: "ERR", items: 0, bytes: 0, sample: e.message.slice(0, 40) };
   }
 }
 
-const sources = JSON.parse(await readFile(join(ROOT, "data/sources.json"), "utf8"));
-const feeds = [];
-for (const [interest, list] of Object.entries(sources)) {
-  if (interest.startsWith("_")) continue;
-  for (const url of list) if (typeof url === "string" && url.startsWith("http")) feeds.push({ interest, url });
+console.log("=== (a) Substack JSON archive API x every UA, from the runner ===");
+for (const pub of PUBS) {
+  const url = `https://${pub}.substack.com/api/v1/archive?sort=new&limit=12`;
+  for (const [name, ua] of Object.entries(UAS)) {
+    const r = await probe(url, ua);
+    console.log(`  ${pub.padEnd(24)} ${name.padEnd(12)} -> ${String(r.status).padEnd(5)} ${String(r.items).padStart(3)} items ${String(r.bytes).padStart(7)}b  ${r.sample}`);
+    await sleep(600);
+  }
+  console.log("");
 }
 
-console.log(`Probing ${feeds.length} feeds x 2 UAs from a GitHub runner.\n`);
-console.log("  status: CURRENT(chrome) -> CANDIDATE(honest bot)\n");
-
-const regressions = [], fixes = [], both = [];
-for (const { interest, url } of feeds) {
-  const a = await probe(url, CURRENT_UA);
-  await sleep(300);
-  const b = await probe(url, CANDIDATE_UA);
-  await sleep(300);
-
-  const host = new URL(url).hostname.replace(/^www\./, "");
-  const label = `${interest}/${host}`.padEnd(46);
-  const verdict =
-    a.ok && !b.ok ? "REGRESSION" :
-    !a.ok && b.ok ? "FIX" :
-    a.ok && b.ok ? "both ok" : "both fail";
-  if (verdict === "REGRESSION") regressions.push({ interest, url, a, b });
-  if (verdict === "FIX") fixes.push({ interest, url, a, b });
-  if (verdict === "both fail") both.push({ interest, url });
-
-  console.log(`  ${label} ${String(a.status).padEnd(4)}(${String(a.items).padStart(3)}) -> ${String(b.status).padEnd(4)}(${String(b.items).padStart(3)})  ${verdict}`);
+console.log("=== (b) Feedly keyless cloud stream API, from the runner ===");
+const FEEDLY = (feedUrl) =>
+  `https://cloud.feedly.com/v3/streams/contents?streamId=${encodeURIComponent("feed/" + feedUrl)}&count=20`;
+for (const pub of PUBS) {
+  const r = await probe(FEEDLY(`https://${pub}.substack.com/feed`), UAS.bot);
+  console.log(`  feedly:${pub.padEnd(24)} -> ${String(r.status).padEnd(5)} ${String(r.items).padStart(3)} items ${String(r.bytes).padStart(7)}b  ${r.sample}`);
+  await sleep(600);
 }
-
-console.log(`\n===== SUMMARY =====`);
-console.log(`  fixed by the candidate UA : ${fixes.length}`);
-for (const f of fixes) console.log(`      + ${f.interest} ${f.url}`);
-console.log(`  REGRESSED by candidate UA : ${regressions.length}`);
-for (const r of regressions) console.log(`      ! ${r.interest} ${r.url} (${r.a.status} -> ${r.b.status})`);
-console.log(`  still failing under both  : ${both.length}`);
-for (const b of both) console.log(`      x ${b.interest} ${b.url}`);
-console.log(`\n  VERDICT: ${regressions.length === 0 ? "candidate UA is safe to ship" : "candidate UA REGRESSES feeds — do not ship as-is"}`);
+const nfs = await probe(FEEDLY("https://nofilmschool.com/rss.xml"), UAS.bot);
+console.log(`  feedly:nofilmschool (control)  -> ${String(nfs.status).padEnd(5)} ${String(nfs.items).padStart(3)} items ${String(nfs.bytes).padStart(7)}b  ${nfs.sample}`);
