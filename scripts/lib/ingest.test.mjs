@@ -4,7 +4,10 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import zlib from "node:zlib";
 import { createServer } from "node:http";
-import { parseKontent, isKontentFeed, capRoundRobin, itemTime, isLegible, trimPdfLead, pdfToText, fetchFeed } from "../ingest.mjs";
+import { parseKontent, isKontentFeed, capRoundRobin, itemTime, isLegible, trimPdfLead, pdfToText, fetchFeed, daysSinceLastArticle } from "../ingest.mjs";
+
+// An ISO date `n` days before now, for cadence assertions.
+const iso = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
 
 // Build a minimal PDF carrying `n` Flate-compressed content streams, each showing one text run.
 function fakePdf(runs) {
@@ -306,6 +309,20 @@ test("pdfToText stops at maxChars — the bound that keeps a chart-heavy report 
   assert.ok(bounded.length < full.length, "bounded extraction must stop early");
   assert.ok(bounded.length >= 200, "…but must still return at least the requested budget");
   assert.ok(full.length > 2000, "sanity: the unbounded walk really does read the whole document");
+});
+
+test("daysSinceLastArticle counts only articles written FOR the interest, not cross-tags", () => {
+  // The bug this guards: software-ai was PRIMARY on 4 of the 15 articles carrying its tag, so
+  // cross-tagged design/science pieces kept resetting its clock — real gap 13 days, rule read 1.
+  const manifest = {
+    articles: [
+      { interest: "design", interests: ["design", "software-ai"], created_at: iso(1) },
+      { interest: "software-ai", interests: ["software-ai"], created_at: iso(13) },
+    ],
+  };
+  assert.equal(daysSinceLastArticle(manifest, "software-ai"), 13, "a cross-tag must not count as served");
+  assert.equal(daysSinceLastArticle(manifest, "design"), 1);
+  assert.equal(daysSinceLastArticle(manifest, "finance"), null, "never published ⇒ null (infinitely overdue)");
 });
 
 test("capRoundRobin buckets legacy items with no feed together", () => {

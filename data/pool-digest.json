@@ -1,57 +1,36 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-17T08:38:34.883Z",
+  "generatedAt": "2026-07-17T09:09:58.620Z",
   "interests": {
     "software-ai": {
-      "days_since_last_article": 1,
+      "days_since_last_article": 13,
       "items": [
-        {
-          "id": "software-ai-ab30dc81bc72",
-          "title": "Artificial Intelligence, Adaptive Radiotherapy and Treatment Automation Transform Global Cancer Care - Yahoo Finance UK",
-          "excerpt": "Artificial Intelligence, Adaptive Radiotherapy and Treatment Automation Transform Global Cancer Care &nbsp;&nbsp; Yahoo Finance UK",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLVBuelV3c0V2UFJpTmxZNUxRWXp2M0s0enNLeEl2Y3J3RWIyZUs4akpiR2JjZ2IyaVV4Vm5wYkJZb0dyS3BvVUtlemQtb1o2cm1ER18xYUxLdEpNNE1raXM4UHZsNEdGbnFPa3Z0VkhjajROelE4SVY4RDd0Wld5TTJnenQ0d1dGVUwxX0FheWhGcWtGTEU2WXRpTHZhQ3MzeTlwTzZsSQ?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "software-ai-6935fb172482",
-          "title": "Xi Jinping: Artificial Intelligence Must Be Symphony of International Cooperation - VIDEO - Caspian Post",
-          "excerpt": "Xi Jinping: Artificial Intelligence Must Be Symphony of International Cooperation - VIDEO &nbsp;&nbsp; Caspian Post",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTTBWa0M5bjNRR09SVFB2RGRNUFlUSkhKTjRZYlZwQk16YlllX2JKOGtOY1ZtRXg0bnEwV25KWmRDalZlQVBDZGhtYTNpMkxETmQ0VEVocC1hZFkxWmQ0LTMtN213N1Y4MzhsenpHbEhneHBVQ2NDekFjcVRMdW5XaXRrQlRfSUE3OExtclFVWVZJSXhyZy1TSndTemNBTFZkUHJHaHRFNm9oWm1tbFhzN2M1NGxMX0dvYmc?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "software-ai-487b7f00d33e",
-          "title": "EEG shows brain can simultaneous encode two speech streams",
-          "excerpt": "Article URL: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003876 Comments URL: https://news.ycombinator.com/item?id=48943745 Points: 61 # Comments: 25",
-          "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003876",
-          "kind": "article"
-        },
-        {
-          "id": "software-ai-aa56ddc38cb1",
-          "title": "Pebble Mega Update – July 2026",
-          "excerpt": "Article URL: https://repebble.com/blog/pebble-mega-update-july-2026 Comments URL: https://news.ycombinator.com/item?id=48943174 Points: 90 # Comments: 18",
-          "url": "https://repebble.com/blog/pebble-mega-update-july-2026",
-          "kind": "article"
-        },
-        {
-          "id": "software-ai-b4ae29562533",
-          "title": "Fortnite is getting a bunch of AI-powered ‘personas’",
-          "excerpt": "Get ready for more AI characters in Fortnite. Developer Epic Games is going to let Fortnite creators publish experiences featuring characters with AI-powered voices starting on July 30th, and ahead of that launch, it's created 36 characters with \"consistent voices and personas\" that creators can…",
-          "url": "https://www.theverge.com/games/966815/epic-games-fortnite-ai-powered-personas",
-          "kind": "article"
-        },
-        {
-          "id": "software-ai-d911af1e68ec",
-          "title": "Samsung’s 55-inch Frame art TV is $200 cheaper than usual",
-          "excerpt": "Samsung’s Frame is different from your average 4K TV. Its biggest selling point involves what it does when you aren’t actively using it. It can display art, turning your living room into a gallery. The Frame has bezels that make it look like — you guessed it — framed art, and its matte finish can…",
-          "url": "https://www.theverge.com/gadgets/966613/samsung-the-frame-art-tv-deal-sale",
-          "kind": "article"
-        },
         {
           "id": "software-ai-85525f6b8187",
           "title": "Netflix says around 300 titles used generative AI",
           "excerpt": "Netflix says roughly 300 titles on its platform used generative AI, most of which occurred in post-production. The streaming service revealed the news in its second-quarter earnings report released on Thursday, saying it's \"increasingly leveraging these tools to deliver higher quality output more…",
           "url": "https://www.theverge.com/streaming/966633/netflix-ai-titles-q2-2026-earnings",
+          "kind": "article"
+        },
+        {
+          "id": "software-ai-b2ce95b26b37",
+          "title": "Timeline Scan – AI fixes the dates on your scanned photos",
+          "excerpt": "Article URL: https://timelinescan.com/ Comments URL: https://news.ycombinator.com/item?id=48939764 Points: 3 # Comments: 1",
+          "url": "https://timelinescan.com/",
+          "kind": "article"
+        },
+        {
+          "id": "software-ai-7e0346368a85",
+          "title": "Own the Outer Loop",
+          "excerpt": "Engineers need to own the outer loop, the accountability for these systems. A written version of my AI Engineer World's Fair 2026 closing keynote: quality, verdict, and answerability, the three hidden costs of delegation, and building software factories you can stand behind.",
+          "url": "https://addyosmani.com/blog/own-the-outer-loop/",
+          "kind": "article"
+        },
+        {
+          "id": "software-ai-c04d3be4f28e",
+          "title": "Earning taste and judgment",
+          "excerpt": "Taste used to be a byproduct of the reps. Agents took the reps. So if you're junior you now have to go get the taste and judgment on purpose. A builder's look at the weakening entry level, the two debts we now owe, and concrete ways to build judgment when the machine writes the code.",
+          "url": "https://addyosmani.com/blog/earning-judgment/",
           "kind": "article"
         },
         {
@@ -61,6 +40,27 @@
           "url": "https://www.youtube.com/watch?v=8R6fYMJLI5E",
           "kind": "video",
           "source": "Chris Raroque"
+        },
+        {
+          "id": "software-ai-c2360fef3543",
+          "title": "Next.js Security Release and Our Next Patch Release",
+          "excerpt": "Next.js is moving to a formal security release process",
+          "url": "https://nextjs.org/blog/next-security-release-program",
+          "kind": "article"
+        },
+        {
+          "id": "software-ai-c2f54136d581",
+          "title": "The tests passed. The plan didn't.",
+          "excerpt": "TL;DR - RegreSQL 1.0 tested that your queries return the right rows. 2.0 tests that they return them the right way, and it does the checking against production's real statistics instead of your empty dev database, which lies. A migration cleanup dropped an index nobody thought was load-bearing…",
+          "url": "https://boringsql.com/posts/regresql20/",
+          "kind": "article"
+        },
+        {
+          "id": "software-ai-c8f586996a08",
+          "title": "Multi-Tenancy Isn’t About Databases",
+          "excerpt": "You start off with what seems like the obvious solution to a multi-tenant SaaS application. We have tenant A. We have tenant B. We have one application and one database. Within that database, for every structure, whether that is a table, collection, or stream, we segregate things by a tenant ID. It…",
+          "url": "https://codeopinion.com/multi-tenancy/",
+          "kind": "article"
         }
       ]
     },
@@ -157,13 +157,6 @@
           "kind": "article"
         },
         {
-          "id": "indie-income-b3d1d289cd93",
-          "title": "One in four startups now has a solo founder as AI transforms entrepreneurship - calcalistech.com",
-          "excerpt": "One in four startups now has a solo founder as AI transforms entrepreneurship &nbsp;&nbsp; calcalistech.com",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE95LUtBUHBQV0hIbDRacy1zVVlzN1BMNE1KMnFuVlVoTW1zMjIxcjJGcHhyTE9JOFdPalNOVEtJR2RHLU9MZFQ1M01iR2xvbzVaeWthbl84X1RSbEhhaFZnVlJySkRoNXN3?oc=5",
-          "kind": "article"
-        },
-        {
           "id": "indie-income-e85745cc398b",
           "title": "73 Blog Posts To Learn About Bootstrap - HackerNoon",
           "excerpt": "73 Blog Posts To Learn About Bootstrap &nbsp;&nbsp; HackerNoon",
@@ -182,6 +175,13 @@
           "title": "35 Side Business Ideas in 2026 (With Earnings Data) - Shopify",
           "excerpt": "35 Side Business Ideas in 2026 (With Earnings Data) &nbsp;&nbsp; Shopify",
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNX042NXhmRnlyRnB4V1VwaURMQnB5RkVlOHU5NkxINS0xQzA4cEpjTHJLcVFVYWZJaFVWWjV2dWtHOGg0RmQ0WFAtbFRXOFZpQUs2Z0xDbk1BRXpGUlJqd3hRWnpGaTNxSU5yTXlWWVJuZWVsaGN3bFFnODZJb3hsZTNaZW1UbTJCV1kwMXZGcEQyOWMtd0tjNWtQeml5UUE?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "indie-income-0cd66e166705",
+          "title": "35 Side Business Ideas in 2026 (With Earnings Data) - Shopify",
+          "excerpt": "35 Side Business Ideas in 2026 (With Earnings Data) &nbsp;&nbsp; Shopify",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQajhWRzVvcHJCbGJaUXNtQnlNUExlSkhsY0tGdjJhamViMWQ3SzEyTXhfREJsMnFlbG9RWGdGd3RCWjYtMjR3TUcwM3RXUDN4V0E2VkRJUjQzZTRMZ0Y4Q0NHWHZsYnZrV3pfazZyZC0xUWR3ak9oXzFkSGhRVk5ncW83MkMwREkzR2xOUVVoX0NLcGpWMlloaEJDQ2RLMWc?oc=5",
           "kind": "article"
         }
       ]
@@ -386,31 +386,31 @@
       "days_since_last_article": 0,
       "items": [
         {
+          "id": "finance-78733a2d1597",
+          "title": "Why is Hemnet stock surging today? - Investing.com",
+          "excerpt": "Why is Hemnet stock surging today? &nbsp;&nbsp; Investing.com",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNQUZIVGRNemh6ZXp0VllKaWo0OGI0NTlNeVU5dWZTS1MxMzhJaEExQWtVbVo5ZXVqSDBSMnlDNmdqZWJTaUlGZGdEZmpndTFSNUlwLTdvRlVCQUxEZmI3eTFSV3o2Uk9fQ0s5NGVGUGlpRENhMi1RSG9tcWdRRHB5ZU1BejZCbF9rcjNzbWNQZkI0NWFHNGdLNHYzVQ?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "finance-e295ef36fb55",
+          "title": "Chinese startup Moonshot AI unveils Kimi model it says rivals OpenAI, Anthropic",
+          "excerpt": "It's the latest AI model from China to close the performance gap with leading U.S. AI labs.",
+          "url": "https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html",
+          "kind": "article"
+        },
+        {
+          "id": "finance-d111164c38ea",
+          "title": "Albanese’s AI moment, super’s new era and CEO pay surprise - AFR",
+          "excerpt": "Albanese’s AI moment, super’s new era and CEO pay surprise &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbWYzSTRpOXE2QUJ3ZnplcjFkaGczUUx3Y3NiSUVua3JKcEdYTUZ0eUc2QUYwNmZCY0ZQb0lUWHFtRnZ2SFMyMUw1LWYwcWxGUDRfLXdqQktvbDd6UDN2Qjl6TmRsTlJYNG9PX2stQUNoSEVnZjRTMjJsamI1cjMyMnR4UzFwX0pobGZKbWRPN1M1V1RtVHJrQlQ2UlgwRU9lajlDajRWaWpCUXFW?oc=5",
+          "kind": "article"
+        },
+        {
           "id": "finance-7e6cc54e510c",
           "title": "Fighter jet maker Saab smashes expectations as CEO urges procurement rethink",
           "excerpt": "European governments ramp up defense spending and book orders with the region's companies.",
           "url": "https://www.cnbc.com/2026/07/17/saab-stock-earnings-q2-report-defense-sales-orders.html",
-          "kind": "article"
-        },
-        {
-          "id": "finance-74ad7caba1aa",
-          "title": "Iran says civilian infrastructure hit by latest U.S. strikes, expands attacks to Syria, Bahrain",
-          "excerpt": "The escalating standoff comes as the fragile truce signed by the U.S. and Iran last month showed further signs of unravelling",
-          "url": "https://www.cnbc.com/2026/07/17/iran-war-us-trump-syria-bahrain.html",
-          "kind": "article"
-        },
-        {
-          "id": "finance-919fa62ea233",
-          "title": "[Dual-Strategy Investing: AI + Non-AI] Japanese equities sho... - Moomoo",
-          "excerpt": "[Dual-Strategy Investing: AI + Non-AI] Japanese equities sho... &nbsp;&nbsp; Moomoo",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMk9qRWRwWTB3TmJOX0FaUUtOLXRRcG5SY1hsZnhXc0JEVTlVVDZadTdKYXVWbVY5OG1wTHhSaWpsZlBRazdXUFNyT3E2Z1hNOTU5Q0NnODl1U1ZGLUlKOE42Q01NbkNSRXl2cTlqUW83SHZmSHlMTzZnRWN3c1dOWDZYZlVXRU5kZkUtaU5zZGx0dTkyMXFKQmpUaWhWdjA0YnJwQURLdlp6MENVMFJRMUtIWFk?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "finance-590ec962675c",
-          "title": "Africa’s best personal investing platform 2026: Thndr - Euromoney",
-          "excerpt": "Africa’s best personal investing platform 2026: Thndr &nbsp;&nbsp; Euromoney",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMDQ4ZGlDeGRkSE45NGtyNTVoajZnTW8tc29MbUstSkhBRzlZeTR0M213VFhCYWtKVHRJdVF2QkJtSGp6TThFRFJ0cE8xUG5ScHRtajA1UlMyY1YyVHVTZndOelh5bmg2UDhXR1RUZWkwSXhjUzVybWhyR3M3dVlNSlN0cjJYVmcyZzBJVGhnSTNWSEE0cG1vcmZlZ1VLc0xJXzJuNlZzMDRPdHY2eElYVVh3?oc=5",
           "kind": "article"
         },
         {
@@ -447,6 +447,13 @@
       "days_since_last_article": 2,
       "items": [
         {
+          "id": "health-04a4a400e907",
+          "title": "Scientists tested 39 sweeteners and found unexpected gut effects",
+          "excerpt": "A large laboratory study found that many commonly used sweeteners can directly change the growth of gut bacteria. Researchers identified more than 100 cases in which sweeteners behaved differently when combined with medications, caffeine, or flavorings. The combination of isosteviol and the…",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260716023552.htm",
+          "kind": "article"
+        },
+        {
           "id": "health-c1459617c227",
           "title": "Long Sleep Duration Linked to Higher Alzheimer’s Blood Biomarker - Technology Networks",
           "excerpt": "Long Sleep Duration Linked to Higher Alzheimer’s Blood Biomarker &nbsp;&nbsp; Technology Networks",
@@ -468,10 +475,17 @@
           "kind": "article"
         },
         {
-          "id": "health-997e67fa1db5",
-          "title": "Fitness instructor Nadja Piatka, 76, shares the 4 core exercises she does every day to stay strong - Women's Health",
-          "excerpt": "Fitness instructor Nadja Piatka, 76, shares the 4 core exercises she does every day to stay strong &nbsp;&nbsp; Women's Health",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRHhmVnlJZXlycVc0TE90RTA3X2RZOW1yeTJkLV9pT0RaZU12bUVFQlpsdkU2bHRFYnctSDJmQXNISmZ6b1ZHWVhWRHI0ZWdrSGFKb29zcDlqYkhvWWs1dWdObVNCZGNsUTBTX1h1UVg5eGhHS0Q3YmpqU2ExdGU4NE9DZmNicHh5NFlQdE5yMW1nNGF3RXYwcms0VmR5azQ?oc=5",
+          "id": "health-ffc1e0f726e1",
+          "title": "New Alzheimer's drug repairs DNA damage and reduces brain inflammation",
+          "excerpt": "A drug originally developed for spinal cord injury may offer a fresh approach to treating Alzheimer’s disease. In mouse studies, KCL-286 repaired dangerous DNA damage, reduced inflammation, and targeted multiple disease-related pathways instead of focusing on just amyloid or tau. Since it has…",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260711010118.htm",
+          "kind": "article"
+        },
+        {
+          "id": "health-dca2c2b41481",
+          "title": "This sugar-coated therapy boosted survival against deadly brain cancer by 50% in mice",
+          "excerpt": "A new experimental treatment may have found a way to outsmart glioblastoma’s toughest defense: the blood-brain barrier. Researchers used sugar-coated nanoparticles to ferry genetic instructions that restore a key tumor-suppressing protein directly into brain cancer cells. In mouse studies, the…",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260715083542.htm",
           "kind": "article"
         },
         {
@@ -488,20 +502,6 @@
           "excerpt": "Researchers solved a long-standing mystery behind how a bacterial toxin associated with colorectal cancer damages the colon. The toxin first binds to a receptor called claudin-4, giving it access to attack the cells' protective barrier. After identifying this weak point, the team designed a decoy…",
           "url": "https://www.sciencedaily.com/releases/2026/07/260713084910.htm",
           "kind": "article"
-        },
-        {
-          "id": "health-58517bbec11e",
-          "title": "More than 400 sick as CDC searches for the source of a mystery outbreak",
-          "excerpt": "A growing Cyclospora outbreak has sickened more than 400 people in four states, and investigators are still searching for the contaminated food responsible. The CDC warns the actual number of cases is likely much higher and urges anyone with symptoms to seek medical care.",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260715083530.htm",
-          "kind": "article"
-        },
-        {
-          "id": "health-af7c44b40c17",
-          "title": "Common constipation drug may help clear depression brain fog",
-          "excerpt": "An existing constipation drug may have an unexpected new use: helping clear the \"brain fog\" that often lingers after depression. In a small clinical trial, people with a history of depression who took the medication prucalopride for about a week performed better on tests of memory, attention, and…",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260712011751.htm",
-          "kind": "article"
         }
       ]
     },
@@ -516,17 +516,17 @@
           "kind": "article"
         },
         {
+          "id": "videography-4cce5626443f",
+          "title": "Castlevania: Belmont's Curse isn't technically connected to the Netflix anime, but its cinematography was inspired by the show - PC Gamer",
+          "excerpt": "Castlevania: Belmont's Curse isn't technically connected to the Netflix anime, but its cinematography was inspired by the show &nbsp;&nbsp; PC Gamer",
+          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQbGxaZ3NxRTdSWE83eGlkczRkc2tZQWxrMWV4angzWlJxWU8ydHZ6NVV2ZnZ5RFNnNkp2R1p1UW9mTGIxZHVOZi1UX3JPMlhTMy1UalhVZ3FTVEx1Q18tTlBXYW1JZ2l2QUcwOFRaeUpqd2UxY1pBaTJWbDZyRjJOVjR6NlAzNWRPZG1JNHBMMnltdUhNSFRSSG9zdTI1aW5sQkJPQ3EtOURUV2dvMXdMUlhESXBIaXdmdTlTOVNqZHhtQlF5N2FYOG9rZi1HVE5zbFJsQzVNRnpoSlBGblAtZVMwaF9FSm10TjY4WUZR?oc=5",
+          "kind": "article"
+        },
+        {
           "id": "videography-fee761d54ae2",
           "title": "Literacy, fairies and ... tamales? Nonprofit guides Santa Fe kids' reading through filmmaking - Santa Fe New Mexican",
           "excerpt": "Literacy, fairies and ... tamales? Nonprofit guides Santa Fe kids' reading through filmmaking &nbsp;&nbsp; Santa Fe New Mexican",
           "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQNXlEdVdPMFVieWFoX3NVYjY2QVpjb3BRTnhJUnM2cUFOaUZsb1hOTE1QcDN6LS1JTHNuSFIxeXQyakR4SzVRNHFVN3p4V0M3b3JwNUdCYXRZZ1FKVU5xM3Vlb25KY0pvSzhjbGM4eEk2OThBOHJpY0dRX1hwb2k1bFFBUU9ReHJDUUR1LTlXTlM4bGNsUHV0QjFuaTdYTFhBeHplaEhUWFdQcUhVVkQ2V2MtUUZJRWRDQmhaWktVeENJcmZiRWppems2V1lQTjQwMGQwWFBMREU3OUJNSU8yWXlzUk9rWFVxZ2dXLVhIcm5hekhULTBKZlJRVmQtTExUSlREcUNYeTUwUUc4SnJoRUlvWQ?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "videography-f56264ab73a8",
-          "title": "How Ecook Is Reshaping Ski Filmmaking - Teton Gravity Research",
-          "excerpt": "How Ecook Is Reshaping Ski Filmmaking &nbsp;&nbsp; Teton Gravity Research",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE51SjVlRjRYeHRxMHBnMmlVYVdfSGVxWnVNVWtnNW5wckxkN3FjS1I0bm9PRkZmeWYtOEx2dzM1alpZakdCYVlEUzU5dHZUVnVlMzZpeFRhNHBQcmRwRW9J?oc=5",
           "kind": "article"
         },
         {
@@ -570,24 +570,31 @@
       "days_since_last_article": 3,
       "items": [
         {
-          "id": "science-c55fd94f0198",
-          "title": "How climate crisis is redefining home, and who counts as a refugee. - 360info.org",
-          "excerpt": "How climate crisis is redefining home, and who counts as a refugee. &nbsp;&nbsp; 360info.org",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdHphSy1PWWNISENZVEUzb1N6UDRsNC1vd3BybWVCRm5DeWZZd29XWWZrMjlzS1J4Z1F5aVJ4NS1XdG84WnNqQTJkbGhocGxJV1Q1bnpKcTEyM2JqaG9kUmZqQ0ctODFfTDRHdUh0NFFpeUwzUXdxaUNsZm9hR3haajI4WEplYkNIT2RVSmsydw?oc=5",
+          "id": "science-5d55481322c6",
+          "title": "SpaceX Starship launch aborted on the pad at the last moment",
+          "excerpt": "SpaceX's mega Starship rocket came within a second or so from blasting off on a test flight Thursday, but some of the engines failed to ignite, triggering a launch abort amid billowing clouds of smoke and vapor.",
+          "url": "https://phys.org/news/2026-07-spacex-starship-aborted-pad-moment.html",
           "kind": "article"
         },
         {
-          "id": "science-3a35d2784996",
-          "title": "Earth from Space: Guinea-Bissau - European Space Agency",
-          "excerpt": "Earth from Space: Guinea-Bissau &nbsp;&nbsp; European Space Agency",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPUlpXNmdmcjd2N3Z1cTVxS1NJaG9tSjB6WGJVQ1VIaEhKVGEwV3ZhWXRHUEJSYjJCYU1nRU9LbnNnYjR6VGY5MHN1UHVuMFplVU5OLXFlbHJNc2RDMktGdUE5V1RUYUdlUGhDV3FtWTFQZXl4cDM5VzFQU3Q3MUZOOWt6cnJOdXM?oc=5",
+          "id": "science-31e0133aafb3",
+          "title": "Autonomous Maritime Technology to Support Greenland Climate Research Mission - Future Transport-News",
+          "excerpt": "Autonomous Maritime Technology to Support Greenland Climate Research Mission &nbsp;&nbsp; Future Transport-News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOeGZSZDdBLTBORkJNN0pBeW82S0RyUG93eTFFUlk3c0xhU2U1cXpxY1dmWGxHNHk3TE91WjQ4bTRkM19FdlpxaDZGX0hjdEQxYk5abUwyWlRCb2Y3YTJ4S1NYS1M4dkxacnQ5bzVOMlFPYXppWjdOaVg3czdnd2NUVG5FNFhKcWg3aGVsUXBMRTRhb2JHWFJ2dzlQaVRuY0JnelcxMkpLY2N5aS1CSGtZ?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-429d91b40162",
-          "title": "Chan Putheary: Creating space for women and girls to thrive - UN Women Asia and the Pacific",
-          "excerpt": "Chan Putheary: Creating space for women and girls to thrive &nbsp;&nbsp; UN Women Asia and the Pacific",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeW1qanBLQlhpYlhKWGNaT0YxbU00aGxuOVYtMXpyalRFZUhhU3dyYTNZSHpnY1dyZUU2N0NJeno4cmdaT0Q4MllKZHNxclFqejJjcmMwekp6dGRlUFhHdjEwLUItLVRWR0NBODZsN0s5UXhoV21SWWdvRnZad3NCVEVhUUtrN2l4LWNaZUFIXzZKa1l6ZGZtcnZBWlFLcVBGM0t1NmFBRGN4Vm01LXdaalFwLTJLVHVjWGlOWld1TUo?oc=5",
+          "id": "science-b6684354bf4d",
+          "title": "Serbia joins NASA's space exploration partnership Artemis Accords - SeeNews",
+          "excerpt": "Serbia joins NASA's space exploration partnership Artemis Accords &nbsp;&nbsp; SeeNews",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQOXpRdzNDZ256WXBELUdvSUJiVE5XYkhMTU5iem5aXzZYUExSRkRCUEFMc2hLLXBTY0VDRTBqRDZsMGNlbGVvWUx1MnBrWVhwMjBkd2hYVnc3SkthZ0dxNDNhV2VYMEoxci03TkdIOHg2Ri04ZFpvT1pSQ0E1TzRJOFlMeE4xN0VPYWxkN3I4SnY3d3EybUtuQWZvYWlXQQ?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "science-d9cc5e73d11a",
+          "title": "Scientists built a camera that can track invisible particles in 3D",
+          "excerpt": "A new particle detector called PLATON could replace millions of tiny detector components with a single block of light-producing material. Using a light-field camera, highly sensitive photon sensors, and AI, it reconstructs particle paths in fast, detailed 3D. Simulations suggest it could match or…",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260716023610.htm",
           "kind": "article"
         },
         {
@@ -595,20 +602,6 @@
           "title": "Bones reveal ancient Egyptian princesses born 4,000 years ago used weapons",
           "excerpt": "For decades, scientists have disputed the meaning of the weapons found in the burial chambers of some ancient Egyptian princesses. Were they symbolic or practical tools? Now, a reassessment of five royal women's mummies from the Middle Kingdom has shown that some princesses buried with weapons…",
           "url": "https://phys.org/news/2026-07-bones-reveal-ancient-egyptian-princesses.html",
-          "kind": "article"
-        },
-        {
-          "id": "science-b7ef09aa9614",
-          "title": "EU's AI 'guardrails' cannot absorb rapid changes in technology, study warns",
-          "excerpt": "\"Guardrails\" built by the EU to govern AI fall short in both ambition and execution and have become too heavy to absorb rapid changes in technology, a new study in Big Data & Society warns.",
-          "url": "https://phys.org/news/2026-07-eu-ai-guardrails-absorb-rapid.html",
-          "kind": "article"
-        },
-        {
-          "id": "science-06cf0d387a6d",
-          "title": "Golf generates nearly €630 million in societal benefits in Finland",
-          "excerpt": "A new study published in Frontiers in Sports and Active Living shows that Finnish golf players spend approximately €330 million on golf annually and that this generates an estimated benefit to society almost twice as high.",
-          "url": "https://phys.org/news/2026-07-golf-generates-million-societal-benefits.html",
           "kind": "article"
         },
         {
@@ -623,6 +616,13 @@
           "title": "Climate change reshapes waterborne disease risks as pathogens respond differently, review finds",
           "excerpt": "Climate change is altering the spread of waterborne diseases around the world, according to a comprehensive review published today in Nature Reviews Microbiology. The publication is the most up-to-date, comprehensive analysis examining how climate change influences waterborne diseases.",
           "url": "https://phys.org/news/2026-07-climate-reshapes-waterborne-disease-pathogens.html",
+          "kind": "article"
+        },
+        {
+          "id": "science-4dcb0b14c72d",
+          "title": "This ancient sea worm has “bio-metal” jaws unlike anything scientists have seen",
+          "excerpt": "An ancient sea worm may hold the secret to a whole new category of natural materials. Its jaws combine proteins and metal ions in a way that gives them metal-like strength and unusual mechanical behavior, yet they still differ from traditional metals. Researchers believe these \"bio-metals\" could…",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260714225530.htm",
           "kind": "article"
         }
       ]

@@ -112,6 +112,42 @@ Code review. Both are **life** policy with a thesis; neither is a trade brief.
 - `--max-turns` 44 → **60**: usage-log.jsonl showed nine consecutive runs pinning exactly 45 turns
   against the 44 cap (16/20 ≥40) and 4/26 runs shipping zero articles. The cap was binding.
 
+## Software/AI: teach the machinery (2026-07-17)
+Same disease as actuarial, different costume. The tab's 8-slot digest was 5/8 generic tech news
+("Samsung's 55-inch Frame art TV is $200 cheaper", "Xi Jinping: AI Must Be Symphony of International
+Cooperation"), and of 15 articles carrying the software-ai tag, **six were design-primary pieces**
+cross-tagged in — while **zero** taught the mechanisms under his own stack, which is his stated want.
+- **CADENCE BUG (the real find, fixed):** `daysSinceLastArticle` counted the `interests[]` ARRAY, so a
+  cross-tagged design piece reset software-ai's clock. It was PRIMARY on only 4 of 15 — array clock never
+  exceeded 3 days while the real gap was 13, so the old flat "≥5 days" starvation rule **never fired for
+  it**, and the cadence rule that replaced starvation reads the same number (the bug survived the
+  rewrite). Now **primary-only**. Measured across all 10 interests this changes the answer for
+  software-ai ONLY (13 vs 1) — every other tab is byte-identical, which is what makes it safe.
+- **SEQUENCING MATTERS:** the clock fix alone makes software-ai the top scorer (1.86) on the very next
+  run — against whatever the digest holds. Clock + sources + rules must land in ONE change, or the tab
+  wins and writes about Samsung TVs.
+- **Sources: 6 → 7 feeds.** CUT theverge (consumer tech, 3.3/mo), a broad Google-News AI query
+  (33/mo — those two mechanically WERE the 5/8 drift), and **hnrss.org/frontpage** (took 2 of 8 slots
+  with 0 of 3 pooled items about his stack; the profile says deepen-first, NOT random exploration.
+  Aiming it failed: hnrss `?q=` does not bind, `?points=150` buys popular not relevant).
+  ADDED, all fetch-verified: **CodeOpinion** (3.0/mo, architecture+robustness), **boringSQL** (3.2/mo,
+  Postgres = Supabase), **Next.js blog** (1.7/mo, bursty, the framework he ships), **Addy Osmani**
+  (AI-coding craft — serves the "keep current" half in a CRAFT register, not a news one).
+- **8 FEEDS IS A HARD CEILING per interest.** `DIGEST_PER_INTEREST = 8` and capRoundRobin's round 0
+  breaks the instant it fills the budget, so with 9+ ACTIVE feeds the later rounds never run and the
+  LEAST-frequent feeds silently get zero — i.e. exactly the low-volume mechanism feeds. Same failure that
+  buried the Actuaries Institute. Actuarial sits at exactly 8; software-ai at 7.
+- **Removing a feed now evicts its pooled items immediately** (the `liveFeeds` check in the prune).
+  Without it a cut is a no-op for POOL_TTL_DAYS=21: orphans keep their `feed` key, form their own queue
+  and keep winning a slot. Cutting theverge + the news query stranded 6 such items until August.
+- **The rule is deliberately light** — the sources do the work. No tier ban: the tab is `mode: both` and
+  half his want is "keep current with AI/dev", so banning news by tier would silently turn it into a
+  `learn` tab (its own 2026-06-27 `current` piece would have failed such a rule). Instead: a
+  **concept-id test** at topic-pick (if the honest `knowledge.json` id is a product/company/event, it's a
+  news brief — pick again) and a **scan knowledge.json for missing machinery** instruction, which
+  self-updates rather than hardcoding "113 concepts and none cover hydration" into a contract that its
+  own success would falsify. No new `shape` — that stays actuarial-only.
+
 ## Sourcing (how the pool gets its material)
 - **The Actuaries Institute is the actuarial anchor (2026-07-17).** actuaries.digital folded into
   `actuaries.asn.au`, which is why its old feed 503s — the site has **no RSS at all** (every `/feed` and

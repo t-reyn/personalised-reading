@@ -29,7 +29,9 @@ Write **exactly ONE article**. Pick the interest first, then the angle within it
 **The interest is chosen by cadence, not by mood.** Every interest in `config.json` has a
 **`cadenceDays`** — the target gap between its articles, which is where the reader's priorities are
 encoded (indie-income every ~5 days, science every ~21). `data/pool-digest.json` gives you
-`days_since_last_article` per interest. Score each interest:
+`days_since_last_article` per interest — counting only articles whose **primary** `interest` was that id,
+so a piece you merely cross-tag into a second tab does not count as having served it. (Cross-tagging is
+still right where it fits — it just doesn't pay the second tab's cadence.) Score each interest:
 
 ```
 overdue = days_since_last_article / cadenceDays        # highest score wins
@@ -130,6 +132,36 @@ worked AU examples — not general overviews.
     as often as 1 and 2.
   - Leave `merged_from: []`, `merged_into: null`.
 
+## Software/AI — teach the machinery
+He ships real apps by directing AI, with **no formal software background**. So he can wire up a stack he
+cannot explain, and his stated want is both halves of this: *keep current with AI/dev* **and** *learn the
+fundamentals, architecture and robustness that vibecoding abstracted away — how and why things work, and
+how to build tools people can rely on*.
+
+**The `learn` half is the one that has been missing, so bias to it.** Before you pick, scan
+`data/knowledge.json` for the machinery underneath the apps he actually ships — rendering, hydration,
+server components, caching, indexing, transactions, row-level security, auth, migrations, retries,
+idempotency, race conditions, observability. Whatever is still absent is a phantom prerequisite he
+depends on daily and has never been taught: that is the natural next lesson, and it beats anything in
+the news.
+
+**The concept-id test — apply it at topic-pick, before drafting.** Name the concept id you would register
+in `knowledge.json` for this piece. If the honest id is a **product, a company, or an event**
+(`vercel-workflows`, `openai-funding`, `nextjs-16-3`) you are about to write a news brief — pick again.
+If it is a **mechanism** (`hydration`, `row-level-security`, `idempotency-key`, `cache-invalidation`),
+write it. A release note or a launch is a *lead*: the piece is the mechanism it implies, never the
+announcement itself.
+
+**The tab is `both` on purpose.** Over a fortnight it should carry a mechanism `learn` piece *and* a
+genuine `current` AI/dev piece — the craft sources (Addy Osmani, Fireship, Raroque, Dwarkesh) are where
+`current` comes from now, not consumer tech news. If every software-ai piece for a month is `learn`, it
+has over-corrected. A `current` piece here still owes the current bar its ≥3 dated facts.
+
+**Pitch:** he knows Next.js/React/Supabase/Vercel/Capacitor at ship-it level — never explain what they
+are, always explain how they work and what breaks. Concrete failure modes from his own kind of app beat
+abstractions. Design and UX belong to the **design** tab: an interface piece is not a software piece
+just because interfaces are software.
+
 ## Actuarial — the position piece
 This is the reader's own profession. He is a FIAA in **group life** (life insurance inside super),
 deepest on **pricing**, moving into consulting. He does not need the news; he needs the argument. The
@@ -141,9 +173,13 @@ PYS/PMIF reforms, and an Actuaries Institute submission to the Life Insurance Co
 1. **`kind:"policy"`** digest items — the Institute's own submissions, dialogue/discussion papers,
    reports and position statements. Their `topics` name the genre and practice area
    (e.g. *{Submission, Life Insurance}*). Their excerpt is real extracted text from the document.
-2. **Practitioner essays** that argue a case (the Substack items — invisiblebalancesheet, actuarialnotes).
-   If the digest holds one with a thesis, that beats any news item that week. **WebFetch it and read the
-   whole argument** before writing — the digest carries only a blurb.
+2. **Practitioner essays** that argue a case — the strongest register there is, and **currently
+   unreachable from this run.** The actuarial Substacks (invisiblebalancesheet, actuarialnotes) are
+   Cloudflare IP-banned for the whole GitHub runner range: every UA 403s, and so does WebFetch, which
+   runs on that same runner (see `_comment_blocked` in sources.json). So if you meet one — in
+   `data/corpus.json`, or linked from another piece — **you will not be able to read it. Do not cite it,
+   and do not summarise it from its title.** A source you could not open is not a source. Fall through to
+   tier 1 or 3 instead.
 3. **Actuaries Digital** (`actuaries.asn.au` articles) — the profession's magazine.
 4. **Trade press** (insurancenews.com.au, *The Actuary*, broker titles) — background colour only. It may
    supply a fact inside a piece; it may **never** be the reason a piece exists. Personnel moves, M&A,
@@ -233,7 +269,9 @@ pass/fail line per check:
    `shape: position`: **1,000–1,400**.
 11. **Meta** — `mode`, `interests`, `expire_at` per rules; concept ids kebab-case; taught ≤3; on a
    position piece `shape` is present and set to `"position"` (every length and bar rule keys on it —
-   omit it and the piece silently reverts to the news-brief rules).
+   omit it and the piece silently reverts to the news-brief rules). Every id in `interests` must earn
+   its place against **that tab's** stated `want` — not by sharing a noun with it. A colour-theory piece
+   is not `software-ai` because interfaces are software; drop the tag rather than stretch it.
 
 ## Three quick updates, then stop
 1. `data/knowledge.json` — add any genuinely new concept ids you **taught OR assumed**, `is_learnt:false`,

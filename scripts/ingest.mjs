@@ -515,15 +515,27 @@ function trimExcerpt(s = "", max = DIGEST_EXCERPT_CHARS) {
   return (sp > 0 ? cut.slice(0, sp) : cut).replace(/[\s.,;:—-]+$/, "") + "…";
 }
 
-// Days since the interest last had a published article, from data/manifest.json. An article counts for
-// an interest when the id appears in its `interests[]` (falling back to the primary `interest` field).
-// null when the interest has never had an article.
+// Days since the interest last had an article written FOR it — i.e. one whose PRIMARY `interest` is this
+// id. null when it never has. This drives the author's cadence pick (days_since_last_article /
+// cadenceDays), so it must answer "when was this topic last served", not "when did something tagged with
+// it last appear".
+//
+// It deliberately ignores secondary `interests[]` tags, because counting those lets one tab's article
+// reset another tab's clock. software-ai was the PRIMARY interest of only 4 of the 15 articles carrying
+// its tag — the other 11 were design/indie-income/science/actuarial pieces cross-tagged into it — so its
+// array clock never exceeded 3 days while its real gap was 13. Under the flat ">= 5 days" starvation
+// rule in force until 2026-07-17 that meant starvation NEVER fired for it (primary-only, it would have
+// fired every day from 07-09), and it went 13 days without a piece written for it while its stated want
+// — the mechanisms under its own stack — was never taught once. The cadence rule that replaced
+// starvation reads this same number, so the bug survived the rewrite.
+// Measured across all 10 interests, primary-only changes the answer for software-ai ONLY (13 vs 1);
+// every other tab is byte-identical, which is what makes this safe. Cross-tagging still does its real
+// job: the article appears under every tab it fits, for browsing and filtering.
 function daysSinceLastArticle(manifest, interestId) {
   const arts = (manifest && manifest.articles) || [];
   let newest = "";
   for (const a of arts) {
-    const ids = Array.isArray(a.interests) && a.interests.length ? a.interests : (a.interest ? [a.interest] : []);
-    if (ids.includes(interestId) && a.created_at && a.created_at > newest) newest = a.created_at;
+    if (a.interest === interestId && a.created_at && a.created_at > newest) newest = a.created_at;
   }
   if (!newest) return null;
   return Math.floor((Date.now() - new Date(newest + "T00:00:00Z").getTime()) / 86400000);
@@ -684,7 +696,21 @@ async function main() {
   // used items' provenance lives in the article #meta, so dropping them here is safe.
   const beforePrune = pool.items.length;
   const cutoff = Date.now() - POOL_TTL_DAYS * 86400000;
-  const fresh = pool.items.filter((it) => it.status === "pending" && (!it.added_at || new Date(it.added_at).getTime() >= cutoff));
+  // Feeds currently listed for each interest. Anything pooled from a feed since REMOVED from
+  // sources.json is evicted now rather than lingering out its POOL_TTL_DAYS — otherwise deleting a
+  // source is a no-op for three weeks: the orphaned items keep their `feed` key, so they form their own
+  // queue and keep winning a round-robin digest slot. (Cutting theverge + a broad news query from
+  // software-ai left 6 such items that would have kept feeding the author until August.) Items with no
+  // `feed` predate that field and are left alone; TTL still ages them out.
+  const liveFeeds = {};
+  for (const interest of config.interests || []) {
+    liveFeeds[interest.id] = new Set((sources[interest.id] || []).filter((u) => typeof u === "string" && u.startsWith("http")));
+  }
+  const fresh = pool.items.filter((it) =>
+    it.status === "pending" &&
+    (!it.added_at || new Date(it.added_at).getTime() >= cutoff) &&
+    (!it.feed || (liveFeeds[it.interest] ? liveFeeds[it.interest].has(it.feed) : false))
+  );
   const groups = {};
   for (const it of fresh) (groups[it.interest] ||= []).push(it);
   const kept = [];
@@ -709,7 +735,7 @@ async function main() {
   await writePoolDigest(config, pool);
 }
 
-export { parseFeed, parseKontent, isYouTubeFeed, isKontentFeed, capRoundRobin, itemTime, pdfToText, isLegible, trimPdfLead, fetchFeed };
+export { parseFeed, parseKontent, isYouTubeFeed, isKontentFeed, capRoundRobin, itemTime, pdfToText, isLegible, trimPdfLead, fetchFeed, daysSinceLastArticle };
 
 // Run the pipeline only when invoked directly (node scripts/ingest.mjs), so tests can import
 // parseFeed without triggering a live fetch + file writes.
