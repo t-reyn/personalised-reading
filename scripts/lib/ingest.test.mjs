@@ -17,14 +17,36 @@ function fakePdf(runs) {
 }
 
 // Serve a feed from localhost so retry behaviour is tested without touching a live source.
-// `plan` is the status code per attempt; 200 serves the body. Returns the URL + a hit counter.
+// `plan` is the status code per attempt; 200 serves the body. Every request's UA is recorded, so a
+// test can assert WHICH identity was used — the point of the 403 fallback.
 const FEED_XML = '<?xml version="1.0"?><rss><channel><item><title>Ok</title><link>https://e.g/1</link></item></channel></rss>';
 async function withServer(plan, fn) {
-  const hits = { n: 0 };
+  const hits = { n: 0, uas: [] };
   const srv = createServer((req, res) => {
+    hits.uas.push(req.headers["user-agent"] || "");
     const status = plan[Math.min(hits.n++, plan.length - 1)];
     res.writeHead(status);
     res.end(status === 200 ? FEED_XML : "error");
+  });
+  await new Promise((r) => srv.listen(0, "127.0.0.1", r));
+  try {
+    return await fn(`http://127.0.0.1:${srv.address().port}/feed.xml`, hits);
+  } finally {
+    srv.close();
+  }
+}
+
+// Serve 403 to a browser-claiming UA and 200 to an honest bot — i.e. exactly what nofilmschool.com was
+// measured doing from a datacenter IP on 2026-07-17.
+async function withUaPickyServer(fn) {
+  const hits = { n: 0, uas: [] };
+  const srv = createServer((req, res) => {
+    const ua = req.headers["user-agent"] || "";
+    hits.uas.push(ua);
+    hits.n++;
+    if (/Mozilla|Chrome/.test(ua)) { res.writeHead(403); return res.end("blocked"); }
+    res.writeHead(200);
+    res.end(FEED_XML);
   });
   await new Promise((r) => srv.listen(0, "127.0.0.1", r));
   try {
@@ -91,10 +113,24 @@ test("fetchFeed retries a 429 (rate limit), not just 5xx", async () => {
   });
 });
 
-test("fetchFeed does NOT retry a 403 — a block is a decision, not a blip", async () => {
-  await withServer([403, 403, 200], async (url, hits) => {
+// A 403 is the one status where changing IDENTITY (not waiting) can help: nofilmschool.com 403s a
+// Chrome UA from a datacenter IP but serves an honest bot. So a 403 buys exactly one honest retry.
+test("fetchFeed retries a 403 ONCE as an honest bot, and succeeds where the publisher allows it", async () => {
+  await withUaPickyServer(async (url, hits) => {
+    const body = await fetchFeed(url);
+    assert.match(body, /<title>Ok<\/title>/);
+    assert.equal(hits.n, 2, "browser UA first, then exactly one honest-bot retry");
+    assert.match(hits.uas[0], /Chrome/, "leads with the browser UA");
+    assert.doesNotMatch(hits.uas[1], /Chrome|Mozilla/, "falls back to a non-browser identity");
+    assert.match(hits.uas[1], /CortexReader/, "identifies itself honestly rather than impersonating a reader");
+  });
+});
+
+test("fetchFeed does not blindly retry a 403 — a hard block costs 2 attempts, not 3+", async () => {
+  // The Substacks 403 every UA (an IP ban). That must cost one browser try + one honest try, then stop.
+  await withServer([403, 403, 403, 200], async (url, hits) => {
     await assert.rejects(fetchFeed(url), /HTTP 403/);
-    assert.equal(hits.n, 1, "a deterministic status must cost exactly one attempt");
+    assert.equal(hits.n, 2, "must not burn the time-boxed run on an unfixable block");
   });
 });
 

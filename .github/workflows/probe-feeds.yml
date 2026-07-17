@@ -1,7 +1,6 @@
 # TEMPORARY diagnostic — delete before merging to main.
-# The four feeds that 403 on every generate.yml run fetch fine from a home IP, so the failure can only
-# be observed from a GitHub runner. This probes UA/endpoint combinations from that IP and prints a
-# matrix, so the fix is chosen on evidence rather than on a guess we cannot test locally.
+# Final check: run the REAL ingest pipeline from a runner, because that is the only place the 403s are
+# observable. Locally this same command reports 0 failed while CI silently drops feeds.
 name: probe-feeds
 on:
   push:
@@ -17,5 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Probe blocked feeds from a datacenter IP
-        run: node scripts/probe-feeds.mjs
+      - name: Unit tests
+        run: node --test scripts/lib/*.test.mjs
+      - name: Real ingest dry-run from a datacenter IP
+        run: node scripts/ingest.mjs --dry-run

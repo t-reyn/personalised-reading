@@ -187,6 +187,14 @@ function parseFeed(xml) {
 // A browser-like UA + Accept gets past naive bot filters. It will NOT beat real anti-bot
 // challenges (Cloudflare JS checks return 403/503 regardless) — pick feeds that serve scripts.
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+// The honest fallback identity. Measured from a GitHub runner (2026-07-17), publishers disagree about
+// which UA they trust, so there is no single right answer: nofilmschool.com 403s the Chrome UA from a
+// datacenter IP (a browser that cannot exist there — it scores as a liar) but serves this one 200/30
+// items, while insurancenews.com.au does the reverse and hangs on a bot UA. Hence per-response identity
+// rather than a global switch: a global swap to this UA was measured to FIX 1 feed and BREAK 1.
+// Self-identifying and truthful on purpose — impersonating Feedly also worked, but claiming to be
+// someone else's crawler is not ours to do.
+const BOT_UA = "CortexReader/1.0 (+https://t-reyn.github.io/personalised-reading/; personal reading list)";
 // Retry ONLY what a second attempt can plausibly fix: 429/5xx and network/timeout errors. Google News
 // 503s the whole batch when a run hits it too fast (13 feeds lost in one go on 2026-07-16), and one
 // dropped feed silently thins the pool the author writes from. A 403/404 is a decision, not a blip —
@@ -196,21 +204,40 @@ const FEED_ATTEMPTS = 3;
 const RETRY_BACKOFF_MS = [400, 1200]; // bounded: worst case ~1.6s extra per persistently-failing feed
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+async function fetchOnce(url, ua) {
+  const res = await fetch(url, {
+    headers: { "User-Agent": ua, Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, */*" },
+    redirect: "follow",
+    signal: AbortSignal.timeout(20000),
+  });
+  if (!res.ok) {
+    const err = new Error(`HTTP ${res.status}`);
+    err.status = res.status; // carried so the caller can tell a bot-block from a blip
+    throw err;
+  }
+  return res.text();
+}
+
 async function fetchFeed(url) {
   let lastErr;
   for (let attempt = 0; attempt < FEED_ATTEMPTS; attempt++) {
     if (attempt > 0) await sleep(RETRY_BACKOFF_MS[attempt - 1]);
     try {
-      const res = await fetch(url, {
-        headers: { "User-Agent": UA, Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, */*" },
-        redirect: "follow",
-        signal: AbortSignal.timeout(20000),
-      });
-      if (res.ok) return res.text();
-      lastErr = new Error(`HTTP ${res.status}`);
-      if (!RETRY_STATUS.has(res.status)) break;
+      return await fetchOnce(url, UA);
     } catch (e) {
       lastErr = e; // fetch rejects on DNS/socket/timeout — all worth one more go
+      if (e.status !== undefined && !RETRY_STATUS.has(e.status)) break;
+    }
+  }
+  // 403 means "I don't believe who you say you are" — the one status where changing IDENTITY, not
+  // waiting, can help. So this is not a blind retry of the same request: it's the same request made
+  // honestly, exactly once. Costs one extra call for a genuinely blocked feed (the Substacks 403 every
+  // UA — that's an IP ban, unfixable here) and nothing at all for a feed that answers on the first try.
+  if (lastErr?.status === 403) {
+    try {
+      return await fetchOnce(url, BOT_UA);
+    } catch (e) {
+      lastErr = e;
     }
   }
   throw lastErr;
