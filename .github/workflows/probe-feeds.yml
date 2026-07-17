@@ -1,0 +1,21 @@
+# TEMPORARY diagnostic — delete before merging to main.
+# The four feeds that 403 on every generate.yml run fetch fine from a home IP, so the failure can only
+# be observed from a GitHub runner. This probes UA/endpoint combinations from that IP and prints a
+# matrix, so the fix is chosen on evidence rather than on a guess we cannot test locally.
+name: probe-feeds
+on:
+  push:
+    branches: [claude/unblock-feeds]
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Probe blocked feeds from a datacenter IP
+        run: node scripts/probe-feeds.mjs
