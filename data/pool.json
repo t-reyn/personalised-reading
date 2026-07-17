@@ -2,6 +2,19 @@
   "version": 1,
   "items": [
     {
+      "id": "software-ai-ab30dc81bc72",
+      "interest": "software-ai",
+      "feed": "https://news.google.com/rss/search?q=%22artificial%20intelligence%22%20OR%20%22software%20engineering%22%20OR%20%22machine%20learning%22&hl=en-AU&gl=AU&ceid=AU:en",
+      "kind": "article",
+      "title": "Artificial Intelligence, Adaptive Radiotherapy and Treatment Automation Transform Global Cancer Care - Yahoo Finance UK",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLVBuelV3c0V2UFJpTmxZNUxRWXp2M0s0enNLeEl2Y3J3RWIyZUs4akpiR2JjZ2IyaVV4Vm5wYkJZb0dyS3BvVUtlemQtb1o2cm1ER18xYUxLdEpNNE1raXM4UHZsNEdGbnFPa3Z0VkhjajROelE4SVY4RDd0Wld5TTJnenQ0d1dGVUwxX0FheWhGcWtGTEU2WXRpTHZhQ3MzeTlwTzZsSQ?oc=5",
+      "excerpt": "Artificial Intelligence, Adaptive Radiotherapy and Treatment Automation Transform Global Cancer Care &nbsp;&nbsp; Yahoo Finance UK",
+      "published_at": "Fri, 17 Jul 2026 08:04:00 GMT",
+      "added_at": "2026-07-17T08:34:00.129Z",
+      "status": "pending",
+      "used_in": []
+    },
+    {
       "id": "software-ai-6935fb172482",
       "interest": "software-ai",
       "feed": "https://news.google.com/rss/search?q=%22artificial%20intelligence%22%20OR%20%22software%20engineering%22%20OR%20%22machine%20learning%22&hl=en-AU&gl=AU&ceid=AU:en",
@@ -10,7 +23,7 @@
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTTBWa0M5bjNRR09SVFB2RGRNUFlUSkhKTjRZYlZwQk16YlllX2JKOGtOY1ZtRXg0bnEwV25KWmRDalZlQVBDZGhtYTNpMkxETmQ0VEVocC1hZFkxWmQ0LTMtN213N1Y4MzhsenpHbEhneHBVQ2NDekFjcVRMdW5XaXRrQlRfSUE3OExtclFVWVZJSXhyZy1TSndTemNBTFZkUHJHaHRFNm9oWm1tbFhzN2M1NGxMX0dvYmc?oc=5",
       "excerpt": "Xi Jinping: Artificial Intelligence Must Be Symphony of International Cooperation - VIDEO &nbsp;&nbsp; Caspian Post",
       "published_at": "Fri, 17 Jul 2026 07:45:22 GMT",
-      "added_at": "2026-07-17T08:06:43.247Z",
+      "added_at": "2026-07-17T08:34:00.129Z",
       "status": "pending",
       "used_in": []
     },
@@ -23,7 +36,7 @@
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWUloc3pDTnFjMVJYWGpIaEttZ0F1d3NlY1dfeXF3V3BsM0RlYVJzMHg2TEE4VmxwN0pKOTU5NDJPQ3dnb2xZZWxPdjV1aXRvZ08tckV4UDlHclFzNlJUdzRxV25sdjJIZmF0dnA5SW80Z3NRak9Qb3o1T1A5Z3JuSVJQR1FMQmwzbTFPWktCNXY1bFpiUHlJZ3BOMUNTekdLM1FOOERUWVpnWDQ?oc=5",
       "excerpt": "29 nations establish World Artificial Intelligence Cooperation Organization &nbsp;&nbsp; Fast Company Middle East",
       "published_at": "Fri, 17 Jul 2026 06:54:59 GMT",
-      "added_at": "2026-07-17T08:06:43.247Z",
+      "added_at": "2026-07-17T08:34:00.129Z",
       "status": "pending",
       "used_in": []
     },
@@ -36,7 +49,7 @@
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNZTJsZVRKQTNaYk03NHNmZVl0MmZsUXlma1JlSDlxakhTLUk0N2lnNXRDMy12ZGpCanVYTzZVaDRxcGpkMW5LTFpRQlgxUXhDMXBJU0tZRXZIa2RhZ1phY1ExQnRsT2dfdUUyNU9HQV94WmxROWVRdTQ5YXBUYjVXckxOanNUTl9iSzRyQlBWblFJeTlPSjZZM1dPa0p3Z1lfQlRJclRydUZ2djFFMzl5QVo5LU9JOUhubDFxLVZmRktjQ21LR093MmV3TTZldUZ2RERGYmt5d3puOGwtaU1ZTXJ4a1ExZE5LT25QZVRfUVdGY2s?oc=5",
       "excerpt": "China's President Xi addresses artificial intelligence conference in Shanghai &nbsp;&nbsp; The Lufkin Daily News",
       "published_at": "Fri, 17 Jul 2026 06:45:37 GMT",
-      "added_at": "2026-07-17T08:06:43.247Z",
+      "added_at": "2026-07-17T08:34:00.129Z",
       "status": "pending",
       "used_in": []
     },
@@ -49,7 +62,7 @@
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNeXZ5Q194V1hJdFBfYUxFMGFTWm1ORzV5YlZwRUdGbTBXT1dHVmIyVklTYTllakN2UzRESTBGUXFLV1ptbDAzc003cl9HWTlKS2lDOVFhT1loS0NJRk41YXp3dG1kQmVLMkhIRko0VWRQek1WUTgyakNZeUZLN2ZxNnk5WHh4QmZBN1pXS3VJZUdDbVlubG9XMTlIRmt0ZC1YdFJwV1B3?oc=5",
       "excerpt": "Secretary-General of ASEAN attends the 2026 World Artificial Intelligence Conference &nbsp;&nbsp; ASEAN Main Portal",
       "published_at": "Fri, 17 Jul 2026 06:33:21 GMT",
-      "added_at": "2026-07-17T08:06:43.246Z",
+      "added_at": "2026-07-17T08:34:00.129Z",
       "status": "pending",
       "used_in": []
     },
@@ -62,59 +75,85 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZ0JFV0c1dlZRTG9HNVNRSHFpeGRWNmIyUTVBS2l3ZThmNU1YX1prX2NmbXNsTmpKcG9KWXJpczBRTlA1aGlUX1NmNWlZUjY5Q1FJYnlhVXJRcDB3NTh6ZVhKVVZBMG81dmcwRExjdWpwZDhGbHZLdjFOZ09sZ3JxN3J1Y1JFRDF0cDU5UQ?oc=5",
       "excerpt": "Higher Education Threshold Standards, Artificial Intelligence Strategy, National Student Safety Survey: Latest rundown of higher ed &nbsp;&nbsp; LinkedIn",
       "published_at": "Fri, 17 Jul 2026 06:14:16 GMT",
-      "added_at": "2026-07-17T08:06:43.246Z",
+      "added_at": "2026-07-17T08:34:00.129Z",
       "status": "pending",
       "used_in": []
     },
     {
-      "id": "software-ai-50d5d3254bfb",
+      "id": "software-ai-487b7f00d33e",
       "interest": "software-ai",
-      "feed": "https://news.google.com/rss/search?q=%22artificial%20intelligence%22%20OR%20%22software%20engineering%22%20OR%20%22machine%20learning%22&hl=en-AU&gl=AU&ceid=AU:en",
+      "feed": "https://hnrss.org/frontpage",
       "kind": "article",
-      "title": "Artificial Intelligence Across the Echocardiographic Workflow: A Narrative Review for Clinicians - Cureus",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOOXkwYmxyTXM5ZVo2MHNxRjBzU0VsQ29nUHFxczQzT2wzaWlyalNoX3pTUjdOTTEwMVloSUFRNmdLdXo1VWdQOTh1S1FWZ2RCc3FCTWhxdG91djVWaTBxOUI1N3pYNmpPNnhza2ltWFpzeWZGRHJCeTFlekpuR0dvbFhid1EzS2w1OG1lMWthRVNWZDlnTVZKVHY3eWtBQ3Nva2tzU2pweDV5aEJ3X2dkbElLdjZHdER1bElVZUVyd3NMR3ZfekFhMTVBem5vUm8?oc=5",
-      "excerpt": "Artificial Intelligence Across the Echocardiographic Workflow: A Narrative Review for Clinicians &nbsp;&nbsp; Cureus",
-      "published_at": "Fri, 17 Jul 2026 05:53:21 GMT",
-      "added_at": "2026-07-17T08:06:43.246Z",
+      "title": "EEG shows brain can simultaneous encode two speech streams",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003876",
+      "excerpt": "Article URL: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003876 Comments URL: https://news.ycombinator.com/item?id=48943745 Points: 61 # Comments: 25",
+      "published_at": "Fri, 17 Jul 2026 05:51:10 +0000",
+      "added_at": "2026-07-17T08:33:59.263Z",
       "status": "pending",
       "used_in": []
     },
     {
-      "id": "software-ai-3edcdd6df17b",
+      "id": "software-ai-aa56ddc38cb1",
       "interest": "software-ai",
-      "feed": "https://news.google.com/rss/search?q=%22artificial%20intelligence%22%20OR%20%22software%20engineering%22%20OR%20%22machine%20learning%22&hl=en-AU&gl=AU&ceid=AU:en",
+      "feed": "https://hnrss.org/frontpage",
       "kind": "article",
-      "title": "Scrums.com Acquires TechLeaders.io to Deepen Software Engineering Data for AI Coding Agents - EIN Presswire",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNSThhbGVlZERXdEF1cDRobFRrMnMwd09kZGhvTEs3WFktZUZtT3pPRVhZQmtMOVpHcFZZZHdrNUxkYXpHdjdlLXhwRkZ4YXp6bzF6Y0VmU19ZLXFhcklteFFjdGlpWVNzcUtLSS1GVVljYlctMGpMVk1INVZoN1RiOEZiNjNwZ3UxcUFQVWFFMjlhLVBadVg1bFhVZHFydGhfM0tnbjFYaHZ3UkFOb1JyUWJsVWtOajZnbzZvRHp5aVNpZC1mV0hrY3pjdG9zalFJZFdKTw?oc=5",
-      "excerpt": "Scrums.com Acquires TechLeaders.io to Deepen Software Engineering Data for AI Coding Agents &nbsp;&nbsp; EIN Presswire",
-      "published_at": "Fri, 17 Jul 2026 05:53:00 GMT",
-      "added_at": "2026-07-17T08:06:43.247Z",
+      "title": "Pebble Mega Update – July 2026",
+      "url": "https://repebble.com/blog/pebble-mega-update-july-2026",
+      "excerpt": "Article URL: https://repebble.com/blog/pebble-mega-update-july-2026 Comments URL: https://news.ycombinator.com/item?id=48943174 Points: 90 # Comments: 18",
+      "published_at": "Fri, 17 Jul 2026 03:53:38 +0000",
+      "added_at": "2026-07-17T08:33:59.263Z",
       "status": "pending",
       "used_in": []
     },
     {
-      "id": "software-ai-5a5d73225e0a",
+      "id": "software-ai-7f938a05806a",
       "interest": "software-ai",
-      "feed": "https://news.google.com/rss/search?q=%22artificial%20intelligence%22%20OR%20%22software%20engineering%22%20OR%20%22machine%20learning%22&hl=en-AU&gl=AU&ceid=AU:en",
+      "feed": "https://hnrss.org/frontpage",
       "kind": "article",
-      "title": "Xi pitches China as AI partner to the developing world - The Australian",
-      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNNTZOTG44aEw5YUZDbC1mSTVnYlVwX1pnUDdkR1ZWa09CTnQ0Y2M4QmFfNVN0ZnpHQjBnNGd1V2VyZ3NQZG43SE5yZHRWRTd3cGFYRl81TThhVWFERnV5WF9VMXNkejBJLTczb19mSGZsVkVzUXZlMTBVbkJ0V1FlT3JoNXF6T3ZnN3h6MEN0dUpnT2tnUHZZc2dMV0lEVmFLZXlkc08wTDZRLTZpNDFtaWJ4R2VLa081bkl6VERmSzVwUEdSaDV0WGJ1OWhNZDJKWWp5NERRSFp4SEZ2M0JYaVlWTU95VkdJRHZqMUZ5SzJhMzlURXdpc0FyY2fSAYICQVVfeXFMTmVZTlZBcnFBU3hNel9la0czMl9kZnFDeDY4cXkzVnprWFM3UHZmZnVraTBrUGJYb2pVVmdlcWFsZ1ctODN0RHU0QUs2NGlMUWMyQkFCNHlyR0U5TzJraHRRT2hDSWdEUG4yNU5vWVQ5NGhsQkk1QTJMeHpZU2xOS3hSdngyYVFsdHNjR3VhbzR2M2lKTFZXTEZNTDRHSVA1OTlKVTJxUm1XNnVZNkN0V0xBRHRQV2JPb2VvLUpxakJMTjVONzBBU0wxM2dhcDNXOXoyWGs5eUNoWll1cllHNUhrQ2FRTWhUb2YwU2lyc0dweFNkeUVRRWcxRG9CdjVwNW5B?oc=5",
-      "excerpt": "Xi pitches China as AI partner to the developing world &nbsp;&nbsp; The Australian",
-      "published_at": "Fri, 17 Jul 2026 05:44:01 GMT",
-      "added_at": "2026-07-17T08:06:43.246Z",
+      "title": "How Has Roman Concrete Lasted for Millennia? 1,900-Year-Old Latrine Offers Clues",
+      "url": "https://www.smithsonianmag.com/smart-news/how-has-roman-concrete-lasted-for-millennia-a-1900-year-old-latrine-offers-new-clues-about-the-materials-impressive-durability-180989115/",
+      "excerpt": "Article URL: https://www.smithsonianmag.com/smart-news/how-has-roman-concrete-lasted-for-millennia-a-1900-year-old-latrine-offers-new-clues-about-the-materials-impressive-durability-180989115/ Comments URL: https://news.ycombinator.com/item?id=48943142 Points: 106 # Comments: 65",
+      "published_at": "Fri, 17 Jul 2026 03:48:26 +0000",
+      "added_at": "2026-07-17T08:33:59.263Z",
       "status": "pending",
       "used_in": []
     },
     {
-      "id": "software-ai-c846e96c6349",
+      "id": "software-ai-8d5e8918b15c",
       "interest": "software-ai",
-      "feed": "https://news.google.com/rss/search?q=%22artificial%20intelligence%22%20OR%20%22software%20engineering%22%20OR%20%22machine%20learning%22&hl=en-AU&gl=AU&ceid=AU:en",
+      "feed": "https://hnrss.org/frontpage",
       "kind": "article",
-      "title": "Artificial intelligence and whatever Pauline Hanson has - The Saturday Paper",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZ25kS1RhdTVrZ1k4R0NpTDdNUXBoV1FiTVpZTUIyZTBDWHFIc3JiX3RxN2VRb2hPb2VBYy1QdEJhVzRnQy1STXZmMzNRVUFJN29mYWZqQnh1QmM1eFNpUWNBOHdqTmkzYXNJSEltOWhXbjhDVjY3YmtwNkNPZEI0QjBfR0ZhczZpMnE3a05DR2ZKT1RISUh0M2RGOWpCTUtNbEFFdzZfTmJpZ3piV0RwWWVyT2dmOFJxcFA0?oc=5",
-      "excerpt": "Artificial intelligence and whatever Pauline Hanson has &nbsp;&nbsp; The Saturday Paper",
-      "published_at": "Fri, 17 Jul 2026 01:15:00 GMT",
-      "added_at": "2026-07-17T08:06:43.246Z",
+      "title": "UIUC AI Teaching Assistant",
+      "url": "https://github.com/Center-for-AI-Innovation/ai-teaching-assistant-uiuc",
+      "excerpt": "Article URL: https://github.com/Center-for-AI-Innovation/ai-teaching-assistant-uiuc Comments URL: https://news.ycombinator.com/item?id=48942721 Points: 16 # Comments: 0",
+      "published_at": "Fri, 17 Jul 2026 02:23:18 +0000",
+      "added_at": "2026-07-17T08:33:59.264Z",
+      "status": "pending",
+      "used_in": []
+    },
+    {
+      "id": "software-ai-68496810083d",
+      "interest": "software-ai",
+      "feed": "https://hnrss.org/frontpage",
+      "kind": "article",
+      "title": "GrapheneOS recommended for domestic abuse victims",
+      "url": "https://privacypros.com.au/privacy-hub/articles/dv-safe-phone-australia/",
+      "excerpt": "Article URL: https://privacypros.com.au/privacy-hub/articles/dv-safe-phone-australia/ Comments URL: https://news.ycombinator.com/item?id=48942454 Points: 129 # Comments: 99",
+      "published_at": "Fri, 17 Jul 2026 01:36:52 +0000",
+      "added_at": "2026-07-17T08:33:59.264Z",
+      "status": "pending",
+      "used_in": []
+    },
+    {
+      "id": "software-ai-50bea042af90",
+      "interest": "software-ai",
+      "feed": "https://hnrss.org/frontpage",
+      "kind": "article",
+      "title": "M 3.9 Experimental Explosion – 147 Km ENE of Ponce Inlet, Florida",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t13l/executive",
+      "excerpt": "Article URL: https://earthquake.usgs.gov/earthquakes/eventpage/us7000t13l/executive Comments URL: https://news.ycombinator.com/item?id=48942125 Points: 59 # Comments: 34",
+      "published_at": "Fri, 17 Jul 2026 00:45:05 +0000",
+      "added_at": "2026-07-17T08:33:59.264Z",
       "status": "pending",
       "used_in": []
     },
@@ -127,7 +166,7 @@
       "url": "https://www.theverge.com/games/966815/epic-games-fortnite-ai-powered-personas",
       "excerpt": "Get ready for more AI characters in Fortnite. Developer Epic Games is going to let Fortnite creators publish experiences featuring characters with AI-powered voices starting on July 30th, and ahead of that launch, it's created 36 characters with \"consistent voices and personas\" that creators can use as NPCs. The characters include Fortnite staples like Agent […]",
       "published_at": "2026-07-16T17:30:35-04:00",
-      "added_at": "2026-07-17T08:06:43.110Z",
+      "added_at": "2026-07-17T08:33:59.312Z",
       "status": "pending",
       "used_in": []
     },
@@ -140,7 +179,7 @@
       "url": "https://www.theverge.com/gadgets/966613/samsung-the-frame-art-tv-deal-sale",
       "excerpt": "Samsung’s Frame is different from your average 4K TV. Its biggest selling point involves what it does when you aren’t actively using it. It can display art, turning your living room into a gallery. The Frame has bezels that make it look like — you guessed it — framed art, and its matte finish can […]",
       "published_at": "2026-07-16T16:47:30-04:00",
-      "added_at": "2026-07-17T08:06:43.110Z",
+      "added_at": "2026-07-17T08:33:59.312Z",
       "status": "pending",
       "used_in": []
     },
@@ -217,42 +256,6 @@
       "used_in": []
     },
     {
-      "id": "software-ai-e38882d7d7a5",
-      "interest": "software-ai",
-      "kind": "article",
-      "title": "$100 AI Music Video: Claude Fable 5 vs. GPT-5.6 Sol",
-      "url": "https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6",
-      "excerpt": "Article URL: https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6 Comments URL: https://news.ycombinator.com/item?id=48939524 Points: 3 # Comments: 1",
-      "published_at": "Thu, 16 Jul 2026 20:03:23 +0000",
-      "added_at": "2026-07-16T20:46:53.785Z",
-      "status": "pending",
-      "used_in": []
-    },
-    {
-      "id": "software-ai-ac13e99b3ff6",
-      "interest": "software-ai",
-      "kind": "article",
-      "title": "Why are CD sales suddenly growing again?",
-      "url": "https://www.theverge.com/entertainment/966726/cd-sales-vinyl-physical-media-luminate",
-      "excerpt": "CD sales are apparently going up, reportedly thanks to fans realizing they're an affordable way to support their favorite artists. According to a new report from research firm Luminate, 16.3 million CDs were sold in the first half of 2026 in the US, a 16 percent increase year-over-year. The growth in CD sales was driven […]",
-      "published_at": "2026-07-16T15:55:29-04:00",
-      "added_at": "2026-07-16T20:46:53.865Z",
-      "status": "pending",
-      "used_in": []
-    },
-    {
-      "id": "software-ai-5aacd97c970d",
-      "interest": "software-ai",
-      "kind": "article",
-      "title": "As a musician, I prefer illegal downloading over Spotify (2011)",
-      "url": "https://derekwebb.tumblr.com/post/13503899950/giving-it-away-how-free-music-makes-more-than",
-      "excerpt": "Article URL: https://derekwebb.tumblr.com/post/13503899950/giving-it-away-how-free-music-makes-more-than Comments URL: https://news.ycombinator.com/item?id=48939030 Points: 17 # Comments: 1",
-      "published_at": "Thu, 16 Jul 2026 19:20:51 +0000",
-      "added_at": "2026-07-16T20:46:53.785Z",
-      "status": "pending",
-      "used_in": []
-    },
-    {
       "id": "design-561a6c4c141c",
       "interest": "design",
       "feed": "https://uxdesign.cc/feed",
@@ -261,7 +264,7 @@
       "url": "https://uxdesign.cc/how-to-kiss-a-cannibal-d4ca10ee4606?source=rss----138adf9c44c---4",
       "excerpt": "",
       "published_at": "Fri, 17 Jul 2026 07:39:54 GMT",
-      "added_at": "2026-07-17T08:06:47.853Z",
+      "added_at": "2026-07-17T08:34:01.211Z",
       "status": "pending",
       "used_in": []
     },
@@ -274,7 +277,7 @@
       "url": "https://uxdesign.cc/from-vibe-to-specs-reclaiming-the-design-process-with-said-framework-477a5d0d8932?source=rss----138adf9c44c---4",
       "excerpt": "",
       "published_at": "Thu, 16 Jul 2026 22:20:29 GMT",
-      "added_at": "2026-07-17T08:06:47.853Z",
+      "added_at": "2026-07-17T08:34:01.211Z",
       "status": "pending",
       "used_in": []
     },
@@ -287,7 +290,7 @@
       "url": "https://uxdesign.cc/design-system-contracts-the-component-lives-in-neither-figma-nor-code-3032d94ca067?source=rss----138adf9c44c---4",
       "excerpt": "",
       "published_at": "Thu, 16 Jul 2026 22:17:35 GMT",
-      "added_at": "2026-07-17T08:06:47.853Z",
+      "added_at": "2026-07-17T08:34:01.211Z",
       "status": "pending",
       "used_in": []
     },
@@ -505,7 +508,7 @@
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSDJlT0NBS2dRS1kzSTVlWFR2b1JxLWFtSGIweXlOSmtLQ2pOTTZ5U1JKSlJHMWcxWTNDbnpnLVJGenJucUh6WlpnRWRpcUFma3U4d3Z6Y2x2cHZtQnZ6Vk5sSUdRZ0lQcXRDR3phUm4yWk56cGRlLTdkdXd1Qy1GOXA1U1pGZE9idTFkdE9LQlBlM25JWTU5a29ROGRqR2NUaDlmNmFkMEVjRkU?oc=5",
       "excerpt": "Inside Cosmos Diamonds’ Bootstrapped Push Into India’s Lab-Grown Jewellery Market &nbsp;&nbsp; Inc42",
       "published_at": "Thu, 16 Jul 2026 12:31:11 GMT",
-      "added_at": "2026-07-17T08:06:48.465Z",
+      "added_at": "2026-07-17T08:34:02.218Z",
       "status": "pending",
       "used_in": []
     },
@@ -518,7 +521,7 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPOGg0ODlQUkt6b1JzTnA1dlRXNnlGWWM3VVVEMUtHaTNwMEgtdWNmTG4ydTFJdmF3N2ZscFNocmlhbVJOdzVEd3U2eTJoS21BRVZiTzV2eGdTaGtmMjk0c2xJVDhkajdYaWtsd2VOQnNrOTRuT1ZuR2p0YWNZbTlxQTVBb0FnY040ZEZYYnl0Q3J1UQ?oc=5",
       "excerpt": "How to Start a Unicorn as a Solo Founder with Adeo Ressi &nbsp;&nbsp; Founder Institute",
       "published_at": "Wed, 15 Jul 2026 17:42:42 GMT",
-      "added_at": "2026-07-17T08:06:48.465Z",
+      "added_at": "2026-07-17T08:34:02.218Z",
       "status": "pending",
       "used_in": []
     },
@@ -535,15 +538,15 @@
       "used_in": []
     },
     {
-      "id": "indie-income-e131888fa525",
+      "id": "indie-income-dd4f3a866746",
       "interest": "indie-income",
       "feed": "https://news.google.com/rss/search?q=%22indie%20hacker%22%20OR%20bootstrapped%20OR%20microsaas%20OR%20%22app%20revenue%22%20OR%20%22solo%20founder%22&hl=en-AU&gl=AU&ceid=AU:en",
       "kind": "article",
       "title": "Bootstrapped Indian Footwear Brand BERSACHE Targets ₹500 Crore Revenue with Expansion Across Hypermarkets, Offline Retail & Distribution Network - The Tribune",
-      "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNV0ZacDNXVzFhZy1TaVI1aEVlOHhyN2NnMWtQYzhka0hsQ3RlQzNvVElHZFRGdGhHZkhvQnVVaUd0Zkg2ME9pOHdjRnBnYkR1b2tuMHNpcENCYXBLRHRfSTF0SkRyS1FaOEJwTVVVMGpFUE4zUUR5c1FrMDVtYXV6b3ZuSVctbmc1OVZITFdFZHBEcWJ3YXNqWnV2MkZXWUcyWkYwTG1wbGg4a2tjb196aDZjT2FsMC1rMnpPd0I0aVlyRG1FRzNsNnBuYzgxM2ozcEZnX3FyRXNuRGhPMnYxN1lITEFoZU9CMEExMzdiSXBlY1JTNHR5S0JWMnBWeXZkZ3lfVF9ENWRSWDZxMHpmN3dRN2N5aHRLQTNhNm1VRXVqZmZ4bThnejgyQlBKNUpCNnk1dHEtajZzbm9NcUHSAb4CQVVfeXFMTVdGWnAzV1cxYWctU2lSNWhFZTh4cjdjZzFrUGM4ZGtIbEN0ZUMzb1RJR2RURnRoR2ZIb0J1VWlHdGZINjBPaTh3Y0ZwZ2JEdW9rbjBzaXBDQmFwS0R0X0kxdEpEcktRWjhCcE1VVTBqRVBOM1FEeXNRazA1bWF1em92bklXLW5nNTlWSExXRWRwRHFid2Fzalp1djJGV1lHMlpGMExtcGxoOGtrY29femg2Y09hbDAtazJ6T3dCNGlZckRtRUczbDZwbmM4MTNqM3BGZ19xckVzbkRoTzJ2MTdZSExBaGVPQjBBMTM3YklwZWNSUzR0eUtCVjJwVnl2ZGd5X1RfRDVkUlg2cTB6Zjd3UTdjeWh0S0EzYTZtVUV1amZmeG04Z3o4MkJQSjVKQjZ5NXRxLWo2c25vTXFB?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxObnZvZjRMRXBlSjZxaFozdGdyNzBYRHRCaFR5VUREWTdYb08zZDVLTHdMdU9KZ0lILXBrSkpIaGZyYTVkRTB4N0drZi0zQ2p4WkhfXzAyZ084RWpLbWhlZUJza2o1VjE4Z2kybTZ3ZC1vNFE5V1RKdEQyenNqc0loaW9iT3k1NUVZNFhIZEVKRDhOTFFHQnRoX0lKWEI3LTVzOW1ncGhvYVBDTG5DQ2xjR0VVOEdyUmM2VzFFVkZhUG05cDRJeEVlXzc4S0ROVEstUmpfb0Y1MEhmdHJZS2JHcWRJY1VJMFBXM3J6U01JTWVEOHlOWl9NLTJpWU0xZXdnMkR2Y0U5dzhHWGJ3bTUwaUhrU3J6R2VHNFg0c3dMSThBWXhKemRJTGNQQnVuOHPSAaICQVVfeXFMT250Vld4Y0NYclJVd3VLSmFFVk51bWwyV0RoTVhxWk1OSEFRMkZHdGU5aFNjWHZHc0k0a3pIbHd2c2dhZlRpUTJwYlhvQm5hdERBVUFDMUtBcTVucVd6bm01TGlCYjZ4SlNaZDNneVZaLTNuMkt0b3FmUGZFOEtTSGNRSUxta2pBcUJpY2wwcGFmY0Jlem53UWttUjV1MkVyQTNVWk5WTGtXcFVWUDZSZ3JoYllGamtBdkxodjhYWjNKWUE4WV9oaVhFMDNjaXlhSkp3SmY2NHNvb24tYVhEamlWQVNjX1ppaTlqSUN3OG5iNm1RalY0QmlDNW5YSDJuLXgyYU5tUF9lTlJzamNJSHc4ZTB1RnJrMGFNYjhaa1JoTGc?oc=5",
       "excerpt": "Bootstrapped Indian Footwear Brand BERSACHE Targets ₹500 Crore Revenue with Expansion Across Hypermarkets, Offline Retail & Distribution Network &nbsp;&nbsp; The Tribune",
       "published_at": "Tue, 14 Jul 2026 11:23:28 GMT",
-      "added_at": "2026-07-17T08:06:48.465Z",
+      "added_at": "2026-07-17T08:34:02.218Z",
       "status": "pending",
       "used_in": []
     },
@@ -556,7 +559,7 @@
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE95LUtBUHBQV0hIbDRacy1zVVlzN1BMNE1KMnFuVlVoTW1zMjIxcjJGcHhyTE9JOFdPalNOVEtJR2RHLU9MZFQ1M01iR2xvbzVaeWthbl84X1RSbEhhaFZnVlJySkRoNXN3?oc=5",
       "excerpt": "One in four startups now has a solo founder as AI transforms entrepreneurship &nbsp;&nbsp; calcalistech.com",
       "published_at": "Tue, 14 Jul 2026 11:16:00 GMT",
-      "added_at": "2026-07-17T08:06:48.465Z",
+      "added_at": "2026-07-17T08:34:02.218Z",
       "status": "pending",
       "used_in": []
     },
@@ -618,7 +621,7 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNX042NXhmRnlyRnB4V1VwaURMQnB5RkVlOHU5NkxINS0xQzA4cEpjTHJLcVFVYWZJaFVWWjV2dWtHOGg0RmQ0WFAtbFRXOFZpQUs2Z0xDbk1BRXpGUlJqd3hRWnpGaTNxSU5yTXlWWVJuZWVsaGN3bFFnODZJb3hsZTNaZW1UbTJCV1kwMXZGcEQyOWMtd0tjNWtQeml5UUE?oc=5",
       "excerpt": "35 Side Business Ideas in 2026 (With Earnings Data) &nbsp;&nbsp; Shopify",
       "published_at": "Tue, 30 Jun 2026 07:00:00 GMT",
-      "added_at": "2026-07-17T08:06:48.474Z",
+      "added_at": "2026-07-17T08:34:02.586Z",
       "status": "pending",
       "used_in": []
     },
@@ -679,7 +682,7 @@
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE05NnJHa0ZRckxIZHJyekZvTGVtTWJLSzVkSEQ5dFZOVXBIVlpTUVN5T19BMXc2Z2JScVRrSDB4M3ZaWTFiU21fc1hydjdYdEotRWI2X2xaOGFVOFRsdFpHcA?oc=5",
       "excerpt": "VPN App Revenue and Usage Statistics (2026) &nbsp;&nbsp; Business of Apps",
       "published_at": "Thu, 11 Jun 2026 07:00:00 GMT",
-      "added_at": "2026-07-17T08:06:48.465Z",
+      "added_at": "2026-07-17T08:34:02.218Z",
       "status": "pending",
       "used_in": []
     },
@@ -704,7 +707,7 @@
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWExsc0VFWWJyclF2bTAtb0FRUjhZdV9CZDJUa2llTVktb09TUTB6SmVpbUdUczNqQmFRcGFGSFk1dDVzemtmS2ZVOWpDTzNMdE92ZGxFNnVjckIzLVo5QVEwbEdhMGQ5RGRNeUM2dmRLWjVxRm1EMVRLZUtEb2RMSjZXT0ZKOGVWVXhHcGVxTmI5Zkh2ZzNDQlIzcjloSGhFeE1Cei1lWk0?oc=5",
       "excerpt": "Advanced bootstrapping on Amazon Elastic Compute Cloud (Amazon EC2) &nbsp;&nbsp; Amazon Web Services (AWS)",
       "published_at": "Mon, 01 Jun 2026 07:00:00 GMT",
-      "added_at": "2026-07-17T08:06:48.465Z",
+      "added_at": "2026-07-17T08:34:02.218Z",
       "status": "pending",
       "used_in": []
     },
@@ -717,7 +720,7 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUHA0YjFiWWNFa3poZUNqeWgxTERKXzJKUU5JNWJxYy1oMlBCS2c5Y1REcnhYQ0xUMWtCbFRpMTNnWHpjNmcyV0YtQU1XczQ3SHlfWWJFcndET1htM0l5ejdJOXJoVjlrdnZORGh6bUlBZ2ZldGhyTmxUaFB6S0NqS0F5RnI?oc=5",
       "excerpt": "PUBG MOBILE app revenue worldwide 2025, by quarter &nbsp;&nbsp; Statista",
       "published_at": "Fri, 22 May 2026 07:00:00 GMT",
-      "added_at": "2026-07-17T08:06:48.465Z",
+      "added_at": "2026-07-17T08:34:02.218Z",
       "status": "pending",
       "used_in": []
     },
@@ -730,7 +733,7 @@
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTEp6VkRVYXEyWHZ3TThEeXZRMkJWY0paNkJQeldPSTFKaTJUVzhWRGdqMlZxTkZnTFpFWGJ2ejJJQ1dwRmxTLUNlZGtLVmpLQktKbkZQRmYySW1JenFtNGVvNWREc3dRVy1ULVFEcVhfX2h5Q01wYlVJMXJMNkc3eWxEckphWU9hVWNSOG9UOHRfekI4TlE?oc=5",
       "excerpt": "BetterMe: Health Coaching app revenue worldwide 2025, by quarter &nbsp;&nbsp; Statista",
       "published_at": "Fri, 22 May 2026 07:00:00 GMT",
-      "added_at": "2026-07-17T08:06:48.465Z",
+      "added_at": "2026-07-17T08:34:02.218Z",
       "status": "pending",
       "used_in": []
     },
@@ -743,7 +746,7 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQnJZOW1UNml0ZHZyWDc2NXA4YW1HdFh5Z0Q3d2RoMXJDdGhacWxhM3hNX3pXN2R0WEVTMlkwdXFtejdTdmd6dUx1OXFWaFRrRVNFOUY1Ymx6UHZZVXBzbV9OeTVuOFZhYmV6UUozTWNVeEJWUVlLY2VaTmxtY3BReVgxVWs2MjM4djVHSk5QUVV0WmI5YWo4UE5xUktFVTQ?oc=5",
       "excerpt": "Tower War - Tactical Conquest app revenue United States 2025 &nbsp;&nbsp; Statista",
       "published_at": "Fri, 22 May 2026 07:00:00 GMT",
-      "added_at": "2026-07-17T08:06:48.465Z",
+      "added_at": "2026-07-17T08:34:02.218Z",
       "status": "pending",
       "used_in": []
     },
@@ -756,7 +759,7 @@
       "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOcVA3Smp5SEpkWFFjOUxYNmZRa1Jld0NKbHVqcmNkRzE3UnhuaV9UYUpaVWtJU3M2Y0NWVVlJS1ZUckVSZjJkVzdUMzlqSlBJMFZQa0dGb0xMbGdBbGVkdHBudzZGV1BVY19CQXBFMXlQTkR1ZmdiSjFJdVRNUllOQzc1QjJvQ2h0TFAwSGFFZUJtVjBOWmdXZ01wbzVsNE13ajJ0RWVTQXJPclJMS1RpR0kyNUdUeTFlNGYzNXY4YjJUNmU3S1ZPbkFkdUJCb0t1RGFtTzdDRDhvdDRnY3VLdUpxOHNqUFpqS3N2QVhvVWRQdUpDLU9XcWk3NzdqQlhVTDVLQlZxbw?oc=5",
       "excerpt": "BONAV_A: Profitability surged in Q2, supported by refinancing and robust ongoing production &nbsp;&nbsp; TradingView",
       "published_at": "Fri, 17 Jul 2026 07:52:19 GMT",
-      "added_at": "2026-07-17T08:06:48.680Z",
+      "added_at": "2026-07-17T08:34:03.484Z",
       "status": "pending",
       "used_in": []
     },
@@ -769,7 +772,7 @@
       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPNERyYzBhTHNjbzVjUHFZQ2RvMGNJSk9HTzQzcml6ZnRmTjRuUkx6aXg4cHoxRVU1VFdaSWJaWEt1Umc5MUN4ZHJERHZ6bEEyM0YyN2tEdjZsUHh4cmFFdDYxYlRiV1d2SDJiR1pRUHlRcmhOVFlTMWwzdWpmS0Q4dFh4cjYxYzhRUDJzYTNsdHJJeEhrZ2VldmtTMDZJdFVCb2ZqSVpDUmVzQUFFdjdMc2lKSGdwa2Rzek9mcExscGJFQzZLaFl3bzNfWDBtSFFJOWM1Vl80MmNfMTVvUGdURWpEdGxDRTTSAewBQVVfeXFMTzBlOGhPaHd0QXBkQVRWY2RLaUpZbmVLbmlKbEJPQU5BSHV3UGlkTlk0aWppdjRzdXdSY0VVQlFJMk5UajNKeUFtQ1VWUVQ5VG5aS3hLenV2eTBNaDk5UFNnYkhnN1VHSjNkSlRlYTd3RjlNTHRZQzBkQ0dRZVpRSEFRV29BT1hDU2pRbFZvQWplZDVSbHhiWlpEMXZvYjdBRF9JbUtoeldLUjZpOHdFZWU2RE51dk9RX1M5clhxaVhadk9wUUQzSFdrb2doNUlwQW9COU41T2FGMFFkb2NUajQ3N2tlR3dOMWxZTEo?oc=5",
       "excerpt": "Indian founder of $1.2 billion startup says bank rejected home loan application: ‘Just because I am a founder’ | Trending &nbsp;&nbsp; Hindustan Times",
       "published_at": "Fri, 17 Jul 2026 06:01:52 GMT",
-      "added_at": "2026-07-17T08:06:48.681Z",
+      "added_at": "2026-07-17T08:34:03.485Z",
       "status": "pending",
       "used_in": []
     },
@@ -782,7 +785,7 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSUVQWkx2NS1vOWJTRjJvZXhqWWhXQW9QSFZia19VbDJZamdldllWYmFqRUF0Wkl0SXV2VFEzNV9jcVI3cnY1eXhmTS1xaWx5Qy00X2w3NVRhZ21rVzJzTUtrRkVVd3hZRHF3NFpXcllVREcyLVJYam5xM2ZfQ0lIZGFLMzdxUjRJVE1vcFk0RkpWR1JYaFE0YXZkNnBpSDljc2Nv?oc=5",
       "excerpt": "Fayette commissioners OK refinancing debt &nbsp;&nbsp; Herald-Standard",
       "published_at": "Fri, 17 Jul 2026 05:15:00 GMT",
-      "added_at": "2026-07-17T08:06:48.681Z",
+      "added_at": "2026-07-17T08:34:03.485Z",
       "status": "pending",
       "used_in": []
     },
@@ -795,7 +798,7 @@
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE96RkVmOXV0bVlGdmI2M2tLZTJ5RzNnenF6a1c4cjZzdnVUcFpvS2J2V3ZvcnZHcnFZbnNDdXlSdmlqWXBDem9ia0hBY3dWMWtBQlduRUdmdGQ?oc=5",
       "excerpt": "Taiwan youth home loan program raises limits for newlyweds and families with children &nbsp;&nbsp; Taiwan News",
       "published_at": "Fri, 17 Jul 2026 05:10:00 GMT",
-      "added_at": "2026-07-17T08:06:48.681Z",
+      "added_at": "2026-07-17T08:34:03.485Z",
       "status": "pending",
       "used_in": []
     },
@@ -808,7 +811,7 @@
       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNOUNWc0tGTWkwMXZWM1hCREhEanZ1U292VEVDQVBmVVpVYUw1SWV5YUhtQ1ZTVWZZSXhBUjNTMHdFZUR0dlYzeU14a2RISmlWeFkxbjVxNEV1eWVzeEtGdVBPM21nVXZUekNnSmZHdnJEVVNTMVY4MkhOU0QtU1ZrS09LT3NhN0s3ajlZeWtxbjFzR3hmUTE3R215c05QTWNFZG16NWdPcUpMLXZDbFF2NmM5WkFid0ZTeWJoUDMyQkNvbTF3Nmc5bmlxbnNNTmt4WXdMMWd0UXZXMU4yZmo4RVZUY1pFUU90bmpMbFdXWTI5T2d40gH6AUFVX3lxTFBMNzdxVGJnZHJ0Nlh4WkxRRGloZ2g3cjIxanZ3MFpGbnJKSU9VYV9STEpUX1JvTkhZY3NmTkZCaElMUEEtN0haNkM3dGFLaE5ZZkF5ZFc5bGFPa2pWX2lzc3hvR3ZrRzhfZXF2YzF1ZFl4OUU5NVpmRDdyTGRTVnZIWjRfcWlEVGkyem9ES2FhaC03eUFwd3pXSEhFMGpUZWJyX3U2ZnJxSXNrcUU4YU50OG1hSjJwaFlSQU1fM2gxNUQxazhQZFBRVEM5NFBNU1lBbl84VGF6MF9TOVlKTmlHbUtMRE05RmtGWGdGa1Npc25MT1dESlBxZ2c?oc=5",
       "excerpt": "Should Newmark Group’s (NMRK) Midtown Refinancing and Asia Push Reframe Its Fee-Income Narrative? &nbsp;&nbsp; simplywall.st",
       "published_at": "Fri, 17 Jul 2026 05:04:32 GMT",
-      "added_at": "2026-07-17T08:06:48.680Z",
+      "added_at": "2026-07-17T08:34:03.485Z",
       "status": "pending",
       "used_in": []
     },
@@ -821,7 +824,7 @@
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQR3kwQXBmY0MwNktTLWVWTXd0Vl8tdEtDWDlMUFNoRkNBMVFnTXZWTUNKbTUwek5VRGVqQ2xiZmJ5WS1kZHF4eEN0aWY0OTF6eE9PUGNkRlJtSTR3dXJIY3ZUWjZhTDA2aWw2MWFjSEhNZk1YbnVsX1U1eHc3MGg1bzBKQjJRU2hMQTctNG51TTZpQkdsUHpfZlhn0gGfAUFVX3lxTE1vekhZUnFNejdXejk5REo4YjU1UWNIaUhZcV85MWNXLVpmeWUtSlkwRHU4a1BHTTNkcUFhVW5PYUZFUWNmSlc3ZWJPazlZQXFaWEI3cDlPeHZmMjBEMlVpT3p5M0x1NXpyT0JRRnZuZjc3Y3hRV2trVG9uLVY3bXZ2U05BVmN2NHVvYUN1TXRSdVltQ09OMzJ4UlA5Tkd0RQ?oc=5",
       "excerpt": "Southeast Bank, SEL sign home-loan agreement &nbsp;&nbsp; The Business Standard",
       "published_at": "Fri, 17 Jul 2026 00:15:00 GMT",
-      "added_at": "2026-07-17T08:06:48.681Z",
+      "added_at": "2026-07-17T08:34:03.485Z",
       "status": "pending",
       "used_in": []
     },
@@ -834,7 +837,7 @@
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONXZLc3lNanAzTHFDdWJnc283RENYcHUzazAtQ2ZReE80aUN6S1VUa2RGVXI2bEhxY0IyS00teEI3ZHNFNHJKNy1tRE8xV2NzQjVpOWVJT1RFV3dENzJnckt0Ym1lVFZhcVhjWm9XSXBESC10RTFzcEltLWlqSVN2Z1R1TQ?oc=5",
       "excerpt": "Westpac eases investor lending policy &nbsp;&nbsp; Broker Daily",
       "published_at": "Thu, 16 Jul 2026 20:30:43 GMT",
-      "added_at": "2026-07-17T08:06:48.680Z",
+      "added_at": "2026-07-17T08:34:03.484Z",
       "status": "pending",
       "used_in": []
     },
@@ -847,7 +850,7 @@
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNeS1wTWlQTGZqV0VBdTRibWM0ZzdXcHFlQTV6dkQ0OTdTaWJZRXBsZlhPbERJRVZZb2J6T1VaOUtDdEQ2MVhJSDQwbG0zNVg0aUt5MXZKd1g1ZVIwYzh3dXRXQ1g5dlhtNi1vcnlaSy1ZQkJpdmhhT2tlaWktVnoyTW1TbU96VUNhOGI5WmlTYmlxbnFoNW00R0dR?oc=5",
       "excerpt": "Property caps and rules updated under 5% Deposit Scheme &nbsp;&nbsp; Broker Daily",
       "published_at": "Thu, 16 Jul 2026 20:20:50 GMT",
-      "added_at": "2026-07-17T08:06:48.693Z",
+      "added_at": "2026-07-17T08:34:04.102Z",
       "status": "pending",
       "used_in": []
     },
@@ -860,7 +863,7 @@
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQYV9UVS11RjBCejlnQld5MTdmX2lKV1dzZWQ0czlPajlLMUthRUY4Qi0xNmliQXJicmxMbnNQWnd1VlFPaTlUTFg2Rjh6Y1A4UDJ2Yk9OWlVtZ3p1VTB5NmlvWVZKLUpTWGdwbDI2Zm9LaHV3LW1UN2FFVGQ3X3E0b196VEVDVExELXU3MUxONA?oc=5",
       "excerpt": "'Stop reacting and start preparing’, brokers told &nbsp;&nbsp; Broker Daily",
       "published_at": "Thu, 16 Jul 2026 20:15:40 GMT",
-      "added_at": "2026-07-17T08:06:48.693Z",
+      "added_at": "2026-07-17T08:34:04.102Z",
       "status": "pending",
       "used_in": []
     },
@@ -873,7 +876,7 @@
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNN0d3eGtNSFZQYUFHNEJYT0M3aHZTNi1vZUx1M2ZHQ0h4dFFGcTNSMzM0ZHVjZUJPaXliNHM4YTY1ZVNNYU11am9TODRHSzFBZG92V2xpd2F2UkZRSDlOb180bWdnbFNSX3dQaGo3ZEdJczlnUEZsYjRfanBPclN4WTB1WUpWc1FMUXNQbTBGcjJtXzZQU2xhdC1lNE4wZTBXc3RiVTZuZ2NRVWtPc0czYkdvUFoxRFF2LXEzVTVnZXZvX2thbVdPdw?oc=5",
       "excerpt": "Business Accelerator: Fortune favours the change – How brokers thrive in an uncertain market &nbsp;&nbsp; Broker Daily",
       "published_at": "Thu, 16 Jul 2026 03:31:05 GMT",
-      "added_at": "2026-07-17T08:06:48.693Z",
+      "added_at": "2026-07-17T08:34:04.102Z",
       "status": "pending",
       "used_in": []
     },
@@ -886,7 +889,7 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTHpMcE8ydUlKaS1SNFpHTVhaUU9icE9zY2Z6b3pSSGp0TjQ1YTlfZlM4RzNlMDJ6TEJvWnlYZTZOWkFXalNpQzY2M2RialVTX2hGVXhrckpaOWU5TldRdXlFM1dabEFOTThzOEtIN0E1SUZPWG9jakE0bC1oV1BPcFhjQ1VXMXpjVmRiaA?oc=5",
       "excerpt": "Upgraders drive record June quarter for AFG &nbsp;&nbsp; Broker Daily",
       "published_at": "Thu, 16 Jul 2026 02:01:11 GMT",
-      "added_at": "2026-07-17T08:06:48.693Z",
+      "added_at": "2026-07-17T08:34:04.102Z",
       "status": "pending",
       "used_in": []
     },
@@ -899,7 +902,7 @@
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOGRDVGp6MDNlakdXMGlfQk1XX3BILUFnakxIbEQ3S09RTFQyTkZyNTRTeWROTkxfb0pFZHA2ODBJWk4yNFR5b0taUDkyalRhTVVmNnN5cTdvWHgyUm01ZERlTkg0ZU5XVmNiMmZrMzZadmNEVnZfTFRkWTl5VDhId2dtbFQyUzNjMkpNZmkxbDVPcm92?oc=5",
       "excerpt": "HSBC sets out fraud response after $35m penalty &nbsp;&nbsp; Broker Daily",
       "published_at": "Wed, 15 Jul 2026 20:25:10 GMT",
-      "added_at": "2026-07-17T08:06:48.693Z",
+      "added_at": "2026-07-17T08:34:04.102Z",
       "status": "pending",
       "used_in": []
     },
@@ -912,7 +915,7 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdHZMRUNKVkh6YlhVOGxPUnE0WjhMcF83SEdPdzdHXzVrR1VObDBObHlVdzRlcXNZeHpjZURqSXpMZG5iVXdoaUJ2Z0tHQ0FhZklnUW9mVHM4TEtnS29fLXR3Ymo2SjVpVHJOaEU2R3FXRHB1THB3QV9ud1FtYkpnNHNxTGFzcjJFRUpodUZOVFdaSkZjU3hnVGJfUGlfUjJDQnVDODFQMlhjUQ?oc=5",
       "excerpt": "Homesafe rolls out equity release product across regional Victoria &nbsp;&nbsp; Broker Daily",
       "published_at": "Wed, 15 Jul 2026 20:20:36 GMT",
-      "added_at": "2026-07-17T08:06:48.693Z",
+      "added_at": "2026-07-17T08:34:04.102Z",
       "status": "pending",
       "used_in": []
     },
@@ -1009,7 +1012,7 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQenFWaUxrbk5QZXZOUHFJNlFlQUxIaFRTTklKbWVzUzNTMl8wb1FoN0xOWGZnYWs0MlB3andIXzR6bnptLVZDRlVGVl9BSzJpX3VyUU1SMnNwMEtrS0FBbndjeWRmOEIyZFdRdkc5eTJZR1B6Y2piQm15b3VhOHNQOGlMSnFtZVJkaUgxRmd3RU9OdWhBaWQ4MVNlbFZldGpJQkJ6NnBTblZlSTUzSXc?oc=5",
       "excerpt": "Budget tax oddity sparks confusion over expat CGT &nbsp;&nbsp; AFR",
       "published_at": "Fri, 17 Jul 2026 06:52:00 GMT",
-      "added_at": "2026-07-17T08:06:48.712Z",
+      "added_at": "2026-07-17T08:34:04.749Z",
       "status": "pending",
       "used_in": []
     },
@@ -1022,7 +1025,7 @@
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYjN4RHlER1JiQ2FFMUljRGRuZVZMcGpOd1FQbjNxZ0JfcW15Q29XeVJxMXRFQ1B6WFJCWEp6anZCM3N0eHRmVHFSaWI4WFFackpGLUtlSzQxN2ZEZVIyVTVoX1JQOVlpbEM1NlBJdEQzVTVkR1VlODFHREhaTGFtQTFwYkFBTmxneHJxemFXS25RX1JHbWdQeg?oc=5",
       "excerpt": "Want a bigger CGT discount? Leave Australia &nbsp;&nbsp; AFR",
       "published_at": "Fri, 17 Jul 2026 06:30:00 GMT",
-      "added_at": "2026-07-17T08:06:48.712Z",
+      "added_at": "2026-07-17T08:34:04.749Z",
       "status": "pending",
       "used_in": []
     },
@@ -1035,7 +1038,7 @@
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9nZ0NDU19JbXVWc0xLTkNiYzhoalcwandaRm9NaVgwWlFDTnBUc1Yza1dYZEwxdHVDc2xVYjV3ZGpSQWlSVnZqeXlTaVh2SnRUNHkzYQ?oc=5",
       "excerpt": "Australia to End 50% Capital Gains Tax Break for Long-Term Crypto Holders From July 2027 &nbsp;&nbsp; bloomingbit",
       "published_at": "Fri, 17 Jul 2026 03:25:08 GMT",
-      "added_at": "2026-07-17T08:06:48.712Z",
+      "added_at": "2026-07-17T08:34:04.749Z",
       "status": "pending",
       "used_in": []
     },
@@ -1061,7 +1064,7 @@
       "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxONXN6QWNMdFlmVW1jcFRtWnRoRjZyRTdWd3lXRmE4WkhjbjhMeDh0dnJtUmgxcS00VWxFdVBVUzBpdy0zUkVXY1dJVEVTOExQRHBnYUJlNEl6ZGVHbl9OWUdwT083azllT0hvelRkX2tVMGg3OHZpSEJLS3ljQWtndTQxaVloMGJZV2pQVlN1b1d6SzVTN3FFaG1QWjBHa2pmaFdFczdCNWlSUlEySUNVUE1Sek1LY0NkblV2aHFsaTZyMy1HQXJRVUp0TWs2UVV5THFyb1BqVk0wejF0QnoxYm9pTGpaN0E5YlZlaURHbi1mckQxOUZEaXFKbDN3OE4y0gGGAkFVX3lxTFBBUVd2c1ljSDBGZktMWHRwZXVlZ1pHZVJDbVRhRXRYSWMzRGk2M3hNbC1aRmMybGlnWGpLcnJ5RTBlS0FmQ2pJYkQ0dnhZeDg1bFBpVkdnN040UlQ4ODkwV1c3VjdQenRDX05hV1VvU3NOVDRuSEpqV25pS283SUE5NlJWUnd2YmdOV3FqaVQ3ckNMazM5RzBkbkpyeGNJZjB2dGFBTVJCUURsUUVtcnBBa2JVYUR2Wll3UnFxRnJHeF9DSUtqSWlqaEtJbVF6ZnpESjM2T2hmWU1LYjNmMUFEMUgtbW5fQy1pdUNuRHhwNDVSWlktUENrSGV2eUJzckFjRTJMd1E?oc=5",
       "excerpt": "‘If you make $1250, you’ll pay $1850 tax bill’ &nbsp;&nbsp; News.com.au",
       "published_at": "Thu, 16 Jul 2026 06:01:59 GMT",
-      "added_at": "2026-07-17T08:06:48.712Z",
+      "added_at": "2026-07-17T08:34:04.749Z",
       "status": "pending",
       "used_in": []
     },
@@ -1074,7 +1077,7 @@
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNazdwN01PUGtmWmRGT1ZsUC1jWkdLQ0MwYmNHYXZfQUhoSXFVcUFZWEZ3ZlVSajFrWHJyR3BQSjdFOWVEWHFIcGdmeVJCRFNlRUNUazk4R3hpcVRNa0lhMXc0QTFUZExTX0VZUXNvU1FkV2xqMmZDQXRLOU1zZFRIQkxQTUdCOUxsUkw0cE9CT0lxeS11a0N4SVZ5aG4xaXVNTHFYNmtHbUFOZGxkRFNyVU1mSi12WEVpMTNIZlNDM0VuaUZH?oc=5",
       "excerpt": "Demand for mortgages slumps in June as tax changes, rates bite &nbsp;&nbsp; AFR",
       "published_at": "Thu, 16 Jul 2026 03:18:00 GMT",
-      "added_at": "2026-07-17T08:06:48.712Z",
+      "added_at": "2026-07-17T08:34:04.749Z",
       "status": "pending",
       "used_in": []
     },
@@ -1160,7 +1163,7 @@
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWDdDWVJrcF8zS1hRT3o1UDFtbjZwLUR1dXZleDAyQlUyRHJCa2dYbkIxVDNpOHdDaDZ0M3RvRVhvTjJ1c0pRSS0zUHlNb2hxQ3VlVmg3Mjk0N1BOWmZRWXVuYS1JbHpvQlFIOVZyTF9JYmh5SjRTd1J3Zmptem81cDE2d1ZFUl9XS05TWXdqZGNndTlDSkVINnA0RlhySDVkMjFkYjZlemdoNkY3bVJwclN5QWRfR283Qm5vUlZvZw?oc=5",
       "excerpt": "Property pros predict investor exodus following CGT, negative gearing reforms &nbsp;&nbsp; mpamag.com",
       "published_at": "Sun, 12 Jul 2026 23:04:12 GMT",
-      "added_at": "2026-07-17T08:06:48.712Z",
+      "added_at": "2026-07-17T08:34:04.749Z",
       "status": "pending",
       "used_in": []
     },
@@ -1209,7 +1212,7 @@
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNV2g0MjFCVi1zX1U3TWg5cHR3bks1MHN4cDFENVdCREdqS2NTREs3UjBIWl92UU14SmlSR28yNDYtUDYyYkVRbVRlR3l4NlJGTFhfS3RyMk5Mc2o5YTg5NmVFbmdCRS1PV28tY1BkUmVFWHIwdF9lT2JEOXFCb0Qwa0cxbTlqRkxfdDEwdDJJRkJaM0ZhOGZnaDlHOHVWSDg2dGV2aDUyaXEtUUxvVHlZbDcxYTlqVzdKOWY5dlBRa3pNaUNLQUg2VTZjN0xodTVsMmZkZTBVREs?oc=5",
       "excerpt": "Budget reforms changing how Australian invest in property &nbsp;&nbsp; Your Investment Property Magazine",
       "published_at": "Tue, 23 Jun 2026 07:00:00 GMT",
-      "added_at": "2026-07-17T08:06:48.713Z",
+      "added_at": "2026-07-17T08:34:04.749Z",
       "status": "pending",
       "used_in": []
     },
@@ -1258,7 +1261,7 @@
       "url": "https://www.insurancenews.com.au/daily/ica-slams-disruption-rising-risk-under-home-loan-scheme",
       "excerpt": "The expanded first home buyer loan guarantee scheme has failed to achieve its goals, the Insurance Council of Australia says...",
       "published_at": "Fri, 17 Jul 2026 06:33:56 GMT",
-      "added_at": "2026-07-17T08:06:49.021Z",
+      "added_at": "2026-07-17T08:34:06.399Z",
       "status": "pending",
       "used_in": []
     },
@@ -1271,7 +1274,7 @@
       "url": "https://www.insurancenews.com.au/daily/melbourne-duo-take-regional-broker-awards",
       "excerpt": "Gallagher&rsquo;s Jodi Sharman was crowned broker of the year for Victoria/Tasmania at a gala lunch in Melbourne attended by 540 professionals today...",
       "published_at": "Fri, 17 Jul 2026 06:32:36 GMT",
-      "added_at": "2026-07-17T08:06:49.021Z",
+      "added_at": "2026-07-17T08:34:06.399Z",
       "status": "pending",
       "used_in": []
     },
@@ -1284,7 +1287,7 @@
       "url": "https://invisiblebalancesheet.substack.com/p/did-we-solve-the-wrong-problem",
       "excerpt": "Seven years after PMIF and PYS, it's time to ask whether protecting retirement balances came at the cost of protecting Australians.",
       "published_at": "Thu, 16 Jul 2026 23:03:04 GMT",
-      "added_at": "2026-07-17T08:06:48.864Z",
+      "added_at": "2026-07-17T08:34:06.033Z",
       "status": "pending",
       "used_in": []
     },
@@ -1297,7 +1300,7 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPS2xjQjIzUlZNSkNzb1EtdkhYd19DWjF2eHUzb0xGR1NWS0Z2b25qbkRDY1VCZ0I2M25RTWM1TDBhZUVzTjN6VDVRc3c2Vm1MNHIxbWg3LUFaaFlMMFI1SktGUDNZZUJCYXJIaXE5cGcxeEhpOEoyNDBmQVc1YzhGQmo4UGpHRWNPZ0NCbw?oc=5",
       "excerpt": "OBR says national debt direction is “unsustainable” &nbsp;&nbsp; The Actuary",
       "published_at": "Thu, 16 Jul 2026 09:02:22 GMT",
-      "added_at": "2026-07-17T08:06:49.032Z",
+      "added_at": "2026-07-17T08:34:06.971Z",
       "status": "pending",
       "used_in": []
     },
@@ -1310,7 +1313,7 @@
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNEtRVk1nenNvalNaa2l0cS1zU3IzanloRXRyS1JRUl9LRmFMbmVYd1RzbTQ2S2Z5bGZkSFUtQjJFUnNiNy1lY09VSHAwTTZTSlg3SVRkZ0RGRFRfUzhENGN3aWhkZmxseU5OZXBqbFQwcXc3Ri1FSk1vakZ3bXdwSDhXNUZidUxEaGxla3dzemZhYkVT?oc=5",
       "excerpt": "FCA predicts AI will transform financial advice by 2030 &nbsp;&nbsp; The Actuary",
       "published_at": "Thu, 16 Jul 2026 09:02:22 GMT",
-      "added_at": "2026-07-17T08:06:49.032Z",
+      "added_at": "2026-07-17T08:34:06.971Z",
       "status": "pending",
       "used_in": []
     },
@@ -1365,7 +1368,7 @@
       ],
       "excerpt": "Quantum computers could soon break today's encryption, threatening data stolen now but decrypted later. Appointed Actuaries should weigh this cyber risk carefully in FCRs, alongside emerging quantum opportunities for insurers.",
       "published_at": "2026-07-14T14:00:00Z",
-      "added_at": "2026-07-17T08:06:48.801Z",
+      "added_at": "2026-07-17T08:34:05.343Z",
       "status": "pending",
       "used_in": []
     },
@@ -1382,7 +1385,7 @@
       ],
       "excerpt": "Actuary Hugh Miller applies statistical testing to World Cup penalty shootout results, asking whether underdog victories like Paraguay's win over Germany are genuine surprises. The analysis finds stronger teams hold a real, modest edge, leaving plenty of room for upsets.",
       "published_at": "2026-07-13T14:00:00Z",
-      "added_at": "2026-07-17T08:06:48.801Z",
+      "added_at": "2026-07-17T08:34:05.343Z",
       "status": "pending",
       "used_in": []
     },
@@ -1399,7 +1402,7 @@
       ],
       "excerpt": "Semester 1, 2026 results show 470 students passed and 110 are now eligible for Fellowship designation.",
       "published_at": "2026-07-12T14:00:00Z",
-      "added_at": "2026-07-17T08:06:48.801Z",
+      "added_at": "2026-07-17T08:34:05.343Z",
       "status": "pending",
       "used_in": []
     },
@@ -1412,7 +1415,7 @@
       "url": "https://invisiblebalancesheet.substack.com/p/the-chart-that-changed-an-industry",
       "excerpt": "REP 413: Ten Years Later, Where Is the Evidence?",
       "published_at": "Thu, 02 Jul 2026 06:06:09 GMT",
-      "added_at": "2026-07-17T08:06:48.864Z",
+      "added_at": "2026-07-17T08:34:06.033Z",
       "status": "pending",
       "used_in": []
     },
@@ -1430,10 +1433,10 @@
       ],
       "excerpt": "Dear Sir/Madam, Consultation: Genetic testing protections in life insurance  draft regulations The Actuaries Institute (Institute) welcomes the opportunity to provide feedback to the consultation on the draft regulations to support the legislated underwriting. This covers the exposure draft of the Insurance Contracts Amendment (Genetic Testing Protections in Life Insurance) Regulations 2026 (Draft Regulations) and the Explanatory Materials. The Institute is the peak professional body for actuaries in Australia. Our members work in a wide range of fields including insurance, superannuation and retirement incomes, banking, enterprise risk management, data science and AI, climate change impacts and government services. The Institute has expertise. The comments made in this submission are guided by the Institute's Public Policy principles that any policy measures or changes should promote public wellbeing, consider potential impacts on equity, be evidence-based and support effectively regulated systems. The Institute reiterates its support for the legislated ban on the use of adverse predictive genetic test assurance on the way forward and support medical advances that can benefit society in many, potentially profound, ways. We make the following observations regarding the Draft Regulations. Broad support for the Draft Regulations The Draft Regulations include a list of conditions for which genetic testing information is classified as protected genetic information. Consistent with the legislation, u has been made by the time a life insurance contract is entered into, a predisposition to any of the conditions listed can neither be used in the underwriting process nor considered a pre-existing condition when assessing admissibility of a claim. This provides further clarity on conditions to which the ban applies, provided they have not been clinically diagnosed. Page 2 of 2 We would welcome a discussion with Treasury on how best to regularly collect and monitor population-level genetic testing data. While we support the legislation and accompanying regulations, we reiterate the potential long-term risks to fairness across all life insurance customers and to the su",
       "published_at": "2026-06-25T00:00:00Z",
-      "added_at": "2026-07-17T08:06:48.794Z",
+      "added_at": "2026-07-17T08:34:05.336Z",
       "status": "pending",
       "used_in": [],
-      "enriched_at": "2026-07-17T08:06:51.977Z"
+      "enriched_at": "2026-07-17T08:34:13.572Z"
     },
     {
       "id": "actuarial-0b02b6d479c2",
@@ -1449,10 +1452,10 @@
       ],
       "excerpt": "welcomes the opportunity to respond to Treasury's consultation paper on Strengthening the Superannuation Performance Test (May 2026). The Institute is the peak professional body for actuaries in Australia. Our members work in a wide range of fields including insurance, superannuation and retirement incomes, banking, enterprise risk management, data science and AI, climate change and sustainability, and government services. Australia, and work across APRA-regulated funds, SMSFs and public sector funds. The Institute has a longstanding commitment to contribute to public policy discussions where our members have relevant expertise. The comments made in this submission are guided by the Institute's Public Policy Principles that any policy measures or changes should promote public wellbeing, consider potential impacts on equity, be evidence-based and support effectively regulated systems. The Institute acknowledges that the performance test (the test) has worked well in achieving its policy placing downward pressure on administration fees. At the same time, the test has a number of well-acknowledged limitations about benchmark hugging and unintended investment constraints, and the reforms to date have come with significant implementation costs for policymakers, regulators and trustees. Performance test reform must therefore be weighed against the importance of progressing other priorities for the superannuation system, including insurance in superannuation, better help, guidance and advice, and advancing the retirement phase of superannuation. Within this context, the review. Any reform should preserve the benefits the test has delivered while addressing the well-documented unintended consequences raised in the consultation paper. The Institute's preferred long-term position is for the test to transition to one that better measures a products performance on a risk-adjusted basis. As noted in our 2024 submission, no single 'bright line' investment-option-level test can fully assess member outcomes. For this reason, the Institute's preference is to move towards a multi- or towards a test that allows APRA to apply appropriate discretion in its administration where the ",
       "published_at": "2026-06-22T00:00:00Z",
-      "added_at": "2026-07-17T08:06:48.794Z",
+      "added_at": "2026-07-17T08:34:05.336Z",
       "status": "pending",
       "used_in": [],
-      "enriched_at": "2026-07-17T08:06:52.070Z"
+      "enriched_at": "2026-07-17T08:34:13.654Z"
     },
     {
       "id": "actuarial-14f5bba228ce",
@@ -1470,10 +1473,10 @@
       ],
       "excerpt": "Actuaries Institute Maps the Generational Flow of Australia's $1 trillion Tax and Spending System Government spending follows a U-shaped pattern across Australians' lifetimes highest for children and those in their 80s while taxation peaks among working-age Australians. Two Australians with the same gross incomes of $100,000 one aged 30, one aged 71 end up with net incomes that differ by more than $42,000 once taxation, government spending and transfers are accounted for. The report identifies several policy considerations for the future, including age-based tax and spending settings that better consider means, broadening the tax base, overall fiscal discipline and supporting asset accumulation at younger ages. As Australia's population ages, questions of intergenerational equity and fiscal sustainability are becoming increasingly important. New Actuaries Institute analysis examines how Australia's $1 trillion tax and spending system is distributed across generations, how those patterns have changed over time, and what they may mean for the future. The report, Spotlight on the Australian Tax and Transfer System, is the first of two deep-dive papers expanding on the Australian Actuaries Intergenerational Equity Index (AAIEI) and contributes to the Led by Actuaries Institute members Dr Hugh Miller, Dr Laura Dixie and Shams Mehry, the report analyses government budget data, the National Transfer Accounts and the Household, Income and Labour Dynamics in Australia (HILDA) Survey to provide a detailed picture of how Australians contribute to, and benefit from, the tax and transfer system at different stages of life. The report found government spending follows a distinct U-shaped pattern across age groups with more spending on children and older Australians both per person and in aggregate, and less on working-age adults. Government spending averages approximately $41,000 per child each year, driven by education costs. Spending drops to around $23,000 for a typical 30-year-old. Older people account for the highest levels of government spending at around $93,000 a year for Australians in their 80s due to health spending, aged care and the Age Pension. Taxation follows ",
       "published_at": "2026-06-22T00:00:00Z",
-      "added_at": "2026-07-17T08:06:48.794Z",
+      "added_at": "2026-07-17T08:34:05.336Z",
       "status": "pending",
       "used_in": [],
-      "enriched_at": "2026-07-17T08:06:52.147Z"
+      "enriched_at": "2026-07-17T08:34:13.723Z"
     },
     {
       "id": "actuarial-d48f41bb2c52",
@@ -1484,7 +1487,7 @@
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZEhCT3gxT1o3UU12bFpVaGRXRk9pdmVRbzNUOVJ1clYtRDdIMFoxZ2NQSUhhZjNRQ2Y1TjBncHNvbE1haUo5YV9OX0hYdDIxWVhzalNnS3FOV1A2bG5QRUY2TGc1R2g5ZFRQbmFtUkRZcjdMbkhiU0F6azdLM1FjUDd4UHpic1VRUFRBNF9mSzFkd2U2NFIweWpDUzQxakhoMjExcEt2SXF5M2MtejZFQy1zaw?oc=5",
       "excerpt": "Tax system favours older Australians over younger, report finds &nbsp;&nbsp; ABC News & Headlines – Australian Broadcasting Corporation",
       "published_at": "Sun, 21 Jun 2026 07:00:00 GMT",
-      "added_at": "2026-07-17T08:06:48.812Z",
+      "added_at": "2026-07-17T08:34:05.722Z",
       "status": "pending",
       "used_in": []
     },
@@ -1497,7 +1500,7 @@
       "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQMnNiVXBTUXI3STBjTnJXa3lYZ1pFc0dIcGl5WlhMY05MeWtfTmV5UEpRUHhySDZlaEE2bThOblowY1pWRDJZR2Z2MHlpXzVlVVNRZi1Zc0J1TTRIVVNpYzhzZGFGMG9BZXNNSmpwR0thQlU4R0FDMXZ0XzJlUWlQaGQ5Y3puYlMwUVJNbkpVNERZa0F3SElTZ0JQVzBJTDhueFVlTnd5RkVYZ3p2bTNLUnpNWEZETDR1WC1wUXp2cksyRndXcUxGdzY1LVZOYUdYdHRCbTlMZm1RUXI2blYxNUprR0hfZmZnN09QNHJqaEhzaUt1czUw0gH8AUFVX3lxTE1WQlFKUERZR1dURnVRc2hSX1EzYnFGWDFiaExGTl9YZE9ZSW10MTg5MDZYdFU2VG5QUnFOSHJVX0ZfcHNTMjdORUlRNXl0VzdPNVFaWU80QmVoMGVmSWRYbkZ0WGNWQWdFWnhQb2NvNFo5Wko5U2xHYVhpLUR1ZjJaVFN4UWFwLUhuSEw3MzZIc1ltT25hNmRZck11SHcwSFBVTk1zRlZXSm5EMklGSGFnd3BfaTJhWHZnRElPbVU5aXhGSmZTY2tJTUU4VmYwRE8tdk5wM01YM19kOHE2NktEeG5KSHVJOG9DMWZVWGVpdDFxSG4wZ00yRnc5dw?oc=5",
       "excerpt": "There’s one age you’ll pay more tax than any other &nbsp;&nbsp; The Australian",
       "published_at": "Fri, 05 Jun 2026 07:00:00 GMT",
-      "added_at": "2026-07-17T08:06:48.812Z",
+      "added_at": "2026-07-17T08:34:05.722Z",
       "status": "pending",
       "used_in": []
     },
@@ -1510,7 +1513,7 @@
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQXJyYkZlSk1WYUl1UTFGOXYwbDJTMDlfU1ZBMGJRQl9RWjVMVzJfSlhLeEpXNmlxWUoxZDFZN1o4TFNDT0dGLUtDX1VabFRFdFNKRnZoNm1weVNvX3YtbzBtZkJiNWpERm95VVJtZ2xEMExaV1FBcV92TjU4S1AwX2RZeEdrSERaY3diLWl6NVBHakdOQ2htNTFCVEJVaFJTNGZXb0xTMGtMbExU?oc=5",
       "excerpt": "Why younger generations are worse off than baby boomers &nbsp;&nbsp; ABC News & Headlines – Australian Broadcasting Corporation",
       "published_at": "Fri, 29 May 2026 07:00:00 GMT",
-      "added_at": "2026-07-17T08:06:48.812Z",
+      "added_at": "2026-07-17T08:34:05.722Z",
       "status": "pending",
       "used_in": []
     },
@@ -1523,7 +1526,7 @@
       "url": "https://actuarialnotes.substack.com/p/announcing-the-actuarial-notes-wiki",
       "excerpt": "The Actuarial Notes Wiki is a knowledge base for human Actuaries, and eventually AI Agents.",
       "published_at": "Sat, 26 Apr 2025 22:29:29 GMT",
-      "added_at": "2026-07-17T08:06:48.905Z",
+      "added_at": "2026-07-17T08:34:06.082Z",
       "status": "pending",
       "used_in": []
     },
@@ -1536,7 +1539,33 @@
       "url": "https://actuarialnotes.substack.com/p/risk-management-principles",
       "excerpt": "Value, Forecast, and Balance. How these 3 principles of risk management are guiding OpenAI's mission toward AGI.",
       "published_at": "Fri, 13 Oct 2023 15:01:33 GMT",
-      "added_at": "2026-07-17T08:06:48.905Z",
+      "added_at": "2026-07-17T08:34:06.082Z",
+      "status": "pending",
+      "used_in": []
+    },
+    {
+      "id": "finance-bbf2b373c083",
+      "interest": "finance",
+      "feed": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+      "kind": "article",
+      "title": "BP, ConocoPhillips to back Iraq with major investments as U.S. seeks to weaken Iran's energy hold",
+      "url": "https://www.cnbc.com/2026/07/17/bp-conocophillips-to-back-iraq-with-major-energy-investment-.html",
+      "excerpt": "BP and ConocoPhillips are set to announce billions of dollars of new investments in Iraq on Friday.",
+      "published_at": "Fri, 17 Jul 2026 08:10:21 GMT",
+      "added_at": "2026-07-17T08:34:07.268Z",
+      "status": "pending",
+      "used_in": []
+    },
+    {
+      "id": "finance-919fa62ea233",
+      "interest": "finance",
+      "feed": "https://news.google.com/rss/search?q=investing%20OR%20%22stock%20market%22%20OR%20%22interest%20rates%22%20OR%20superannuation%20OR%20RBA&hl=en-AU&gl=AU&ceid=AU:en",
+      "kind": "article",
+      "title": "[Dual-Strategy Investing: AI + Non-AI] Japanese equities sho... - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMk9qRWRwWTB3TmJOX0FaUUtOLXRRcG5SY1hsZnhXc0JEVTlVVDZadTdKYXVWbVY5OG1wTHhSaWpsZlBRazdXUFNyT3E2Z1hNOTU5Q0NnODl1U1ZGLUlKOE42Q01NbkNSRXl2cTlqUW83SHZmSHlMTzZnRWN3c1dOWDZYZlVXRU5kZkUtaU5zZGx0dTkyMXFKQmpUaWhWdjA0YnJwQURLdlp6MENVMFJRMUtIWFk?oc=5",
+      "excerpt": "[Dual-Strategy Investing: AI + Non-AI] Japanese equities sho... &nbsp;&nbsp; Moomoo",
+      "published_at": "Fri, 17 Jul 2026 08:09:23 GMT",
+      "added_at": "2026-07-17T08:34:07.962Z",
       "status": "pending",
       "used_in": []
     },
@@ -1549,20 +1578,7 @@
       "url": "https://www.cnbc.com/2026/07/17/softbank-chip-stocks-asia-wall-street-ai-rout.html",
       "excerpt": "The declines followed another weak session for U.S. technology stocks, with the Nasdaq Composite falling 1.47% as semiconductor shares came under renewed pressure.",
       "published_at": "Fri, 17 Jul 2026 08:02:18 GMT",
-      "added_at": "2026-07-17T08:06:49.775Z",
-      "status": "pending",
-      "used_in": []
-    },
-    {
-      "id": "finance-bbf2b373c083",
-      "interest": "finance",
-      "feed": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
-      "kind": "article",
-      "title": "BP, ConocoPhillips to back Iraq with major investments as U.S. seeks to weaken Iran's energy hold",
-      "url": "https://www.cnbc.com/2026/07/17/bp-conocophillips-to-back-iraq-with-major-energy-investment-.html",
-      "excerpt": "BP and ConocoPhillips are set to announce billions of dollars of new investments in Iraq on Friday.",
-      "published_at": "Fri, 17 Jul 2026 07:57:28 GMT",
-      "added_at": "2026-07-17T08:06:49.775Z",
+      "added_at": "2026-07-17T08:34:07.268Z",
       "status": "pending",
       "used_in": []
     },
@@ -1575,7 +1591,20 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMDQ4ZGlDeGRkSE45NGtyNTVoajZnTW8tc29MbUstSkhBRzlZeTR0M213VFhCYWtKVHRJdVF2QkJtSGp6TThFRFJ0cE8xUG5ScHRtajA1UlMyY1YyVHVTZndOelh5bmg2UDhXR1RUZWkwSXhjUzVybWhyR3M3dVlNSlN0cjJYVmcyZzBJVGhnSTNWSEE0cG1vcmZlZ1VLc0xJXzJuNlZzMDRPdHY2eElYVVh3?oc=5",
       "excerpt": "Africa’s best personal investing platform 2026: Thndr &nbsp;&nbsp; Euromoney",
       "published_at": "Fri, 17 Jul 2026 07:53:48 GMT",
-      "added_at": "2026-07-17T08:06:49.839Z",
+      "added_at": "2026-07-17T08:34:07.962Z",
+      "status": "pending",
+      "used_in": []
+    },
+    {
+      "id": "finance-400e9b3a190d",
+      "interest": "finance",
+      "feed": "https://news.google.com/rss/search?q=site:afr.com&hl=en-AU&gl=AU&ceid=AU:en",
+      "kind": "article",
+      "title": "Hanson blames end of White Australia policy for ‘immigration problem’ - AFR",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObVZpLVY5V1pGQnBObE9VU3FFQUVwT09PbHhObndoZVdHVUhJS3ZkU21NR1l6VkpWVzN5ankwbGtqUUFkRGRDemNPaDI2M0JScU1QQlp6Q1llcUVMQjhwTWtQT0d6dENfdVlRUXpoc0hBUkFYWkd4NFdpSEFtdGJCRjZhUzJGOG1lR05kVUhXVEU0cmo0T05xZTBkUQ?oc=5",
+      "excerpt": "Hanson blames end of White Australia policy for ‘immigration problem’ &nbsp;&nbsp; AFR",
+      "published_at": "Fri, 17 Jul 2026 07:53:00 GMT",
+      "added_at": "2026-07-17T08:34:08.594Z",
       "status": "pending",
       "used_in": []
     },
@@ -1588,7 +1617,7 @@
       "url": "https://www.cnbc.com/2026/07/17/oil-price-today-brent-wti.html",
       "excerpt": "Oil prices rose Friday as investors weighed escalating threats between the U.S. and Iran.",
       "published_at": "Fri, 17 Jul 2026 07:36:10 GMT",
-      "added_at": "2026-07-17T08:06:49.775Z",
+      "added_at": "2026-07-17T08:34:07.268Z",
       "status": "pending",
       "used_in": []
     },
@@ -1601,20 +1630,20 @@
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdlIyRUJ2OTd2WThvY3lxUjM3aUFDQXNzemJLaUJrY3QwZEdXcmdMQW5Rd0JoaFJTbjJwSVlhVjItQVhoMWhsQmZsX0lRR3AwSEpUWjhiZV9hOWtDTldHcWE5R09yalJiNGo4Vi10aEx4ZXhoaGlfWkZfUWZaSGJ0T1ktdk9Xd1I0UDh6QTJCQXJIQUZEbU1LWFY3THVtaWlpQThYSHd2d3RidHdmYklFUEVibkNrRFk2YTY5TDQ5dUJBdw?oc=5",
       "excerpt": "Under-fire Telstra bosses admit key software update was ignored &nbsp;&nbsp; AFR",
       "published_at": "Fri, 17 Jul 2026 07:31:00 GMT",
-      "added_at": "2026-07-17T08:06:49.850Z",
+      "added_at": "2026-07-17T08:34:08.594Z",
       "status": "pending",
       "used_in": []
     },
     {
-      "id": "finance-72b53b973bc7",
+      "id": "finance-9c5793c45311",
       "interest": "finance",
       "feed": "https://news.google.com/rss/search?q=investing%20OR%20%22stock%20market%22%20OR%20%22interest%20rates%22%20OR%20superannuation%20OR%20RBA&hl=en-AU&gl=AU&ceid=AU:en",
       "kind": "article",
       "title": "Seven & i Considers Investing in Polish Convenience Store Chain - nippon.com",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPa3llNllpT19mWHo2aTY3VVJpVVBsWTEtMFVISlFaVWpXaVk4bGk5a1dUVlpxbjdtcVYyU2ExVXBFX1lmaVUyS0lENWtGZEJZbUxJNUdnaWI5QWV1cng0THM4bnZQb29Iekx0MmJKTWNva01WMkUtaHVnb0dNbE5PdE9GX0tsamhscExzbk5lWkFzM3ZvR3NYVjVfSERvSDhabWVuR1l2WWlBNmloVkxqZk9XWmwtWWs?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5hSVZnTkV4aVNIbUI1d2QzX1JXSThvTW5UU0I0czVMSU0tZHk4OWxPemN1TF85ZEtFMm9vN1IwMEJlSnhEclRGbFduRGxvWTBWMUhSd2NCbzRtRGxK?oc=5",
       "excerpt": "Seven & i Considers Investing in Polish Convenience Store Chain &nbsp;&nbsp; nippon.com",
       "published_at": "Fri, 17 Jul 2026 07:16:15 GMT",
-      "added_at": "2026-07-17T08:06:49.839Z",
+      "added_at": "2026-07-17T08:34:07.962Z",
       "status": "pending",
       "used_in": []
     },
@@ -1627,7 +1656,7 @@
       "url": "https://www.cnbc.com/2026/07/17/saab-stock-earnings-q2-report-defense-sales-orders.html",
       "excerpt": "European governments ramp up defense spending and book orders with the region's companies.",
       "published_at": "Fri, 17 Jul 2026 07:10:50 GMT",
-      "added_at": "2026-07-17T08:06:49.775Z",
+      "added_at": "2026-07-17T08:34:07.268Z",
       "status": "pending",
       "used_in": []
     },
@@ -1640,20 +1669,7 @@
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOb2x5YmlyaXdUOFh1ZlFZWUI2X1RIalJtMEhFdkhIZXRuOFlaRmg5QkhTV0xXNTluWnNCWVNpNVZfYm04TnM4REh0eWtIT01GTDRfWmJ5eWRyVW00RlIyWDhJeXFmWTcxV3JZbTVESXFXTUo3c1h5bGpNeVpiN3Q2Zlo4VDRkOGNxazR2NVd3?oc=5",
       "excerpt": "Money Matters: Six common mistakes that could cost you thousands in super &nbsp;&nbsp; The Australian Women's Weekly",
       "published_at": "Fri, 17 Jul 2026 07:03:30 GMT",
-      "added_at": "2026-07-17T08:06:49.839Z",
-      "status": "pending",
-      "used_in": []
-    },
-    {
-      "id": "finance-7972575e9394",
-      "interest": "finance",
-      "feed": "https://news.google.com/rss/search?q=investing%20OR%20%22stock%20market%22%20OR%20%22interest%20rates%22%20OR%20superannuation%20OR%20RBA&hl=en-AU&gl=AU&ceid=AU:en",
-      "kind": "article",
-      "title": "‘Ridiculous’ rent rises lock first-time buyers out of market - The Australian",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOZVNKWTZmVE1HTE1aNDdIdmtSWHdCaUMwTC01cXRFOWM4SGZDTzFCZVBoZko1cGRmYmU1ZkRfV082MHQ4c1FwUlg2UmhCc2N2SEx2SHlVZW1WdGZpTTBRMmU4Z204eVoyRmxUa0lxMWozeGxVemIwQmJmOHMxZGg0WTVDTFpnX0RwT3JRTFhvc1pRSG5obk5aTUgxVWZqeWF4TzBVVXo0bGJCSlRxSVJfaHJ3Y1ZGNUtBM1E1eUhJcjUzdFNZSndfQ0cxUnpxenl0dTh3ano3Tkw0cDh5VElRdV9SY2lFb1BxU2JZc3dzSjc4OWt3VTdB0gH8AUFVX3lxTE9wQ08zWUxMRF9BcU9keTVuSTVaamNHcDN1RUdOUThJS0NrXzR3R05HcXlFSDQ3QkhrdWxPSUZxaWlpMVJwQUltNnpvbWRadm5vTENxN184SVRLbkNXQ1g3alJyQ0tqdzhHd2dkd0gtTG1DbEF2bjItT1BSQUZRMlVaWGZaRjVOMEJ5emhkSDFmTTJTanh6SHoyNExJWmJoY1E2dExXWUF5RTZoajY5OWFfUWxBX1M3QkJ1LVRDQk1KRzJsTjdRMjFwWm5PcTBuaFB1dG00OFliUHJ1aEphZnJTWFpjOG5DMldmdmpsRkF3ZHJOU1hUZGV1N05KaQ?oc=5",
-      "excerpt": "‘Ridiculous’ rent rises lock first-time buyers out of market &nbsp;&nbsp; The Australian",
-      "published_at": "Fri, 17 Jul 2026 06:57:08 GMT",
-      "added_at": "2026-07-17T08:06:49.839Z",
+      "added_at": "2026-07-17T08:34:07.962Z",
       "status": "pending",
       "used_in": []
     },
@@ -1665,21 +1681,8 @@
       "title": "‘Election security nightmare’: Trump says China hacked voter files - AFR",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOTGxQcUFHbDVwZkE3b3RmcUdmekptaWxuUGJraHlCX0J3RU44SkQzU0VnWXJjTi1nZktvWWQyNHVrUy1aS2RVR0pxRXRKYzlrTTA2VWhSQmw0Ti1ZVE4tRm9IUFQ5dlg0SEM1ZVRrZWpIcUZEajRLNDNVeFVnWWwxMU5zTmFLbjNwSUlPMEhILVRnaVRvcG54VmV6UjhyS1VIaDNiVmlCREwtOWJlSGFLaUt1ZTRDcUFiTTFZ?oc=5",
       "excerpt": "‘Election security nightmare’: Trump says China hacked voter files &nbsp;&nbsp; AFR",
-      "published_at": "Fri, 17 Jul 2026 06:07:17 GMT",
-      "added_at": "2026-07-17T08:06:49.850Z",
-      "status": "pending",
-      "used_in": []
-    },
-    {
-      "id": "finance-c07a680c6ffa",
-      "interest": "finance",
-      "feed": "https://news.google.com/rss/search?q=site:afr.com&hl=en-AU&gl=AU&ceid=AU:en",
-      "kind": "article",
-      "title": "Bill Gates and the dream to take data centres to the Outback - AFR",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQTNFQkM0ZjRpdDJaa09GcVcyQXdvYVhlRExTX1doMkpIZTJ4V1ZQNFRiSFQxTmlZaV9xSkI4YUF2QS10ZElEYWVfckFZbnVTMDBiLUU3SHFUMG5BQXRocnZDWFdsYW9yUUNVLXhkRDJVbUVYZTkwWkJSanZJbzQyTnpFZjVtakdiT1U0czhoeUhMWXJNQUpsRnhNSFhOazk2X2pjZXNnRjVRdFp6QVlDTi1yQQ?oc=5",
-      "excerpt": "Bill Gates and the dream to take data centres to the Outback &nbsp;&nbsp; AFR",
-      "published_at": "Fri, 17 Jul 2026 03:36:00 GMT",
-      "added_at": "2026-07-17T08:06:49.850Z",
+      "published_at": "Fri, 17 Jul 2026 03:30:00 GMT",
+      "added_at": "2026-07-17T08:34:08.594Z",
       "status": "pending",
       "used_in": []
     },
@@ -1692,7 +1695,7 @@
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOakRZaEEwM2EwSVJlMnY0Nk1MSW15VFRNTjZRTHlIRnRJNFc1QUkzbmJKU1RyOXhjRzJaMTMtNC1SNWJPY2RiNzJSR3VWR1RJT3lldWpHampPbTBlb24wbFZXdG9lSllGd2hnUk9GS05qc2pLRWRXVGg5SHpCSDZxWm5MM0ZtVWc0Q21nRlZycjhnNmNmdHk5RQ?oc=5",
       "excerpt": "Coles abandons $4b Greencross deal after investor backlash &nbsp;&nbsp; AFR",
       "published_at": "Fri, 17 Jul 2026 02:06:00 GMT",
-      "added_at": "2026-07-17T08:06:49.850Z",
+      "added_at": "2026-07-17T08:34:08.594Z",
       "status": "pending",
       "used_in": []
     },
@@ -1753,7 +1756,7 @@
       "url": "https://boredombaron.substack.com/p/the-market-caught-a-cold-and-sold",
       "excerpt": "Terveystalo cut guidance on a mild flu season, and the market priced Finland’s dominant healthcare franchise for the morgue. I’ve done the autopsy. The patient is fine.",
       "published_at": "Thu, 16 Jul 2026 19:13:45 GMT",
-      "added_at": "2026-07-17T08:06:49.825Z",
+      "added_at": "2026-07-17T08:34:07.320Z",
       "status": "pending",
       "used_in": []
     },
@@ -1766,7 +1769,7 @@
       "url": "https://boredombaron.substack.com/p/kardex-selling-more-earning-less",
       "excerpt": "In March, I called it a wonderful business at a fair price, and said I wanted the margins confirmed before I got excited.",
       "published_at": "Tue, 14 Jul 2026 08:01:40 GMT",
-      "added_at": "2026-07-17T08:06:49.825Z",
+      "added_at": "2026-07-17T08:34:07.320Z",
       "status": "pending",
       "used_in": []
     },
@@ -1779,7 +1782,7 @@
       "url": "https://boredombaron.substack.com/p/two-years-of-were-thinking-about",
       "excerpt": "I set out to compare two ways to rent the flow of trades: Flow Traders, a thinly-covered Dutch market-maker that screens like catnip for us, and TP ICAP, a lumbering FTSE 250 interdealer broker that emphatically does not.",
       "published_at": "Mon, 13 Jul 2026 19:08:12 GMT",
-      "added_at": "2026-07-17T08:06:49.825Z",
+      "added_at": "2026-07-17T08:34:07.320Z",
       "status": "pending",
       "used_in": []
     },
@@ -1792,7 +1795,20 @@
       "url": "https://boredombaron.substack.com/p/the-patience-dividend",
       "excerpt": "Boredom Baron, H1 2026 Review",
       "published_at": "Sun, 12 Jul 2026 06:35:15 GMT",
-      "added_at": "2026-07-17T08:06:49.825Z",
+      "added_at": "2026-07-17T08:34:07.320Z",
+      "status": "pending",
+      "used_in": []
+    },
+    {
+      "id": "health-c1459617c227",
+      "interest": "health",
+      "feed": "https://news.google.com/rss/search?q=%22health%20research%22%20OR%20nutrition%20OR%20fitness%20OR%20longevity%20OR%20sleep&hl=en-AU&gl=AU&ceid=AU:en",
+      "kind": "article",
+      "title": "Long Sleep Duration Linked to Higher Alzheimer’s Blood Biomarker - Technology Networks",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNm93UktCc0ZkYmZUb1dKTG9EZWFOUWVfZkprUmlSQ0hIYkl5M1pxcEtwQXZsdXJlR1FxdkRLazN1Ry1nZ244WHpJdU9oTnZRY29DSUNtZXNVaXJvRUZSNkVyM2g2N0pXTUQxOUIwR3o5Tk9wWW1TMWVnYklXaDVtdXM3R0dnNWdKUHBJc3RNY3lONXU0NlFBWXhsQVlwbU02dm1OZGFoWXlvQnVEYW1CbG85WQ?oc=5",
+      "excerpt": "Long Sleep Duration Linked to Higher Alzheimer’s Blood Biomarker &nbsp;&nbsp; Technology Networks",
+      "published_at": "Fri, 17 Jul 2026 08:17:48 GMT",
+      "added_at": "2026-07-17T08:34:10.253Z",
       "status": "pending",
       "used_in": []
     },
@@ -1805,7 +1821,7 @@
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMnRuRUpVcXhWRFNLVUZ6OURHYTRvdTFNc3lmbEMyeTJ1TGtveG5hcnYteGFBV3VuV2NMbk1YLU5zcWRISEtWcTM1MGhMZno3QUZxeGduZV95aHZhOE5wa3JIY2ZZUmd0dFdRUGU3TkhDcnY3ZnhDWXZiSXFRLWowd3F1c1NmaVBuN0M3c28wRjVFdEw5UVVTTF9mMWtOUV9VVk0wZHFLWjc?oc=5",
       "excerpt": "Cam Young provides update on his fitness after opening day of The Open Championship &nbsp;&nbsp; hitc.com",
       "published_at": "Fri, 17 Jul 2026 08:00:00 GMT",
-      "added_at": "2026-07-17T08:06:50.820Z",
+      "added_at": "2026-07-17T08:34:10.253Z",
       "status": "pending",
       "used_in": []
     },
@@ -1818,7 +1834,7 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNnhiaFVDVWhULTdSUTQzWGgxNXR2NWJmSEpndU5QWngtcGNyM3Z1S3haWnFzMmFyajEyV2swUEtpZkJ3UDhQN3pwZWhETnhDRUNGWUFqTVNONkU0M1dqWW5BbEpHTkNrNGdSbE4tVzk4VXcyWFZjU0tKQmluVFRBQWFCY3dMU08wVWJVeVBpeFdBVjVPcWRGcmxkeVZBOHhmNWp3?oc=5",
       "excerpt": "She didn't join a gym until 71. Now she can deadlift 100kg and do pull-ups – here's how &nbsp;&nbsp; Women's Health",
       "published_at": "Fri, 17 Jul 2026 06:00:39 GMT",
-      "added_at": "2026-07-17T08:06:50.820Z",
+      "added_at": "2026-07-17T08:34:10.253Z",
       "status": "pending",
       "used_in": []
     },
@@ -1831,7 +1847,7 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRHhmVnlJZXlycVc0TE90RTA3X2RZOW1yeTJkLV9pT0RaZU12bUVFQlpsdkU2bHRFYnctSDJmQXNISmZ6b1ZHWVhWRHI0ZWdrSGFKb29zcDlqYkhvWWs1dWdObVNCZGNsUTBTX1h1UVg5eGhHS0Q3YmpqU2ExdGU4NE9DZmNicHh5NFlQdE5yMW1nNGF3RXYwcms0VmR5azQ?oc=5",
       "excerpt": "Fitness instructor Nadja Piatka, 76, shares the 4 core exercises she does every day to stay strong &nbsp;&nbsp; Women's Health",
       "published_at": "Fri, 17 Jul 2026 05:35:38 GMT",
-      "added_at": "2026-07-17T08:06:50.820Z",
+      "added_at": "2026-07-17T08:34:10.253Z",
       "status": "pending",
       "used_in": []
     },
@@ -1844,7 +1860,7 @@
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1VWk9waVNxd3V5cVpDMGxTREYtYTVwRFpZeDZQRFlvSmVKRk1VWllDNGRQS1pDWFA5SFdJbkZXc29KdURWQ1RucmhCOHU5SjVUY2ZFdm5rR1pjTXhnVTZFOWtheC1CWkZkT2FhTjE4cHpZUWNYR1VKZEpLSQ?oc=5",
       "excerpt": "Why Australia Needs More Longevity-Medicine Clinicians and What’s Holding Them Back &nbsp;&nbsp; WorldHealth.net",
       "published_at": "Fri, 17 Jul 2026 05:30:00 GMT",
-      "added_at": "2026-07-17T08:06:50.820Z",
+      "added_at": "2026-07-17T08:34:10.253Z",
       "status": "pending",
       "used_in": []
     },
@@ -1857,7 +1873,7 @@
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8wVVZvZGhGMFFMb0hFNGl2V20yNlFYVFBfZEo1V3RhUnpxS0hxOVJHdFU3d19vanNFcWtoWWFfTWRGUHJkYzlxdTZnZ1laREJwM0pLSjdRcjhxbkJtUlRaY3dqdXZ5NWdDVzZr?oc=5",
       "excerpt": "Why your bedtime routine is probably doing too much &nbsp;&nbsp; Fashion Journal",
       "published_at": "Fri, 17 Jul 2026 05:14:25 GMT",
-      "added_at": "2026-07-17T08:06:50.820Z",
+      "added_at": "2026-07-17T08:34:10.253Z",
       "status": "pending",
       "used_in": []
     },
@@ -1870,7 +1886,7 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOdmczRmlBRU84VE9xc29KZGtIRWk0V292TldocUxkOWxYN21EM0FjM0czSEVuYmpVajFvYjJ1QUhtam9UejdHWXRYcUwyYUUwM2hNM3gxajJhVDNGT3M5bkFSLTMySGZndi01MU5STjktejdtNUJEbVM2NWtxTjNDM19kMGFXTzNfLXJJNlVpcnE0RG1ZMWg4S3RUTnlJVVnSAaQBQVVfeXFMTWItSnRFb1gtNThzT1VRSWRYR055TjAxNENGaUowR2U5T1Ywa2FhNG9sZzl2cHJvX0VWVU55eXVfOC1MRFJ1aXQ0UkhLdWczWXp0bUtpX1h6anBudzBtTHZfX25sRGZIYkhTR25mbWdSYTJvcERsS19qRjBsVXNrVTlwTWFWOHJad0NhTHNRNF9EcG13TUxObFpaT1p1MkhnZjBXSWI?oc=5",
       "excerpt": "‘We want to win on sleep.’ Air New Zealand’s new CEO talks strategy &nbsp;&nbsp; AeroTime",
       "published_at": "Fri, 17 Jul 2026 03:00:00 GMT",
-      "added_at": "2026-07-17T08:06:50.820Z",
+      "added_at": "2026-07-17T08:34:10.253Z",
       "status": "pending",
       "used_in": []
     },
@@ -1883,7 +1899,7 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOb2FtTGxxT05sanJuOEdrMkNrcmU4b0NHekNzcHNDSnBxaXp2dExHTWhBUUx1SUpIc0FCM2o4YnlzNzduNHN1bWFpZkMtc2lxSWJJZ1I5NkVPV0lGQUVGZzdPc2RIazhxdGFIYjMwamFfdlBWV2lmQ18tMWM3VkNmTjBHQTRKMzlCMXM5SXo2UFlqczNvT1htQ1RTZlJ5d0U5TUhheTk1ODlCRkxEUXhUSVp3?oc=5",
       "excerpt": "Global nutrition leaders explore Australia's red meat story &nbsp;&nbsp; Meat & Livestock Australia",
       "published_at": "Fri, 17 Jul 2026 02:42:53 GMT",
-      "added_at": "2026-07-17T08:06:50.820Z",
+      "added_at": "2026-07-17T08:34:10.253Z",
       "status": "pending",
       "used_in": []
     },
@@ -1896,7 +1912,7 @@
       "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNX04tMzBqWjN6WklHNWtIZkFHUmtKYWlUdTd0SXEySUx6T3EzT1A3ekhPeU1vYmtPclZGUWxTNjRwMVRVVU5heWFsNEc1Wl9yZ2x5dVpuWWpKZ0xWQUtUZlJ5QTNUMXRBWVoxdkxhdnFCVHhDV2NiSUVpeVhaY0MzTzhyZjNjR2FfNVdxckxLOEw0RjZYRWxYOWJnWkFZU3NSZDZCSFlVT3c3VG00dko0VnBaczdqOEQ1VWdZbHVsbEpQQ3lqbVl5ejZtWE9hN3pIeXBxMzIxeUZFMnJsVTM5WUU0aHh2clBQdGctcWtlMG5CX3NXVFdTWXRuNW11LUt2YmVyaUgyVUxzVWvSAZACQVVfeXFMUEo4R09RdVhNeDUxTjhwNnFJTzNuaWI1TUF5azFsQkJvMExkWlR6Z3o5ajZ5bGt2X25TTlVMQXZ2QUxFVkVvaUJFYlhOa043M0t6eUE2NGotLWIwajZMWDdaTmltU1NMY1ZIb015X3hhZjhrX2NLbUdNcmtDWnhBTElPNDB4YS15UXFLMUtXS1Z1dHdMOV8yT3YxZVNydnBMOGc3bjR3RmwwU2N5MGxkTzdvTUVsWjgzQ1V2aWl5TkluZm1pM0ctMlRzaHlVMWo5TVJVd29YNHRYQ196TE91dzdlaGM1UWJNWHdhcFZzWDk3UFB2dGpHNmFERWlhamIwUnFQcHBfZ3BIbE1tZm5FME0?oc=5",
       "excerpt": "Reynolds dismisses fitness fears after mixed Broncos return &nbsp;&nbsp; The Courier Mail",
       "published_at": "Fri, 17 Jul 2026 02:37:38 GMT",
-      "added_at": "2026-07-17T08:06:50.820Z",
+      "added_at": "2026-07-17T08:34:10.253Z",
       "status": "pending",
       "used_in": []
     },
@@ -1909,20 +1925,7 @@
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNQS1jYjFBUXRjaTJlczV0Q0d2QmVHZzFxUm9hU2o4RDFoR05qdHotdDJ3WlVZS1piQTRqOTZGWFpnblBSNEVHdFd1bjdTMUV6eVY5OWJvVEZMR3lwTDVfOE44LVRBUTZpNVR1TlBDWWJfOFlKUzRzRlhEeDI1aVlOVEdWT2kwbmRlcDVTclVxdHpfd2gzSDBpNFZGV1FQT1l6TG5FS1NqWklSa1ozYzFiN1poVTdJbmJaQ1l3ZA?oc=5",
       "excerpt": "Healthier Choices: Calbee granola, PepsiCo nutrition and no-caffeine tea &nbsp;&nbsp; FoodNavigator.com",
       "published_at": "Fri, 17 Jul 2026 02:27:02 GMT",
-      "added_at": "2026-07-17T08:06:50.820Z",
-      "status": "pending",
-      "used_in": []
-    },
-    {
-      "id": "health-0d3f53d194c4",
-      "interest": "health",
-      "feed": "https://news.google.com/rss/search?q=%22health%20research%22%20OR%20nutrition%20OR%20fitness%20OR%20longevity%20OR%20sleep&hl=en-AU&gl=AU&ceid=AU:en",
-      "kind": "article",
-      "title": "Your Longevity May Be Shaped Before You're Even Born, Study Reveals - ScienceAlert",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNRXJ1YXB4Nkp3dnJtdlBaTUYtWGUzcEY1M21IamxMMGFlNlBXQ0tVcWZjM0JKWU1zdVhkX1QxOUdFdTR1UmQ3X1BLYmxGazlPYTFKSUNyNTlVMVlhYjM5ckFvaUljSUFJUXQ0T1lkeVI5bkJBa2JhNnUzVkZlWmZBSHQwak9vOEpEOXZuMmRjT0ZIb045dHVEMDZR?oc=5",
-      "excerpt": "Your Longevity May Be Shaped Before You're Even Born, Study Reveals &nbsp;&nbsp; ScienceAlert",
-      "published_at": "Fri, 17 Jul 2026 01:27:25 GMT",
-      "added_at": "2026-07-17T08:06:50.820Z",
+      "added_at": "2026-07-17T08:34:10.253Z",
       "status": "pending",
       "used_in": []
     },
@@ -2048,6 +2051,19 @@
       "used_in": []
     },
     {
+      "id": "videography-c896bc803a9d",
+      "interest": "videography",
+      "feed": "https://news.google.com/rss/search?q=cinematography%20OR%20%22colour%20grading%22%20OR%20%22color%20grading%22%20OR%20filmmaking%20OR%20%22video%20composition%22&hl=en-AU&gl=AU&ceid=AU:en",
+      "kind": "article",
+      "title": "George Lucas Says AI Is 'the Future' of Filmmaking and There's Nothing You Can Do About It - Fstoppers",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMEZ6Q1RScWhoTVFPOVNOZUVMa2dGTjdQNTZfdHlMa01OZEJwWkRORjlqdE1YUVdLcXhrT2xHQ0VXNEt4Z1pzVzN5TkRSdXk2OXFVRGNSNGdNb25kRXVIVWxSN01iX3hqOEVObGRjT05LbzE5VzhpallTUElIVGZQWlFjMWU5Rzcyc1lyYmVkYll0S1BqeW9aQVRhQ0xZOExlNzhFaUhvb0tCZlNPM2Y3aTdfR090MG1pdDJNOGQySEw?oc=5",
+      "excerpt": "George Lucas Says AI Is 'the Future' of Filmmaking and There's Nothing You Can Do About It &nbsp;&nbsp; Fstoppers",
+      "published_at": "Fri, 17 Jul 2026 08:15:51 GMT",
+      "added_at": "2026-07-17T08:34:11.041Z",
+      "status": "pending",
+      "used_in": []
+    },
+    {
       "id": "videography-fee761d54ae2",
       "interest": "videography",
       "feed": "https://news.google.com/rss/search?q=cinematography%20OR%20%22colour%20grading%22%20OR%20%22color%20grading%22%20OR%20filmmaking%20OR%20%22video%20composition%22&hl=en-AU&gl=AU&ceid=AU:en",
@@ -2056,7 +2072,7 @@
       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQNXlEdVdPMFVieWFoX3NVYjY2QVpjb3BRTnhJUnM2cUFOaUZsb1hOTE1QcDN6LS1JTHNuSFIxeXQyakR4SzVRNHFVN3p4V0M3b3JwNUdCYXRZZ1FKVU5xM3Vlb25KY0pvSzhjbGM4eEk2OThBOHJpY0dRX1hwb2k1bFFBUU9ReHJDUUR1LTlXTlM4bGNsUHV0QjFuaTdYTFhBeHplaEhUWFdQcUhVVkQ2V2MtUUZJRWRDQmhaWktVeENJcmZiRWppems2V1lQTjQwMGQwWFBMREU3OUJNSU8yWXlzUk9rWFVxZ2dXLVhIcm5hekhULTBKZlJRVmQtTExUSlREcUNYeTUwUUc4SnJoRUlvWQ?oc=5",
       "excerpt": "Literacy, fairies and ... tamales? Nonprofit guides Santa Fe kids' reading through filmmaking &nbsp;&nbsp; Santa Fe New Mexican",
       "published_at": "Fri, 17 Jul 2026 04:45:00 GMT",
-      "added_at": "2026-07-17T08:06:50.952Z",
+      "added_at": "2026-07-17T08:34:11.041Z",
       "status": "pending",
       "used_in": []
     },
@@ -2069,7 +2085,7 @@
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE51SjVlRjRYeHRxMHBnMmlVYVdfSGVxWnVNVWtnNW5wckxkN3FjS1I0bm9PRkZmeWYtOEx2dzM1alpZakdCYVlEUzU5dHZUVnVlMzZpeFRhNHBQcmRwRW9J?oc=5",
       "excerpt": "How Ecook Is Reshaping Ski Filmmaking &nbsp;&nbsp; Teton Gravity Research",
       "published_at": "Fri, 17 Jul 2026 03:56:50 GMT",
-      "added_at": "2026-07-17T08:06:50.951Z",
+      "added_at": "2026-07-17T08:34:11.041Z",
       "status": "pending",
       "used_in": []
     },
@@ -2082,7 +2098,7 @@
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNWEZpbGd4TWY3MTdTekRacXFyUW1xbDFnN0U1TlBvcGRFSms2WVBnZEppejJEZFFOeHFtci1HWEo1eTdXTEFvSFh1UkJTX3FfMGVnd0MwUWliWlRDcWE1TmtZUjkzbHN0Nkl2OWM4Nk9GRTBtb1VxVGxPejFwZWpJbmpiUVVWTU1tdlhIeGR3bldSdHd2SU9fSHJjYlBJZjQ1dy1zR3V5TGZ1UGlWRjlKd05uS3V2WnE5b2tsbXdEUWJEVFZ3RS1qaEVjZE5yZDVnbFBwVUEyaWpTZWE4UkhXM1o1SHI4c0pYZ2FxMHV0U1g?oc=5",
       "excerpt": "AI vs Big-Budget Cinema: Hollywood Watches as Two ‘Odyssey’ Films Redefine Filmmaking Economics &nbsp;&nbsp; Telugu Times",
       "published_at": "Fri, 17 Jul 2026 01:48:08 GMT",
-      "added_at": "2026-07-17T08:06:50.952Z",
+      "added_at": "2026-07-17T08:34:11.041Z",
       "status": "pending",
       "used_in": []
     },
@@ -2095,7 +2111,7 @@
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNa0dBUjZfZm9BYTJqYjB2TmEzSUViQnZHbzNlUXNsNmFCTDh6cGYySGlfSFZYQ1dXQnpNT1NvelhNeDRic1B5a0ZjTmpCeENhMjhxaVNUcEhNQUtDSmlKTWgwVUxlYmZ1V2J1RHNCQjktRmJRRy1jRWFIRUI0TWI4V2dqS21BaVIySy1BQkNWVHhKYTRydWYydVBqbWhKbnBwYXYxTWtWUjAzWTZPVTdhTXF1WU1ackhvVmd0Z2pCNHQ0QzhlTmI4aA?oc=5",
       "excerpt": "Review: Christopher Nolan's 'The Odyssey' is a filmmaking marvel that asks a lot of its audience &nbsp;&nbsp; KSL News",
       "published_at": "Fri, 17 Jul 2026 01:03:57 GMT",
-      "added_at": "2026-07-17T08:06:50.951Z",
+      "added_at": "2026-07-17T08:34:11.041Z",
       "status": "pending",
       "used_in": []
     },
@@ -2108,7 +2124,7 @@
       "url": "https://nofilmschool.com/famous-movie-lies-everybody-believed",
       "excerpt": "Countless movies over the years have making-of stories that are almost as eventful as the film itself. Sometimes, some of the details of these making-of stories contain embellishments, different versions of the truth, or straight-up myths. Let’s take a look at some of the most famous stories about your favorite movies…that may not be entirely true. Steven Spielberg Directed ‘Poltergeist’ The Tobe ",
       "published_at": "Fri, 17 Jul 2026 00:15:01 +0000",
-      "added_at": "2026-07-17T08:06:50.941Z",
+      "added_at": "2026-07-17T08:34:10.380Z",
       "status": "pending",
       "used_in": []
     },
@@ -2121,7 +2137,7 @@
       "url": "https://nofilmschool.com/color-and-contrast-controls-in-color-mode-why-zones-work-better-than-lift-gamma-gain",
       "excerpt": "If you’ve spent any time with color tools, you’ve probably run into lift, gamma, and gain. Shadows, midtones, highlights: adjust each one, try to balance them against each other, and repeat until the image looks right. Push the highlights up, and midtones shift. Pull the shadows down, and contrast changes in areas you didn’t intend to touch. You spend as much time compensating for the controls as ",
       "published_at": "Fri, 17 Jul 2026 00:01:02 +0000",
-      "added_at": "2026-07-17T08:06:50.941Z",
+      "added_at": "2026-07-17T08:34:10.380Z",
       "status": "pending",
       "used_in": []
     },
@@ -2134,7 +2150,7 @@
       "url": "https://nofilmschool.com/screenwriting-lessons-from-toy-story",
       "excerpt": "Last month, we received the 5th film in the Toy Story series . As one of the most successful, longest-running animated franchises of all time, each film has received tremendous praise over the years. The first film is now over 30 years old, and remains a cornerstone, not just in the animation medium, but in the cinematic medium overall. As the first feature film in the Pixar canon, its script rema",
       "published_at": "Thu, 16 Jul 2026 23:30:02 +0000",
-      "added_at": "2026-07-17T08:06:50.941Z",
+      "added_at": "2026-07-17T08:34:10.380Z",
       "status": "pending",
       "used_in": []
     },
@@ -2147,7 +2163,7 @@
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1sdS1fQmJ4b0w0eF9pN1FqUmN0YTB3Ym9Oc2FPR19BNW5lV19aeng4OVQwNGxsZXYwSEpScUJkb2JZNW1uRHN3dFFGaXpFMHlVUkU1YVlXeE8xRkhPeXI5eERxOUQ?oc=5",
       "excerpt": "Is Vertical Filmmaking the Future? This Filmmaker Isn’t Afraid to Embrace the New Format &nbsp;&nbsp; No Film School",
       "published_at": "Thu, 16 Jul 2026 23:26:19 GMT",
-      "added_at": "2026-07-17T08:06:50.951Z",
+      "added_at": "2026-07-17T08:34:11.041Z",
       "status": "pending",
       "used_in": []
     },
@@ -2160,7 +2176,7 @@
       "url": "https://nofilmschool.com/vertical-filmmaking-interview",
       "excerpt": "We know, most everything new in film and video is usually met with a solid level of trepidation and often mistrust. And, sadly, likely for good reasons, too, as there have been many filmmaking revolutions that have been promised but have fizzled out. Or worse yet, new revolutions threaten the very existence of filmmakers themselves. (We’re looking at you, non-supportive AI.) So, when fads like ver",
       "published_at": "Thu, 16 Jul 2026 23:09:18 +0000",
-      "added_at": "2026-07-17T08:06:50.941Z",
+      "added_at": "2026-07-17T08:34:10.380Z",
       "status": "pending",
       "used_in": []
     },
@@ -2173,7 +2189,7 @@
       "url": "https://nofilmschool.com/blackmagic-camera-for-android-update-3-4",
       "excerpt": "The free camera app for Android users from Blackmagic Design has gotten another update, one of the bigger ones in a while. Which is saying something, as Blackmagic Design really does a good job of adding new features and improvements to the Blackmagic Camera app (both iOS and Android versions) that have already buffed the app quite a bit. This latest update is set to add 4K HDMI video output with ",
       "published_at": "Thu, 16 Jul 2026 21:00:11 +0000",
-      "added_at": "2026-07-17T08:06:50.941Z",
+      "added_at": "2026-07-17T08:34:10.380Z",
       "status": "pending",
       "used_in": []
     },
@@ -2186,20 +2202,7 @@
       "url": "https://nofilmschool.com/essential-matt-damon-movies",
       "excerpt": "Matt Damon is one of our most important leading actors working today, not only because he's a talented performer, but also because he's been on both sides of the camera. He's produced and written films, notably writing and starring in the award-winning Good Will Hunting . Christopher Nolan's The Odyssey opens tomorrow, and Matt Damon has spent the whole press tour saying the same faintly ominous t",
       "published_at": "Thu, 16 Jul 2026 20:16:28 +0000",
-      "added_at": "2026-07-17T08:06:50.941Z",
-      "status": "pending",
-      "used_in": []
-    },
-    {
-      "id": "videography-278452f203b6",
-      "interest": "videography",
-      "feed": "https://news.google.com/rss/search?q=cinematography%20OR%20%22colour%20grading%22%20OR%20%22color%20grading%22%20OR%20filmmaking%20OR%20%22video%20composition%22&hl=en-AU&gl=AU&ceid=AU:en",
-      "kind": "article",
-      "title": "Christopher Nolan Believes Gen Z Is 'Utterly Rejecting' AI Filmmaking - Yahoo",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNX045dDlwU3dlNmhnRGIwQl81U2JZcDRoZ0FoSERvZEZBUldyaTkxU2t2MExtbUtVQnNCaGJqam1acnE3RkpULWc5cHRMdkZyY0YwZ1RZWTc2S3pHMjVWRXBwUHY1c0RPZl9oanFDbGV0TTJmd2l4R0M1U1lXMnd6eU1GV2hrUUd6SVRWdWtkdEMwUlRzUVRNNzhBeThrZ2FJ?oc=5",
-      "excerpt": "Christopher Nolan Believes Gen Z Is 'Utterly Rejecting' AI Filmmaking &nbsp;&nbsp; Yahoo",
-      "published_at": "Thu, 16 Jul 2026 19:50:57 GMT",
-      "added_at": "2026-07-17T08:06:50.951Z",
+      "added_at": "2026-07-17T08:34:10.380Z",
       "status": "pending",
       "used_in": []
     },
@@ -2212,7 +2215,7 @@
       "url": "https://nofilmschool.com/surviving-the-game-gary-busey-monologue",
       "excerpt": "Ok, well, maybe some of us would call 1994’s Surviving the Game a cinema classic; it is a film that I’ve probably watched at least a dozen times and never fail to enjoy, probably as much as any other of the more “traditional” cinema classics. It’s also not a wholly unique movie as it’s just another retelling of Richard Connell’s 1924 infamous short story “The Most Dangerous Game,” except in this v",
       "published_at": "Thu, 16 Jul 2026 19:30:03 +0000",
-      "added_at": "2026-07-17T08:06:50.941Z",
+      "added_at": "2026-07-17T08:34:10.380Z",
       "status": "pending",
       "used_in": []
     },
@@ -2301,15 +2304,54 @@
       "used_in": []
     },
     {
-      "id": "science-a9398b0f026c",
+      "id": "science-c55fd94f0198",
+      "interest": "science",
+      "feed": "https://news.google.com/rss/search?q=%22scientific%20research%22%20OR%20physics%20OR%20space%20OR%20biology%20OR%20climate&hl=en-AU&gl=AU&ceid=AU:en",
+      "kind": "article",
+      "title": "How climate crisis is redefining home, and who counts as a refugee. - 360info.org",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdHphSy1PWWNISENZVEUzb1N6UDRsNC1vd3BybWVCRm5DeWZZd29XWWZrMjlzS1J4Z1F5aVJ4NS1XdG84WnNqQTJkbGhocGxJV1Q1bnpKcTEyM2JqaG9kUmZqQ0ctODFfTDRHdUh0NFFpeUwzUXdxaUNsZm9hR3haajI4WEplYkNIT2RVSmsydw?oc=5",
+      "excerpt": "How climate crisis is redefining home, and who counts as a refugee. &nbsp;&nbsp; 360info.org",
+      "published_at": "Fri, 17 Jul 2026 08:29:18 GMT",
+      "added_at": "2026-07-17T08:34:12.760Z",
+      "status": "pending",
+      "used_in": []
+    },
+    {
+      "id": "science-3a35d2784996",
+      "interest": "science",
+      "feed": "https://news.google.com/rss/search?q=%22scientific%20research%22%20OR%20physics%20OR%20space%20OR%20biology%20OR%20climate&hl=en-AU&gl=AU&ceid=AU:en",
+      "kind": "article",
+      "title": "Earth from Space: Guinea-Bissau - European Space Agency",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPUlpXNmdmcjd2N3Z1cTVxS1NJaG9tSjB6WGJVQ1VIaEhKVGEwV3ZhWXRHUEJSYjJCYU1nRU9LbnNnYjR6VGY5MHN1UHVuMFplVU5OLXFlbHJNc2RDMktGdUE5V1RUYUdlUGhDV3FtWTFQZXl4cDM5VzFQU3Q3MUZOOWt6cnJOdXM?oc=5",
+      "excerpt": "Earth from Space: Guinea-Bissau &nbsp;&nbsp; European Space Agency",
+      "published_at": "Fri, 17 Jul 2026 08:26:15 GMT",
+      "added_at": "2026-07-17T08:34:12.760Z",
+      "status": "pending",
+      "used_in": []
+    },
+    {
+      "id": "science-429d91b40162",
+      "interest": "science",
+      "feed": "https://news.google.com/rss/search?q=%22scientific%20research%22%20OR%20physics%20OR%20space%20OR%20biology%20OR%20climate&hl=en-AU&gl=AU&ceid=AU:en",
+      "kind": "article",
+      "title": "Chan Putheary: Creating space for women and girls to thrive - UN Women Asia and the Pacific",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeW1qanBLQlhpYlhKWGNaT0YxbU00aGxuOVYtMXpyalRFZUhhU3dyYTNZSHpnY1dyZUU2N0NJeno4cmdaT0Q4MllKZHNxclFqejJjcmMwekp6dGRlUFhHdjEwLUItLVRWR0NBODZsN0s5UXhoV21SWWdvRnZad3NCVEVhUUtrN2l4LWNaZUFIXzZKa1l6ZGZtcnZBWlFLcVBGM0t1NmFBRGN4Vm01LXdaalFwLTJLVHVjWGlOWld1TUo?oc=5",
+      "excerpt": "Chan Putheary: Creating space for women and girls to thrive &nbsp;&nbsp; UN Women Asia and the Pacific",
+      "published_at": "Fri, 17 Jul 2026 08:11:40 GMT",
+      "added_at": "2026-07-17T08:34:12.760Z",
+      "status": "pending",
+      "used_in": []
+    },
+    {
+      "id": "science-ca2cc1a894aa",
       "interest": "science",
       "feed": "https://news.google.com/rss/search?q=%22scientific%20research%22%20OR%20physics%20OR%20space%20OR%20biology%20OR%20climate&hl=en-AU&gl=AU&ceid=AU:en",
       "kind": "article",
       "title": "Urban climate solutions - DW.com",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORXhDb21LT0k4dXdud1VTNWctaEFRQ2xDTE10SEk3NWxNVENHb054Ymt1NU8zSm1wYlNmMmpOQ1hkOVVVU0lJYUp3VkdhUktPX0lDcUVscWdMbFFNLVdmSFNVS3FEdHhpM01BbllEUVNzb3FaU0x0bFNzV205WDV0LWdHNU03aHc1dzY4UndMRjJpX0U?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbC1pRldRdG1RTk1DV1EybHcyeEN2VTNjOXZYakNiR2pjeXctVV9GVGJDamlVTVdYQ0cxb3Y2Vmc3LXEwMTdXTFlUTi0xQmlWVFhrREh5aHlPaWx4Y0NJSVdyNVpHN21penJpZUFxV2JUX3cta1UyZ29VbnNyX0VRLV9BUWNKakhTU2FjVUowWGU0X280VzNn?oc=5",
       "excerpt": "Urban climate solutions &nbsp;&nbsp; DW.com",
-      "published_at": "Fri, 17 Jul 2026 07:59:02 GMT",
-      "added_at": "2026-07-17T08:06:51.206Z",
+      "published_at": "Fri, 17 Jul 2026 07:59:51 GMT",
+      "added_at": "2026-07-17T08:34:12.760Z",
       "status": "pending",
       "used_in": []
     },
@@ -2322,7 +2364,7 @@
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQeU52TldBaFJnck1LcGRpSDc1d3BaekV0TEc1Y2lXenhDM2JWQ3ludWloMGxSZngyODVlb0REOGRfQVVNMlcxV0tSd0xRcW9laVFDMnpqQ01GRVJtY2VGLUpENkE3VWJldms5aWxBbUpFU1NfVHhFSGg1Vkx6Tk9HZmc5OA?oc=5",
       "excerpt": "ETH Zurich Unifies Climate, Earth Data For Future Research &nbsp;&nbsp; Mirage News",
       "published_at": "Fri, 17 Jul 2026 06:42:00 GMT",
-      "added_at": "2026-07-17T08:06:51.206Z",
+      "added_at": "2026-07-17T08:34:12.760Z",
       "status": "pending",
       "used_in": []
     },
@@ -2335,7 +2377,7 @@
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9KX1RGRXN4ckY5ajR5MXBLd1czekJYU1BDc2ljZkFCUEhNVVBKeVg3aTEzTzdZN3pORTNTNVdVSHZWUmRyZTJsTkR6dlBzRzREUTc4aWdVbGNNLW02clBncUpvdWt0eW9oWURwM0pCcEFRbW96cjdEeEhR?oc=5",
       "excerpt": "Space 9102 reincarnated &nbsp;&nbsp; Australian Defence Magazine",
       "published_at": "Fri, 17 Jul 2026 06:19:17 GMT",
-      "added_at": "2026-07-17T08:06:51.206Z",
+      "added_at": "2026-07-17T08:34:12.760Z",
       "status": "pending",
       "used_in": []
     },
@@ -2348,7 +2390,7 @@
       "url": "https://phys.org/news/2026-07-bones-reveal-ancient-egyptian-princesses.html",
       "excerpt": "For decades, scientists have disputed the meaning of the weapons found in the burial chambers of some ancient Egyptian princesses. Were they symbolic or practical tools? Now, a reassessment of five royal women's mummies from the Middle Kingdom has shown that some princesses buried with weapons could use them.",
       "published_at": "Fri, 17 Jul 2026 00:00:02 EDT",
-      "added_at": "2026-07-17T08:06:51.886Z",
+      "added_at": "2026-07-17T08:34:13.443Z",
       "status": "pending",
       "used_in": []
     },
@@ -2361,7 +2403,7 @@
       "url": "https://phys.org/news/2026-07-eu-ai-guardrails-absorb-rapid.html",
       "excerpt": "\"Guardrails\" built by the EU to govern AI fall short in both ambition and execution and have become too heavy to absorb rapid changes in technology, a new study in Big Data & Society warns.",
       "published_at": "Thu, 16 Jul 2026 23:20:01 EDT",
-      "added_at": "2026-07-17T08:06:51.886Z",
+      "added_at": "2026-07-17T08:34:13.443Z",
       "status": "pending",
       "used_in": []
     },
@@ -2374,7 +2416,7 @@
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWHhvOVdEVDZDclhEcU9TYmROQ2FxbWRrNlFTcU16dHZCZDBvMGFuQWpTQlQ0V1NlaGl2d3MzS3dxcEEyZmlhbE5yVHBvRVY4a21HOV9QczJER0lYNWt4TjY0M0ZLVlJMamNiZTNMZEdoOFV6cU5vMGlNMkxfZ29fdC1FY0gtQm9y?oc=5",
       "excerpt": "Artists Sought for Climate Conversations 2027 &nbsp;&nbsp; Mirage News",
       "published_at": "Fri, 17 Jul 2026 03:20:00 GMT",
-      "added_at": "2026-07-17T08:06:51.206Z",
+      "added_at": "2026-07-17T08:34:12.760Z",
       "status": "pending",
       "used_in": []
     },
@@ -2387,33 +2429,7 @@
       "url": "https://phys.org/news/2026-07-golf-generates-million-societal-benefits.html",
       "excerpt": "A new study published in Frontiers in Sports and Active Living shows that Finnish golf players spend approximately €330 million on golf annually and that this generates an estimated benefit to society almost twice as high.",
       "published_at": "Thu, 16 Jul 2026 22:20:06 EDT",
-      "added_at": "2026-07-17T08:06:51.887Z",
-      "status": "pending",
-      "used_in": []
-    },
-    {
-      "id": "science-772ef6c590b6",
-      "interest": "science",
-      "feed": "https://news.google.com/rss/search?q=%22scientific%20research%22%20OR%20physics%20OR%20space%20OR%20biology%20OR%20climate&hl=en-AU&gl=AU&ceid=AU:en",
-      "kind": "article",
-      "title": "Advanced Physics-Informed Digital Twin Unveiled - Mirage News",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQ1htLWhWbnd2MS12dmU2ZEJfdHQwVFNZRHNPRVVnMlRrOGhSZ21ibWpadTdHZHlCYk9udHVBYmpUdkx3SDZNWW8wR1FYRzVSYmNuRE85ck54RnhUR1BuV2JMWTE4MTEyYVd6RzVpN0RqdGxRc2FKMEtnSDJYbXNkMHJfSXgxbFM4SEtz?oc=5",
-      "excerpt": "Advanced Physics-Informed Digital Twin Unveiled &nbsp;&nbsp; Mirage News",
-      "published_at": "Fri, 17 Jul 2026 02:07:00 GMT",
-      "added_at": "2026-07-17T08:06:51.206Z",
-      "status": "pending",
-      "used_in": []
-    },
-    {
-      "id": "science-c064f24f5ba1",
-      "interest": "science",
-      "feed": "https://news.google.com/rss/search?q=%22scientific%20research%22%20OR%20physics%20OR%20space%20OR%20biology%20OR%20climate&hl=en-AU&gl=AU&ceid=AU:en",
-      "kind": "article",
-      "title": "China interfered in 2020 election, says Trump; Coles rallies after abandoning $4b Greencross deal; Macquarie’s ‘climate of fear’ - AFR",
-      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPQ09zamR2QlNqTUl6cHVwV0VVY3cwUXdvV2RWTGE5b2xBUTJLblV1N3pyRy1OU3BLU3JHR1JtMldKRlV4WEdKQ2U1SzVCM1lpbnpvWm1sVzVueU43bUZGdGd5VWRIMjh2STczcldFcC1yZHZiUHI1NU5qSjk0MVViUGdrenFlLUt4V25fd1lVc1JRWUxxd2QxdHY3LWJFdTlRS2Roc2JCT3FsOUJXcXVHSEhDSEN2TTV5T2daTzczLU9hbWhLMW04X0ZRV3ZqNDF1Sjl0bFA3OEV5VDM4bGVpdzF0Z01ua054RmxObnZoU3lBY3AtZHNnWVdUM2ZtdVB6bnJON0FxYzFzTmxBR3c?oc=5",
-      "excerpt": "China interfered in 2020 election, says Trump; Coles rallies after abandoning $4b Greencross deal; Macquarie’s ‘climate of fear’ &nbsp;&nbsp; AFR",
-      "published_at": "Fri, 17 Jul 2026 01:56:00 GMT",
-      "added_at": "2026-07-17T08:06:51.206Z",
+      "added_at": "2026-07-17T08:34:13.443Z",
       "status": "pending",
       "used_in": []
     },
@@ -2426,20 +2442,7 @@
       "url": "https://phys.org/news/2026-07-roadmap-sustainable-blue-economies.html",
       "excerpt": "A new United Nations report co-authored by researchers at the University of Portsmouth provides governments with a practical roadmap for building sustainable blue economies, as pollution, climate change and biodiversity loss place growing pressure on the marine and freshwater ecosystems that support billions of people and a global ocean economy worth US$2.2 trillion.",
       "published_at": "Thu, 16 Jul 2026 21:40:01 EDT",
-      "added_at": "2026-07-17T08:06:51.887Z",
-      "status": "pending",
-      "used_in": []
-    },
-    {
-      "id": "science-901f8a766220",
-      "interest": "science",
-      "feed": "https://news.google.com/rss/search?q=%22scientific%20research%22%20OR%20physics%20OR%20space%20OR%20biology%20OR%20climate&hl=en-AU&gl=AU&ceid=AU:en",
-      "kind": "article",
-      "title": "Pacific Islands focus: tobacco laws, climate negotiations, violence against women, new shark species, and more - Croakey Health Media",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbEZyQ2lPLUFNNnA5WEhVczVqRk5UN1NGallyZkFkdGN6WGNuMG1EOGU4TTRmQXg4R1U3dGlwemh6dWl5X2djRXJrdGI0bV9VcmNKdE1xVlpYdUFuTnh4VW42S2pmaHZ3NU1TdXhNanNfSFdDVzFCN0M1ZHNJejV0aEMza2lwNTJ5TUNsSnYwQ1dGVTNyX09JTFdsb2pCa3ZoWHRlR1RfQTNXbGd1ZGt5dUJ4enF3ZGFBOUlyS3lRdFN3Z2h6bGExYUx3?oc=5",
-      "excerpt": "Pacific Islands focus: tobacco laws, climate negotiations, violence against women, new shark species, and more &nbsp;&nbsp; Croakey Health Media",
-      "published_at": "Fri, 17 Jul 2026 01:20:35 GMT",
-      "added_at": "2026-07-17T08:06:51.206Z",
+      "added_at": "2026-07-17T08:34:13.443Z",
       "status": "pending",
       "used_in": []
     },
@@ -2452,7 +2455,7 @@
       "url": "https://phys.org/news/2026-07-pathsay-ai-language-barriers.html",
       "excerpt": "Thousands of the world's languages remain largely invisible to modern translation technology, but researchers and students at Brigham Young University are working to change that. Through a project called Pathsay, students in the BYU MATRIX lab are partnering with international BYU-Pathway Worldwide students to collect speech and text data for low-resource languages, helping preserve linguistic her",
       "published_at": "Thu, 16 Jul 2026 21:00:01 EDT",
-      "added_at": "2026-07-17T08:06:51.887Z",
+      "added_at": "2026-07-17T08:34:13.443Z",
       "status": "pending",
       "used_in": []
     },
@@ -2465,7 +2468,7 @@
       "url": "https://phys.org/news/2026-07-older-women-physical-health-benefits.html",
       "excerpt": "Austria suggests that water plays a much more complex and profound role in older women's lives than previously recognized.",
       "published_at": "Thu, 16 Jul 2026 20:20:01 EDT",
-      "added_at": "2026-07-17T08:06:51.887Z",
+      "added_at": "2026-07-17T08:34:13.443Z",
       "status": "pending",
       "used_in": []
     },
@@ -2554,5 +2557,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-07-17T08:06:52.188Z"
+  "updatedAt": "2026-07-17T08:34:13.860Z"
 }

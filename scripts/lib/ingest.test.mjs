@@ -2,7 +2,18 @@
 // `node --test scripts/lib/*.test.mjs`; ingest.mjs guards its main() so importing it is side-effect free.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { parseKontent, isKontentFeed, capRoundRobin, itemTime, isLegible, trimPdfLead } from "../ingest.mjs";
+import zlib from "node:zlib";
+import { parseKontent, isKontentFeed, capRoundRobin, itemTime, isLegible, trimPdfLead, pdfToText } from "../ingest.mjs";
+
+// Build a minimal PDF carrying `n` Flate-compressed content streams, each showing one text run.
+function fakePdf(runs) {
+  const chunks = [Buffer.from("%PDF-1.4\n")];
+  for (const run of runs) {
+    const body = zlib.deflateSync(Buffer.from(`BT /F1 12 Tf (${run}) Tj ET`));
+    chunks.push(Buffer.from("5 0 obj<</Length 1/Filter/FlateDecode>>stream\n"), body, Buffer.from("\nendstream endobj\n"));
+  }
+  return Buffer.concat(chunks);
+}
 
 const KONTENT_URL =
   "https://deliver.kontent.ai/4f4649d8-6df9-023d-bb6c-14e842b8aadb/items?system.type=article&order=elements.publish_date[desc]";
@@ -192,6 +203,23 @@ test("trimPdfLead leaves a media release (no letterhead) alone, minus the lang t
   const raw = "en-AUActuaries Institute Maps the Generational Flow of Australia's $1 trillion Tax and Spending System. Government spending follows a U-shaped pattern.";
   const out = trimPdfLead(raw);
   assert.ok(out.startsWith("Actuaries Institute Maps"), out.slice(0, 40));
+});
+
+test("pdfToText reads Flate text streams", () => {
+  const text = pdfToText(fakePdf(["Dear Mr Kell", "The Institute welcomes the opportunity"]));
+  assert.match(text, /Dear Mr Kell/);
+  assert.match(text, /welcomes the opportunity/);
+});
+
+test("pdfToText stops at maxChars — the bound that keeps a chart-heavy report cheap", () => {
+  // Regression guard: unbounded, a real 8.9MB Institute report spent 64s extracting 190k chars that
+  // were then truncated to 2.2k anyway. Bounding the walk took it to 310ms.
+  const many = Array.from({ length: 400 }, (_, i) => `chunk ${i} of prose text here`);
+  const bounded = pdfToText(fakePdf(many), 200);
+  const full = pdfToText(fakePdf(many));
+  assert.ok(bounded.length < full.length, "bounded extraction must stop early");
+  assert.ok(bounded.length >= 200, "…but must still return at least the requested budget");
+  assert.ok(full.length > 2000, "sanity: the unbounded walk really does read the whole document");
 });
 
 test("capRoundRobin buckets legacy items with no feed together", () => {

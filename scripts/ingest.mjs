@@ -33,8 +33,14 @@ const EXCERPT_CHARS = 400;  // default cap for ordinary feed excerpts
 // decorative. Kept to its own budget so a slow PDF can't starve the APRA path (or vice versa).
 const POLICY_ASSET_HOSTS = ["content.actuaries.asn.au"];
 const MAX_POLICY_ENRICH = 4;        // policy items arrive ~8/month; 4 per run is ample headroom
-const PDF_MAX_BYTES = 3_000_000;    // skip the occasional chart-heavy Report (one is 5.3MB) — its
-                                    // media release covers the same findings and extracts fine
+const PDF_MAX_BYTES = 10_000_000;   // the Institute's flagship reports are chart-heavy: the
+                                    // Intergenerational Equity Index is 5.4-7.0MB and Mortality in
+                                    // Australia is 8.9MB — all life/super relevant, so don't cut them.
+                                    // Safe because PDF_EXTRACT_CHARS (not size) bounds the real cost.
+const PDF_EXTRACT_CHARS = 20_000;   // stop extracting here. Only ENRICH_CHARS (2.2k) is ever kept, and
+                                    // extraction cost tracks stream COUNT, not bytes: a 5.4MB report
+                                    // extracts in 0.3s while an 8.9MB one ran 64s to produce 190k chars
+                                    // we then threw away. Bounding the work makes the run size-agnostic.
 const PDF_TIMEOUT_MS = 15000;       // PDFs are bigger than pages; 8s isn't enough at ~250KB+
 const PDF_MIN_WORDS = 150;          // below this the extraction is a failure, not a short document
 const PDF_MIN_LEGIBLE = 0.5;        // letters / total chars — see pdfToText
@@ -259,10 +265,15 @@ const hostMatches = (hostname, h) => hostname === h || hostname.endsWith("." + h
 // come out as mojibake rather than an error. Measured on 5 real Institute PDFs: 4 extract at 75-83%
 // letters, 1 (CID-encoded) yields 0 real words. Hence isLegible below: the caller MUST gate on it,
 // because the failure mode is silent garbage, and garbage in the pool is worse than a thin blurb.
-function pdfToText(buf) {
+// `maxChars` stops the walk early: only the first couple of thousand characters are ever kept, and a
+// chart-heavy report can hold hundreds of thousands across hundreds of streams. Bail once we have
+// enough to trim a lead from and judge legibility.
+function pdfToText(buf, maxChars = Infinity) {
   const out = [];
+  let got = 0;
   let i = 0;
   for (;;) {
+    if (got >= maxChars) break;
     const s = buf.indexOf("stream", i);
     if (s === -1) break;
     let start = s + 6;
@@ -289,11 +300,11 @@ function pdfToText(buf) {
       }
     }
     if (parts.length) {
-      out.push(
-        parts.join("")
-          .replace(/\\(\d{1,3})/g, (_, o) => String.fromCharCode(parseInt(o, 8)))
-          .replace(/\\([()\\])/g, "$1")
-      );
+      const chunk = parts.join("")
+        .replace(/\\(\d{1,3})/g, (_, o) => String.fromCharCode(parseInt(o, 8)))
+        .replace(/\\([()\\])/g, "$1");
+      out.push(chunk);
+      got += chunk.length;
     }
   }
   return out.join("\n").replace(/\s+/g, " ").trim();
@@ -399,7 +410,7 @@ async function fetchPdfText(url) {
   if (buf.length > PDF_MAX_BYTES) return { text: null, reason: `${(buf.length / 1e6).toFixed(1)}MB > cap` };
   if (buf.subarray(0, 5).toString("latin1") !== "%PDF-") return { text: null, reason: "not a PDF" };
   if (isEncryptedPdf(buf)) return { text: null, reason: "encrypted" };
-  const text = pdfToText(buf);
+  const text = pdfToText(buf, PDF_EXTRACT_CHARS);
   if (!isLegible(text)) return { text: null, reason: "unreadable fonts (CID/Identity-H)" };
   return { text: trimPdfLead(text), reason: null };
 }

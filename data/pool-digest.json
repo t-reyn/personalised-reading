@@ -1,10 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-17T08:06:52.198Z",
+  "generatedAt": "2026-07-17T08:34:13.872Z",
   "interests": {
     "software-ai": {
       "days_since_last_article": 1,
       "items": [
+        {
+          "id": "software-ai-ab30dc81bc72",
+          "title": "Artificial Intelligence, Adaptive Radiotherapy and Treatment Automation Transform Global Cancer Care - Yahoo Finance UK",
+          "excerpt": "Artificial Intelligence, Adaptive Radiotherapy and Treatment Automation Transform Global Cancer Care &nbsp;&nbsp; Yahoo Finance UK",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQLVBuelV3c0V2UFJpTmxZNUxRWXp2M0s0enNLeEl2Y3J3RWIyZUs4akpiR2JjZ2IyaVV4Vm5wYkJZb0dyS3BvVUtlemQtb1o2cm1ER18xYUxLdEpNNE1raXM4UHZsNEdGbnFPa3Z0VkhjajROelE4SVY4RDd0Wld5TTJnenQ0d1dGVUwxX0FheWhGcWtGTEU2WXRpTHZhQ3MzeTlwTzZsSQ?oc=5",
+          "kind": "article"
+        },
         {
           "id": "software-ai-6935fb172482",
           "title": "Xi Jinping: Artificial Intelligence Must Be Symphony of International Cooperation - VIDEO - Caspian Post",
@@ -13,17 +20,17 @@
           "kind": "article"
         },
         {
-          "id": "software-ai-a73971895ccb",
-          "title": "29 nations establish World Artificial Intelligence Cooperation Organization - Fast Company Middle East",
-          "excerpt": "29 nations establish World Artificial Intelligence Cooperation Organization &nbsp;&nbsp; Fast Company Middle East",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWUloc3pDTnFjMVJYWGpIaEttZ0F1d3NlY1dfeXF3V3BsM0RlYVJzMHg2TEE4VmxwN0pKOTU5NDJPQ3dnb2xZZWxPdjV1aXRvZ08tckV4UDlHclFzNlJUdzRxV25sdjJIZmF0dnA5SW80Z3NRak9Qb3o1T1A5Z3JuSVJQR1FMQmwzbTFPWktCNXY1bFpiUHlJZ3BOMUNTekdLM1FOOERUWVpnWDQ?oc=5",
+          "id": "software-ai-487b7f00d33e",
+          "title": "EEG shows brain can simultaneous encode two speech streams",
+          "excerpt": "Article URL: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003876 Comments URL: https://news.ycombinator.com/item?id=48943745 Points: 61 # Comments: 25",
+          "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003876",
           "kind": "article"
         },
         {
-          "id": "software-ai-c70ca24ed974",
-          "title": "China's President Xi addresses artificial intelligence conference in Shanghai - The Lufkin Daily News",
-          "excerpt": "China's President Xi addresses artificial intelligence conference in Shanghai &nbsp;&nbsp; The Lufkin Daily News",
-          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNZTJsZVRKQTNaYk03NHNmZVl0MmZsUXlma1JlSDlxakhTLUk0N2lnNXRDMy12ZGpCanVYTzZVaDRxcGpkMW5LTFpRQlgxUXhDMXBJU0tZRXZIa2RhZ1phY1ExQnRsT2dfdUUyNU9HQV94WmxROWVRdTQ5YXBUYjVXckxOanNUTl9iSzRyQlBWblFJeTlPSjZZM1dPa0p3Z1lfQlRJclRydUZ2djFFMzl5QVo5LU9JOUhubDFxLVZmRktjQ21LR093MmV3TTZldUZ2RERGYmt5d3puOGwtaU1ZTXJ4a1ExZE5LT25QZVRfUVdGY2s?oc=5",
+          "id": "software-ai-aa56ddc38cb1",
+          "title": "Pebble Mega Update – July 2026",
+          "excerpt": "Article URL: https://repebble.com/blog/pebble-mega-update-july-2026 Comments URL: https://news.ycombinator.com/item?id=48943174 Points: 90 # Comments: 18",
+          "url": "https://repebble.com/blog/pebble-mega-update-july-2026",
           "kind": "article"
         },
         {
@@ -52,13 +59,6 @@
           "title": "Timeline Scan – AI fixes the dates on your scanned photos",
           "excerpt": "Article URL: https://timelinescan.com/ Comments URL: https://news.ycombinator.com/item?id=48939764 Points: 3 # Comments: 1",
           "url": "https://timelinescan.com/",
-          "kind": "article"
-        },
-        {
-          "id": "software-ai-dabbe5c11d43",
-          "title": "LM Studio Bionic: the AI agent for open models",
-          "excerpt": "Article URL: https://lmstudio.ai/blog/introducing-lm-studio-bionic Comments URL: https://news.ycombinator.com/item?id=48939662 Points: 3 # Comments: 0",
-          "url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic",
           "kind": "article"
         }
       ]
@@ -149,10 +149,10 @@
           "kind": "article"
         },
         {
-          "id": "indie-income-e131888fa525",
+          "id": "indie-income-dd4f3a866746",
           "title": "Bootstrapped Indian Footwear Brand BERSACHE Targets ₹500 Crore Revenue with Expansion Across Hypermarkets, Offline Retail & Distribution Network - The Tribune",
           "excerpt": "Bootstrapped Indian Footwear Brand BERSACHE Targets ₹500 Crore Revenue with Expansion Across Hypermarkets, Offline Retail & Distribution Network &nbsp;&nbsp; The Tribune",
-          "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNV0ZacDNXVzFhZy1TaVI1aEVlOHhyN2NnMWtQYzhka0hsQ3RlQzNvVElHZFRGdGhHZkhvQnVVaUd0Zkg2ME9pOHdjRnBnYkR1b2tuMHNpcENCYXBLRHRfSTF0SkRyS1FaOEJwTVVVMGpFUE4zUUR5c1FrMDVtYXV6b3ZuSVctbmc1OVZITFdFZHBEcWJ3YXNqWnV2MkZXWUcyWkYwTG1wbGg4a2tjb196aDZjT2FsMC1rMnpPd0I0aVlyRG1FRzNsNnBuYzgxM2ozcEZnX3FyRXNuRGhPMnYxN1lITEFoZU9CMEExMzdiSXBlY1JTNHR5S0JWMnBWeXZkZ3lfVF9ENWRSWDZxMHpmN3dRN2N5aHRLQTNhNm1VRXVqZmZ4bThnejgyQlBKNUpCNnk1dHEtajZzbm9NcUHSAb4CQVVfeXFMTVdGWnAzV1cxYWctU2lSNWhFZTh4cjdjZzFrUGM4ZGtIbEN0ZUMzb1RJR2RURnRoR2ZIb0J1VWlHdGZINjBPaTh3Y0ZwZ2JEdW9rbjBzaXBDQmFwS0R0X0kxdEpEcktRWjhCcE1VVTBqRVBOM1FEeXNRazA1bWF1em92bklXLW5nNTlWSExXRWRwRHFid2Fzalp1djJGV1lHMlpGMExtcGxoOGtrY29femg2Y09hbDAtazJ6T3dCNGlZckRtRUczbDZwbmM4MTNqM3BGZ19xckVzbkRoTzJ2MTdZSExBaGVPQjBBMTM3YklwZWNSUzR0eUtCVjJwVnl2ZGd5X1RfRDVkUlg2cTB6Zjd3UTdjeWh0S0EzYTZtVUV1amZmeG04Z3o4MkJQSjVKQjZ5NXRxLWo2c25vTXFB?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxObnZvZjRMRXBlSjZxaFozdGdyNzBYRHRCaFR5VUREWTdYb08zZDVLTHdMdU9KZ0lILXBrSkpIaGZyYTVkRTB4N0drZi0zQ2p4WkhfXzAyZ084RWpLbWhlZUJza2o1VjE4Z2kybTZ3ZC1vNFE5V1RKdEQyenNqc0loaW9iT3k1NUVZNFhIZEVKRDhOTFFHQnRoX0lKWEI3LTVzOW1ncGhvYVBDTG5DQ2xjR0VVOEdyUmM2VzFFVkZhUG05cDRJeEVlXzc4S0ROVEstUmpfb0Y1MEhmdHJZS2JHcWRJY1VJMFBXM3J6U01JTWVEOHlOWl9NLTJpWU0xZXdnMkR2Y0U5dzhHWGJ3bTUwaUhrU3J6R2VHNFg0c3dMSThBWXhKemRJTGNQQnVuOHPSAaICQVVfeXFMT250Vld4Y0NYclJVd3VLSmFFVk51bWwyV0RoTVhxWk1OSEFRMkZHdGU5aFNjWHZHc0k0a3pIbHd2c2dhZlRpUTJwYlhvQm5hdERBVUFDMUtBcTVucVd6bm01TGlCYjZ4SlNaZDNneVZaLTNuMkt0b3FmUGZFOEtTSGNRSUxta2pBcUJpY2wwcGFmY0Jlem53UWttUjV1MkVyQTNVWk5WTGtXcFVWUDZSZ3JoYllGamtBdkxodjhYWjNKWUE4WV9oaVhFMDNjaXlhSkp3SmY2NHNvb24tYVhEamlWQVNjX1ppaTlqSUN3OG5iNm1RalY0QmlDNW5YSDJuLXgyYU5tUF9lTlJzamNJSHc4ZTB1RnJrMGFNYjhaa1JoTGc?oc=5",
           "kind": "article"
         },
         {
@@ -385,17 +385,24 @@
       "days_since_last_article": 0,
       "items": [
         {
-          "id": "finance-36523ca66dee",
-          "title": "SoftBank sinks over 9% as Asia chip stocks track Wall Street AI sell-off",
-          "excerpt": "The declines followed another weak session for U.S. technology stocks, with the Nasdaq Composite falling 1.47% as semiconductor shares came under renewed pressure.",
-          "url": "https://www.cnbc.com/2026/07/17/softbank-chip-stocks-asia-wall-street-ai-rout.html",
-          "kind": "article"
-        },
-        {
           "id": "finance-bbf2b373c083",
           "title": "BP, ConocoPhillips to back Iraq with major investments as U.S. seeks to weaken Iran's energy hold",
           "excerpt": "BP and ConocoPhillips are set to announce billions of dollars of new investments in Iraq on Friday.",
           "url": "https://www.cnbc.com/2026/07/17/bp-conocophillips-to-back-iraq-with-major-energy-investment-.html",
+          "kind": "article"
+        },
+        {
+          "id": "finance-919fa62ea233",
+          "title": "[Dual-Strategy Investing: AI + Non-AI] Japanese equities sho... - Moomoo",
+          "excerpt": "[Dual-Strategy Investing: AI + Non-AI] Japanese equities sho... &nbsp;&nbsp; Moomoo",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMk9qRWRwWTB3TmJOX0FaUUtOLXRRcG5SY1hsZnhXc0JEVTlVVDZadTdKYXVWbVY5OG1wTHhSaWpsZlBRazdXUFNyT3E2Z1hNOTU5Q0NnODl1U1ZGLUlKOE42Q01NbkNSRXl2cTlqUW83SHZmSHlMTzZnRWN3c1dOWDZYZlVXRU5kZkUtaU5zZGx0dTkyMXFKQmpUaWhWdjA0YnJwQURLdlp6MENVMFJRMUtIWFk?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "finance-36523ca66dee",
+          "title": "SoftBank sinks over 9% as Asia chip stocks track Wall Street AI sell-off",
+          "excerpt": "The declines followed another weak session for U.S. technology stocks, with the Nasdaq Composite falling 1.47% as semiconductor shares came under renewed pressure.",
+          "url": "https://www.cnbc.com/2026/07/17/softbank-chip-stocks-asia-wall-street-ai-rout.html",
           "kind": "article"
         },
         {
@@ -406,24 +413,17 @@
           "kind": "article"
         },
         {
+          "id": "finance-400e9b3a190d",
+          "title": "Hanson blames end of White Australia policy for ‘immigration problem’ - AFR",
+          "excerpt": "Hanson blames end of White Australia policy for ‘immigration problem’ &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObVZpLVY5V1pGQnBObE9VU3FFQUVwT09PbHhObndoZVdHVUhJS3ZkU21NR1l6VkpWVzN5ankwbGtqUUFkRGRDemNPaDI2M0JScU1QQlp6Q1llcUVMQjhwTWtQT0d6dENfdVlRUXpoc0hBUkFYWkd4NFdpSEFtdGJCRjZhUzJGOG1lR05kVUhXVEU0cmo0T05xZTBkUQ?oc=5",
+          "kind": "article"
+        },
+        {
           "id": "finance-0a77108e759d",
           "title": "Under-fire Telstra bosses admit key software update was ignored - AFR",
           "excerpt": "Under-fire Telstra bosses admit key software update was ignored &nbsp;&nbsp; AFR",
           "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdlIyRUJ2OTd2WThvY3lxUjM3aUFDQXNzemJLaUJrY3QwZEdXcmdMQW5Rd0JoaFJTbjJwSVlhVjItQVhoMWhsQmZsX0lRR3AwSEpUWjhiZV9hOWtDTldHcWE5R09yalJiNGo4Vi10aEx4ZXhoaGlfWkZfUWZaSGJ0T1ktdk9Xd1I0UDh6QTJCQXJIQUZEbU1LWFY3THVtaWlpQThYSHd2d3RidHdmYklFUEVibkNrRFk2YTY5TDQ5dUJBdw?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "finance-72b53b973bc7",
-          "title": "Seven & i Considers Investing in Polish Convenience Store Chain - nippon.com",
-          "excerpt": "Seven & i Considers Investing in Polish Convenience Store Chain &nbsp;&nbsp; nippon.com",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPa3llNllpT19mWHo2aTY3VVJpVVBsWTEtMFVISlFaVWpXaVk4bGk5a1dUVlpxbjdtcVYyU2ExVXBFX1lmaVUyS0lENWtGZEJZbUxJNUdnaWI5QWV1cng0THM4bnZQb29Iekx0MmJKTWNva01WMkUtaHVnb0dNbE5PdE9GX0tsamhscExzbk5lWkFzM3ZvR3NYVjVfSERvSDhabWVuR1l2WWlBNmloVkxqZk9XWmwtWWs?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "finance-c8909bb8f1a8",
-          "title": "‘Election security nightmare’: Trump says China hacked voter files - AFR",
-          "excerpt": "‘Election security nightmare’: Trump says China hacked voter files &nbsp;&nbsp; AFR",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOTGxQcUFHbDVwZkE3b3RmcUdmekptaWxuUGJraHlCX0J3RU44SkQzU0VnWXJjTi1nZktvWWQyNHVrUy1aS2RVR0pxRXRKYzlrTTA2VWhSQmw0Ti1ZVE4tRm9IUFQ5dlg0SEM1ZVRrZWpIcUZEajRLNDNVeFVnWWwxMU5zTmFLbjNwSUlPMEhILVRnaVRvcG54VmV6UjhyS1VIaDNiVmlCREwtOWJlSGFLaUt1ZTRDcUFiTTFZ?oc=5",
           "kind": "article"
         },
         {
@@ -446,6 +446,13 @@
       "days_since_last_article": 2,
       "items": [
         {
+          "id": "health-c1459617c227",
+          "title": "Long Sleep Duration Linked to Higher Alzheimer’s Blood Biomarker - Technology Networks",
+          "excerpt": "Long Sleep Duration Linked to Higher Alzheimer’s Blood Biomarker &nbsp;&nbsp; Technology Networks",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNm93UktCc0ZkYmZUb1dKTG9EZWFOUWVfZkprUmlSQ0hIYkl5M1pxcEtwQXZsdXJlR1FxdkRLazN1Ry1nZ244WHpJdU9oTnZRY29DSUNtZXNVaXJvRUZSNkVyM2g2N0pXTUQxOUIwR3o5Tk9wWW1TMWVnYklXaDVtdXM3R0dnNWdKUHBJc3RNY3lONXU0NlFBWXhsQVlwbU02dm1OZGFoWXlvQnVEYW1CbG85WQ?oc=5",
+          "kind": "article"
+        },
+        {
           "id": "health-1571bb63da5d",
           "title": "Cam Young provides update on his fitness after opening day of The Open Championship - hitc.com",
           "excerpt": "Cam Young provides update on his fitness after opening day of The Open Championship &nbsp;&nbsp; hitc.com",
@@ -464,13 +471,6 @@
           "title": "Fitness instructor Nadja Piatka, 76, shares the 4 core exercises she does every day to stay strong - Women's Health",
           "excerpt": "Fitness instructor Nadja Piatka, 76, shares the 4 core exercises she does every day to stay strong &nbsp;&nbsp; Women's Health",
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRHhmVnlJZXlycVc0TE90RTA3X2RZOW1yeTJkLV9pT0RaZU12bUVFQlpsdkU2bHRFYnctSDJmQXNISmZ6b1ZHWVhWRHI0ZWdrSGFKb29zcDlqYkhvWWs1dWdObVNCZGNsUTBTX1h1UVg5eGhHS0Q3YmpqU2ExdGU4NE9DZmNicHh5NFlQdE5yMW1nNGF3RXYwcms0VmR5azQ?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "health-11dcaeca38f7",
-          "title": "Why Australia Needs More Longevity-Medicine Clinicians and What’s Holding Them Back - WorldHealth.net",
-          "excerpt": "Why Australia Needs More Longevity-Medicine Clinicians and What’s Holding Them Back &nbsp;&nbsp; WorldHealth.net",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1VWk9waVNxd3V5cVpDMGxTREYtYTVwRFpZeDZQRFlvSmVKRk1VWllDNGRQS1pDWFA5SFdJbkZXc29KdURWQ1RucmhCOHU5SjVUY2ZFdm5rR1pjTXhnVTZFOWtheC1CWkZkT2FhTjE4cHpZUWNYR1VKZEpLSQ?oc=5",
           "kind": "article"
         },
         {
@@ -508,6 +508,13 @@
       "days_since_last_article": 2,
       "items": [
         {
+          "id": "videography-c896bc803a9d",
+          "title": "George Lucas Says AI Is 'the Future' of Filmmaking and There's Nothing You Can Do About It - Fstoppers",
+          "excerpt": "George Lucas Says AI Is 'the Future' of Filmmaking and There's Nothing You Can Do About It &nbsp;&nbsp; Fstoppers",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMEZ6Q1RScWhoTVFPOVNOZUVMa2dGTjdQNTZfdHlMa01OZEJwWkRORjlqdE1YUVdLcXhrT2xHQ0VXNEt4Z1pzVzN5TkRSdXk2OXFVRGNSNGdNb25kRXVIVWxSN01iX3hqOEVObGRjT05LbzE5VzhpallTUElIVGZQWlFjMWU5Rzcyc1lyYmVkYll0S1BqeW9aQVRhQ0xZOExlNzhFaUhvb0tCZlNPM2Y3aTdfR090MG1pdDJNOGQySEw?oc=5",
+          "kind": "article"
+        },
+        {
           "id": "videography-fee761d54ae2",
           "title": "Literacy, fairies and ... tamales? Nonprofit guides Santa Fe kids' reading through filmmaking - Santa Fe New Mexican",
           "excerpt": "Literacy, fairies and ... tamales? Nonprofit guides Santa Fe kids' reading through filmmaking &nbsp;&nbsp; Santa Fe New Mexican",
@@ -519,13 +526,6 @@
           "title": "How Ecook Is Reshaping Ski Filmmaking - Teton Gravity Research",
           "excerpt": "How Ecook Is Reshaping Ski Filmmaking &nbsp;&nbsp; Teton Gravity Research",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE51SjVlRjRYeHRxMHBnMmlVYVdfSGVxWnVNVWtnNW5wckxkN3FjS1I0bm9PRkZmeWYtOEx2dzM1alpZakdCYVlEUzU5dHZUVnVlMzZpeFRhNHBQcmRwRW9J?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "videography-0df45db52e33",
-          "title": "AI vs Big-Budget Cinema: Hollywood Watches as Two ‘Odyssey’ Films Redefine Filmmaking Economics - Telugu Times",
-          "excerpt": "AI vs Big-Budget Cinema: Hollywood Watches as Two ‘Odyssey’ Films Redefine Filmmaking Economics &nbsp;&nbsp; Telugu Times",
-          "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNWEZpbGd4TWY3MTdTekRacXFyUW1xbDFnN0U1TlBvcGRFSms2WVBnZEppejJEZFFOeHFtci1HWEo1eTdXTEFvSFh1UkJTX3FfMGVnd0MwUWliWlRDcWE1TmtZUjkzbHN0Nkl2OWM4Nk9GRTBtb1VxVGxPejFwZWpJbmpiUVVWTU1tdlhIeGR3bldSdHd2SU9fSHJjYlBJZjQ1dy1zR3V5TGZ1UGlWRjlKd05uS3V2WnE5b2tsbXdEUWJEVFZ3RS1qaEVjZE5yZDVnbFBwVUEyaWpTZWE4UkhXM1o1SHI4c0pYZ2FxMHV0U1g?oc=5",
           "kind": "article"
         },
         {
@@ -569,24 +569,24 @@
       "days_since_last_article": 3,
       "items": [
         {
-          "id": "science-a9398b0f026c",
-          "title": "Urban climate solutions - DW.com",
-          "excerpt": "Urban climate solutions &nbsp;&nbsp; DW.com",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORXhDb21LT0k4dXdud1VTNWctaEFRQ2xDTE10SEk3NWxNVENHb054Ymt1NU8zSm1wYlNmMmpOQ1hkOVVVU0lJYUp3VkdhUktPX0lDcUVscWdMbFFNLVdmSFNVS3FEdHhpM01BbllEUVNzb3FaU0x0bFNzV205WDV0LWdHNU03aHc1dzY4UndMRjJpX0U?oc=5",
+          "id": "science-c55fd94f0198",
+          "title": "How climate crisis is redefining home, and who counts as a refugee. - 360info.org",
+          "excerpt": "How climate crisis is redefining home, and who counts as a refugee. &nbsp;&nbsp; 360info.org",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdHphSy1PWWNISENZVEUzb1N6UDRsNC1vd3BybWVCRm5DeWZZd29XWWZrMjlzS1J4Z1F5aVJ4NS1XdG84WnNqQTJkbGhocGxJV1Q1bnpKcTEyM2JqaG9kUmZqQ0ctODFfTDRHdUh0NFFpeUwzUXdxaUNsZm9hR3haajI4WEplYkNIT2RVSmsydw?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-399db237a2a4",
-          "title": "ETH Zurich Unifies Climate, Earth Data For Future Research - Mirage News",
-          "excerpt": "ETH Zurich Unifies Climate, Earth Data For Future Research &nbsp;&nbsp; Mirage News",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQeU52TldBaFJnck1LcGRpSDc1d3BaekV0TEc1Y2lXenhDM2JWQ3ludWloMGxSZngyODVlb0REOGRfQVVNMlcxV0tSd0xRcW9laVFDMnpqQ01GRVJtY2VGLUpENkE3VWJldms5aWxBbUpFU1NfVHhFSGg1Vkx6Tk9HZmc5OA?oc=5",
+          "id": "science-3a35d2784996",
+          "title": "Earth from Space: Guinea-Bissau - European Space Agency",
+          "excerpt": "Earth from Space: Guinea-Bissau &nbsp;&nbsp; European Space Agency",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPUlpXNmdmcjd2N3Z1cTVxS1NJaG9tSjB6WGJVQ1VIaEhKVGEwV3ZhWXRHUEJSYjJCYU1nRU9LbnNnYjR6VGY5MHN1UHVuMFplVU5OLXFlbHJNc2RDMktGdUE5V1RUYUdlUGhDV3FtWTFQZXl4cDM5VzFQU3Q3MUZOOWt6cnJOdXM?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-de62a7be4926",
-          "title": "Space 9102 reincarnated - Australian Defence Magazine",
-          "excerpt": "Space 9102 reincarnated &nbsp;&nbsp; Australian Defence Magazine",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9KX1RGRXN4ckY5ajR5MXBLd1czekJYU1BDc2ljZkFCUEhNVVBKeVg3aTEzTzdZN3pORTNTNVdVSHZWUmRyZTJsTkR6dlBzRzREUTc4aWdVbGNNLW02clBncUpvdWt0eW9oWURwM0pCcEFRbW96cjdEeEhR?oc=5",
+          "id": "science-429d91b40162",
+          "title": "Chan Putheary: Creating space for women and girls to thrive - UN Women Asia and the Pacific",
+          "excerpt": "Chan Putheary: Creating space for women and girls to thrive &nbsp;&nbsp; UN Women Asia and the Pacific",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeW1qanBLQlhpYlhKWGNaT0YxbU00aGxuOVYtMXpyalRFZUhhU3dyYTNZSHpnY1dyZUU2N0NJeno4cmdaT0Q4MllKZHNxclFqejJjcmMwekp6dGRlUFhHdjEwLUItLVRWR0NBODZsN0s5UXhoV21SWWdvRnZad3NCVEVhUUtrN2l4LWNaZUFIXzZKa1l6ZGZtcnZBWlFLcVBGM0t1NmFBRGN4Vm01LXdaalFwLTJLVHVjWGlOWld1TUo?oc=5",
           "kind": "article"
         },
         {

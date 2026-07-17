@@ -135,12 +135,26 @@ Code review. Both are **life** policy with a thesis; neither is a trade brief.
     `https://content.actuaries.asn.au`. Targets are **PDFs**, and the API `description` is a ~170-char
     blurb, so **without ingest-time extraction the source is decorative** — the author's WebFetch returns
     undecoded binary for a PDF.
-  - `pdfToText` is ~40 lines of zlib (zero-dep, in keeping with the hand-rolled RSS/HTML parsers).
-    **`isLegible` is not optional:** 1 of 5 real Institute PDFs uses CID/Identity-H fonts and decodes to
-    long, plausible-looking mojibake — it fails silently, not loudly, and would poison the pool. ~half of
-    Submissions are `/Encrypt`ed and are skipped (kept as blurb, never dropped). A 3MB cap skips the one
-    5.4MB chart-heavy Report (its media release covers the same findings). `trimPdfLead` strips the ~400
-    chars of letterhead/addressee — without it the digest's 300-char window shows a postal address.
+  - `pdfToText` is ~45 lines of zlib (zero-dep, in keeping with the hand-rolled RSS/HTML parsers).
+    **`isLegible` is not optional:** ~1 in 5 Institute PDFs uses CID/Identity-H fonts and decodes to
+    long, plausible-looking mojibake — it fails silently, not loudly, and would poison the pool.
+  - **`PDF_EXTRACT_CHARS` (20k) is the load-bearing bound, NOT the size cap.** Extraction cost tracks
+    stream COUNT, not bytes: measured, a 5.4MB report extracts in 0.3s but an 8.9MB one took **64s** to
+    produce 190k chars that were then truncated to 2.2k. Capping the walk took it to 310ms; 4 policy
+    PDFs back-to-back now cost ~0.8s against a 120s budget. Because the work is bounded, the size cap
+    could go to 10MB, which is what recovers the flagship life/super reports (Intergenerational Equity
+    Index 5.4/7.0MB, Mortality in Australia 8.9MB). Don't "tidy" the bound away.
+  - **Measured end-to-end on the 24 most recent policy PDFs: 19/24 (79%) full text, and 10/11 (91%) of
+    the life/super subset.** Failures are 4× CID fonts + 1× `/Encrypt`. NB an earlier "~48% encrypted"
+    figure was across the whole 6,500-item historical archive and is misleading — **encryption is a
+    non-issue on recent items**, so qpdf (which would break zero-dep, and cannot fix CID fonts anyway)
+    is not worth it. Encrypted/illegible items stay pooled as title+blurb, never dropped.
+  - **No login is needed and one would not help.** 882/883 policy resources are `access_level: Public`
+    and every PDF returns 200 fetched anonymously; the `/Encrypt` flag is a document permission bit
+    (`P=-1340`: printing and accessibility-extraction allowed, copy bit cleared), not access control — a
+    logged-in member downloads the byte-identical file.
+  - `trimPdfLead` strips the ~400 chars of letterhead/addressee — without it the digest's 300-char
+    window shows a postal address instead of the Institute's position.
 - **Round-robin per feed (`capRoundRobin`) — load-bearing, don't "simplify" back to recency.** The pool
   and digest caps used to keep the most recent items across all of an interest's feeds, which handed
   every slot to whichever source posts most: a daily insurance trade wire (~15/day) filled 6 of the
