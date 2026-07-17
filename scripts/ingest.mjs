@@ -187,14 +187,33 @@ function parseFeed(xml) {
 // A browser-like UA + Accept gets past naive bot filters. It will NOT beat real anti-bot
 // challenges (Cloudflare JS checks return 403/503 regardless) — pick feeds that serve scripts.
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+// Retry ONLY what a second attempt can plausibly fix: 429/5xx and network/timeout errors. Google News
+// 503s the whole batch when a run hits it too fast (13 feeds lost in one go on 2026-07-16), and one
+// dropped feed silently thins the pool the author writes from. A 403/404 is a decision, not a blip —
+// retrying it just burns the budget before the authoring step (see HANDOFF: the run is time-boxed).
+const RETRY_STATUS = new Set([429, 500, 502, 503, 504]);
+const FEED_ATTEMPTS = 3;
+const RETRY_BACKOFF_MS = [400, 1200]; // bounded: worst case ~1.6s extra per persistently-failing feed
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
 async function fetchFeed(url) {
-  const res = await fetch(url, {
-    headers: { "User-Agent": UA, Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, */*" },
-    redirect: "follow",
-    signal: AbortSignal.timeout(20000),
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return res.text();
+  let lastErr;
+  for (let attempt = 0; attempt < FEED_ATTEMPTS; attempt++) {
+    if (attempt > 0) await sleep(RETRY_BACKOFF_MS[attempt - 1]);
+    try {
+      const res = await fetch(url, {
+        headers: { "User-Agent": UA, Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, */*" },
+        redirect: "follow",
+        signal: AbortSignal.timeout(20000),
+      });
+      if (res.ok) return res.text();
+      lastErr = new Error(`HTTP ${res.status}`);
+      if (!RETRY_STATUS.has(res.status)) break;
+    } catch (e) {
+      lastErr = e; // fetch rejects on DNS/socket/timeout — all worth one more go
+    }
+  }
+  throw lastErr;
 }
 
 async function fetchPage(url, timeoutMs = 8000) {
@@ -663,7 +682,7 @@ async function main() {
   await writePoolDigest(config, pool);
 }
 
-export { parseFeed, parseKontent, isYouTubeFeed, isKontentFeed, capRoundRobin, itemTime, pdfToText, isLegible, trimPdfLead };
+export { parseFeed, parseKontent, isYouTubeFeed, isKontentFeed, capRoundRobin, itemTime, pdfToText, isLegible, trimPdfLead, fetchFeed };
 
 // Run the pipeline only when invoked directly (node scripts/ingest.mjs), so tests can import
 // parseFeed without triggering a live fetch + file writes.

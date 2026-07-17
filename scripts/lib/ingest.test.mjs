@@ -3,7 +3,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import zlib from "node:zlib";
-import { parseKontent, isKontentFeed, capRoundRobin, itemTime, isLegible, trimPdfLead, pdfToText } from "../ingest.mjs";
+import { createServer } from "node:http";
+import { parseKontent, isKontentFeed, capRoundRobin, itemTime, isLegible, trimPdfLead, pdfToText, fetchFeed } from "../ingest.mjs";
 
 // Build a minimal PDF carrying `n` Flate-compressed content streams, each showing one text run.
 function fakePdf(runs) {
@@ -13,6 +14,24 @@ function fakePdf(runs) {
     chunks.push(Buffer.from("5 0 obj<</Length 1/Filter/FlateDecode>>stream\n"), body, Buffer.from("\nendstream endobj\n"));
   }
   return Buffer.concat(chunks);
+}
+
+// Serve a feed from localhost so retry behaviour is tested without touching a live source.
+// `plan` is the status code per attempt; 200 serves the body. Returns the URL + a hit counter.
+const FEED_XML = '<?xml version="1.0"?><rss><channel><item><title>Ok</title><link>https://e.g/1</link></item></channel></rss>';
+async function withServer(plan, fn) {
+  const hits = { n: 0 };
+  const srv = createServer((req, res) => {
+    const status = plan[Math.min(hits.n++, plan.length - 1)];
+    res.writeHead(status);
+    res.end(status === 200 ? FEED_XML : "error");
+  });
+  await new Promise((r) => srv.listen(0, "127.0.0.1", r));
+  try {
+    return await fn(`http://127.0.0.1:${srv.address().port}/feed.xml`, hits);
+  } finally {
+    srv.close();
+  }
 }
 
 const KONTENT_URL =
@@ -52,6 +71,37 @@ test("parseKontent maps Delivery API items onto the feed item shape", () => {
     source: "Actuaries Digital (Actuaries Institute)",
     kind: "article",
     topics: ["Life Insurance", "Risk Management"],
+  });
+});
+
+// A dropped feed silently thins the pool the author writes from, so a transient blip (Google News
+// 503ing a whole batch) must not cost the run a source — while a settled 403 must not cost it time.
+test("fetchFeed retries a transient 503 and returns the body once it recovers", async () => {
+  await withServer([503, 503, 200], async (url, hits) => {
+    const body = await fetchFeed(url);
+    assert.match(body, /<title>Ok<\/title>/);
+    assert.equal(hits.n, 3, "should have taken all three attempts");
+  });
+});
+
+test("fetchFeed retries a 429 (rate limit), not just 5xx", async () => {
+  await withServer([429, 200], async (url, hits) => {
+    await fetchFeed(url);
+    assert.equal(hits.n, 2);
+  });
+});
+
+test("fetchFeed does NOT retry a 403 — a block is a decision, not a blip", async () => {
+  await withServer([403, 403, 200], async (url, hits) => {
+    await assert.rejects(fetchFeed(url), /HTTP 403/);
+    assert.equal(hits.n, 1, "a deterministic status must cost exactly one attempt");
+  });
+});
+
+test("fetchFeed gives up after a bounded number of attempts and reports the last status", async () => {
+  await withServer([503], async (url, hits) => {
+    await assert.rejects(fetchFeed(url), /HTTP 503/);
+    assert.equal(hits.n, 3, "must not retry unbounded — the run is time-boxed");
   });
 });
 
