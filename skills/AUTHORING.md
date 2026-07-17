@@ -1,12 +1,16 @@
-# Authoring run — write today's issue (keep it lean)
+# Authoring run — write today's issue (ONE article, made to be read)
 
-You write today's articles, edit them, then stop. This runs unattended on a tight time + turn
-budget, so **be decisive and efficient** — don't re-read files you've already read, don't
-deliberate at length. Quality comes from the **Editor pass** below, not from slow drafting.
+You write **one article**, edit it hard, then stop. That article is the reader's entire issue for the
+day: there is no second piece to carry the day if it's weak, and a day that isn't worth opening is a day
+they skip. Volume was cut to one **precisely so this piece can be good** — spend the freed budget on
+picking the right topic, doing the reading, and editing. Depth is the point; padding is not.
+
+Still finish inside the run's time + turn budget: be decisive, don't re-read files you've already read,
+don't deliberate over the choice at length. Draft once, then fix it in the **Editor pass** below.
 
 ## Read once (in this order)
-1. `data/config.json` — `interests` (each has an `id`, `label`, `ttlDays`, and a **`mode`**), `audience`
-   (Australian lens, en-AU), and **`maxArticlesPerRun`**.
+1. `data/config.json` — `interests` (each has an `id`, `label`, `ttlDays`, a **`mode`**, and a
+   **`cadenceDays`**), `audience` (Australian lens, en-AU), and **`maxArticlesPerRun`** (= 1).
 2. `data/profile.local.json` — the reader. This is the steering wheel: each interest has a **`mode`**,
    **`level`**, **`priority`**, and **`want`** (what they want from it), plus their **`goals`** and **`tone`**.
    Pitch and choose topics to match.
@@ -20,11 +24,30 @@ deliberate at length. Quality comes from the **Editor pass** below, not from slo
 6. `templates/article.html` — copy this for every article.
 
 ## Choose what to write
-Write **exactly `maxArticlesPerRun` articles, each with a DIFFERENT primary interest.** Choose primaries
-by the profile's **priority** (favour `highest`/`high`) and by where the pool has a strong cluster — but:
-- **Starvation rule:** if any interest has pending items and `days_since_last_article >= 5` (or has
-  never had an article), one of today's picks MUST be that interest. Rotation is not optional.
-- An interest with a thin pool can be skipped; quality over quantity.
+Write **exactly ONE article**. Pick the interest first, then the angle within it.
+
+**The interest is chosen by cadence, not by mood.** Every interest in `config.json` has a
+**`cadenceDays`** — the target gap between its articles, which is where the reader's priorities are
+encoded (indie-income every ~5 days, science every ~21). `data/pool-digest.json` gives you
+`days_since_last_article` per interest. Score each interest:
+
+```
+overdue = days_since_last_article / cadenceDays        # highest score wins
+```
+
+Take the highest scorer. That is the whole rule — it delivers rotation, priority weighting, and
+starvation protection at once, so don't hand-weigh "what feels due". Only these adjustments apply:
+- **Never had an article** (`days_since_last_article: null`) ⇒ treat as infinitely overdue: take it.
+- **Never repeat yesterday's primary interest**, even if it tops the score. Take the next one down.
+- **Skip an interest you cannot do justice today** and move to the next highest score: a `current`
+  interest whose digest holds no story with real substance (trade-press personnel moves, award
+  roundups and event notices are not stories). A **`learn`** interest is never blocked by a thin pool —
+  teach from the topic itself.
+- A score below 1.0 everywhere just means nothing is overdue yet; still write the top scorer.
+
+**Then pick the angle**: the strongest cluster in that interest's digest, judged against the profile's
+`want` for it and the reader's level. One good piece from a mid-priority topic beats a limp piece from a
+high-priority one — but fix that by finding a better angle, not by skipping to an easier interest.
 
 Respect each interest's **mode**:
 - **`current`** — track what's new. Timely, news-driven, synthesised from recent pool items. Set an
@@ -44,7 +67,7 @@ Respect each interest's **mode**:
 Be **applied** where the profile asks (e.g. indie-income, property): concrete, do-this-next guidance with
 worked AU examples — not general overviews.
 
-## Write each article
+## Write the article
 - Copy `templates/article.html` → `articles/YYYY-MM-DD/<slug>.html` (today's date **in AEST**, not UTC;
   `<slug>` kebab-case).
 - **Synthesise** several sources into one original **600–900 word** piece (hard floor 450, hard ceiling
@@ -57,8 +80,18 @@ worked AU examples — not general overviews.
   to (a) read the actual article and (b) record the **resolved publication URL** in `sources` — never
   commit a Google redirect URL, and never a placeholder. A piece where you fetched nothing must not
   claim synthesis from those sources — attribute honestly ("per Broker Daily's report").
-  - **Fetch budget:** fetch the 2–4 sources that carry your piece's key claims; prefer the enriched
-    excerpt when it already has the numbers. Broad crawling is not OK; targeted fetching is.
+  - **Fetch budget:** you are writing ONE piece, so actually read for it — fetch the **3–6** sources
+    that carry your key claims rather than stretching a single excerpt into an article. Prefer an
+    enriched excerpt when it already has the numbers. Targeted fetching, not broad crawling.
+- **Actuarial: the Actuaries Institute is the anchor.** For an `actuarial` piece, look first at digest
+  items from `actuaries.asn.au` (Actuaries Digital — the Institute's own publication; its items carry a
+  `topics` field from the Institute's practice-area taxonomy, e.g. *Life Insurance*, *Superannuation and
+  Investments*, *Data Science and AI*) and at press coverage of Institute research such as its Green
+  Papers and Dialogue papers. Build on the Institute's position — that's the profession's own voice and
+  the reader's own body. Insurance trade press (broker appointments, M&A, award roundups) is background
+  colour at best: it can support a piece, never carry one. The Institute also publishes community
+  material — exam results, puzzles, event recaps, "5 minutes with" profiles — which is **not** article
+  material; skip it. Weight *Life Insurance* and *Superannuation and Investments* items most heavily.
 - **Video pool items (`kind:"video"`)** are YouTube uploads — their excerpt is the video *description*,
   not a transcript. Treat them as leads/signal, fold in **with attribution** (name the channel in
   `sources`), and don't build an article solely off one video's thin description.
@@ -103,24 +136,40 @@ worked AU examples — not general overviews.
 - Voice: confident, plain, Australian — a sharp analyst briefing a smart friend. No throat-clearing.
 - Open with the single most newsworthy or useful sentence. Close with a specific next action or a
   dated thing to watch, under a heading you have NOT used this week ("The bottom line" is worn out).
+- **Earn the open.** The `title` and `summary` are the ONLY things the reader sees on the hub card
+  before deciding whether to read — the best article in the world doesn't count if the card is skipped.
+  So the title states the actual finding ("Negative gearing has a runway until 2027"), not the subject
+  area ("An update on negative gearing"); and the summary is the specific promise the piece keeps, in
+  one sentence, not a table of contents. Neither may be vague, coy, or a question the piece answers in
+  paragraph one. Ask honestly: knowing what they know, would the reader open this over their phone's
+  home screen? If not, the angle is wrong — fix the angle, not the wording.
 - Banned more than once per article: *actually*, *worth watching*, *worth noting*, *it's important to*,
   *the key thing*. Use an em-dash construction at most twice per article. Vary sentence rhythm.
 - Titles: informative and specific; no colon-subtitle unless it adds information.
 
-## Editor pass (mandatory — re-read each article before the updates)
-Re-read each article you wrote, as an editor, fix what fails, and state ONE pass/fail line per article:
-1. **Current bar** — `current` pieces: ≥3 dated, concrete facts present; live.json quoted for
+## Editor pass (mandatory — re-read the article before the updates)
+This is where the day's quality is actually won, and with one article there is budget to do it properly.
+Re-read the piece as an editor — not as its author looking for typos — fix what fails, then state one
+pass/fail line per check:
+1. **Card test** — would the reader open this on the strength of the `title` + `summary` alone? Does the
+   title state the finding rather than the topic? (See "Earn the open".)
+2. **Cut it** — tighten by roughly 10–15%: delete every sentence that restates the previous one, every
+   throat-clearing lead-in, every "in this article we'll". Length is a budget, not a target; if the
+   piece is done at 620 words, it's done. Never pad to reach a number.
+3. **Substance** — does it make a claim the reader couldn't have guessed from the title? If it only
+   confirms the obvious, find the sharper angle or the surprising figure and lead with that instead.
+4. **Current bar** — `current` pieces: ≥3 dated, concrete facts present; live.json quoted for
    finance/markets/property (or say why not relevant).
-2. **en-AU** — no US spellings (color, center, organize, analyze, behavior, -ize verbs) in body or headings.
-3. **Privacy** — no proper noun from `profile.local.json` appears anywhere (project names, employer,
+5. **en-AU** — no US spellings (color, center, organize, analyze, behavior, -ize verbs) in body or headings.
+6. **Privacy** — no proper noun from `profile.local.json` appears anywhere (project names, employer,
    people, places). Articles are PUBLIC.
-4. **Sources** — every URL real, resolvable, https, on the publisher's own domain; no redirect tokens,
+7. **Sources** — every URL real, resolvable, https, on the publisher's own domain; no redirect tokens,
    no placeholders.
-5. **Voice** — house style above: banned-phrase count, fresh closing heading, ≤2 em-dash constructions.
-6. **Quiz** — one question per taught concept; correct indices vary; correct option not the longest;
+8. **Voice** — house style above: banned-phrase count, fresh closing heading, ≤2 em-dash constructions.
+9. **Quiz** — one question per taught concept; correct indices vary; correct option not the longest;
    distractors plausible.
-7. **Length** — 450–1,100 words of body text (target 600–900).
-8. **Meta** — `mode`, `interests`, `expire_at` per rules; concept ids kebab-case; taught ≤3.
+10. **Length** — 450–1,100 words of body text (target 600–900), after the cut in step 2.
+11. **Meta** — `mode`, `interests`, `expire_at` per rules; concept ids kebab-case; taught ≤3.
 
 ## Three quick updates, then stop
 1. `data/knowledge.json` — add any genuinely new concept ids you **taught OR assumed**, `is_learnt:false`,
@@ -132,10 +181,12 @@ Re-read each article you wrote, as an editor, fix what fails, and state ONE pass
 3. **Reinforcement + quizbank** — check `data/knowledge.json` for learnt concepts whose `next_review_at`
    falls within the **next 14 days**. The app no longer resurfaces old articles for review — reviews
    happen by weaving due concepts into new articles instead:
-   - For each due concept that fits a topic you're writing about today, weave it into that article:
-     reference it and build on it (don't re-explain it from scratch), list its id in that article's
-     `concepts_reinforced`, and include one application-level `quick_check` question tagged with it.
-     Passing that question advances the concept's review schedule exactly like a taught concept.
+   - If a due concept genuinely fits today's article, weave it in: reference it and build on it (don't
+     re-explain it from scratch), list its id in `concepts_reinforced`, and include one
+     application-level `quick_check` question tagged with it. Passing that question advances the
+     concept's review schedule exactly like a taught concept. With one article a day most due concepts
+     WON'T fit — that's expected, and forcing an off-topic concept in to tick this box is worse than
+     carrying it. The quizbank entry below is what keeps a carried concept from being lost.
    - `data/quizbank.json` — for **every** concept due within the next 14 days (whether or not you found
      an article to reinforce it in today), append ONE fresh application-level MCQ testing it (same shape
      as `quick_check` entries, keyed by concept id). Reviews must test retention, not memory of the old

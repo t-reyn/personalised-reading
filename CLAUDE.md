@@ -37,8 +37,10 @@ scripts/
   ingest.mjs            fetch RSS per source → dedup (data/seen.json) → append to data/pool.json
   lib/                  shared zero-dep helpers (text, articles, feed, interests)
 data/
-  config.json           interests (tabs), siteUrl, passThreshold, freshness  — single source of truth
-  sources.json          RSS feeds per interest (user-editable)
+  config.json           interests (tabs), siteUrl, passThreshold, freshness, cadenceDays — single source of truth
+  sources.json          feeds per interest (user-editable). Mostly RSS/Atom; a
+                        deliver.kontent.ai URL is read as the Actuaries Institute's JSON
+                        Delivery API instead (it publishes no RSS) — see ingest.mjs.
   seen.json             ingest dedup keys
   pool.json             the living pool of ingested-but-not-yet-published items
   manifest.json         GENERATED catalog the app reads
@@ -69,7 +71,10 @@ limits). See `CLOUD_SETUP.md`.
    `data/live.json` (current figures for `current` finance/markets/property pieces), and
    **`data/profile.local.json` if present** (gitignored reader profile: background + per-tab pitch
    level + concepts already known — don't re-explain those; pitch each tab to the stated level).
-3. Cluster related pending items per interest. For each cluster, **author one article**:
+3. **Author ONE article** — the day's whole issue (`config.maxArticlesPerRun` = 1). Its interest is
+   chosen by the cadence rule (highest `days_since_last_article / cadenceDays`, see
+   `skills/AUTHORING.md`); its angle comes from the strongest cluster of pending items in that
+   interest:
    - Copy `templates/article.html` → `articles/YYYY-MM-DD/<slug>.html`, fill every `{{PLACEHOLDER}}`
      and the `#meta` JSON.
    - **Knowledge rules:** read `knowledge.json`. Do **not** re-explain concepts where `is_learnt`.

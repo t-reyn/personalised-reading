@@ -28,7 +28,10 @@
     "https://phys.org/rss-feed/",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q"
   ],
+  "_comment_actuarial": "The Actuaries Institute is the anchor source. It publishes no RSS (actuaries.digital folded into actuaries.asn.au; /feed and every sitemap path 503), so the first entry is its public keyless Kontent.ai Delivery API — richer than RSS: editor-written description, real publish_date, and a practice_areas taxonomy (Life Insurance, Superannuation and Investments, …) carried onto the pool item as `topics`. The second entry catches press coverage of Institute research (Green Papers etc.) that the Institute's own feed never carries. To inspect the API by hand: append &limit=5 and open it in a browser.",
   "actuarial": [
+    "https://deliver.kontent.ai/4f4649d8-6df9-023d-bb6c-14e842b8aadb/items?system.type=article&order=elements.publish_date[desc]&limit=15&elements=title,slug,description,publish_date,practice_areas",
+    "https://news.google.com/rss/search?q=%22Actuaries%20Institute%22&hl=en-AU&gl=AU&ceid=AU:en",
     "https://invisiblebalancesheet.substack.com/feed",
     "https://actuarialnotes.substack.com/feed",
     "https://insurancenews.com.au/rss/daily",

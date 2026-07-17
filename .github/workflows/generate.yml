@@ -87,9 +87,10 @@ jobs:
             echo "no READER_PROFILE secret set — generic authoring"
           fi
 
-      # 3. Author today's articles on your subscription. Bounded turns + the run timeout above keep it
-      #    well under the headless-token window.
-      - name: Author articles (Claude, subscription)
+      # 3. Author today's article on your subscription. Bounded turns + the run timeout above keep it
+      #    well under the headless-token window. One article per run (config.maxArticlesPerRun) leaves
+      #    the turn budget to be spent on research + editing rather than a second piece.
+      - name: Author article (Claude, subscription)
         id: author
         if: steps.guard.outputs.skip != 'true'
         continue-on-error: true # a partial/over-budget authoring run should still commit what it wrote
@@ -97,7 +98,7 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          prompt: "Read CLAUDE.md and skills/AUTHORING.md, then write today's issue exactly as they instruct. Today's issue date is ${{ steps.guard.outputs.syd }} (AEST) — put the articles in that dated folder. Stop when the articles, knowledge.json, pool.json and quizbank.json are updated."
+          prompt: "Read CLAUDE.md and skills/AUTHORING.md, then write today's issue exactly as they instruct. It is ONE article — pick its interest by the cadence rule in AUTHORING.md, research it properly, and run the full Editor pass on it. Today's issue date is ${{ steps.guard.outputs.syd }} (AEST) — put the article in that dated folder. Stop when the article, knowledge.json, pool.json and quizbank.json are updated."
           claude_args: "--max-turns 44 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep,WebFetch"
 
       # 3b. Record this run's tokens + cost estimate to data/usage-log.jsonl (token counts are the

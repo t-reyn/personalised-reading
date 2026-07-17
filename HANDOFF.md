@@ -43,8 +43,10 @@ skills/AUTHORING.md     daily author contract (profile-driven, mode-aware, multi
 skills/SCOUT.md         feed-discovery contract
 skills/GLOSSARY.md      glossary top-up contract (dev term-of-the-day banner)
 data/
-  config.json           interests (tabs), audience, passThreshold, maxArticlesPerRun, siteUrl, repo
-  sources.json          RSS feeds per interest
+  config.json           interests (tabs, each with a cadenceDays), audience, passThreshold,
+                        maxArticlesPerRun, siteUrl, repo
+  sources.json          feeds per interest — RSS/Atom, plus deliver.kontent.ai JSON (the Actuaries
+                        Institute publishes no RSS; ingest.mjs detects the host)
   pool.json             ingested-but-unpublished items (the Discover queue reads this)
   manifest.json         GENERATED catalog the app reads
   knowledge.json        concept graph + is_learnt state
@@ -73,6 +75,35 @@ Reshaped 2026-06-29 to be **profile-driven** rather than fixed-sources-per-topic
   helper; tab counts use unique-unread.
 - The **profile** (`data/profile.local.json`) is the steering wheel: per-interest mode/level/priority/
   want, plus goals + tone. The author reads it to choose topics, pitch, and write applied where asked.
+- **ONE article per day, chosen by cadence (2026-07-17).** The reader wasn't reading a 2/day feed, so
+  `maxArticlesPerRun` = 1 and the freed budget goes into research + editing (bigger fetch budget, an
+  11-point Editor pass incl. a "card test" — the title/summary must earn the open — and a mandatory
+  10–15% cut). With one slot a day, "different primary interest per run" was meaningless, so rotation
+  moved ACROSS days: each interest has a **`cadenceDays`** in config.json (its target gap; this is where
+  priority now lives) and the author picks the highest `days_since_last_article / cadenceDays`, never
+  repeating yesterday's. Σ(1/cadenceDays) ≈ 1.08/day against 1.0 supply — deliberately just
+  over-subscribed so something is always due; a 90-day sim holds every topic near its target gap with
+  none starved. **To see a topic more often, lower its `cadenceDays`** — that's the only knob.
+
+## Sourcing (how the pool gets its material)
+- **The Actuaries Institute is the actuarial anchor (2026-07-17).** actuaries.digital folded into
+  `actuaries.asn.au`, which is why its old feed 503s — the site has **no RSS at all** (every `/feed` and
+  sitemap path 503s; Google News doesn't index `site:actuaries.digital`). Its CMS (Kontent.ai) exposes a
+  **public, keyless Delivery API** which is richer than RSS: editor-written `description`, real
+  `publish_date`, and a practice-area taxonomy carried onto pool items as **`topics`** (*Life Insurance*,
+  *Superannuation and Investments*, …). `ingest.mjs` detects the `deliver.kontent.ai` host and runs
+  `parseKontent` instead of `parseFeed`, so sources.json stays a plain list of URLs. Articles resolve at
+  `actuaries.asn.au/research-analysis/<slug>` (verified) so authoring-time WebFetch works. A
+  `"Actuaries Institute"` Google-News query sits alongside it to catch press coverage of Institute
+  research (Green Papers) that the Institute's own API never carries.
+- **Round-robin per feed (`capRoundRobin`) — load-bearing, don't "simplify" back to recency.** The pool
+  and digest caps used to keep the most recent items across all of an interest's feeds, which handed
+  every slot to whichever source posts most: a daily insurance trade wire (~15/day) filled 6 of the
+  author's 8 actuarial digest slots with broker gossip, and the Institute (~4/week) got **zero** — adding
+  the Institute as a source would have changed nothing visible. Slots are now filled round-robin across
+  feeds (newest-first within each, feeds visited in sources.json order so the anchor gets first pick).
+  Ranking also uses the **article's own date** (`itemTime`), not `added_at`: every feed in a run is
+  fetched seconds apart, so sorting on `added_at` silently ranked by position in sources.json.
 
 ## Spaced repetition (review model)
 Reworked 2026-07-02 — reviews no longer resurface old articles; they're woven into *future* ones.
@@ -149,7 +180,8 @@ then regenerate. It MUST preserve (or update `app.js` in lockstep with) these lo
 - **Generator job timeout cancels the commit.** A job-level `timeout-minutes` killing the run mid-author
   SKIPS Build+Commit (publishes nothing). Fix in place: time-bound the **author STEP** (`timeout-minutes:
   13`) + `continue-on-error` so the run still commits; job backstop 22m. Headless OAuth token window is
-  ~15min → keep `maxArticlesPerRun` small (currently 2) + `--max-turns` modest.
+  ~15min → keep `maxArticlesPerRun` small (currently **1** — one well-researched article IS the issue;
+  the freed turn budget goes into sourcing + the Editor pass, not a second piece) + `--max-turns` modest.
 - **Deploy/CI auth (Windows + gh):** push workflows need the gh token `workflow` scope; push via
   `-c credential.helper= -c credential.helper='!gh auth git-credential'` (the `manager` helper shadows
   the token). In-workflow git push uses `https://x-access-token:${GH_TOKEN}@github.com/...`.

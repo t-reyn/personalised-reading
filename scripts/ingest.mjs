@@ -81,6 +81,44 @@ function cleanVideoDesc(raw) {
   return cleaned.length >= 60 ? cleaned : decode(raw); // if we stripped too much, keep the original body
 }
 
+// The Actuaries Institute (actuaries.asn.au) publishes NO RSS — its own /feed and every sitemap path
+// 503, and actuaries.digital now redirects into it, so the magazine has no feed at all. Its CMS
+// (Kontent.ai) exposes a public, keyless, read-only Delivery API instead, which carries better metadata
+// than RSS would: an editor-written `description`, a real `publish_date`, and a practice-area taxonomy.
+// Detected by host so sources.json stays a plain list of URLs.
+const isKontentFeed = (u) => /^https?:\/\/deliver\.kontent\.ai\//i.test(u);
+// Delivery API items carry a slug, not a URL. Every `article` lives under this path (verified against
+// the live site); if the Institute ever restructures, article URLs 404 and the author drops the source.
+const KONTENT_ARTICLE_BASE = "https://www.actuaries.asn.au/research-analysis/";
+const KONTENT_PUBLICATION = "Actuaries Digital (Actuaries Institute)";
+
+// Map Delivery API JSON onto the same item shape parseFeed returns, so the rest of the pipeline
+// (dedup, pooling, digest) treats it exactly like a feed. Throws on malformed JSON — the caller
+// already logs a failed source and moves on.
+function parseKontent(text) {
+  const json = JSON.parse(text);
+  const items = [];
+  for (const it of json.items || []) {
+    const e = it.elements || {};
+    const title = decode(e.title?.value || it.system?.name || "");
+    const slug = (e.slug?.value || "").trim();
+    if (!title || !slug) continue; // no slug ⇒ no resolvable URL ⇒ not citable
+    // practice_areas is the Institute's own taxonomy (Life Insurance, Superannuation and Investments,
+    // Data Science and AI, …) — kept so the author can judge relevance before spending a fetch.
+    const topics = (e.practice_areas?.value || []).map((t) => t.name).filter(Boolean);
+    items.push({
+      title,
+      url: KONTENT_ARTICLE_BASE + slug,
+      guid: it.system?.id || slug,
+      published: e.publish_date?.value || "",
+      excerpt: decode(e.description?.value || "").slice(0, EXCERPT_CHARS),
+      source: KONTENT_PUBLICATION,
+      ...(topics.length ? { topics } : {}),
+    });
+  }
+  return items;
+}
+
 function parseFeed(xml) {
   const items = [];
   const blocks = xml.match(/<(item|entry)\b[\s\S]*?<\/\1>/gi) || [];
@@ -220,6 +258,49 @@ function needsEnrich(item) {
   } catch { return false; }
 }
 
+// Recency of an ITEM, for ranking the pool + digest. Prefer the article's own publication date over
+// added_at (when we happened to fetch it): sorting on added_at ranks by feed position in sources.json,
+// because every feed in a run is fetched seconds apart, so whichever source is listed LAST wins the
+// per-interest cap. That silently starved the anchor sources listed first. Date.parse handles both
+// RSS's RFC-822 and the ISO stamps the Delivery API returns; anything unparseable falls back to
+// added_at, then to 0 (sorts last, never NaN — which would make the comparator non-deterministic).
+function itemTime(it) {
+  const published = Date.parse(it.published_at || "");
+  if (Number.isFinite(published)) return published;
+  const added = Date.parse(it.added_at || "");
+  return Number.isFinite(added) ? added : 0;
+}
+const byNewestFirst = (a, b) => itemTime(b) - itemTime(a);
+
+// Fill a capped slot budget ROUND-ROBIN across the feeds an interest draws from, newest-first within
+// each feed, rather than by pure recency across all of them. Recency alone hands every slot to whichever
+// source publishes most: a daily trade wire posting 15 items/day buried the Actuaries Institute (~4 a
+// week) completely — the author's digest held zero Institute items while the Institute was nominally a
+// source. Round-robin means volume buys reach, not exclusivity. Feeds are visited in sources.json order,
+// so the anchor source listed first also gets first pick. Legacy items with no `feed` share one bucket.
+function capRoundRobin(items, cap) {
+  const byFeed = new Map();
+  for (const it of items) {
+    const key = it.feed || "(unknown)";
+    if (!byFeed.has(key)) byFeed.set(key, []);
+    byFeed.get(key).push(it);
+  }
+  const queues = [...byFeed.values()];
+  for (const q of queues) q.sort(byNewestFirst);
+  const kept = [];
+  for (let round = 0; kept.length < cap; round++) {
+    let placed = false;
+    for (const q of queues) {
+      if (round >= q.length) continue;
+      kept.push(q[round]);
+      placed = true;
+      if (kept.length >= cap) break;
+    }
+    if (!placed) break; // every queue exhausted
+  }
+  return kept.sort(byNewestFirst);
+}
+
 // Trim to a word boundary at or before `max` chars (never mid-word); append an ellipsis when cut.
 function trimExcerpt(s = "", max = DIGEST_EXCERPT_CHARS) {
   const t = s.trim();
@@ -252,9 +333,9 @@ async function writePoolDigest(config, pool) {
   for (const it of pool.items) if (it.status === "pending") (groups[it.interest] ||= []).push(it);
   const interests = {};
   for (const interest of config.interests || []) {
-    const items = (groups[interest.id] || [])
-      .sort((a, b) => (b.added_at || "").localeCompare(a.added_at || "")) // freshest first (matches the pool prune)
-      .slice(0, DIGEST_PER_INTEREST)
+    // Round-robin here too, not just in the pool: the digest is the ONLY thing the author reads, so a
+    // balanced pool still shows an all-one-source menu if the digest re-sorts it by pure recency.
+    const items = capRoundRobin(groups[interest.id] || [], DIGEST_PER_INTEREST)
       .map((it) => ({
         id: it.id,
         title: it.title,
@@ -262,6 +343,7 @@ async function writePoolDigest(config, pool) {
         url: it.url,
         kind: it.kind,
         ...(it.source ? { source: it.source } : {}),
+        ...(it.topics?.length ? { topics: it.topics } : {}),
       }));
     interests[interest.id] = {
       days_since_last_article: daysSinceLastArticle(manifest, interest.id),
@@ -296,7 +378,11 @@ async function main() {
     const feeds = (sources[interest.id] || []).filter((u) => typeof u === "string" && u.startsWith("http"));
     for (const url of feeds) {
       let items;
-      try { items = parseFeed(await fetchFeed(url)); fetched++; }
+      try {
+        const raw = await fetchFeed(url);
+        items = isKontentFeed(url) ? parseKontent(raw) : parseFeed(raw);
+        fetched++;
+      }
       catch (e) { failed++; log(`  ✗ ${interest.id} ${url} — ${e.message}`); continue; }
 
       let newForFeed = 0;
@@ -310,10 +396,13 @@ async function main() {
         const item = {
           id: `${interest.id}-${hash(it.guid || it.url)}`,
           interest: interest.id,
+          feed: url, // which source produced it — drives the round-robin cap (see capRoundRobin)
           kind,
           title: it.title,
           url: it.url,
-          ...(kind === "video" && it.author ? { source: it.author } : {}),
+          // A parser-supplied publication name wins; otherwise a video's channel attributes it.
+          ...(it.source ? { source: it.source } : kind === "video" && it.author ? { source: it.author } : {}),
+          ...(it.topics?.length ? { topics: it.topics } : {}),
           excerpt: it.excerpt,
           published_at: it.published,
           added_at: new Date().toISOString(),
@@ -374,8 +463,7 @@ async function main() {
   for (const it of fresh) (groups[it.interest] ||= []).push(it);
   const kept = [];
   for (const k of Object.keys(groups)) {
-    groups[k].sort((a, b) => (b.added_at || "").localeCompare(a.added_at || ""));
-    kept.push(...groups[k].slice(0, MAX_PENDING_PER_INTEREST));
+    kept.push(...capRoundRobin(groups[k], MAX_PENDING_PER_INTEREST));
   }
   const pruned = beforePrune - kept.length;
   pool.items = kept;
@@ -395,7 +483,7 @@ async function main() {
   await writePoolDigest(config, pool);
 }
 
-export { parseFeed, isYouTubeFeed };
+export { parseFeed, parseKontent, isYouTubeFeed, isKontentFeed, capRoundRobin, itemTime };
 
 // Run the pipeline only when invoked directly (node scripts/ingest.mjs), so tests can import
 // parseFeed without triggering a live fetch + file writes.
