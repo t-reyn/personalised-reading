@@ -1,12 +1,14 @@
 {
   "_comment": "RSS/Atom feeds per interest id. Fully editable. Validate with: node scripts/ingest.mjs --dry-run. NB: some niche sites (e.g. actuaries.digital, theactuary.com) block scripted requests behind a WAF — use feeds that serve scripts (Google News RSS queries, government/regulator feeds like APRA work well).",
   "_comment_youtube": "YouTube channels are valid sources: add https://www.youtube.com/feeds/videos.xml?channel_id=CHANNEL_ID — items are tagged kind:\"video\" with the channel as source. Find a channel_id by opening the channel and reading the UC… id from page source, or fetch the feed URL to confirm it isn't a 404. The feed gives title + description only (no transcript), so videos seed the pool as leads to weave in with attribution, not full-text sources.",
+  "_comment_software_ai": "YouTube channel_ids in order: UCsBjURrPoezykLs9EqgamOA = Fireship, UCXl4i9dYBrFOabk0xGmbkRA = Dwarkesh Patel, UC4x3CR25WSlvMJUtSPPzwwg = Chris Raroque (builds productivity apps solo; AI coding workflow, shipping, bootstrapping — a reader pick, and the closest source to what he actually does). Name any channel you add here: a bare UC id is unmaintainable, and dead ids have gone unnoticed for weeks. Raroque's videos often fit indie-income too — do NOT also list this feed under that interest: seen.json dedupes by guid GLOBALLY, so the first interest in config order claims every item and the second silently gets none. Let the author multi-tag via #meta.interests instead.",
   "software-ai": [
     "https://hnrss.org/frontpage",
     "https://www.theverge.com/rss/index.xml",
     "https://news.google.com/rss/search?q=%22artificial%20intelligence%22%20OR%20%22software%20engineering%22%20OR%20%22machine%20learning%22&hl=en-AU&gl=AU&ceid=AU:en",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXl4i9dYBrFOabk0xGmbkRA"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXl4i9dYBrFOabk0xGmbkRA",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC4x3CR25WSlvMJUtSPPzwwg"
   ],
   "finance": [
     "https://www.cnbc.com/id/100003114/device/rss/rss.html",

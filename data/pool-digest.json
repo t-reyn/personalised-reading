@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-17T08:34:13.872Z",
+  "generatedAt": "2026-07-17T08:38:34.883Z",
   "interests": {
     "software-ai": {
       "days_since_last_article": 1,
@@ -55,11 +55,12 @@
           "kind": "article"
         },
         {
-          "id": "software-ai-b2ce95b26b37",
-          "title": "Timeline Scan – AI fixes the dates on your scanned photos",
-          "excerpt": "Article URL: https://timelinescan.com/ Comments URL: https://news.ycombinator.com/item?id=48939764 Points: 3 # Comments: 1",
-          "url": "https://timelinescan.com/",
-          "kind": "article"
+          "id": "software-ai-370098bf5a89",
+          "title": "I built an AI agent I actually use every day (code available)",
+          "excerpt": "Hi my name is Chris and I build productivity apps 👋 and today I'm going over the updates I made to my open source AI agent and everything I learned in the process :) (please tell them I sent you 🙏)",
+          "url": "https://www.youtube.com/watch?v=8R6fYMJLI5E",
+          "kind": "video",
+          "source": "Chris Raroque"
         }
       ]
     },
@@ -149,10 +150,10 @@
           "kind": "article"
         },
         {
-          "id": "indie-income-dd4f3a866746",
+          "id": "indie-income-e131888fa525",
           "title": "Bootstrapped Indian Footwear Brand BERSACHE Targets ₹500 Crore Revenue with Expansion Across Hypermarkets, Offline Retail & Distribution Network - The Tribune",
           "excerpt": "Bootstrapped Indian Footwear Brand BERSACHE Targets ₹500 Crore Revenue with Expansion Across Hypermarkets, Offline Retail & Distribution Network &nbsp;&nbsp; The Tribune",
-          "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxObnZvZjRMRXBlSjZxaFozdGdyNzBYRHRCaFR5VUREWTdYb08zZDVLTHdMdU9KZ0lILXBrSkpIaGZyYTVkRTB4N0drZi0zQ2p4WkhfXzAyZ084RWpLbWhlZUJza2o1VjE4Z2kybTZ3ZC1vNFE5V1RKdEQyenNqc0loaW9iT3k1NUVZNFhIZEVKRDhOTFFHQnRoX0lKWEI3LTVzOW1ncGhvYVBDTG5DQ2xjR0VVOEdyUmM2VzFFVkZhUG05cDRJeEVlXzc4S0ROVEstUmpfb0Y1MEhmdHJZS2JHcWRJY1VJMFBXM3J6U01JTWVEOHlOWl9NLTJpWU0xZXdnMkR2Y0U5dzhHWGJ3bTUwaUhrU3J6R2VHNFg0c3dMSThBWXhKemRJTGNQQnVuOHPSAaICQVVfeXFMT250Vld4Y0NYclJVd3VLSmFFVk51bWwyV0RoTVhxWk1OSEFRMkZHdGU5aFNjWHZHc0k0a3pIbHd2c2dhZlRpUTJwYlhvQm5hdERBVUFDMUtBcTVucVd6bm01TGlCYjZ4SlNaZDNneVZaLTNuMkt0b3FmUGZFOEtTSGNRSUxta2pBcUJpY2wwcGFmY0Jlem53UWttUjV1MkVyQTNVWk5WTGtXcFVWUDZSZ3JoYllGamtBdkxodjhYWjNKWUE4WV9oaVhFMDNjaXlhSkp3SmY2NHNvb24tYVhEamlWQVNjX1ppaTlqSUN3OG5iNm1RalY0QmlDNW5YSDJuLXgyYU5tUF9lTlJzamNJSHc4ZTB1RnJrMGFNYjhaa1JoTGc?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNV0ZacDNXVzFhZy1TaVI1aEVlOHhyN2NnMWtQYzhka0hsQ3RlQzNvVElHZFRGdGhHZkhvQnVVaUd0Zkg2ME9pOHdjRnBnYkR1b2tuMHNpcENCYXBLRHRfSTF0SkRyS1FaOEJwTVVVMGpFUE4zUUR5c1FrMDVtYXV6b3ZuSVctbmc1OVZITFdFZHBEcWJ3YXNqWnV2MkZXWUcyWkYwTG1wbGg4a2tjb196aDZjT2FsMC1rMnpPd0I0aVlyRG1FRzNsNnBuYzgxM2ozcEZnX3FyRXNuRGhPMnYxN1lITEFoZU9CMEExMzdiSXBlY1JTNHR5S0JWMnBWeXZkZ3lfVF9ENWRSWDZxMHpmN3dRN2N5aHRLQTNhNm1VRXVqZmZ4bThnejgyQlBKNUpCNnk1dHEtajZzbm9NcUHSAb4CQVVfeXFMTVdGWnAzV1cxYWctU2lSNWhFZTh4cjdjZzFrUGM4ZGtIbEN0ZUMzb1RJR2RURnRoR2ZIb0J1VWlHdGZINjBPaTh3Y0ZwZ2JEdW9rbjBzaXBDQmFwS0R0X0kxdEpEcktRWjhCcE1VVTBqRVBOM1FEeXNRazA1bWF1em92bklXLW5nNTlWSExXRWRwRHFid2Fzalp1djJGV1lHMlpGMExtcGxoOGtrY29femg2Y09hbDAtazJ6T3dCNGlZckRtRUczbDZwbmM4MTNqM3BGZ19xckVzbkRoTzJ2MTdZSExBaGVPQjBBMTM3YklwZWNSUzR0eUtCVjJwVnl2ZGd5X1RfRDVkUlg2cTB6Zjd3UTdjeWh0S0EzYTZtVUV1amZmeG04Z3o4MkJQSjVKQjZ5NXRxLWo2c25vTXFB?oc=5",
           "kind": "article"
         },
         {
@@ -385,10 +386,17 @@
       "days_since_last_article": 0,
       "items": [
         {
-          "id": "finance-bbf2b373c083",
-          "title": "BP, ConocoPhillips to back Iraq with major investments as U.S. seeks to weaken Iran's energy hold",
-          "excerpt": "BP and ConocoPhillips are set to announce billions of dollars of new investments in Iraq on Friday.",
-          "url": "https://www.cnbc.com/2026/07/17/bp-conocophillips-to-back-iraq-with-major-energy-investment-.html",
+          "id": "finance-7e6cc54e510c",
+          "title": "Fighter jet maker Saab smashes expectations as CEO urges procurement rethink",
+          "excerpt": "European governments ramp up defense spending and book orders with the region's companies.",
+          "url": "https://www.cnbc.com/2026/07/17/saab-stock-earnings-q2-report-defense-sales-orders.html",
+          "kind": "article"
+        },
+        {
+          "id": "finance-74ad7caba1aa",
+          "title": "Iran says civilian infrastructure hit by latest U.S. strikes, expands attacks to Syria, Bahrain",
+          "excerpt": "The escalating standoff comes as the fragile truce signed by the U.S. and Iran last month showed further signs of unravelling",
+          "url": "https://www.cnbc.com/2026/07/17/iran-war-us-trump-syria-bahrain.html",
           "kind": "article"
         },
         {
@@ -396,13 +404,6 @@
           "title": "[Dual-Strategy Investing: AI + Non-AI] Japanese equities sho... - Moomoo",
           "excerpt": "[Dual-Strategy Investing: AI + Non-AI] Japanese equities sho... &nbsp;&nbsp; Moomoo",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMk9qRWRwWTB3TmJOX0FaUUtOLXRRcG5SY1hsZnhXc0JEVTlVVDZadTdKYXVWbVY5OG1wTHhSaWpsZlBRazdXUFNyT3E2Z1hNOTU5Q0NnODl1U1ZGLUlKOE42Q01NbkNSRXl2cTlqUW83SHZmSHlMTzZnRWN3c1dOWDZYZlVXRU5kZkUtaU5zZGx0dTkyMXFKQmpUaWhWdjA0YnJwQURLdlp6MENVMFJRMUtIWFk?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "finance-36523ca66dee",
-          "title": "SoftBank sinks over 9% as Asia chip stocks track Wall Street AI sell-off",
-          "excerpt": "The declines followed another weak session for U.S. technology stocks, with the Nasdaq Composite falling 1.47% as semiconductor shares came under renewed pressure.",
-          "url": "https://www.cnbc.com/2026/07/17/softbank-chip-stocks-asia-wall-street-ai-rout.html",
           "kind": "article"
         },
         {
