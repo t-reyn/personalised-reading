@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-16T21:01:47.697Z",
+  "updatedAt": "2026-07-18T00:00:00.000Z",
   "concepts": {
     "sleep-architecture": {
       "is_learnt": true,
@@ -547,6 +547,16 @@
     },
     "statutory-underwriting-scheme": {
       "is_learnt": false
+    },
+    "multi-tenancy-isolation": {
+      "is_learnt": false,
+      "first_taught": "2026-07-18-row-level-security-replaces-a-database-per-tenant",
+      "difficulty": "medium"
+    },
+    "row-level-security": {
+      "is_learnt": false,
+      "first_taught": "2026-07-18-row-level-security-replaces-a-database-per-tenant",
+      "difficulty": "hard"
     }
   }
 }

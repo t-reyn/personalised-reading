@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Fri, 17 Jul 2026 09:14:11 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 20:52:16 GMT</lastBuildDate>
+    <item>
+      <title>One Postgres Feature Is Why You Don&#39;t Need a Database per Customer</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-18/row-level-security-replaces-a-database-per-tenant.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-18/row-level-security-replaces-a-database-per-tenant.html</guid>
+      <category>software-ai</category>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Row-level security enforces tenant isolation inside a single shared database — the mechanism underneath every &#39;one table, one tenant_id column&#39; app, and the reason schema-per-tenant is a scaling call, not a security requirement.</description>
+    </item>
     <item>
       <title>One AI Earnings Miss Moved More Than One Stock</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-17/one-ai-earnings-miss-moved-more-than-one-stock.html</link>

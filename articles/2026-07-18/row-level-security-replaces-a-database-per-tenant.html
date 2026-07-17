@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>One Postgres Feature Is Why You Don't Need a Database per Customer</title>
+  <meta name="description" content="Row-level security enforces tenant isolation inside a single shared database — the mechanism underneath every 'one table, one tenant_id column' app, and the reason schema-per-tenant is a scaling call, not a security requirement." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="software-ai">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-07-18-row-level-security-replaces-a-database-per-tenant">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>💻 Software, AI &amp; App-building</p>
+        <h1>One Postgres Feature Is Why You Don't Need a Database per Customer</h1>
+        <p class="doc-meta">18 July 2026 · synthesised from 3 sources</p>
+        <p class="doc-summary">Row-level security enforces tenant isolation inside a single shared database — the mechanism underneath every 'one table, one tenant_id column' app, and the reason schema-per-tenant is a scaling call, not a security requirement.</p>
+      </header>
+
+      <div class="doc-body">
+        <h2>The boundary is a policy, not a database</h2>
+        <p>Ship a multi-tenant app the fast way and the shape is familiar: one Supabase project, one set of tables, a tenant_id or couple_id column stamped on every row that needs it. Software architecture writer Derek Comartin, at CodeOpinion, argues the industry mistakes this for a database decision when it's really a boundary decision: the real question is not "shared or dedicated database" but "what needs isolating, and from what." His spectrum runs from a shared schema with a tenant column, through schema-per-tenant, to a dedicated database per tenant, with cost and operational overhead climbing at each step — more infrastructure to patch, more backups to verify, more chances a rolling deployment leaves old and new schema versions live at once. Most solo-built SaaS never needs to leave the cheap end of that spectrum. What's easy to get wrong is trusting application code alone to hold the boundary there: one query without a tenant filter, and another customer's rows are in the response.</p>
+
+        <h2>Where the boundary actually lives</h2>
+        <p>In a Postgres-backed stack, that boundary has a name: row-level security. A policy attaches to a table and rewrites every query against it, adding a filter automatically. A policy defined as <code>(select auth.uid()) = user_id</code> turns a plain <code>select * from bookings</code> into one that can only return the caller's own rows, regardless of what the application code asked for. For a team- or couple-scoped table, the same pattern checks a team_id or tenant_id column against a value pulled from the caller's JWT. What matters is that this runs inside the database, not the application, so it holds even against a bug in your own code, an admin script run from a laptop, or a third-party tool connecting directly. That is a materially different guarantee to "we remembered to filter every query," and it's what lets shared-schema multi-tenancy stay safe at the cheap end of Comartin's spectrum rather than a liability you eventually outgrow.</p>
+
+        <h2>Where it quietly fails anyway</h2>
+        <p>RLS earns that guarantee, but three behaviours catch people out. An unauthenticated request doesn't error against a policy: <code>auth.uid()</code> returns null, null equals tenant_id is false in SQL, and the query simply returns nothing, which reads as an empty state rather than a security failure. The JWT a policy reads from isn't live either; remove someone from a team and they keep whatever access their token already encodes until it refreshes, which can take longer than expected. And an UPDATE policy without a matching SELECT policy fails silently rather than throwing, because Postgres needs to select a row before it can decide whether the update is allowed. None of these break isolation between tenants. They break your assumption that the policy is doing what you think it's doing, which is arguably worse, since it fails quietly instead of loudly.</p>
+
+        <h2>The other way it breaks: slowly</h2>
+        <p>A correct policy can still be a slow one, and slow has a way of becoming an incident. Supabase's own benchmarking of RLS policies found that indexing the column a policy filters on cut query time by 99.94%, wrapping <code>auth.uid()</code> in a select so Postgres caches it rather than re-evaluating per row added another 94.97%, and routing cross-table checks through a security definer function that bypasses RLS on the joined table added 99.78% on top of that. Skip all three and the policy still returns the right rows. It just scans far more of the table than it needs to, on every request, for every tenant.</p>
+        <p>That gap between correct and fast enough is what caught one team out, documented on the Postgres-focused blog BoringSQL: a migration cleanup dropped an index on a customer_id column that looked unused. Every existing test passed, same rows, same order. Three days later, as the table kept growing, the query planner quietly switched from an index scan to a sequential scan and the API started timing out, with buffer reads up 3,476% on that one query. In a multi-tenant table that index is very likely the one your RLS policy leans on to stay cheap, and it's exactly the kind of tenant-scoped column where one customer importing a far larger dataset than the rest can tip a fine query into a full table scan overnight: the "noisy neighbour" problem Comartin names as the real cost of sitting at the shared-schema end of the spectrum.</p>
+
+        <h2>The five-minute audit</h2>
+        <p>Pull up any table in your schema that stores more than one tenant's rows. Confirm two things exist together, not just one: a row-level security policy filtering on the tenant column, and a B-tree index on that same column. Then run <code>explain analyze</code> on the query your app actually sends against that table, filtered the way a real request would filter it, and check for an index scan rather than a sequential scan. A policy with no matching index isn't a security gap; the boundary still holds. It's the next production incident with your name on it, waiting for one tenant to grow large enough to trip it.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://codeopinion.com/multi-tenancy/" target="_blank" rel="noopener">Multi-Tenancy Isn't About Databases — CodeOpinion</a></li>
+          <li><a href="https://supabase.com/docs/guides/database/postgres/row-level-security" target="_blank" rel="noopener">Row Level Security — Supabase Docs</a></li>
+          <li><a href="https://boringsql.com/posts/regresql20/" target="_blank" rel="noopener">The tests passed. The plan didn't. — BoringSQL</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-07-18-row-level-security-replaces-a-database-per-tenant",
+  "slug": "row-level-security-replaces-a-database-per-tenant",
+  "interest": "software-ai",
+  "interests": ["software-ai"],
+  "mode": "learn",
+  "title": "One Postgres Feature Is Why You Don't Need a Database per Customer",
+  "summary": "Row-level security enforces tenant isolation inside a single shared database — the mechanism underneath every 'one table, one tenant_id column' app, and the reason schema-per-tenant is a scaling call, not a security requirement.",
+  "tags": ["multi-tenancy", "row-level-security", "postgres", "supabase", "database-architecture"],
+  "created_at": "2026-07-18",
+  "concepts_taught": ["multi-tenancy-isolation", "row-level-security"],
+  "concepts_assumed": [],
+  "concepts_reinforced": [],
+  "sources": [
+    { "title": "Multi-Tenancy Isn't About Databases", "url": "https://codeopinion.com/multi-tenancy/" },
+    { "title": "Row Level Security", "url": "https://supabase.com/docs/guides/database/postgres/row-level-security" },
+    { "title": "The tests passed. The plan didn't.", "url": "https://boringsql.com/posts/regresql20/" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "Your app stores every customer's data in one shared Postgres database with a tenant_id column on each table. A customer asks if their data is 'properly isolated' from other tenants. What's the accurate answer?",
+      "options": [
+        "Yes, a database-level mechanism enforces the tenant_id boundary on every query, not app code",
+        "No, real isolation is only possible with a dedicated database for every single tenant",
+        "Isolation only becomes a real concern once the app has paying customers on it",
+        "No, shared-schema multi-tenancy can never be made properly secure, no matter how carefully it's built"
+      ],
+      "correct": 0,
+      "concept": "multi-tenancy-isolation"
+    },
+    {
+      "q": "A table has a row-level security policy correctly filtering on tenant_id, but no index exists on that column. As the table grows, what's the most likely outcome?",
+      "options": [
+        "The policy silently stops working, and Postgres throws an error until an index exists",
+        "Isolation stays correct, but each query scans more of the table as it grows",
+        "Data starts leaking between tenants as soon as the table passes a certain size",
+        "Postgres automatically creates and adds the missing index the first time the policy runs"
+      ],
+      "correct": 1,
+      "concept": "row-level-security"
+    }
+  ]
+}
+  </script>
+</body>
+</html>

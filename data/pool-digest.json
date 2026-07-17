@@ -1,10 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-17T09:09:58.620Z",
+  "generatedAt": "2026-07-17T20:43:54.087Z",
   "interests": {
     "software-ai": {
       "days_since_last_article": 13,
       "items": [
+        {
+          "id": "software-ai-d57fb7014617",
+          "title": "OpenAI is being sued for stealing, again…",
+          "excerpt": "OpenAI is facing yet another lawsuit, this time at the hands of Apple. In today's video, we'll take a look at exactly what they're being accused of and why Apple are only stepping in now.",
+          "url": "https://www.youtube.com/watch?v=5D4Zqp9GLSc",
+          "kind": "video",
+          "source": "Fireship"
+        },
         {
           "id": "software-ai-85525f6b8187",
           "title": "Netflix says around 300 titles used generative AI",
@@ -24,13 +32,6 @@
           "title": "Own the Outer Loop",
           "excerpt": "Engineers need to own the outer loop, the accountability for these systems. A written version of my AI Engineer World's Fair 2026 closing keynote: quality, verdict, and answerability, the three hidden costs of delegation, and building software factories you can stand behind.",
           "url": "https://addyosmani.com/blog/own-the-outer-loop/",
-          "kind": "article"
-        },
-        {
-          "id": "software-ai-c04d3be4f28e",
-          "title": "Earning taste and judgment",
-          "excerpt": "Taste used to be a byproduct of the reps. Agents took the reps. So if you're junior you now have to go get the taste and judgment on purpose. A builder's look at the weakening entry level, the two debts we now owe, and concrete ways to build judgment when the machine writes the code.",
-          "url": "https://addyosmani.com/blog/earning-judgment/",
           "kind": "article"
         },
         {
@@ -68,6 +69,28 @@
       "days_since_last_article": 1,
       "items": [
         {
+          "id": "design-c168f1774353",
+          "title": "KIMI 3 - 5 Design Tests for UI/UX & Logos",
+          "excerpt": "^-Chat with me and others Who is Gary Simon? Well, I'm a full stack developer with 2+ decades experience and I teach people how to design and code. I've created around 100+ courses for big brands like LinkedIn, Lynda.com, Pluralsight and Envato Network. Now, I focus all of my time and energy on…",
+          "url": "https://www.youtube.com/watch?v=0_PuRInJFrc",
+          "kind": "video",
+          "source": "DesignCourse"
+        },
+        {
+          "id": "design-d2b6190ce348",
+          "title": "AI just called design’s bluff",
+          "excerpt": "",
+          "url": "https://uxdesign.cc/ai-just-called-designs-bluff-2b94bf2f5cae?source=rss----138adf9c44c---4",
+          "kind": "article"
+        },
+        {
+          "id": "design-45ab307f01e0",
+          "title": "When It Makes Sense To “Block” The Main Thread",
+          "excerpt": "The common rule of thumb is to never “block” the browser’s main thread when running JavaScript tasks. But is this a hard rule? Victor Ayomipo describes a use case he encountered involving a screenshot extension where he made an exception to the rule and decided that blocking the main thread was…",
+          "url": "https://smashingmagazine.com/2026/07/when-makes-sense-block-main-thread/",
+          "kind": "article"
+        },
+        {
           "id": "design-561a6c4c141c",
           "title": "How to Kiss a Cannibal",
           "excerpt": "",
@@ -79,13 +102,6 @@
           "title": "From vibe to specs: reclaiming the design process with SAID framework",
           "excerpt": "",
           "url": "https://uxdesign.cc/from-vibe-to-specs-reclaiming-the-design-process-with-said-framework-477a5d0d8932?source=rss----138adf9c44c---4",
-          "kind": "article"
-        },
-        {
-          "id": "design-2ab58e636d7f",
-          "title": "Design system contracts: the component lives in neither Figma nor code",
-          "excerpt": "",
-          "url": "https://uxdesign.cc/design-system-contracts-the-component-lives-in-neither-figma-nor-code-3032d94ca067?source=rss----138adf9c44c---4",
           "kind": "article"
         },
         {
@@ -108,26 +124,27 @@
           "excerpt": "Many companies assume everyone craves new AI features. But the reality is that most people don't want more AI &mdash; at least not in the way most AI leaders envision it. Brought to you by Design Patterns For AI Interfaces , **friendly video courses on UX** and design patterns by Vitaly.",
           "url": "https://smashingmagazine.com/2026/07/people-dont-want-more-ai/",
           "kind": "article"
-        },
-        {
-          "id": "design-0443e3056602",
-          "title": "Designing with web standards: The playbook for this AI moment",
-          "excerpt": "",
-          "url": "https://uxdesign.cc/designing-with-web-standards-the-playbook-for-this-ai-moment-92394884dc0d?source=rss----138adf9c44c---4",
-          "kind": "article"
-        },
-        {
-          "id": "design-914ff665a88e",
-          "title": "UX Conference October Announced (Oct 5 - Oct 16)",
-          "excerpt": "Take up to 5 in-depth training courses, teaching user experience best practices for successful design. Training focused on long-lasting skills for UX professionals. October 5- October 16, 2026.",
-          "url": "https://www.nngroup.com/training/october/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
-          "kind": "article"
         }
       ]
     },
     "indie-income": {
       "days_since_last_article": 3,
       "items": [
+        {
+          "id": "indie-income-a0c90dfae68a",
+          "title": "Bootstrapped Multimodal LLM Learns Medical Knowledge for Automatic EGD Diagnosis and Reporting - Bioengineer.org",
+          "excerpt": "Bootstrapped Multimodal LLM Learns Medical Knowledge for Automatic EGD Diagnosis and Reporting &nbsp;&nbsp; Bioengineer.org",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQM2hOYmJ5ZHZGRWtvZ3VXWFo4TFJZRXF5eEFmR2RfdlQ0UzRDRlZzZjJWallWZ1pFSE13eVBmbHg1MlJBZ3NmMUtacHRRQ3JQVHQ0eER6QnJiWDduZWdlLXNwcDBDZDFyTXNWX1RELTljOE16R3c3NWl4RzFzaGVFdnJzZ1BHV1Z1YTBLZkk0REF4R0d5MWd1RDhDbUlWdEdsVHN0SktMSEg4SXA4LXNuZzhQTUJObVRvMkNj?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "indie-income-530b21aeda48",
+          "title": "The Key Thing Human Brains Have That AI Is Trying To Learn",
+          "excerpt": "In this episode of Decoded, Ankit and Francois walk through the motivation and math behind world models. They cover a number of areas including why sample efficiency is one of the biggest unsolved problems in AI, how deterministic differentiable control and Newtonian physics represent a \"perfect…",
+          "url": "https://www.youtube.com/watch?v=qz4GQ0zUFRw",
+          "kind": "video",
+          "source": "Y Combinator"
+        },
         {
           "id": "indie-income-e372be7c82fe",
           "title": "Inside Cosmos Diamonds’ Bootstrapped Push Into India’s Lab-Grown Jewellery Market - Inc42",
@@ -150,24 +167,10 @@
           "kind": "article"
         },
         {
-          "id": "indie-income-e131888fa525",
-          "title": "Bootstrapped Indian Footwear Brand BERSACHE Targets ₹500 Crore Revenue with Expansion Across Hypermarkets, Offline Retail & Distribution Network - The Tribune",
-          "excerpt": "Bootstrapped Indian Footwear Brand BERSACHE Targets ₹500 Crore Revenue with Expansion Across Hypermarkets, Offline Retail & Distribution Network &nbsp;&nbsp; The Tribune",
-          "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNV0ZacDNXVzFhZy1TaVI1aEVlOHhyN2NnMWtQYzhka0hsQ3RlQzNvVElHZFRGdGhHZkhvQnVVaUd0Zkg2ME9pOHdjRnBnYkR1b2tuMHNpcENCYXBLRHRfSTF0SkRyS1FaOEJwTVVVMGpFUE4zUUR5c1FrMDVtYXV6b3ZuSVctbmc1OVZITFdFZHBEcWJ3YXNqWnV2MkZXWUcyWkYwTG1wbGg4a2tjb196aDZjT2FsMC1rMnpPd0I0aVlyRG1FRzNsNnBuYzgxM2ozcEZnX3FyRXNuRGhPMnYxN1lITEFoZU9CMEExMzdiSXBlY1JTNHR5S0JWMnBWeXZkZ3lfVF9ENWRSWDZxMHpmN3dRN2N5aHRLQTNhNm1VRXVqZmZ4bThnejgyQlBKNUpCNnk1dHEtajZzbm9NcUHSAb4CQVVfeXFMTVdGWnAzV1cxYWctU2lSNWhFZTh4cjdjZzFrUGM4ZGtIbEN0ZUMzb1RJR2RURnRoR2ZIb0J1VWlHdGZINjBPaTh3Y0ZwZ2JEdW9rbjBzaXBDQmFwS0R0X0kxdEpEcktRWjhCcE1VVTBqRVBOM1FEeXNRazA1bWF1em92bklXLW5nNTlWSExXRWRwRHFid2Fzalp1djJGV1lHMlpGMExtcGxoOGtrY29femg2Y09hbDAtazJ6T3dCNGlZckRtRUczbDZwbmM4MTNqM3BGZ19xckVzbkRoTzJ2MTdZSExBaGVPQjBBMTM3YklwZWNSUzR0eUtCVjJwVnl2ZGd5X1RfRDVkUlg2cTB6Zjd3UTdjeWh0S0EzYTZtVUV1amZmeG04Z3o4MkJQSjVKQjZ5NXRxLWo2c25vTXFB?oc=5",
-          "kind": "article"
-        },
-        {
           "id": "indie-income-e85745cc398b",
           "title": "73 Blog Posts To Learn About Bootstrap - HackerNoon",
           "excerpt": "73 Blog Posts To Learn About Bootstrap &nbsp;&nbsp; HackerNoon",
           "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9Bbi1kVjVPVkQyeEtFQ2Q2Y1dHaVlXTWQzNW9TZUotTVB2aTJEUWFtdDYtZWt0c3d5LUwtaHhrQjJodjhEOWcwMU1MVldEbHF3eUNpUE1pdTc0MUp5MElsNUNZNW9Ic0lCRHROcDVn?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "indie-income-c1e3bceeae8a",
-          "title": "House of Fett Targets ₹80 Crore Revenue as Bootstrapped Womenswear Brand Expands to 24 Stores - D2c Insider Pulse",
-          "excerpt": "House of Fett Targets ₹80 Crore Revenue as Bootstrapped Womenswear Brand Expands to 24 Stores &nbsp;&nbsp; D2c Insider Pulse",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNczNjWkJyUmZ6dWdUSjFFLS1tZ2VZYlkxMVFDbmxZRjZPblgzRUVjR1A5SGtHVzBSMmpqTXZrZmFEeFpONU9xT2VXaXVTRDNXeXBEWVFzdElHREgzdktNSDJCTWJFdFVLZk5DeHZhSFc3LXB3NUs3c3pTckh5bVJaQmRaWjBGSmtUSDByVEVsazFlaFdIVUlDRzZJQlJ4V0xPSWdtM2JpZ3VCQ1JfWFczcDFqaE5LeGFkazBaZGV3LTYwWHVIR19kZUttOA?oc=5",
           "kind": "article"
         },
         {
@@ -190,24 +193,24 @@
       "days_since_last_article": 4,
       "items": [
         {
-          "id": "mortgage-broking-369cf99f2c49",
-          "title": "BONAV_A: Profitability surged in Q2, supported by refinancing and robust ongoing production - TradingView",
-          "excerpt": "BONAV_A: Profitability surged in Q2, supported by refinancing and robust ongoing production &nbsp;&nbsp; TradingView",
-          "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOcVA3Smp5SEpkWFFjOUxYNmZRa1Jld0NKbHVqcmNkRzE3UnhuaV9UYUpaVWtJU3M2Y0NWVVlJS1ZUckVSZjJkVzdUMzlqSlBJMFZQa0dGb0xMbGdBbGVkdHBudzZGV1BVY19CQXBFMXlQTkR1ZmdiSjFJdVRNUllOQzc1QjJvQ2h0TFAwSGFFZUJtVjBOWmdXZ01wbzVsNE13ajJ0RWVTQXJPclJMS1RpR0kyNUdUeTFlNGYzNXY4YjJUNmU3S1ZPbkFkdUJCb0t1RGFtTzdDRDhvdDRnY3VLdUpxOHNqUFpqS3N2QVhvVWRQdUpDLU9XcWk3NzdqQlhVTDVLQlZxbw?oc=5",
+          "id": "mortgage-broking-6e72849944ba",
+          "title": "Mortgage rates are climbing again — here's why your next home loan could cost more - EasternEye",
+          "excerpt": "Mortgage rates are climbing again — here's why your next home loan could cost more &nbsp;&nbsp; EasternEye",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1mZ2lwT2lqcldJSFZNUXhzZ1pIQzVvMEhqTjdOcDhWaHQzSDFyVjkxVHIyeUhKcmlWNTdkV2hKaFRhVzhXc1BIelNGRGlFc21uMXlYUmtCNjUzQ0VQcTlYbHBSb2VRY3VURWl1ZFVRU1Nvck5Lc2h3?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-ec0c3781fa72",
-          "title": "Indian founder of $1.2 billion startup says bank rejected home loan application: ‘Just because I am a founder’ | Trending - Hindustan Times",
-          "excerpt": "Indian founder of $1.2 billion startup says bank rejected home loan application: ‘Just because I am a founder’ | Trending &nbsp;&nbsp; Hindustan Times",
-          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPNERyYzBhTHNjbzVjUHFZQ2RvMGNJSk9HTzQzcml6ZnRmTjRuUkx6aXg4cHoxRVU1VFdaSWJaWEt1Umc5MUN4ZHJERHZ6bEEyM0YyN2tEdjZsUHh4cmFFdDYxYlRiV1d2SDJiR1pRUHlRcmhOVFlTMWwzdWpmS0Q4dFh4cjYxYzhRUDJzYTNsdHJJeEhrZ2VldmtTMDZJdFVCb2ZqSVpDUmVzQUFFdjdMc2lKSGdwa2Rzek9mcExscGJFQzZLaFl3bzNfWDBtSFFJOWM1Vl80MmNfMTVvUGdURWpEdGxDRTTSAewBQVVfeXFMTzBlOGhPaHd0QXBkQVRWY2RLaUpZbmVLbmlKbEJPQU5BSHV3UGlkTlk0aWppdjRzdXdSY0VVQlFJMk5UajNKeUFtQ1VWUVQ5VG5aS3hLenV2eTBNaDk5UFNnYkhnN1VHSjNkSlRlYTd3RjlNTHRZQzBkQ0dRZVpRSEFRV29BT1hDU2pRbFZvQWplZDVSbHhiWlpEMXZvYjdBRF9JbUtoeldLUjZpOHdFZWU2RE51dk9RX1M5clhxaVhadk9wUUQzSFdrb2doNUlwQW9COU41T2FGMFFkb2NUajQ3N2tlR3dOMWxZTEo?oc=5",
+          "id": "mortgage-broking-592f8094ce29",
+          "title": "REIT ETF RDOG Rides M&A, Refinancing Wave to 22% Gain - ETF Database",
+          "excerpt": "REIT ETF RDOG Rides M&A, Refinancing Wave to 22% Gain &nbsp;&nbsp; ETF Database",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbkNQS0ZGM3NSa3licXpDSDVadVlSdm90bmlrZEJQRUlSRWlrNTlzQUR1M3lQTHpyTDd0SlZQOEpGcVVBblhxbTRFTlJWdWFMUkYwbjdVX1J5eUVBRkNna2ZTblFJOVA4eHRXSUxibkUyalFZMEVCQmF4Qi0wbDdOUmtyWkhJemVEWV9jX3VWQzYwZ3U5bjdHR1ZQQ3lfU2c5eWZZ?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-a2c46683eb38",
-          "title": "Fayette commissioners OK refinancing debt - Herald-Standard",
-          "excerpt": "Fayette commissioners OK refinancing debt &nbsp;&nbsp; Herald-Standard",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSUVQWkx2NS1vOWJTRjJvZXhqWWhXQW9QSFZia19VbDJZamdldllWYmFqRUF0Wkl0SXV2VFEzNV9jcVI3cnY1eXhmTS1xaWx5Qy00X2w3NVRhZ21rVzJzTUtrRkVVd3hZRHF3NFpXcllVREcyLVJYam5xM2ZfQ0lIZGFLMzdxUjRJVE1vcFk0RkpWR1JYaFE0YXZkNnBpSDljc2Nv?oc=5",
+          "id": "mortgage-broking-844e27bd5992",
+          "title": "Congress must make it easier for guardsmen, reservists to obtain home loans - San Antonio Express-News",
+          "excerpt": "Congress must make it easier for guardsmen, reservists to obtain home loans &nbsp;&nbsp; San Antonio Express-News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOemlaOEMzYjJNa1VRQUhtSFZoZFh3U0NXTHp1UnVtcnlKZ3ozMXRVWjlUeDJJdkFkVEdpdVZKcDBMdFlqc2Y0VXR4WG5uLW85Q1g0Ynd2azd6X3Z3ZmNyOG9idXRUektpZHNJWGtRNHB3elJrd0NHR2hJeWtPa0t4ZFdzOWdfMVZEdjZ1a3BxcVhrYXV1UVpLOUlGeGZsRy1UbGtmNHpQd2tBbXNHY3Zz?oc=5",
           "kind": "article"
         },
         {
@@ -321,10 +324,10 @@
           "kind": "article"
         },
         {
-          "id": "actuarial-5fb605eef178",
-          "title": "Did We Solve the Wrong Problem?",
-          "excerpt": "Seven years after PMIF and PYS, it's time to ask whether protecting retirement balances came at the cost of protecting Australians.",
-          "url": "https://invisiblebalancesheet.substack.com/p/did-we-solve-the-wrong-problem",
+          "id": "actuarial-361ece2ad84b",
+          "title": "Melbourne duo take regional broker awards",
+          "excerpt": "Gallagher&rsquo;s Jodi Sharman was crowned broker of the year for Victoria/Tasmania at a gala lunch in Melbourne attended by 540 professionals today...",
+          "url": "https://www.insurancenews.com.au/daily/melbourne-duo-take-regional-broker-awards",
           "kind": "article"
         },
         {
@@ -332,6 +335,13 @@
           "title": "OBR says national debt direction is “unsustainable” - The Actuary",
           "excerpt": "OBR says national debt direction is “unsustainable” &nbsp;&nbsp; The Actuary",
           "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPS2xjQjIzUlZNSkNzb1EtdkhYd19DWjF2eHUzb0xGR1NWS0Z2b25qbkRDY1VCZ0I2M25RTWM1TDBhZUVzTjN6VDVRc3c2Vm1MNHIxbWg3LUFaaFlMMFI1SktGUDNZZUJCYXJIaXE5cGcxeEhpOEoyNDBmQVc1YzhGQmo4UGpHRWNPZ0NCbw?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "actuarial-922750c5e1f2",
+          "title": "FCA predicts AI will transform financial advice by 2030 - The Actuary",
+          "excerpt": "FCA predicts AI will transform financial advice by 2030 &nbsp;&nbsp; The Actuary",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNEtRVk1nenNvalNaa2l0cS1zU3IzanloRXRyS1JRUl9LRmFMbmVYd1RzbTQ2S2Z5bGZkSFUtQjJFUnNiNy1lY09VSHAwTTZTSlg3SVRkZ0RGRFRfUzhENGN3aWhkZmxseU5OZXBqbFQwcXc3Ri1FSk1vakZ3bXdwSDhXNUZidUxEaGxla3dzemZhYkVT?oc=5",
           "kind": "article"
         },
         {
@@ -372,13 +382,6 @@
           "excerpt": "Tax system favours older Australians over younger, report finds &nbsp;&nbsp; ABC News & Headlines – Australian Broadcasting Corporation",
           "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZEhCT3gxT1o3UU12bFpVaGRXRk9pdmVRbzNUOVJ1clYtRDdIMFoxZ2NQSUhhZjNRQ2Y1TjBncHNvbE1haUo5YV9OX0hYdDIxWVhzalNnS3FOV1A2bG5QRUY2TGc1R2g5ZFRQbmFtUkRZcjdMbkhiU0F6azdLM1FjUDd4UHpic1VRUFRBNF9mSzFkd2U2NFIweWpDUzQxakhoMjExcEt2SXF5M2MtejZFQy1zaw?oc=5",
           "kind": "article"
-        },
-        {
-          "id": "actuarial-8dd301d12ac2",
-          "title": "🤖 Announcing the Actuarial Notes Wiki",
-          "excerpt": "The Actuarial Notes Wiki is a knowledge base for human Actuaries, and eventually AI Agents.",
-          "url": "https://actuarialnotes.substack.com/p/announcing-the-actuarial-notes-wiki",
-          "kind": "article"
         }
       ]
     },
@@ -386,45 +389,45 @@
       "days_since_last_article": 0,
       "items": [
         {
-          "id": "finance-78733a2d1597",
-          "title": "Why is Hemnet stock surging today? - Investing.com",
-          "excerpt": "Why is Hemnet stock surging today? &nbsp;&nbsp; Investing.com",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNQUZIVGRNemh6ZXp0VllKaWo0OGI0NTlNeVU5dWZTS1MxMzhJaEExQWtVbVo5ZXVqSDBSMnlDNmdqZWJTaUlGZGdEZmpndTFSNUlwLTdvRlVCQUxEZmI3eTFSV3o2Uk9fQ0s5NGVGUGlpRENhMi1RSG9tcWdRRHB5ZU1BejZCbF9rcjNzbWNQZkI0NWFHNGdLNHYzVQ?oc=5",
+          "id": "finance-fcab0b54bcd7",
+          "title": "SpaceX stock has cratered nearly 23% since the company joined the Nasdaq-100",
+          "excerpt": "SpaceX's stock plunged further on Friday, a day after it aborted a test flight for its Starship rocket at the last second.",
+          "url": "https://www.cnbc.com/2026/07/17/spacex-stock-starship-test-flight-aborted.html",
           "kind": "article"
         },
         {
-          "id": "finance-e295ef36fb55",
-          "title": "Chinese startup Moonshot AI unveils Kimi model it says rivals OpenAI, Anthropic",
-          "excerpt": "It's the latest AI model from China to close the performance gap with leading U.S. AI labs.",
-          "url": "https://www.cnbc.com/2026/07/17/moonshot-ai-kimi-k3-model-openai-anthropic-china.html",
+          "id": "finance-ca9d925fbd0c",
+          "title": "Iraq and Syria sign agreement to restore oil pipeline that would provide alternative to Strait of Hormuz",
+          "excerpt": "Iraqi Prime Minister Ali al-Zaidi is visiting the U.S. this week. He met with President Donald Trump at the White House on Tuesday.",
+          "url": "https://www.cnbc.com/2026/07/17/iran-war-iraq-syria-oil-pipeline-strait-hormuz.html",
           "kind": "article"
         },
         {
-          "id": "finance-d111164c38ea",
-          "title": "Albanese’s AI moment, super’s new era and CEO pay surprise - AFR",
-          "excerpt": "Albanese’s AI moment, super’s new era and CEO pay surprise &nbsp;&nbsp; AFR",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbWYzSTRpOXE2QUJ3ZnplcjFkaGczUUx3Y3NiSUVua3JKcEdYTUZ0eUc2QUYwNmZCY0ZQb0lUWHFtRnZ2SFMyMUw1LWYwcWxGUDRfLXdqQktvbDd6UDN2Qjl6TmRsTlJYNG9PX2stQUNoSEVnZjRTMjJsamI1cjMyMnR4UzFwX0pobGZKbWRPN1M1V1RtVHJrQlQ2UlgwRU9lajlDajRWaWpCUXFW?oc=5",
+          "id": "finance-56eba2064062",
+          "title": "What's the average Australian superannuation balance at ages 60 and 65? - The Motley Fool Australia",
+          "excerpt": "What's the average Australian superannuation balance at ages 60 and 65? &nbsp;&nbsp; The Motley Fool Australia",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVVpGQUM4Umg2Zk5zV241ME9ZS1ZZa3FRSmxYcjExZG1iYkhpQ0VDSU5WeXVXMnR6NUYtVi1Pank0bnBHOU1qcFVBRDZBb1BlYWhSZkVUX2VOa2NVUWtQWjZDdDk0TTMyZUJMSnkxRUxpaWM1YnBQbUY1ZFhic19MX09BaEZ2eVBLUGhPVks0ODdseW1vTmdmN0o4MnNLbUFFYjRRRldybHE?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-7e6cc54e510c",
-          "title": "Fighter jet maker Saab smashes expectations as CEO urges procurement rethink",
-          "excerpt": "European governments ramp up defense spending and book orders with the region's companies.",
-          "url": "https://www.cnbc.com/2026/07/17/saab-stock-earnings-q2-report-defense-sales-orders.html",
+          "id": "finance-074d0b2090d3",
+          "title": "MaxsMaking Inc. Notified of Anticipated Delisting from The Nasdaq Stock Market - Yahoo Finance",
+          "excerpt": "MaxsMaking Inc. Notified of Anticipated Delisting from The Nasdaq Stock Market &nbsp;&nbsp; Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSDRHdmN3VGNUaS13MzdvNGtyLTRLWkRELVRMUWpsb05SVHV5SlVnOEdqTXRKNDFpcUFvUHEtV2NPNmlXYkNXbDJtaXVxdXVVU1l5SGhja2xBRU1PWXZKQXdPdkh4UGhiLXNVMExlWXFCOTVMaENVZG1YZEdUblZmd2otRE5ZUTE4MkZjSG01TW40WjJrNHM3QWRLNDcwX1EzOEptTVctczRjSEpwNmxN?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-400e9b3a190d",
-          "title": "Hanson blames end of White Australia policy for ‘immigration problem’ - AFR",
-          "excerpt": "Hanson blames end of White Australia policy for ‘immigration problem’ &nbsp;&nbsp; AFR",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObVZpLVY5V1pGQnBObE9VU3FFQUVwT09PbHhObndoZVdHVUhJS3ZkU21NR1l6VkpWVzN5ankwbGtqUUFkRGRDemNPaDI2M0JScU1QQlp6Q1llcUVMQjhwTWtQT0d6dENfdVlRUXpoc0hBUkFYWkd4NFdpSEFtdGJCRjZhUzJGOG1lR05kVUhXVEU0cmo0T05xZTBkUQ?oc=5",
+          "id": "finance-f8c8cc64e247",
+          "title": "Leaked meeting minutes reveal One Nation’s election planning - AFR",
+          "excerpt": "Leaked meeting minutes reveal One Nation’s election planning &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObmp0cTN0NzhXZjUzVjIyTmpmSE1NYmxocnFQOGh2alBBd1I3U3g4NFpJckhLbGlaN1dlREl3dU1mYXZjWmhHWXdqaGJQaUhzM0hsdVhBU0V3eTE4aXpubFN1dEFYajlnTk5jVkMxVUlUNVNvUGswVEVBWGk1Z2xTZ05GNGNpakI1allnODNNeE1FZmptZFg3bk5jZW5mQVp0aWFnNUM0VE4?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-0a77108e759d",
-          "title": "Under-fire Telstra bosses admit key software update was ignored - AFR",
-          "excerpt": "Under-fire Telstra bosses admit key software update was ignored &nbsp;&nbsp; AFR",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdlIyRUJ2OTd2WThvY3lxUjM3aUFDQXNzemJLaUJrY3QwZEdXcmdMQW5Rd0JoaFJTbjJwSVlhVjItQVhoMWhsQmZsX0lRR3AwSEpUWjhiZV9hOWtDTldHcWE5R09yalJiNGo4Vi10aEx4ZXhoaGlfWkZfUWZaSGJ0T1ktdk9Xd1I0UDh6QTJCQXJIQUZEbU1LWFY3THVtaWlpQThYSHd2d3RidHdmYklFUEVibkNrRFk2YTY5TDQ5dUJBdw?oc=5",
+          "id": "finance-3d60aaad7145",
+          "title": "Deeming dumped from Victorian Liberals - AFR",
+          "excerpt": "Deeming dumped from Victorian Liberals &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPa3V4UUIzSC1oVlFTRlFGNVR4TjVua2xPMHpMN2gwQnFRMks4ZUxVb2pkVmtnckFTSFNsYzlBUERaWHZmOHlCamZGdGxwNWVqZGloTlRpaTd5QzNheW1YUWdQQ1J6ZndTaGtUV1hUS2ZDRUNOeWFqTVhaa3lreUpYdUhCbkJNMnhneTA4?oc=5",
           "kind": "article"
         },
         {
@@ -435,10 +438,10 @@
           "kind": "article"
         },
         {
-          "id": "finance-23d10b1c9180",
-          "title": "Nobody Died, But You'd Never Know It From the Share Price — A cyclical trough dressed up as a terminal diagnosis, at a distressed price, with the recovery thrown in for free",
-          "excerpt": "Terveystalo cut guidance on a mild flu season, and the market priced Finland’s dominant healthcare franchise for the morgue. I’ve done the autopsy. The patient is fine.",
-          "url": "https://boredombaron.substack.com/p/the-market-caught-a-cold-and-sold",
+          "id": "finance-010d75562763",
+          "title": "Nobody Died, But You'd Never Know It From the Share Price — A cyclical trough dressed up as a terminal diagnosis, at a distressed price, with the recovery thrown in for free - Boredom Baron",
+          "excerpt": "Nobody Died, But You'd Never Know It From the Share Price — A cyclical trough dressed up as a terminal diagnosis, at a distressed price, with the recovery thrown in for free &nbsp;&nbsp; Boredom Baron",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE92eVllUFhKQTRhWkpGREFiaU5QS0t5TGZsWWJ3c1BOdHp5ZjVwbmVKT2UwSlp6VEpJZGNtU0V6VDNYTmJLeThZUS12Z3drb0xwenNVbXJoNHN6M2Z1allQZEJWMjFUSnJyUTVBY1psc1F2eWxQM21rcQ?oc=5",
           "kind": "article"
         }
       ]
@@ -447,31 +450,31 @@
       "days_since_last_article": 2,
       "items": [
         {
+          "id": "health-8ca16c32d51b",
+          "title": "Hypoglossal nerve stimulation for obstructive sleep apnea shows downstream health benefits - Medical Xpress",
+          "excerpt": "Hypoglossal nerve stimulation for obstructive sleep apnea shows downstream health benefits &nbsp;&nbsp; Medical Xpress",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdVhiaGFPcmdKRGlWMzAtQmd0WDRwS2xRcklpUTJoQy1fdnFxUHBJRnNSVkRJUm1uMlJSWWpyUHdXZUtILVBuU1M0VDczVnQtN1hOSkQzUFVZVkF2N0lVTVFpb0x0UVMtSDdJbFUwbVVwTGZ6ZGh4Y1RrMXp6eWdGTXJhcmdsRUU0c19wOVVXNWRkSWkt?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "health-c544483049fa",
+          "title": "Spinal surgeries, hip replacements and a new show: Georgie's not done yet - Blayney Chronicle",
+          "excerpt": "Spinal surgeries, hip replacements and a new show: Georgie's not done yet &nbsp;&nbsp; Blayney Chronicle",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQUtNcGw3dWVJQTRFeE9DTEgtODFwVVlOZ00zLTV2TVdrOTVTYjh1YmFZYUFFNldIdE10RDFzOTFvWVZMa0s2dUxiQ0cxSDFXOVdLb1lCd2FpU2VldzBqZnlFQ3NTT0N2Rm50UDFUUGx6Y2l6MDJPY2JOZXFXUjFLaFBHRVAtcEtUTVZzNVUyZHdIXzl6TU5KQmJINVlnMlBnVngyOWd2aEFQVGFEeFA5TlpRTjBia2Uz?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "health-b5a3cfec4444",
+          "title": "Night owl diet: What your sleep schedule says about what you eat, and how it affects your body - SMH.com.au",
+          "excerpt": "Night owl diet: What your sleep schedule says about what you eat, and how it affects your body &nbsp;&nbsp; SMH.com.au",
+          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNaWQ4cUFmR3h0TFIxNGpvRFRhQUNONjFjdnJEVmxpUU1WUG9WN3FnV1I3UlNoSzU4RFlvb2FnX0hkU3JrM1hpR0dIMlIyT3hFSUl3RXV3YTZlakJZdkhXV3lGNmRkOXBjZ2kwVzJGYnNQTkF1NVNWT01ZQnpXMkFIV2tYSm9ZNGVQMlB2OUxMUzN4RlpuaXFUaEVHaHhUZU1OVDBoVWdrQm9mbUxZNFp0R1EyMXY5bXlxbUtGRGlBV0dGUjJjMlJkMkZTMXlhR3h1aVZDd1VEdWU?oc=5",
+          "kind": "article"
+        },
+        {
           "id": "health-04a4a400e907",
           "title": "Scientists tested 39 sweeteners and found unexpected gut effects",
           "excerpt": "A large laboratory study found that many commonly used sweeteners can directly change the growth of gut bacteria. Researchers identified more than 100 cases in which sweeteners behaved differently when combined with medications, caffeine, or flavorings. The combination of isosteviol and the…",
           "url": "https://www.sciencedaily.com/releases/2026/07/260716023552.htm",
-          "kind": "article"
-        },
-        {
-          "id": "health-c1459617c227",
-          "title": "Long Sleep Duration Linked to Higher Alzheimer’s Blood Biomarker - Technology Networks",
-          "excerpt": "Long Sleep Duration Linked to Higher Alzheimer’s Blood Biomarker &nbsp;&nbsp; Technology Networks",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQNm93UktCc0ZkYmZUb1dKTG9EZWFOUWVfZkprUmlSQ0hIYkl5M1pxcEtwQXZsdXJlR1FxdkRLazN1Ry1nZ244WHpJdU9oTnZRY29DSUNtZXNVaXJvRUZSNkVyM2g2N0pXTUQxOUIwR3o5Tk9wWW1TMWVnYklXaDVtdXM3R0dnNWdKUHBJc3RNY3lONXU0NlFBWXhsQVlwbU02dm1OZGFoWXlvQnVEYW1CbG85WQ?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "health-1571bb63da5d",
-          "title": "Cam Young provides update on his fitness after opening day of The Open Championship - hitc.com",
-          "excerpt": "Cam Young provides update on his fitness after opening day of The Open Championship &nbsp;&nbsp; hitc.com",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMnRuRUpVcXhWRFNLVUZ6OURHYTRvdTFNc3lmbEMyeTJ1TGtveG5hcnYteGFBV3VuV2NMbk1YLU5zcWRISEtWcTM1MGhMZno3QUZxeGduZV95aHZhOE5wa3JIY2ZZUmd0dFdRUGU3TkhDcnY3ZnhDWXZiSXFRLWowd3F1c1NmaVBuN0M3c28wRjVFdEw5UVVTTF9mMWtOUV9VVk0wZHFLWjc?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "health-3270e1a4ae31",
-          "title": "She didn't join a gym until 71. Now she can deadlift 100kg and do pull-ups – here's how - Women's Health",
-          "excerpt": "She didn't join a gym until 71. Now she can deadlift 100kg and do pull-ups – here's how &nbsp;&nbsp; Women's Health",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNnhiaFVDVWhULTdSUTQzWGgxNXR2NWJmSEpndU5QWngtcGNyM3Z1S3haWnFzMmFyajEyV2swUEtpZkJ3UDhQN3pwZWhETnhDRUNGWUFqTVNONkU0M1dqWW5BbEpHTkNrNGdSbE4tVzk4VXcyWFZjU0tKQmluVFRBQWFCY3dMU08wVWJVeVBpeFdBVjVPcWRGcmxkeVZBOHhmNWp3?oc=5",
           "kind": "article"
         },
         {
@@ -509,45 +512,45 @@
       "days_since_last_article": 2,
       "items": [
         {
-          "id": "videography-c896bc803a9d",
-          "title": "George Lucas Says AI Is 'the Future' of Filmmaking and There's Nothing You Can Do About It - Fstoppers",
-          "excerpt": "George Lucas Says AI Is 'the Future' of Filmmaking and There's Nothing You Can Do About It &nbsp;&nbsp; Fstoppers",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMEZ6Q1RScWhoTVFPOVNOZUVMa2dGTjdQNTZfdHlMa01OZEJwWkRORjlqdE1YUVdLcXhrT2xHQ0VXNEt4Z1pzVzN5TkRSdXk2OXFVRGNSNGdNb25kRXVIVWxSN01iX3hqOEVObGRjT05LbzE5VzhpallTUElIVGZQWlFjMWU5Rzcyc1lyYmVkYll0S1BqeW9aQVRhQ0xZOExlNzhFaUhvb0tCZlNPM2Y3aTdfR090MG1pdDJNOGQySEw?oc=5",
+          "id": "videography-dd7163cbd95f",
+          "title": "This DP Solved a 6-Page Dinner Scene with One Light",
+          "excerpt": "In The Isolate Thief , Ada Horn (Mackenzie Foy) is stranded at a snowbound Union Army outpost in Oregon after her father dies. She stumbles on a stash of stolen gold and decides to hide it. Cue a gang of outlaws led by Sean Bean, who show up and take over her cabin. Now it's Ada versus the bad…",
+          "url": "https://nofilmschool.com/isolate-thief-lighting",
           "kind": "article"
         },
         {
-          "id": "videography-4cce5626443f",
-          "title": "Castlevania: Belmont's Curse isn't technically connected to the Netflix anime, but its cinematography was inspired by the show - PC Gamer",
-          "excerpt": "Castlevania: Belmont's Curse isn't technically connected to the Netflix anime, but its cinematography was inspired by the show &nbsp;&nbsp; PC Gamer",
-          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQbGxaZ3NxRTdSWE83eGlkczRkc2tZQWxrMWV4angzWlJxWU8ydHZ6NVV2ZnZ5RFNnNkp2R1p1UW9mTGIxZHVOZi1UX3JPMlhTMy1UalhVZ3FTVEx1Q18tTlBXYW1JZ2l2QUcwOFRaeUpqd2UxY1pBaTJWbDZyRjJOVjR6NlAzNWRPZG1JNHBMMnltdUhNSFRSSG9zdTI1aW5sQkJPQ3EtOURUV2dvMXdMUlhESXBIaXdmdTlTOVNqZHhtQlF5N2FYOG9rZi1HVE5zbFJsQzVNRnpoSlBGblAtZVMwaF9FSm10TjY4WUZR?oc=5",
+          "id": "videography-7972f28f15ee",
+          "title": "The Odyssey Audience Reviews: Epic Filmmaking That You Need to See on the Biggest Screen Possible - Rotten Tomatoes",
+          "excerpt": "The Odyssey Audience Reviews: Epic Filmmaking That You Need to See on the Biggest Screen Possible &nbsp;&nbsp; Rotten Tomatoes",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4zV3pZSWQ2eF9hWGpBRGlYNE1UalpVbUtHdU9hT280SExYNzdTRGZQUTVxT3YzdUpCUVdoWlVoNmx1TkxxRGs0NWszbl8yenpXOEREblZpSTlaN3BEZXBicXNWbFd5RGU3TWYycWhxd0VBTUlKWTFRMVIwZHVWcjg?oc=5",
           "kind": "article"
         },
         {
-          "id": "videography-fee761d54ae2",
-          "title": "Literacy, fairies and ... tamales? Nonprofit guides Santa Fe kids' reading through filmmaking - Santa Fe New Mexican",
-          "excerpt": "Literacy, fairies and ... tamales? Nonprofit guides Santa Fe kids' reading through filmmaking &nbsp;&nbsp; Santa Fe New Mexican",
-          "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQNXlEdVdPMFVieWFoX3NVYjY2QVpjb3BRTnhJUnM2cUFOaUZsb1hOTE1QcDN6LS1JTHNuSFIxeXQyakR4SzVRNHFVN3p4V0M3b3JwNUdCYXRZZ1FKVU5xM3Vlb25KY0pvSzhjbGM4eEk2OThBOHJpY0dRX1hwb2k1bFFBUU9ReHJDUUR1LTlXTlM4bGNsUHV0QjFuaTdYTFhBeHplaEhUWFdQcUhVVkQ2V2MtUUZJRWRDQmhaWktVeENJcmZiRWppems2V1lQTjQwMGQwWFBMREU3OUJNSU8yWXlzUk9rWFVxZ2dXLVhIcm5hekhULTBKZlJRVmQtTExUSlREcUNYeTUwUUc4SnJoRUlvWQ?oc=5",
+          "id": "videography-1a30061470e5",
+          "title": "Meet Martini: A Film Set for AI Video That Aims to Help Filmmakers Streamline Their Shots",
+          "excerpt": "Again, love it or hate it, AI is here , and it’s revolutionizing every aspect of film and video. And while we’ve tried our best to cover different AI models, tools, and apps, there has been more of a stark divide between generative AI video models and AI-powered workflow tools over the past year or…",
+          "url": "https://nofilmschool.com/martini-ai-film-set",
           "kind": "article"
         },
         {
-          "id": "videography-0acd95bc878d",
-          "title": "4 Lies About Famous Movies Everybody Fell For",
-          "excerpt": "Countless movies over the years have making-of stories that are almost as eventful as the film itself. Sometimes, some of the details of these making-of stories contain embellishments, different versions of the truth, or straight-up myths. Let’s take a look at some of the most famous stories about…",
-          "url": "https://nofilmschool.com/famous-movie-lies-everybody-believed",
+          "id": "videography-ccaa911c42ad",
+          "title": "Why Ryan Coogler’s Bold Choice to Shoot 'The X-Files' on 65mm Changes Everything",
+          "excerpt": "I have been so excited about Ryan Coogler's X-Files reboot since it was announced, and now I am popping to hear that he shot the pilot on large format film. TV is about to get even more epic. According to a report from World of Reel, Coogler has officially wrapped production on a two-hour pilot…",
+          "url": "https://nofilmschool.com/x-files-65mm-ryan-coogler",
           "kind": "article"
         },
         {
-          "id": "videography-e2a5dd444acc",
-          "title": "Color and Contrast Controls in Color Mode: Why Zones Work Better Than Lift/Gamma/Gain",
-          "excerpt": "If you’ve spent any time with color tools, you’ve probably run into lift, gamma, and gain. Shadows, midtones, highlights: adjust each one, try to balance them against each other, and repeat until the image looks right. Push the highlights up, and midtones shift. Pull the shadows down, and contrast…",
-          "url": "https://nofilmschool.com/color-and-contrast-controls-in-color-mode-why-zones-work-better-than-lift-gamma-gain",
+          "id": "videography-8e454cc5e6d3",
+          "title": "A new era of Filmmaking at Tonbridge - Tonbridge School",
+          "excerpt": "A new era of Filmmaking at Tonbridge &nbsp;&nbsp; Tonbridge School",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQOURZeWdQbmhndGNsOFZwMmJYaE5rc3E0WnY1QkhRQTlGYXA3UjFEZFIyNkp5SjYxbHNYTGVieVFqLUl4Smh2TmlQY1ppNWc5bXdPSUIyeEFLQ0JYbEtPSjR5T3V6amxYVmc2RDdjbjVTS1owVXRPQnA4MWxxTDZFNFBNUnd4NWJQUG9IUG1yeGVZQQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "videography-28bbab333750",
-          "title": "Screenwriting Lessons From ‘Toy Story’ Every Writer Needs to Hear",
-          "excerpt": "Last month, we received the 5th film in the Toy Story series . As one of the most successful, longest-running animated franchises of all time, each film has received tremendous praise over the years. The first film is now over 30 years old, and remains a cornerstone, not just in the animation…",
-          "url": "https://nofilmschool.com/screenwriting-lessons-from-toy-story",
+          "id": "videography-75fd71d8909f",
+          "title": "Whether It Be Romantic Lead or Writer-Director, Jack Martin’s Ready to Tackle Whatever Role Comes Next - The Hollywood Reporter",
+          "excerpt": "Whether It Be Romantic Lead or Writer-Director, Jack Martin’s Ready to Tackle Whatever Role Comes Next &nbsp;&nbsp; The Hollywood Reporter",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPR000UWJjY3htT25YdFdBNGxHNTNqRzhGdXN2Rnozenlac0FNY2FqMS12RExFb1BQMC1ET0ZPdGpfdURHTmIwYzdlOURIdHl1Tkg1SFVUdFBqNmtuZVphaklCY2VvbHd6YXVQSmNJTHRMcTRvSWNFMENieFVmdDZ5dzZyMGtmSXVaRzZzaHdYaUZkaGpORUc4d1k2YWdHSUs5anZHRWdkUQ?oc=5",
           "kind": "article"
         },
         {
@@ -570,24 +573,38 @@
       "days_since_last_article": 3,
       "items": [
         {
-          "id": "science-5d55481322c6",
-          "title": "SpaceX Starship launch aborted on the pad at the last moment",
-          "excerpt": "SpaceX's mega Starship rocket came within a second or so from blasting off on a test flight Thursday, but some of the engines failed to ignite, triggering a launch abort amid billowing clouds of smoke and vapor.",
-          "url": "https://phys.org/news/2026-07-spacex-starship-aborted-pad-moment.html",
+          "id": "science-18b7922f7f85",
+          "title": "Herbularyo card game blends Filipino folklore and organic chemistry",
+          "excerpt": "Medicinal plants have long been a cornerstone of Philippine traditional medicine, dating back generations. Tawa-tawa, a low-growing herb that thrives in open grasslands, is a valued supplementary treatment for dengue; the gel of the succulent aloe vera can help soothe a scraped knee; boiled guava…",
+          "url": "https://phys.org/news/2026-07-herbularyo-card-game-blends-filipino.html",
           "kind": "article"
         },
         {
-          "id": "science-31e0133aafb3",
-          "title": "Autonomous Maritime Technology to Support Greenland Climate Research Mission - Future Transport-News",
-          "excerpt": "Autonomous Maritime Technology to Support Greenland Climate Research Mission &nbsp;&nbsp; Future Transport-News",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOeGZSZDdBLTBORkJNN0pBeW82S0RyUG93eTFFUlk3c0xhU2U1cXpxY1dmWGxHNHk3TE91WjQ4bTRkM19FdlpxaDZGX0hjdEQxYk5abUwyWlRCb2Y3YTJ4S1NYS1M4dkxacnQ5bzVOMlFPYXppWjdOaVg3czdnd2NUVG5FNFhKcWg3aGVsUXBMRTRhb2JHWFJ2dzlQaVRuY0JnelcxMkpLY2N5aS1CSGtZ?oc=5",
+          "id": "science-fe0a1a329b09",
+          "title": "War Department Pours $7.1M Into Space Solar Coverglass - Mirage News",
+          "excerpt": "War Department Pours $7.1M Into Space Solar Coverglass &nbsp;&nbsp; Mirage News",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPWlMyRTIwTGVRQlctSk93Y05kbDJqSV8wUV9NdkdndThsdTF1em5ycW5GZEkzOW5JTmRQb2VYTXlGNDRkb2dsYXVSaXdjSGpFYks0aGFURU1zVkFxOC14QWNsS0VObEtfQUV0Y21uZUF3cU5sQWtRTEJTLV9PUDhaQXc1M2U?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-b6684354bf4d",
-          "title": "Serbia joins NASA's space exploration partnership Artemis Accords - SeeNews",
-          "excerpt": "Serbia joins NASA's space exploration partnership Artemis Accords &nbsp;&nbsp; SeeNews",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQOXpRdzNDZ256WXBELUdvSUJiVE5XYkhMTU5iem5aXzZYUExSRkRCUEFMc2hLLXBTY0VDRTBqRDZsMGNlbGVvWUx1MnBrWVhwMjBkd2hYVnc3SkthZ0dxNDNhV2VYMEoxci03TkdIOHg2Ri04ZFpvT1pSQ0E1TzRJOFlMeE4xN0VPYWxkN3I4SnY3d3EybUtuQWZvYWlXQQ?oc=5",
+          "id": "science-13f4c35d9045",
+          "title": "The Climate Issue newsletter: The dangers of global dimming - The Economist",
+          "excerpt": "The Climate Issue newsletter: The dangers of global dimming &nbsp;&nbsp; The Economist",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdnRrVjBPYlJoWl9QR3QwNHVNdFlIM1JENEphcGdxTmxoeEdMejMzSWQ3N0ZYUm5zTjBtdXRmMk9ZdjdQaEtzdjFOZld1eFAtNUN5V2JsVk1xZS1kY1RJRExlSXZpY2w2Y3VjdzlNQjdVdVFTa2o5YmYyN0V2NHpxSVMzUDl4aFF2ajlWWW85WTg3eVhDbnNIYVd4X2hvLTRLNUd4VFlIXzQ5MHdsQlg0ODhpZXFWYkplZVE?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "science-0d3f5ab3133d",
+          "title": "Amazon soy pact collapse could add 1.4 million hectares of deforestation by 2036",
+          "excerpt": "The collapse of a landmark Amazon soy pact will drive at least 1.4 million hectares (3.5 million acres) of extra deforestation in Brazil over the next decade, releasing carbon emissions equal to Canada's annual output, according to an analysis published Thursday.",
+          "url": "https://phys.org/news/2026-07-amazon-soy-pact-collapse-million.html",
+          "kind": "article"
+        },
+        {
+          "id": "science-09c08a81cd64",
+          "title": "Martin Picard’s Mitochondrial Theory of Mind",
+          "excerpt": "The biologist’s bold “energetic view of life” looks to the body’s strangest organelles as the link between cells, health, and mind and the foundation of our experience of being alive. The post Martin Picard’s Mitochondrial Theory of Mind first appeared on Quanta Magazine",
+          "url": "https://www.quantamagazine.org/martin-picards-mitochondrial-theory-of-mind-20260717/",
           "kind": "article"
         },
         {
@@ -598,24 +615,10 @@
           "kind": "article"
         },
         {
-          "id": "science-2a4b325dde22",
-          "title": "Bones reveal ancient Egyptian princesses born 4,000 years ago used weapons",
-          "excerpt": "For decades, scientists have disputed the meaning of the weapons found in the burial chambers of some ancient Egyptian princesses. Were they symbolic or practical tools? Now, a reassessment of five royal women's mummies from the Middle Kingdom has shown that some princesses buried with weapons…",
-          "url": "https://phys.org/news/2026-07-bones-reveal-ancient-egyptian-princesses.html",
-          "kind": "article"
-        },
-        {
           "id": "science-36e4ad49df1f",
           "title": "Graphene nanoribbons survive gamma radiation, revealing potential sensors for fusion reactors",
           "excerpt": "University of Arizona researchers have demonstrated a promising new application for graphene nanoribbons, a nanoscale semiconductor material with the potential to withstand extreme environments. The team's findings could help clear a key hurdle to bringing fusion energy to the electric grid.",
           "url": "https://phys.org/news/2026-07-graphene-nanoribbons-survive-gamma-revealing.html",
-          "kind": "article"
-        },
-        {
-          "id": "science-251933e5c64f",
-          "title": "Climate change reshapes waterborne disease risks as pathogens respond differently, review finds",
-          "excerpt": "Climate change is altering the spread of waterborne diseases around the world, according to a comprehensive review published today in Nature Reviews Microbiology. The publication is the most up-to-date, comprehensive analysis examining how climate change influences waterborne diseases.",
-          "url": "https://phys.org/news/2026-07-climate-reshapes-waterborne-disease-pathogens.html",
           "kind": "article"
         },
         {

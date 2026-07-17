@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-17T09:14:11.684Z",
-  "count": 48,
+  "generatedAt": "2026-07-17T20:52:16.937Z",
+  "count": 49,
   "articles": [
+    {
+      "id": "2026-07-18-row-level-security-replaces-a-database-per-tenant",
+      "slug": "row-level-security-replaces-a-database-per-tenant",
+      "interest": "software-ai",
+      "interests": [
+        "software-ai"
+      ],
+      "mode": "learn",
+      "title": "One Postgres Feature Is Why You Don't Need a Database per Customer",
+      "summary": "Row-level security enforces tenant isolation inside a single shared database — the mechanism underneath every 'one table, one tenant_id column' app, and the reason schema-per-tenant is a scaling call, not a security requirement.",
+      "tags": [
+        "multi-tenancy",
+        "row-level-security",
+        "postgres",
+        "supabase",
+        "database-architecture"
+      ],
+      "created_at": "2026-07-18",
+      "expire_at": null,
+      "concepts_taught": [
+        "multi-tenancy-isolation",
+        "row-level-security"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 840,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-18/row-level-security-replaces-a-database-per-tenant.html"
+    },
     {
       "id": "2026-07-17-one-ai-earnings-miss-moved-more-than-one-stock",
       "slug": "one-ai-earnings-miss-moved-more-than-one-stock",
