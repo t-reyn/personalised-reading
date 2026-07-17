@@ -155,6 +155,22 @@ Code review. Both are **life** policy with a thesis; neither is a trade brief.
     logged-in member downloads the byte-identical file.
   - `trimPdfLead` strips the ~400 chars of letterhead/addressee — without it the digest's 300-char
     window shows a postal address instead of the Institute's position.
+- **A LOCAL `ingest.mjs --dry-run` CANNOT validate feeds — only CI can (2026-07-17).** Some publishers
+  answer a datacenter IP differently, so the same commit reported **45 fetched / 0 failed locally while
+  CI silently dropped four feeds with 403** — for weeks. Never conclude "the feeds are fine" from a home
+  run; check `gh run view <id> --log | grep ✗` on a `generate.yml` run. Measured from a runner that day:
+  - **Substack is an IP ban, not a header problem.** Every publication 403s **every** UA — browser, honest
+    bot, Feedly-style, curl, *no UA at all* — and `/api/v1/archive` (its keyless JSON API) 403s too. No
+    header, UA or endpoint fixes it; Cloudflare verifies bots by IP allowlist or signed Web Bot Auth, and
+    neither is available to us. `invisiblebalancesheet` + `actuarialnotes` were removed for this reason
+    (no route: Google News indexes them 0–1 items, Feedly's cache is empty); `boredombaron` survives only
+    because it *is* well indexed, as a Google News `site:` mirror.
+  - **A browser UA can be actively HARMFUL.** `nofilmschool.com` 403s our Chrome UA (a Chrome that cannot
+    exist in a datacenter scores as a liar) and serves an honest bot UA 200/30 items. Hence `fetchFeed`
+    buys **one** honest-bot retry on a 403 — identity, not waiting, is what a 403 responds to.
+  - **Don't make the UA global.** A sweep of all 45 feeds under both UAs measured the swap as fixing 1 and
+    **breaking 1** (`insurancenews.com.au` 200 → ERR: it hangs on a bot UA). Publishers disagree; identity
+    must stay per-response.
 - **Round-robin per feed (`capRoundRobin`) — load-bearing, don't "simplify" back to recency.** The pool
   and digest caps used to keep the most recent items across all of an interest's feeds, which handed
   every slot to whichever source posts most: a daily insurance trade wire (~15/day) filled 6 of the
