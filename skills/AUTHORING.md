@@ -92,9 +92,12 @@ worked AU examples — not general overviews.
     enriched excerpt when it already has the numbers. Targeted fetching, not broad crawling.
 - **Actuarial has its own contract — see the section below.** It is the reader's own profession, so the
   bar is different there.
-- **Video pool items (`kind:"video"`)** are YouTube uploads — their excerpt is the video *description*,
-  not a transcript. Treat them as leads/signal, fold in **with attribution** (name the channel in
-  `sources`), and don't build an article solely off one video's thin description.
+- **Video pool items (`kind:"video"`)** are YouTube uploads. When the item carries `transcript_at`,
+  its excerpt is the video's **actual transcript opening** (captured overnight on the reader's
+  machine — YouTube bot-walls this run's IP, so do NOT try to fetch the video page yourself): treat
+  it like read text and cite the channel in `sources`. Without `transcript_at` the excerpt is only
+  the channel's *description* — a lead/signal to fold in **with attribution**, never the sole basis
+  of a piece.
 - **Live market data (`data/live.json`)** — for a `current` finance / markets / property piece, quote at
   least one live figure with its `asOf` time (it carries ASX 200, S&P 500, AUD/USD, Gold, WTI, VIX, BTC,
   ETH plus a `summary` line). If `live.json` is missing, empty, or `updatedAt` is >24h old, write without

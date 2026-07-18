@@ -9,11 +9,14 @@
       "title": "OpenAI is being sued for stealing, again…",
       "url": "https://www.youtube.com/watch?v=5D4Zqp9GLSc",
       "source": "Fireship",
-      "excerpt": "OpenAI is facing yet another lawsuit, this time at the hands of Apple. In today's video, we'll take a look at exactly what they're being accused of and why Apple are only stepping in now.",
+      "excerpt": "In 2024, Apple and OpenAI got married in a shotgun wedding on stage at WWDC. Tim Cook put ChatGPT inside the iPhone while Sam Altman watched from the audience. They were the unambiguously gay duo, and together they thought they could rebrand artificial intelligence to Apple intelligence with a marketing campaign so effective it inspired me to buy an Android phone. But it only took 2 years for these two companies to become mortal enemies. Last Friday, Apple filed a 41-page lawsuit calling OpenAI's hardware business rotten to its core. With bombshell allegations of trade secret theft, behind the scenes Scam Altman was doing what Scam Altman does best, is scamming, allegedly. What Apple failed to realize is that he doesn't just want to do business with Apple, he wants to eat the apple. In today's video, we'll take a look at OpenAI's hardware strategy and the craziest claims in this lawsuit. It is July 17th, 2026, and you're watching The Code Report. Apple is terrified of OpenAI. OpenAI has already poached over 400 Apple employees, but more importantly, OpenAI has plans to get into the hardware game. Not long ago, they bought Jony Ive's stealth startup IO for $6.5 billion. That's over $3 billion per lowercase letter. Jony Ive spent about 30 years at Apple and worked closely with Steve Jobs to create the visual language for the iPhone, iMac, iPod, and so on. But now he's working with Sam on a device that wants to make your iPhone obsolete. And no official details have been released, but we just got a leak a few days ago, and apparently this futuristic device is a mobile screen-free home smart speaker. A quote, OpenAI believes the product's defining feature will be its personality and ability to connect on a human-like level with users. The speaker incorporates mechanical elements that can move on their own, creating a sense that it's alive and not just an object responding to commands. You heard that right. It sounds like they're basically just building an Alexa smart speaker with that voice they stole from Scarlett Johansson in the Jony Ive design language. But I highly doubt that's going to be a be a product because I've watched every single Husk IRL video. >> Tell",
       "published_at": "2026-07-17T17:56:42+00:00",
       "added_at": "2026-07-17T20:43:42.179Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-18T12:08:50.164Z",
+      "transcript_at": "2026-07-18T12:08:50.164Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "software-ai-85525f6b8187",
@@ -97,11 +100,14 @@
       "title": "I built an AI agent I actually use every day (code available)",
       "url": "https://www.youtube.com/watch?v=8R6fYMJLI5E",
       "source": "Chris Raroque",
-      "excerpt": "Hi my name is Chris and I build productivity apps 👋 and today I'm going over the updates I made to my open source AI agent and everything I learned in the process :) (please tell them I sent you 🙏)",
+      "excerpt": "A couple months ago, I built an AI agent, open sourced it, and it kind of blew up. Thousands of you forked it, remixed it, and built your own agents on top of it. If you haven't seen it, it's called Boop, and it's an iMessage based agent that looks really simple on the surface, but behind the scenes, it has a very complex memory system, and it's connected to all of my tools. Since releasing it 2 months ago, I shipped a ton of improvements. I built dedicated iMessage, Apple Notes, and Apple reminders integrations, which is something a lot of agents don't have for a good reason, which we'll get into. and I gave it a powerful browser so it can use sites like Instagram and LinkedIn which are sites that commonly block AI agents. I learned a ton about what it takes to build a useful AI agent. So today I want to walk you through the most interesting things I added and more importantly everything I learned building so you can take it and apply it to your own agents or AI apps. Let's hop right in. Right now Boop is connected to hundreds of tools thanks to the Composio integration. It's a service I added that already has thousands of these connectors so your agent is already plugged into them. Now, it's covered most of the use cases, but one of the requests I got was to support integrations that Composeio does not have in its library. And the three biggest ones people kept asking for were iMessage, Apple Notes, and Apple reminders. Now, the reason this is so challenging and why composio and even chatapit and claude don't have access to these things is there is no API for these services. Apple does not want apps integrating into them. But I knew it was possible because I'd seen other agents do it. So, I was curious, okay, how hard can this be? And honestly, it was a lot easier than I expected. mainly because I'm using Claude Code, so it did all the hard research for me. Now I got it running. So you can text boop something like, \"What was that water bottle brand my mom asked me about?\" And it'll search through iMessage even years back if it needs to and find exactly what you need. Now the part I found genuinely fascinating is how an iMessage integration like this works. And",
       "published_at": "2026-07-13T14:57:34+00:00",
       "added_at": "2026-07-17T08:38:16.647Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-18T12:08:50.164Z",
+      "transcript_at": "2026-07-18T12:08:50.164Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "software-ai-c2360fef3543",
@@ -150,11 +156,14 @@
       "title": "How I'm Rebuilding My App for the AI Era",
       "url": "https://www.youtube.com/watch?v=Et45hFGwSqQ",
       "source": "Chris Raroque",
-      "excerpt": "Hi my name is Chris and I build productivity apps 👋 and this is a 6 month update on my app Amy. We talk about what im doing to future proof the app and make sure works well with AI agents like Claude/ChatGPT and Siri :)",
+      "excerpt": "Today, we got a quick update on the calorie tracking app that I launched a few months ago. We'll go over the numbers, but the reason I'm making this video is I spent a lot of time future-proofing the app, and I wanted to share that with you guys. We'll go over some of the stuff I shipped, and more importantly, why I believe it positions the app way better for the future, and how you can apply it to your own apps. If you're new here, welcome to the video. My name is Chris, and I build productivity apps. I usually focus on one productivity app per video, and today we're focusing on Amy. Quick context, Amy is a calorie tracking app in the style of Apple Notes. You type the food that you ate on the left, and the calories will magically appear on the right. frictionless calorie tracking app out there. Real quick on the numbers, we hit a pretty big milestone. We just crossed $3,000 in monthly recurring revenue. That's pretty exciting, but the part I'm most proud of is that the profit margin is at about 85%, which for an AI app is actually pretty incredible because usually the profit margins are pretty bad, like 20-30%. So, hitting this revenue milestone and keeping an 85% profit margin, really proud of that. So, that's a quick revenue update, but again, I really want to talk about everything I learned this month. If you've been following along, you know I've been laser-focused on improving week one retention. So, that's how many people after signing up are still sticking around one week later. That's my North Star metric. But this month, I switched gears, and I started focusing on trying to future-proof the app because I have been noticing a few changes in the app industry. Obviously, you see people using AI apps like Claude and ChatGPT a little bit more regularly, but I think something even bigger's happening specifically on the iPhone because Apple just announced a new version of Siri. Now, here's why this matters. Siri has honestly been a bit of a joke over the last few years. I personally don't use Siri because it's really bad at following instructions, and I'm not alone here. But if this new version is as good as people are saying, I think that that might change.",
       "published_at": "2026-06-30T15:30:09+00:00",
       "added_at": "2026-07-17T08:38:16.647Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-18T12:08:50.164Z",
+      "transcript_at": "2026-07-18T12:08:50.164Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "software-ai-e7ac5783d92f",
@@ -216,11 +225,14 @@
       "title": "I was wrong about local AI (REAL examples)",
       "url": "https://www.youtube.com/watch?v=awyUvDJJoFM",
       "source": "Chris Raroque",
-      "excerpt": "Hi my name is Chris and I build productivity apps 👋 and this is my time at Microsoft Build! I learned a TON on this trip about local AI models, hardware and less traditional models like Aurora. A huge thank you to Logitech for making this possible and for everyone who took the time to talk to me at build :)",
+      "excerpt": "So, we are at Microsoft Build right now. We are back in SF. >> [music] >> And all of this computer Yeah, this is where the AI is running by. >> The official forecast was trending more towards hitting [music] Taiwan versus the northern Philippines. >> This entire industry is moving so ridiculously fast. A lot of you guys do watch my channel because it seems like I'm kind of on the cutting edge of some of this stuff. Like I am always experimenting with the latest models, the latest new agentic frameworks, but to be honest, I am also very behind on this stuff. Like it's really hard to keep up. I'm excited to talk to the people who are on the cutting edge of this stuff to see what am I missing. If you've been following along, I have been experimenting with local models on the channel. The calorie tracking app that I launched originally was using local models. I'm also following Gemma 4, which was just released, which is an open model from Google. A lot of the stuff in AI is happening on Windows, and I'm not that familiar. So, I am excited to talk to people who build on top of Windows. I'm excited to talk to some people from Microsoft, some of the startups, and see what am I missing here as a Mac user. And then obviously, we're going to be here with Logitech. So, thank you to them for flying us out, getting these ridiculously expensive tickets, and getting us access to this stuff so we can share it with you guys. Logitech, I think is one of the few hardware partners here. I haven't really talked about it on the channel that much, but I have a suspicion that I will eventually be getting into hardware. Probably talk to some people from Logitech about what's happening with hardware and AI. I think that's why I'm very excited about this one cuz there's a ton for me to learn here and then pass on to you guys. We'll see. We'll see what kind of conversations we can have. >> Stay tuned. >> Stay tuned. [music] Stay tuned for day one. >> [music] >> We tried getting into the uh keynote session with Satya. But it's already 9:00 a.m., completely full. Even this overflow is already like completely full, too. Yeah, we're just going to have to I think we just have to watch it on the",
       "published_at": "2026-06-22T16:01:09+00:00",
       "added_at": "2026-07-17T08:38:16.647Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-18T12:08:50.164Z",
+      "transcript_at": "2026-07-18T12:08:50.164Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "software-ai-d8f140d19c70",
@@ -243,11 +255,14 @@
       "title": "KIMI 3 - 5 Design Tests for UI/UX & Logos",
       "url": "https://www.youtube.com/watch?v=0_PuRInJFrc",
       "source": "DesignCourse",
-      "excerpt": "^-Chat with me and others Who is Gary Simon? Well, I'm a full stack developer with 2+ decades experience and I teach people how to design and code. I've created around 100+ courses for big brands like LinkedIn, Lynda.com, Pluralsight and Envato Network. Now, I focus all of my time and energy on this channel and my website Designcourse.com.",
+      "excerpt": "All right, everybody. Kimmy 3 just released yesterday and I'm giving it a try for the very first time. I have not even tried it yet and we are going to be putting it through the test in terms of design. What can it do in terms of design and we're going to compare it at least with one of the examples with Fable 5. And just a few weeks ago when Fable 5 released, I had one of my largest videos ever, over 600,000 views. We're going to see just how much better Kimmy 3 is or worse at design as compared to the latest Frontier models. So, the very first one we're going to take a look at is actually for a real project, fusionq.com. This is for my upcoming pool projection live ball tracking app that I've been working on really for a couple years now in different context. And we can see here that it's uh this is a pretty interesting landing page. Fable 5 was used to basically generate this landing page. It's not finished. There's a lot of filler stuff. I I have to put in real content. But we're going to see if Kimmy 3 can, you know, kind of do something maybe that oneups it or maybe it's worse. We're going to find out. So, here's the prompt really quickly. Gain a thorough understanding of what this project is about based on the landing page at fusionq.com. Create an entirely new landing page outlining five key features. Utilize modern design trends. Sparingly use shader effects. Integrate tasteful interactive animations. You're not bound at all by the previous design system. The goal is to come up with a new design system with your own colors, fonts, etc. that would align best with this project. So, I'm going to paste that in here into Claude Code. And you can see if I type in for/model, you'll see Kimmy 3 right there. That's the one we want to use. I bought $20 worth of credits. So, if you look right here right now, it says my balance. I bought 20. For some reason, it says 24.82. So, it's $25 really. And we're going to see how much this single prompt takes up as well. And by the way, this is in a folder that is completely empty. All right, that took 39 minutes. And I have not looked at the design yet. It it did actually bring up Chrome DevTools for a split second in the m",
       "published_at": "2026-07-17T15:49:48+00:00",
       "added_at": "2026-07-17T20:43:43.448Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-18T12:08:50.164Z",
+      "transcript_at": "2026-07-18T12:08:50.164Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "design-d2b6190ce348",
@@ -429,11 +444,14 @@
       "title": "Top logo designer quits because \"AI is better than me\"",
       "url": "https://www.youtube.com/watch?v=k3_VO8HybME",
       "source": "DesignCourse",
-      "excerpt": "^-Chat with me and others Who is Gary Simon? Well, I'm a full stack developer with 2+ decades experience and I teach people how to design and code. I've created around 100+ courses for big brands like LinkedIn, Lynda.com, Pluralsight and Envato Network. Now, I focus all of my time and energy on this channel and my website Designcourse.com.",
+      "excerpt": "All right, this here is Gal Sh. All right, retired designer. AI took my job. Now, I've covered this person in the past. Really good logo designer and even better motion designer. And so last week I was on vacation and if you're on X and you're a designer, you probably saw what happened. Um, this person basically said that they're quitting design because AI took their job. There's they're better than them essentially. Now, I asked Fable 5 to produce nine different logo concepts, and we're going to check those out to see just how good Fable 5 is at logo design. But first, let me read real quickly this initial post and some of the follow-up posts as well. All right, it's over. I'm quitting design. A client of mine just created a logo with Fable 5, and the result left me speechless. I understood the brand story, values, audience, strategy, and turned all that into a smart, minimal symbol. All right, a genuinely brilliant concept. the kind of idea that captures everything at once, right? Something I honestly don't think I would have come up with myself. And it just didn't just nail the idea, it executed the design pixel perfectly. So, I raised the right the white flag. My skepticism about AI's ability to do great design is officially gone. There I said it. AI beat me at design. And then two days later on July 10th, posted this meme here. Here's the designer that does everything by hand these days. Designer using AI is struggling. And then of course everything's beautiful with the AI and client. So essentially you don't need a human expert anymore because Fable 5 is just that good at logo design. So let's actually find out if that is the case. So I asked Fable 5 to spawn several different design agents to create three concepts for three unique businesses and I'm going to walk you through the results of each one. So the first one is called Meridian and it's an advisory group global global advisory for boards and institutions strategy capital transactions crossber growth really boring stuff uh but very open to interpretation. So let's see what the first concept actually looks like. So this is the first concept. All right. So the first eye is drawn as the line the world ",
       "published_at": "2026-07-13T14:51:09+00:00",
       "added_at": "2026-07-13T20:50:18.994Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-18T12:08:50.164Z",
+      "transcript_at": "2026-07-18T12:08:50.164Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "design-d8037c094fed",
@@ -504,11 +522,14 @@
       "title": "The Key Thing Human Brains Have That AI Is Trying To Learn",
       "url": "https://www.youtube.com/watch?v=qz4GQ0zUFRw",
       "source": "Y Combinator",
-      "excerpt": "In this episode of Decoded, Ankit and Francois walk through the motivation and math behind world models. They cover a number of areas including why sample efficiency is one of the biggest unsolved problems in AI, how deterministic differentiable control and Newtonian physics represent a \"perfect world model,\" and why the action space explosion makes chess tractable but robotics nearly intractable.",
+      "excerpt": "One of the biggest open problems in AI right now is how to solve sample efficiency. That is, how do you get models to quickly learn new tasks or skills from relatively small amounts of training data? Humans do this incredibly well. We can learn new games, concepts, and skills, often after just a handful of tries. Our best models, on the other hand, often need tens of thousands of data points just to learn. >> So, today we're going to discuss what many top researchers believe is the most promising path to closing that gap. World models. We're going to discuss the motivation and math behind world models, current applications, and why this approach might be the key to unlocking AGI. You and I have talked a lot about the various ways people are training models and the sample efficiency of them. Why don't we start by just defining sample efficiency and how we intuitively think about it as humans? >> Yeah. So I think from my perspective the two major problems that we have left to solve is intelligence per watt and intelligence per sample. Um, intelligence per watt is like how how many valve perplexity points we get per watt of spend. And then intelligence per sample is basically if I have one additional sample in my data set, how much more intelligent am I getting? And so if I imagine I have a new tasks like RGI for example, I think like really Frantole has been on the forefront of this thinking uh and talking about intelligence as a rate of skill acquisition versus skill acquisition and that's very different. And so how fast do we get uh smarter with more and more samples? And these things are incredibly poor at at at getting smarter with with fewer and fewer samples. >> And for context, you know, the the RKGI test sets are a really good example of cases where humans are intuitively very good at them. Most humans can intuitively solve those puzzles with some amount of thinking and effort. But our current state-of-the-art AI systems, what people consider frontier intelligence, basically can't do them, >> right? I mean there we come into new problems with such inductive bias from K through 12 like all these math and school that we we've had um that you know these model",
       "published_at": "2026-07-17T14:00:25+00:00",
       "added_at": "2026-07-17T20:43:44.381Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-18T12:08:50.164Z",
+      "transcript_at": "2026-07-18T12:08:50.164Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-e372be7c82fe",
@@ -618,11 +639,14 @@
       "title": "Why the tech workforce is quietly splitting in two | Annual AI sentiment survey (Noam Segal)",
       "url": "https://www.youtube.com/watch?v=_cmpIveXnvE",
       "source": "Lenny's Podcast",
-      "excerpt": "1. Why AI has split the tech workforce almost exactly in half—one half that’s thriving, another that’s shaken 2. The four emotional archetypes defining tech workers right now (the Energized, the Conflicted, the Disoriented, and the Resentful) 3. Why burnout has jumped an alarming 11 points in a single year 4. Why nobody in tech would recommend their job to someone entering the industry today 5. Th",
+      "excerpt": "Bad news for the tech community. >> Burnout at work is a major problem and AI could add to this already overwhelmed employee problem. >> The honeymoon period with AI is over. When people are asked, what what are you afraid of? Losing my job to AI is actually second to last. What we saw rise up to the top is the expectation to do more for the same pay. We did this survey on how people are feeling in tech right now. Burnout is [music] increasing significantly. Optimism is declining. It's never been crazier. When are we going to get to the optimistic part of this [laughter] uh of this episode? Half of the people in tech are feeling incredible. And the other half told us, \"My brain is rotting. My work feels worse.\" Elon had this really interesting way of describing it. We're definitely living in a simulation if we're alive right now when we're about to start building data centers in space and AI is going to be as smart as human. What does this tell us we should be doing if we can do anything? We're in the second inning of a massive shift. No one knows how it will end, but all you can do is Today, my guest is Noam Seagull. Noam and I go a long ways back. We worked together at Airbnb for many years where he was my research partner. Since then, he went on to be a research leader at Intercom, Twitter, Wealthfront, Meta, Zapier, and Figma. Gnome is so amazing, and over the past couple years, I've been lucky to partner with him on a bunch of research projects. The most ambitious of which has been a tech worker sentiment survey, which we plan to run every year. This is the second time we've run it, and the results are so interesting. I believe this is the largest survey of its kind looking at how people in tech feel about their jobs and AI [music] and layoffs and burnout and the future of their careers. There's so much in this [music] and basically this episode is a conversation about the results. At the end of the conversation, we go through a bunch of advice on what you [music] might do if you are currently on the struggle bus and trying to figure out what to do. I am so excited for this [music] episode. I'm so excited for this report. A big thank you to Noam for doing t",
       "published_at": "2026-07-12T12:30:31+00:00",
       "added_at": "2026-07-12T20:35:46.454Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-18T12:08:50.164Z",
+      "transcript_at": "2026-07-18T12:08:50.164Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-831a94da71e6",
@@ -2648,5 +2672,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-07-18T11:58:05.423Z"
+  "updatedAt": "2026-07-18T12:08:50.164Z"
 }

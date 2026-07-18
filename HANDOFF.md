@@ -225,6 +225,20 @@ cross-tagged in — while **zero** taught the mechanisms under his own stack, wh
     evicted un-read when the sources were cut, so a plain run found "0 new" forever. Reseed re-pools
     seen-but-unpooled items ≤60 days old. It is NOT in the scheduled command — after an author uses an
     item it leaves the pool, and a daily reseed would re-offer it.
+- **Video transcripts are LOCAL-ONLY too (2026-07-18).** `scripts/lib/transcripts.mjs` extracts
+  YouTube transcripts keylessly, and the same scheduled `ingest-local.mjs` run enriches pending
+  `kind:"video"` pool items with them (excerpt ← transcript, 2,200-char budget, `transcript_at` +
+  `transcript_kind` stamps, 8/run, 48h retry for videos whose ASR isn't ready yet). Probed from a
+  runner 2026-07-18 (`probe-transcripts`, deleted after): **YouTube bot-walls datacenter IPs on the
+  InnerTube player endpoint** — `playability LOGIN_REQUIRED — "Sign in to confirm you're not a
+  bot"` on all 3 test videos — so cloud-side enrichment is off the table, same as Substack.
+  Route notes (measured, don't re-litigate): the classic watch-page → captionTracks → timedtext
+  route returns **HTTP 200 with a zero-byte body** (PO-token gating since ~2024 — looks like
+  success, is failure); `/youtubei/v1/get_transcript` 400s even with the page's own embedded params
+  + client version + API key; the **ANDROID-client `/youtubei/v1/player`** call is what works, and
+  it answers srv3 (`<p>/<s>`) format, which `parseTimedText` handles alongside legacy srv1.
+  Consequence: a video pooled by the 6am cloud ingest gets its transcript at 5:15 the NEXT morning
+  — a one-day lag, best-effort, and the author's contract only trusts `transcript_at` items.
 - **Round-robin per feed (`capRoundRobin`) — load-bearing, don't "simplify" back to recency.** The pool
   and digest caps used to keep the most recent items across all of an interest's feeds, which handed
   every slot to whichever source posts most: a daily insurance trade wire (~15/day) filled 6 of the
