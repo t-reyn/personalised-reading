@@ -502,6 +502,50 @@
 
   /* ---------- stats ---------- */
   function conceptInterest(cid, c) { return c.interest || (manifest.articles.find((a) => a.id === c.first_taught) || {}).interest || "other"; }
+  // The knowledge map: every concept as a chip, grouped by interest — filled dot = learnt, ⟳ = due
+  // for review, › = has prerequisites. Tapping a chip highlights its prerequisite chips (the graph's
+  // edges, revealed on demand: a drawn 115-node edge diagram is unreadable at phone width).
+  function renderKnowledgeMap() {
+    const groups = {};
+    for (const [cid, c] of Object.entries(knowledge.concepts)) (groups[conceptInterest(cid, c)] ||= []).push([cid, c]);
+    // Edges: explicit prerequisite_ids (the generator has never populated these — 0/115 as of
+    // 2026-07-18) unioned with edges DERIVED from the articles themselves: a piece that teaches X
+    // while assuming Y makes Y a prerequisite of X. That derivation is what actually draws the map.
+    const prereqsOf = {};
+    for (const a of manifest.articles) {
+      for (const t of a.concepts_taught || []) {
+        for (const p of a.concepts_assumed || []) (prereqsOf[t] ||= new Set()).add(p);
+      }
+    }
+    const chip = ([cid, c]) => {
+      const due = conceptDue(cid);
+      const pre = [...new Set([...(c.prerequisite_ids || []), ...(prereqsOf[cid] || [])])].filter((p) => knowledge.concepts[p]);
+      const stateTxt = due ? "due for review" : c.is_learnt ? "learnt" : "not yet learnt";
+      return `<button type="button" class="kc${c.is_learnt ? " learnt" : ""}${due ? " due" : ""}" data-kc="${esc(cid)}"${pre.length ? ` data-pre="${esc(pre.join(","))}"` : ""} title="${esc(c.label || cid)} — ${stateTxt}${pre.length ? ` · needs ${pre.length}` : ""}"><span class="kc-dot"></span>${esc(c.label || cid)}${due ? `<span class="kc-due">⟳</span>` : ""}${pre.length ? `<span class="kc-pre">›</span>` : ""}</button>`;
+    };
+    const sections = [...INTERESTS, { id: "other", label: "Other", emoji: "◦", accent: "#8a8a8a" }]
+      .filter((i) => groups[i.id]?.length)
+      .map((i) => {
+        const items = groups[i.id].sort((a, b) =>
+          (b[1].is_learnt ? 1 : 0) - (a[1].is_learnt ? 1 : 0) || (a[1].label || a[0]).localeCompare(b[1].label || b[0]));
+        const learntN = items.filter(([, c]) => c.is_learnt).length;
+        return `<div class="kmap-sec" style="--accent:${esc(i.accent)}"><div class="kmap-head"><span>${esc(i.emoji)} ${esc(i.label)}</span><span class="kmap-count">${learntN}/${items.length} learnt</span></div><div class="kmap-chips">${items.map(chip).join("")}</div></div>`;
+      });
+    if (!sections.length) return "";
+    return `<h2 class="shelf-title">Knowledge map</h2>
+      <div class="kmap-legend"><span><span class="kc-dot demo filled"></span> learnt</span><span><span class="kc-dot demo"></span> not yet</span><span><span class="kc-due">⟳</span> due for review</span><span><span class="kc-pre">›</span> tap to see prerequisites</span></div>
+      ${sections.join("")}`;
+  }
+  function bindKnowledgeMap(root) {
+    root.querySelectorAll(".kc").forEach((b) => b.addEventListener("click", () => {
+      const wasSelected = b.classList.contains("sel");
+      root.querySelectorAll(".kc").forEach((x) => x.classList.remove("sel", "hl"));
+      if (wasSelected) return; // second tap clears the highlight
+      b.classList.add("sel");
+      (b.dataset.pre || "").split(",").filter(Boolean).forEach((p) =>
+        root.querySelector(`.kc[data-kc="${CSS.escape(p)}"]`)?.classList.add("hl"));
+    }));
+  }
   function renderStats() {
     const list = $("#list");
     const reads = manifest.articles.filter((a) => !a.merged_into && isRead(a.id));
@@ -524,7 +568,9 @@
     list.innerHTML =
       `<div class="stats-grid">${stat("Day streak", streak)}${stat("Articles read", reads.length)}${stat("Concepts learnt", learnt.length)}${stat("Due for retry", retryN)}</div>` +
       `<h2 class="shelf-title">Reading by topic</h2><div class="bars">${bars(byTopic)}</div>` +
-      `<h2 class="shelf-title">Concepts learnt by topic</h2><div class="bars">${bars(learntByTopic)}</div>`;
+      `<h2 class="shelf-title">Concepts learnt by topic</h2><div class="bars">${bars(learntByTopic)}</div>` +
+      renderKnowledgeMap();
+    bindKnowledgeMap(list);
     updateToggles();
   }
 

@@ -213,6 +213,23 @@ button { font: inherit; cursor: pointer; }
 .card .star.on { color: var(--warn); }
 .merged-note { color: var(--accent); font-weight: 600; }
 .readtick { color: var(--good); font-weight: 700; }
+/* knowledge map (Stats) — concept chips grouped by interest; tap reveals prerequisites */
+.kmap-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 11px; color: var(--faint); font-family: var(--font-mono); margin: -4px 0 10px; }
+.kmap-legend > span { display: inline-flex; align-items: center; gap: 5px; }
+.kmap-sec { margin: 12px 0 16px; }
+.kmap-head { display: flex; align-items: baseline; gap: 10px; font-family: var(--font-mono); font-size: 12px; color: var(--muted); margin-bottom: 7px; }
+.kmap-count { color: var(--faint); font-size: 11px; }
+.kmap-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.kc { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; line-height: 1.6; padding: 2px 10px 2px 8px; border-radius: 999px; border: 1px solid var(--line); background: none; color: var(--muted); cursor: pointer; font-family: inherit; }
+.kc-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; border: 2px solid var(--accent, var(--line-strong)); background: transparent; }
+.kc-dot.demo { border-color: var(--faint); } .kc-dot.demo.filled { background: var(--faint); }
+.kc.learnt { color: var(--ink); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.kc.learnt .kc-dot { background: var(--accent); }
+.kc.due { border-color: var(--warn); }
+.kc-due { color: var(--warn); font-size: 11px; }
+.kc-pre { opacity: .45; font-weight: 700; }
+.kc.sel { outline: 2px solid var(--accent); outline-offset: 1px; }
+.kc.hl { outline: 2px dashed var(--accent); outline-offset: 1px; }
 /* taste feedback (👍/👎) — quiet until active; feeds the author via reading-state sync */
 .fb { display: inline-flex; gap: 2px; margin-left: auto; }
 .fbb { background: none; border: 1px solid transparent; border-radius: 7px; padding: 1px 6px; cursor: pointer; font-size: 13px; line-height: 1.5; opacity: .4; filter: grayscale(1); transition: opacity .12s; }
