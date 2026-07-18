@@ -207,6 +207,24 @@ cross-tagged in — while **zero** taught the mechanisms under his own stack, wh
   - **Don't make the UA global.** A sweep of all 45 feeds under both UAs measured the swap as fixing 1 and
     **breaking 1** (`insurancenews.com.au` 200 → ERR: it hangs on a bot UA). Publishers disagree; identity
     must stay per-response.
+- **Local ingest supplement (2026-07-18) — how the banned Substacks get in anyway.** Feeds listed in
+  `data/sources-local.json` (currently `invisiblebalancesheet` + `actuarialnotes`) are fetched by
+  **`scripts/ingest-local.mjs` on the reader's PC** — a residential IP Substack serves happily — and
+  pushed into pool.json before the cloud run. A Windows scheduled task ("Cortex local ingest", daily
+  05:15 local, `StartWhenAvailable` so a sleeping PC catches up on wake; log:
+  `%LOCALAPPDATA%\cortex-ingest-local.log`) runs it with `--push`. Best-effort by design: if the PC is
+  off all day, those sources just pause. Three things to know:
+  - The pooled **excerpt is the full post body** (`content:encoded`, capped at 2,200 chars like the PDF
+    enrichment) because the cloud author's WebFetch runs on the same banned runner IP — the pool entry
+    is ALL the author will ever read of these sources. AUTHORING.md's "you cannot read Substack" rule
+    is now wrong for POOLED items: the excerpt is trustworthy; the live URL still isn't fetchable.
+  - `ingest.mjs`'s prune counts sources-local.json feeds as **live** even though the cloud never fetches
+    them — without that, every cloud ingest would evict the locally-added items as orphans of a removed
+    source. Don't list a local feed in sources.json (it would 403 every cloud run and page health-check).
+  - `--reseed` is a one-time bootstrap: these feeds' items were marked seen while cloud-listed, then
+    evicted un-read when the sources were cut, so a plain run found "0 new" forever. Reseed re-pools
+    seen-but-unpooled items ≤60 days old. It is NOT in the scheduled command — after an author uses an
+    item it leaves the pool, and a daily reseed would re-offer it.
 - **Round-robin per feed (`capRoundRobin`) — load-bearing, don't "simplify" back to recency.** The pool
   and digest caps used to keep the most recent items across all of an interest's feeds, which handed
   every slot to whichever source posts most: a daily insurance trade wire (~15/day) filled 6 of the

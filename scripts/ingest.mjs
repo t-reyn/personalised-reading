@@ -744,9 +744,16 @@ async function main() {
   // queue and keep winning a round-robin digest slot. (Cutting theverge + a broad news query from
   // software-ai left 6 such items that would have kept feeding the author until August.) Items with no
   // `feed` predate that field and are left alone; TTL still ages them out.
+  // Local-only feeds (data/sources-local.json — publishers that IP-ban GitHub runners, fetched by
+  // scripts/ingest-local.mjs on the reader's own machine) count as LIVE here even though this run
+  // never fetches them: without this, every cloud ingest would evict the locally-added items as
+  // "orphans of a removed source" and the local supplement would be a no-op.
+  const localSources = await readJson("data/sources-local.json", {});
   const liveFeeds = {};
   for (const interest of config.interests || []) {
-    liveFeeds[interest.id] = new Set((sources[interest.id] || []).filter((u) => typeof u === "string" && u.startsWith("http")));
+    liveFeeds[interest.id] = new Set(
+      [...(sources[interest.id] || []), ...(localSources[interest.id] || [])]
+        .filter((u) => typeof u === "string" && u.startsWith("http")));
   }
   const fresh = pool.items.filter((it) =>
     it.status === "pending" &&
@@ -779,7 +786,7 @@ async function main() {
   await writePoolDigest(config, pool);
 }
 
-export { parseFeed, parseKontent, isYouTubeFeed, isKontentFeed, capRoundRobin, itemTime, pdfToText, isLegible, trimPdfLead, fetchFeed, daysSinceLastArticle, updateFeedHealth };
+export { parseFeed, parseKontent, isYouTubeFeed, isKontentFeed, capRoundRobin, itemTime, pdfToText, isLegible, trimPdfLead, fetchFeed, daysSinceLastArticle, updateFeedHealth, decode, rawInner, hash };
 
 // Run the pipeline only when invoked directly (node scripts/ingest.mjs), so tests can import
 // parseFeed without triggering a live fetch + file writes.

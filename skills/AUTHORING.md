@@ -173,13 +173,16 @@ PYS/PMIF reforms, and an Actuaries Institute submission to the Life Insurance Co
 1. **`kind:"policy"`** digest items — the Institute's own submissions, dialogue/discussion papers,
    reports and position statements. Their `topics` name the genre and practice area
    (e.g. *{Submission, Life Insurance}*). Their excerpt is real extracted text from the document.
-2. **Practitioner essays** that argue a case — the strongest register there is, and **currently
-   unreachable from this run.** The actuarial Substacks (invisiblebalancesheet, actuarialnotes) are
-   Cloudflare IP-banned for the whole GitHub runner range: every UA 403s, and so does WebFetch, which
-   runs on that same runner (see `_comment_blocked` in sources.json). So if you meet one — in
-   `data/corpus.json`, or linked from another piece — **you will not be able to read it. Do not cite it,
-   and do not summarise it from its title.** A source you could not open is not a source. Fall through to
-   tier 1 or 3 instead.
+2. **Practitioner essays** that argue a case — the strongest register there is. The actuarial Substacks
+   (invisiblebalancesheet, actuarialnotes) are Cloudflare IP-banned for the whole GitHub runner range —
+   every UA 403s, and so does WebFetch, which runs on that same runner — so their items reach you
+   **through the pool only**: a scheduled job on the reader's own machine fetches them and pools each
+   post with its **full body as the excerpt** (up to ~2,200 chars — see `data/sources-local.json`).
+   **Trust and use a pooled Substack excerpt exactly like extracted policy text; it is the whole
+   opening of the piece, not a blurb. But do NOT try to WebFetch the live URL** (it will 403), and if
+   you meet a Substack link with no pooled body — in `data/corpus.json`, or linked from another piece —
+   the old rule stands: a source you could not open is not a source; don't cite it, don't summarise it
+   from its title.
 3. **Actuaries Digital** (`actuaries.asn.au` articles) — the profession's magazine.
 4. **Trade press** (insurancenews.com.au, *The Actuary*, broker titles) — background colour only. It may
    supply a fact inside a piece; it may **never** be the reason a piece exists. Personnel moves, M&A,

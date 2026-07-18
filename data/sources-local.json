@@ -1,0 +1,7 @@
+{
+  "_comment": "Feeds fetched by scripts/ingest-local.mjs on the reader's own machine, NOT by the cloud run. Substack IP-bans GitHub Actions runners outright (every UA, measured 2026-07-17), so these can only be reached from a residential IP. ingest.mjs counts them as live sources for the pool prune; keep each URL out of sources.json or it will fail every cloud ingest and page the health check.",
+  "actuarial": [
+    "https://invisiblebalancesheet.substack.com/feed",
+    "https://actuarialnotes.substack.com/feed"
+  ]
+}
