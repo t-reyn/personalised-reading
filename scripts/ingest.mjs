@@ -515,6 +515,41 @@ function trimExcerpt(s = "", max = DIGEST_EXCERPT_CHARS) {
   return (sp > 0 ? cut.slice(0, sp) : cut).replace(/[\s.,;:—-]+$/, "") + "…";
 }
 
+// Fold this run's per-feed fetch outcomes into the persisted health map (data/feed-health.json).
+// The point is catching silent feed death: the Substack IP-ban ran for weeks visible only as a ✗ line
+// inside CI logs nobody greps. Persisting a consecutive-failure counter lets health-check.mjs turn
+// "this feed has now failed N ingests in a row" into a failing (= emailing) check. Only feeds present
+// in THIS run's sources are kept, so removing a source also retires its health entry. Pure and
+// timestamp-injected so it's unit-testable.
+function updateFeedHealth(prev, results, now) {
+  const feeds = {};
+  for (const r of results) {
+    const p = (prev && prev.feeds && prev.feeds[r.url]) || {};
+    if (r.ok) {
+      feeds[r.url] = {
+        interest: r.interest,
+        last_ok: now,
+        last_items: r.count,
+        // When a fetch succeeds but yields nothing new, keep the previous stamp — "serves 200 but
+        // hasn't produced a new item in months" is its own kind of dead, warned on separately.
+        last_new_at: r.newCount > 0 ? now : p.last_new_at || null,
+        consecutive_failures: 0,
+      };
+    } else {
+      feeds[r.url] = {
+        interest: r.interest,
+        last_ok: p.last_ok || null,
+        last_items: p.last_items ?? null,
+        last_new_at: p.last_new_at || null,
+        consecutive_failures: (p.consecutive_failures || 0) + 1,
+        last_error: r.error,
+        last_failed_at: now,
+      };
+    }
+  }
+  return { version: 1, updatedAt: now, feeds };
+}
+
 // Days since the interest last had an article written FOR it — i.e. one whose PRIMARY `interest` is this
 // id. null when it never has. This drives the author's cadence pick (days_since_last_article /
 // cadenceDays), so it must answer "when was this topic last served", not "when did something tagged with
@@ -591,6 +626,7 @@ async function main() {
 
   let added = 0, fetched = 0, failed = 0;
   const freshlyAdded = [];
+  const fetchResults = []; // per-feed outcomes for feed-health.json
   for (const interest of config.interests || []) {
     const feeds = (sources[interest.id] || []).filter((u) => typeof u === "string" && u.startsWith("http"));
     for (const url of feeds) {
@@ -600,7 +636,12 @@ async function main() {
         items = isKontentFeed(url) ? parseKontent(raw) : parseFeed(raw);
         fetched++;
       }
-      catch (e) { failed++; log(`  ✗ ${interest.id} ${url} — ${e.message}`); continue; }
+      catch (e) {
+        failed++;
+        fetchResults.push({ interest: interest.id, url, ok: false, error: e.message });
+        log(`  ✗ ${interest.id} ${url} — ${e.message}`);
+        continue;
+      }
 
       let newForFeed = 0;
       for (const it of items) {
@@ -630,6 +671,7 @@ async function main() {
         freshlyAdded.push(item);
         newForFeed++; added++;
       }
+      fetchResults.push({ interest: interest.id, url, ok: true, count: items.length, newCount: newForFeed });
       log(`  ${interest.id} ${url} — ${items.length} items, ${newForFeed} new`);
     }
   }
@@ -732,10 +774,12 @@ async function main() {
   pool.updatedAt = new Date().toISOString();
   await writeFile(join(ROOT, "data/seen.json"), JSON.stringify(seenState, null, 2) + "\n");
   await writeFile(join(ROOT, "data/pool.json"), JSON.stringify(pool, null, 2) + "\n");
+  const health = updateFeedHealth(await readJson("data/feed-health.json", { feeds: {} }), fetchResults, new Date().toISOString());
+  await writeFile(join(ROOT, "data/feed-health.json"), JSON.stringify(health, null, 2) + "\n");
   await writePoolDigest(config, pool);
 }
 
-export { parseFeed, parseKontent, isYouTubeFeed, isKontentFeed, capRoundRobin, itemTime, pdfToText, isLegible, trimPdfLead, fetchFeed, daysSinceLastArticle };
+export { parseFeed, parseKontent, isYouTubeFeed, isKontentFeed, capRoundRobin, itemTime, pdfToText, isLegible, trimPdfLead, fetchFeed, daysSinceLastArticle, updateFeedHealth };
 
 // Run the pipeline only when invoked directly (node scripts/ingest.mjs), so tests can import
 // parseFeed without triggering a live fetch + file writes.

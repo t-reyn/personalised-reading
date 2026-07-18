@@ -37,6 +37,14 @@ bill, no PC needed). Your phone just reads from GitHub Pages. One-time setup, ~1
    Then open your Pages URL and read today's issue. (Tune the cron time in
    `.github/workflows/generate.yml`, and `maxArticlesPerRun` / model to taste.)
 
+6. **Optional — daily Telegram nudge.** When these two secrets exist, the run ends by messaging you
+   today's title + summary (`scripts/notify-telegram.mjs`); without them the step skips silently:
+   - Message **@BotFather** on Telegram → `/newbot` → name it (e.g. "Cortex") → copy the token into a
+     `TELEGRAM_BOT_TOKEN` secret.
+   - Open a chat with your new bot and send it any message (bots can't message you first). Then visit
+     `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy `message.chat.id` into a
+     `TELEGRAM_CHAT_ID` secret.
+
 ## Maintenance & safety
 - **Annual rotation:** the token expires after ~1 year (and headless tokens don't auto-refresh). When a
   run fails with an auth error, re-run `claude setup-token` and update the `CLAUDE_CODE_OAUTH_TOKEN`

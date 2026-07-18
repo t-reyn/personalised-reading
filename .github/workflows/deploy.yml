@@ -14,6 +14,8 @@ on:
       - "data/pool.json"
       - "data/source-candidates.json"
       - "data/usage-log.jsonl"
+      - "data/feed-health.json"
+      - "data/corpus.json"
   workflow_dispatch:
 
 permissions:

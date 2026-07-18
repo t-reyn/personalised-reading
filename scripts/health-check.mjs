@@ -163,6 +163,29 @@ if (manifest && Array.isArray(manifest.articles)) {
   ok(`checked ${arts.length} articles, ${Object.keys((knowledge && knowledge.concepts) || {}).length} concepts`);
 }
 
+// 9. Feed health: a feed failing several consecutive ingests is exactly the silent death the Substack
+//    IP-ban was — visible only as a ✗ inside CI logs nobody reads. Fail (→ email) while the death is
+//    fresh, then mute to a warning once it's chronic so one permanently dead feed doesn't email daily
+//    forever. Ingest runs once per published day, so the fail window is ~5 days of emails.
+//    The file appears after the first post-telemetry ingest — missing is fine, not a failure.
+const FEED_FAIL_AT = Number(process.env.HEALTH_FEED_FAILS) || 3;
+const FEED_MUTE_AT = 8;
+const QUIET_FEED_DAYS = 60;
+if (existsSync(join(ROOT, "data/feed-health.json"))) {
+  const feedHealth = readJson("data/feed-health.json");
+  for (const [url, f] of Object.entries((feedHealth && feedHealth.feeds) || {})) {
+    const cf = f.consecutive_failures || 0;
+    if (cf >= FEED_FAIL_AT && cf < FEED_MUTE_AT) {
+      fail(`feed failing ${cf} consecutive ingests: [${f.interest}] ${url} — ${f.last_error || "unknown error"}`);
+    } else if (cf >= FEED_MUTE_AT) {
+      warn(`feed dead (${cf} consecutive failures, muted): [${f.interest}] ${url}`);
+    } else if (cf === 0 && f.last_new_at) {
+      const days = Math.floor((Date.now() - new Date(f.last_new_at).getTime()) / 86400000);
+      if (days >= QUIET_FEED_DAYS) warn(`feed quiet: no new item in ${days}d — [${f.interest}] ${url}`);
+    }
+  }
+}
+
 // Report (also to the GitHub job summary when available).
 const lines = [];
 lines.push(problems.length ? `# ❌ Cortex health check failed (${problems.length})` : "# ✅ Cortex health check passed");

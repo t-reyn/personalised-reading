@@ -4,7 +4,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import zlib from "node:zlib";
 import { createServer } from "node:http";
-import { parseKontent, isKontentFeed, capRoundRobin, itemTime, isLegible, trimPdfLead, pdfToText, fetchFeed, daysSinceLastArticle } from "../ingest.mjs";
+import { parseKontent, isKontentFeed, capRoundRobin, itemTime, isLegible, trimPdfLead, pdfToText, fetchFeed, daysSinceLastArticle, updateFeedHealth } from "../ingest.mjs";
 
 // An ISO date `n` days before now, for cadence assertions.
 const iso = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
@@ -328,4 +328,32 @@ test("daysSinceLastArticle counts only articles written FOR the interest, not cr
 test("capRoundRobin buckets legacy items with no feed together", () => {
   const kept = capRoundRobin([{ published_at: "2026-07-01T00:00:00Z" }, { published_at: "2026-07-02T00:00:00Z" }], 2);
   assert.equal(kept.length, 2);
+});
+
+test("updateFeedHealth: success resets the failure streak, failure grows it and keeps last_ok", () => {
+  const t1 = "2026-07-18T20:00:00.000Z", t2 = "2026-07-19T20:00:00.000Z";
+  const afterOk = updateFeedHealth({ feeds: {} }, [{ interest: "actuarial", url: "https://a/feed", ok: true, count: 12, newCount: 3 }], t1);
+  assert.equal(afterOk.feeds["https://a/feed"].consecutive_failures, 0);
+  assert.equal(afterOk.feeds["https://a/feed"].last_ok, t1);
+  assert.equal(afterOk.feeds["https://a/feed"].last_new_at, t1);
+  const afterFail = updateFeedHealth(afterOk, [{ interest: "actuarial", url: "https://a/feed", ok: false, error: "HTTP 403" }], t2);
+  const f = afterFail.feeds["https://a/feed"];
+  assert.equal(f.consecutive_failures, 1);
+  assert.equal(f.last_ok, t1, "a failure must not erase when the feed last worked");
+  assert.equal(f.last_error, "HTTP 403");
+  const again = updateFeedHealth(afterFail, [{ interest: "actuarial", url: "https://a/feed", ok: false, error: "HTTP 403" }], t2);
+  assert.equal(again.feeds["https://a/feed"].consecutive_failures, 2, "streaks accumulate across runs");
+});
+
+test("updateFeedHealth: a 0-new success keeps the previous last_new_at (quiet-feed detection)", () => {
+  const prev = { feeds: { "https://a/feed": { interest: "design", last_new_at: "2026-05-01T00:00:00.000Z", consecutive_failures: 0 } } };
+  const next = updateFeedHealth(prev, [{ interest: "design", url: "https://a/feed", ok: true, count: 10, newCount: 0 }], "2026-07-18T20:00:00.000Z");
+  assert.equal(next.feeds["https://a/feed"].last_new_at, "2026-05-01T00:00:00.000Z");
+});
+
+test("updateFeedHealth: feeds removed from sources.json drop out of the health map", () => {
+  const prev = { feeds: { "https://gone/feed": { interest: "finance", consecutive_failures: 5 } } };
+  const next = updateFeedHealth(prev, [{ interest: "finance", url: "https://kept/feed", ok: true, count: 3, newCount: 1 }], "2026-07-18T20:00:00.000Z");
+  assert.equal(next.feeds["https://gone/feed"], undefined, "a cut source must stop being reported as failing");
+  assert.ok(next.feeds["https://kept/feed"]);
 });

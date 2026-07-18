@@ -181,7 +181,7 @@ jobs:
           git config user.email "noreply@users.noreply.github.com"
           # Tolerate optional artifacts (e.g. a digest that wasn't produced) — a missing pathspec
           # must never abort the commit and lose the issue.
-          for f in articles data/pool.json data/pool-digest.json data/seen.json data/knowledge.json data/quizbank.json data/manifest.json data/usage-log.jsonl data/live.json index.html feed.xml sitemap.xml sw.js; do
+          for f in articles data/pool.json data/pool-digest.json data/seen.json data/knowledge.json data/quizbank.json data/manifest.json data/usage-log.jsonl data/live.json data/feed-health.json index.html feed.xml sitemap.xml sw.js; do
             [ -e "$f" ] && git add "$f"
           done
           if git diff --cached --quiet; then
@@ -219,3 +219,17 @@ jobs:
       - id: deploy
         if: steps.guard.outputs.skip != 'true'
         uses: actions/deploy-pages@v4
+
+      # 7. Nudge: message the reader that today's issue is live (Telegram). Optional + best-effort:
+      #    skips quietly when the secrets aren't set, and never fails a run whose issue already shipped.
+      - name: Notify (Telegram)
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "telegram secrets not set — skipping nudge"
+          else
+            node scripts/notify-telegram.mjs "${{ steps.guard.outputs.syd }}" || echo "nudge failed (non-fatal — the issue is already live)"
+          fi
