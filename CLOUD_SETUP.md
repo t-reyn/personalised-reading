@@ -29,9 +29,15 @@ bill, no PC needed). Your phone just reads from GitHub Pages. One-time setup, ~1
    ```
    Copy the printed token (valid ~1 year).
 
-4. **Add the two secrets:** repo → **Settings → Secrets and variables → Actions → New repository secret**:
+4. **Add the three secrets:** repo → **Settings → Secrets and variables → Actions → New repository secret**:
    - `CLAUDE_CODE_OAUTH_TOKEN` = the token from step 3.
    - `READER_PROFILE` = the **entire contents** of `data/profile.local.json` (paste the JSON).
+   - `STATE_DEPLOY_KEY` = the private half of an SSH deploy key whose public half is registered on
+     the **private `cortex-state` repo** with write access (Settings → Deploy keys there). The
+     generate + health-check workflows use it to read the reader's state and push knowledge updates
+     back. To mint one: `ssh-keygen -t ed25519 -N "" -f cortex_state_key`, add
+     `cortex_state_key.pub` as the deploy key (allow write), paste `cortex_state_key` here, then
+     delete both local files.
 
 5. **Test it:** repo → **Actions → Generate → Run workflow**. Watch it ingest → author → build → deploy.
    Then open your Pages URL and read today's issue. (Tune the cron time in

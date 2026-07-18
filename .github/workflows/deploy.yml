@@ -7,15 +7,15 @@ on:
   push:
     branches: [main]
     paths-ignore:
-      - "data/reading-state.json"
-      - "data/knowledge.json"
+      # (reading-state/knowledge/corpus no longer live here — moved to the private cortex-state
+      # repo in the 2026-07-18 privacy split)
       - "data/sources.json"
+      - "data/sources-local.json"
       - "data/seen.json"
       - "data/pool.json"
       - "data/source-candidates.json"
       - "data/usage-log.jsonl"
       - "data/feed-health.json"
-      - "data/corpus.json"
   workflow_dispatch:
 
 permissions:

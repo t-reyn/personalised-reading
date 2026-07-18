@@ -87,6 +87,25 @@ jobs:
             echo "no READER_PROFILE secret set — generic authoring"
           fi
 
+      # 2b. Materialise the reader's private STATE (reading-state, knowledge, corpus) from the
+      #     cortex-state repo — they are no longer in this public checkout. Load-bearing: authoring
+      #     personalisation and register-concepts read these, so a missing key HARD-FAILS the run
+      #     (authoring blind would silently unpersonalise, and the knowledge push-back could clobber).
+      - name: Fetch private state (cortex-state)
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          STATE_DEPLOY_KEY: ${{ secrets.STATE_DEPLOY_KEY }}
+        run: |
+          if [ -z "$STATE_DEPLOY_KEY" ]; then echo "STATE_DEPLOY_KEY secret not set — see CLOUD_SETUP.md"; exit 1; fi
+          mkdir -p ~/.ssh
+          printf '%s\n' "$STATE_DEPLOY_KEY" > ~/.ssh/cortex_state
+          chmod 600 ~/.ssh/cortex_state
+          ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
+          GIT_SSH_COMMAND="ssh -i ~/.ssh/cortex_state -o IdentitiesOnly=yes" \
+            git clone --quiet git@github.com:t-reyn/cortex-state.git "$RUNNER_TEMP/cortex-state"
+          cp "$RUNNER_TEMP/cortex-state"/data/*.json data/
+          echo "state materialised from cortex-state"
+
       # 3. Author today's article on your subscription. Bounded turns + the run timeout above keep it
       #    well under the headless-token window. One article per run (config.maxArticlesPerRun) leaves
       #    the turn budget to be spent on research + editing rather than a second piece.
@@ -181,7 +200,10 @@ jobs:
           git config user.email "noreply@users.noreply.github.com"
           # Tolerate optional artifacts (e.g. a digest that wasn't produced) — a missing pathspec
           # must never abort the commit and lose the issue.
-          for f in articles data/pool.json data/pool-digest.json data/seen.json data/knowledge.json data/quizbank.json data/manifest.json data/usage-log.jsonl data/live.json data/feed-health.json index.html feed.xml sitemap.xml sw.js; do
+          # knowledge.json is NOT in this list — it lives in the private cortex-state repo now and
+          # is pushed there by the next step (state files are gitignored here since the 2026-07-18
+          # privacy split, so an accidental add would be a no-op anyway).
+          for f in articles data/pool.json data/pool-digest.json data/seen.json data/quizbank.json data/manifest.json data/usage-log.jsonl data/live.json data/feed-health.json index.html feed.xml sitemap.xml sw.js; do
             [ -e "$f" ] && git add "$f"
           done
           if git diff --cached --quiet; then
@@ -205,6 +227,28 @@ jobs:
               exit 1
             fi
           fi
+
+      # 5b. Push the updated knowledge graph back to cortex-state (the author + register-concepts
+      #     write it; the public repo no longer carries it). Runs after the public Commit so the two
+      #     repos can't diverge with an article live whose knowledge update was lost — if THIS push
+      #     fails, tomorrow's health check flags the unregistered concepts. Rebase-retry because the
+      #     browser can write the state repo at any moment.
+      - name: Push knowledge to cortex-state
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/cortex_state -o IdentitiesOnly=yes"
+          cd "$RUNNER_TEMP/cortex-state"
+          cp "$GITHUB_WORKSPACE/data/knowledge.json" data/knowledge.json
+          git add data/knowledge.json
+          if git diff --cached --quiet; then echo "knowledge unchanged"; exit 0; fi
+          git config user.name "reading-bot"
+          git config user.email "noreply@users.noreply.github.com"
+          git commit -m "knowledge: $(TZ=Australia/Sydney date +%F)"
+          for i in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            sleep 10
+          done
+          echo "cortex-state push failed after retries"; exit 1
 
       # 6. Publish. Gated on the guard too: a skipped catch-up run has nothing new to publish
       #    (the run that wrote today's issue already deployed it).

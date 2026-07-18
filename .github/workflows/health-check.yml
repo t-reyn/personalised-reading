@@ -19,6 +19,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      # The state files the check reads live in the private cortex-state repo (2026-07-18 privacy
+      # split) — materialise them read-only. A missing key fails loudly, which is this job's job.
+      - name: Fetch private state (cortex-state)
+        env:
+          STATE_DEPLOY_KEY: ${{ secrets.STATE_DEPLOY_KEY }}
+        run: |
+          if [ -z "$STATE_DEPLOY_KEY" ]; then echo "STATE_DEPLOY_KEY secret not set — see CLOUD_SETUP.md"; exit 1; fi
+          mkdir -p ~/.ssh
+          printf '%s\n' "$STATE_DEPLOY_KEY" > ~/.ssh/cortex_state
+          chmod 600 ~/.ssh/cortex_state
+          ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
+          GIT_SSH_COMMAND="ssh -i ~/.ssh/cortex_state -o IdentitiesOnly=yes" \
+            git clone --quiet --depth 1 git@github.com:t-reyn/cortex-state.git "$RUNNER_TEMP/cortex-state"
+          cp "$RUNNER_TEMP/cortex-state"/data/*.json data/
       - name: Run integrity + freshness check
         env:
           HEALTH_REQUIRE_TODAY: "1"

@@ -44,8 +44,10 @@ data/
   seen.json             ingest dedup keys
   pool.json             the living pool of ingested-but-not-yet-published items
   manifest.json         GENERATED catalog the app reads
-  knowledge.json        concept graph + learnt state (the model the generator reads)
-  reading-state.json    user-owned: read/unread/backlog/starred + quiz results
+  knowledge.json        concept graph + learnt state (the model the generator reads) — PRIVATE:
+                        lives in t-reyn/cortex-state, materialised into data/ at runtime (gitignored here)
+  reading-state.json    user-owned: read/unread/backlog/starred + quiz results + taste feedback —
+                        PRIVATE: lives in t-reyn/cortex-state, materialised at runtime (gitignored here)
   glossary.json         dev "term of the day" — consumed in order by the hub banner (app.js), one term
                         per day the site is opened (seen days tracked in reading-state.json, synced;
                         missed days pause the walk rather than skip a term); topped up in batches
@@ -130,8 +132,11 @@ limits). See `CLOUD_SETUP.md`.
 
 ## Conventions
 
-- **Never leak personal data into published content.** Articles, `config.json`, and the committed
-  state JSON are **PUBLIC**. Never put the reader's name, email, employer, precise location, any
+- **Never leak personal data into published content.** Articles, `config.json`, and everything else
+  committed HERE are **PUBLIC**. The reader's state (`reading-state.json`, `knowledge.json`,
+  `corpus.json`) lives in the **private `t-reyn/cortex-state` repo** since 2026-07-18 — the
+  workflows materialise it into `data/` at runtime and those paths are gitignored here; never
+  commit them to this repo. Never put the reader's name, email, employer, precise location, any
   token/id, or anything from `profile.local.json` / your memory into an article or committed file.
   The profile only steers topic depth and voice — it is context, never material to quote.
 - **Audience: Australia (en-AU).** Apply an Australian lens where relevant (APRA/ASIC/ATO/RBA/Actuaries
@@ -142,5 +147,5 @@ limits). See `CLOUD_SETUP.md`.
 - Concept ids are stable **kebab-case** and shared across articles (the knowledge graph keys on them).
 - Don't delete user data: `reading-state.json` / `knowledge.json` are the irreplaceable asset.
 - The browser writes state back via the GitHub Contents API with a fine-grained token the user pastes
-  into Settings (stored in `localStorage`). The repo is public for now (content + state are readable);
-  only the token holder can write.
+  into Settings (stored in `localStorage`) — targeting the **private `cortex-state` repo** (the token
+  must grant Contents R/W there). The site repo stays public; the reader's habits don't.

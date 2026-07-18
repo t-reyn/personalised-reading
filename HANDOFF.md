@@ -337,7 +337,7 @@ then regenerate. It MUST preserve (or update `app.js` in lockstep with) these lo
   `paths-ignore` (ignore only affects which pushes TRIGGER deploy, not what's uploaded).
 - Shojin/SeatFlow note: a parallel session may hold port 4317 — use `reading2` (4319).
 
-## Privacy (repo is PUBLIC)
+## Privacy (repo is PUBLIC; state is not)
 - **Never put personal data in any committed file or published article** — no name, age, heritage,
   employer, the specific property, location, tokens. Enforced in `CLAUDE.md` + AUTHORING.md.
 - `data/profile.local.json` is gitignored (`*.local.json`) and lives in the cloud only as the encrypted
@@ -345,6 +345,27 @@ then regenerate. It MUST preserve (or update `app.js` in lockstep with) these lo
   — the steering wheel for authoring. Its actual contents are intentionally kept OUT of this public repo;
   full personal detail lives in the user's private auto-memory and the gitignored file. To see it, open
   `data/profile.local.json` locally or ask the user.
+- **STATE SPLIT (2026-07-18): `reading-state.json`, `knowledge.json`, `corpus.json` live in the PRIVATE
+  repo `t-reyn/cortex-state`**, not here — reading habits, quiz results, taste votes and saved sources
+  are no longer public. How the pieces reach them:
+  - **Browser**: the app's whole sync surface is exactly these three files, so `config.json → repo`
+    (embedded as `PR_CONFIG`) now names `cortex-state`; the user's fine-grained PAT must grant
+    Contents R/W on it. `repoCfg()` treats a device's stored pre-split repo name
+    ("personalised-reading") as stale and falls through to the new default — a deliberate custom
+    override of some other name is respected.
+  - **Workflows**: `generate.yml` + `health-check.yml` clone cortex-state via the `STATE_DEPLOY_KEY`
+    secret (an SSH deploy key on cortex-state, write-enabled for generate's knowledge push-back) and
+    copy the files into `data/` at runtime; generate pushes the updated `knowledge.json` back AFTER
+    the public commit (so a failed push surfaces as unregistered concepts in the next health check,
+    not as divergence). Both HARD-FAIL if the secret is missing — authoring without state would
+    silently unpersonalise.
+  - **Keyless boot** on a fresh device now finds no state on the site (the app's
+    `fetch data/knowledge.json` fallbacks 404 → defaults) — gating/library/stats stay empty until
+    the token is pasted, which is the point.
+  - **Local authoring fallback** needs the files materialised by hand: clone cortex-state and copy
+    `data/*.json` in (they're gitignored here).
+  - **History caveat**: pre-split state (and the once-leaked Substack share token) remains in the
+    PUBLIC repo's git history. Rewriting history is a separate, disruptive decision — not done.
 
 ## Staged / next (not built)
 - Let the new model run a few days, then tune: swap thin new-topic feeds (indie-income / mortgage-broking

@@ -1,6 +1,6 @@
 {
   "siteUrl": "https://t-reyn.github.io/personalised-reading",
-  "repo": { "owner": "t-reyn", "name": "personalised-reading", "branch": "main" },
+  "repo": { "owner": "t-reyn", "name": "cortex-state", "branch": "main" },
   "title": "Cortex",
   "tagline": "A reading list that writes itself, and learns what you know.",
   "audience": {

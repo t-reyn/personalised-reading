@@ -37,7 +37,15 @@
   }
   // Repo coordinates default to config.json so a new device only needs a token pasted.
   const repoDefault = CONFIG.repo && CONFIG.repo.owner && CONFIG.repo.name ? { branch: "main", ...CONFIG.repo } : null;
-  const repoCfg = () => loadLocal(LS.repo, null) || repoDefault;
+  const repoCfg = () => {
+    const saved = loadLocal(LS.repo, null);
+    // 2026-07-18 privacy split: state now syncs to the private cortex-state repo. A device that
+    // saved the pre-split default would keep writing state to the PUBLIC repo — treat that stored
+    // value as stale and fall through to the embedded default (a deliberate non-default override
+    // of some other name is left alone).
+    if (saved && saved.name === "personalised-reading" && repoDefault && repoDefault.name !== "personalised-reading") return repoDefault;
+    return saved || repoDefault;
+  };
   const token = () => { try { return localStorage.getItem(LS.token) || ""; } catch { return ""; } };
 
   async function fetchJson(path) {
@@ -932,10 +940,10 @@
         <p class="note">Your reading + learning is saved <b>on this device</b> automatically. To sync across devices (and feed the writer), add a GitHub token below — everything keeps working without one.</p>
         <h2>Sync</h2>
         <div class="field"><label>Repository owner</label><input id="s-owner" value="${esc(r.owner)}" placeholder="your-github-username" /></div>
-        <div class="field"><label>Repository name</label><input id="s-name" value="${esc(r.name)}" placeholder="personalised-reading" /></div>
+        <div class="field"><label>Repository name</label><input id="s-name" value="${esc(r.name)}" placeholder="cortex-state" /></div>
         <div class="field"><label>Branch</label><input id="s-branch" value="${esc(r.branch || "main")}" placeholder="main" /></div>
         <div class="field"><label>Access token</label><input id="s-token" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" value="${esc(token())}" placeholder="github_pat_…" />
-          <p class="hint">A <b>fine-grained</b> token scoped to this one repo with <b>Contents: Read and write</b>. Set the expiry to <b>No expiration</b> (or 1 year) so it doesn't lapse. Create one at <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings</a>. Stored only in this browser — paste once.</p></div>
+          <p class="hint">A <b>fine-grained</b> token with <b>Contents: Read and write</b> on the <b>private state repo</b> named above (your reading state lives there, not in the public site repo). Set the expiry to <b>No expiration</b> (or 1 year) so it doesn't lapse. Create one at <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings</a>. Stored only in this browser — paste once.</p></div>
         <div class="ov-actions" style="padding-left:0;padding-right:0">
           <button class="btn" data-act="pull">Pull</button>
           <button class="btn primary" data-act="save">Save</button>
