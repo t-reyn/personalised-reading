@@ -15,9 +15,21 @@ don't deliberate over the choice at length. Draft once, then fix it in the **Edi
    **`level`**, **`priority`**, and **`want`** (what they want from it), plus their **`goals`** and **`tone`**.
    Pitch and choose topics to match.
 3. `data/knowledge.json` — concepts already learnt (`is_learnt:true`). Never re-explain these.
-4. `data/reading-state.json` — read/quiz history. **A failed quiz (`passed:false`) is the strongest
-   topic signal you have**: when its interest comes up, re-teach those concepts from a different
-   angle with a fresh quick_check — don't repeat the old article's framing.
+4. `data/reading-state.json` — read/quiz history **and the reader's taste votes**. **A failed quiz
+   (`passed:false`) is the strongest topic signal you have**: when its interest comes up, re-teach
+   those concepts from a different angle with a fresh quick_check — don't repeat the old article's
+   framing. Each `articles` entry may also carry **`feedback: "up" | "down"`** — a deliberate
+   one-tap verdict on that article (join ids against `data/manifest.json` for its interest, title,
+   tags and mode). Read the signals like this, strongest first:
+   - **`feedback:"down"`** — do not write another piece in that article's register/angle. Work out
+     what it *was* (a news brief? a listicle? too basic? wrong sub-topic?) from its title, tags and
+     mode, and steer away from that pattern, not from the whole tab.
+   - **`feedback:"up"` and `starred`** — more of this: its register, its sub-topic, its source type.
+     An up-vote outranks a plain read.
+   - **Expired unread** (`status:"archived"` with `expired:true`, never read) — a quiet skip. One is
+     noise; several in one tab means the angles being chosen there aren't landing — change angle.
+   Feedback tunes the ANGLE WITHIN a tab. It never overrides `cadenceDays` — an under-loved tab
+   still gets served on schedule; serve it something different.
 5. `data/pool-digest.json` — pre-digested candidate items per interest (freshest, trimmed), plus
    `days_since_last_article` per interest. (If the digest is missing, fall back to `data/pool.json`
    `status:"pending"` items.)

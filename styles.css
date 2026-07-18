@@ -213,6 +213,13 @@ button { font: inherit; cursor: pointer; }
 .card .star.on { color: var(--warn); }
 .merged-note { color: var(--accent); font-weight: 600; }
 .readtick { color: var(--good); font-weight: 700; }
+/* taste feedback (👍/👎) — quiet until active; feeds the author via reading-state sync */
+.fb { display: inline-flex; gap: 2px; margin-left: auto; }
+.fbb { background: none; border: 1px solid transparent; border-radius: 7px; padding: 1px 6px; cursor: pointer; font-size: 13px; line-height: 1.5; opacity: .4; filter: grayscale(1); transition: opacity .12s; }
+.fbb:hover { opacity: .85; border-color: var(--line-strong); }
+.fbb.on { opacity: 1; filter: none; border-color: var(--accent, var(--line-strong)); background: color-mix(in srgb, var(--accent, #888) 16%, transparent); }
+.ov-fb { margin-right: auto; margin-left: 0; align-self: center; }
+.ov-fb .fbb { font-size: 16px; padding: 3px 9px; }
 
 /* ---------- Library tiers + review nudge ---------- */
 .tier { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; border-radius: 999px; padding: 1px 7px; margin-left: 8px; }

@@ -385,6 +385,7 @@
         ${opts.review ? `<span class="due-note">⟳ time to review</span>` : (read ? `<span class="readtick">✓ read</span>` : "")}
         ${merged ? `<span class="merged-note">↳ consolidates ${merged}</span>` : ""}
         ${prereq ? `<button class="prereq" type="button" data-prereq="${esc(prereq.id)}" title="Open the prerequisite article">🔒 Read "${esc(prereq.title)}" first</button>` : ""}
+        ${opts.archive ? "" : fbHtml(a.id)}
       </div>
     </article>`;
   }
@@ -393,9 +394,15 @@
 
   function bindCards(root) {
     root.querySelectorAll(".card").forEach((el) => {
-      el.addEventListener("click", (e) => { if (e.target.closest(".star,.restore,.prereq")) return; openReader(el.dataset.id); });
+      el.addEventListener("click", (e) => { if (e.target.closest(".star,.restore,.prereq,.fb")) return; openReader(el.dataset.id); });
       el.addEventListener("keydown", (e) => { if (e.key === "Enter") openReader(el.dataset.id); });
     });
+    root.querySelectorAll(".fbb").forEach((b) => b.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setFeedback(b.dataset.fbid, b.dataset.fb);
+      const fb = state.articles[b.dataset.fbid]?.feedback;
+      b.closest(".fb").querySelectorAll(".fbb").forEach((x) => x.classList.toggle("on", x.dataset.fb === fb));
+    }));
     root.querySelectorAll(".star").forEach((b) => b.addEventListener("click", (e) => { e.stopPropagation(); toggleStar(b.dataset.star); }));
     root.querySelectorAll(".restore").forEach((b) => b.addEventListener("click", (e) => { e.stopPropagation(); restore(b.dataset.restore); }));
     root.querySelectorAll("[data-prereq]").forEach((b) => b.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); openReader(b.dataset.prereq); }));
@@ -646,6 +653,19 @@
     const a = (state.articles[id] ||= { status: "backlog" });
     a.starred = !a.starred; a.t = now(); saveState(); renderTabs(); render();
   }
+  // Taste signal for the daily author: "more like this" / "less like this". One value per article
+  // (up | down | absent); tapping the active one clears it. Lives on the article entry so it rides
+  // the existing per-entry sync merge, and the generator reads it from reading-state.json.
+  function setFeedback(id, dir) {
+    const a = (state.articles[id] ||= { status: "backlog" });
+    a.feedback = a.feedback === dir ? null : dir;
+    if (!a.feedback) delete a.feedback;
+    a.t = now(); saveState();
+  }
+  const fbHtml = (id, cls = "") => {
+    const fb = state.articles[id]?.feedback;
+    return `<span class="fb ${cls}"><button type="button" class="fbb${fb === "up" ? " on" : ""}" data-fb="up" data-fbid="${esc(id)}" aria-label="More like this" title="More like this">👍</button><button type="button" class="fbb${fb === "down" ? " on" : ""}" data-fb="down" data-fbid="${esc(id)}" aria-label="Less like this" title="Less like this">👎</button></span>`;
+  };
   function markRead(id) {
     const a = (state.articles[id] ||= {});
     a.status = "read"; a.read_at = now(); a.t = now(); saveState(); renderTabs();
@@ -758,10 +778,16 @@
       </div>
       <div class="ov-body"><iframe class="reader-frame" title="${esc(a.title)}" src="${esc(BASE + a.path)}" sandbox="allow-popups allow-popups-to-escape-sandbox"></iframe></div>
       <div class="ov-actions">
+        ${fbHtml(id, "ov-fb")}
         ${isRead(id) ? `<button class="btn" data-act="unread">Mark unread</button>` : `<button class="btn good" data-act="read">✓ Mark read</button>`}
         ${hasQuiz ? `<button class="btn primary" data-act="quiz">Take quiz →</button>` : ""}
       </div>`;
     show(ov);
+    ov.querySelectorAll(".fbb").forEach((b) => b.addEventListener("click", () => {
+      setFeedback(id, b.dataset.fb);
+      const fb = state.articles[id]?.feedback;
+      ov.querySelectorAll(".fbb").forEach((x) => x.classList.toggle("on", x.dataset.fb === fb));
+    }));
     ov.querySelector('[data-act="back"]').onclick = () => hide(ov);
     ov.querySelector('[data-act="star"]')?.addEventListener("click", () => {
       toggleStar(id);

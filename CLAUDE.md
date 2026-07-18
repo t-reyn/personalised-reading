@@ -66,7 +66,8 @@ limits). See `CLOUD_SETUP.md`.
    grounding time-sensitive pieces; best-effort, never fatal).
 2. Read `data/pool-digest.json` (pre-digested candidate items per interest; fall back to
    `data/pool.json` if absent), `data/knowledge.json` (what's learnt),
-   `data/reading-state.json` (read/quiz history — a failed quiz is the strongest re-teach signal),
+   `data/reading-state.json` (read/quiz history — a failed quiz is the strongest re-teach signal;
+   per-article `feedback: "up"|"down"` taste votes steer the angle within a tab, see AUTHORING.md),
    `data/corpus.json` (the reader's durable hand-picked sources — vetted signal to weave in),
    `data/live.json` (current figures for `current` finance/markets/property pieces), and
    **`data/profile.local.json` if present** (gitignored reader profile: background + per-tab pitch
