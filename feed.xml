@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Sat, 18 Jul 2026 12:25:41 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 20:48:11 GMT</lastBuildDate>
+    <item>
+      <title>Why a Rising Signup Count Can Still Mean a Dying App</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-19/why-a-rising-signup-count-can-still-mean-a-dying-app.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-19/why-a-rising-signup-count-can-still-mean-a-dying-app.html</guid>
+      <category>indie-income</category>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A weekly signup count can only go up, but the cohort retention curve — and the &quot;smile&quot; shape at the tail of it — is what actually tells you whether anyone&#39;s still opening the app a month on.</description>
+    </item>
     <item>
       <title>One Postgres Feature Is Why You Don&#39;t Need a Database per Customer</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-18/row-level-security-replaces-a-database-per-tenant.html</link>

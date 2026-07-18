@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-18T12:25:41.618Z",
-  "count": 49,
+  "generatedAt": "2026-07-18T20:48:11.830Z",
+  "count": 50,
   "articles": [
+    {
+      "id": "2026-07-19-why-a-rising-signup-count-can-still-mean-a-dying-app",
+      "slug": "why-a-rising-signup-count-can-still-mean-a-dying-app",
+      "interest": "indie-income",
+      "interests": [
+        "indie-income"
+      ],
+      "mode": "learn",
+      "title": "Why a Rising Signup Count Can Still Mean a Dying App",
+      "summary": "A weekly signup count can only go up, but the cohort retention curve — and the \"smile\" shape at the tail of it — is what actually tells you whether anyone's still opening the app a month on.",
+      "tags": [
+        "indie-income",
+        "retention",
+        "metrics",
+        "growth"
+      ],
+      "created_at": "2026-07-19",
+      "expire_at": null,
+      "concepts_taught": [
+        "cohort-retention-curve",
+        "user-resurrection"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "product-taste"
+      ],
+      "source_count": 0,
+      "word_count": 668,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-19/why-a-rising-signup-count-can-still-mean-a-dying-app.html"
+    },
     {
       "id": "2026-07-18-row-level-security-replaces-a-database-per-tenant",
       "slug": "row-level-security-replaces-a-database-per-tenant",
