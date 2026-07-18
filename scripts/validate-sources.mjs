@@ -7,7 +7,11 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const MAX_FEEDS_PER_INTEREST = 12; // don't let the scout balloon any one tab
+// 8 matches DIGEST_PER_INTEREST in ingest.mjs, and that ceiling is structural, not taste:
+// capRoundRobin's round 0 breaks the moment the 8-slot digest fills, so a 9th ACTIVE feed means the
+// least-frequent feeds (the mechanism/anchor ones) silently get ZERO slots. The scout must never
+// push a tab past it — cutting is a human decision.
+const MAX_FEEDS_PER_INTEREST = 8;
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
 const readJson = async (p, fb) => {
