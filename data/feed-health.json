@@ -1,339 +1,339 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-18T20:38:06.574Z",
+  "updatedAt": "2026-07-19T20:38:38.813Z",
   "feeds": {
     "https://codeopinion.com/feed/": {
       "interest": "software-ai",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 20,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://boringsql.com/atom.xml": {
       "interest": "software-ai",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 44,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://nextjs.org/feed.xml": {
       "interest": "software-ai",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 68,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://addyosmani.com/rss.xml": {
       "interest": "software-ai",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 10,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA": {
       "interest": "software-ai",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXl4i9dYBrFOabk0xGmbkRA": {
       "interest": "software-ai",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC4x3CR25WSlvMJUtSPPzwwg": {
       "interest": "software-ai",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.nngroup.com/feed/rss/": {
       "interest": "design",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 20,
       "last_new_at": "2026-07-18T20:38:06.574Z",
       "consecutive_failures": 0
     },
     "https://www.smashingmagazine.com/feed/": {
       "interest": "design",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 40,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://uxdesign.cc/feed": {
       "interest": "design",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 10,
       "last_new_at": "2026-07-18T20:38:06.574Z",
       "consecutive_failures": 0
     },
     "https://www.joshwcomeau.com/rss.xml": {
       "interest": "design",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 88,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC-b3c7kxa5vU-bnmaROgvog": {
       "interest": "design",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCVyRiMvfUNMA1UPlDPzG5Ow": {
       "interest": "design",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC8WLg9gshrtZA1-swL5D9Kg": {
       "interest": "design",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": "2026-07-18T20:38:06.574Z",
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=%22indie%20hacker%22%20OR%20bootstrapped%20OR%20microsaas%20OR%20%22app%20revenue%22%20OR%20%22solo%20founder%22&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "indie-income",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 100,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=%22side%20project%22%20income%20OR%20solopreneur%20OR%20%22SaaS%20pricing%22%20OR%20%22app%20store%20optimization%22%20OR%20%22build%20in%20public%22&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "indie-income",
-      "last_ok": "2026-07-18T20:38:06.574Z",
-      "last_items": 52,
+      "last_ok": "2026-07-19T20:38:38.813Z",
+      "last_items": 51,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCcefcZRL2oaA_uBNeo5UOWg": {
       "interest": "indie-income",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC6t1O76G0jYXOAoYCm153dA": {
       "interest": "indie-income",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
-      "last_new_at": null,
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=%22mortgage%20broker%22%20OR%20%22home%20loan%22%20OR%20refinancing%20OR%20%22serviceability%22%20OR%20%22lending%20policy%22&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "mortgage-broking",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 100,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=site:brokerdaily.au%20OR%20site:mortgagebusiness.com.au%20OR%20site:theadviser.com.au&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "mortgage-broking",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 100,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=%22investment%20property%22%20OR%20%22negative%20gearing%22%20OR%20%22capital%20gains%20tax%22%20OR%20%22property%20investing%22%20Australia&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "property",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 100,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=site:yourinvestmentpropertymag.com.au%20OR%20site:apimagazine.com.au&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "property",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 100,
       "last_new_at": "2026-07-18T20:38:06.574Z",
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCo_nWik261ZKSnjgoaIjz0w": {
       "interest": "property",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
-      "last_new_at": null,
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCcnw6T6HoHau4zwXq5PQbUQ": {
       "interest": "property",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://deliver.kontent.ai/4f4649d8-6df9-023d-bb6c-14e842b8aadb/items?system.type=resource&elements.content_types[any]=t_9e271819_61d8_4109_b19e_7f90b92d1744,t_d18e3d5b_ca4e_4fa9_b4d2_c51e50f129bb,t_ebcd6c72_7c15_43c3_ba3a_dd3e075968ec,t_8806106a_b97d_4d79_a1c0_409e75609201,t_6cd246cc_f8dd_419c_8115_2355e74580e3,t_3b5cbe9e_9a4b_48bb_a0b4_8d0b833d9e13,t_f6a6455f_f24a_4b7f_a960_d32179bc6ef8&order=elements.created_date[desc]&limit=10&elements=name,description,created_date,url,practice_areas,content_types": {
       "interest": "actuarial",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 10,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://deliver.kontent.ai/4f4649d8-6df9-023d-bb6c-14e842b8aadb/items?system.type=article&order=elements.publish_date[desc]&limit=15&elements=title,slug,description,publish_date,practice_areas": {
       "interest": "actuarial",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=%22Actuaries%20Institute%22&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "actuarial",
-      "last_ok": "2026-07-18T20:38:06.574Z",
-      "last_items": 42,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
+      "last_items": 44,
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://insurancenews.com.au/rss/daily": {
       "interest": "actuarial",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 20,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=%22group%20life%20insurance%22%20OR%20actuary%20OR%20%22IFRS%2017%22&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "actuarial",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 100,
-      "last_new_at": null,
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://www.apra.gov.au/rss.xml": {
       "interest": "actuarial",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 10,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.cnbc.com/id/100003114/device/rss/rss.html": {
       "interest": "finance",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 30,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=site:boredombaron.substack.com&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "finance",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 26,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=investing%20OR%20%22stock%20market%22%20OR%20%22interest%20rates%22%20OR%20superannuation%20OR%20RBA&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "finance",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 100,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=site:afr.com&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "finance",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 100,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCESLZhusAkFfsNsApnjF_Cg": {
       "interest": "finance",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": "2026-07-18T20:38:06.574Z",
       "consecutive_failures": 0
     },
     "https://www.sciencedaily.com/rss/health_medicine.xml": {
       "interest": "health",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 60,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=%22health%20research%22%20OR%20nutrition%20OR%20fitness%20OR%20longevity%20OR%20sleep&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "health",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 100,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC2D2CMWXMOVWx7giW1n3LIg": {
       "interest": "health",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC68TLK0mAEzUyHx5x5k-S1Q": {
       "interest": "health",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://nofilmschool.com/rss.xml": {
       "interest": "videography",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 30,
       "last_new_at": "2026-07-18T20:38:06.574Z",
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=cinematography%20OR%20%22colour%20grading%22%20OR%20%22color%20grading%22%20OR%20filmmaking%20OR%20%22video%20composition%22&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "videography",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 100,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC3DkFux8Iv-aYnTRWzwaiBA": {
       "interest": "videography",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCUodELQsFwF8dq0X-bK9FQQ": {
       "interest": "videography",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
-      "last_new_at": null,
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://www.sciencedaily.com/rss/top/science.xml": {
       "interest": "science",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 60,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://www.quantamagazine.org/feed/": {
       "interest": "science",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 5,
       "last_new_at": null,
       "consecutive_failures": 0
     },
     "https://news.google.com/rss/search?q=%22scientific%20research%22%20OR%20physics%20OR%20space%20OR%20biology%20OR%20climate&hl=en-AU&gl=AU&ceid=AU:en": {
       "interest": "science",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 100,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://phys.org/rss-feed/": {
       "interest": "science",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 30,
-      "last_new_at": "2026-07-18T20:38:06.574Z",
+      "last_new_at": "2026-07-19T20:38:38.813Z",
       "consecutive_failures": 0
     },
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q": {
       "interest": "science",
-      "last_ok": "2026-07-18T20:38:06.574Z",
+      "last_ok": "2026-07-19T20:38:38.813Z",
       "last_items": 15,
       "last_new_at": null,
       "consecutive_failures": 0

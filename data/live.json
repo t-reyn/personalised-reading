@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-18T20:38:07.710Z",
-  "asOf": "19 July 2026, 6:38 am AEST",
+  "updatedAt": "2026-07-19T20:38:39.491Z",
+  "asOf": "20 July 2026, 6:38 am AEST",
   "markets": [
     {
       "symbol": "^AXJO",
@@ -26,9 +26,9 @@
       "label": "AUD/USD",
       "currency": "USD",
       "unit": null,
-      "price": 0.6985,
-      "changePct": -0.33,
-      "display": "0.6985 (-0.3%)"
+      "price": 0.6969,
+      "changePct": -0.56,
+      "display": "0.6969 (-0.6%)"
     },
     {
       "symbol": "GC=F",
@@ -36,8 +36,8 @@
       "currency": "USD",
       "unit": "USD/oz",
       "price": 4018.8,
-      "changePct": 0.83,
-      "display": "4,018.8 (+0.8%)"
+      "changePct": 0.15,
+      "display": "4,018.8 (+0.2%)"
     },
     {
       "symbol": "CL=F",
@@ -45,8 +45,8 @@
       "currency": "USD",
       "unit": "USD/bbl",
       "price": 81.78,
-      "changePct": 3.58,
-      "display": "81.78 (+3.6%)"
+      "changePct": -0.86,
+      "display": "81.78 (-0.9%)"
     },
     {
       "symbol": "^VIX",
@@ -62,19 +62,19 @@
     {
       "id": "bitcoin",
       "label": "Bitcoin",
-      "aud": 92490,
-      "usd": 64558,
-      "changePct": 0.95,
-      "display": "A$92,490 (+0.9%)"
+      "aud": 92519,
+      "usd": 64442,
+      "changePct": 0.04,
+      "display": "A$92,519 (+0.0%)"
     },
     {
       "id": "ethereum",
       "label": "Ethereum",
-      "aud": 2660.39,
-      "usd": 1856.95,
-      "changePct": 0.97,
-      "display": "A$2,660 (+1.0%)"
+      "aud": 2674.63,
+      "usd": 1862.96,
+      "changePct": 0.58,
+      "display": "A$2,675 (+0.6%)"
     }
   ],
-  "summary": "ASX 200 8,796.7 (-0.5%) · S&P 500 7,457.7 (-1.5%) · AUD/USD 0.6985 (-0.3%) · Gold 4,018.8 (+0.8%) · WTI 81.78 (+3.6%) · VIX 18.77 (+12.2%) · Bitcoin A$92,490 (+0.9%) · Ethereum A$2,660 (+1.0%)"
+  "summary": "ASX 200 8,796.7 (-0.5%) · S&P 500 7,457.7 (-1.5%) · AUD/USD 0.6969 (-0.6%) · Gold 4,018.8 (+0.2%) · WTI 81.78 (-0.9%) · VIX 18.77 (+12.2%) · Bitcoin A$92,519 (+0.0%) · Ethereum A$2,675 (+0.6%)"
 }

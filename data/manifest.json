@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-18T20:48:11.830Z",
-  "count": 50,
+  "generatedAt": "2026-07-19T20:49:17.741Z",
+  "count": 51,
   "articles": [
+    {
+      "id": "2026-07-20-westpacs-5-investor-deposit-is-a-hedge-not-a-gift",
+      "slug": "westpacs-5-investor-deposit-is-a-hedge-not-a-gift",
+      "interest": "mortgage-broking",
+      "interests": [
+        "mortgage-broking"
+      ],
+      "mode": "current",
+      "title": "Westpac's 5% Investor Deposit Is a Hedge, Not a Gift",
+      "summary": "Westpac dropped its investor deposit to 5% the same week the Home Guarantee Scheme updated its own rules — one move tightens a subsidy, the other papers over a 34% forecast drop in investor lending, and the LMI bill tells you which is which.",
+      "tags": [
+        "mortgage-broking",
+        "home-guarantee-scheme",
+        "lmi",
+        "investor-lending",
+        "negative-gearing",
+        "Australia"
+      ],
+      "created_at": "2026-07-20",
+      "expire_at": "2026-08-10",
+      "concepts_taught": [
+        "lenders-mortgage-insurance"
+      ],
+      "concepts_assumed": [
+        "negative-gearing-reform-2026"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 688,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-20/westpacs-5-investor-deposit-is-a-hedge-not-a-gift.html"
+    },
     {
       "id": "2026-07-19-why-a-rising-signup-count-can-still-mean-a-dying-app",
       "slug": "why-a-rising-signup-count-can-still-mean-a-dying-app",

@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Sat, 18 Jul 2026 20:48:11 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 20:49:17 GMT</lastBuildDate>
+    <item>
+      <title>Westpac&#39;s 5% Investor Deposit Is a Hedge, Not a Gift</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-20/westpacs-5-investor-deposit-is-a-hedge-not-a-gift.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-20/westpacs-5-investor-deposit-is-a-hedge-not-a-gift.html</guid>
+      <category>mortgage-broking</category>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Westpac dropped its investor deposit to 5% the same week the Home Guarantee Scheme updated its own rules — one move tightens a subsidy, the other papers over a 34% forecast drop in investor lending, and the LMI bill tells you which is which.</description>
+    </item>
     <item>
       <title>Why a Rising Signup Count Can Still Mean a Dying App</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-19/why-a-rising-signup-count-can-still-mean-a-dying-app.html</link>
@@ -396,14 +404,6 @@
       <category>software-ai</category>
       <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
       <description>When you need an LLM to know your data, reach for retrieval before fine-tuning — it is cheaper, fresher, and easier to debug.</description>
-    </item>
-    <item>
-      <title>Zone 2 training, explained</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-25/zone-2-training-explained.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-25/zone-2-training-explained.html</guid>
-      <category>health</category>
-      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
-      <description>The slow, conversational pace that builds your aerobic base — what Zone 2 is, why it works, and how to find yours.</description>
     </item>
   </channel>
 </rss>
