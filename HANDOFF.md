@@ -207,6 +207,13 @@ cross-tagged in — while **zero** taught the mechanisms under his own stack, wh
   - **Don't make the UA global.** A sweep of all 45 feeds under both UAs measured the swap as fixing 1 and
     **breaking 1** (`insurancenews.com.au` 200 → ERR: it hangs on a bot UA). Publishers disagree; identity
     must stay per-response.
+- **NEVER let the local supplement rebase pool.json/seen.json (wedged 2026-07-19).** The cloud
+  ingest rewrites both files wholesale every run, so rebasing a local commit that touches them over
+  a cloud commit conflicts BY CONSTRUCTION — the first scheduled run (which committed before
+  pulling) left the repo mid-rebase with `UU data/pool.json` and failed all 3 retries.
+  `ingest-local.mjs` now syncs FIRST, holds its changes as data, and on a push race resets the
+  branch to the fresh tip (refreshing only the two derived files, so unrelated WIP survives) and
+  re-applies. Derived data is regenerable — rebuild, don't merge.
 - **Local ingest supplement (2026-07-18) — how the banned Substacks get in anyway.** Feeds listed in
   `data/sources-local.json` (currently `invisiblebalancesheet` + `actuarialnotes`) are fetched by
   **`scripts/ingest-local.mjs` on the reader's PC** — a residential IP Substack serves happily — and
