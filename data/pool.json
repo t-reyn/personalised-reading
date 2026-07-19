@@ -448,11 +448,14 @@
       "title": "The Twisted Psychology Behind Top 1% Apps",
       "url": "https://www.youtube.com/watch?v=nQKWYmrixCU",
       "source": "Tim Gabe",
-      "excerpt": "✅ Get help growing your business with design: https://timgabe.link/zLiT2ws",
+      "excerpt": "Not sure if you noticed, but some of today's most addictive [music] and explosively growing products make you feel seen. Like showing you the exact month you'll meet your soulmate. Or your face scored out of 10. Some even make you feel like they know who you really are. And while most of it is kind of fake, one thing is clear. The apps [music] who do this right are hugely successful. So in this video, I'm going to break down the psychology behind all of it. The psychology that makes your product feel built for your users, even if it isn't. To make it even more tangible, I'm also going to show you three products killing it right now by using this to their advantage. By the way, I'm Tim. I've designed products for over a decade from Spotify to a bunch of multi-million dollar startups. So this is stuff I think about 24/7. Now, many times we think personalization or feeling seen means data. Like hundreds of interviews or a recommendation engine or custom trained AI models. But some of today's fastest growing products barely do any of that. Instead, they lean on two psychological effects working together. The first, something a psychologist named Forer proved back in 1948. We now call it the Barnum effect where generic thing gets engineered to feel like it was made for you and only you. The second one is even simpler. The more effort someone puts in to get something, the more they value it even when it's pretty average. But as you'll learn, in very different but creative ways. Now, just before we dig into the first one, if you need help with product design strategy just like this, we run a few free design strategy calls monthly at Zip Zap. Link's down below if you're interested. All right, the first chapter, something I call the mirror. There's this app called Starcrossed, built by a single founder off the back of her TikTok. It tells you the exact month and year you'll meet your soulmate. Now, before it shows you anything, it asks for your birthday, your exact birth time, the city you were born in, a bunch of personal information, right? Then it sits there generating, reading your chart, building your result, and finally it generates your reveal, a specific month, a",
       "published_at": "2026-07-08T18:45:18+00:00",
       "added_at": "2026-07-18T20:37:52.904Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-19T11:36:46.800Z",
+      "transcript_at": "2026-07-19T11:36:46.800Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "design-ebe1c1352654",
@@ -462,11 +465,14 @@
       "title": "The Weird Design Playbook of 6 App Outliers",
       "url": "https://www.youtube.com/watch?v=HA4yB_sd62Q",
       "source": "Tim Gabe",
-      "excerpt": "✅ Get help growing your business with design: https://timgabe.link/gVsfRvJ",
+      "excerpt": "I went through more than 200 of the highest charting apps on the App Store. And what I realized is that most are basically just well-marketed copies of the category leader. But then I found four exceptions. [music] These apps built million-dollar revenue by taking the design rules every other app in their category was following and [music] turning them upside down. Same move in four completely different categories. All of them small teams doing something I call first principles design. In this video, I'll break down all the four patterns, including the exact design move each team made, why competitors couldn't follow, and the framework you can apply to your own app. By the way, I'm Tim. I've been designing software for the last decade, helping companies like Spotify along the way. And nowadays, I run my own design agency working with app founders every day. So, this is truly all I think about every day. Now, pattern one, something I call niche depth. The app that proves it is Teemo, a Copenhagen-based productivity app that won iPhone app of the year in 2025. Every productivity app on your phone makes the same design assumption. Tasks are text rows in a list. Notion, Apple Reminders, Todoist, Microsoft To Do. Open any of them and you see basically the same shape, a vertical list of strings with checkboxes. And when you compete in that category on the mass market, you kind of have to compete on more list features, more views, more integrations, more automations. But here's the thing most founders building for niches miss. A productivity app built for ADHD users does not look like notion with a different font. It doesn't look like a cleaner to-do list. It should look entirely different. Like colored time blocks on a vertical timeline, pictures instead of words. Block sizes based on how long the task takes. Again, Teemo proves it. Their initial target audience was neurodivergent users. And here's where the design move happens. Text rows work for the mass market because reading is relatively cheap. But for ADHD users, parsing a vertical list of strings demands focused attention. And that's exactly the thing they have less of. So, Teemo refused the text row assumption",
       "published_at": "2026-06-24T19:00:08+00:00",
       "added_at": "2026-07-18T20:37:52.904Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-19T11:36:46.800Z",
+      "transcript_at": "2026-07-19T11:36:46.800Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "design-0c9e333f2f1a",
@@ -476,11 +482,14 @@
       "title": "Why Leaderboards Kill App Retention (How To Fix It)",
       "url": "https://www.youtube.com/watch?v=BxhsCu9hNpY",
       "source": "Tim Gabe",
-      "excerpt": "✅ Get help growing your business with design: https://timgabe.link/OFw0Jb0",
+      "excerpt": "Most app founders choose the wrong thing, features, notifications, >> [music] >> streaks. That's what the classic retention advice pushes. But the apps that keep people for years wire in a feeling. They make users really feel like they're in a race and they're either climbing or falling behind. It's a phenomena I call the invisible scoreboard. And in this video, I'm going to break down how it actually [music] works and the three ways to use it to boost your own app's retention. By the way, I'm Tim. I've designed digital products for the last decade, both in big tech and for lots of multi-million dollar startups. And trust me when I say this, a leaderboard that keeps people for years is so much more than just a leaderboard. A leaderboard is the surface. Social comparison is the psychological engine underneath. Most founders ship the leaderboard like a nice-to-have without really thinking it through. That kills the entire thing before it even starts. You see, without the psychology baked in, you don't have a retention tool. You have a glorified list and lists don't tend to move retention. So what you need is an invisible scoreboard. It's when your product makes another user's progress feel like you're in a race with it. The first move is pretty simple. Try surfacing the comparison at the moment of completion, whatever completion means in your app, the end of a workout, a transaction, a listen. Just a signal in their face that they're falling behind. But also keep in mind that the signal will land differently depending on who's on the other side of the comparison. There's a big psychological difference between chasing a world record holder and chasing your neighbor. Let's look at two apps that use this insight to their advantage, starting with the first one, Strava. Over 100 million athletes. The core loop is segments. Public leaderboards on specific stretches of road or trail. Finish a ride, and your segment rankings are right there. But here's the thing, Strava doesn't just give you the ability to keep on a hyper-competitive global leaderboard. If you want, you can be ranked against your neighborhood, against your friends, against that dozen riders who happened t",
       "published_at": "2026-06-16T15:00:15+00:00",
       "added_at": "2026-07-18T20:37:52.904Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-19T11:36:46.800Z",
+      "transcript_at": "2026-07-19T11:36:46.800Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "design-5c9cfe594930",
@@ -490,11 +499,14 @@
       "title": "How Top 1% Indie Apps Beats Giants",
       "url": "https://www.youtube.com/watch?v=MAvKHToGiVY",
       "source": "Tim Gabe",
-      "excerpt": "✅ Get help growing your business with design: https://timgabe.link/H3Ps6k8",
+      "excerpt": "In 2026, AI's generating apps faster than humans can name them. iOS releases jumped 80% year-over-year in Q1, and today we're at almost 90% on iOS. And yet, three-decade-old apps have stood the test of time. One charged money to compete with Apple's free weather app. One got more than 2 million real trees planted by making a virtual tree die while you're checking Instagram. And one of them won an Apple Design Award 12 years ago and still has today a 4.8 star rating from over 100,000 reviews. They all won the same way, by building experiences instead of screens. And in this video, I'm going to show you the three meta patterns these survivors use to stay unfairly competitive. By the way, I'm Tim. I've spent over a decade designing software for startups and tech giants around the world. And my literal job is about obsessing over this stuff. Now, most products have at least one screen where the user reads numbers and have to make sense of it. And most apps stop at just showing the data. One of the survivors in today's video is a data-driven app that made the data secondary. And in a year where AI-powered founders spit out new apps in an afternoon, that difference is the entire moat. Introducing meta pattern one, something I call the human pattern. You see, here's the trap most founders fall into. You try to make your product feel like it has personality. So, you ship a friendly empty state, a confetti animation on first save, a cute mascot on the loading screen. That, my friends, is basically just decoration. And none of it actually changes what the user feels when they open the core surface because the core surface is usually still a chart or a row of numbers or a long list or a table. Same data delivered in the same boring traditional way every other app in the category delivers it. The personality got bolted onto the edges instead of at the core. Now, to try to understand the difference between this and really making something feel human, let's jump back a decade. A solo developer in 2013 decided to build a weather app. The problem was iPhones already came with one, free, pre-installed and he was going to charge money for his version of it. That developer was Bri",
       "published_at": "2026-06-10T18:30:12+00:00",
       "added_at": "2026-07-18T20:37:52.904Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-19T11:36:46.800Z",
+      "transcript_at": "2026-07-19T11:36:46.800Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "design-a9a149d0f4e4",
@@ -504,11 +516,14 @@
       "title": "How To Solve The App Onboarding Paradox",
       "url": "https://www.youtube.com/watch?v=Aa89MC8jX2c",
       "source": "Tim Gabe",
-      "excerpt": "✅ Get help growing your business with design: https://timgabe.link/Ojk4B90",
+      "excerpt": "On average, absolute 77% of their users within 3 days. Not because they have bad features, not because their marketing is broken, because of one onboarding choice that's either buying you retention or killing. And most founders don't even know this is the lever to pull. So in this video, I'm going to break down the one rule that flips the 77% number around. The app killing it right now with a two-screen onboarding and a calendar case that breaks the rule on purpose and still wins big time. By the way, I'm Tim. I've spent the last decade designing digital products from Big Tech to startups all over the world. And the difference between an app that hooks users in week one and an app that loses them in less than 3 days comes down to one rule that most founders get wrong. The thing is, most apps out there onboard like government forms, sign-up screens, permission requests, walkthroughs. By the time the user gets to do anything, they click through screens that to them have seemingly little to do with the value of the product. And if your product isn't heavily dependent on personalization, the fix usually isn't more onboarding. It's onboarding that does the work for the user, not work for you. The clearest example of this is Granola. It's the AI notes app that raised $125 million in March 2026 at a $1.5 billion valuation, six times what it was worth 12 months earlier. Their onboarding is two screens. Screen one, signing with Google. Screen two, grant microphone access. That's it. The next thing you do is open Granola during your next meeting. The app records, transcribes, summarizes. The value lands in the very next thing you were already going to do. Many apps in the AI productivity space will onboard with sign up, then a feature tour, then maybe a goals wizard. Granola skipped all of that. Just two screens to value, and they're growing like crazy. Quick note, onboarding is just one of many things we help founders think about during our free design strategy calls at Zipsa. Links down below if you want to grab a spot. Now, here's where it gets interesting and counterintuitive. Some of the fastest-growing apps in 2026 have absurdly long onboardings. Cal AI is the calor",
       "published_at": "2026-06-03T14:30:31+00:00",
       "added_at": "2026-07-18T20:37:52.904Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-19T11:36:46.800Z",
+      "transcript_at": "2026-07-19T11:36:46.800Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-13542c1a1c17",
@@ -1046,11 +1061,14 @@
       "title": "Australia's Job Market Collapse! How AI Will Impact The Housing Market",
       "url": "https://www.youtube.com/watch?v=QVsqmjwebOA",
       "source": "Australian Property Mastery with PK Gupta",
-      "excerpt": "AI Job Disruption and the Australian Housing Market: Where Prices Fall and Where Regions Boom, LEARN MORE 👇 ❤️ JOIN THE COMMUNITY & GET FREE SUBURB TIPS + STRATEGIES DISCLAIMER: No Legal, Financial & Taxation Advice The Listener, Reader or Viewer acknowledges and agrees that:",
+      "excerpt": "Australian jobs are collapsing. The AI disruption is here. So many of you have asked me, PK, how will the housing market respond? How will the housing market react? How will the housing market stay afloat when thousands of people are losing their jobs due to artificial intelligence? I know many of you who are watching right now, you might be in banking, finance, technology, IT, and associated industries. And look, I get it. You know, so many of you right now are thinking to yourself, I'm really shaking in my boots right now. I have a very healthy lifestyle. I have a very good house, a good income. But if tomorrow, if in six months, if in a year this all goes away because my job becomes redundant, then what? What will happen to my house? I still have to pay mortgage. What will happen to my lifestyle? My kids are in private school. Everything could come crumbling down because I never built any passive income. And so what happens to my life? So that's something that's a real fear in many of you. And then obviously the next question for a lot of you is what happens to the housing market? You're asking me this. Every week I get someone asking or multiple people asking every week. So this episode I have a lot of stats in front of me right now, but I've not scripted it out. I'm just going to let the facts and figures do the talking. And hopefully this answers the question of how is the housing market going to hold up? How in fact do you build a property portfolio or financial security in this environment? Which areas are actually booming right now? Okay, so I know that a lot of you think the housing market is crashing and I'm going to go into that where it is crashing, but which areas are booming and how do you actually capitalize on that even though you think your h your job is going to be disrupted and there's a lot of uncertainty? So, we'll answer those questions based on facts and figures. I'm going to share the exact locations that you should be looking at to invest in 2026 going into 2027 and also how artificial intelligence is impacting housing markets differently depending on where you are in Australia. So the first thing you need to know is that the current vo",
       "published_at": "2026-07-18T07:00:38+00:00",
       "added_at": "2026-07-18T20:37:55.863Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-19T11:36:46.800Z",
+      "transcript_at": "2026-07-19T11:36:46.800Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-73b2a4470a19",
@@ -1098,11 +1116,14 @@
       "title": "The Rental Crisis Gets Worse!",
       "url": "https://www.youtube.com/watch?v=_4dXk_U0VV4",
       "source": "Personal Finance with Ravi Sharma",
-      "excerpt": "AFR, Sunrise Show - Channel 7, Channel 7 News, Business News Australia AFR Best Place to Work - 2026 Finalist Financial Times High-Growth Companies Asia-Pacific 2026 - #43 REB's Buyers Agent of The Year 2025 - Finalist \"FAST 100 AFR 2025 | #15 Fasting Growing Company\" “REB’s Best Buyer’s Agency 2024 - Finalist” “REB’s Best Buyer’s Agency 2023 - Finalist” “REB’s Rising Star 2023 - Finalist” “Austra",
+      "excerpt": "Australians are about to go and experience the biggest rental crisis that we've ever seen. And it feels like this is more pain on top of the pain that we've already felt over the last couple of years. You may remember that the government actually came out and said, \"Our modeling suggests that rents will increase by $2 per week.\" And the latest data that's just dropped has increased that by 10x, which means the modeling was absolutely dog But also, if their modeling was wrong, how badly could it be if the latest data only accounts for a couple of months after budget, and we've already seen a 10x increase? What could this look like over the next 18 months and beyond? That's exactly what I'm covering off in this video, and I'm also going to share with you some solutions as to how to overcome something like this in the future. Now, logically speaking, what we've seen here in Australia is a lot of investor activity. And this has been the biggest issue that a lot of Australians have faced, which is why is housing an investment? It's a basic human right. Everyone should be able to own their own property. Idealistically, it makes a lot of sense. But the world doesn't work on what works on paper. It's what actually happens with logic. And what we see with logic is that if you go ahead, change the rules, and you have tax reform to come in, and say investors don't have the incentive to hold on to a property or to go and purchase more investment properties, what you're going to see is there's less investors. And so, all of a sudden, everyone that wants to be a homeowner says, \"This is amazing. The government is so great. The budget is the best thing ever.\" However, in practice, what this means is that the investors that hold the properties that have been now grandfathered in with the old rules are not going to sell. They're going to hold on to those properties for dear life, which means those never come onto the market for what could be more stock for first-time buyers or buyers in general to go and want to move into. So, that's the first lot of supply that's gone off the market. Now, you also don't have incoming demand from investors. And that should mean that if there's l",
       "published_at": "2026-07-16T09:30:29+00:00",
       "added_at": "2026-07-16T20:47:47.653Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-19T11:36:46.800Z",
+      "transcript_at": "2026-07-19T11:36:46.800Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-f12f10513701",
@@ -1112,11 +1133,14 @@
       "title": "New Data Just FLIPPED the Property Market",
       "url": "https://www.youtube.com/watch?v=3OeRbC5Igy0",
       "source": "Australian Property Mastery with PK Gupta",
-      "excerpt": "Why 2026 Could Be a Great Time to Buy Property: Using Data to Find Growth Markets LEARN MORE 👇 ❤️ JOIN THE COMMUNITY & GET FREE SUBURB TIPS + STRATEGIES DISCLAIMER: No Legal, Financial & Taxation Advice The Listener, Reader or Viewer acknowledges and agrees that:",
+      "excerpt": "Too many of you property investors or potential property investors are on the sidelines at the moment. In this episode, I'll tell you why. I know there's a lot of doom and gloom. I know that a lot of you think prices are falling and that they will continue to fall and that those where they are not falling yet will start falling. But, in this episode, I'll prove to you why this is a fantastic time to buy property. I know that this is not necessarily what the mainstream is saying, even within property investing circles, so many investors are very fearful right now. But, this type of content, no one produces. I'll actually share locations and proof as to why, if you invest there right now, starting with just 60-70,000 dollars, in a year, 2-3 years time, your 60-70,000 dollars will end up becoming most likely 120-130, if not more, if not actually more than 200,000 dollars. Why do I know this? Well, it's the power of leverage because with 60-70,000 dollars, you can buy 350, 400, K type property as you go up. And these areas are growing. And when you experience 5, 10, 15% growth on 400 K, your money multiplies. I'll share domain predictions as well as to which areas are falling you should take care and not invest there. And also, I will go through, like I said, the exact area, just give you a one, right, that you can then judge me on, okay, whether you choose to listen to me or not in a year, 2 years time. You can judge this episode right now and say, \"Damn, I should have probably listened to PK because I thought he was a property spruiker and always wanted us to buy, but yeah, even in the midst of a pretty severe downturn, I would have made money if I had listened to him.\" Or, you might end up saying, \"Good thing I didn't listen to him cuz he was wrong.\" But, I can tell you the latter is not going to happen. Why? Because my opinion is just as useless as your opinion. What I care most about is data. And data is objective, not when you look at it through rose-tinted glasses, but when you look at it through objectivity and statistical regression multivariate analysis. And if you order correlate for things that are noise, then you can block the noise and invest with sure",
       "published_at": "2026-07-16T07:00:36+00:00",
       "added_at": "2026-07-18T20:37:55.863Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-19T11:36:46.800Z",
+      "transcript_at": "2026-07-19T11:36:46.800Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-d5f67e503702",
@@ -2601,5 +2625,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-07-18T20:38:06.566Z"
+  "updatedAt": "2026-07-19T11:36:52.080Z"
 }
