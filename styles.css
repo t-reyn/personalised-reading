@@ -383,6 +383,14 @@ button { font: inherit; cursor: pointer; }
 .q .opt.sel { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, var(--paper)); }
 .q .opt.correct { border-color: var(--good); background: color-mix(in srgb, var(--good) 16%, var(--paper)); }
 .q .opt.wrong { border-color: var(--danger); background: color-mix(in srgb, var(--danger) 14%, var(--paper)); }
+.quiz-result { text-align: center; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 16px; margin-bottom: 16px; }
+.quiz-result.pass { border-color: color-mix(in srgb, var(--good) 55%, var(--line)); background: color-mix(in srgb, var(--good) 12%, var(--paper)); }
+.quiz-result.fail { border-color: color-mix(in srgb, var(--danger) 45%, var(--line)); background: color-mix(in srgb, var(--danger) 10%, var(--paper)); }
+.result-score { font-size: 40px; font-weight: 800; line-height: 1; letter-spacing: -.02em; }
+.quiz-result.pass .result-score { color: var(--good); }
+.quiz-result.fail .result-score { color: var(--danger); }
+.result-sub { margin: 4px 0 0; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.result-msg { margin: 12px 0 0; font-size: 14px; color: var(--ink); }
 
 /* ---------- Article reader (iframe content + standalone page) ---------- */
 /* Per-interest accent so the eyebrow, summary rail and links match the topic. */

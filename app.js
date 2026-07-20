@@ -897,10 +897,14 @@
     qs = qs.map((q, qi) => shuffleOptions(q, strHashNum(a.id) ^ (qi + 1) * 2654435761 ^ daySeed)); // render-time only; never mutates meta
     const answers = new Array(qs.length).fill(null);
     const render = (graded) => {
+      const correctCount = graded ? qs.reduce((n, q, i) => n + (answers[i] === q.correct ? 1 : 0), 0) : 0;
+      const passed = graded && qs.length > 0 && correctCount / qs.length >= PASS;
       ov.innerHTML = `
         <div class="ov-bar"><button class="close" aria-label="Close">✕</button><span class="ov-title">Quick check · ${esc(a.title)}</span></div>
         <div class="ov-body"><div class="sheet">
-          <p class="note">Pass to mark these ideas <b>learnt</b> — future articles won't re-explain them.</p>
+          ${graded
+            ? `<div class="quiz-result ${passed ? "pass" : "fail"}"><div class="result-score">${correctCount}/${qs.length}</div><p class="result-sub">correct</p><p class="result-msg">${passed ? "Passed — these ideas are now marked <b>learnt</b>." : "Not quite — review the answers below, then try again."}</p></div>`
+            : `<p class="note">Pass to mark these ideas <b>learnt</b> — future articles won't re-explain them.</p>`}
           ${qs.map((q, qi) => `<div class="q"><p class="qq">${qi + 1}. ${esc(q.q)}</p>${q.options.map((o, oi) => {
             let cls = "opt"; if (graded) { if (oi === q.correct) cls += " correct"; else if (answers[qi] === oi) cls += " wrong"; } else if (answers[qi] === oi) cls += " sel";
             return `<button class="${cls}" data-q="${qi}" data-o="${oi}"${graded ? " disabled" : ""}>${esc(o)}</button>`;
@@ -909,7 +913,11 @@
         <div class="ov-actions">${graded ? `<button class="btn primary" data-act="done">Done</button>` : `<button class="btn primary" data-act="submit">Submit</button>`}</div>`;
       ov.querySelector(".close").onclick = () => { hide(ov); render2(); };
       if (!graded) {
-        ov.querySelectorAll(".opt").forEach((b) => b.addEventListener("click", () => { answers[+b.dataset.q] = +b.dataset.o; render(false); }));
+        // Update selection in place (no full re-render) so answering doesn't reset scroll / jump to top on mobile.
+        ov.querySelectorAll(".opt").forEach((b) => b.addEventListener("click", () => {
+          const qi = +b.dataset.q; answers[qi] = +b.dataset.o;
+          ov.querySelectorAll(`.opt[data-q="${qi}"]`).forEach((o) => o.classList.toggle("sel", o === b));
+        }));
         ov.querySelector('[data-act="submit"]').addEventListener("click", () => {
           if (answers.includes(null)) return;
           const correct = qs.reduce((n, q, i) => n + (answers[i] === q.correct ? 1 : 0), 0);
