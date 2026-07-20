@@ -1,10 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-19T20:38:38.822Z",
+  "generatedAt": "2026-07-20T21:02:30.136Z",
   "interests": {
     "software-ai": {
-      "days_since_last_article": 1,
+      "days_since_last_article": 2,
       "items": [
+        {
+          "id": "software-ai-b4c8c65e334b",
+          "title": "This $12 billion startup finally shipped something...",
+          "excerpt": "Mira Murati's Thinking Machines just released Inkling, a 975B parameter open-weights model that's deliberately mid... let's investigate.",
+          "url": "https://www.youtube.com/watch?v=M51asSwRLxA",
+          "kind": "video",
+          "source": "Fireship"
+        },
         {
           "id": "software-ai-d57fb7014617",
           "title": "OpenAI is being sued for stealing, again…",
@@ -18,13 +26,6 @@
           "title": "Netflix says around 300 titles used generative AI",
           "excerpt": "Netflix says roughly 300 titles on its platform used generative AI, most of which occurred in post-production. The streaming service revealed the news in its second-quarter earnings report released on Thursday, saying it's \"increasingly leveraging these tools to deliver higher quality output more…",
           "url": "https://www.theverge.com/streaming/966633/netflix-ai-titles-q2-2026-earnings",
-          "kind": "article"
-        },
-        {
-          "id": "software-ai-b2ce95b26b37",
-          "title": "Timeline Scan – AI fixes the dates on your scanned photos",
-          "excerpt": "Article URL: https://timelinescan.com/ Comments URL: https://news.ycombinator.com/item?id=48939764 Points: 3 # Comments: 1",
-          "url": "https://timelinescan.com/",
           "kind": "article"
         },
         {
@@ -66,13 +67,20 @@
       ]
     },
     "design": {
-      "days_since_last_article": 3,
+      "days_since_last_article": 4,
       "items": [
         {
-          "id": "design-5de8a478bb02",
-          "title": "The “mocked, then loved” AirPods effect",
+          "id": "design-f8f62be2bd5b",
+          "title": "Delegating taste, orchestration layer, AI workflows",
           "excerpt": "",
-          "url": "https://uxdesign.cc/the-mocked-then-loved-airpods-effect-65ec25feeb3a?source=rss----138adf9c44c---4",
+          "url": "https://uxdesign.cc/delegating-taste-orchestration-layer-ai-workflows-7ac13d2ff1d6?source=rss----138adf9c44c---4",
+          "kind": "article"
+        },
+        {
+          "id": "design-e29eb389d380",
+          "title": "Lonely at a lower latency",
+          "excerpt": "Everything got faster, closer, more certain. The person inside stayed the same. Continue reading on UX Collective »",
+          "url": "https://uxdesign.cc/lonely-at-a-lower-latency-99ae638489b9?source=rss----138adf9c44c---4",
           "kind": "article"
         },
         {
@@ -96,13 +104,6 @@
           "url": "https://www.youtube.com/watch?v=0_PuRInJFrc",
           "kind": "video",
           "source": "DesignCourse"
-        },
-        {
-          "id": "design-d2b6190ce348",
-          "title": "AI just called design’s bluff",
-          "excerpt": "",
-          "url": "https://uxdesign.cc/ai-just-called-designs-bluff-2b94bf2f5cae?source=rss----138adf9c44c---4",
-          "kind": "article"
         },
         {
           "id": "design-45ab307f01e0",
@@ -129,12 +130,12 @@
       ]
     },
     "indie-income": {
-      "days_since_last_article": 0,
+      "days_since_last_article": 1,
       "items": [
         {
           "id": "indie-income-a9624da1d0dc",
           "title": "Why Netflix is betting on systems thinkers—not specialists—in the AI era | Elizabeth Stone (CPTO)",
-          "excerpt": "Elizabeth Stone is the Chief Product and Technology Officer (CPTO) at Netflix, where she oversees Engineering, Product, and Design. Since her first appearance on the podcast two years ago—which remained my second-most-popular episode for more than a year—she has expanded her role to lead product…",
+          "excerpt": "Everyone can be everything now. PMs can ship code, designers can write PRDs, engineers can product, and there's this confusion and frustration of what is my job anymore. >> Anytime a new technology comes along, you go through a storming phase before you go through the forming phase of things. We…",
           "url": "https://www.youtube.com/watch?v=t0GiTyz4syY",
           "kind": "video",
           "source": "Lenny's Podcast"
@@ -192,48 +193,48 @@
       ]
     },
     "mortgage-broking": {
-      "days_since_last_article": 6,
+      "days_since_last_article": 0,
       "items": [
         {
-          "id": "mortgage-broking-31a31f81f163",
-          "title": "Exclusive: Behind Udaan's refinancing lies a silent investor takeover - The Morning Context",
-          "excerpt": "Exclusive: Behind Udaan's refinancing lies a silent investor takeover &nbsp;&nbsp; The Morning Context",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZ2JCSkhrMTBEUm9GOU5IWTdvWlBWX1Jhc0ZNNFMxX1JvdnBBZ2VlQm54Zm9DTUZfXzlJX1BCcFlRRTRLU05nQXRWTUVVMFpveUNFTVNBTXJtbFctZlNkd19DYW5oZnRNY1VKdl8xa2hnNjN2Y3RmTWI5TDZnMVpDS1g2ZEloSGxZQnRBY3JsWV9EV3BjQTROMXpTeWF5aERwdXdWTmd6TjAyZw?oc=5",
+          "id": "mortgage-broking-1092faf4e18c",
+          "title": "Ancestry.com seeks loan refinancing on strong demand - Bloomberg - Investing.com Nigeria",
+          "excerpt": "Ancestry.com seeks loan refinancing on strong demand - Bloomberg &nbsp;&nbsp; Investing.com Nigeria",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcXItdUV6Z29wdDZCUS1tTFMzaWlzSnUwT0Fvc3N0YWE0VzhTV1JaczRyd2VfY3dOVy1jREJfX3ZIc2NaU2lPOGNadHJxRm9NNG5IZ1RjcHYwQWpSSUlldVU4bmlDNnV0cXdGMmJ2Z1hNM3A4WTFYT3k4ak9XYzZOU2h2QW1GUlBzcmlfVEV3dzNYbHE1RE1DLVJlUjBLY2FRWktpQ0JTTVlDc3JXUmotNFN3bHdFU01BU2FJSUFlTDg?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-d982fb93260e",
-          "title": "ING cuts fixed home loan rates - mpamag.com",
-          "excerpt": "ING cuts fixed home loan rates &nbsp;&nbsp; mpamag.com",
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZllmU2tVOFpaRFo0R242MVJ2b0xuVWxQSWdYWU5LR3ZmbjgyZS1waEl3V2Q3OFppa2x6bFgtYWQ4REZCc19JbmdpbUZKS0l2Y2xVTnRxZ2EyZGtLOFRZN1lWeHZvcXYyQTRzU1dvM1N5bmpsdWd1Zk1NN2U5d1FCSWR3?oc=5",
+          "id": "mortgage-broking-b4bf3481cbe8",
+          "title": "Submissions open for 10th annual Women in Finance Awards - Broker Daily",
+          "excerpt": "Submissions open for 10th annual Women in Finance Awards &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbGJoUzd6VTJyMVhoYmpRcGxJc3VHZlJ4RS1yOTZfTDJNZWZqdElSUU5aSkVvaExMbFhoLU96aVJCQ0pPb3R3aXlUNnNwQ2tITFBLa2pkaHZTc2ZnWm9mekFGbDMxeTRZVE1yUkROdTQyZi1HTG44RUNRamR4NHhJMUowTjFBaTNobm1yTERGUlpTUUd5c1YxRENvcXk?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-27725b9300f8",
-          "title": "Medical school debt and refinancing: How borrowers are managing student loans - KESQ",
-          "excerpt": "Medical school debt and refinancing: How borrowers are managing student loans &nbsp;&nbsp; KESQ",
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNTGRDSW5FQUFvWmdGZmUzaEZVakZGMFh3eUhWNnBsRnhLNjdwOXZoRjBJTmhhV1VybVZjRU5nN2RrNlFBdjQ1N1kxeTBsZ1V3RGFkM3lKVkRUVndFdkxSbUhMaVRTM1NkRjdteTdGRVFPcC1GLUN5aDY5OEpCRTdQMklmZ2RMQXY4T3U5eGZtVTNBenUzTGlWcFR1MFF6N2s0clB2YVpHX0s4VHZFX0l3bndZaUF3c28tcHRyR2dxS0dQemRiMFRfSThDMFNrWUYzc1NicHo4UQ?oc=5",
+          "id": "mortgage-broking-4b5b5acd37f5",
+          "title": "Sydney agent avoids jail after stealing $530k in clients’ deposits - Broker Daily",
+          "excerpt": "Sydney agent avoids jail after stealing $530k in clients’ deposits &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYWpfbkxrMXRXNjIzVVFldWtJZjJkZ0J4RGZUWFBQNEx2UEk4VThZMHJiVm1LTktnb3BKRXN1cDU4M2I5Sks0ZjRrRHpOZHBOVVcxS0VtOHpKSmtmTno1anlJRGZwZ2ViS2Z6NFlLeWc0cjkwMlVrS3lBX2RkYmVKbjU2b1lxNmRJNW1mVVllVlEyZXE0MWZEbFRUdXc2c1M2MmdaYkhsTQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-643e2a3dfa7c",
-          "title": "Property caps and rules updated under 5% Deposit Scheme - Broker Daily",
-          "excerpt": "Property caps and rules updated under 5% Deposit Scheme &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNeS1wTWlQTGZqV0VBdTRibWM0ZzdXcHFlQTV6dkQ0OTdTaWJZRXBsZlhPbERJRVZZb2J6T1VaOUtDdEQ2MVhJSDQwbG0zNVg0aUt5MXZKd1g1ZVIwYzh3dXRXQ1g5dlhtNi1vcnlaSy1ZQkJpdmhhT2tlaWktVnoyTW1TbU96VUNhOGI5WmlTYmlxbnFoNW00R0dR?oc=5",
+          "id": "mortgage-broking-4cfc633e5260",
+          "title": "LongView launches second home equity fund - Broker Daily",
+          "excerpt": "LongView launches second home equity fund &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRXI3QXZNd2ZMRF9OUzRXamZyYnZ1VW03WFU1anVJMExLN1pZbUZGMDUwR1BlT1JhdzBsZTZTUkh3UkI3a21BaGtkdEdVNzlGSHdZcV9LOHB1QXFQSURTNnV2TDc3MVFJeG9zUHltTjNWN0QyZEFyZDZoWUJQN3cxVDROakhKbEgz?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-94ce331f540c",
-          "title": "'Stop reacting and start preparing’, brokers told - Broker Daily",
-          "excerpt": "'Stop reacting and start preparing’, brokers told &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQYV9UVS11RjBCejlnQld5MTdmX2lKV1dzZWQ0czlPajlLMUthRUY4Qi0xNmliQXJicmxMbnNQWnd1VlFPaTlUTFg2Rjh6Y1A4UDJ2Yk9OWlVtZ3p1VTB5NmlvWVZKLUpTWGdwbDI2Zm9LaHV3LW1UN2FFVGQ3X3E0b196VEVDVExELXU3MUxONA?oc=5",
+          "id": "mortgage-broking-dab68246842a",
+          "title": "Nomad Foods to pursue debt refinancing as struggles continue - Undercurrent News",
+          "excerpt": "Nomad Foods to pursue debt refinancing as struggles continue &nbsp;&nbsp; Undercurrent News",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUTRnRFNhRzRBMzlXSUpTYmx5UU45SmVIRG53REdoRG81RjRfUmw4NDdhdnNud19yM0JRTGxCZDYyYkNnSW1ybERIUnhzT1NtX09ZT1I1R2JYUkIzYlRVT041dElXVFJ1aFBERnkyRTBtQnRUbUV4ZVVsZ052dVBnNno4alYyTUw2UVBkcVBNSzlJRVQ0Q2J4M3JyZjh6Q0NYbjFsdFM5RkljdHRmR2YxLUFUMnNXS1NsLTlBelRZVUJJVVBsakE?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-6a1a0203193a",
-          "title": "Business Accelerator: Fortune favours the change – How brokers thrive in an uncertain market - Broker Daily",
-          "excerpt": "Business Accelerator: Fortune favours the change – How brokers thrive in an uncertain market &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNN0d3eGtNSFZQYUFHNEJYT0M3aHZTNi1vZUx1M2ZHQ0h4dFFGcTNSMzM0ZHVjZUJPaXliNHM4YTY1ZVNNYU11am9TODRHSzFBZG92V2xpd2F2UkZRSDlOb180bWdnbFNSX3dQaGo3ZEdJczlnUEZsYjRfanBPclN4WTB1WUpWc1FMUXNQbTBGcjJtXzZQU2xhdC1lNE4wZTBXc3RiVTZuZ2NRVWtPc0czYkdvUFoxRFF2LXEzVTVnZXZvX2thbVdPdw?oc=5",
+          "id": "mortgage-broking-d39431dded64",
+          "title": "Article - The First Congressional Hearing on the Federal Home Loan Banks in 15 Years: A Taxpayer-Subsidized Housing System Gone Astray - Consumer Federation of America",
+          "excerpt": "Article - The First Congressional Hearing on the Federal Home Loan Banks in 15 Years: A Taxpayer-Subsidized Housing System Gone Astray &nbsp;&nbsp; Consumer Federation of America",
+          "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNT0hDSmZJaDd1SWNuWFM5M0dqN2czdWNUNDFTblYxRTNyT1BkUUNkQ2VvWlNpRDZwVTJlQm5BcENpNUQtbm9QbDVUcUhfblNNaXVHTVhSWkZrRmp2d1Q5TzJ3SjdvbGVWSVJnWkJUUlZrcWFRUE51bTQ0UHlpSVNPeFRmbEJCbm5tQXZzbm1SQTlHT0FNWE10Z09qMjBEMHBtZmtOUjdpZ3JVejVIcjFyZWF3eTlLOW1LOGpPRW9SN1lYUkFlUkY0SHh3ZlNQUDc3ZkhIQkpCYTBucjRVSFlVLXluWjBFLVEyXzhSWm14OEI?oc=5",
           "kind": "article"
         },
         {
@@ -253,7 +254,7 @@
       ]
     },
     "property": {
-      "days_since_last_article": 3,
+      "days_since_last_article": 4,
       "items": [
         {
           "id": "property-13dbdcecac1f",
@@ -272,7 +273,7 @@
         {
           "id": "property-ae79d5e4d1da",
           "title": "Australia's Death Of The Middle Class",
-          "excerpt": "AFR, Sunrise Show - Channel 7, Channel 7 News, Business News Australia AFR Best Place to Work - 2026 Finalist Financial Times High-Growth Companies Asia-Pacific 2026 - #43 REB's Buyers Agent of The Year 2025 - Finalist \"FAST 100 AFR 2025 | #15 Fasting Growing Company\" “REB’s Best Buyer’s Agency…",
+          "excerpt": "Here's exactly why you make more money than ever before, but you still feel really poor in 2026. I'm also going to share with you exactly how people are managing their money when it comes to going and building their wealth. You might have maximum effort and the right work ethic, but you're not…",
           "url": "https://www.youtube.com/watch?v=CRWjRET04pA",
           "kind": "video",
           "source": "Personal Finance with Ravi Sharma"
@@ -280,7 +281,7 @@
         {
           "id": "property-0298c6ce3224",
           "title": "\"If You're So Rich Why Do You Sell Courses\"?",
-          "excerpt": "\"If you're so rich why do you sell courses\"? \"If you're so good, why don't you just buy all the good properties yourself\"? Is PK Gupta a Scam? Is PK Gupta a fraud? Is PK Gupta a fake? PK Gupta Property Review Discussion Points: About The Host: PK Gupta is the founder of the Property Investment…",
+          "excerpt": "Hey guys, I wasn't really sure if I was going to do this episode or not. It's going to tackle something that yeah, I wasn't sure if I wanted to discuss as kind of negative, but I think I've been accused of this like probably a thousand times over the last almost 10 years that I've been in business…",
           "url": "https://www.youtube.com/watch?v=KzJrKMTwvww",
           "kind": "video",
           "source": "Australian Property Mastery with PK Gupta"
@@ -318,8 +319,26 @@
       ]
     },
     "actuarial": {
-      "days_since_last_article": 2,
+      "days_since_last_article": 3,
       "items": [
+        {
+          "id": "actuarial-35f064008523",
+          "title": "The Associate Edition: Crochet and curiosity",
+          "excerpt": "Simran Chaturvedi shares her actuarial career across two countries, crochet handbags and why curiosity matters most on the path to becoming an Associate.",
+          "url": "https://www.actuaries.asn.au/research-analysis/the-associate-edition-crochet-and-curiosity",
+          "kind": "article",
+          "source": "Actuaries Digital (Actuaries Institute)",
+          "topics": [
+            "Career and Leadership"
+          ]
+        },
+        {
+          "id": "actuarial-b1ef3be88498",
+          "title": "The Standard Promotes Taylor Shaw to Assistant Vice President and Actuary - citybiz",
+          "excerpt": "The Standard Promotes Taylor Shaw to Assistant Vice President and Actuary &nbsp;&nbsp; citybiz",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWG45ek1WZFVEcm5OTFdvWjdtZWhaVjF6Yl9XUWlfS251UURvODdSaFVWRFI5My05MWw3VzhuRUVRdnhYNzR3SmpyOFVYcU5xejFkWXJfOVBTdFluVEtoZnoyNWFnNEg2Vndhc1lWQ1IwM0dpWk9hMFZBVmkxOExIWC1Tc19HTmQ3ZXRUVFNGWFAwSXViaU5LQ0VKNkVkeWJBVGp2QXNGZjE4U29fak1oVU1B?oc=5",
+          "kind": "article"
+        },
         {
           "id": "actuarial-81ec9c9d26ea",
           "title": "ICA slams disruption, rising risk under home loan scheme",
@@ -328,24 +347,10 @@
           "kind": "article"
         },
         {
-          "id": "actuarial-361ece2ad84b",
-          "title": "Melbourne duo take regional broker awards",
-          "excerpt": "Gallagher&rsquo;s Jodi Sharman was crowned broker of the year for Victoria/Tasmania at a gala lunch in Melbourne attended by 540 professionals today...",
-          "url": "https://www.insurancenews.com.au/daily/melbourne-duo-take-regional-broker-awards",
-          "kind": "article"
-        },
-        {
           "id": "actuarial-5fb605eef178",
           "title": "Did We Solve the Wrong Problem?",
           "excerpt": "In 2019, Australia fundamentally changed who receives life insurance through superannuation. Two reforms, Protecting Your Super (PYS) and Putting Members’ Interests First (PMIF), were designed to protect retirement balances by reducing unnecessary insurance premiums. The intention was sound. But…",
           "url": "https://invisiblebalancesheet.substack.com/p/did-we-solve-the-wrong-problem",
-          "kind": "article"
-        },
-        {
-          "id": "actuarial-7df2affa807c",
-          "title": "Bringing payment terms to travel industry actors - Allianz Trade",
-          "excerpt": "Bringing payment terms to travel industry actors &nbsp;&nbsp; Allianz Trade",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVzNXU0JmcE91amRVLWxhVFdVQkF6ZDA4ZjJjRDRtSUxCS2hPTllIV2lJVUJLZ1puVngzalJ3WHN6NTZYUDdPXzdWaE1UUzM5Um9SdXFtclF6b01vS3l1UlVfYURSeHBWNFgzbEJScDRPVDhKNmIxSUg5Q1kzVlI5bG5LWGduNFRydFNFVWlJaWFWaXZSZWpoSm8yS05OXzdsZmc4dQ?oc=5",
           "kind": "article"
         },
         {
@@ -390,41 +395,41 @@
       ]
     },
     "finance": {
-      "days_since_last_article": 2,
+      "days_since_last_article": 3,
       "items": [
         {
-          "id": "finance-1a06b71b6322",
-          "title": "U.S. death toll rises again as Iran war escalates over the weekend",
-          "excerpt": "Centcom says it hit Iran's coastal surveillance and air defense facilities a day after two U.S. troops were killed in an Iranian strike on Jordan.",
-          "url": "https://www.cnbc.com/2026/07/19/us-says-it-targeted-iran-forces-after-deaths-of-two-american-troops.html",
+          "id": "finance-50686fc0b4e2",
+          "title": "Alphabet stock pops on report it's developing a more efficient AI chip",
+          "excerpt": "The new AI chip, called \"Frozen v2,\" would embed parts of Gemini's architecture directly into the silicon, according to the report.",
+          "url": "https://www.cnbc.com/2026/07/20/alphabet-googl-stock-ai-chip-report.html",
           "kind": "article"
         },
         {
-          "id": "finance-a15d83a48d7f",
-          "title": "FBI will no longer investigate ICE confrontations, The New York Times reports",
-          "excerpt": "The Department of Justice and the Department of Homeland Security have both denied that any change in oversight has taken place.",
-          "url": "https://www.cnbc.com/2026/07/19/ice-assault-claims-fbi.html",
+          "id": "finance-114f45305f14",
+          "title": "Trump administration's head of AI safety agency resigns after 3 months on job",
+          "excerpt": "Arvind Raman, the director of National Institute of Standards and Technology, will serve as acting director of CAISI, according to a spokesperson",
+          "url": "https://www.cnbc.com/2026/07/20/trumps-head-of-ai-safety-agency-caisi-resigns-after-months-on-job.html",
           "kind": "article"
         },
         {
-          "id": "finance-bf1d04a4220c",
-          "title": "Katharine Neiss - AFR",
-          "excerpt": "Katharine Neiss &nbsp;&nbsp; AFR",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE45ZUF0U0xHNGljZFgxSFZNSk5Ub0ZvVmN5UW5Ga1pJaW1vMjF6eXV1Z2oycVF4RUt5ZXdtZERiTzFhaVU3bko1Zk5BSksxV0pYc2VjR3FtQkE?oc=5",
+          "id": "finance-f1dd33a518c6",
+          "title": "Oberoi Realty Q1FY27 slides: 32% revenue growth, margins expand By Investing.com - Investing.com Australia",
+          "excerpt": "Oberoi Realty Q1FY27 slides: 32% revenue growth, margins expand By Investing.com &nbsp;&nbsp; Investing.com Australia",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONEc4b0MteWtzNF8yZHZ2SmZuTzRzVXpsNnpRMGRSMi1lQUxXREg3bmZraUVjb2d0RUNIT3hIdGZXRThxNkMwTkYxZ05tSzBzMVBBUGhodFVZanNuWjFKbnM2TzNRdk1TSnBaYnVfaG9yOW5pU1NMQ0ZoYkxiTjRDeW42ak1iZ0tfQTFCWXlFd0ZmZzZ3RFY1QmJfZ1pWbWxrbUJfUnYxWmJYTnZWSnJIV3A4MWpVaEk?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-463830f66dfe",
-          "title": "Can the ‘Magnificent Seven’ save a stock market that might be doomed without them? - MarketWatch",
-          "excerpt": "Can the ‘Magnificent Seven’ save a stock market that might be doomed without them? &nbsp;&nbsp; MarketWatch",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOMEpJSEM5dXctN0F6ZTBVS0RWaHdnTWpoQ01Vc2hzcEI4cTh0SnBlV09RbkNESUdmeExudE9qTWNrYjNFQW5VWHhiblNlSFBYQ01uZGRndWdRZmdDYUFyc3REakRZbUVQNExhTXMyOE00a3ZCRjhpMDZFZmwtd1JuSEVzMkNOSWVpb25IMV84UWpRSVN3dEVZdHo2ZTh4RUN1Qjk5Nms0ZGpoVkZROFk4VzVpQkdvU3ZNeGdnZ09qZw?oc=5",
+          "id": "finance-44a91c101a1f",
+          "title": "Belimo H1 2026 slides: data centers drive 30% sales surge By Investing.com - Investing.com Australia",
+          "excerpt": "Belimo H1 2026 slides: data centers drive 30% sales surge By Investing.com &nbsp;&nbsp; Investing.com Australia",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPSVlhN2NDbjRseklFb2xQbkVMdEpZVFFpRW5MVjBWcXVROFJuSE9IUHU2YzVsRU9XWnRuYnJsenNKalc4N1ZfeXp4cUhocU1LME9fZ3p4VGtvcmNWSXF3S1RtMmZtYU5jcjNSM2N0VmpFUjdYMENlUWVIeWxseG40S2dHcGIxbzJOYkViNDhxTjRldHVNM19oM3ljQXBnYXhjSnN4QllPUmh3SmlXZG1ZXw?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-17129d399993",
-          "title": "Man, overboard! Are these busy ASX directors taking on too much? - AFR",
-          "excerpt": "Man, overboard! Are these busy ASX directors taking on too much? &nbsp;&nbsp; AFR",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPX1Q2WkxaakIwclZZQTBnczFhV2pJNVNaZE9hTk5XNGprc2E5MFREczNEN2hQVnh0VHhuTWtxbWhTVEpNNEpIN3h1UGJkZVg0djJhX2Vvcy1nZDdMRno5YUx1ZFp0TVpFbzN6MGVzVlpVdUtZTGZhalBnOU53SUItX2xSclA3UmE1RWpyLXN6V3pMeW10bXlxYTR6aXBxblFBWlQtUjZqWG5FcXNOSWc?oc=5",
+          "id": "finance-c21f11dac81a",
+          "title": "Labor backbench, unions to maintain pressure for gas tax - AFR",
+          "excerpt": "Labor backbench, unions to maintain pressure for gas tax &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMmdiS3p0VlFGRXN6V1lQUGI5aTloR2F2eVRsa2w3a2hWYTVrRWU1d3hpSk9rbi0zaG01RW9tcFJzQ25mVTZPcG5Wb2ZaUkpNUVlTWm1lR3lyanh0RmltTWZ0c2tsa2txT25CRmtxUF9GYUozMGFIWHRJYUNtdldCSGhBX1F4eXowS1ZnRTVubFptMmpSZllSVFN1VE5icG00anl6eWxhRTBrTUw4?oc=5",
           "kind": "article"
         },
         {
@@ -437,7 +442,7 @@
         {
           "id": "finance-456d6d818e85",
           "title": "Can the AI Industry Regulate Itself? Stripe Wants PayPal, China Catches Up, NY Bans Datacenters",
-          "excerpt": "(0:00) Bestie intros! (1:32) New AI regulatory proposal: DeepMind's Demis Hassabis proposes FINRA-type body (20:01) Stripe, Block, and Advent offer $53B to acquire PayPal (37:51) Apple sues OpenAI, alleging stolen trade secrets (42:49) Grok Build data leak, AI data privacy, Tokenmaxxing update…",
+          "excerpt": "All right, everybody. Welcome back to the world's greatest podcast. The number one podcast, your favorite podcast, the All-In podcast. I'm Jason Calakanis, the world's greatest moderator. With me, of course, Chimath Polyhapitive, >> the great great great great great grandchild, Jason was of a…",
           "url": "https://www.youtube.com/watch?v=9IMwRIei-Xc",
           "kind": "video",
           "source": "All-In Podcast"
@@ -452,54 +457,55 @@
       ]
     },
     "health": {
-      "days_since_last_article": 4,
+      "days_since_last_article": 5,
       "items": [
         {
-          "id": "health-747099e554cd",
-          "title": "The daytime habit that could transform your sleep, according to new study - Fox News",
-          "excerpt": "The daytime habit that could transform your sleep, according to new study &nbsp;&nbsp; Fox News",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMkp6N2dXNTVYOVozcUtuQ2pMTFozT2lDZG4tcjk5YmFKQ0N6ZTdubl9kUThBS051YWw0eXRQN3JQa3lCMEU3dXFkVkNfQ0kzdHVEbEpkdjhlSVQ3b2FCTHVxWUpsRWp2QzZwZWJJVk56MV9qRUtTb0dDSDhzRUdkR3pIbnFLSExTMThmM3p0VzZUZDROelHSAZsBQVVfeXFMT1lScXF6MlVqM0txT1F2QXZpV1dxZ0YxQjRWdUJla05IZ25feVlYNW5qUk5Lb2FqOFFUdmFYbE83OTBXV2xlTkZUTF8wUEpXVWtrNmU4SHpycEZYWFRvbUhFclZseVdRWUYwYTVLX3hIYVlNNkZEb2hXZmFuVk05SUptMks2Ty1EN2padzhIQ2NFbXVWNGY0REdGNlk?oc=5",
+          "id": "health-e3f0157b2de9",
+          "title": "Link Between Sleep, Brain Injury And Seizures - Mirage News",
+          "excerpt": "Link Between Sleep, Brain Injury And Seizures &nbsp;&nbsp; Mirage News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQcGdjRWVZcVdPTW9PaWxrZzQ4eHpxZEVTd3NWc2RORk0yUmF2bE5xZDlRVFIxdHp5VUlzZ0RmVkh6X1J1UW9KNks2ZkM5NUJFYTh2QnRHX3kyejctdXNHOUc2d3JmS28wQ1Q2UFZOaHJBaTVPV05LUjZGay1iT0J3TFA0NnlRb2s?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-e6673491e582",
-          "title": "Sleep deprived? Blame it on climate change - The Economic Times",
-          "excerpt": "Sleep deprived? Blame it on climate change &nbsp;&nbsp; The Economic Times",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWV93OG5ZZWZtLUNyclQzbFNfTV8wWHJtTy1IME90YkphMk1kVmd5bEdvaHVLQWtsdjJoQmwxNWJnTTRPOTRKS2FnNWZoV0J2eDNBOHlPMEZES0ota1hvZnBnQ2xzNjd4ZUlhTjlicVpGdmd4bUZuUTMxQlE4UEV4Z1NCa2M3NWRGR2htWWhJdFdVRm5VSFJuUXd6VDdNNkt4b2lKNXdvQmFDQdIBrwFBVV95cUxPZ2xUZUk1VWsyTDNRZ3JELTRhcElwS0VSSXVCMVZHZFJac1lHQVRMS00tTjR0YVgyOFBLLVFJZEFqSGFyWjJVenhwQ0RRa3ZrNEdaNEw4THJueFo2dm9PdnJ4dDFiTkhWODk4M3FrMS1LVGRmUkZUUG1zNTF6WVF4VkFjY1p3LUJsdFVzcmY1UVpOYmlWQTVoZmhheTdFWHhmTVR3eElVSXduWUVqdjBV?oc=5",
+          "id": "health-91e212f0a6da",
+          "title": "Franchise Equity Partners Acquires Bravo Fit, Planet Fitness' Australian Franchisee - Yahoo Finance",
+          "excerpt": "Franchise Equity Partners Acquires Bravo Fit, Planet Fitness' Australian Franchisee &nbsp;&nbsp; Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR21lbDRWWTNXTkp4UE5YRUdYWlp6US13M2RQVTFpSlJiY0EyTVBBS3hQeFBNU2hOamt6VWNqTzYxZXJlWjFSRVlTWXd1VkRDYlQwZlVoSXA3Wkg4MXEwZ0RxZlgyN0s1Z0p6UE54dTZscnNBMHZ6X2EzSXpvNlg0THpCUDBYRkFjM2xNZVVDM2tRZVNMUHU2RjhBUElKeGt6OUtSaHFxZHM?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-c3f2d482efd5",
-          "title": "I tried to get unapproved injectables from a doctor. It was too easy - ABC News & Headlines – Australian Broadcasting Corporation",
-          "excerpt": "I tried to get unapproved injectables from a doctor. It was too easy &nbsp;&nbsp; ABC News & Headlines – Australian Broadcasting Corporation",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSmZKamFhZFphQzN5Z2ZBZDZ2MHZjWVlvYlJLTkhGYkRWTjgwRUtybFo2NUl2M1NQNDlEN096S3RmTTZ1UUJXaUZ0OUF4REVDSlUwRk1zRTNaWS1JRnMwWnF5ZG9kOUVhOEx5d19sTkhoZ3lucktLZmhrVEUwc0xTWnlPN1B4N2g3bWNYS2hobXFnbURuUExYVHh6UW45TlRzd2pZbWxBLUZnY1F3X0ZYTUhB?oc=5",
+          "id": "health-7718ef6da662",
+          "title": "Why a High-Fibre Diet is a Man’s Secret to Fat Loss, Gut Health and Better Sleep - Man of Many",
+          "excerpt": "Why a High-Fibre Diet is a Man’s Secret to Fat Loss, Gut Health and Better Sleep &nbsp;&nbsp; Man of Many",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5EN3FUVUhfUEdXMXdMMTQtMUNHT21lT0oxWDlmMWhoaWh1YXdfczhnZWZEQ3h3amF4ejRpdnY1eFJNNFhQWHBoekNqR3JJdGFaR2lfNXR3X050Z1lyY1NHaDFqVDVpejduTWp0d1Vn?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-1d02782b218a",
-          "title": "The mysterious hum heard around the world may finally have an explanation",
-          "excerpt": "The mysterious sound known as The Hum has been reported worldwide for decades, yet its source often remains impossible to find. Researchers tested whether people who hear it have exceptional low-frequency hearing or measurable sounds produced inside their ears, but neither explanation fit most…",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260719040002.htm",
+          "id": "health-92832c9649dd",
+          "title": "Scientists detect hidden skin damage before it becomes visible",
+          "excerpt": "Scientists have discovered a hidden warning sign of skin damage that appears before collagen fibers visibly thin, break, or lose their connections. Using advanced light-based techniques, the team found that collagen’s carefully organized molecular “handedness” can collapse even while the tissue…",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260716023554.htm",
           "kind": "article"
         },
         {
-          "id": "health-fe67961d7391",
-          "title": "Coffee may help the body fight stress and aging through a hidden cellular switch",
-          "excerpt": "Scientists may have uncovered one reason coffee is repeatedly associated with healthier aging and lower disease risk. Compounds in coffee appear to activate NR4A1, a receptor that helps protect cells from stress, inflammation, and damage. These protective effects disappeared when the receptor was…",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260719035927.htm",
-          "kind": "article"
+          "id": "health-7850ee5bf7bd",
+          "title": "Accelerate Learning & Increase Cognitive Capacity | Dr. Tommy Wood",
+          "excerpt": "Dr. Tommy Wood, BM, BCh, PhD, is a professor of neuroscience at the University of Washington and an expert on brain health, neuroplasticity, and cognitive performance. Dr. Wood explains how to use specific forms of exercise, dietary strategies, and compounds to enhance the rate and stability of…",
+          "url": "https://www.youtube.com/watch?v=bPd9NnOzx78",
+          "kind": "video",
+          "source": "Andrew Huberman"
         },
         {
-          "id": "health-4df76be4a77f",
-          "title": "Common antidepressant may ease long COVID’s crushing fatigue",
-          "excerpt": "A low-cost antidepressant may offer new hope for people struggling with long COVID fatigue. In a randomized clinical trial involving 399 adults, fluvoxamine significantly reduced fatigue and improved quality of life compared with a placebo, making it one of the first medications to show meaningful…",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260718010158.htm",
+          "id": "health-c383e67d2798",
+          "title": "Alzheimer’s breakthrough: Scientists restore two hours of sleep without clearing brain plaques",
+          "excerpt": "Researchers have uncovered a surprising culprit behind sleep loss in Alzheimer’s disease: the brain’s own immune cells. In mice with amyloid plaques, overactive microglia triggered inflammation that kept the brain from getting enough deep, restorative sleep. Temporarily removing most of these cells…",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260719035931.htm",
           "kind": "article"
         },
         {
           "id": "health-53f820026470",
           "title": "The Science & Treatment of Bipolar Disorder | Huberman Lab Essentials",
-          "excerpt": "In this ⁠Huberman Lab Essentials⁠ episode, I explain the biology, symptoms and types of bipolar disorder (sometimes called bipolar depression), a condition characterized by extreme, maladaptive shifts in energy, mood and perception. I describe the diagnostic criteria that distinguish bipolar I from…",
+          "excerpt": "Welcome to Huberman Lab Essentials, [music] where we revisit past episodes for the most potent and actionable science-based [music] tools for mental health, physical health, and performance. I'm Andrew Huberman and I'm a professor of neurobiology and ophthalmology at Stanford School of Medicine…",
           "url": "https://www.youtube.com/watch?v=UTB5gAkjevk",
           "kind": "video",
           "source": "Andrew Huberman"
@@ -514,27 +520,41 @@
       ]
     },
     "videography": {
-      "days_since_last_article": 4,
+      "days_since_last_article": 5,
       "items": [
         {
-          "id": "videography-595765519076",
-          "title": "Will AI filmmaking be able to 'co-exist' with traditional filmmaking? - Yahoo Finance",
-          "excerpt": "Will AI filmmaking be able to 'co-exist' with traditional filmmaking? &nbsp;&nbsp; Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE52M2tBSi0tQkQyMGlOR01aMVNFdE5LOE4zRHVuUTNzNjBIMHVwS0piV3RVT1ZhTEdqLUg5Rkc3aUVWS1BQQXJmQzFkcDJTTXZ3QzN0Ym0wZ3ZqQ1NmNVRuVHBGREdKY1FHNXNZaVBJWFpFWXVGWm9kdXZrSVQ1dzQ?oc=5",
+          "id": "videography-ce1c5e160551",
+          "title": "How 'The Odyssey' Pulled Off Those Practical Effects",
+          "excerpt": "It's a Monday morning, and everyone is talking about going to see the big blockbuster movie over the weekend. If you thought The Odyssey was big before, the box office numbers and chatter show that it could wind up being the movie with the most cultural impact this year, in a field that's already…",
+          "url": "https://nofilmschool.com/the-odyssey-practical-effects",
           "kind": "article"
         },
         {
-          "id": "videography-44c85a68aa19",
-          "title": "George Lucas Says AI in Filmmaking is Inevitable - Star Wars News Net",
-          "excerpt": "George Lucas Says AI in Filmmaking is Inevitable &nbsp;&nbsp; Star Wars News Net",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOaW9uOVVZU0NEcnBSOTJFejFYM09UbnZ3dmxOdmJCUEFWTG1tZkItckEzSjhBV1dsMVlUR21qY2FHM202TGN2VVJJazBoZTdocnZ6ZEZWbVNrcWk0UjRXa0kteTBUQTFvZ1NFTk96Q3hmTjdZZTBPMThid05jUUdWSGVJSWhQM2R1M0VXQWhzOHg5ZDk2bFNrNjVPWTVCNlpaTlh4WHRSUC0tUGdSbDdxQUkzbEIyQ0k?oc=5",
+          "id": "videography-85801fc86277",
+          "title": "This iPhone App Promises to Unlock Open Gate or 4K With Real-Time RAW Processing",
+          "excerpt": "Who doesn’t want to shoot Open Gate these days? Open Gate is basically the new 4K in terms of buzzwords, which everyone throws around for how they’d like to shoot and record footage. And that’s not a knock, as these formats are buzzy for a reason. Shooting Open Gate can be hugely beneficial to…",
+          "url": "https://nofilmschool.com/log-cam-open-gate-by-raw-cam",
           "kind": "article"
         },
         {
-          "id": "videography-fedff238c5f6",
-          "title": "Louisville teens bring original films to life through hands-on filmmaking program - whas11.com",
-          "excerpt": "Louisville teens bring original films to life through hands-on filmmaking program &nbsp;&nbsp; whas11.com",
-          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPRXRiQUxfNGI2M0MwcEF6aS1aUlY0NGpmWEhNVGxNWUg3S2JiQkd3SVZ0LTFYbVRuZERfbzZFWG1ENXFocE9obFF6bmc1N1JLYjJJVnVzT21IZC1SRHQzVWJJZFJSUm9BUVJvcmlSM2Z5ODhfd1FmUzMyWTd1Vi1kU2lTOXRGMWN3S3RRTnJQV0lXalFxTTc3OENkc1ZlRjhzQkpMZGZMU3BqaDd4R2RHSmdQalZOU0Jta2VkTktzSWdGTlA1NlAzeTFxVHJGWHVEaVBIRjhzRWRIdnFNSjZpcDQ0WW93a3lDbHFnRndtRW1QMW54V3c?oc=5",
+          "id": "videography-4e4e89a5ef94",
+          "title": "'The Odyssey' Ending Explained",
+          "excerpt": "With an opening weekend that crushed all projections, Christopher Nolan's T he Odyssey updated the longest-running myth in Earth's history for audiences across the globe. People flocked to see the film in 70MM IMAX and smaller formats, solidifying Nolan as the biggest draw of any director working…",
+          "url": "https://nofilmschool.com/the-odyssey-ending-explained",
+          "kind": "article"
+        },
+        {
+          "id": "videography-25ccd9503287",
+          "title": "The Hands-Free Creator Kit: How Mobile Filmmaking Is Changing in 2026 - ilounge.com",
+          "excerpt": "The Hands-Free Creator Kit: How Mobile Filmmaking Is Changing in 2026 &nbsp;&nbsp; ilounge.com",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNk1sZFFGclVsSm5pOW9aRTh5cVViWXJESlNibEdKWnRiUUhOcHB6SWhDbUhGbUJjdFVudDNrQTNURnlpdGJNeVJMWVE3eHRjQXBGRVRENDF2QWxxQV93RnpzQ2FnSkNqbERlX1hEY0l6NWxHdkd2Nlh0dEFROVpJcEZPLUo5QWQzN3dDSS15QU1nTnUzbWx3dG9uNGhEX3BjWXNV?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "videography-398cc55c41c5",
+          "title": "Tuba opens entries for Linggo ng Kabataan filmmaking competition - baguioheraldexpressonline.com",
+          "excerpt": "Tuba opens entries for Linggo ng Kabataan filmmaking competition &nbsp;&nbsp; baguioheraldexpressonline.com",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVE1JMnVjYk04ejlsOV8wd1pYTVRwRzA1R19sYWhSQWp0NnF3ajRIVnpzYTh0dkp5SGtrTUtteEN0ZjdYb2dRdFhmb0d6bWFha3lveGRQUjNCWTlMbjFRRjNjVlhpak85RjNhbThILWI4dUpERk8tZjVjMko3ckV3SjFxd3QwVlh4bkRkMUlPSGt2ZUZKUGJZdGNrOW1ZMVdHQmVZYU5n?oc=5",
           "kind": "article"
         },
         {
@@ -544,20 +564,6 @@
           "url": "https://www.youtube.com/watch?v=mtT6fNnAeOE",
           "kind": "video",
           "source": "In Depth Cine"
-        },
-        {
-          "id": "videography-6cd207437ebc",
-          "title": "Film Quote of the Day: The 'Star Trek' Line That Offered a Timeless Lesson on Making Difficult Choices",
-          "excerpt": "Making a movie is like a relentless onslaught of problems you have to solve, sometimes in real time. You are constantly making choices on the page, on the stage, and even with the budget and crew. It's this beautiful cacophony of balancing what you want to do and what you need to do. In those…",
-          "url": "https://nofilmschool.com/what-is-necessary-is-never-unwise",
-          "kind": "article"
-        },
-        {
-          "id": "videography-fa6632cd399c",
-          "title": "Streamline Your Production Workflows With These Belkin USB-C Hubs",
-          "excerpt": "If you're looking to streamline your workflows on set by speeding things up and making them more efficient at the same time, then you might already know the value of fast, reliable, and solid USB-C hubs. This is a great and very easy way to move files and footage around to help make sure your shots…",
-          "url": "https://nofilmschool.com/belkin-usb-c-hubs",
-          "kind": "article"
         },
         {
           "id": "videography-22d13934362c",
@@ -576,48 +582,48 @@
       ]
     },
     "science": {
-      "days_since_last_article": 5,
+      "days_since_last_article": 6,
       "items": [
         {
-          "id": "science-c5e118b706e0",
-          "title": "Developing Eight nations call for $1.3trn annual climate finance by 2035 - Dailynewsegypt",
-          "excerpt": "Developing Eight nations call for $1.3trn annual climate finance by 2035 &nbsp;&nbsp; Dailynewsegypt",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNXFaYlBieWNpR3E4alRpY1p0VXNiVm9oLUpoZE82ZTBDU2pJeEJYR1l6LTdIR1lyemZ1TjdDeTFxOE9UQm91VHN2N2JERTdBMjU0RVdhSF9lZThyMlNJWW4wTnJ5cHNDa3RualV1ZW9DMlZ2LXVKQmhQVDJuYjFBWlVPMUdtdnNEYjFMRlhWTEtLY3htMzh5SGQ1WGM2VGhwdEVnTHFOVTdpWEE2cmwxWHJuM0U?oc=5",
+          "id": "science-608ba4fb9629",
+          "title": "Ancestral variation, not new mutations, may impact survival of species facing climate change",
+          "excerpt": "Research co-authored by an Oklahoma Museum of Natural History curator, her graduate student and an international team of scientists has shed new light on the evolutionary \"toolkit\" animals use to survive environmental change.",
+          "url": "https://phys.org/news/2026-07-ancestral-variation-mutations-impact-survival.html",
           "kind": "article"
         },
         {
-          "id": "science-9c4321b6125b",
-          "title": "Space launch costs could fall 90% by 2040 - Earth.com",
-          "excerpt": "Space launch costs could fall 90% by 2040 &nbsp;&nbsp; Earth.com",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1LZ3pMTXowTUhyRjBKR2o5SEdQMjJIbmNYQTY5MjVJV1V2NGlaRVYyWllzVnBYc1RteEJ6R0xTSkxUR2Fpc1hPOWR0THNBV3MxNmFlNWVuOEJDaEFQaDJQNDBKcWo3dFVTdWNOLVduSklFbjNNQ3A0?oc=5",
+          "id": "science-79e3cf626225",
+          "title": "Heat shock reveals rapid protein-control system cells may use to survive",
+          "excerpt": "The planet is getting hotter, and life will need to adapt to rising temperatures to survive. One way cells adapt to changing conditions is by synthesizing new proteins. That works well when the environment changes slowly, but if a crisis hits, like a sudden temperature increase, cells cannot wait…",
+          "url": "https://phys.org/news/2026-07-reveals-rapid-protein-cells-survive.html",
           "kind": "article"
         },
         {
-          "id": "science-3f6a526c811c",
-          "title": "Cinematic VR immerses viewers inside the narrative, research shows",
-          "excerpt": "Virtual reality and the metaverse are being discussed more and more, but for many people, these concepts still seem foreign, technical and difficult to grasp. At the same time, there is increasing experimentation with storytelling possibilities in which the viewer does not observe the story from a…",
-          "url": "https://phys.org/news/2026-07-cinematic-vr-immerses-viewers-narrative.html",
+          "id": "science-d2c9187f6595",
+          "title": "NASA Briefings Set for SpaceX Crew-13 to Space Station - Mirage News",
+          "excerpt": "NASA Briefings Set for SpaceX Crew-13 to Space Station &nbsp;&nbsp; Mirage News",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPakg1VlBlOER4d2VsUHVVRmNjOHhUNzhLT2xXb3lMTDBNT1Mxb180dGdFckliQ2JSOG96Q2kxNS1EeGUxaGpFOXRvSDF2MlNlTFNsS3dBUVYzQXExTHp2U01KNlVNbml0Q0ZCZ0pFdG0ydXF6S2JCTkpRQlctQ2RIc1F4ejhENmxSa2c?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-2b56a5133f8b",
-          "title": "Samples reveal how Earth slows solar wind striking moon's near side",
-          "excerpt": "The moon has been bathed in solar wind for billions of years, but the two hemispheres are struck by solar wind of different speeds and energies.",
-          "url": "https://phys.org/news/2026-07-samples-reveal-earth-solar-moon.html",
+          "id": "science-be0491f37803",
+          "title": "Australian ski resorts smash July climate records with temperatures 12C above average - The Guardian",
+          "excerpt": "Australian ski resorts smash July climate records with temperatures 12C above average &nbsp;&nbsp; The Guardian",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOVnRydnc5UlpRa0p5RHM1a29lRXpjZ1BXemF5STV3TXZNd0QwTW14VjA4MUdrbDlBRmR2bHFZaWtVdXJDdXJUZ2VZM24yaEFkeGp0WDlqNjFncFl2MHBVdkFYTExPeFh3a2ViSEhwTEQzYVJKVGV2bFVwTm9jVFZkTEM0eVl0Qi1mMWRsUzF3NHl4NDVpZ2xNblk2SWRWbWJnc0ZtTjJWTlcycFotX25Jdjc3b1EzaElyNlo2OTFSc2RsbzVoNW9XSjJlRWFLNmlMMUZRSVpiYw?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-c8b8c1c2a065",
-          "title": "A tiny universe in a bottle reveals clues to the origins of life",
-          "excerpt": "Researchers have created cosmic dust from scratch by recreating space-like conditions inside glass tubes. The dust contains complex carbon-rich molecules built from elements essential to life and produces infrared signals similar to real material found in space. By studying these laboratory…",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260718010156.htm",
+          "id": "science-3a9d48a62061",
+          "title": "The Organisms That Make Earth’s Harshest Places Home",
+          "excerpt": "Extremophiles that thrive in the most unforgiving environments aren’t just biological curiosities. Understanding their resilience has many implications for us. The post The Organisms That Make Earth’s Harshest Places Home first appeared on Quanta Magazine",
+          "url": "https://www.quantamagazine.org/the-organisms-that-make-earths-harshest-places-home-20260720/",
           "kind": "article"
         },
         {
-          "id": "science-31f46de51da5",
-          "title": "Scientists just discovered a lost branch of Australia’s marsupials",
-          "excerpt": "Fossils from Queensland suggest a newly recognized marsupial order may have survived in Australia for around 35 million years, rewriting part of the story of how the continent's unique mammals evolved. The discovery challenges the idea that Australia's marsupials all came from a single…",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260715083546.htm",
+          "id": "science-c6cfa398bf10",
+          "title": "Some dinosaurs could rise like giants until they grew too big",
+          "excerpt": "Two elephant-sized South American sauropods were unusually well built for standing on their hind legs. Digital tests showed that their robust femurs handled the enormous forces better than those of larger species, especially while the dinosaurs were young. The upright pose may have helped them…",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260719231758.htm",
           "kind": "article"
         },
         {

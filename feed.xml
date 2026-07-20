@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Sun, 19 Jul 2026 20:49:17 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 21:15:46 GMT</lastBuildDate>
+    <item>
+      <title>The Comeback Ratio&#39;s 0.8–1.3 Sweet Spot Is Partly a Mathematical Illusion</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-21/acute-chronic-workload-ratio-and-its-blind-spot.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-21/acute-chronic-workload-ratio-and-its-blind-spot.html</guid>
+      <category>health</category>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The acute:chronic workload ratio is the standard tool for pacing a return to sport, but the maths behind its 0.8–1.3 sweet spot also makes it look more predictive than it really is, and that changes how you should use it.</description>
+    </item>
     <item>
       <title>Westpac&#39;s 5% Investor Deposit Is a Hedge, Not a Gift</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-20/westpacs-5-investor-deposit-is-a-hedge-not-a-gift.html</link>
@@ -396,14 +404,6 @@
       <category>finance</category>
       <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
       <description>Real yields are the interest rate after inflation — and when they rise, almost every asset you own has to re-price.</description>
-    </item>
-    <item>
-      <title>Why retrieval beats fine-tuning for most apps</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-25/retrieval-beats-fine-tuning.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-25/retrieval-beats-fine-tuning.html</guid>
-      <category>software-ai</category>
-      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
-      <description>When you need an LLM to know your data, reach for retrieval before fine-tuning — it is cheaper, fresher, and easier to debug.</description>
     </item>
   </channel>
 </rss>
