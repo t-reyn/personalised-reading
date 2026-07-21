@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Mon, 20 Jul 2026 21:15:46 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 21:11:46 GMT</lastBuildDate>
+    <item>
+      <title>PYS and PMIF Saved Under 1% of a Balance and Broke the Pool</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-22/pys-pmif-and-the-insurance-pool-they-broke.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-22/pys-pmif-and-the-insurance-pool-they-broke.html</guid>
+      <category>actuarial</category>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Run the numbers behind Protecting Your Super and Putting Members&#39; Interests First and the balance protection comes to under 1% of a typical payout, while the opt-in switch adversely selected the shrunken pool of members who kept cover and made everyone who lost it invisible to every experience study since.</description>
+    </item>
     <item>
       <title>The Comeback Ratio&#39;s 0.8–1.3 Sweet Spot Is Partly a Mathematical Illusion</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-21/acute-chronic-workload-ratio-and-its-blind-spot.html</link>
@@ -396,14 +404,6 @@
       <category>actuarial</category>
       <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
       <description>The contractual service margin is how IFRS 17 stops insurers booking profit on day one — and spreads it over the life of the cover instead.</description>
-    </item>
-    <item>
-      <title>What rising real yields mean for your portfolio</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-25/real-yields-and-your-portfolio.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-25/real-yields-and-your-portfolio.html</guid>
-      <category>finance</category>
-      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Real yields are the interest rate after inflation — and when they rise, almost every asset you own has to re-price.</description>
     </item>
   </channel>
 </rss>
