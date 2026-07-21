@@ -9,11 +9,14 @@
       "title": "This $12 billion startup finally shipped something...",
       "url": "https://www.youtube.com/watch?v=M51asSwRLxA",
       "source": "Fireship",
-      "excerpt": "Mira Murati's Thinking Machines just released Inkling, a 975B parameter open-weights model that's deliberately mid... let's investigate.",
+      "excerpt": "Two years ago, Mira Murati did something we've all fantasized about. She woke up, decided she'd had enough of her boss, and quit her job as CTO of OpenAI with no backup plan and nothing but a vague desire to create time and space for her own exploration. If you or I did that, we'd probably end up coding HTML for food down on Market Street. But when someone like Mira does it, A16Z shows up with a $2 billion investment into any company she decides to build. The company was eventually Thinking Machines, and until last week, it's been known for being valued at $12 billion before having actually shipped anything. But that may have now just changed because they just released Inkling, a fully open weights model trained from scratch that can see, hear, reason, fine-tune, and potentially touch things in the real world. In today's video, we'll find out how it was built, what makes it interesting, and learn why Thinking Machines openly admits that it's not the best model in the world, and why that's the point. It is July 20th, 2026, and you're watching The Code Report. Last year, while the rest of us were spending time getting to know our newest Soham Parikh, Mira was quietly pulling off the greatest talent heist in Silicon Valley history. When she left OpenAI, she walked out with co-founder John Shulman, VP of research Barrett Zoph, and enough senior researchers to fill a Silicon Valley polycule. A year later, the dream team shipped Tinker, an API that lets you fine-tune open weight models without managing your own infrastructure or losing control over the training process. When it was released, ML researchers called it cool, which I imagine was a bit underwhelming if you'd just given them enough money to buy a Costco hot dog for one out of every six people on Earth. But that may have changed last week with the release of Inkling, a mixture of experts model with 970 billion total parameters. The trick is that it doesn't use all of them at once. Every token gets routed to a small subset of specialized experts, so only 41 billion parameters actually fire per token, giving you the most intelligence of a massive model at a fraction of the compute. It was pre-trained on 45 tri",
       "published_at": "2026-07-20T17:02:30+00:00",
       "added_at": "2026-07-20T21:02:14.596Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-21T01:28:20.102Z",
+      "transcript_at": "2026-07-21T01:28:20.102Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "software-ai-d57fb7014617",
@@ -2013,11 +2016,14 @@
       "title": "Accelerate Learning & Increase Cognitive Capacity | Dr. Tommy Wood",
       "url": "https://www.youtube.com/watch?v=bPd9NnOzx78",
       "source": "Andrew Huberman",
-      "excerpt": "Dr. Tommy Wood, BM, BCh, PhD, is a professor of neuroscience at the University of Washington and an expert on brain health, neuroplasticity, and cognitive performance. Dr. Wood explains how to use specific forms of exercise, dietary strategies, and compounds to enhance the rate and stability of mental and/or physical skill development. We also discuss science-based tools to preserve cognitive func",
+      "excerpt": "There's a much more recent study that took again older adults and randomized them across three different groups. One was like a low-intensity group. Another group basically did kind of zone 2 type work on a treadmill three times a week. And the third group did um a high-intensity interval training intervention which was the Norwegian 4x4 protocol. So 4 minutes at 85 to 95% of maximum heart rate. They had a 3minut rest in their protocol. They did that four times over. >> That was three times a week. >> Three times a week for 6 months. That's that's pretty intense. But what they showed was that that highintensity interval training group, they improved their fitness just as well as the zone 2 group, interestingly, but they had much better improvements in hypocample function and maintenance of hypocample structure and MRI scan. And they maintained that benefit for 5 years after the six-month intervention. So they worked really hard for 6 months, but that that benefit was maintained for for a really long period of time. Welcome to the Huberman Lab podcast where we discuss science and science-based [music] tools for everyday life. I'm Andrew Huberman and I'm a professor of neurobiology and opthalmology at Stanford School of Medicine. My guest today is Dr. Tommy Wood. Dr. Tommy Wood is a medical doctor and neuroscience researcher at the University of Washington in Seattle. He is also the chief science officer of BetterBrain, a company that provides free brain health coaching. Tommy is an expert in neuroplasticity and human performance and how science-based protocols can be used to improve your focus, ability to learn, and skill expression. His work applies to everyone from the novice to the elite expert, and for all kinds of skills, cognitive, language skills, athletic, and creative endeavors. Today, we discuss the brain states that favor learning and importantly, how to get yourself into those states. We also discuss how to get the most from a learning session. for instance, how long that session should last, how many sessions to do per day, and perhaps most importantly, how to tune your mind and body to get better at learning. That's something we don't often hear in ",
       "published_at": "2026-07-20T12:00:13+00:00",
       "added_at": "2026-07-20T21:02:27.634Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-21T01:28:20.102Z",
+      "transcript_at": "2026-07-21T01:28:20.102Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "health-c383e67d2798",
@@ -2324,11 +2330,14 @@
       "title": "How Cinematographers Choose Their Grip Packages",
       "url": "https://www.youtube.com/watch?v=mtT6fNnAeOE",
       "source": "In Depth Cine",
-      "excerpt": "Let's go through a typical grips gear package often selected by DPs for indie as well as industry shoots. GEAR: MUSIC: The Grey Room - 'Twinkle' The Grey Room - 'Event Horizon' The Mini Vandals - 'Rain Over Kyoto Station' The Grey Room - 'Pulsar' Sero - 'Mid August' The Mini Vandals - 'Aomori Wings' Dyalla - 'No Rush' Telecasted - 'Champion' Chill Winston - ‘The Truth’ DISCLAIMER: Some links in th",
+      "excerpt": "This video is sponsored by Squarespace: the all-in-one platform to build your website. From the largest swopping crane movements to the subtlest tracking shot, or even a shot mounted directly onto a vehicle, grips are responsible. Grip gear is the backbone of executing any safe and efficient camera motion or rigging a complex lighting setup. As a cinematographer who has worked on both small content shoots or indie productions, as well as industry sized feature film or series shoots, I’ll take you through a typical grips gear package often selected by DPs for both of these different scales of production. From head and legs, to dollies, gimbals and even grips gear for special occasions, let's get started. The one piece of gear that pretty much any production needs is a tripod. But not all tripods are the same. They come in different shapes and sizes and are mainly selected for the payload they can take. In other words, how big is the camera. For our indie shoot, which I’ve assumed will use something like a Sony FX6 or smaller, there are many different options but the tripod kit I’ve listed is the Cartoni Focus 12 with a payload of 12kg. This kit comes with a 100mm bowl tripod head which can be detached and legs that can adjust the tripod height or spread to get lower. To cover any low angles, where the camera needs to get very low to the ground, I’ve included a hi hat, a miniature tripod base which the 100mm tripod head can fit into. Because industry cinema cameras and lenses are larger and heavier, they need a tripod with a larger payload. The industry standard is the O’Connor 2575 fluid head designed for cameras up to 40.8kg - which supports basically any camera and heavy cinema zoom lens. This industry head is paired with heavy duty aluminium legs, which come in a short size, for a lower height, or tall legs for a higher angle shot. Unlike our indie tripod, which can be levelled by adjusting the round bowl, these heavy production tripods are bubbled by adjusting the individual height of each leg until the horizon is level. With a hit-hat, I’ve also included a steadybag, which is like a beanbag that gets the camera even lower by sitting it directly on the ground",
       "published_at": "2026-07-19T13:00:34+00:00",
       "added_at": "2026-07-19T20:38:37.499Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-21T01:28:20.102Z",
+      "transcript_at": "2026-07-21T01:28:20.102Z",
+      "transcript_kind": "manual"
     },
     {
       "id": "videography-6cd207437ebc",
@@ -2672,5 +2681,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-07-20T21:02:30.125Z"
+  "updatedAt": "2026-07-21T01:28:23.195Z"
 }
