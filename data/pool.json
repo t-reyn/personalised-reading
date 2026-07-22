@@ -285,11 +285,14 @@
       "title": "From Pictures of Objects to 3D Three.js in MINUTES",
       "url": "https://www.youtube.com/watch?v=PxEK-k6Efi0",
       "source": "DesignCourse",
-      "excerpt": "^-Chat with me and others Who is Gary Simon? Well, I'm a full stack developer with 2+ decades experience and I teach people how to design and code. I've created around 100+ courses for big brands like LinkedIn, Lynda.com, Pluralsight and Envato Network. Now, I focus all of my time and energy on this channel and my website Designcourse.com.",
+      "excerpt": "What's up everybody? Image 23JS. This is a library I came across very recently and allows you to do really cool stuff like this. So the idea is is you provide it with an image and automatically it will analyze the image, create a 3D shape out out of it and make it work with 3JS which means you can then integrate it interactively onto your websites, your apps, whatever anything that uses web tech. So, I'm going to be actually testing this two different scenarios. This stool right here, which is a very simple object in my studio, and then also a more complex one like this keyboard right here. Will it actually nail it? Well, I don't want to do this kind of like a spoiler alert, but yeah, it actually did a really good job and it's interactive as well. And I'll show you exactly how to get set up. It's super easy. Let's get started. All right, so to get started, open up your favorite coding age. I'm using cursor here and all I said is read this. I pasted the link to the GitHub repo. Integrate it into this project and tell me how to test it and what to provide you. Long gone are the days where I'm sitting here showing you how to run, you know, Node.js in order to integrate like a GitHub project. So, let's go ahead see what it does. All right. So, here's a picture I took of it. I'm going to tell or just paste this rather into Gemini and basically tell it to isolate it against like a white background. All right, there we go. That looks good. All right, so here it is. Here's a picture I took of a store in my studio. I run this image through image 23JS. Show me the result while it subtly spins and rotates on access and place it in its own index HTML file and allow zoom and orbit controls. So, let's see what it actually does. Now, that is impressive right here. Check this out. I'm going to put next to the side of the actual picture. And it did a really good job. And what was cool is when it was working, it was iteratively improving the initial result. There was some stuff on the floor it removed. I This is pretty sick, I have to say. Okay, so this is going to be the next test. This here is a Novation Launchkey 25 MIDI keyboard. Okay, now I went ahead and got some reference ",
       "published_at": "2026-07-21T15:36:09+00:00",
       "added_at": "2026-07-21T20:58:22.004Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-22T01:01:21.100Z",
+      "transcript_at": "2026-07-22T01:01:21.100Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "design-37dda8c2bf5a",
@@ -299,11 +302,14 @@
       "title": "She Cracked the YouTube Code. Here's Everything She Knows",
       "url": "https://www.youtube.com/watch?v=j8yGn1v8OgU",
       "source": "The Futur",
-      "excerpt": "Most YouTubers think better editing, better cameras, or posting more often will grow their channel. In this workshop, @ChrisDo sits down with YouTube strategist Aprilynne Alter to reveal the framework behind successful YouTube growth. From generating high-potential ideas and evaluating their market size to writing irresistible titles, designing thumbnails, and understanding why people click, she b",
+      "excerpt": "April's in the house. We're here in Santa Monica with a few friends. It's a very intimate conversation. It's going to be very meta today because she teaches people how to grow on YouTube and so we're going to try to apply her formula as we're doing it. So, it's a little bit weird. So, just hang in there with us. Without further ado, April, do your thing. >> All right, let's do it. Hi, I'm April and I've spent the last 5 years studying what makes YouTube videos tick. With my videos, I've helped thousands of creators start, grow, and scale their YouTube channels. And today, I'm going to share all that knowledge with you. We're going to be covering the five core areas that have the highest impact on YouTube growth. And by the end of this video, you'll know exactly what you need to do to grow your YouTube channel in 2026. Let's get started. >> Let's get into the five things. What do we need to know? What's number one? >> Number one, ideation. Every single video starts from the idea. And the idea itself that you start with is, I would say, probably the single most underrated part of the entire video. So we have to start with the idea. >> Okay. How do we know we have a good one? Because everybody has an idea. Ideas are a dime a dozen. >> Ideas are a dime a dozen. So first, why why are ideas are like why are ideas so important? We'll just start with that one. Uh there's this the saying that like the idea sets the ceiling. The execution determines the result. And so from the idea stage, you basically determine right from the very get-go what is the upper cap of views that this video could possibly get and then how good of a job you do executing on that determines how much of that you actually get. So that's why ideas are so important. So but I'll answer this what makes up a good idea. I would say when we think about ideiation we have to split it into two different areas which is idea generation and idea filtration. You say that ideas are a dime a dozen and that is true to an extent. I do think that every single person needs to be generating more ideas than you do. I would say most people think of ideas as like very passively. So they kind of sit down. They're like, \"Oka",
       "published_at": "2026-07-21T12:30:10+00:00",
       "added_at": "2026-07-21T20:58:21.918Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-22T01:01:21.100Z",
+      "transcript_at": "2026-07-22T01:01:21.100Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "design-335672b06d63",
@@ -1083,11 +1089,14 @@
       "title": "BREAKING: Government To Roll Back Budget Changes Like 1987!",
       "url": "https://www.youtube.com/watch?v=Ph7kHqSUCnU",
       "source": "Personal Finance with Ravi Sharma",
-      "excerpt": "AFR, Sunrise Show - Channel 7, Channel 7 News, Business News Australia AFR Best Place to Work - 2026 Finalist Financial Times High-Growth Companies Asia-Pacific 2026 - #43 REB's Buyers Agent of The Year 2025 - Finalist \"FAST 100 AFR 2025 | #15 Fasting Growing Company\" “REB’s Best Buyer’s Agency 2024 - Finalist” “REB’s Best Buyer’s Agency 2023 - Finalist” “REB’s Rising Star 2023 - Finalist” “Austra",
+      "excerpt": "Lots. Straight ahead, the housing pain is real. A real estate power [music] player is helping us break down the latest numbers as rents continue to [music] rise. So, are the budget changes really to blame or are there other factors at play? >> [music] >> Well, in May's federal budget, the government forecast their new measures would increase rents by $2 a week. But, just a couple of months later, the latest PropTrack data shows they've already increased by around $20 a week. >> Nationally, after three interest rate rises and continued inflationary pressures, rents have risen around 6% year-on-year, raising questions about whether it was the right time for the government's housing reforms. So, what does it all mean for the foreseeable future? Well, for more, we're joined now by personal finance expert and buyers agent Ravi Sharma. Good morning to you. Welcome back. What is driving this uh rent rise here, Ravi? >> Well, it's really interesting, right? If you go and have tax reforms that target investors, suddenly investors are saying, \"Well, it's no longer my problem. I don't want to hold an investment property.\" And that means one less rental property. So, supply and demand, if there's less rental properties and more people need to rent, you're going to have rents go higher. >> So, you're putting it squarely on the government's policy here? >> Yeah, well, I mean, you already had some movements in some markets like Melbourne and Sydney starting to slow down, but investors are pretty much going, \"My hands are up. Like, if you're not going to allow me to negatively gear properties when I have to go and purchase, and you're making it harder to hold onto these properties, unfortunately, I'm going to let go.\" >> Yeah, okay. Is there a difference between city and regional numbers? What are we seeing there, Ravi? >> Yeah, definitely. Um in saying that, you've still got the difference between units and houses as well. Um so, if you're looking at capital cities, they're slightly moving ahead faster than the regional areas. We've also got to think that if affordability is the concern and you see a large rush out of people from the capital cities into these regional areas, t",
       "published_at": "2026-07-21T09:30:01+00:00",
       "added_at": "2026-07-21T20:58:25.259Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-22T01:01:21.100Z",
+      "transcript_at": "2026-07-22T01:01:21.100Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-84f1a035f702",
@@ -1754,11 +1763,14 @@
       "title": "Mark Cuban on the AI Bubble: Who Actually Gets Wiped Out?",
       "url": "https://www.youtube.com/watch?v=OY2Sjbjd_VE",
       "source": "All-In Podcast",
-      "excerpt": "(0:00) Bubble talk: comparing today's AI market to the dot-com bubble (7:50) AI's real-world limits: why enterprise AI is harder than expected (16:38) Transitioning to an AI-First Workspace (21:26) Health & AI: self-directed healthcare and biometric data (24:30) Politics, wealth tax, and AI as a truth-seeking force (35:12) Knicks & Sports Talk Follow Mark: Follow the besties: Follow on X: Follow o",
+      "excerpt": "You and I live through a couple of bubbles. We've seen this movie before. >> Um and and this wave seems very different than do waves. So, let's talk about that. Are you concerned about a bubble? We're seeing bubbly like behavior. People >> It's not It's not the traditional dot bubble, right? Because back then there was companies going public getting crazy valuations and people are buying them and the stock would go up, you know, 50% 100% with companies that had no revenue, no traffic, no nothing. and you'd go get a cab back then and people would be talking about them. Yeah. And you don't you don't see that at all today. So, it's not a bubble that's going to impact most people in the room, right? Or most people um across the US, but it could just destroy a lot of VCs and a lot of funds and a lot of PE, right? Because they're going all in. >> I'm going all in. [music] App 111 started with an $8 domain and no VC funding and became one of the largest ad platforms in the world. Now that same engine powers AppL ads for e-commerce. Your ads run inside mobile games reaching over a billion people with full screen distraction-free attention. The platform finds buyers and optimizes for profit. You set the target, it does the rest. One cookware brand went from 4 million to $16 million, turned profitable, and is on pace for 80 million this year. Visit apploven.com/allin to launch your first campaign today. [music] >> It used to be that product managers for brokerages had to outperform the numbers, right, for, you know, the S&P or whatever. But now you got to outperform to keep the money coming in. You got to outperform the the fund next door. And they're all in anthropic and getting their outcomes and SpaceX and celebrating, but if hits the fan >> Yeah. It really is like I've only done venture for just over 10 years and it is wild to watch so many people who deployed at the wrong time just out of business. They just invested at the peak and entry price matters and you and I have been in a bunch of deals together and we used to get to investing companies at 5 million 10 million as angel investors and then all of a sudden the request was 40 50 60 and the product's not launched",
       "published_at": "2026-07-21T17:14:13+00:00",
       "added_at": "2026-07-21T20:58:29.756Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-22T01:01:21.100Z",
+      "transcript_at": "2026-07-22T01:01:21.100Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "finance-05d500ba1155",
@@ -2681,5 +2693,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-07-21T20:58:32.431Z"
+  "updatedAt": "2026-07-22T01:01:24.149Z"
 }
