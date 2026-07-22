@@ -1,8 +1,42 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-21T21:11:46.668Z",
-  "count": 53,
+  "generatedAt": "2026-07-22T21:04:25.046Z",
+  "count": 54,
   "articles": [
+    {
+      "id": "2026-07-23-six-fixes-behind-96-percent-of-accessibility-failures",
+      "slug": "six-fixes-behind-96-percent-of-accessibility-failures",
+      "interest": "design",
+      "interests": [
+        "design"
+      ],
+      "mode": "learn",
+      "title": "Six Fixes Cover 96% Of Why Sites Fail Accessibility",
+      "summary": "WebAIM's 2026 scan of a million homepages found 95.9% fail accessibility — but the same six fixable problems, led by low-contrast text, cause 96% of it. What each one actually requires, and when a dropdown is one of them.",
+      "tags": [
+        "accessibility",
+        "WCAG",
+        "UX fundamentals",
+        "forms",
+        "contrast"
+      ],
+      "created_at": "2026-07-23",
+      "expire_at": "2026-09-21",
+      "concepts_taught": [
+        "wcag-contrast-ratio",
+        "semantic-form-labelling",
+        "input-pattern-selection"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "contrast-for-hierarchy"
+      ],
+      "source_count": 3,
+      "word_count": 775,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-23/six-fixes-behind-96-percent-of-accessibility-failures.html"
+    },
     {
       "id": "2026-07-22-pys-pmif-and-the-insurance-pool-they-broke",
       "slug": "pys-pmif-and-the-insurance-pool-they-broke",

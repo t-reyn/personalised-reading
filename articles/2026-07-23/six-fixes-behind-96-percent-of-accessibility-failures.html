@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Six Fixes Cover 96% Of Why Sites Fail Accessibility</title>
+  <meta name="description" content="WebAIM's 2026 scan of a million homepages found 95.9% fail accessibility — but the same six fixable problems, led by low-contrast text, cause 96% of it. What each one actually requires, and when a dropdown is one of them." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="design">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-07-23-six-fixes-behind-96-percent-of-accessibility-failures">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>🎨 Design &amp; Craft</p>
+        <h1>Six Fixes Cover 96% Of Why Sites Fail Accessibility</h1>
+        <p class="doc-meta">23 July 2026 · synthesised from 3 sources</p>
+        <p class="doc-summary">WebAIM's 2026 scan of a million homepages found 95.9% fail accessibility — but the same six fixable problems, led by low-contrast text, cause 96% of it. What each one actually requires, and when a dropdown is one of them.</p>
+      </header>
+
+      <div class="doc-body">
+        <p>WebAIM scanned the home pages of the world's top one million websites in February 2026 and found detectable accessibility failures on 95.9% of them — an average of 56.1 barriers per page, up 10.1% on last year's 51. It's the eighth straight year the same study has run, and the pass rate keeps moving the wrong way. The useful part isn't the headline number, though. It's that six recurring, fixable problems account for 96% of everything the scan flags. If you're shipping your own products, those six are worth knowing by name, because they aren't really six problems — they're two mechanisms wearing six labels.</p>
+
+        <h2>Six things, not a thousand things</h2>
+        <p>In order: low-contrast text (83.9% of pages), missing image alt text (53.1%), missing form input labels (51%), empty links (46.3%), empty buttons (30.6%), and a missing page-language tag (13.5%). Four of those six are the same failure repeated on four different elements: something a screen reader needs to announce simply isn't there in the code, even though the page looks fine on screen. One is a colour-maths problem. One is a single missing HTML attribute. And because WebAIM's scan is automated, testing only what a script can verify against WCAG 2.2, the real failure rate — judged by someone actually using a screen reader — runs higher than 95.9%, not lower.</p>
+
+        <h2>The number you already half-know</h2>
+        <p>You've already met contrast as a design tool: making the important thing pop against the page. WCAG turns that into a hard pass/fail number instead of a design choice. Success Criterion 1.4.3 requires a 4.5:1 contrast ratio for normal text — anything under 18 point, or under 14 point bold — and 3:1 for text at or above that size. In CSS terms that threshold sits around 24px for regular weight and 18.5px bold, so your body copy needs the stricter ratio and your large stat callouts and headings get the easier one. A lot of the grey-on-white body text that looks tasteful in a mockup measures out around 3:1–4:1 against white — comfortably in the zone that fails, and the single biggest reason 83.9% of pages get flagged. Run your palette through a free contrast checker before you ship it, not after.</p>
+
+        <h2>If it's not in the text, it doesn't exist</h2>
+        <p>A screen reader reads what's in the DOM — element text and ARIA labels — not what's on screen. An icon-only button with no accessible name is, to both a screen reader and to WebAIM's scanner, an empty button: 30.6% of pages have at least one. An <code>&lt;img&gt;</code> with no <code>alt</code> attribute is invisible cargo, which is most of that 53.1%. A form input with a placeholder but no <code>&lt;label&gt;</code> looks complete visually and says nothing when it gets focus — that's the 51%. A link that only wraps a bare icon, or says "click here" with no context, is the 46.3%. All four share the same fix: name the thing in code, not just in the layout. Before your next release, tab through your own form with the mouse put away — anything that reads out as "button" or "link" with no further detail is on your list.</p>
+
+        <h2>The dropdown is rarely the right default</h2>
+        <p>Nielsen Norman Group's research adds a practical rule most solo builders skip: dropdowns are a middling choice most of the time, not a safe default. Under about seven options, an exposed set of radio buttons beats a dropdown on both speed and accessibility — major design systems converge on similar thresholds, from Carbon's 3 to Material's 6 to USWDS's 7. Above roughly 15 options, a plain dropdown breaks down from scrolling and fine-motor-control strain, and the fix is a searchable combobox, not a longer list. GOV.UK's own research found enough friction — users unsure whether an item was focused or selected, unsure how much further there was to scroll — that its public-facing services now treat a plain dropdown as a last resort. If SeatFlow asks for a table size or Shojin asks to pick an exercise from a long list, that choice of input is doing as much accessibility work as any colour or label ever will.</p>
+
+        <h2>Test it with the screen reader on, not just the mouse away</h2>
+        <p>Turn on your phone's built-in screen reader — VoiceOver on iPhone, TalkBack on Android — for sixty seconds on whichever product you last shipped a form to. Every button, link and field it can't name out loud is a line item you can fix in minutes, and it's a truer test than eyeballing a Figma file, because it catches exactly the four failures that show up on half the web.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://webaim.org/projects/million/" target="_blank" rel="noopener">The WebAIM Million 2026: The Accessibility of the Top 1,000,000 Home Pages — WebAIM</a></li>
+          <li><a href="https://www.nngroup.com/articles/dropdown-list/" target="_blank" rel="noopener">Does Your Form Really Need a Dropdown List? — Nielsen Norman Group</a></li>
+          <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank" rel="noopener">Understanding Success Criterion 1.4.3: Contrast (Minimum) — W3C</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-07-23-six-fixes-behind-96-percent-of-accessibility-failures",
+  "slug": "six-fixes-behind-96-percent-of-accessibility-failures",
+  "interest": "design",
+  "interests": ["design"],
+  "mode": "learn",
+  "title": "Six Fixes Cover 96% Of Why Sites Fail Accessibility",
+  "summary": "WebAIM's 2026 scan of a million homepages found 95.9% fail accessibility — but the same six fixable problems, led by low-contrast text, cause 96% of it. What each one actually requires, and when a dropdown is one of them.",
+  "tags": ["accessibility", "WCAG", "UX fundamentals", "forms", "contrast"],
+  "created_at": "2026-07-23",
+  "expire_at": "2026-09-21",
+  "concepts_taught": ["wcag-contrast-ratio", "semantic-form-labelling", "input-pattern-selection"],
+  "concepts_assumed": [],
+  "concepts_reinforced": ["contrast-for-hierarchy"],
+  "sources": [
+    { "title": "The WebAIM Million 2026: The Accessibility of the Top 1,000,000 Home Pages", "url": "https://webaim.org/projects/million/" },
+    { "title": "Does Your Form Really Need a Dropdown List?", "url": "https://www.nngroup.com/articles/dropdown-list/" },
+    { "title": "Understanding Success Criterion 1.4.3: Contrast (Minimum)", "url": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "Your app's body copy is a mid-grey (#767676) on white, measuring roughly 4.5:1, set at 16px regular weight. A stat callout nearby is 28px bold in a lighter grey measuring 3.2:1. Which passes WCAG's SC 1.4.3?",
+      "options": [
+        "Only the stat callout, because 16px regular text needs the stricter 4.5:1 ratio and only just clears it, while the callout counts as large text and only needs 3:1",
+        "Only the body copy, because large bold text always needs the higher ratio",
+        "Neither, because both need at least 7:1 to pass",
+        "Both automatically pass because they're both shades of grey, which WCAG treats as neutral"
+      ],
+      "correct": 0,
+      "concept": "wcag-contrast-ratio"
+    },
+    {
+      "q": "A settings screen has an icon-only 'delete' button with no visible text and no aria-label, and a text input with a grey placeholder ('Enter your name') but no <label> element. A sighted user understands both instantly. What will a screen reader announce for each?",
+      "options": [
+        "Nothing unusual — screen readers can infer meaning from icon shape and placeholder colour",
+        "The button will announce as unlabelled ('button', no name) and the input's placeholder will vanish once it's focused and typed into, leaving the field effectively nameless",
+        "Screen readers automatically read the CSS class names as labels",
+        "Both will work fine, since placeholders are treated identically to labels by every screen reader"
+      ],
+      "correct": 1,
+      "concept": "semantic-form-labelling"
+    },
+    {
+      "q": "You're designing a field for 'country of residence' (about 195 options) and a separate field for 'preferred contact method' (4 options: email, phone, SMS, post). Which input choice fits the guidance from major design systems and GOV.UK's accessibility research?",
+      "options": [
+        "A plain dropdown for both, since dropdowns are always the safest default for any list",
+        "Radio buttons for both, since exposing every option is always better regardless of count",
+        "Exposed radio buttons for the 4-option contact method, and a searchable combobox rather than a plain dropdown for the 195-option country list",
+        "A plain dropdown for the country list and free-text typing for contact method, since typing is always fastest"
+      ],
+      "correct": 2,
+      "concept": "input-pattern-selection"
+    },
+    {
+      "q": "You already know contrast as a hierarchy tool — using it to make the most important element pop against the page. Under WCAG's accessibility rules, how does that same property get judged differently?",
+      "options": [
+        "It doesn't — hierarchy contrast and WCAG contrast are the same test with the same pass mark",
+        "WCAG ignores contrast entirely and only checks colour choice, not luminance difference",
+        "Hierarchy contrast is a design choice about emphasis; WCAG contrast is a fixed numeric pass/fail threshold (4.5:1 or 3:1 depending on text size) that applies even to elements you didn't intend to de-emphasise",
+        "WCAG only requires contrast on headings, never on body text or de-emphasised elements"
+      ],
+      "correct": 2,
+      "concept": "contrast-for-hierarchy"
+    }
+  ]
+}
+  </script>
+</body>
+</html>

@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Tue, 21 Jul 2026 21:11:46 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 21:04:25 GMT</lastBuildDate>
+    <item>
+      <title>Six Fixes Cover 96% Of Why Sites Fail Accessibility</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-23/six-fixes-behind-96-percent-of-accessibility-failures.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-23/six-fixes-behind-96-percent-of-accessibility-failures.html</guid>
+      <category>design</category>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
+      <description>WebAIM&#39;s 2026 scan of a million homepages found 95.9% fail accessibility — but the same six fixable problems, led by low-contrast text, cause 96% of it. What each one actually requires, and when a dropdown is one of them.</description>
+    </item>
     <item>
       <title>PYS and PMIF Saved Under 1% of a Balance and Broke the Pool</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-22/pys-pmif-and-the-insurance-pool-they-broke.html</link>
@@ -396,14 +404,6 @@
       <category>finance</category>
       <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
       <description>The Reserve Bank has raised the cash rate for a third consecutive meeting. What&#39;s driving it, how it flows through to your mortgage and super, and when the market thinks rates might finally fall.</description>
-    </item>
-    <item>
-      <title>The IFRS 17 CSM, in plain terms</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-25/ifrs17-csm-in-plain-terms.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-25/ifrs17-csm-in-plain-terms.html</guid>
-      <category>actuarial</category>
-      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
-      <description>The contractual service margin is how IFRS 17 stops insurers booking profit on day one — and spreads it over the life of the cover instead.</description>
     </item>
   </channel>
 </rss>
