@@ -22,11 +22,14 @@
       "title": "Open-weight AI just hit 2.8 trillion parameters…",
       "url": "https://www.youtube.com/watch?v=YP73B9D20V4",
       "source": "Fireship",
-      "excerpt": "Moonshot just released Kimi K3, a 2.8 trillion parameter open-weight monster. Does it live up to the hype? Let's break it down.",
+      "excerpt": "Last week, Chinese AI lab Moonshot dropped Kimi K3, a massive open-source monster that instantly parameter mogged every other open model in existence. And not just that, it has OpenAI and Anthropic terrified because its trust-me-bro benchmark performance is on par with, and in some cases beating, Claude Fable and GPT-5.6 Soul. And that's crazy because just a few weeks ago, the government was telling you these models were too dangerous for the common man to use. It only took the Chinese a few weeks to match their performance and then give away all the weights for free. But big AI is not too happy about this, and there are already calls to ban Chinese models completely in the United States. In today's video, we'll take a look at the massive breakthrough that is Kimi K3 and find out what it means for the future of artificial intelligence. It is July 22nd, [music] 2026, and you're watching The Code Report. Like Claude Fable and GPT-5.6 Soul, Kimi K3 is a native multi-model mixture of experts model with a 1 million token context window and a staggering 2.8 trillion parameters, and is optimized for jobs like long-horizon reasoning and, of course, coding. One interesting characteristic of K3 as a mixture of experts model is that it has 896 total experts, of which exactly 16 activate per token, which means it works just like a big corporation where 16 good programmers do all the work while 880 other managers sit there and do nothing. But apparently, this works out well for Kimi because it makes scaling about 2.5 times more efficient than K2. Despite these gains in efficiency, Kimi was so popular upon release that their GPUs ran out of juice and they had to start turning away paying customers. And as of making this video, all the paid plans are currently sold out. That's unfortunate, but in theory, you could self-host the model because the weights are open. The weights are expected to be released on July 27th, but there's no chance in hell you'll be able to run it on your little gaming GPU. To run a monster like this, you'll need a massive array of data center caliber GPUs. But in theory, if you could do that, you would have unlimited access to a Fable Soul caliber model",
       "published_at": "2026-07-22T17:43:52+00:00",
       "added_at": "2026-07-22T20:55:57.591Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-23T00:09:18.508Z",
+      "transcript_at": "2026-07-23T00:09:18.508Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "software-ai-b4c8c65e334b",
@@ -571,11 +574,14 @@
       "title": "Why Ambitious Startup Ideas Are Actually Easier To Sell",
       "url": "https://www.youtube.com/watch?v=ALJQHSgCl2E",
       "source": "Y Combinator",
-      "excerpt": "In this discussion from Startup School Paris, PostHog CEO James Hawkins reflects on a number of startup topics including going from one product to twenty, why European founders need to stop focusing on negative possibilities, and the benefits of swapping jobs with your co-founder.",
+      "excerpt": "So it is all upside. You you just can't win on downside. It's the biggest thing I found dealing with investors who are stronger. Um like the investors we want to work with are they are focused on the what if it all works out because they know that 99.99% of your startups upside hasn't been done yet. I think you're probably one of the most interesting developer companies to come out of YC in recent years. you did YC winter 20, pivoted a bunch during the batch. I think hacked together the first version of Post Hog just before demo day. Um, but the the more interesting thing for me is what's happening now. Postthog was a really really popular YC dev tool, but it seems like you're reshaping the company now into like sort of to build AI native self-driving software. Can you talk a little bit about that, like how that happened and where you're up to right now? >> Sure. So yeah, Postto now provides self-driving software. It's our new kind of oneliner. Um, we started off by, as you say, we're open- source product analytics was what we launched during the batch. Obviously, there's been a platform shift with AI coming in. Um, in terms of what that's meant for us, we kind of, and I think it's worth talking about ambition a little bit more, but we upped the ambition of what we're doing. And from first principles uh we which is a very overused term but still we decided it was fundamentally better to entirely solve someone's job for them rather than giving them an rough idea of what's important. We felt it was better to be a company that does stuff for people rather than um an analytics company that gives you kind of this academic idea of how things are performing. We want to be able to improve your graphs and make them go up not just tell you that they're going up or down. You we've been working on clustering doing a whole bunch of stuff. We're looking to model like AI research and all sorts of things to understand across all the data types that we have where your problems are in your product, what your customers complaining about in support. Um what's happening in your logs and errors and session recordings and then shipping pull requests just to fix as many of the sort of ",
       "published_at": "2026-07-22T14:00:36+00:00",
       "added_at": "2026-07-22T20:56:00.875Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-23T00:09:18.508Z",
+      "transcript_at": "2026-07-23T00:09:18.508Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-a9624da1d0dc",
@@ -2709,5 +2715,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-07-22T20:56:11.434Z"
+  "updatedAt": "2026-07-23T00:09:20.596Z"
 }
