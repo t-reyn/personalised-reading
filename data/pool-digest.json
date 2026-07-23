@@ -1,10 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-22T20:56:11.441Z",
+  "generatedAt": "2026-07-23T20:52:07.311Z",
   "interests": {
     "software-ai": {
-      "days_since_last_article": 4,
+      "days_since_last_article": 5,
       "items": [
+        {
+          "id": "software-ai-e440cc611d1e",
+          "title": "The most interesting \"hack\" in history...",
+          "excerpt": "Last week Hugging Face was hacked. In this video, we'll break down who it was and what they wanted.",
+          "url": "https://www.youtube.com/watch?v=KOpTWx1Eou4",
+          "kind": "video",
+          "source": "Fireship"
+        },
         {
           "id": "software-ai-8650b65383ee",
           "title": "5 Software Architecture Mistakes That Make Systems Hard to Change",
@@ -15,7 +23,7 @@
         {
           "id": "software-ai-3a9ca9a09cac",
           "title": "Open-weight AI just hit 2.8 trillion parameters…",
-          "excerpt": "Moonshot just released Kimi K3, a 2.8 trillion parameter open-weight monster. Does it live up to the hype? Let's break it down.",
+          "excerpt": "Last week, Chinese AI lab Moonshot dropped Kimi K3, a massive open-source monster that instantly parameter mogged every other open model in existence. And not just that, it has OpenAI and Anthropic terrified because its trust-me-bro benchmark performance is on par with, and in some cases beating…",
           "url": "https://www.youtube.com/watch?v=YP73B9D20V4",
           "kind": "video",
           "source": "Fireship"
@@ -55,31 +63,24 @@
           "excerpt": "In HOT Updates in Postgres we covered page pruning clean up HOT chains, an elegant shortcut where PostgreSQL reclaims dead tuple space during ordinary reads. All that without waiting for any background process. But pruning is exactly that: a shortcut. It only works within a single page, and only…",
           "url": "https://boringsql.com/posts/vacuum-at-the-page-level/",
           "kind": "article"
-        },
-        {
-          "id": "software-ai-fc240074afcd",
-          "title": "Resilience Patterns Can Make Your System Less Resilient",
-          "excerpt": "You wanted your system to be resilient, so you followed the standard advice. You added retries.You added circuit breakers.You added fallbacks. But now your system is less resilient. Not because those patterns are bad. They are not. The problem is they are doing exactly what you told them to do…",
-          "url": "https://codeopinion.com/resilience-patterns-can-make-your-system-less-resilient/",
-          "kind": "article"
         }
       ]
     },
     "design": {
-      "days_since_last_article": 6,
+      "days_since_last_article": 0,
       "items": [
+        {
+          "id": "design-0633af0329cc",
+          "title": "The screens are getting demoted",
+          "excerpt": "",
+          "url": "https://uxdesign.cc/the-screens-are-getting-demoted-6b40120fcf04?source=rss----138adf9c44c---4",
+          "kind": "article"
+        },
         {
           "id": "design-31858e63e05c",
           "title": "The digital wall we built ourselves",
           "excerpt": "Why 95.9% of the world’s top million sites still fail the people who need them most. Continue reading on UX Collective »",
           "url": "https://uxdesign.cc/the-digital-wall-we-built-ourselves-e9578f774374?source=rss----138adf9c44c---4",
-          "kind": "article"
-        },
-        {
-          "id": "design-a82c4655b37f",
-          "title": "I handed a UX review over to AI. Here’s what happened.",
-          "excerpt": "",
-          "url": "https://uxdesign.cc/i-handed-a-ux-review-over-to-ai-heres-what-happened-0511e73e4ffe?source=rss----138adf9c44c---4",
           "kind": "article"
         },
         {
@@ -130,15 +131,37 @@
       ]
     },
     "indie-income": {
-      "days_since_last_article": 3,
+      "days_since_last_article": 4,
       "items": [
         {
-          "id": "indie-income-ab4b3923664f",
-          "title": "Why Ambitious Startup Ideas Are Actually Easier To Sell",
-          "excerpt": "In this discussion from Startup School Paris, PostHog CEO James Hawkins reflects on a number of startup topics including going from one product to twenty, why European founders need to stop focusing on negative possibilities, and the benefits of swapping jobs with your co-founder.",
-          "url": "https://www.youtube.com/watch?v=ALJQHSgCl2E",
+          "id": "indie-income-70fcda05ecc7",
+          "title": "The Model-Agnostic AI Platform Betting That No Single Lab Will Win",
+          "excerpt": "In this discussion at Startup School Paris, Dust co-founder Stanislas Polu reflects on his path from Stripe to OpenAI and why he and his co-founder decided to build their company in France.",
+          "url": "https://www.youtube.com/watch?v=DbBnd9PYob4",
           "kind": "video",
           "source": "Y Combinator"
+        },
+        {
+          "id": "indie-income-648094da5b21",
+          "title": "Bootstrapped and profitable: TripleDart's blueprint for scaling - The Economic Times",
+          "excerpt": "Bootstrapped and profitable: TripleDart's blueprint for scaling &nbsp;&nbsp; The Economic Times",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNVmlPSFFQSENVZ1hNaHozX2J0akR5UGNydVRrTWNVY0w0S1E3bTQ2enE0NG9mM2RPTWstN1pySGZQYjh0NG1GMGxxc21TR1BNS0RCY3YzbEdndzYtZVJWVG9mQ2FYUDlnUXVtRVpQYUpyd0dSaWxNY25iakZSSFlSdF9kbFQ5OEZrd3dFUzF2YWp5Y1FpMlVLMWxFd18zZ21OZlNEVGpIQUtFTTZBRWI4eGZ5Wjd1VDRHa1NiVzhmNGNBZUUtOTdvemdFOENENHY3ZjNJUXltVmtCcVNmWkdJQmlmSWo?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "indie-income-7970b63e8f03",
+          "title": "How Supabase Became One Of The Fastest Growing DevTool Companies In The World",
+          "excerpt": "In this conversation from Startup School Paris, Supabase CEO Paul Copplestone explains how a frustrating firebase migration led to an open-source side project that became one of the fastest-growing dev tool companies in the world.",
+          "url": "https://www.youtube.com/watch?v=sG5aB79TE44",
+          "kind": "video",
+          "source": "Y Combinator"
+        },
+        {
+          "id": "indie-income-ff75aa71f075",
+          "title": "The Practical AI Tool Stack for a Solo Founder in 2026 - quasa.io",
+          "excerpt": "The Practical AI Tool Stack for a Solo Founder in 2026 &nbsp;&nbsp; quasa.io",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPSmN3VVBVZWNaNDU2dTJvRGpsWXdiWG1pSExNZ1d3ekR2TWM1YXFhMndqdzlTaWFFeDNNSElnYWRjYllSWTRyU0hzT2dwX3ZhU2NpX2dId0pFS2JsdmY2VWhkcUJTc2JSSkdPX21sSTEyUk5JQVg2cFZydk5fTGNrYy02Zw?oc=5",
+          "kind": "article"
         },
         {
           "id": "indie-income-a9624da1d0dc",
@@ -147,28 +170,6 @@
           "url": "https://www.youtube.com/watch?v=t0GiTyz4syY",
           "kind": "video",
           "source": "Lenny's Podcast"
-        },
-        {
-          "id": "indie-income-13542c1a1c17",
-          "title": "What Barry Patel and Wade Smith Actually Built When They Bootstrapped Galt Without Institutional Capital - Markets Herald",
-          "excerpt": "What Barry Patel and Wade Smith Actually Built When They Bootstrapped Galt Without Institutional Capital &nbsp;&nbsp; Markets Herald",
-          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNcnBzV1pWNm9IdGhMNnRwMjU0NklobDZvcDdHeUN2QTVKNWFjaVFlS3BiVHFsSlBjZWtlRUgtVE54d3IxWmhoem5LSkQ2QzJnX0FCZ0NzVjNqQ05XdGJiQy1Gd0o4WFFaekFveVN4T3pKS2RZSkxwdGNac284QzVJeXpzOTNzaUJpYVpzYjdLX0xFdV9BN2NkNE9IR2xPcVVsYXlzRFRGRXV1MUZRMzdlMzlpUmM4M1lZYnVkUmJwal9PZ0JQczd5c0RUUQ?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "indie-income-a0c90dfae68a",
-          "title": "Bootstrapped Multimodal LLM Learns Medical Knowledge for Automatic EGD Diagnosis and Reporting - Bioengineer.org",
-          "excerpt": "Bootstrapped Multimodal LLM Learns Medical Knowledge for Automatic EGD Diagnosis and Reporting &nbsp;&nbsp; Bioengineer.org",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQM2hOYmJ5ZHZGRWtvZ3VXWFo4TFJZRXF5eEFmR2RfdlQ0UzRDRlZzZjJWallWZ1pFSE13eVBmbHg1MlJBZ3NmMUtacHRRQ3JQVHQ0eER6QnJiWDduZWdlLXNwcDBDZDFyTXNWX1RELTljOE16R3c3NWl4RzFzaGVFdnJzZ1BHV1Z1YTBLZkk0REF4R0d5MWd1RDhDbUlWdEdsVHN0SktMSEg4SXA4LXNuZzhQTUJObVRvMkNj?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "indie-income-530b21aeda48",
-          "title": "The Key Thing Human Brains Have That AI Is Trying To Learn",
-          "excerpt": "One of the biggest open problems in AI right now is how to solve sample efficiency. That is, how do you get models to quickly learn new tasks or skills from relatively small amounts of training data? Humans do this incredibly well. We can learn new games, concepts, and skills, often after just a…",
-          "url": "https://www.youtube.com/watch?v=qz4GQ0zUFRw",
-          "kind": "video",
-          "source": "Y Combinator"
         },
         {
           "id": "indie-income-b74415ce67cd",
@@ -194,48 +195,48 @@
       ]
     },
     "mortgage-broking": {
-      "days_since_last_article": 2,
+      "days_since_last_article": 3,
       "items": [
         {
-          "id": "mortgage-broking-82495dc8edf4",
-          "title": "News | Keller Investment taps CMBS market for $719 million apartment refinancing - CoStar",
-          "excerpt": "News | Keller Investment taps CMBS market for $719 million apartment refinancing &nbsp;&nbsp; CoStar",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOWl9fYmdfMzczNGprSGVTeUU4MFU3U0JxdXNjcU1fcVJ6eHFXc0JWb1BWZXhTMG1yRXl0NkQ2ZXYwV19jNm9KeVF3TGNYNXRJdlZBcjNxLTJpelg1bEk3NlFtWlhsVl9SamlZVFNfS2dOOERzbnp0Z05UREZHNnlDZ1BSUnA4RnR6ZjI3T01TYWlVLXRUdk9OT3lXbDF2ODh5OUVYOXFUM2tkdGdHNzRxNVl2cw?oc=5",
+          "id": "mortgage-broking-7d3ad07428bd",
+          "title": "Wulf Discusses Farm Refinancing Following Sioux County Court Case - Sioux County Radio",
+          "excerpt": "Wulf Discusses Farm Refinancing Following Sioux County Court Case &nbsp;&nbsp; Sioux County Radio",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPM1FCNmZZUmVWTkZZNjA3S0Q5VkQ2MDhKN0lhOTR5VWRvbXVSTHg2cFA3eGhrVVpLbXRrN3YydHpmdlk5SVVjSzlVWWRuNEJWNHNtVEgyajNNWjFYRldjTGVoSHJQb1FjRUgyaUVkZjdfODRmRGM3bzhrMTRWQVBCbTI2NXBrcmx3N0I0V3ozX3BFRU5CUk40a3ZmbGpwd29uZVZjWW1pc1F6UQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-075f2da87a2c",
-          "title": "Hillman Extends Debt Maturities to 2033 and 2031 - Stock Titan",
-          "excerpt": "Hillman Extends Debt Maturities to 2033 and 2031 &nbsp;&nbsp; Stock Titan",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVm5fUzBValYwT0x0U2JmVDBuV3NwMUZhR1VGWmpySHRhem1GT1JBMDRBbHRMYkJUTkhoRkc4V3hmbUtESWx6VG1JMUFIZ3F4a1hUbVZ2dUxlbXJfNC1ScjZzZHI5dTVteXE1Tm1vTjZFVElTTHVnTEFZSjdkalJGbE9xV0UtejJJYlFZMHlXQjVoeVJmRFFySXoxNUFYOTFkemxOc3BWVE5hMFJzZGwyRExlSWFnN2g5SGVpaURTal8?oc=5",
+          "id": "mortgage-broking-d24474104c8f",
+          "title": "Textile mills want refinancing scheme, RMG uninterrupted gas - The Daily Star",
+          "excerpt": "Textile mills want refinancing scheme, RMG uninterrupted gas &nbsp;&nbsp; The Daily Star",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQWVh1dFd4YjBWdUZ5b0lFcm9VaVlVOUtuRWZsTXloY2VvQ3lXMTJLRjRsZFo1WDN5d3BLZE1UZEt2R3RPQm5ncXYtdmdqS1d5am1xQXhHLWtSX05yNnE1S2hyNkdyQTkwOFVVRmJDdTZMZ08tQjhZT0pEZ3VzNi0zNWhFQ3FSWV9uRG5xdFFmVk1ZdjVfTnV6cXFWam43NjJLbnVVcEtiWUVuWlp3Nk4ycnYyR1VhNG1qY0E?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-4a356e63091a",
-          "title": "FHLBank San Francisco Applauds Enactment of AB 1781 - markets.businessinsider.com",
-          "excerpt": "FHLBank San Francisco Applauds Enactment of AB 1781 &nbsp;&nbsp; markets.businessinsider.com",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNkpvMzUyMTFHVXA1QzhiOXROelEycTEzaVhtYUpTRER1Sld6U0R5aXNvMF9CUzFEbHQ5NkN5Q2taYW9hdHJvWmt3bFhrVnYxVGp1RFhCcmxNcVhGcUVoTFpIN2RScUV2MFlVMHU5RXEtcy1HbGJHUzVrWUJkZFk1VWdoUjhQU19tUHpPT1BKckFQdldsd3Jla2o2a0N4U1JUTFZwamxFdWlPZkd2UUhv?oc=5",
+          "id": "mortgage-broking-05ac741e5b68",
+          "title": "Federal Home Loan Bank Reform Pushed by House Panel - Legis1",
+          "excerpt": "Federal Home Loan Bank Reform Pushed by House Panel &nbsp;&nbsp; Legis1",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1Ncm9hdVpvWG1DbDVTUEtaY25lc3pYTGNHaVFDa3FYRWozakFpdEVYMUE1TlpPTzctdDVzLWw1am9LYjVHaW9LeGJoY1Zldk5lUndyODBRVm82MHN0SzFtbFBjUW5GR1RsTmFlazFjMzdnVGloTGxDd0JjUGs?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-72d73462861e",
-          "title": "Spotlight: Where lending is heading next - Broker Daily",
-          "excerpt": "Spotlight: Where lending is heading next &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQcTNlN1J0clpOMkFHSzdfd0pwdV9RSUo4aDh1dUV0T0ctY3BJaXlseDZxRnJfLXhMeW9yN1NzcDA4VGtwdEJLbzdmeFJIRlhDSndreXdBWmpad1hwN29VcWNsenAwdTNTb0hOZ1F3b0YxbG1rMDNxTXVMTUF4ZWwzZkNlR3VSUQ?oc=5",
+          "id": "mortgage-broking-ec4ebf99a91a",
+          "title": "Business Accelerator: Are brokers missing the point of open banking? - Broker Daily",
+          "excerpt": "Business Accelerator: Are brokers missing the point of open banking? &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWFpCSklPVDc1Z29fUzk5YUltQ1pZbmN6R2VMQ1pGWFFjU1RRYVN3UlNPYTNjV1J1ZExRR3daMW1xZURvZVdub1M4c2k4NDZxUHl5OXFlRHVya3FFQ3djX0JrR3dwdDd5dTdRdHZqMm5OczVzNHpEaFVicEdvMEJpc3Rkbld0YTlac0VXMmV4eVJxX3dydHIybUp1RHBMcXlZbmtuclBKMlR2QQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-c84f5374c94f",
-          "title": "ATO data sharing in CDR is key to fighting fraud, majors say - Broker Daily",
-          "excerpt": "ATO data sharing in CDR is key to fighting fraud, majors say &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSzZwb1RRdDd1ZDlMNWNJWUU1S01WM3U0UTdXTTNEVk5RX3FqYndPTWQ1cnNhZ0ppNU9iTTRhUHBoYk1mLVh3dWI2Y3NRQVVrZGRQTjIzbzVDazE2bkV0Q25yQXliTEVEaUNhRUd6WkpCSWF4eEUwMGZ4X25ENWwxaFgwSHZRMkk1bEJCbVhfS1Brc1J6d1BFZzJhcmlCRzVvYU5Sd0d3LXk?oc=5",
+          "id": "mortgage-broking-22ef2d893597",
+          "title": "Macquarie CEO to retire after eight years - Broker Daily",
+          "excerpt": "Macquarie CEO to retire after eight years &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUWgxeGYzTHJZb3RVZmlWVDg2YkxKdDE3M1JUcVVUZUU5REVLSVZhMkRwZ3JSOEpkMHhqbkV4YTZkM3NpRGhSMUpNT0ZTVFp5N2Q1RGlTQmhULTd1VThBYmktZnRMdHItUWVOYVhuXzM0dTYtWlFxamxaZmlQSDQ3MTE0d3ZReVFX?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-1ba3251b65fc",
-          "title": "ING clawback reforms welcome, but ‘model is broken’, say brokers - Broker Daily",
-          "excerpt": "ING clawback reforms welcome, but ‘model is broken’, say brokers &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZjhxcHB4VEVRRzZOVEZaUUNaQUFhWjZwaEhNc0dmMHl3MzJhM3dzR3RoUjVfNS1sa28wbFZRY0IwaEF0UjhhS2ozcXRJcXNyR0pKUDlQRjNlbTZHejljYW1tRnJPb203RDkwMlUzbmd4V2xsb1ZfakxuVzlKZ2hLMTR0REFCamNCM3JPNlJ4R2pxemFpVUFlVXdBTQ?oc=5",
+          "id": "mortgage-broking-3707c7b3c692",
+          "title": "Metro Finance loan book hits $6bn - Broker Daily",
+          "excerpt": "Metro Finance loan book hits $6bn &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQYkdzcXBkMFZYbUVGYlUteTV0M2Q2RUdRZU83RlVzSzFCYjNPVml3UUJYUW1hOTRhYUYyMVZzYk5jN1d3SFFRVGtUZWJwWWNHNnNEVkMxM2ZaaHJfNktjeFg5eGM2Qmh6dEVqTFg3WjBkZUZnUmdVY2dBTU9iRmxUVUdQTzg?oc=5",
           "kind": "article"
         },
         {
@@ -255,8 +256,16 @@
       ]
     },
     "property": {
-      "days_since_last_article": 6,
+      "days_since_last_article": 7,
       "items": [
+        {
+          "id": "property-988a3e74c6bb",
+          "title": "Why Rich People NEVER Pay Off Debt!",
+          "excerpt": "AFR, Sunrise Show - Channel 7, Channel 7 News, Business News Australia AFR Best Place to Work - 2026 Finalist Financial Times High-Growth Companies Asia-Pacific 2026 - #43 REB's Buyers Agent of The Year 2025 - Finalist \"FAST 100 AFR 2025 | #15 Fasting Growing Company\" “REB’s Best Buyer’s Agency…",
+          "url": "https://www.youtube.com/watch?v=NY3tpCcRWLY",
+          "kind": "video",
+          "source": "Personal Finance with Ravi Sharma"
+        },
         {
           "id": "property-fef4709138c3",
           "title": "Five investment questions every Australian should be asking in a shifting market - Australian Property Investor Magazine",
@@ -276,14 +285,6 @@
           "title": "BREAKING: Government To Roll Back Budget Changes Like 1987!",
           "excerpt": "Lots. Straight ahead, the housing pain is real. A real estate power [music] player is helping us break down the latest numbers as rents continue to [music] rise. So, are the budget changes really to blame or are there other factors at play? >> [music] >> Well, in May's federal budget, the…",
           "url": "https://www.youtube.com/watch?v=Ph7kHqSUCnU",
-          "kind": "video",
-          "source": "Personal Finance with Ravi Sharma"
-        },
-        {
-          "id": "property-ae79d5e4d1da",
-          "title": "Australia's Death Of The Middle Class",
-          "excerpt": "Here's exactly why you make more money than ever before, but you still feel really poor in 2026. I'm also going to share with you exactly how people are managing their money when it comes to going and building their wealth. You might have maximum effort and the right work ethic, but you're not…",
-          "url": "https://www.youtube.com/watch?v=CRWjRET04pA",
           "kind": "video",
           "source": "Personal Finance with Ravi Sharma"
         },
@@ -321,38 +322,38 @@
       ]
     },
     "actuarial": {
-      "days_since_last_article": 0,
+      "days_since_last_article": 1,
       "items": [
         {
-          "id": "actuarial-02187fcbdd54",
-          "title": "Sterling names leader for ‘new chapter’ as veteran MD signs off",
-          "excerpt": "Sterling Insurance MD and chair Tony Parington will leave at the end of this month after 23 years with the specialist underwriting agency...",
-          "url": "https://www.insurancenews.com.au/daily/sterling-names-leader-for-new-chapter-as-veteran-md-signs-off",
+          "id": "actuarial-f07d921f4acf",
+          "title": "CDC through the eyes of a former with-profits actuary - Professional Pensions",
+          "excerpt": "CDC through the eyes of a former with-profits actuary &nbsp;&nbsp; Professional Pensions",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPbk5wcWpfaGxiUHppOWJlTmd6M19LRUZQVE0zSjZtUVFtcVFuYVZCMU9ZR29kSzdCLThFQmx0dEREckZQRFA2YnBZY3dUU1hBb2dmaEhBSWZ4NkdVR08xTHIxSXJDZ2RlcHNTMTZZeWN4NWs0OXhvNi1IMkhNMlVwenUxbmtNQ2oxUXg4Qg?oc=5",
           "kind": "article"
         },
         {
-          "id": "actuarial-27ae22c4c0ec",
-          "title": "Tower hires finance chief",
-          "excerpt": "New Zealand insurer Tower has appointed Len Elikhis as CFO, subject to regulatory approvals...",
-          "url": "https://www.insurancenews.com.au/daily/tower-hires-finance-chief",
+          "id": "actuarial-324d712d8fed",
+          "title": "Mounting risks and falling confidence beset global food industry - The Actuary",
+          "excerpt": "Mounting risks and falling confidence beset global food industry &nbsp;&nbsp; The Actuary",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVlBZOTBDMklFSXd0WmtJVTVoNlpTbzNGTnlBM3hTeWpNNTJnd1FpVFBTQ2ZOMFIyS2h0QlBXaFpPVmVYbUxhY2xnalB6Sm52d3dTVnNVeVpIV3hualRhOF94Wk9BLXp5NWJDdldMaG5RSnd1TmJabVFNT0FRc3lqV292ZjhUYTU3NFVuUnE4c2JfcWJhSUNSM0t5R0VBdnZKeFotYw?oc=5",
           "kind": "article"
         },
         {
-          "id": "actuarial-a761dcd0196e",
-          "title": "The Standard Promotes Taylor Shaw To Assistant Vice President And Actuary - lifehealth.com",
-          "excerpt": "The Standard Promotes Taylor Shaw To Assistant Vice President And Actuary &nbsp;&nbsp; lifehealth.com",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNd2hKdVdISmVuS1FJM0kzUHpiR3JOQnJBRjJnQmtSaGIza09UUU9icmszeXRPX0NQQXZ3UE82ZWFHdmxtQVVRN1ZIVXlmeHloVTgzQzlha0FqdGFPY3NfWXZOS29NUlZ2eVV2SmlWSFlzVjFELXdZTVZiWGYyYk8yUXpSblAtdkhtc2pucEtnaWtrUXVvZVdibnRyNGFURWktYmpsMzNCWTY3N2M0?oc=5",
+          "id": "actuarial-9a5c84ff6651",
+          "title": "Neal’s relationship with staffer broke compliance rules, Lloyd’s says",
+          "excerpt": "Lloyd&rsquo;s says a relationship between former CEO John Neal and a female employee breached compliance policies and employment terms, and his behaviour fell &ldquo;significantly below&rdquo; standards expected of senior leaders...",
+          "url": "https://www.insurancenews.com.au/daily/neal-s-relationship-with-staffer-broke-compliance-rules-lloyd-s-says",
           "kind": "article"
         },
         {
-          "id": "actuarial-35f064008523",
-          "title": "The Associate Edition: Crochet and curiosity",
-          "excerpt": "Simran Chaturvedi shares her actuarial career across two countries, crochet handbags and why curiosity matters most on the path to becoming an Associate.",
-          "url": "https://www.actuaries.asn.au/research-analysis/the-associate-edition-crochet-and-curiosity",
+          "id": "actuarial-872c0b53478d",
+          "title": "From 2009 to 2°C: Climate change, mortality and morbidity in Australia",
+          "excerpt": "The 2009 Victorian heatwave was a health system stress test. This article looks at what 2 degrees of warming means for mortality and morbidity risk.",
+          "url": "https://www.actuaries.asn.au/research-analysis/from-2009-to-2-c-climate-change-mortality-and-morbidity-in-australia",
           "kind": "article",
           "source": "Actuaries Digital (Actuaries Institute)",
           "topics": [
-            "Career and Leadership"
+            "Climate and Sustainability"
           ]
         },
         {
@@ -391,41 +392,41 @@
       ]
     },
     "finance": {
-      "days_since_last_article": 5,
+      "days_since_last_article": 6,
       "items": [
         {
-          "id": "finance-3cca7df4eeef",
-          "title": "Tesla misses on earnings, as free cash flow turns negative and margins slide",
-          "excerpt": "Tesla's earnings report lands in the midst of a slide in the company's stock price even as its core auto business is rebounding.",
-          "url": "https://www.cnbc.com/2026/07/22/tesla-tsla-q2-2026-earnings-report.html",
+          "id": "finance-6b183031c007",
+          "title": "DOJ withdraws subpoenas to NY Times reporters in Trump plane probe",
+          "excerpt": "The subpoenas to New York Times reporters were issued by Manhattan U.S. Attorney Jay Clayton, whom Trump has nominated as director of national intelligence.",
+          "url": "https://www.cnbc.com/2026/07/23/doj-subpoenas-new-york-times-trump-plane.html",
           "kind": "article"
         },
         {
-          "id": "finance-56de19c44a5f",
-          "title": "Reddit stock sinks on report it may not renew Google AI content deal",
-          "excerpt": "Google's AI summaries have reduced traffic to websites from the search results page and Reddit is reconsidering the benefits of the deal, the Journal said.",
-          "url": "https://www.cnbc.com/2026/07/22/reddit-stock-google-ai-content-deal.html",
+          "id": "finance-428a01f54e4b",
+          "title": "Southwest Airlines put Texas jet fuel on a boat to LA for the first time amid supply worries",
+          "excerpt": "Southwest hired a ship this spring to send fuel from Houston to Los Angeles in case of supply shortages.",
+          "url": "https://www.cnbc.com/2026/07/23/southwest-shipped-jet-fuel-from-texas-to-california-amid-supply-crunch.html",
           "kind": "article"
         },
         {
-          "id": "finance-425c185eca17",
-          "title": "Tieto Q2 2026 slides: margins surge amid weak consulting demand By Investing.com - Investing.com Australia",
-          "excerpt": "Tieto Q2 2026 slides: margins surge amid weak consulting demand By Investing.com &nbsp;&nbsp; Investing.com Australia",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOd3NTNUtIdzJJbDRDN0dkeXZoUFA1ZzExMFkzOGVyQ3RQeWR5MFNYa1NCQXBWSU5Zc0xTeHhkdHliOHdsdlN6QmNQSFY3M3pHRGpmZEFhOE5OTVJ3ejBVbjRaYmNRWlhLTVo1dEhOSkRUQUN6MkxqamFRQko1UDNZaHRsOUJuWUdMc1BSWXJVMlRZX3JxWkFERUIzZGlVcFI3R181azFFRUNTd3EtTjN3MUJkVGRfRUljZ1E?oc=5",
+          "id": "finance-56c4f2894884",
+          "title": "The bring-forward rule just got bigger. Here’s what that means for your superannuation - The Motley Fool Australia",
+          "excerpt": "The bring-forward rule just got bigger. Here’s what that means for your superannuation &nbsp;&nbsp; The Motley Fool Australia",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVFZkOU1ObFdYWUEtUFp4clU5RjBYSzZCN09lcFZmZ2czdjhyOVFPLWJyMmtlZ01JYVBrSFotZk11NnBPMVpBTy10WENEU19LVU91SFVFU0R0Y1cxS2d2LWp5ZXUwaEdod3pYd2dVMmdVSmk5bWZtYkhaYlNDQ0VqV2RIQzZIZmxjb2pEa0wwVE4tdlVZaUk0ZnN1U2tveUlmdzRhYzdhZ21rYnFiRFVRNFdYTkdPXzFzQ2xmSQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-f18beb6fc933",
-          "title": "Neptune Q2 2026 slides: record revenue, 61.7% EBITDA margin By Investing.com - Investing.com Australia",
-          "excerpt": "Neptune Q2 2026 slides: record revenue, 61.7% EBITDA margin By Investing.com &nbsp;&nbsp; Investing.com Australia",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMVVFS0xiclotUTllcVBpQjZZQkFEbG1RMlctdTBWbE1kb25OcTVtak5qeHhjTUtGSHlHVGVpY0RHTUt3ZWlxamZmRmhSaGNVSzIteFhKOTFydkFWdmdab1MxOU1XajN5NkotYUw1ZEl4d0VsZXRQSDVhUEFkeExGSzBDN3lEbTltYkpFUzhJa2s0SkQxaklRZHdrQS1aVGQ1TThCSzZXUUZBN285M3NQRw?oc=5",
+          "id": "finance-afbbe6e1ed09",
+          "title": "Josh Brown says the stock market is ‘broadening out.' Here’s how to play it - CNBC",
+          "excerpt": "Josh Brown says the stock market is ‘broadening out.' Here’s how to play it &nbsp;&nbsp; CNBC",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPcS16dl9YTFY1Z1hyY0NlUzUtZlBJOGVnMTI4dTZ5cVlZaTd2elVHZW5ld1dGXzhjTGVONkpfVDlJTU1HOWMyZldJRVZ3THZLd2J6N19hUUFQQmF0Q21wdWJ5MTZFeXNKVkZXSEY4N3lpV2tZM2hjUHpiSnUzZXczQ2EyR1NpVGNNdW5LVmpidGFGZXM0ZlZxUUNEOGdzbUM2ZWZNRFVSWlFjMTlG?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-c01767c3ef13",
-          "title": "Ashurst warned KPMG of Lendlease breach ‘risk’ last August - AFR",
-          "excerpt": "Ashurst warned KPMG of Lendlease breach ‘risk’ last August &nbsp;&nbsp; AFR",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNc3I0Y2xwSWhLQl9OT0picTlER19JV2VKU3hVMV9fTjBGdGNiclVEeHpjcEpPbjlnXzVIdjNuWDNaNHhlTHhPbUI1Ty1TYUxMYzBVMWZ6TlFHYnFZRXRUQjhCeWJNTzVPYkJZMXQ4WGlHZUhHakxhNEJQOVFNcXEtR2Q3cXZZTjdWOVZKZlhoZmg5dUg3aVpyUEUwUUtDc2xhcTZlbFdOYWZPczl3X3hfT3BYTkNlNVRTUGNncTBVN2ZGUzQ?oc=5",
+          "id": "finance-2e94b3cd0e6d",
+          "title": "Macquarie promotes Greg Ward to CEO after Wikramanayake retires - AFR",
+          "excerpt": "Macquarie promotes Greg Ward to CEO after Wikramanayake retires &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNUHAzUllNdVU3aXBuSTdfV0dIbkJ6eTh5Q2hhWEtRNDNETFR3YjVzN19CNGhILVhNQ3JiOVJqWGFhenJuR25CV3FpdkdienZ0c1QyaE5wbnJGUm9vWDJjbzhYZWItRWJLLTlVQ0dqYU1IQ19LZ0xtTThVMGV2dmx4bWFhNmo1LU9RU2VBc1lLY1pBZlNRSEVRcEhmRHJRQ1RSb3pWYXhFVjNLa01IeE5zUFBSXzUteHpwcXNXRm0tcll4TmRGZjlr?oc=5",
           "kind": "article"
         },
         {
@@ -453,42 +454,43 @@
       ]
     },
     "health": {
-      "days_since_last_article": 1,
+      "days_since_last_article": 2,
       "items": [
         {
-          "id": "health-edfc6eca64a7",
-          "title": "The Best Fitness and Wellness Gifts: Expert Curated - Fortune",
-          "excerpt": "The Best Fitness and Wellness Gifts: Expert Curated &nbsp;&nbsp; Fortune",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1iV3NScTRuU0ZaejFHampqa0xmWWE1TWp5QW1wUm5SUEtyRV9pWUhJX3dzMlN1aWpyTTk3Ykc3THVIemlIakI0Z0pmLW9DLWllRXlfVnFIY0QwelE?oc=5",
+          "id": "health-9be791cc1eea",
+          "title": "What you eat is potentially ruining your sleep - here's how to fix it - The Canberra Times",
+          "excerpt": "What you eat is potentially ruining your sleep - here's how to fix it &nbsp;&nbsp; The Canberra Times",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQcFQ5Rm5iQnBUOVQ3UXhYTmw1Z0JkMlhmOHJtU0JOaDQ1YVFxbGxkd0NuY29lSzVNQXNxYVNDLWtZUU5DQkxfcU9SUXB5TjllMEgyc1NuMGkxeUw4WlFqYkM5YXpjcG5rWnNTT0QxbWFUc2xGQjFHbnpucXdrRjRhWi1hbTRFbVQzb05IS0xUX0NTYVNVQ0ljZEFUdmNVSFVMTnpXV0Jaa1M5c29ZZmIxYw?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-dcea39f4dad8",
-          "title": "How Sleep Deprivation Undermines The Human Side Of Leadership - Forbes",
-          "excerpt": "How Sleep Deprivation Undermines The Human Side Of Leadership &nbsp;&nbsp; Forbes",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWGlIWDJ2eGJreEk1ZU4yVnFFSzZwVkZJd0JLS1lqSFNaWjNBQWRpY1ZmNUc0RTRDaFJiblhST0YwS2VkLWlqd3FkOWh1dEtmTWpqRFo3cU1iVkp2eHBTaXNFVklmMkpYS1hnaTZxb2JxLVpvaTNCWEM3RGpGZE1rUGNKdmRlUDBTdnV6TU1tMTRsV0dpVW9IVHFnSXBfTjF2MFc2eGJRQUtpR2Q5THBYR3ZFekVKRVU?oc=5",
+          "id": "health-40d288daff78",
+          "title": "Text-message video intervention does not improve infant safe sleep practices in low-income families - Contemporary Pediatrics",
+          "excerpt": "Text-message video intervention does not improve infant safe sleep practices in low-income families &nbsp;&nbsp; Contemporary Pediatrics",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNnJwRzZaeEg2RGxpN3ExcEYySWZ4LU8wOTdMQkh4UGhpTjJsVktYVEJVV0NqNzNIdklpYjMzTDNudUpOODJsQ0ZyY3ZDTHBiQ19WVGVEU3JnbkplUjB6aXV1ZEcwcnh3ckU1Y1BUTmg1SVJHRUJ6VjdRMkJ6WnNPazMwT1ZTRGNQcEo0amROWUdQZkp1dXlmZkNVZEsxcHdWYUE?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-ef8bdece0116",
-          "title": "How Sleep Deprivation Undermines The Human Side Of Leadership - Yahoo Lifestyle Canada",
-          "excerpt": "How Sleep Deprivation Undermines The Human Side Of Leadership &nbsp;&nbsp; Yahoo Lifestyle Canada",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZDI3TmxvNFExRjBOSWZSa1ZjYUJvLVVfYkNTTUE2a2dNSUFHWWs2ejJCVXNGNE10UzdFZHBQVXhXcVFlQjZGRC1BWEJGb0p4ZS1jLUFUdlZ6cUo3QXFPVkNuSF9NZGZvZmZiVmROeUhJUmxaUUxTR0VOWGhyZVg2TWw5bFJzdGtT?oc=5",
+          "id": "health-94ea27c74b90",
+          "title": "A healthier global diet could cut farm emissions by 85%",
+          "excerpt": "A global shift toward healthier diets could sharply reduce livestock farming, free up agricultural land, and cut emissions from land-use change by 85% by 2050. At the same time, fruit, vegetable, nut, and legume production could soar, creating a sweeping transformation of what the world grows and…",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260716023557.htm",
           "kind": "article"
         },
         {
-          "id": "health-3ad2ff2f0413",
-          "title": "Colorectal cancer warning signs younger adults should never ignore",
-          "excerpt": "Colorectal cancer is now the leading cause of cancer death among people under 50, and cases in younger adults continue to rise. Warning signs can include persistent bowel changes, recurring rectal bleeding, dark or narrow stools, unexplained weight loss, and fatigue. These symptoms often have…",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260721000839.htm",
+          "id": "health-6eeccd7173f7",
+          "title": "Popular childhood drinks may raise blood pressure decades later",
+          "excerpt": "A 25-year study found that frequent consumption of soda, sports drinks, and fruit juice beginning in childhood was linked to a higher risk of high blood pressure in adulthood. Swapping one daily drink for whole fruit, milk, or water could significantly reduce that risk.",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260722032121.htm",
           "kind": "article"
         },
         {
-          "id": "health-132857b4f7a2",
-          "title": "Lab-grown mini brains may predict which Alzheimer’s treatments will work",
-          "excerpt": "Miniature brain models grown from patients’ cells revealed striking differences in how Alzheimer’s-related tissue responds to an antidepressant. The organoids and the particles they release could eventually guide more personalized treatments and provide new clues for diagnosing the disease.",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260721000844.htm",
-          "kind": "article"
+          "id": "health-8bf87fdf9cad",
+          "title": "Essentials: Using Meditation to Focus, View Consciousness & Expand Your Mind | Dr. Sam Harris",
+          "excerpt": "In this Huberman Lab Essentials episode, my guest is Dr. Sam Harris, PhD, a neuroscientist, bestselling author, and world-renowned meditation teacher whose work focuses on consciousness, ethics, and religion. We discuss how meditation can help us better understand the nature of the self and…",
+          "url": "https://www.youtube.com/watch?v=LQI8tl8S2PE",
+          "kind": "video",
+          "source": "Andrew Huberman"
         },
         {
           "id": "health-7850ee5bf7bd",
@@ -516,41 +518,41 @@
       ]
     },
     "videography": {
-      "days_since_last_article": 7,
+      "days_since_last_article": 8,
       "items": [
         {
-          "id": "videography-401a3d59d632",
-          "title": "DaVinci Resolve Gets New Ease Modes for Retime Speed and Frame Curves Plus Other Updates",
-          "excerpt": "More updates here, both on the way and already here for DaVinci Resolve, as Blackmagic Design has kept its promise to consistently improve its popular NLE regularly throughout the year. This latest update, version 21.0.3, is set to be a pretty neat one as it adds new ease modes for retime speed and…",
-          "url": "https://nofilmschool.com/davinci-resolve-update-21-0-3",
+          "id": "videography-10913fa3f570",
+          "title": "Protect Your Investment in the New Sony FX5 With This Full Camera Cage from Tilta",
+          "excerpt": "It’s safe to say that, at launch at least, the Sony FX5 is one of the most exciting new cameras of the year. Packed with a ton of features that actual working videographers and indie filmmakers are clearly quite interested in, the Sony FX5 fits the bill for many thanks to its 16.6MP sensor…",
+          "url": "https://nofilmschool.com/tilta-camera-cage-for-sony-fx5",
           "kind": "article"
         },
         {
-          "id": "videography-335a83a6edf5",
-          "title": "Upgrade the New Sony FX5 For Better Audio Recording With This Helpful Handle Unit Add-On",
-          "excerpt": "Well, that was fast; as soon as the Sony FX5 was announced , we already have ancillary add-ons available to kick things up a notch. To be honest, this is nothing new, as this is an official add-on from Sony and available in some kits and packages, but if for whatever reason you were looking to get…",
-          "url": "https://nofilmschool.com/sony-fx5-handle-unit",
+          "id": "videography-183220205410",
+          "title": "How ‘Ong-Bak: The Thai Warrior’ Turned Martial Arts Action Movies into a Global Uniter",
+          "excerpt": "Okay, I’ll admit that title might be a bit overstated and overdramatic; you could argue that many different genres, or film itself, or internet culture are the great uniting forces of our time. And you could argue that other films, projects, or influencers are the single greatest players in this…",
+          "url": "https://nofilmschool.com/ong-bak-the-muay-thai-warrior",
           "kind": "article"
         },
         {
-          "id": "videography-906d6e0389cf",
-          "title": "52 Years Ago: One of the Greatest Crime Thrillers of the '70s Was Released",
-          "excerpt": "Have you seen this movie? Four men in matching disguises hijack a New York City subway car, hold the passengers for ransom, and dare the city to figure out how they'll possibly get away. The Taking of Pelham One Two Three hit theaters on October 2, 1974, and on paper it sounds tiny. There's just…",
-          "url": "https://nofilmschool.com/taking-of-pelham-123-anniversary",
+          "id": "videography-b68e7bac9986",
+          "title": "How To Combat Bitterness About Your Career in Hollywood",
+          "excerpt": "You've been there. I've been there. That project we chased, the one we did on spec, our passion assignment, falls apart. Or the pitch we prepared for goes south. The agent who wrote you the passionate letter about why they wanted to represent you stops calling. The latest draft of your screenplay…",
+          "url": "https://nofilmschool.com/How-to-deal-with-bitterness",
           "kind": "article"
         },
         {
-          "id": "videography-8fdab40f11b4",
-          "title": "“A Radical Democracy of Images”: Mike Mills on His Work Outside of Feature Filmmaking - The Criterion Collection",
-          "excerpt": "“A Radical Democracy of Images”: Mike Mills on His Work Outside of Feature Filmmaking &nbsp;&nbsp; The Criterion Collection",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRzcwQW41TnRhd1NKdUYzcGNCOEkwMkpyay1ldnJDUVkwRmlXMVd5RGRhQnZNZWphS3QzR3JhWU8zMThWYmdRV052Q3ljYUJNX3MteGd5U0c3Q2tZMl9vamthZHc2U2sxNV90ajVwWkJMdzVnVEpra0dBYXBmNzN5ME5GNTE5LTNGV3BCYXlVcXdCM2J0ZlNncGViVHdCZjNOOXJBLS1mNDVoNkVlM1AzbzQwbWZ6TlZ5c3lsN0VTMHhQVVBIaHRF?oc=5",
+          "id": "videography-2f979990028f",
+          "title": "Isabel Davis Appointed Director of the BFI Filmmaking Fund - IMDb",
+          "excerpt": "Isabel Davis Appointed Director of the BFI Filmmaking Fund &nbsp;&nbsp; IMDb",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1rMGlQNUxCb0hONnNCZzJqLWhQMTJsbE1GcGdhTGg3bzdhWndUWmlRNUVkSko5WWt0a1lJaUFHcnZYSHgzYXJUQUI4VXhfY0tDWW9HVGpRdnFQbmtkYUF5NlJldmRYTTQ0Y1E?oc=5",
           "kind": "article"
         },
         {
-          "id": "videography-32fe3d53a559",
-          "title": "2027 EE BAFTA Film Awards opens for entries - Cinematography World",
-          "excerpt": "2027 EE BAFTA Film Awards opens for entries &nbsp;&nbsp; Cinematography World",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQSkFjVmd5S1VOUHExbGpHdVBydDZFUU4yOTVsRTUzS2k2dU9rRkR1V00zVzBSYkdwVUNDcEdwSkNFZmNlaktub2NNb3JsZW81UXRNS2V2anBqWmlCQjdIbG9QblpDakVpdng0UXFmbUFIY2tXakY0WHV5MmhKbTF4TzQ1WQ?oc=5",
+          "id": "videography-da3916a7cd45",
+          "title": "Screen Scotland’s Davis to head BFI Filmmaking Funds - Arts Professional",
+          "excerpt": "Screen Scotland’s Davis to head BFI Filmmaking Funds &nbsp;&nbsp; Arts Professional",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOMGpLVElQQmVOMm5Md3RfZnZDclQtcnFGZ0JIQTJ4bnl5Tl9IN0M2YXlnRV9QWkNfZnJjSzVJeTRkdXJiWllUbVI4UWFvNTRYcGpFVHRkRTFKU0hDbVEyUEpvQUJKbXRnLTY1d3BCUGhld1VLM3RwejJmOHZuZ2RsVXY0U2JLUnBoYUNzejlJUW9KcUZrdm02RFJkLTVabDJQVmgw?oc=5",
           "kind": "article"
         },
         {
@@ -578,55 +580,55 @@
       ]
     },
     "science": {
-      "days_since_last_article": 8,
+      "days_since_last_article": 9,
       "items": [
         {
-          "id": "science-cfbae770227d",
-          "title": "Millions face growing food insecurity as climate change hits small island nations - Earth.com",
-          "excerpt": "Millions face growing food insecurity as climate change hits small island nations &nbsp;&nbsp; Earth.com",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPM2pLY1NQczhnN2doNG1oTFl0T0UyaGpSY2RoWVpqMEQ3UW9TQ292TlhJRVpNSWtVb3BHMWwzbmxjRFU4QWxWRXVES1JybkJEb2prNjh0RFlzM084U2lPdjdNLXhlcXptTGlVYkdFRTc4MzRJbFFFT19QY0JTd18yOERrdWxaQVB1QmdBNDZTaXhUUkZDWnEtT2lQWG5wcFVsOGtVaDBiVXI5NExNVGc?oc=5",
+          "id": "science-99e50bd66bd1",
+          "title": "Machine learning narrows search for additional particles in the Higgs boson family",
+          "excerpt": "What if the Higgs boson found in 2012 is not alone but is the only sibling we have encountered so far? Scientists at CERN discovered the particle that year, and it was a major discovery because it explained how other particles acquire mass. For a long time, scientists thought this was the final…",
+          "url": "https://phys.org/news/2026-07-machine-narrows-additional-particles-higgs.html",
           "kind": "article"
         },
         {
-          "id": "science-5c69b47e16ef",
-          "title": "Neural networks unlock larger quantum simulations with lower computational costs",
-          "excerpt": "In recent years, research using artificial intelligence to predict material properties has advanced rapidly. Neural network quantum Monte Carlo methods have attracted attention as highly accurate simulation techniques. However, their extremely high computational cost has limited their application…",
-          "url": "https://phys.org/news/2026-07-neural-networks-larger-quantum-simulations.html",
+          "id": "science-8d19fa6bfe50",
+          "title": "Universal structure of exceptional points revealed in nonlinear light‑based systems",
+          "excerpt": "Exceptional points, or EPs for short, are among the phenomena of modern physics. These are special points or locations at which the properties of matter, space or time change. In a new theoretical study, researchers from the Institute for Photonic Quantum Systems (PhoQS) at Paderborn University, in…",
+          "url": "https://phys.org/news/2026-07-universal-exceptional-revealed-nonlinear-lightbased.html",
           "kind": "article"
         },
         {
-          "id": "science-af28f6653d93",
-          "title": "Detecting the body's magnetic fields with a low-power Ramsey-based magnetometer",
-          "excerpt": "Our bodies generate extremely weak magnetic fields as electric currents flow through the heart, brain and other tissues. These signals are used in magnetocardiography and magnetoencephalography to assess heart function and brain activity, respectively. These fields can be detected at room…",
-          "url": "https://phys.org/news/2026-07-body-magnetic-fields-power-ramsey.html",
+          "id": "science-886c56bd1db1",
+          "title": "U.N. to list more sites as 'in danger' from conflict or climate change - Japan Today",
+          "excerpt": "U.N. to list more sites as 'in danger' from conflict or climate change &nbsp;&nbsp; Japan Today",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQaG9JeFJqRFBGOHplVjRoZUpvbHo4OEdIc21FWkdWUHpRM3lxRXl3VVJGSWd4WWJQN0ptbVpsQnVHMHduV0VyZVZjWkRnSVY3cXdBVDdDVEQzUlRZX29yQTBYa1VjZUl6cW85anQ3bXIwaU5rZDJFWnM3eE9uUF80RVREeFBSMlFYeTd0LVExSDFGTndrbU1aTXdRRldBVWxHTGdiS25jYmdZY0xyWlg0VkJfVDNxYnpURkt6YkZn?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-9b0141b00631",
-          "title": "Aware Super’s property arm secures interest in Sydney office space - Financial Newswire",
-          "excerpt": "Aware Super’s property arm secures interest in Sydney office space &nbsp;&nbsp; Financial Newswire",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZHRGNVB0N3NxWlo4WG9XT1lGRnFLbktQMG1vSWdRQmJuVnQwSDJtb0stN3ZtUUgxZHRlX2dwcFdOOWJJMlFBRFdhdGdYMEhFMC1laVkxUmpHU1NCN09RbU8yLTBOYjQyQ2pLNFZEMFpHLVlMMmUwVWxiQzdqeXFES2xSaGNBbDhzN0kxeDFySUNVcXFkb1hPdjFWS0tVVkJIdXZEMnp1Y3E3eHFl?oc=5",
+          "id": "science-be701897ae10",
+          "title": "I've tested hundreds of headphones, and Soundcore's Space 2 have the best noise cancellation under $150 - Business Insider",
+          "excerpt": "I've tested hundreds of headphones, and Soundcore's Space 2 have the best noise cancellation under $150 &nbsp;&nbsp; Business Insider",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVl9nbW1aTThKRXBkcENKYlBZRG16azhqTkNDTmFrZFc4UmJmRUVjcDdXNndTN3YtWGlqZW1sVjZRS3ZLbXZoTmJPTHpxektUY2c2bHdLOVpKakNlSVVESWJ4S1Z2aFZJdUEzdWtwWWtuMWVkNzc5RnFZZUJFV1VOOVpaMVdJQQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-a4443ac56565",
-          "title": "Ancient ferns turned Triassic Europe into a wildfire inferno",
-          "excerpt": "Ancient fern savannahs may have transformed parts of Europe into a wildfire-prone inferno during the end-Triassic mass extinction. New fossil evidence suggests the ferns repeatedly regrew after fires, creating fresh fuel that helped prolong the devastation.",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260722032105.htm",
+          "id": "science-41eab9ac2c5a",
+          "title": "How Fast Is the Universe Really Expanding?",
+          "excerpt": "One of the most contested issues in astrophysics is our understanding of the Universe’s expansion. Adam Riess discusses why there is disagreement and what might resolve it. The post How Fast Is the Universe Really Expanding? first appeared on Quanta Magazine",
+          "url": "https://www.quantamagazine.org/how-fast-is-the-universe-really-expanding-20260723/",
           "kind": "article"
         },
         {
-          "id": "science-af57c7d8c8ef",
-          "title": "A strange quantum effect dramatically boosts energy transfer",
-          "excerpt": "Researchers discovered a proton-assisted mechanism that greatly improves how triplet energy moves between quantum dots and nearby molecules. The proton briefly shifts position, helps coordinate electron movement, and then returns to where it started. This quantum-driven shuttle could offer a…",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260722032130.htm",
+          "id": "science-0cc8a3ab3c3b",
+          "title": "Fields and Abacus Medals 2026",
+          "excerpt": "Every four years, the math world’s preeminent awards are given to the finest minds of a generation. The young winners — all under 40 on the first day of the year — have reshaped mathematics and theoretical computer science. Here are their stories. The post Fields and Abacus Medals 2026 first…",
+          "url": "https://www.quantamagazine.org/fields-and-abacus-medals-2026-20260723/",
           "kind": "article"
         },
         {
-          "id": "science-3a9d48a62061",
-          "title": "The Organisms That Make Earth’s Harshest Places Home",
-          "excerpt": "Extremophiles that thrive in the most unforgiving environments aren’t just biological curiosities. Understanding their resilience has many implications for us. The post The Organisms That Make Earth’s Harshest Places Home first appeared on Quanta Magazine",
-          "url": "https://www.quantamagazine.org/the-organisms-that-make-earths-harshest-places-home-20260720/",
+          "id": "science-810177f11c28",
+          "title": "Orcas filmed smashing giant sunfish into thousands of pieces",
+          "excerpt": "Researchers in the Gulf of California have documented a dramatic orca behavior never described before. In two separate encounters, one orca gripped a dead sunfish by the fin while another charged into it at high speed, blasting the carcass into thousands of pieces.",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260723084040.htm",
           "kind": "article"
         },
         {
