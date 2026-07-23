@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-23T20:52:07.311Z",
+  "generatedAt": "2026-07-23T22:39:53.432Z",
   "interests": {
     "software-ai": {
       "days_since_last_article": 5,
@@ -70,17 +70,17 @@
       "days_since_last_article": 0,
       "items": [
         {
-          "id": "design-0633af0329cc",
-          "title": "The screens are getting demoted",
-          "excerpt": "",
-          "url": "https://uxdesign.cc/the-screens-are-getting-demoted-6b40120fcf04?source=rss----138adf9c44c---4",
+          "id": "design-c185d4f47143",
+          "title": "Steal this UX framework from Dubai’s most over-the-top hotel",
+          "excerpt": "Stop studying apps. Study hotels. A Google UX researcher’s field notes on the hidden UX of hospitality. Continue reading on UX Collective »",
+          "url": "https://uxdesign.cc/steal-this-ux-framework-from-dubais-most-over-the-top-hotel-0b14f71e46e5?source=rss----138adf9c44c---4",
           "kind": "article"
         },
         {
-          "id": "design-31858e63e05c",
-          "title": "The digital wall we built ourselves",
-          "excerpt": "Why 95.9% of the world’s top million sites still fail the people who need them most. Continue reading on UX Collective »",
-          "url": "https://uxdesign.cc/the-digital-wall-we-built-ourselves-e9578f774374?source=rss----138adf9c44c---4",
+          "id": "design-ba39bc3fef9b",
+          "title": "Four questions every tool should answer (even Figma) about AI training model usage",
+          "excerpt": "",
+          "url": "https://uxdesign.cc/the-trust-test-four-questions-every-tool-should-answer-even-figma-about-ai-training-model-usage-4f1150f91a30?source=rss----138adf9c44c---4",
           "kind": "article"
         },
         {
@@ -198,6 +198,34 @@
       "days_since_last_article": 3,
       "items": [
         {
+          "id": "mortgage-broking-051ab4937096",
+          "title": "Charter Communications (CHTR) Launches $3.5B Debt Refinancing Ex - GuruFocus",
+          "excerpt": "Charter Communications (CHTR) Launches $3.5B Debt Refinancing Ex &nbsp;&nbsp; GuruFocus",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMXZlODJPMHZuN2RhbzEtZTVzaG5yQlBqLWpyTXNuaXhQZTBDN1dibUxJbkZHblczUmNjLTgwWDRvNjZlZ3dWQ0s1dFNHY29HeFpoeTVLWnZtT1FrNkQwSXhVdlJpRHhDTEpRa3UxY3pZSnVGZWc1Ykc3aFJyMzNWZWVpU2NzanpQSzVpSThPRG9NSlZhOHByLXZRUFFKVWFmZ0NjSGNwd2hRNEpNeVhKYU5B?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "mortgage-broking-fa2ccb6376ae",
+          "title": "AUSTRAC reviewing AML/CTF impact on brokers - Broker Daily",
+          "excerpt": "AUSTRAC reviewing AML/CTF impact on brokers &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaGdTazJCZWJXcnNQS3VibUE1d0JjalFaMUxVSTlqUGFNMDVRamYwZXlUMkZDUm5kX2J2dmpxZUVkMmc3dEJLTTRTbWExcmw1alJGV2RsWGNVWTN3OHY2Y3JlcWxCcW54YllqWGJTdGhzbFh5eWVEb191WWtBUUNBZmdYa3ZxaFpSTVVna3lfZng?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "mortgage-broking-fa0f8dc23cda",
+          "title": "Melbourne brokerage joins forces with wealth advisory firm - Broker Daily",
+          "excerpt": "Melbourne brokerage joins forces with wealth advisory firm &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZHIweEM4bG1hWHFiWWpvVFY3VFhKN0l5TzdXVm9ub1UwNnNXWExZdjlYOVJ1a00ya2pwZkRhNWlPNUp3LW16RlhGSTJsUzFFdG8yYnh6bW1hc0hjZVE1VHFaR2p2UXhpNnFoYVBoT05pR1U0ZjZnQkpzVVJDb3Z0SHFOUU9fMUFhRkg3ZU1ac2ZOdUMxVFFKYVo2ZmE3dEk?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "mortgage-broking-cd41170127ef",
+          "title": "The latest lender changes at a glance - Broker Daily",
+          "excerpt": "The latest lender changes at a glance &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQMG9pRTZ0ZGMyNmlSWGd5bUplRkdVVHo5N2ltMUNMWHZmNFFaVnpRb1hnZW95UDQ5NkpzWnVJMXVBSDZLZzZ4d3M1Q1p3Z1Z4RW9GOXdFdXFScFllaUFtUVlKR004TmxNb1dWQWhyVkFwenZ5a2NrTkRJSTBlX1drenc2cw?oc=5",
+          "kind": "article"
+        },
+        {
           "id": "mortgage-broking-7d3ad07428bd",
           "title": "Wulf Discusses Farm Refinancing Following Sioux County Court Case - Sioux County Radio",
           "excerpt": "Wulf Discusses Farm Refinancing Following Sioux County Court Case &nbsp;&nbsp; Sioux County Radio",
@@ -205,38 +233,10 @@
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-d24474104c8f",
-          "title": "Textile mills want refinancing scheme, RMG uninterrupted gas - The Daily Star",
-          "excerpt": "Textile mills want refinancing scheme, RMG uninterrupted gas &nbsp;&nbsp; The Daily Star",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQWVh1dFd4YjBWdUZ5b0lFcm9VaVlVOUtuRWZsTXloY2VvQ3lXMTJLRjRsZFo1WDN5d3BLZE1UZEt2R3RPQm5ncXYtdmdqS1d5am1xQXhHLWtSX05yNnE1S2hyNkdyQTkwOFVVRmJDdTZMZ08tQjhZT0pEZ3VzNi0zNWhFQ3FSWV9uRG5xdFFmVk1ZdjVfTnV6cXFWam43NjJLbnVVcEtiWUVuWlp3Nk4ycnYyR1VhNG1qY0E?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "mortgage-broking-05ac741e5b68",
-          "title": "Federal Home Loan Bank Reform Pushed by House Panel - Legis1",
-          "excerpt": "Federal Home Loan Bank Reform Pushed by House Panel &nbsp;&nbsp; Legis1",
-          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1Ncm9hdVpvWG1DbDVTUEtaY25lc3pYTGNHaVFDa3FYRWozakFpdEVYMUE1TlpPTzctdDVzLWw1am9LYjVHaW9LeGJoY1Zldk5lUndyODBRVm82MHN0SzFtbFBjUW5GR1RsTmFlazFjMzdnVGloTGxDd0JjUGs?oc=5",
-          "kind": "article"
-        },
-        {
           "id": "mortgage-broking-ec4ebf99a91a",
           "title": "Business Accelerator: Are brokers missing the point of open banking? - Broker Daily",
           "excerpt": "Business Accelerator: Are brokers missing the point of open banking? &nbsp;&nbsp; Broker Daily",
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWFpCSklPVDc1Z29fUzk5YUltQ1pZbmN6R2VMQ1pGWFFjU1RRYVN3UlNPYTNjV1J1ZExRR3daMW1xZURvZVdub1M4c2k4NDZxUHl5OXFlRHVya3FFQ3djX0JrR3dwdDd5dTdRdHZqMm5OczVzNHpEaFVicEdvMEJpc3Rkbld0YTlac0VXMmV4eVJxX3dydHIybUp1RHBMcXlZbmtuclBKMlR2QQ?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "mortgage-broking-22ef2d893597",
-          "title": "Macquarie CEO to retire after eight years - Broker Daily",
-          "excerpt": "Macquarie CEO to retire after eight years &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUWgxeGYzTHJZb3RVZmlWVDg2YkxKdDE3M1JUcVVUZUU5REVLSVZhMkRwZ3JSOEpkMHhqbkV4YTZkM3NpRGhSMUpNT0ZTVFp5N2Q1RGlTQmhULTd1VThBYmktZnRMdHItUWVOYVhuXzM0dTYtWlFxamxaZmlQSDQ3MTE0d3ZReVFX?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "mortgage-broking-3707c7b3c692",
-          "title": "Metro Finance loan book hits $6bn - Broker Daily",
-          "excerpt": "Metro Finance loan book hits $6bn &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQYkdzcXBkMFZYbUVGYlUteTV0M2Q2RUdRZU83RlVzSzFCYjNPVml3UUJYUW1hOTRhYUYyMVZzYk5jN1d3SFFRVGtUZWJwWWNHNnNEVkMxM2ZaaHJfNktjeFg5eGM2Qmh6dEVqTFg3WjBkZUZnUmdVY2dBTU9iRmxUVUdQTzg?oc=5",
           "kind": "article"
         },
         {
@@ -395,31 +395,31 @@
       "days_since_last_article": 6,
       "items": [
         {
-          "id": "finance-6b183031c007",
-          "title": "DOJ withdraws subpoenas to NY Times reporters in Trump plane probe",
-          "excerpt": "The subpoenas to New York Times reporters were issued by Manhattan U.S. Attorney Jay Clayton, whom Trump has nominated as director of national intelligence.",
-          "url": "https://www.cnbc.com/2026/07/23/doj-subpoenas-new-york-times-trump-plane.html",
+          "id": "finance-e7ef03960325",
+          "title": "Oracle signs 10-year software contract with Pentagon worth up to $7 billion",
+          "excerpt": "Oracle will supply on-premises software to the U.S. Department of Defense.",
+          "url": "https://www.cnbc.com/2026/07/23/oracle-wins-10-year-pentagon-software-contract-worth-up-to-7-billion.html",
           "kind": "article"
         },
         {
-          "id": "finance-428a01f54e4b",
-          "title": "Southwest Airlines put Texas jet fuel on a boat to LA for the first time amid supply worries",
-          "excerpt": "Southwest hired a ship this spring to send fuel from Houston to Los Angeles in case of supply shortages.",
-          "url": "https://www.cnbc.com/2026/07/23/southwest-shipped-jet-fuel-from-texas-to-california-amid-supply-crunch.html",
+          "id": "finance-f756b3b30652",
+          "title": "Trump to slap 'sweeping' new tariffs on 60 trade partners as global duties expire",
+          "excerpt": "The Trump administration has ramped its tariff actions back up since the president's trade agenda suffered major legal setbacks earlier this year.",
+          "url": "https://www.cnbc.com/2026/07/23/trump-tariffs-trade-deadline.html",
           "kind": "article"
         },
         {
-          "id": "finance-56c4f2894884",
-          "title": "The bring-forward rule just got bigger. Here’s what that means for your superannuation - The Motley Fool Australia",
-          "excerpt": "The bring-forward rule just got bigger. Here’s what that means for your superannuation &nbsp;&nbsp; The Motley Fool Australia",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVFZkOU1ObFdYWUEtUFp4clU5RjBYSzZCN09lcFZmZ2czdjhyOVFPLWJyMmtlZ01JYVBrSFotZk11NnBPMVpBTy10WENEU19LVU91SFVFU0R0Y1cxS2d2LWp5ZXUwaEdod3pYd2dVMmdVSmk5bWZtYkhaYlNDQ0VqV2RIQzZIZmxjb2pEa0wwVE4tdlVZaUk0ZnN1U2tveUlmdzRhYzdhZ21rYnFiRFVRNFdYTkdPXzFzQ2xmSQ?oc=5",
+          "id": "finance-c459f09ac7fe",
+          "title": "Stock Market Today, July 23: Tesla Drops 15%, Leading Tech Stock Slide - Yahoo Finance",
+          "excerpt": "Stock Market Today, July 23: Tesla Drops 15%, Leading Tech Stock Slide &nbsp;&nbsp; Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPZU5WSXBqRGFxbUhjTFdXODJ5VUFoempzTEltSk1OTTFkcUxZY19KNUp6ckgwWWlLV2pnd3V5R3h1LVE2VlgtenFNUlJWbHNhcVcxQlUyeks5bHBRWDA5VmkyZ2lWRlM3NzR4bE9OTElERTVibTFreEJkcmNRa0dZVTMwelZ5YlpQYXZra0c2MGRhNzhfcVE?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-afbbe6e1ed09",
-          "title": "Josh Brown says the stock market is ‘broadening out.' Here’s how to play it - CNBC",
-          "excerpt": "Josh Brown says the stock market is ‘broadening out.' Here’s how to play it &nbsp;&nbsp; CNBC",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPcS16dl9YTFY1Z1hyY0NlUzUtZlBJOGVnMTI4dTZ5cVlZaTd2elVHZW5ld1dGXzhjTGVONkpfVDlJTU1HOWMyZldJRVZ3THZLd2J6N19hUUFQQmF0Q21wdWJ5MTZFeXNKVkZXSEY4N3lpV2tZM2hjUHpiSnUzZXczQ2EyR1NpVGNNdW5LVmpidGFGZXM0ZlZxUUNEOGdzbUM2ZWZNRFVSWlFjMTlG?oc=5",
+          "id": "finance-e5efe7824ec1",
+          "title": "Stock Market Today, July 23: Tesla Stock Crashes on Earnings Miss and Rising AI Spending - Yahoo Finance",
+          "excerpt": "Stock Market Today, July 23: Tesla Stock Crashes on Earnings Miss and Rising AI Spending &nbsp;&nbsp; Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWmlaN0lEdWpsVXgxV0JwMjhvWi1ScUJCVk9nRHlzZjhGWE9yRDAxa2V3ZnBhUDVtNjI0R0xKdnJNQ1A2enpSTmkxR2s5WjJ1eFpIZklRUjNVajhhY0pQNVhobGlEaDRnLWczZjFGR2RyTDFQdFktV3NET3NsMmdmaGdEMDFSWUNaSWoxQVBPN2ZzcE1ua1E?oc=5",
           "kind": "article"
         },
         {
@@ -457,17 +457,17 @@
       "days_since_last_article": 2,
       "items": [
         {
-          "id": "health-9be791cc1eea",
-          "title": "What you eat is potentially ruining your sleep - here's how to fix it - The Canberra Times",
-          "excerpt": "What you eat is potentially ruining your sleep - here's how to fix it &nbsp;&nbsp; The Canberra Times",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQcFQ5Rm5iQnBUOVQ3UXhYTmw1Z0JkMlhmOHJtU0JOaDQ1YVFxbGxkd0NuY29lSzVNQXNxYVNDLWtZUU5DQkxfcU9SUXB5TjllMEgyc1NuMGkxeUw4WlFqYkM5YXpjcG5rWnNTT0QxbWFUc2xGQjFHbnpucXdrRjRhWi1hbTRFbVQzb05IS0xUX0NTYVNVQ0ljZEFUdmNVSFVMTnpXV0Jaa1M5c29ZZmIxYw?oc=5",
+          "id": "health-d9c622a58e65",
+          "title": "Sperm whales blow bubbles to achieve restful, vertical sleep - EurekAlert!",
+          "excerpt": "Sperm whales blow bubbles to achieve restful, vertical sleep &nbsp;&nbsp; EurekAlert!",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE50UHdkWW9tX05fTmw5Q2JDYjdmNGF1LXFjNGdtdTZrTVBrVnlMS3JucUNIUE5RQ19nSHBKcU0wck1zVGxsTDlaMHJBVVdSNWxjY1JGdDJhMkVGRUJN?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-40d288daff78",
-          "title": "Text-message video intervention does not improve infant safe sleep practices in low-income families - Contemporary Pediatrics",
-          "excerpt": "Text-message video intervention does not improve infant safe sleep practices in low-income families &nbsp;&nbsp; Contemporary Pediatrics",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNnJwRzZaeEg2RGxpN3ExcEYySWZ4LU8wOTdMQkh4UGhpTjJsVktYVEJVV0NqNzNIdklpYjMzTDNudUpOODJsQ0ZyY3ZDTHBiQ19WVGVEU3JnbkplUjB6aXV1ZEcwcnh3ckU1Y1BUTmg1SVJHRUJ6VjdRMkJ6WnNPazMwT1ZTRGNQcEo0amROWUdQZkp1dXlmZkNVZEsxcHdWYUE?oc=5",
+          "id": "health-6dd30a5641ac",
+          "title": "Could you run a country on just three hours of sleep? Japan's PM says she does - BBC",
+          "excerpt": "Could you run a country on just three hours of sleep? Japan's PM says she does &nbsp;&nbsp; BBC",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE53NVNLUTVlY05EWjRrU2NqN0xvSHlwY09IcXV4Q2dMWjBkSFlxTnpUUExMc3ZGWkVBeDRpVzdqVFRRelpmVHB1eUZ1NFNOTEJ1U3d6QVdnTQ?oc=5",
           "kind": "article"
         },
         {
@@ -521,24 +521,24 @@
       "days_since_last_article": 8,
       "items": [
         {
-          "id": "videography-10913fa3f570",
-          "title": "Protect Your Investment in the New Sony FX5 With This Full Camera Cage from Tilta",
-          "excerpt": "It’s safe to say that, at launch at least, the Sony FX5 is one of the most exciting new cameras of the year. Packed with a ton of features that actual working videographers and indie filmmakers are clearly quite interested in, the Sony FX5 fits the bill for many thanks to its 16.6MP sensor…",
-          "url": "https://nofilmschool.com/tilta-camera-cage-for-sony-fx5",
+          "id": "videography-5c9feebe0677",
+          "title": "Here’s How You Can Add the New Sony FX5 to Your Multi-Camera Monitoring Workflows",
+          "excerpt": "While the big news of the week, especially for Sony fans, is going to be the new FX5 camera finally being officially revealed ( along with its extra add-ons ), there’s still plenty to explore for how to use not just this Sony camera, but all Sony cameras as part of your own robust production…",
+          "url": "https://nofilmschool.com/sony-monitor-control-guide",
           "kind": "article"
         },
         {
-          "id": "videography-183220205410",
-          "title": "How ‘Ong-Bak: The Thai Warrior’ Turned Martial Arts Action Movies into a Global Uniter",
-          "excerpt": "Okay, I’ll admit that title might be a bit overstated and overdramatic; you could argue that many different genres, or film itself, or internet culture are the great uniting forces of our time. And you could argue that other films, projects, or influencers are the single greatest players in this…",
-          "url": "https://nofilmschool.com/ong-bak-the-muay-thai-warrior",
+          "id": "videography-4af9ba914ab4",
+          "title": "Peripeteia Explained: The Ancient Storytelling Device Behind Cinema's Most Devastating Endings",
+          "excerpt": "Do you remember the last time you were reading a book, playing a game, or watching a show or movie that made you gasp? I just replayed Resident Evil 7 , and I had totally forgotten how it ended. That was fun. You might think of The Sixth Sense . When that came out in 1999, its ending rewired our…",
+          "url": "https://nofilmschool.com/peripeteia-film-reversal",
           "kind": "article"
         },
         {
-          "id": "videography-b68e7bac9986",
-          "title": "How To Combat Bitterness About Your Career in Hollywood",
-          "excerpt": "You've been there. I've been there. That project we chased, the one we did on spec, our passion assignment, falls apart. Or the pitch we prepared for goes south. The agent who wrote you the passionate letter about why they wanted to represent you stops calling. The latest draft of your screenplay…",
-          "url": "https://nofilmschool.com/How-to-deal-with-bitterness",
+          "id": "videography-650b42121490",
+          "title": "Hollyland’s Latest Wireless Video Monitor Brings 4K30 Transmission Resolutions and New Camera Controls",
+          "excerpt": "Another day, another new wireless video monitor has hit the market with a nice mix of appealing specs and features which filmmakers and video pros are sure to find intriguing. Similar to models we’ve seen in the past from Hollyland and competitors, this is a fully functional video monitor capable…",
+          "url": "https://nofilmschool.com/hollyland-pyro-5-4k",
           "kind": "article"
         },
         {
@@ -583,31 +583,31 @@
       "days_since_last_article": 9,
       "items": [
         {
-          "id": "science-99e50bd66bd1",
-          "title": "Machine learning narrows search for additional particles in the Higgs boson family",
-          "excerpt": "What if the Higgs boson found in 2012 is not alone but is the only sibling we have encountered so far? Scientists at CERN discovered the particle that year, and it was a major discovery because it explained how other particles acquire mass. For a long time, scientists thought this was the final…",
-          "url": "https://phys.org/news/2026-07-machine-narrows-additional-particles-higgs.html",
+          "id": "science-ee9267900e5d",
+          "title": "Programmable platform enables on-demand design of plant immune receptors against crop pathogens",
+          "excerpt": "Crop production faces threats from plant pathogens. Traditional disease-resistance breeding relies heavily on natural plant resistance genes that encode immune receptors adapted to particular pathogens. However, rapidly evolving pathogens frequently overcome these natural defenses, and the limited…",
+          "url": "https://phys.org/news/2026-07-programmable-platform-enables-demand-immune.html",
           "kind": "article"
         },
         {
-          "id": "science-8d19fa6bfe50",
-          "title": "Universal structure of exceptional points revealed in nonlinear light‑based systems",
-          "excerpt": "Exceptional points, or EPs for short, are among the phenomena of modern physics. These are special points or locations at which the properties of matter, space or time change. In a new theoretical study, researchers from the Institute for Photonic Quantum Systems (PhoQS) at Paderborn University, in…",
-          "url": "https://phys.org/news/2026-07-universal-exceptional-revealed-nonlinear-lightbased.html",
+          "id": "science-2fd01af8c544",
+          "title": "Climate change has made Colorado's severe winter drought far more likely, according to new study - 9News",
+          "excerpt": "Climate change has made Colorado's severe winter drought far more likely, according to new study &nbsp;&nbsp; 9News",
+          "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPQ2JvenRZZkI5TXBkRWhRcVRnanh0X3NuVGxPUFZMYTNqZzB1VjJkb1dfYTNnNFdJbEpHV0tpZkpWOTU2M3RON0p1LTBrdmZrZjRRV0ZESTlJNGRSeGxueU8ydzIyTFRZMkgxc0tFX1MzVGhBcVZGTzN3NFBfSUxTTlYwYXRSOTBQN2VaWUUyTXNqZVVxUUt4MXlEZU5BV2VkNjNSSDluODZLaWtsaENQeUllaWhtZjR0ejVnZFhIZEhJOUhNZUxUMHZXY2ZzUlJRdFFDYkdKWVI0Y0RBY1pBWnVtblRid3h0OW5pYXY4R1pkUVVNRVBydUJ4MS1FQzhqMkNZbjJn?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-886c56bd1db1",
-          "title": "U.N. to list more sites as 'in danger' from conflict or climate change - Japan Today",
-          "excerpt": "U.N. to list more sites as 'in danger' from conflict or climate change &nbsp;&nbsp; Japan Today",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQaG9JeFJqRFBGOHplVjRoZUpvbHo4OEdIc21FWkdWUHpRM3lxRXl3VVJGSWd4WWJQN0ptbVpsQnVHMHduV0VyZVZjWkRnSVY3cXdBVDdDVEQzUlRZX29yQTBYa1VjZUl6cW85anQ3bXIwaU5rZDJFWnM3eE9uUF80RVREeFBSMlFYeTd0LVExSDFGTndrbU1aTXdRRldBVWxHTGdiS25jYmdZY0xyWlg0VkJfVDNxYnpURkt6YkZn?oc=5",
+          "id": "science-82d2f98578ac",
+          "title": "DOE allocates HALEU to space exploration - Metal Tech News",
+          "excerpt": "DOE allocates HALEU to space exploration &nbsp;&nbsp; Metal Tech News",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPT1Nrakl2dzJQaDNadmtiamUwV1NrbUJmaDk4M1FGQW5tNUYybU5YU3I2N241V1hLMGhNaDZGWlE5OWgwOFhaTzcwblEyVTRwZm1GdUhxcTJZV19wb2R1ejVfWGVXblZHSENzdnlQQ2xXUF9iSjJZcWprMlJxaGs3dnVpYmVnRHA5b1lKN2Q2X0x6M0Y3ZEZJUTA3bzRWQ1JhLXVPcGRNVjk0Nl9Q?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-be701897ae10",
-          "title": "I've tested hundreds of headphones, and Soundcore's Space 2 have the best noise cancellation under $150 - Business Insider",
-          "excerpt": "I've tested hundreds of headphones, and Soundcore's Space 2 have the best noise cancellation under $150 &nbsp;&nbsp; Business Insider",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVl9nbW1aTThKRXBkcENKYlBZRG16azhqTkNDTmFrZFc4UmJmRUVjcDdXNndTN3YtWGlqZW1sVjZRS3ZLbXZoTmJPTHpxektUY2c2bHdLOVpKakNlSVVESWJ4S1Z2aFZJdUEzdWtwWWtuMWVkNzc5RnFZZUJFV1VOOVpaMVdJQQ?oc=5",
+          "id": "science-62fe47619553",
+          "title": "Not every meal has the same impact: Researchers reveal the hidden footprint of our food",
+          "excerpt": "Leiden environmental researchers have mapped the environmental footprint of different diets and revealed which population groups have the greatest impact through their food choices. Their findings show where efforts to make the food system more sustainable could make the greatest difference.",
+          "url": "https://phys.org/news/2026-07-meal-impact-reveal-hidden-footprint.html",
           "kind": "article"
         },
         {
