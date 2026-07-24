@@ -9,11 +9,14 @@
       "title": "The most interesting \"hack\" in history...",
       "url": "https://www.youtube.com/watch?v=KOpTWx1Eou4",
       "source": "Fireship",
-      "excerpt": "Last week Hugging Face was hacked. In this video, we'll break down who it was and what they wanted.",
+      "excerpt": "For the last 5 years, cybersecurity experts have been warning us that hackers are going to start using AI to automate attacks. So naturally, we spent billions of dollars to make the AI better and less dependent on hackers. But this week, in a turn of events that nobody could have possibly seen coming, the AI decided that it doesn't actually need hackers to start destroying things. We just entered a brave new world after the first confirmed hack carried out entirely by autonomous AI. The way it worked is the agent slipped a poisoned data set into Hugging Face's data processing pipeline, which let it run arbitrary code on their servers. But from there, it gave itself node-level access, grabbed a bunch of cloud credentials, and started crawling through Hugging Face's internal clusters. It ran over 1,000 actions from temporary sandboxes and even hosted its own self-migrating command and control on random public services, moving itself before anyone could trace it. But the most ironic part is that when Hugging Face did finally notice and tried to stop it with the help of Frontier American Models, they quickly hit safety guardrails and had to pivot to using some open Chinese models instead. In today's video, we'll find out who was behind the attack, why they did it, and how this may be the most Firesheep coded story I've ever seen. It is July 23rd, 2026, and you're watching The Code Report. When Hugging Face dropped the disclosure last Thursday, the internet went into Reddit Boston Bomber mode and started guessing who was responsible. Was it China, Kim Jong Un, a teenager with a raging Discord addiction bored in social studies class? Even Hugging Face's CEO, Clem Delangue, publicly speculated that the agent was sophisticated enough that it was probably coming from a frontier lab. And against all odds, he was right. It turns out the first fully autonomous cyber attack in history didn't originate from a nation-state or a bored teenager. It came from a humble nonprofit dedicated to the safe development of artificial intelligence, OpenAI. And if you believe their comms, it wasn't on purpose. Here's what they say happened. There's a benchmark called Exploit Gym, whose whol",
       "published_at": "2026-07-23T16:53:37+00:00",
       "added_at": "2026-07-23T20:51:54.477Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-24T10:17:01.644Z",
+      "transcript_at": "2026-07-24T10:17:01.644Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "software-ai-8650b65383ee",
@@ -571,11 +574,14 @@
       "title": "The Model-Agnostic AI Platform Betting That No Single Lab Will Win",
       "url": "https://www.youtube.com/watch?v=DbBnd9PYob4",
       "source": "Y Combinator",
-      "excerpt": "In this discussion at Startup School Paris, Dust co-founder Stanislas Polu reflects on his path from Stripe to OpenAI and why he and his co-founder decided to build their company in France.",
+      "excerpt": "model agnostic which I think is a is a very interesting aspect of that and that's something that the labs would not be able to do. Uh if you think about buying your product and your tokens uh at the same place, it's like if you were uh building a plant with machines in there and you would buy the machines from the energy provider and the plug would only work with one energy provider and if you if your energy provider was a Russian gas would be in a pretty bad place right now and you wouldn't be able to connect to nuclear French nuclear makes no sense. Um, so you can uh give a round of applause to Stan Hulu. [applause] >> Thank you for having me. >> I feel like we're super lucky to have him. Uh, he's extremely wise. He's going to talk a little bit about building in the shadow of Frontier Labs. And then at the end, I want to ask him about company building because Dust has been a company that has been super thoughtful in how they've raised, hired, operated. And so I want to be able to share some of this knowledge with you. Um maybe let's get started. Can you tell us who you are? >> I'm Stan. Uh I was lucky to join Stripe pretty early. Spent five years there. That was an aqua year when we joined Stripe and then at the end of those five years got interested in into AI. uh I'm not a trained researcher but I was uh also lucky again to uh join OpenAI at a time where you could do research as an engineer and uh was all possible and spent three years there working on large language models and maths. >> And you decided to leave OpenAI. >> Yes. >> Why? >> Crazy, huh? >> Right. Yeah. >> I think the there's a there's a fun fact on this one. I think if I stayed at OpenAI, I think it's not true anymore. Both series B, but the uh stock option that I gave up were more than the whole company as of six months. That's that seems like a bad idea. >> Yeah. Still, do you regret it? >> No, not at all. >> So, why did you leave? >> So, really uh research is a very specific exercise. Uh I'm I'm again, as I said, I'm not a trained researcher and so I spent those three years doing kind of the PhD that I never did. really enjoyed it. But I at the end I really wanted to go back to building a pr",
       "published_at": "2026-07-23T14:00:16+00:00",
       "added_at": "2026-07-23T20:51:56.998Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-24T10:17:01.644Z",
+      "transcript_at": "2026-07-24T10:17:01.644Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-648094da5b21",
@@ -598,11 +604,14 @@
       "title": "How Supabase Became One Of The Fastest Growing DevTool Companies In The World",
       "url": "https://www.youtube.com/watch?v=sG5aB79TE44",
       "source": "Y Combinator",
-      "excerpt": "In this conversation from Startup School Paris, Supabase CEO Paul Copplestone explains how a frustrating firebase migration led to an open-source side project that became one of the fastest-growing dev tool companies in the world.",
+      "excerpt": "I think the thing that keeps you grounded is just absolutely knowing that money will not solve your problems. And that's a good thing for for startups as well, like early stage startups. Like we should not exist if AWS are so good. They've got way more cash than us, but we've been able to for many different reasons. For this next session, I'm welcoming Paul Cobbstone. Is that the right pronunciation? >> Yep. Okay. Awesome. who is the co-ounder and CEO of Superbase. Uh Superbase began in 2020 as an open-source tool uh to deliver Postgra, right? Like help people host Postgra online. Uh today it's one of the fastest growing dev tool companies in the world, if not the biggest. Maybe. Well, you're not going to uh say no. Okay. Uh they just became a decacorn just a few years after founding which is insane. Uh please welcome Paul Kersonson. Great to have you with us. Uh I really uh love this tools as you know and so it's kind of like having the chance to uh ask you questions. It's always great. Um but before building uh base I mean you started with like was that your third startup? >> Yeah that's right. Um so like my the short history getting to where we are today. >> Sure. Let's go for it. >> Is uh well going right back. My father's an entrepreneur and so it's kind of in my blood and I've only really done >> Where are you from? >> I'm from New Zealand. Yeah. Originally >> not the European. That's the only one. >> Yeah. Yeah. Yeah. >> Does live in Europe right now? >> I right now I spend most of my time here in Europe. So my French is not so great unfortunately but I'm practicing. So yeah, literally the other side of the world. I grew up and then my father was an entrepreneur so I very much it felt like a natural thing to me. Then I did one job in a corporate uh consultancy and >> you love it >> and I absolutely hated it and uh since then I've only done kind of startups or entrepreneurship. So I yeah this now officially is my third uh venturebacked startup where I've taken VC funding but I've actually done quite a few in the meantime. What happened to VC's money uh for the first two? >> Just blew it on uh yeah having great parties. No, I think like the I don't know is ",
       "published_at": "2026-07-23T05:02:48+00:00",
       "added_at": "2026-07-23T20:51:56.998Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-24T10:17:01.644Z",
+      "transcript_at": "2026-07-24T10:17:01.644Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-ff75aa71f075",
@@ -1098,11 +1107,14 @@
       "title": "Why Rich People NEVER Pay Off Debt!",
       "url": "https://www.youtube.com/watch?v=NY3tpCcRWLY",
       "source": "Personal Finance with Ravi Sharma",
-      "excerpt": "AFR, Sunrise Show - Channel 7, Channel 7 News, Business News Australia AFR Best Place to Work - 2026 Finalist Financial Times High-Growth Companies Asia-Pacific 2026 - #43 REB's Buyers Agent of The Year 2025 - Finalist \"FAST 100 AFR 2025 | #15 Fasting Growing Company\" “REB’s Best Buyer’s Agency 2024 - Finalist” “REB’s Best Buyer’s Agency 2023 - Finalist” “REB’s Rising Star 2023 - Finalist” “Austra",
+      "excerpt": "Here is why the ultra-rich are not paying off any debt. I'm going to explain to you what's happening in these three charts, and by the end of this video, you're going to understand why so many go interest-only, never pay down their debt, and still end up so much further ahead than some people that say, \"I want to pay off this debt as soon as possible cuz I get peace of mind.\" You're doing it the wrong way. Let me show you why. So, what we have here is the Sydney median price, 2006 versus 2026. Now, in 2006, the median price in Sydney for a home was $521,000. Fast forward 20 years, and it is now $1.6 million. The question that you're all asking is, that property that's now worth $1.6 million, is three times better than what was in 2006? Absolutely not. To rebuild the house, it's going to cost you more, but there's so much more you need to understand when it comes to CPI and the debasement of currency, which we can show over here. Now, in 2006, $100 bought you $100 at that time. However, fast forward into 2026, you would need to be making $167 to still purchase the same amount that you could purchase 20 years ago for 100 bucks. Now, let that sink in. It may feel like you're wealthier, and if you think about how much you were making, and let's say this was $100,000, and now you're making $167,000, while on paper it looks like you're making a lot more, but in fact, you're making the exact same amount when it comes to going out there and buying the goods and services for that $100,000. Now, if you want to see it a different way, it's what is that $100 worth of purchasing power actually getting me? Well, you've lost 41% in just 20 years. Let that sink in, cuz that is a big number. A lot of people say, \"Cash, cash, I just want to go and save it. It's the best thing I need to do. It is the only way forward.\" That's why many of you guys are feeling poorer despite having gone and saved so much money. We've obviously heard the concept of inflation and money printing, and that's exactly what it looks like. It's now just visualized, and if you had gone ahead and saved 100 bucks in your bank account, it would now technically be worth 59 cents. Now, if you had saved $100, it'l",
       "published_at": "2026-07-23T09:30:35+00:00",
       "added_at": "2026-07-23T20:51:58.921Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-24T10:17:01.644Z",
+      "transcript_at": "2026-07-24T10:17:01.644Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-fef4709138c3",
@@ -2052,11 +2064,14 @@
       "title": "Essentials: Using Meditation to Focus, View Consciousness & Expand Your Mind | Dr. Sam Harris",
       "url": "https://www.youtube.com/watch?v=LQI8tl8S2PE",
       "source": "Andrew Huberman",
-      "excerpt": "In this Huberman Lab Essentials episode, my guest is Dr. Sam Harris, PhD, a neuroscientist, bestselling author, and world-renowned meditation teacher whose work focuses on consciousness, ethics, and religion. We discuss how meditation can help us better understand the nature of the self and transform the conscious experience. Sam also explains how meditation can help overcome universal challenges ",
+      "excerpt": "Welcome to Huberman Lab Essentials, [music] where we revisit past episodes for the most potent and actionable science-based [music] tools for mental health, physical health, and performance. I'm Andrew Huberman and I'm a professor of neurobiology and opthalmology at Stamford School of Medicine. And now for my discussion with Dr. Sam Harris. Dr. Sam Harris, what is this thing that we call a self? You know, as far as I know, we have not localized the region in the brain that can entirely account for our awareness of self. >> The problem is we we use the term self in so many different ways, right? And and there's there's one sense of that term which um is the target of meditation and you'll hear it from me that this self is an illusion, right? And and that there's a there's a psychological freedom that can be experienced on the other side of discovering it to be an illusion. And some people don't like that framing. Some people would would insist that it's not so much an illusion, but it's a it's a construct and it's not what it seems. The thing that doesn't exist, uh it certainly doesn't exist as it seems. And I would I would want to argue that it actually is just a proper illusion is this the sense that there is a subject interior to experience in addition to experience. So most people feel like they're having an experience of the world and they're having their an experience of their bodies in the world. And in addition to that, they feel that they are a subject internal to the body. Most people feel like they're behind their face as a kind of locus of awareness and thought and intention. It's almost like they're you're a passenger inside your body. Most people don't feel identical to their experience. They feel like they're on the edge of experience, somehow appropriating it from the side. You're kind of on the edge of the world and the world is out there. your body is is in some sense an object in the world uh which you you know it's different from the world you know the the boundary of your skin is still meaningful you can sort of you loosely control your body I mean you can't control you can control your gross and subtle you know voluntary motor movements but ",
       "published_at": "2026-07-23T12:00:10+00:00",
       "added_at": "2026-07-23T20:52:05.634Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-24T10:17:01.644Z",
+      "transcript_at": "2026-07-24T10:17:01.644Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "health-0f2a8695af50",
@@ -2716,7 +2731,21 @@
       "added_at": "2026-07-16T20:48:34.183Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-05d4f6f97dd3",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "Who Is Investing in the Next Generation?",
+      "url": "https://invisiblebalancesheet.substack.com/p/who-is-investing-in-the-next-generation",
+      "excerpt": "Last year, I spoke to a room full of Year 11 students about career paths. There were plenty of bright mathematics students. Exactly the sort of people who, not that long ago, might have seen actuarial science as an obvious career. I expected at least one of them to mention becoming an actuary. Not one did. That stayed with me. Around the same time, I read the now famous substack on the quiet decline of Australia’s life actuarial market. It articulated something many of us working in the industry have been feeling for years. The Australian life insurance industry isn’t just changing. I wonder whether it’s also quietly underinvesting in one of its most important long-term assets. Its future capability. An asset you won’t find on the balance sheet I’ve written previously about the idea of an Invisible Balance Sheet . Every company carefully manages the assets it can measure—capital, cash, technology and expenses. But every business also depends on assets that never appear in its financial statements. Trust. Institutional knowledge. Relationships. Culture. Leadership. And perhaps the most important of all... The next generation of talent. The life insurance industry spends a lot of time thinking about capital adequacy. I’m starting to wonder whether we should spend just as much time thinking about capability adequacy . Because capability compounds. Or disappears. The apprenticeship we never had to design For decades, the profession didn’t really have to think about how actuaries were developed. The system largely looked after itself. Universities produced graduates. Insurers and consultancies hired them. Graduates learned by doing. Reinsurers hired experienced actuaries. Over time, some moved into leadership and Chief Actuary roles... and eventually to the promised land of the previously limited liability of directorship. It wasn’t perfect. But it worked. Today, almost every part of that apprenticeship has changed. The industry has consolidated. Actuarial teams are being challenged to be leaner. Graduate programs have become smaller or disappeared altogether. Reinsurers still predominantly hire experienced actuaries, while some of the work that once developed junior",
+      "enriched_at": "2026-07-24T10:17:01.644Z",
+      "published_at": "Fri, 24 Jul 2026 05:49:31 GMT",
+      "added_at": "2026-07-24T10:17:01.644Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-07-23T22:39:53.424Z"
+  "updatedAt": "2026-07-24T10:17:06.314Z"
 }
