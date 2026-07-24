@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Thu, 23 Jul 2026 22:42:11 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 21:06:22 GMT</lastBuildDate>
+    <item>
+      <title>The Specific Action That Predicts Whether a New User Comes Back</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-25/the-action-that-predicts-whether-a-new-user-comes-back.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-25/the-action-that-predicts-whether-a-new-user-comes-back.html</guid>
+      <category>indie-income</category>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A signup count and a week-one retention number both hide the same missing metric: the one action, taken in a new user&#39;s first session, that separates the ones who become regulars from the ones who quietly vanish, and how to find yours with a spreadsheet and the users you already have.</description>
+    </item>
     <item>
       <title>Six Fixes Cover 96% Of Why Sites Fail Accessibility</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-23/six-fixes-behind-96-percent-of-accessibility-failures.html</link>
@@ -396,14 +404,6 @@
       <category>software-ai</category>
       <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
       <description>AI isn&#39;t just a software upgrade — it&#39;s a trillion-dollar infrastructure build that&#39;s landing on consumer price tags. Here&#39;s the cost chain from data centres to your next MacBook.</description>
-    </item>
-    <item>
-      <title>The RBA&#39;s Tightening Cycle: Three Hikes In, What Comes Next?</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-27/rba-rate-cycle-june-2026.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-27/rba-rate-cycle-june-2026.html</guid>
-      <category>finance</category>
-      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
-      <description>The Reserve Bank has raised the cash rate for a third consecutive meeting. What&#39;s driving it, how it flows through to your mortgage and super, and when the market thinks rates might finally fall.</description>
     </item>
   </channel>
 </rss>

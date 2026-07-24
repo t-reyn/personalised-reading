@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-23T22:42:11.966Z",
-  "count": 54,
+  "generatedAt": "2026-07-24T21:06:22.901Z",
+  "count": 55,
   "articles": [
+    {
+      "id": "2026-07-25-the-action-that-predicts-whether-a-new-user-comes-back",
+      "slug": "the-action-that-predicts-whether-a-new-user-comes-back",
+      "interest": "indie-income",
+      "interests": [
+        "indie-income"
+      ],
+      "mode": "learn",
+      "title": "The Specific Action That Predicts Whether a New User Comes Back",
+      "summary": "A signup count and a week-one retention number both hide the same missing metric: the one action, taken in a new user's first session, that separates the ones who become regulars from the ones who quietly vanish, and how to find yours with a spreadsheet and the users you already have.",
+      "tags": [
+        "indie-income",
+        "activation",
+        "onboarding",
+        "retention"
+      ],
+      "created_at": "2026-07-25",
+      "expire_at": "2026-10-23",
+      "concepts_taught": [
+        "activation-event",
+        "time-to-value"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "early-customer-acquisition"
+      ],
+      "source_count": 0,
+      "word_count": 712,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-25/the-action-that-predicts-whether-a-new-user-comes-back.html"
+    },
     {
       "id": "2026-07-23-six-fixes-behind-96-percent-of-accessibility-failures",
       "slug": "six-fixes-behind-96-percent-of-accessibility-failures",
