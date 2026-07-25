@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Fri, 24 Jul 2026 21:06:22 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 20:50:42 GMT</lastBuildDate>
+    <item>
+      <title>Postgres Will Eventually Refuse Every Write If You Never Vacuum</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-26/postgres-will-refuse-writes-if-you-never-vacuum.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-26/postgres-will-refuse-writes-if-you-never-vacuum.html</guid>
+      <category>software-ai</category>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Postgres never deletes a row when you tell it to: it marks the old version dead and leaves it on disk, which is why a mass delete doesn&#39;t shrink your database and, left unmanaged long enough, why the database can stop accepting writes altogether.</description>
+    </item>
     <item>
       <title>The Specific Action That Predicts Whether a New User Comes Back</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-25/the-action-that-predicts-whether-a-new-user-comes-back.html</link>
@@ -396,14 +404,6 @@
       <category>health</category>
       <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
       <description>Sleep is the recovery layer that makes training stick. Covers sleep architecture, the U-shaped dose-response curve, temperature, nutrition, magnesium, and the myths worth ditching.</description>
-    </item>
-    <item>
-      <title>The Infrastructure Bill Behind AI: Why Your Tech Is Getting More Expensive</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-27/ai-infrastructure-cost-surge.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-27/ai-infrastructure-cost-surge.html</guid>
-      <category>software-ai</category>
-      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
-      <description>AI isn&#39;t just a software upgrade — it&#39;s a trillion-dollar infrastructure build that&#39;s landing on consumer price tags. Here&#39;s the cost chain from data centres to your next MacBook.</description>
     </item>
   </channel>
 </rss>

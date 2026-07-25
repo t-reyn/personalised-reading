@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-24T21:06:22.901Z",
-  "count": 55,
+  "generatedAt": "2026-07-25T20:50:42.545Z",
+  "count": 56,
   "articles": [
+    {
+      "id": "2026-07-26-postgres-will-refuse-writes-if-you-never-vacuum",
+      "slug": "postgres-will-refuse-writes-if-you-never-vacuum",
+      "interest": "software-ai",
+      "interests": [
+        "software-ai"
+      ],
+      "mode": "learn",
+      "title": "Postgres Will Eventually Refuse Every Write If You Never Vacuum",
+      "summary": "Postgres never deletes a row when you tell it to: it marks the old version dead and leaves it on disk, which is why a mass delete doesn't shrink your database and, left unmanaged long enough, why the database can stop accepting writes altogether.",
+      "tags": [
+        "postgres",
+        "vacuum",
+        "mvcc",
+        "database-internals",
+        "supabase"
+      ],
+      "created_at": "2026-07-26",
+      "expire_at": null,
+      "concepts_taught": [
+        "mvcc-dead-tuples",
+        "autovacuum-mechanics",
+        "transaction-id-wraparound"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 861,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-26/postgres-will-refuse-writes-if-you-never-vacuum.html"
+    },
     {
       "id": "2026-07-25-the-action-that-predicts-whether-a-new-user-comes-back",
       "slug": "the-action-that-predicts-whether-a-new-user-comes-back",

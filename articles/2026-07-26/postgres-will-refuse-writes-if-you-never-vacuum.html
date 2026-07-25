@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Postgres Will Eventually Refuse Every Write If You Never Vacuum</title>
+  <meta name="description" content="Postgres never deletes a row when you tell it to: it marks the old version dead and leaves it on disk, which is why a mass delete doesn't shrink your database and, left unmanaged long enough, why the database can stop accepting writes altogether." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="software-ai">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-07-26-postgres-will-refuse-writes-if-you-never-vacuum">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>💻 Software, AI &amp; App-building</p>
+        <h1>Postgres Will Eventually Refuse Every Write If You Never Vacuum</h1>
+        <p class="doc-meta">26 July 2026 · synthesised from 3 sources</p>
+        <p class="doc-summary">Postgres never deletes a row when you tell it to: it marks the old version dead and leaves it on disk, which is why a mass delete doesn't shrink your database and, left unmanaged long enough, why the database can stop accepting writes altogether.</p>
+      </header>
+
+      <div class="doc-body">
+        <h2>The DELETE that doesn't delete</h2>
+        <p>Delete a hundred thousand rows from a Supabase table and check the project's disk usage a minute later: it hasn't moved. That's not a dashboard lag. Postgres never actually erases a row when a DELETE commits. It flips a hidden field called <code>t_xmax</code> to record which transaction killed the row, and leaves the bytes exactly where they were. An UPDATE does the same thing twice over: the old row version is marked dead and a new version is written elsewhere on the page. This is MVCC, multi-version concurrency control, the reason one connection can read a consistent snapshot of a table while another is mid-write to it without either one blocking the other. The cost of that trick is that every row you think you deleted is still sitting on disk as a "dead tuple," and the page's internal free-space bookkeeping doesn't update either. Insert a new row next, and Postgres skips straight past the page you just freed and extends the file with a fresh one, because nothing has told it the space exists.</p>
+
+        <h2>Vacuum's actual job</h2>
+        <p>Reclaiming that space is what VACUUM does, and it runs in phases rather than one sweep. First it scans the table and prunes dead tuples from each page, defragmenting what's left; a worked example from the Postgres-focused blog BoringSQL shows a single 8&nbsp;KB page recovering 2,176 bytes by pruning just 16 dead rows. If the table has indexes, a second, more expensive phase reads every index page hunting for entries that still point at those dead rows. Only once those are gone can a third phase mark the row's slot as fully reusable; in the same example, the table's index shrank from 50 entries to 34. None of this happens because you asked. Autovacuum is a background worker enabled by default on every Supabase project, watching each table's dead-row count and triggering a VACUUM once enough of it has piled up.</p>
+
+        <h2>Why the file itself doesn't shrink</h2>
+        <p>Here's the part that catches people out: even after autovacuum runs, the table's file on disk usually doesn't get smaller. A plain VACUUM only returns space to the operating system when it can truncate whole pages off the end of the file, which means every row on those trailing pages has to be dead. BoringSQL's test makes the difference concrete: deleting a contiguous block of rows from the end of an 18-page table let VACUUM truncate it down to a single page, but deleting every second row across those same 18 pages left every page holding at least one surviving row, so the file stayed at 18 pages. The freed space sits stranded inside the file, available for Postgres to reuse on the next insert, but invisible to a disk-usage graph. "I deleted a huge chunk of data and the database is the same size" is normal, not broken.</p>
+
+        <h2>The tempting fix, and why it's a last resort</h2>
+        <p>VACUUM FULL looks like the answer: it rewrites the table from scratch and hands the freed pages back to the OS, 18 pages down to 9 in that same test. The catch is the lock. Standard VACUUM takes a ShareUpdateExclusiveLock, so reads and writes carry on around it; VACUUM FULL takes an AccessExclusiveLock, blocking every read and write on that table until it finishes. Supabase's own guidance is blunt about it: run a plain <code>vacuum;</code> to reclaim reusable space without locking anything, and reach for <code>vacuum full</code> only on a specific table, off-peak, when the file genuinely needs to shrink. The CLI's <code>inspect db bloat</code> command shows you whether that's even true before you touch a production lock.</p>
+
+        <h2>What happens if nobody vacuums</h2>
+        <p>This isn't just housekeeping. Postgres tracks transaction age with a 32-bit counter, and MVCC visibility works by comparing one transaction's ID against another's. Left unfrozen indefinitely, that counter would wrap around to zero, and old committed rows would suddenly look like they came from the future and vanish from view. VACUUM prevents this by "freezing" old rows against a sentinel value that always sorts as older than anything real, and Postgres forces the issue if that never happens: the documentation requires vacuuming every table at least once every two billion transactions, warns once a database is 40 million transactions from that limit, and at 3 million remaining stops accepting any transaction that would assign a new write ID. Read-only, full stop, until an emergency vacuum runs. It's a rare failure, usually caused by a forgotten long-running transaction or a stuck replication slot holding old rows visible, but it's the one case where "autovacuum handles it" isn't quite true, since autovacuum can itself be blocked by exactly that kind of stuck transaction.</p>
+
+        <h2>Check this on your own project</h2>
+        <p>Run <code>select relname, age(relfrozenxid) from pg_class where relkind = 'r' order by 2 desc limit 5;</code> against your Supabase database this week. Anything climbing well past a few hundred million with no plateau is worth tracing back to whatever's holding a transaction open. A debugging session left connected in a SQL client is a common culprit. It costs one query to check, and a locked table to find out the hard way.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://boringsql.com/posts/vacuum-at-the-page-level/" target="_blank" rel="noopener">VACUUM at the Page Level — BoringSQL</a></li>
+          <li><a href="https://www.postgresql.org/docs/current/routine-vacuuming.html" target="_blank" rel="noopener">Routine Vacuuming — PostgreSQL Documentation</a></li>
+          <li><a href="https://supabase.com/docs/guides/platform/database-size" target="_blank" rel="noopener">Database Size — Supabase Docs</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-07-26-postgres-will-refuse-writes-if-you-never-vacuum",
+  "slug": "postgres-will-refuse-writes-if-you-never-vacuum",
+  "interest": "software-ai",
+  "interests": ["software-ai"],
+  "mode": "learn",
+  "title": "Postgres Will Eventually Refuse Every Write If You Never Vacuum",
+  "summary": "Postgres never deletes a row when you tell it to: it marks the old version dead and leaves it on disk, which is why a mass delete doesn't shrink your database and, left unmanaged long enough, why the database can stop accepting writes altogether.",
+  "tags": ["postgres", "vacuum", "mvcc", "database-internals", "supabase"],
+  "created_at": "2026-07-26",
+  "concepts_taught": ["mvcc-dead-tuples", "autovacuum-mechanics", "transaction-id-wraparound"],
+  "concepts_assumed": [],
+  "concepts_reinforced": [],
+  "sources": [
+    { "title": "VACUUM at the Page Level", "url": "https://boringsql.com/posts/vacuum-at-the-page-level/" },
+    { "title": "Routine Vacuuming", "url": "https://www.postgresql.org/docs/current/routine-vacuuming.html" },
+    { "title": "Database Size", "url": "https://supabase.com/docs/guides/platform/database-size" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "You DELETE 100,000 rows from a Supabase table and check the project's disk usage a minute later. What do you actually see, and why?",
+      "options": [
+        "Disk usage drops immediately, because DELETE reclaims the row's bytes as part of committing the transaction and returns them straight to the operating system",
+        "Disk usage climbs briefly then falls, because Postgres compacts the table automatically on every DELETE",
+        "Disk usage stays roughly the same, because deleted rows are marked dead rather than erased and still occupy their pages",
+        "Disk usage only drops after the next ANALYZE runs, since that's what triggers space reclamation"
+      ],
+      "correct": 2,
+      "concept": "mvcc-dead-tuples"
+    },
+    {
+      "q": "You run a plain VACUUM (not FULL) on a table after deleting every second row across it, but the file's size on disk doesn't shrink. What's the best explanation?",
+      "options": [
+        "VACUUM only defragmented space within pages; because no page was left completely empty, there's nothing at the end of the file to truncate",
+        "VACUUM silently failed on this table, because a missing index on the deleted column stops the cleanup process from running at all",
+        "The file only shrinks once a manual ANALYZE runs afterwards, since VACUUM itself only updates statistics rather than touching the file on disk",
+        "Only VACUUM FULL ever returns space to the operating system, so a plain VACUUM leaving the file size unchanged is the expected result every time"
+      ],
+      "correct": 0,
+      "concept": "autovacuum-mechanics"
+    },
+    {
+      "q": "A monitoring query shows age(relfrozenxid) on one of your tables climbing steadily toward the multi-hundred-million mark with autovacuum apparently stalled by a stuck transaction. What's the real risk if this goes unaddressed?",
+      "options": [
+        "Nothing meaningful, since relfrozenxid age is a cosmetic monitoring number with no real functional consequence for the database",
+        "Query performance degrades gradually as the table grows, but the database keeps accepting reads and writes indefinitely regardless of the age value",
+        "The table automatically switches into VACUUM FULL mode once the age crosses that threshold, briefly locking all reads and writes on it",
+        "Once the transaction ID counter nears wraparound, Postgres will eventually stop accepting new write transactions until an emergency vacuum runs"
+      ],
+      "correct": 3,
+      "concept": "transaction-id-wraparound"
+    }
+  ]
+}
+  </script>
+</body>
+</html>
