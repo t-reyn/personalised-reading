@@ -303,11 +303,14 @@
       "title": "Using Claude Design 2.0 to NOT Produce SLOP",
       "url": "https://www.youtube.com/watch?v=YSYqFBq68Wk",
       "source": "DesignCourse",
-      "excerpt": "^-Chat with me and others Who is Gary Simon? Well, I'm a full stack developer with 2+ decades experience and I teach people how to design and code. I've created around 100+ courses for big brands like LinkedIn, Lynda.com, Pluralsight and Envato Network. Now, I focus all of my time and energy on this channel and my website Designcourse.com.",
+      "excerpt": "What's up, everybody? Check this design out. I'm going to show you exactly how I made this with Claude design 2.0. I think we can all agree it's not AI slop. This is a very specific direction that I guided it towards through the course of several different prompts. So, I'm going to show you how to get started with Claude design 2.0. We're using Fable here. Uh you don't have to. Um and first we're going to set up a design system, and then we're going to use that design system to create this hero section that you saw here. Um it's super cool. I'm going to show you how modern designers will use AI in order to create really unique things with the help of AI. Let's get started. Okay, so the first thing you have to ask yourself is, you know, what type of style are you going for? We're talking about a high-level perspective. You're not sure about the individual details, but you know the general feel that you want to associate with your app, your website, your brand identity essentially. Um so, a great site to go and get inspiration from, and this is true, you know, pre-AI, you know, get the the process of getting inspiration to something that human designers have always done, and it's not stealing. There's a huge difference between inspiration and stealing. So, mobbin.com or mobbin.com is it's m o b b i n dot com right here as you see, is a great uh place for inspiration. Um and it's not just theoretical. These are all live websites. So, that's one of the cool things is like a difference between like a a Dribbble and a Behance or something. Um so, essentially, what you can do, and there's a lot of different ways. You have two different tabs, apps and sites. Um these are just mobile apps, and then we have sites that are like desktop type of apps. And then, if you click up here search sites, you have categories. Um and so, if you click on styles, you'll see this is where you can kind of go to that high-level perspective. You don't know the details, but you know, you know, you want to have something dark. Maybe you want to have something color colorful, brutalist, fun. We're going to choose fun because typically when you look at your average AI generated design, I they're",
       "published_at": "2026-07-24T15:50:46+00:00",
       "added_at": "2026-07-24T20:55:47.451Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-26T07:12:14.993Z",
+      "transcript_at": "2026-07-26T07:12:14.993Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "design-0494a87ae7c1",
@@ -559,11 +562,14 @@
       "title": "What Actually Makes A Startup Durable",
       "url": "https://www.youtube.com/watch?v=99sPd15j3Zc",
       "source": "Y Combinator",
-      "excerpt": "In this session from Startup School Paris, YC partners field questions from the audience on how founders should be operating in the AI era.",
+      "excerpt": "So you were talking about AI native companies and I do really understand the capabilities because it's really shocking but um how do you look at the cost efficiency because nowadays AI is getting more expensive. So perhaps you might be able to do what an engineer can do uh with AI, but when when do the economics come in because sometimes it can cost even more with the tokens, the engineer that gets it first time, right? >> The first answer is you should just join YC and you'll get a million dollars of free tokens and then offers for many million dollars more. Uh the second answer is the cost of intelligence is coming down so rapidly that even if that is not true today, it's going to be true in six or 12 months. It's like it's a 10x cost reduction per year roughly speaking for the same intelligence. It's something we tell our founders not to worry about too much because it will just solve itself with time. >> I think an engineer today with a model is like yeah 1,000x better than an engineer without AI. Would you would you not use it? >> I think a year ago it might have been reasonable to say well a given engineer for a particular task might be more cost effective than a model. I think that is there is no chance that is true today if you're using the absolute best intelligence. Yeah, I'd probably get that far. I just don't think there's a single programming task that a human is is more effective for a human to do than a model to do. Yep. Hello. Thanks for this opportunity. A lot of countries, especially in Eastern Europe, have underdeveloped start stop stage and underdeveloped startup communities. Do you have any tips on building especially a community of founders like not being a founder of a startup but being a founder of a community? How to build from scratch? Thanks. I was going to say we move to SF but uh if you want to optimize the chance of your startup you should probably join an existing community versus having to create it from scratch and if you cannot go to SF of course that's the biggest place to build a startup but go to London or Paris like there is where there is at least a critical mass of startups so that you can surround yourself with the great ",
       "published_at": "2026-07-25T14:00:00+00:00",
       "added_at": "2026-07-25T20:40:56.492Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-26T07:12:14.993Z",
+      "transcript_at": "2026-07-26T07:12:14.993Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-4103555dce65",
@@ -573,11 +579,14 @@
       "title": "What Big Tech Missed And How Startups Can Still Win",
       "url": "https://www.youtube.com/watch?v=FVsgX0AdDTo",
       "source": "Y Combinator",
-      "excerpt": "In this talk from Startup School Paris, AMI CEO Alexandre LeBrun talks about his journey building Vertos, selling Wit.ai to Facebook, and why the best advice for early founders is to pick an extremely narrow problem while holding an extremely large vision with the space.",
+      "excerpt": "I told the team yesterday that the real cost of this 1.2 billion was not dilution. Uh the real cost is is expectations. Not only are from our investors because I think our investors they they understood and they agree on the long-term vision of the company, but the expectations you create in the outside world and if you raise 20 million and you do nothing for 2 years or or people don't see anything uh coming out of it for 2 years, then it's very very hard to survive. >> So, we I actually met Alex. Uh fun fact, we actually did the same YC batch. Uh back then Alex was building Wit AI and we were building Algolia as I was in winter 14, quite a while ago. Uh except Alex has done four companies, like one before, two after. I've only done one, so like I cannot compare. So, I'm super impressed by your like all your background and everything you've done. What do you remember from Wit? Like wit.ai, was that like the first AI company or something? >> It was Yeah, it was the first .ai domain, actually. Uh it was very hard back then to buy .ai. It's it's a island, you know, off Australia. >> Uh did you uh like did you know about it or did you found it by chance? >> No, I found I found this and I thought, \"Oh, it would be cool to have this domain.\" Uh but nobody understood it was a domain back back in early 20 uh 13. >> Yeah, that's how old uh we are. >> [laughter] >> Um and then >> [clears throat] >> uh I was surprised because actually you sold Wit shortly after to Facebook, right? How did that go? Like any uh any memory of that time? >> Uh yeah, so um in 2015 I I received the actually an email from someone called Mark Zuckerberg. Uh and I I after like half a second, I deleted the email without opening it. it's it's a scam, you know, it's a spam. And took about half an hour and then I thought, \"Oh, but maybe it isn't, you know, I should check.\" And I opened my spam folder and and it wasn't. So, it started like that. >> Uh and so, what happened after? Like you met him, like it was real, you met him, and he made an offer? Like is that it? >> So So, we actually followed the the YC playbook, you know, you're not supposed to >> If you don't want to sell, don't don't speak with t",
       "published_at": "2026-07-25T06:00:15+00:00",
       "added_at": "2026-07-25T20:40:56.492Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-26T07:12:14.993Z",
+      "transcript_at": "2026-07-26T07:12:14.993Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-93cc3bb3d870",
@@ -587,11 +596,14 @@
       "title": "Why Physical AI Is the Next Platform Shift",
       "url": "https://www.youtube.com/watch?v=F3INH9wZXoQ",
       "source": "Y Combinator",
-      "excerpt": "In this talk from Startup School Paris, Encord Co-CEO Eric Landau discusses leaving a lucrative quant career during the most profitable month his desk had ever seen, why PMF for Encord was a slow daily compound, and why founders should ride the emotional rollercoaster rather than fight it.",
+      "excerpt": "Starting a company is a roller coaster. So, there's like low lows and there are high highs. And [music] my view is that you should just ride the roller coaster. Like people try to mitigate it, but just ride it. And try to have fun. >> Please welcome Eric Landau who is the co-founder of Encord who is building the data layer for physical AI, right? >> Yep. >> Welcome Eric. >> Thank you. Thanks for having me. >> [applause] >> So, as I was going like preparing the the chat and looking at your background, I was actually pretty surprised. Like it's kind of like a very surprising that you did big data particle physics. And then you became a quant for 10 years. >> Yep. >> Before creating Encord. Okay, like lead us through that. Like why? Like is there a common thread here? >> Yeah, the the common thread is almost the kind of trajectory of AI development in the time that I've had my career. So, it's it's quite interesting cuz do you know the the bitter lesson? >> Uh remind me. >> The bitter lesson is this idea that AI you know, it used to be that to build an AI system you would think very carefully about it. You would do all the feature engineering. You'd try to induce as much domain expertise into the the system before kind of wrapping up in machine learning. And they found that actually it's better to not do any of that and just to scale the the system. Just add more data, more compute into it. And when I started in physics, I was doing particle physics. The kind of systems in the the strategy was based off of the physics itself. So, you'd filter the data based off like the way the particles you know, you know, were were moving the momentum and and then in high frequency trading, it was thinking about the market, what factors actually move the market one way or the other and then um really crafting that and then putting it together into machine learning model afterwards. And now it's just throwing data into a big pile of machine learning and then uh seeing it inside. Yeah. >> Excellent. Uh before speaking about Encord, um I realized we were like chatting quickly yesterday about that, right? Uh I mean, it was not the best ideal bet to become wealthy. Uh I mean, you've b",
       "published_at": "2026-07-25T05:00:30+00:00",
       "added_at": "2026-07-25T20:40:56.492Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-26T07:12:14.993Z",
+      "transcript_at": "2026-07-26T07:12:14.993Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-7b5f5ec74bcd",
@@ -601,11 +613,14 @@
       "title": "How Two French Engineers In New York Built The Company That Monitors The Entire Cloud",
       "url": "https://www.youtube.com/watch?v=vb1Gcn10enw",
       "source": "Y Combinator",
-      "excerpt": "In this chat at Startup School Paris, Datadog CEO Olivier Pomel reflects on his startup journey in New York, how staying close to raw customer feedback and support tickets keeps an 8,000 person company honest, and why moving faster on both hiring and firing remains the hardest thing for any founder to actually execute.",
+      "excerpt": "My co-founder stood in front of the whole engineering team a couple of months ago saying, \"Hey, in two quarters, we're not writing any any code anymore.\" And we saw, like literally, absolutely excellent developers, like not beginners, but people rebuild whole systems in a couple of days alone that were absolutely amazing. Things that would have been possible, but you know, done by a team of six over six months. >> Uh welcome, Olivier. >> Thank you. >> [applause] >> By the way, it looks like an IQ test of sorts here, like there's like >> Like which one uh >> six microphones of different colors on it, you know, so we always like that. >> Yeah. Uh as we as we're preparing that uh that session, Olivier reminded me about something here. I'm sure you wanted to say that, right? >> Yes, so we actually did not get into Y Combinator. DataDog did not get into Y Combinator. >> I checked, they applied. >> Yes, we applied. We we got an interview. I've got uh I've got a rejection email from from Paul Graham still, you know. Um >> you put that on the wall, framed it, and like so it's thanks to us that you become such a >> Exactly, you know, like we we had we had to prove you wrong, so. >> Okay, so so if any of you get ever rejected, here is the outcome. >> Yes, yes. And then and then and then here's the thing. So then I received like when when I agreed to do this and then I received an an invite to a YC dinner >> [laughter] >> in in Paris. And then I said, \"Oops, sorry, you didn't We are not into YC, so you're not invited anymore.\" So I got rejected twice by YC, you >> Well, the second time hopefully didn't hurt as much. Uh well, but you're here and we'll make up for that. Hopefully. >> Yes. >> [gasps] >> All right. Um you and your co-founder Alexy, you met So you were in Paris, right? At Centrale. Yeah. Uh that's how you you met and then you ended up working in New York. So uh why did you leave? Like was that a deliberate choice back then? >> So, no, it was not a deliberate choice. So, we So, I graduated in '99. Uh I had a an end of study internship and I did it at IBM Research in upstate New York. Which at the time was a you know fairly legit place for research. Not anymore. ",
       "published_at": "2026-07-24T20:00:38+00:00",
       "added_at": "2026-07-24T20:55:48.542Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-26T07:12:14.993Z",
+      "transcript_at": "2026-07-26T07:12:14.993Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-c4ad4fdd925e",
@@ -628,11 +643,14 @@
       "title": "Opencode CEO: Blocked, 20X Growth in 6 Months, Building the Coding Agent for the World",
       "url": "https://www.youtube.com/watch?v=_O6x4ktK6JA",
       "source": "Y Combinator",
-      "excerpt": "Jay V is the founder and CEO of Opencode, an open-source alternative to Claude Code that works with any model you want. It's one of the fastest-growing products in AI: 13 million monthly active users, 20X growth this year, and more tokens processed daily than all of OpenRouter. But the overnight success took 16 years, one legal entity, and nine YC applications. In this episode of the Lightcone, Ja",
+      "excerpt": "Most people in the world still haven't experienced the magic of a coding agent. >> This is just an unprecedented market. Like the market for intelligence has not existed before. Everybody should be thinking in a positive sum growth of high mentality. >> It's huge in developing countries like Indonesia is 4% of your traffic, Brazil is 5% of your traffic, places like Vietnam, you know, like places where a $200 a month cloud code subscription is like very expensive. >> You really know you have product market fit when like enterprises are bugging you to sign the security [laughter] agreement so they can use your product. >> They're just like, \"Please do this because I I I don't know who you guys are, but a bunch of us are using this. We want, you know, everybody in the world to have that aha moment with a coding agent.\" >> Welcome back to another episode of the Lakum. Uh Gary's out traveling today and will be back next episode. Our guest today is Jay V, founder and CEO of Open Code, an open source alternative to Cloud Code that works with any model you want. Open Code has been growing at an astounding rate this year. They're now at 4.6 million weekly active users, which is actually pretty close to Codex's numbers. Today we're going to talk about what's driving their wild growth and also Jay's winding road to get here since the company went through YC back in 2021. Jay, thanks so much for being here. >> Thank you. Thank you for having me. >> Why don't we just start with kind of like the the crazy scale you guys are at? Um maybe tell us about um any stats you can share with us. >> Yeah, yeah, I mean you mentioned the the weekly actives are monthly actives. I think we ended June with around 13 million or so. Um and that's around a 20x increase since the beginning of the year. We also recently started processing around 7 trillion tokens per day. Uh for context, uh Open Router does a total of around 6 trillion. I think again sort of beginning of the year we're probably at around 300 billion or so. Um and then in terms of sort of our revenue off of our subscription product and if you were to pay per token with our inference and you took let's say June's data and extrapola",
       "published_at": "2026-07-24T14:00:17+00:00",
       "added_at": "2026-07-24T20:55:48.542Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-26T07:12:14.993Z",
+      "transcript_at": "2026-07-26T07:12:14.993Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-648094da5b21",
@@ -1081,11 +1099,14 @@
       "title": "Nurse On Track To Retire With TEN Houses, Has FOUR So Far...",
       "url": "https://www.youtube.com/watch?v=P0VPqXGGxXg",
       "source": "Australian Property Mastery with PK Gupta",
-      "excerpt": "Ansal Mu, a nurse practitioner moved to Australia in 2021 with his wife after working in India and Qatar, arriving with $10,000 and little knowledge of the Australian property market. ❤️ After building a Sunshine Coast PPOR, he completed my Property Investment Accelerator course and bought three investment properties in a year, using trusts. LEARN MORE 👇 ❤️ JOIN THE COMMUNITY & GET FREE SUBURB TI",
+      "excerpt": "Hi everyone, my name's PK, and here I have Ansu, who is a client of the Property Investment Accelerator. He's built a remarkable property portfolio of four properties, including his PPR. He's basically got all of investment properties, three, in 1 year. So, three properties in 1 year worth overall, the portfolio is $3 million, and the equity is increasing every single day. He's on his way to buy his fourth investment very, very soon, and he has a big goal to buy 10 properties, which is just just remarkable. He's bought off market, he's bought high growth, he's also done it in his SMSF. So, in this episode, we'll cover all of these types of things. And I think what's remarkable is that, you know, he's a nurse practitioner. He only moved with his partner to Australia about 5 years ago. And before doing my mentorship program, he had absolutely no knowledge about the Australian property market. So, from that to going and buying $3 million of property off market in different structures as a nurse, who, you know, is not an easy job. But nurses work very, very long hours, and very, very hard. It's a remarkable achievement. So, a lot to unpack so that you, everyone who's watching, listening, can get similar results as well. Stick around right through the end. There's a real stories by people who have walked the path that many of us want to walk down. So, Ansu, like I said before, many congratulations to you, my friend, and thank you for making time. >> Thank you so much, PK. Thanks for your time. >> Awesome. Let's start from before you bought those three investment properties. If you don't mind me asking, like, what was your sort of job situation? If you're okay sharing, what was your sort of income situation? And like, why Why you want to start investing in real estate? >> So, me and my wife, we are nurses. Um we were working in Qatar. Before that, we worked in India. We moved to Qatar. We worked there for 6 years. And then in the middle of COVID in 2021, um we moved to Australia. So, I always had um had these thoughts of getting some passive income, trying to earn some money. And yeah, so we tried um cryptocurrency in 20 in I think in 2018, 2017, 2018. I was even mini",
       "published_at": "2026-07-24T23:30:24+00:00",
       "added_at": "2026-07-25T20:40:58.659Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-26T07:12:14.993Z",
+      "transcript_at": "2026-07-26T07:12:14.993Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-f61b27ff9cd2",
@@ -1095,11 +1116,14 @@
       "title": "Australian Commercial Property Suddenly Looks Attractive: Should You Go For It?",
       "url": "https://www.youtube.com/watch?v=2ontAKeoSpw",
       "source": "Australian Property Mastery with PK Gupta",
-      "excerpt": "Commercial Property in Australia (2026–2027): When It Makes Sense and Key Risks LEARN MORE 👇 ❤️ JOIN THE COMMUNITY & GET FREE SUBURB TIPS + STRATEGIES DISCLAIMER: No Legal, Financial & Taxation Advice The Listener, Reader or Viewer acknowledges and agrees that:",
+      "excerpt": "Hey guys, commercial property is starting to look a whole lot more attractive. So, should you go near it? Should you touch commercial property? Should you pivot away from residential property investment into commercial property investment? Can it give better yields? Does it give capital growth? Can it do what it needs to do to get you financial freedom? Or is it better to stick with residential real estate? A lot of people have started coming out talking about commercial. So many people have been asking me, PK, can you give us your updated 2026 2027 thoughts on whether we should buy commercial property and if so, what type of commercial property should we buy and is this the next pivot in terms of property investment in Australia? So, I'll try to cover that all. Let's go. My name is PK. I help people build passive income through the property investment accelerator, data program, mentorship. So, you don't need a $15, $20,000 buyers agent every single time. Hit the subscribe button. Give it a thumbs up. Let's go. So, in previous years, I've always come out and said that commercial property is risky. And that is 100% true. That I've always said that the risky part of commercial property is that the leases, they're not really worth the paper that they're written on. Because if a mom and dad tenant they void the lease or they break the lease or they stop paying let's say your total rent income is $30 $40,000 to take them to court costs $10 $20,000 and so you're not even guaranteed to win. So is it worth it? That was always my biggest bug bear about commercial real estate and I'm not changing my position at all. If you're buying a commercial property under $800,000, under million, heck, even under $2 million, the percentage risk of getting a mum and dad tenant, because let's be honest, a commercial property does not have a tenant as does a residential property. Residential property, you your tenant leaves, you get a new one. Okay, they break their lease. Okay, sure. They cause a bit of issue, they don't give their bond back or whatever. Fine. one or $2,000. Right now, the average vacancy across Australia is like less than 1%. And so, you're pretty much guaranteed if y",
       "published_at": "2026-07-24T07:00:19+00:00",
       "added_at": "2026-07-24T20:55:50.824Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-26T07:12:14.993Z",
+      "transcript_at": "2026-07-26T07:12:14.993Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-21801396faee",
@@ -2704,5 +2728,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-07-25T20:41:05.787Z"
+  "updatedAt": "2026-07-26T07:12:20.405Z"
 }
