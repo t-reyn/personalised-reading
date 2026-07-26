@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Sat, 25 Jul 2026 20:50:42 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 20:59:21 GMT</lastBuildDate>
+    <item>
+      <title>Serviceability Runs on Three Numbers Your Client Has Never Seen</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-27/serviceability-runs-on-three-numbers-your-client-has-never-seen.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-27/serviceability-runs-on-three-numbers-your-client-has-never-seen.html</guid>
+      <category>mortgage-broking</category>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A serviceability assessment doesn&#39;t test what a client can afford — it tests a modelled expense floor, a rate buffer nobody pays, and a debt ceiling most borrowers don&#39;t know exists. Here&#39;s how the three combine, and where each one quietly kills a deal you thought was solid.</description>
+    </item>
     <item>
       <title>Postgres Will Eventually Refuse Every Write If You Never Vacuum</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-26/postgres-will-refuse-writes-if-you-never-vacuum.html</link>
@@ -396,14 +404,6 @@
       <category>actuarial</category>
       <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
       <description>APRA publishes a quarterly statistical suite covering superannuation, life insurance, general insurance and private health. Here&#39;s what each set of numbers actually tells a practitioner — and what signals to watch.</description>
-    </item>
-    <item>
-      <title>Sleep Science for Recovery: What the Evidence Actually Says</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-27/sleep-science-for-recovery.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-27/sleep-science-for-recovery.html</guid>
-      <category>health</category>
-      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Sleep is the recovery layer that makes training stick. Covers sleep architecture, the U-shaped dose-response curve, temperature, nutrition, magnesium, and the myths worth ditching.</description>
     </item>
   </channel>
 </rss>

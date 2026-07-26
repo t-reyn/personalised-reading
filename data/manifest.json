@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-25T20:50:42.545Z",
-  "count": 56,
+  "generatedAt": "2026-07-26T20:59:21.078Z",
+  "count": 57,
   "articles": [
+    {
+      "id": "2026-07-27-serviceability-runs-on-three-numbers-your-client-has-never-seen",
+      "slug": "serviceability-runs-on-three-numbers-your-client-has-never-seen",
+      "interest": "mortgage-broking",
+      "interests": [
+        "mortgage-broking"
+      ],
+      "mode": "learn",
+      "title": "Serviceability Runs on Three Numbers Your Client Has Never Seen",
+      "summary": "A serviceability assessment doesn't test what a client can afford — it tests a modelled expense floor, a rate buffer nobody pays, and a debt ceiling most borrowers don't know exists. Here's how the three combine, and where each one quietly kills a deal you thought was solid.",
+      "tags": [
+        "mortgage-broking",
+        "serviceability",
+        "hem",
+        "apra",
+        "debt-to-income",
+        "responsible-lending"
+      ],
+      "created_at": "2026-07-27",
+      "expire_at": null,
+      "concepts_taught": [
+        "hem-benchmark",
+        "serviceability-buffer",
+        "debt-to-income-cap"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 644,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-27/serviceability-runs-on-three-numbers-your-client-has-never-seen.html"
+    },
     {
       "id": "2026-07-26-postgres-will-refuse-writes-if-you-never-vacuum",
       "slug": "postgres-will-refuse-writes-if-you-never-vacuum",
