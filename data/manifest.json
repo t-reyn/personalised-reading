@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-26T20:59:21.078Z",
-  "count": 57,
+  "generatedAt": "2026-07-27T21:14:16.487Z",
+  "count": 58,
   "articles": [
+    {
+      "id": "2026-07-28-oil-crash-inflation-gauge-rba-ignores-it",
+      "slug": "oil-crash-inflation-gauge-rba-ignores-it",
+      "interest": "finance",
+      "interests": [
+        "finance"
+      ],
+      "mode": "current",
+      "title": "Oil Just Crashed 8% — the RBA's Inflation Gauge Is Built to Ignore It",
+      "summary": "WTI dropped 8.3% and Brent fell below US$90 after a US-Iran ceasefire, but the RBA's trimmed mean measure exists precisely to filter out this kind of shock — so don't expect cheaper petrol to buy the next rate cut.",
+      "tags": [
+        "finance",
+        "markets",
+        "oil",
+        "inflation",
+        "rba",
+        "monetary-policy"
+      ],
+      "created_at": "2026-07-28",
+      "expire_at": "2026-08-18",
+      "concepts_taught": [
+        "transitory-supply-shock"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 2,
+      "word_count": 686,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-28/oil-crash-inflation-gauge-rba-ignores-it.html"
+    },
     {
       "id": "2026-07-27-serviceability-runs-on-three-numbers-your-client-has-never-seen",
       "slug": "serviceability-runs-on-three-numbers-your-client-has-never-seen",

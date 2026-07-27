@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Sun, 26 Jul 2026 20:59:21 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 21:14:16 GMT</lastBuildDate>
+    <item>
+      <title>Oil Just Crashed 8% — the RBA&#39;s Inflation Gauge Is Built to Ignore It</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-28/oil-crash-inflation-gauge-rba-ignores-it.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-28/oil-crash-inflation-gauge-rba-ignores-it.html</guid>
+      <category>finance</category>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+      <description>WTI dropped 8.3% and Brent fell below US$90 after a US-Iran ceasefire, but the RBA&#39;s trimmed mean measure exists precisely to filter out this kind of shock — so don&#39;t expect cheaper petrol to buy the next rate cut.</description>
+    </item>
     <item>
       <title>Serviceability Runs on Three Numbers Your Client Has Never Seen</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-27/serviceability-runs-on-three-numbers-your-client-has-never-seen.html</link>
@@ -396,14 +404,6 @@
       <category>design</category>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
       <description>The single skill that separates a polished interface from a homemade one. Four levers — size, weight, contrast, and space — that tell a reader what to look at first, and how to test it in seconds.</description>
-    </item>
-    <item>
-      <title>How to read APRA&#39;s quarterly statistics</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-27/apra-quarterly-june-2026.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-27/apra-quarterly-june-2026.html</guid>
-      <category>actuarial</category>
-      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
-      <description>APRA publishes a quarterly statistical suite covering superannuation, life insurance, general insurance and private health. Here&#39;s what each set of numbers actually tells a practitioner — and what signals to watch.</description>
     </item>
   </channel>
 </rss>
