@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-27T21:14:16.487Z",
-  "count": 58,
+  "generatedAt": "2026-07-28T21:12:52.867Z",
+  "count": 59,
   "articles": [
+    {
+      "id": "2026-07-29-genetic-testing-ban-uncaps-an-old-anti-selection-risk",
+      "slug": "genetic-testing-ban-uncaps-an-old-anti-selection-risk",
+      "interest": "actuarial",
+      "interests": [
+        "actuarial"
+      ],
+      "mode": "learn",
+      "title": "The Genetic Testing Ban Trades a Capped Risk for an Uncapped One",
+      "summary": "The Institute's submission on the government's total genetic-testing ban backs it, rightly — but its own request for population-level monitoring data is the tell that a sum-insured-capped anti-selection risk just became uncapped, with nothing yet priced to replace the cap.",
+      "tags": [
+        "life-insurance",
+        "genetic-testing",
+        "underwriting",
+        "adverse-selection",
+        "regulation"
+      ],
+      "created_at": "2026-07-29",
+      "expire_at": null,
+      "concepts_taught": [
+        "regulatory-information-asymmetry"
+      ],
+      "concepts_assumed": [
+        "group-insurance-pricing"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 1087,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-29/genetic-testing-ban-uncaps-an-old-anti-selection-risk.html"
+    },
     {
       "id": "2026-07-28-oil-crash-inflation-gauge-rba-ignores-it",
       "slug": "oil-crash-inflation-gauge-rba-ignores-it",

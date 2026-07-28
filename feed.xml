@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Mon, 27 Jul 2026 21:14:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 21:12:52 GMT</lastBuildDate>
+    <item>
+      <title>The Genetic Testing Ban Trades a Capped Risk for an Uncapped One</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-29/genetic-testing-ban-uncaps-an-old-anti-selection-risk.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-29/genetic-testing-ban-uncaps-an-old-anti-selection-risk.html</guid>
+      <category>actuarial</category>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <description>The Institute&#39;s submission on the government&#39;s total genetic-testing ban backs it, rightly — but its own request for population-level monitoring data is the tell that a sum-insured-capped anti-selection risk just became uncapped, with nothing yet priced to replace the cap.</description>
+    </item>
     <item>
       <title>Oil Just Crashed 8% — the RBA&#39;s Inflation Gauge Is Built to Ignore It</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-28/oil-crash-inflation-gauge-rba-ignores-it.html</link>
@@ -396,14 +404,6 @@
       <category>indie-income</category>
       <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
       <description>Freemium, subscription, one-time, and marketplace aren&#39;t interchangeable — each fits a specific usage pattern and buyer psychology. Get this right early and you stop building for users who never pay.</description>
-    </item>
-    <item>
-      <title>Visual Hierarchy: Making the Eye Land Where You Want</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-28/visual-hierarchy-basics.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-28/visual-hierarchy-basics.html</guid>
-      <category>design</category>
-      <pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate>
-      <description>The single skill that separates a polished interface from a homemade one. Four levers — size, weight, contrast, and space — that tell a reader what to look at first, and how to test it in seconds.</description>
     </item>
   </channel>
 </rss>
