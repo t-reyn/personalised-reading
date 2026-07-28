@@ -575,11 +575,14 @@
       "title": "Boris Cherny: Building Claude Code",
       "url": "https://www.youtube.com/watch?v=qyPCVqFUyDo",
       "source": "Y Combinator",
-      "excerpt": "Fresh off the launch of Opus 5, Claude Code creator Boris Cherny joins Diana Hu at Startup School 2026 to talk about what the newest models can do, how Claude Code came to be, and what it means to build products when the underlying capabilities keep accelerating.",
+      "excerpt": "All >> [music] >> right, Boris, we're so excited to have you here, the creator of Cloud Code. Thank you. [applause and cheering] >> It's great to be here. >> Fresh off the press, you guys just shipped Opus 5 yesterday. >> Yes. [applause and cheering] And it seems that model performance keeps accelerating. You guys got took Arc AGI 3 to 30%. Which is incredible. >> Yes. >> And for context, before the best score was in in the low single digits or low teens, right? >> What can Opus 5 do now that it couldn't versus a previous version? Yeah, there's um there's a lot that goes into every new model and there's a lot of new capabilities that we teach and uh get the model to do. Whenever you do model training, you try to teach a whole bunch of different things and most often it doesn't work. But some subset of the things the model does learn and sometimes it also surprises you. It has these skills. It has abilities that you you actually didn't really teach it, but it it just kind of learned for five. One example of something it does that I think no other model has done is it runs for a very long period of time. And especially when you combine Opus 5 with auto mode, it's just like incredible. Like it can go for days, weeks, months at a time. It just won't stop. Um you don't even need to use scaffolding. So you don't need SLGO. you don't need all this other stuff. It'll just go because it knows it needs to do the task. Um, another thing that I'm really excited about and um I'm going to start I think to talk about a little bit more um but it's kind of surprising because it's such a new capability is the model does not seem to be prompt injectable anymore. >> That's prompt injectable. [applause] It's crazy like people have talked about this like lethal trifecta for a long time and this really affects kind of harness design and agent design and and and product design because if the model reads some instruction on the internet that's like you know do x and y and z and also delete everything on the user's computer a year ago the model would have just done it but nowadays opus does not and this has actually been the case since like opus 4.7 4.8 eight uh sonnet 5 has been quite g",
       "published_at": "2026-07-27T17:00:30+00:00",
       "added_at": "2026-07-27T21:03:13.247Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-28T00:30:23.730Z",
+      "transcript_at": "2026-07-28T00:30:23.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-ae76fb221c53",
@@ -615,11 +618,14 @@
       "title": "Jensen Huang: The Mindset That Built NVIDIA",
       "url": "https://www.youtube.com/watch?v=I4B37S1dyQQ",
       "source": "Y Combinator",
-      "excerpt": "NVIDIA started with the wrong technology, learned the right one from three textbooks bought at Fry’s, and went on to invent most of the major breakthroughs in modern computing. At Startup School 2026 at Chase Center, Garry Tan sits down with Founder and CEO Jensen Huang to talk about confronting reality, learning your way into new domains, and why resilience — getting through one day at a time — m",
+      "excerpt": "Welcome to Startup School 2026. Now, let's get started. Please join me in welcoming to the stage the founder and CEO of Nvidia, Jensen Huang. >> [music] [music] >> Hey Jensen. >> [music] >> Please. Everybody. >> Oh my god. This is a surreal moment for me. Thank you. Thank you for being here, Jensen. >> I'm delighted to do it. It's great to be here. >> [cheering] >> Apparently, if you're here, you are going to make it. So, I'm happy I'm here. >> [laughter] >> Oh, Jensen. Uh Well, for the students who only know Nvidia at this as a company at the center of AI, uh what part of the early Nvidia story do they most need to understand? >> The thing that most people don't don't believe is that that um uh the choice of our technology that we started the company with was absolutely wrong. And so, we had started with the idea that we would reinvent 3D graphics. Well, the the company's philosophy and perspective uh was that the general purpose computers, the CPUs, were really useful, but if we could augment it with uh accelerators, we could solve problems that otherwise too hard to solve. And one of the first problems we chose was 3D graphics. And we And during that time 1993 the PC was just rumored to be coming. And and our big idea was that we would turn every single personal computer into a game console because we grew up in the era of game consoles. And so we thought you know what if we could could design a system that would fit into the personal computer and it would turn it into a game console. And so we thought we would reinvent the algorithm that would require these large supercomputers and we would fit it into the PC. And we came up with some new algorithms. And we were excited about it. We believed in it. It was we reasoned about it um in a thoughtful way. And and we went to start the company to go build it. Well, it turns out the algorithm was exactly wrong. And the technology that founded the company turns out to be exactly wrong. And so in 1995 uh we realized that and it was almost too late because by then there were some 35 40 other companies that were building 3D graphics for PCs. And and so we realized that it didn't work and I went back to the company and we",
       "published_at": "2026-07-26T20:32:05+00:00",
       "added_at": "2026-07-26T20:46:32.074Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-28T00:30:23.730Z",
+      "transcript_at": "2026-07-28T00:30:23.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-572b486476cf",
@@ -655,11 +661,14 @@
       "title": "How Anthropic builds products like Claude Code before the AI models are ready | Dianne Penn",
       "url": "https://www.youtube.com/watch?v=tivaWTTVRhY",
       "source": "Lenny's Podcast",
-      "excerpt": "Dianne Penn is Head of Product for Anthropic’s AI Research and Labs teams. She joined in 2023 as Anthropic’s first technical product manager, when the entire product team was five engineers, and has since helped ship every model from Claude 2 through Fable, and helped incubate Claude Code, MCP, Skills, computer use, tool use, and reasoning. Before Anthropic, she helped build Alexa’s AI at Amazon a",
+      "excerpt": "In 2023 when I started, nobody said anthropic and claude and coding in the same sentence. >> I want to go back to the beginning of anthropic. I remember dealing, man, these guys have no chance. OpenAI is so far ahead. >> At the time, I saw people were starting to use these models not just for code autocomplete, but actually writing long form code and [music] sat an opportunity for us to train Opus 3 to be better at. That was the inflection. [music] I always think about Opus 45 a year later during winter break when everyone was home able to code. >> What was magical about Opus 45 is we also now not just had a model but a vehicle a great product experience like cloud code. Opus 45 wouldn't have had that moment without a product like cloud code and cloud code wouldn't have had that type of adoption accelerated without opus 45. >> I want to talk about how the product role is changing >> for my team. The way to drive user value is to figure out the right user feedback. The evals, we actually have a saying on the team of evals are the new PRDs. >> Something Gary Tan's been talking about. If you are willing to spend $100,000 a year right now in tokens, you are living the way somebody in 2028 is going to live. >> You have to sweat the tokens as much as you sweat the pixels. You have to be using the models to come up with good and great and better ideas. And there's no substitute for that. People need to be more ambitious with AI tools these days because they're just capable of so much. >> One thing I ask the team is let's say Claude 8 comes around. What changes in what users do? What does that mean for how you're building today? >> Today my guest is Diane Penn, head of product for the AI research and labs teams at Anthropic. She joined Anthropic as the first technical product manager over three years ago, which is a lifetime [music] in AI time when the product team was just five engineers. She's helped ship every model adropic from claw 2 through fable. She's also helped incubate and launch claw code, MCP, skills, claw design, and also core capabilities like computer [music] use, tool use, and reasoning. It is always such a treat and so mind expanding to get to talk to ",
       "published_at": "2026-07-26T12:30:06+00:00",
       "added_at": "2026-07-26T20:46:32.082Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-28T00:30:23.730Z",
+      "transcript_at": "2026-07-28T00:30:23.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-955a33331ada",
@@ -1134,11 +1143,14 @@
       "title": "How I Spend My Money In Australia | $25M+ Property Portfolio",
       "url": "https://www.youtube.com/watch?v=e9SbEPyjlyo",
       "source": "Personal Finance with Ravi Sharma",
-      "excerpt": "AFR, Sunrise Show - Channel 7, Channel 7 News, Business News Australia AFR Best Place to Work - 2026 Finalist Financial Times High-Growth Companies Asia-Pacific 2026 - #43 REB's Buyers Agent of The Year 2025 - Finalist \"FAST 100 AFR 2025 | #15 Fasting Growing Company\" “REB’s Best Buyer’s Agency 2024 - Finalist” “REB’s Best Buyer’s Agency 2023 - Finalist” “REB’s Rising Star 2023 - Finalist” “Austra",
+      "excerpt": "I was speaking to a client last week, and he asked me how exactly do you manage your finances running multiple businesses, being an investor in multiple other businesses, and having a property portfolio of over $25 million. So, I said, \"You know what? I'll actually just make a video cuz I'm sure some people are thinking about it.\" Now, there are a couple of things here, and I'm going to share with you exactly how I've gone from doing this 5 years ago to how it matters today, and what I think's going to happen in the future when it comes to managing finances. Now, I'm not someone who traditionally started off just budgeting. I was someone who used to make money and then say, \"Okay, you know what? I made the money.\" And I used to get paid weekly, so I'd go and blow all that money in my early 20s. Now, that only lasted about a month before I got my head screwed on right, and I realized that all this money's going to come in and out. The velocity of money plays out, except if I don't allocate that money towards hard assets, I'm going to be left behind. So, I'm so glad I bought my first property at 22, and now 12 years later, the portfolio has been building, and I want to share with you how things have changed when it comes to the budgets, but also give you some practical tips as to how you approach it when it comes to the base level, and then as you scale up, how this actually changes. My approach when it comes to investing is I'm a contrarian investor. I like to buy when others aren't really looking, and I also like to double down when pain actually increases. So, when I think about my business and I go through something that's difficult, I always say to myself, \"Yeah, this sucks in the moment, but in reality, if it's hard for me, it must be hard for anyone else to get to this level.\" And that's just allowed me to continue scaling up the business, but also my portfolio. When the banks are all saying no, you need to go and find the right people in your team, talk to the right mortgage broker, talk to the right accountant, and you need to go out there. You always need to be solutions oriented. So, many at that point will say, \"It's too hard. I don't want to do the pa",
       "published_at": "2026-07-26T09:30:26+00:00",
       "added_at": "2026-07-26T20:46:33.974Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-28T00:30:23.730Z",
+      "transcript_at": "2026-07-28T00:30:23.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-c66c062a064e",
@@ -1148,11 +1160,14 @@
       "title": "How Diesel Mechanic Will Exit Job Through Property",
       "url": "https://www.youtube.com/watch?v=GcRH1AN-D5Q",
       "source": "Australian Property Mastery with PK Gupta",
-      "excerpt": "Zac Welsh bought 2 properties in 6 months as a Perth FIFO Diesel Mechanic, here's how he did it! ❤️ A hard working family man, I'm proud to call him a client of the Property Investment Accelerator. It's exciting times for Zac on his road to having the choice to stop working! Discussion Points: About The Host: PK Gupta is the founder of the Property Investment Accelerator — Australia's #1 Rated And",
+      "excerpt": "Hi everyone, my name's PK and here I have Zach Welsh who is a client of the Property Investment Accelerator. Zach lives in Perth and you know, on the southern side of Perth and that sort of broader Rockingham area, but more importantly he's bought two properties, two investment properties that is, in Queensland in the last year. Both of them have been affordable properties. So, the first one was about $515,000. He got it off market and it's just been, you know, rising at really, really rapid clip. And the most recent one he just got a few months ago now actually was actually under 400k, $398,888. And this one also has a lot of renovation potential. We're going to get into renovation cuz that's really Zach's forte. Like, what part of the house he has is he's renovating, what's he doing, how much it's costing, how much equity upside he's going to get. So, if you enjoy renovating, adding value, this episode will bring you a lot of value. He's bought both of these properties in a trust. So, I'm asking questions about how he's borrowing, um, you know, getting the lending, how he's preserving his borrowing capacity. The recent one has zero vacancy. So, we'll get into his brain around how he's picked these deals, why he's picked these deals, what his plans are for the future. And you know, he's a FIFO worker. So, he he's, you know, when he's working he doesn't exactly have a lot of time or maybe energy after working. So, I'll go into like how he actually did all this DIY and a whole bunch of other things. Welcome to the Aussie Property Investment Mastery podcast. My name's PK and I help busy people build passive income by buying [music] top 5% growth and cash flow property and build a portfolio using data >> [music] >> without wasting months doing research, spending weekends at inspection or catching flights, or dropping 10 to 20,000 dollars on buyers agents every single time. So, if you're confused, lack confidence, and just overwhelmed with all the information and marketing misinformation available online, and don't know where to start, then this show is for you. >> Zack, big congratulations. You know, you've you've really kicked a a really couple of really good goal",
       "published_at": "2026-07-26T08:13:25+00:00",
       "added_at": "2026-07-26T20:46:34.342Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-28T00:30:23.730Z",
+      "transcript_at": "2026-07-28T00:30:23.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-4bfa6d6d1b80",
@@ -2011,11 +2026,14 @@
       "title": "How Ripped Can I Get My Brother In 100 Days?",
       "url": "https://www.youtube.com/watch?v=TBrlPpviaqY",
       "source": "Jeff Nippard",
-      "excerpt": "Get the Min-Max training programs here: ── Download MacroFactor Workouts 2 weeks free: ── In this video, my brother, Brad, completes a 100 day fat loss journey, attempting to get to 19% body fat. I didn't want him to do his first cut alone, so I joined him, setting my goal at 9% body fat! ── References: High vs Low Meal Frequency: Testosterone Reference Range: Diet Breaks: ── Produced by Bradley N",
+      "excerpt": "This is my brother Brad at 36% body fat when [music] he first started his fitness journey a year ago. Here he's struggling with confidence, anxiety, [music] and joint pain. He doesn't do any physical activity, and he has pre-diabetes at 28 years old. >> Eat two bags of them and then uh hit the pizza pops. >> And for the next 100 days, his goal is to get in his best shape ever, [music] below 20% body fat. >> Are you down to keep going? Yeah, man. Got it. >> [laughter] >> Some of you might remember when my brother started lifting for the first time to see how much muscle we could each build over a 365day experiment. We bulked for most of the year and by the end Brad had built an extra 10 lb of lean mass [music] and I had built 2.7 lb at the same body weight and with 15 years of lifting already under my belt. >> Tomorrow is the last day, dude. Now what am I going to do again? [laughter] >> But that was last year. This year, Brad wants to see how much body fat he can lose. And I don't want him to do his first fat loss journey alone. So, I'm going to join him. And this time, I'm only giving us 100 days to do it. >> I'm so glad that we're done. >> Done? Yeah. We've got a whole other experiment to do. >> Oh, hey, I'll see you at the gym, bro. >> Yeah. Yeah. Okay. >> For [music] the shredding experiment, the goal is to see how much fat we can lose in 100 days. And we're going to use five tools to measure our progress. First, a DEXA scan to measure [music] our body fat percentage at the beginning and again at the end of our cut. Second, blood work. I don't just want to see how much body fat we lose. [music] I also want to figure out how much our hormones change as we cut. Like, will our testosterone increase or decrease? [music] And what'll happen to our cortisol levels as we get shredded? Third, strength. [music] I want to see how much strength we gain or lose as we cut. So, we'll be doing max effort strength tests on the bench press and leg extensions at the beginning and at the end. >> Come on. Come on. Come on. Come on. All you. All you. Let's go. Nicely done, dude. [music] >> Fourth, ultrasound measurements. This will measure if we lose any muscle or gain any muscle",
       "published_at": "2026-07-27T14:00:04+00:00",
       "added_at": "2026-07-27T21:03:20.881Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-28T00:30:23.730Z",
+      "transcript_at": "2026-07-28T00:30:23.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "health-3366524877af",
@@ -2038,11 +2056,14 @@
       "title": "Your Top Health Questions Answered",
       "url": "https://www.youtube.com/watch?v=ssP31IenzYA",
       "source": "Andrew Huberman",
-      "excerpt": "I answer questions submitted by listeners about topics ranging from how to ensure great sleep after nighttime exercise, effective no-caffeine pre-workouts (that also improve your sleep quality), neuroscience-supported tools for improving your memory and sense of smell, nutrition and supplementation for improving female and male fertility, the link between (peri)menopause and mental health, acceler",
+      "excerpt": "Welcome to the Huberman Lab podcast, where we discuss science [music] and science-based tools for everyday life. [music] I'm Andrew Huberman and I'm a professor of neurobiology and opthalmology at Stanford School of Medicine. Today's episode is a solo episode of the podcast, meaning no guest. However, there will be a large number of outside voices heard on today's episode, and that's because I solicited for your questions on social media. that is people had the opportunity to call in and literally record their questions about anything related to science and health. Well, really anything. But today, we're going to focus on science and health. And I would answer them in real time, meaning I'm hearing them for the first time today as you hear them for the first time today. And we're going to cover, I'm told, because I haven't heard the questions yet, a large number of topics related to signs and health that are relevant to women, to men, to people of all ages, and covering everything from health and fitness to mental health, supplementation, and on and on. I should mention that if you called in with a question for today's episode, and you don't hear it on today's episode, that does not necessarily mean that it won't be included in a future Q&A episode. Again, we got many, many more questions than we could possibly include in a single episode. And I also want to say to everyone who called in with a question, thank you. We really appreciate the feedback even if your question isn't included. It does cue us to what people are interested in and absolutely will shape the future of guest episodes, solo episodes, and again perhaps a future Q&A of this sort. So without further ado, let's get to your questions. Okay, so just to remind you, you're going to hear the question from the audience member played in real time. And again, this is the first time that I'm hearing these questions. Hello, my name's Anthony Richards and I just want to thank you so much for all the content that you put out. It's helped me profoundly in so many aspects of my life. My specific question right now is on preworkouts. I work out late at night because of work and I generally go to bed an hour and ",
       "published_at": "2026-07-27T12:00:06+00:00",
       "added_at": "2026-07-27T21:03:20.875Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-28T00:30:23.730Z",
+      "transcript_at": "2026-07-28T00:30:23.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "health-bc2a079857b3",
@@ -2713,5 +2734,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-07-27T21:03:22.813Z"
+  "updatedAt": "2026-07-28T00:30:28.143Z"
 }
