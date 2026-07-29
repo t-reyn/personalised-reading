@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-28T21:12:52.867Z",
-  "count": 59,
+  "generatedAt": "2026-07-29T20:55:39.281Z",
+  "count": 60,
   "articles": [
+    {
+      "id": "2026-07-30-land-tax-aggregation-and-the-trust-surcharge-trap",
+      "slug": "land-tax-aggregation-and-the-trust-surcharge-trap",
+      "interest": "property",
+      "interests": [
+        "property"
+      ],
+      "mode": "learn",
+      "title": "Land Tax Adds Up Your Whole Portfolio — A Trust Gets No Threshold At All",
+      "summary": "Land tax isn't assessed property by property — it's the combined site value of everything you hold in a state, and in NSW a discretionary trust loses the $1,075,000 tax-free threshold altogether, turning the vehicle you chose for negative gearing into a much bigger annual bill.",
+      "tags": [
+        "property",
+        "land-tax",
+        "trusts",
+        "tax-structuring",
+        "Australia"
+      ],
+      "created_at": "2026-07-30",
+      "expire_at": "2026-09-13",
+      "concepts_taught": [
+        "land-tax-aggregation",
+        "land-tax-trust-surcharge"
+      ],
+      "concepts_assumed": [
+        "property-ownership-structures"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 590,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-30/land-tax-aggregation-and-the-trust-surcharge-trap.html"
+    },
     {
       "id": "2026-07-29-genetic-testing-ban-uncaps-an-old-anti-selection-risk",
       "slug": "genetic-testing-ban-uncaps-an-old-anti-selection-risk",
