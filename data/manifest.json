@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-30T20:59:52.168Z",
-  "count": 60,
+  "generatedAt": "2026-07-30T22:59:16.388Z",
+  "count": 61,
   "articles": [
+    {
+      "id": "2026-07-31-the-four-questions-that-tell-you-what-to-actually-charge",
+      "slug": "the-four-questions-that-tell-you-what-to-actually-charge",
+      "interest": "indie-income",
+      "interests": [
+        "indie-income"
+      ],
+      "mode": "learn",
+      "title": "The Four Questions That Tell You What to Actually Charge",
+      "summary": "Anchoring, a value metric, and a four-question survey you can run on your waitlist this week — three concrete moves that replace the guess most solo builders make when they type a number into a pricing page.",
+      "tags": [
+        "indie-income",
+        "pricing",
+        "willingness-to-pay",
+        "monetisation"
+      ],
+      "created_at": "2026-07-31",
+      "expire_at": "2026-10-29",
+      "concepts_taught": [
+        "price-anchoring",
+        "value-metric-selection",
+        "willingness-to-pay-testing"
+      ],
+      "concepts_assumed": [
+        "app-monetisation-models"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 768,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-07-31/the-four-questions-that-tell-you-what-to-actually-charge.html"
+    },
     {
       "id": "2026-07-30-land-tax-aggregation-and-the-trust-surcharge-trap",
       "slug": "land-tax-aggregation-and-the-trust-surcharge-trap",

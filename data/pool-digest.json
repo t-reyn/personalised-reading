@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-30T20:56:55.009Z",
+  "generatedAt": "2026-07-30T22:47:56.467Z",
   "interests": {
     "software-ai": {
       "days_since_last_article": 4,
@@ -70,17 +70,17 @@
       "days_since_last_article": 7,
       "items": [
         {
-          "id": "design-ce4b2b252a6f",
-          "title": "The accessibility paradox",
+          "id": "design-8d2f31091c79",
+          "title": "Jakob’s law: How to apply it as AI collapses surfaces into one chat box",
           "excerpt": "",
-          "url": "https://uxdesign.cc/the-accessibility-paradox-d2c073256660?source=rss----138adf9c44c---4",
+          "url": "https://uxdesign.cc/jakobs-law-how-to-apply-it-as-ai-collapses-surfaces-into-one-chat-box-d8ebc9a727db?source=rss----138adf9c44c---4",
           "kind": "article"
         },
         {
-          "id": "design-68c56e7f3017",
-          "title": "Your people get AI. Get out of their way.",
+          "id": "design-abee95eff21f",
+          "title": "Rethinking friction in an AI world",
           "excerpt": "",
-          "url": "https://uxdesign.cc/your-people-get-ai-get-out-of-their-way-131370c157f8?source=rss----138adf9c44c---4",
+          "url": "https://uxdesign.cc/rethinking-friction-in-an-ai-world-8f361d62ab5e?source=rss----138adf9c44c---4",
           "kind": "article"
         },
         {
@@ -134,18 +134,18 @@
       "days_since_last_article": 5,
       "items": [
         {
-          "id": "indie-income-9d6a85528403",
-          "title": "Multi-GPU Kernels, Intelligence per Watt, Heterogeneous Inference, and More | YC Paper Club",
-          "excerpt": "At our latest YC Paper Club, researchers and builders presented on multi-GPU kernel optimization, intelligence per watt for local inference, AI-generated GPU kernels and benchmarking, heterogeneous inference infrastructure design, and GPU-accelerated game engines for reinforcement learning. Thanks…",
-          "url": "https://www.youtube.com/watch?v=n8dz2FX0_uY",
+          "id": "indie-income-9947af19da40",
+          "title": "Jeff Dean: The 1% Rule for Building in AI",
+          "excerpt": "In 2001, Jeff Dean and Sanjay Ghemawat did the math and realized Google’s entire search index would fit in RAM — then shipped it in a few days, and search got fast. In 2013, another napkin calculation showed that three minutes of daily speech recognition per user would require doubling Google’s…",
+          "url": "https://www.youtube.com/watch?v=CxXgV54KzpQ",
           "kind": "video",
           "source": "Y Combinator"
         },
         {
-          "id": "indie-income-741db8d0e068",
-          "title": "Alexandr Wang: From Los Alamos to Superintelligence",
-          "excerpt": "All right, full rockstar treatment for Alexander Wang, everyone. All right, so why don't we start out uh backstage? were saying, you know, one of the cool ways to think about this event is like, you know, this room is actually full of people who are just like us, but when we were 18 or 20 or, you…",
-          "url": "https://www.youtube.com/watch?v=sJ4VJWycX9M",
+          "id": "indie-income-9d6a85528403",
+          "title": "Multi-GPU Kernels, Intelligence per Watt, Heterogeneous Inference, and More | YC Paper Club",
+          "excerpt": "At our latest YC Paper Club, researchers and builders presented on multi-GPU kernel optimization, intelligence per watt for local inference, AI-generated GPU kernels and benchmarking, heterogeneous inference infrastructure design, and GPU-accelerated game engines for reinforcement learning. Thanks…",
+          "url": "https://www.youtube.com/watch?v=n8dz2FX0_uY",
           "kind": "video",
           "source": "Y Combinator"
         },
@@ -199,24 +199,38 @@
       "days_since_last_article": 3,
       "items": [
         {
-          "id": "mortgage-broking-1bd0e7c12144",
-          "title": "Blackstone to Buy $25 Billion Australian Home Loan Portfolio From HSBC - marketscreener.com",
-          "excerpt": "Blackstone to Buy $25 Billion Australian Home Loan Portfolio From HSBC &nbsp;&nbsp; marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNemRScmo5WlpxdEtUY3ZxeWZ0bTRDYUN6dG5vdFZLNjd3NE83Q0RRVUlmLVJJME9kdXRWOVlaaW05VlptdU9hZDVjT3ZmdHZidUZUQm9OQ1VlQjJyeVdZazBRam1NWVdjMURXdFZITkw5d3JmY0NSTEI1eFRldU1tTWNNRmdKUktvN0F4eUFpVDJtZ2Yxc1VWM0Q3TkkyZDZDRjRVdjRiV01CTjA1SFZXMW5GZ181UDlkZldGN05KMA?oc=5",
+          "id": "mortgage-broking-81a5631d4efa",
+          "title": "HSBC Sells $25.3B Australian Home Loan Portfolio to Blackstone - Global Banking & Finance Review",
+          "excerpt": "HSBC Sells $25.3B Australian Home Loan Portfolio to Blackstone &nbsp;&nbsp; Global Banking & Finance Review",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNVjRBcGY1NHU2cWU0RnZnVW8wYlBSLVo2WE1YV2JVVUowdS1yYUVfWF9PT2tXMGxIVzNKbjF5UzVhRjIxRTdvM2hnUHdDZ2NvcXIxYl9UMjczdkFURDRZUnQtM0NUUi1ieDFIdkYzRU9jc0JWaWpZYi1vV2hKNVFhaGZ6dDZQU2tCYWRnVHBrQnE4NVNfSjlCdWd3?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-0829c13aae95",
-          "title": "Blackstone Said to Buy $25 Billion HSBC Australia Home Loan Book - Bloomberg.com",
-          "excerpt": "Blackstone Said to Buy $25 Billion HSBC Australia Home Loan Book &nbsp;&nbsp; Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPdWlKX1NYSTVlMUNRRExHaUpNdnNqVVdmekZ1TDNfZHRTV1ZkYy1xTnBBT0pRNGpCcnpVWVc3enlXTmQ1Y1dmb1NQRnFnRmdDOWZIWnRoZ1A3Rm02Y1d3dnZWZlFwdS1ybk9Sc0k4cFp6RkR0d3hGX09RbjdHaXVjTks0OXV6RVk0OTRCRjlDOWpMTmdRQmx6X1JxQnJ3RGFpYVVIVDh1Zm9fVEVoOVZ1eV9PWDk?oc=5",
+          "id": "mortgage-broking-d91875592818",
+          "title": "HSBC to sell $25.3 billion Australian home loan portfolio to Blackstone - Reuters",
+          "excerpt": "HSBC to sell $25.3 billion Australian home loan portfolio to Blackstone &nbsp;&nbsp; Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWmNEbzNraXlwVEpqXzh4ZFBmZWlxQkk0Zk9WaVdhQ3owRHhzYWRUUnBjYnpyWG5ia3dlOTJNbFhNZzNPUGtZUVY5RkgtRzdYcklJUGp5MWRmWFhaT3RqcV80bS1JVnVBVm83UV9BWjdxSlVaUGlGVlJRQ0otYU5hVVI3TENKZ3o1UGFQTDdGenJTQjNJb2VjVUJXRnhGZlphdmkxQTBINXJVemZkU0pST2IwQlNyRFh2Vk13?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-8af5552dc0e9",
-          "title": "TOUAX completes the refinancing of its Corporate debt and reinforces its commitment to sustainable transport - marketscreener.com",
-          "excerpt": "TOUAX completes the refinancing of its Corporate debt and reinforces its commitment to sustainable transport &nbsp;&nbsp; marketscreener.com",
-          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOSnljb2lLX010UlJ6MDhRS0tpZXBUclJsNGhkUmpTMWZuMWZOMkFhLTFvMkpjWVREdWVfeTM5dkNFM3c0Y0RjQU1jVi1nUUF3TUR4UjljTHRlU1BlMm9uYWs5ZHZJTmVUVmhfdlRpQlFEd0UzMHE4Ti0zVExKTHRmbGNyRTUtN25FSkotZC1oU0F4TU9Menc3a2M4SUZaM2gyV1A5YmJ0LVJxTjN4SVMtXzVQamJLb0xZSTgwR25KYjNkWWYxbTRQWjZ4Tzh4S21xSlRxX3R4ZHhpZGtCYzFTXzR5ZXNBLURQ?oc=5",
+          "id": "mortgage-broking-4aa5341f79ab",
+          "title": "HSBC to sell $25.3 billion Australian home loan portfolio to Blackstone - devdiscourse.com",
+          "excerpt": "HSBC to sell $25.3 billion Australian home loan portfolio to Blackstone &nbsp;&nbsp; devdiscourse.com",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPWXplT2Z3dFhva3Zvc2xFZTdfMU9fSlk2UTEyb1NqenVKZEZfMzlEMkNaTGlLNW9oM1lIM2VkR2l5MmhuZ21OaWhjZmtTMkphbHY4U3ZfOGtYZ1lkeENlcVNBVl9nVEdoS2swZ0ZjSFlLaU91cC1DR2Q1R1NKQXpGRFBtWlVGWU5HcmJfV3l1Y2JndVJGSWstb2kwYXZSM0o3UmN0YmxfTHM2WDRyNWkzMnlQd0gxaXIxa2wxU3JOU2bSAcYBQVVfeXFMTURMUzNPbG5nR3NjNHFSQzYyem9XQXJzUjhRRXZzbzNfZk9fQmYtVUF2clRKb3lma0ZLb1EzVldwU1FwWXNXTHNmQWhBSVBBazVwakNWV21odjloVV9sX09TVW4yeW1hZm94aWdHbjI2M3laRUdkT3FKODByNUlKTDZQdEJJRFc4Mm50ai1NZEtJaXFQbEtSV1NiT1FtMDlFT2FBMERYY0VXc2VUZ2FvSnFjQ3BYYWFhdUo1RklZc3JVNVVCUGNB?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "mortgage-broking-173e1cdc544c",
+          "title": "New non-bank launches to challenge reverse mortgage market - Broker Daily",
+          "excerpt": "New non-bank launches to challenge reverse mortgage market &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPM0VVREJhZTJpa0xmLWwxWDFheWdnaVEzcGFRREphZDV5dGNacFZ5VDdNeXRzTjBnRlRfRE56UXU1U0M4TGZ1dmxVZGU1ZHAxbU01SmtqY3JOR3JydzFwcEVVZGh2Yk5pM0xzbVh2LTFlaEh0Ylpka2pvTHAxeEVYOC1aOGRTWFNleGdYWTVUM0VXNm54Q0NZamNUMnE4ZUk?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "mortgage-broking-cea46118b977",
+          "title": "Broker policy round-up: Lender changes at a glance 24–31 July - Broker Daily",
+          "excerpt": "Broker policy round-up: Lender changes at a glance 24–31 July &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOUjZCYjE0N0tiVHRiOE1UZnFvNEYyb01qNW5OaFNxTTBSdjRTNDFfNTZ4WGo2OFI4MEFMS1ZOMWY3Yk5KZ3k2SmRrQmUwNjhrNzJxWHhTc2ZSejlmVmVtUDhDQVFWamh6ZUIyeFJzeTEyX2ZHS1U0OVhPUWVSTWlwNHdtcGFxeThsZEZtOFk2QVFhUEtzakt1WjRmZUFjc1VtODFFY3NRazY1dzlkRnY0?oc=5",
           "kind": "article"
         },
         {
@@ -224,20 +238,6 @@
           "title": "Business Accelerator: Client success is a journey, not a destination - Broker Daily",
           "excerpt": "Business Accelerator: Client success is a journey, not a destination &nbsp;&nbsp; Broker Daily",
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcDdBODhKUmFpb3Ztalo2MzNCQmtYdHRaOE5FakN5OUFZRjRkME5QQU5xRElETmdnZHpKb0xScWRPWFJzRkF1X2laS2dFanc1dmlRRi1DWnlNWGxPNHhHb0MtVXRpbFdYd25ldVRhNkpQeVJfUWw2VEc3d05FVVpNSGhtMUo2a1I5Tm9CWURWZ1gzbjh0Sk0xeVlOV0xfeEJWUE02bXM3ZmFaZw?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "mortgage-broking-803de7e8c76b",
-          "title": "AMP Bank launches 40-year investor loan with 10-year IO - Broker Daily",
-          "excerpt": "AMP Bank launches 40-year investor loan with 10-year IO &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNk1uMnhVUFJBVjkzYXk2M1lzQUNFejJ4T1ZJYmdSajJRMjZDMzNSWDdpRHh3VFhyX0ZTOUI1ektTcXl1Rko5UGR0UGZOb1NvaS1IT2ZZQ3BPZ3JjNFFiTUVCT0huY0VhS1FWQTF5b0dvWGlyUVVrcnFrN2txWTd6QlJxanZrUTlNdGc5MUZ3c2tNSmhuQlU4?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "mortgage-broking-ef9c28d668d6",
-          "title": "Value beyond rate: How Prospa is seeing top brokers support their clients in FY27 - Broker Daily",
-          "excerpt": "Value beyond rate: How Prospa is seeing top brokers support their clients in FY27 &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPTGlsbzhZeXdMWVZCdU9jcHFzU21wc3F2TlctXzlnMUVLYWhKMHdTVndOazdOWGkyMW84YXg2VTd2TEREVTNsVFhqOG4tNFE5WmloMnhoOVJxWXA0LVVrTnZvLWdKTFlEcmRkUDVCLVd5NUUyUHJKdVk0Ynd5MFQwazB4dzBJMkdIMzg1eUwyRmhweVBNSVoxZDBRS2lwd2JLM1hsVXNPZ3N4V2tGSHpldExpeUN4YTlBT2ZlNw?oc=5",
           "kind": "article"
         },
         {
@@ -326,10 +326,10 @@
       "days_since_last_article": 1,
       "items": [
         {
-          "id": "actuarial-fc07d8fb2912",
-          "title": "Actuary work permit policy extended - royalgazette.com",
-          "excerpt": "Actuary work permit policy extended &nbsp;&nbsp; royalgazette.com",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUWdvYXluYi1RaTZJaXp6ZmFsUDIwTGRrMGU5WUFoSzZacEtZNktyOWJzVlNBV1VhQUQ0NXN0UmFOTUo5RDJNRnl1THd5X0hrLTgtbU9od19ham4yZ2hCdERvaDZfNS1KVFB1bTh2aVlIcEJYMVBleXhrMDZvY0MxNk1rZ0JPOTBOaFYzdFBSV2JCTVoxMkJuMzlB?oc=5",
+          "id": "actuarial-5aa5ba7d9f96",
+          "title": "Taiwan life insurers reverse losses under IFRS 17 - Insurance Asia",
+          "excerpt": "Taiwan life insurers reverse losses under IFRS 17 &nbsp;&nbsp; Insurance Asia",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdE9BYnFpdS1vaTZ1czd4a3lVM09qem9kazVxNm5rSHhaWGcxbHZaOHd0SEJkZWdmaTY3NXV1dTROaTJmeE41UGdtb2tpNlZvMTFYSWp3ZzRLYm8yd0NsbDJpc0ZxeXlCNVNDd2g0VFV4TDZrSlo2ZEswTDl6dlZSblBWZ1NxUlV4LXJzaVlSYWxDdGdI?oc=5",
           "kind": "article"
         },
         {
@@ -396,38 +396,38 @@
       "days_since_last_article": 2,
       "items": [
         {
-          "id": "finance-f0f468dbe9de",
-          "title": "'The Odyssey' extends stay in 70 mm Imax theaters as shows sell out weeks in advance",
-          "excerpt": "Universal and Imax have extended the availability of 70 mm screenings of Christopher Nolan's retelling of Homer's epic into mid-September.",
-          "url": "https://www.cnbc.com/2026/07/30/the-odyssey-70mm-imax-run-extended-until-september.html",
+          "id": "finance-2fb56e5c81d4",
+          "title": "Industry Super australia launches campaign against predatory superannuation tactics - Mi-3.com.au.",
+          "excerpt": "Industry Super australia launches campaign against predatory superannuation tactics &nbsp;&nbsp; Mi-3.com.au.",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOUJ4d0pYSk8zbmFkUS0zb2NYLTJKRzRfdzZBSUlRMWlQY0JVdlJhX0NSdHh6ZWgzR0dfSzF2QzFwZnlRbEFNdlBod0ZON0lCOHc1bTNpWFMxQ2hGZUwxbXJaYndWVXZmNV9uc05KT01QX2paYVNudFcwY3RFMlVJODlfcVZNcGNrci1PN0FiZFZld3A1a1VzU0NOVlF4OFJPUXBUYWs4ZHNFcnJDckZ6V0tEZW5BWnZaclE?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-4269a82ba6ed",
-          "title": "Why is SanDisk stock surging today? By Investing.com - Investing.com Australia",
-          "excerpt": "Why is SanDisk stock surging today? By Investing.com &nbsp;&nbsp; Investing.com Australia",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdWZfczViNWUxNHFrUE9DU1FyWWJEaWFob0p4dlRDUXhKRi1sYV81djFLVkZwM1RKaTIxNWRwMm1zS1IxV3l2bTNYcXpxSWVBQ1dDQWJ1Qmd2YXZRc2d3QU9TLTVRaW4tZW52M2kzd1ptZEhQZUY1TzZhMG9QZ3VpZnFzUFNSRU5ReWdYS2ZrbmRBNjNHeEpVVEhmYw?oc=5",
+          "id": "finance-f9b7669e4a2a",
+          "title": "Microsoft's Xbox chief lays out plan to pass rivals on margin by 2030 in memo to employees",
+          "excerpt": "Microsoft's gaming unit wants to invest in its Minecraft franchise and expand through partnerships, including in China.",
+          "url": "https://www.cnbc.com/2026/07/30/microsoft-xbox-asha-sharma-2030-plans.html",
           "kind": "article"
         },
         {
-          "id": "finance-4745ea27022b",
-          "title": "Ingersoll Rand earnings beat by $0.03, revenue topped estimates - Investing.com Australia",
-          "excerpt": "Ingersoll Rand earnings beat by $0.03, revenue topped estimates &nbsp;&nbsp; Investing.com Australia",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdlJ6ODhZQzdVVTZ3eGZGdzYyVUNiQ1ZfQ051SmpMRE1mMDJoQTJHOGNPbUFhcUJTV2E4dThoUVYwM3JpejlTV2JnNzI3cS1EMXJrNEE5cVJUMXlFUVFPWjFfc2psTmZhR1k2cWZsRlI3bGs0OE5lWjdmT3hrZW16Vmt4U1poaVQ4QlZkQk90QTVkMzVmN3BLSVg4dUc4b1hxbF80RlVUYUlnbEk?oc=5",
+          "id": "finance-31eee3f54e35",
+          "title": "Coinbase shares fall after crypto exchange posts disappointing second-quarter results",
+          "excerpt": "Coinbase's Thursday report marked its third straight quarter missing Wall Street's forecasts for revenue and earnings.",
+          "url": "https://www.cnbc.com/2026/07/30/coinbase-coin-earnings-q2-2026.html",
           "kind": "article"
         },
         {
-          "id": "finance-f7b5a0731f22",
-          "title": "Amazon stock soars 9% on 'booming' cloud growth, revenue beat",
-          "excerpt": "AWS sales expanded 37% year over year, which trounced analysts' expectations for 31% growth.",
-          "url": "https://www.cnbc.com/2026/07/30/amazon-amzn-q2-earnings-report-2026.html",
+          "id": "finance-5f52a34f91f6",
+          "title": "Mohawk Industries earnings beat by $1.09, revenue topped estimates - Investing.com Australia",
+          "excerpt": "Mohawk Industries earnings beat by $1.09, revenue topped estimates &nbsp;&nbsp; Investing.com Australia",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQ1kxWGdwb1hMdGtnNDlQQUVzY0ppOFpWcEkzbGJQNmJTTkk0a3FUWHZzaGZ2NGxrYXN2cjRoUldISW55aVczNjI3WnRjUDVxWDBCbTAwRHljTjYtMUdVNnBrSnhKS3dKUVZiTVdtaENxWV9ibVpRZlh0QW1vWURKai1uRFE0U1QxdjJoZXExVEV4WFJXUllCMk1ham8yWVd4NzlRWjdBUjJFaE91ZWMw?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-f7bc056f8b75",
-          "title": "Banker, miner, lawyer, fundie: Indigenous executives breaking barriers - AFR",
-          "excerpt": "Banker, miner, lawyer, fundie: Indigenous executives breaking barriers &nbsp;&nbsp; AFR",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPOTkxdTNkeTlWMFZNaEp2bENFTmNQQlRnbzlGX1c4Zno5clVBXzkxZldfdExZa3JlZGVfVnh6aW92MGNWa0M3a25MaUlzY2djdGxWSVFoemlNVVI0aU1CRzRkN3lIMklvNnVINTY0Vno4R0J4dW0wWVFLeE5iNzBlOENtMnhUR1hHcUFDaDA5RU5Gd1dsWnQ2R3I5bzhiMWZoVTduMDJwV1VPd0Q4YjBKRzlFMTZOVVhPZVI0TGRfU3VBOW1XelFaRg?oc=5",
+          "id": "finance-f37efad5e0e8",
+          "title": "DeepSeek is developing a massive AI data centre in Inner Mongolia - AFR",
+          "excerpt": "DeepSeek is developing a massive AI data centre in Inner Mongolia &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcjlZdm53RUMyek9mRTFic2p2MC1GUVpVQWZ0ZlVwRVlkb3dOY3FSaldMUUFKOEpvZ1RUcnlJMDgxSS1oTS1RZXR6a3NxUGxvd2V4eENGdWJrNW5XS2ZtY2pmanF4dnJpUkJsR0U5ZE5MWEVSM2RxMi1tVmtmRnIteWJCRTlyRU5RN0hoaXJPcnZrSHRIQ3I3QS1OVkFpSUNWbjJiRVJlS2FYN1lyS191azhR?oc=5",
           "kind": "article"
         },
         {
@@ -458,17 +458,17 @@
       "days_since_last_article": 9,
       "items": [
         {
-          "id": "health-a2c9fb88388e",
-          "title": "Thoughts on mental health, longevity after 40 years in accounting - Accountants Daily",
-          "excerpt": "Thoughts on mental health, longevity after 40 years in accounting &nbsp;&nbsp; Accountants Daily",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQb1FXMHV4SWR3cTBoQ1U4VlpWdlktd0dqNWNBYkNXSXZLOGJlMFJSbWUwSG1zTl9UY1Z6cmZmTV9GOGotX3JKcWhuSllkTW5oVm5XOWx5VFNLcjVhSXA5VWlnR1Z5RUt3RS1HVWk3dDRRSkRkOWxTT1FaTlJvd2RFNkRqbF9OZE9jbGRJNUVUN2lka3pJNUJzYllEQ2ZZdjczMkFLX0pSazRrRnMzZ0Fpay1ndWV5dw?oc=5",
+          "id": "health-117a916d3c68",
+          "title": "Rewiring the Brain’s Sleep Circuitry With Electroacupuncture - Acupuncture Today",
+          "excerpt": "Rewiring the Brain’s Sleep Circuitry With Electroacupuncture &nbsp;&nbsp; Acupuncture Today",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTHZNbUEzQndXR1k1TE1lZHM5ellQa1lQMHFIUVdfdHRfQ3JfSlpaWnZObVpTeXdERVZCSHlUNnJUU09QNjhhWVVpMzRuVV9ReXAwUTZ3VWRVWDJ0ZUxZdHlQNk5JbXFTQ1JoUXJaSDZoU1VUVENVSTMyckg4UFozblJOaVhQS0JfVEc0WWR0Nkh6dFVjcnhIUktYUGU1LUhpeG4zdw?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-188cd9ccc46e",
-          "title": "Your Poop Is Trying to Tell You Something. Here’s Why Everyone Is Finally Listening. - Oprah Daily",
-          "excerpt": "Your Poop Is Trying to Tell You Something. Here’s Why Everyone Is Finally Listening. &nbsp;&nbsp; Oprah Daily",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBhdWhCY083eGJMQmlFTUpKUVFSSmE4T0xxUkdsVm5GV3kwUE5pWWtya1FXYnpyOFFHSFVLVjVZeUg1Y0h6ZUd1UlREOHZndGlhNVBxRHE3XzJRV3N3a25icmxsdU1lN09iM2dZVmd6UVc2cnJLYXNNVGp4a2xFV00?oc=5",
+          "id": "health-75ba672eb45b",
+          "title": "Ping An launches AI longevity coaching across China - Insurance Asia",
+          "excerpt": "Ping An launches AI longevity coaching across China &nbsp;&nbsp; Insurance Asia",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTGtVcW5xanNyN3pwelZDNjktb2ZlSC1wOG5VNEt2c2xBX2xmSE9MT19xb3ZDeTdGd2I5LWkySVJRRWIyYkhUWnRYRXktNXVJZmZaZUZJS3VVb2FhS2gxZ2NudmFqSll3UUQzZUlCYXMtT09zb01ZZldHdm5qWXZOZ2hMZG5nUTdNTU5JaldKSHFBclE?oc=5",
           "kind": "article"
         },
         {
@@ -523,17 +523,17 @@
       "days_since_last_article": 15,
       "items": [
         {
-          "id": "videography-33cc99ab23ab",
-          "title": "Miss Blockbuster? This Website Brings the Video Store Experience Back",
-          "excerpt": "One of the happiest memories I have of my youth is going to the Blockbuster next to my house and looking for movies. You would just peruse these shelves of VHS tapes, trying to find your new favorite or a hidden gem. Sometimes they had employee picks, or you could talk to someone behind the counter…",
-          "url": "https://nofilmschool.com/bingebuster",
+          "id": "videography-fa5cf7791b98",
+          "title": "The Filmmakers at Wonder Dynamics Building AI for Filmmakers",
+          "excerpt": "In this episode of the No Film School Podcast , Wonder Dynamics co-founders Tye Sheridan and Nikola Todorovic join GG Hawkins to explain how their filmmaking backgrounds shaped the development of AI-powered production tools for artists. They trace the company’s evolution from an interactive…",
+          "url": "https://nofilmschool.com/filmmakers-at-wonder-dynamics-building-ai-for-filmmakers",
           "kind": "article"
         },
         {
-          "id": "videography-af90d72e1308",
-          "title": "Why This One Iconic ‘Tommy Boy’ Quote Lives On Long After the Tragic Loss of Chris Farley",
-          "excerpt": "I’ll admit it, Tommy Boy was probably one of my favorite movies to watch while growing up. My brother and I wore out the VHS we had in our family living room. Yet, every time I think about the film as an adult, I oddly think of Roger Ebert’s brutal takedown in his one-star review . No hate on…",
-          "url": "https://nofilmschool.com/tommy-boy-brother-s-don-t-shake-hands",
+          "id": "videography-54ca15b212a6",
+          "title": "Stop Trying to Write a Hit, Says a Veteran Hollywood Screenwriter",
+          "excerpt": "I was just talking to my creative partner this week about the feature we want to make, and we hemmed and hawed about comps, how ours was unique, and whether it mattered. I told him we’re at the point in the process where we’re wondering if there was any point to what we were doing. I’ve been there…",
+          "url": "https://nofilmschool.com/glenn-gers-embrace-insignificance",
           "kind": "article"
         },
         {
@@ -586,31 +586,31 @@
       "days_since_last_article": 16,
       "items": [
         {
-          "id": "science-b68d7d4de5d3",
-          "title": "Spectroscopy system detects aerosols using light reflected from traffic signs and tree trunks",
-          "excerpt": "Researchers have developed and tested an infrared spectroscopy system that can rapidly detect chemical aerosols from a distance by using light reflected from common surfaces such as traffic signs, tree trunks or painted surfaces. The new method could make it possible to detect hazards without…",
-          "url": "https://phys.org/news/2026-07-spectroscopy-aerosols-traffic-tree-trunks.html",
+          "id": "science-00759ae4bb55",
+          "title": "Seasonal Climate Outlook August - October 2026 - Earth Sciences New Zealand | NIWA",
+          "excerpt": "Seasonal Climate Outlook August - October 2026 &nbsp;&nbsp; Earth Sciences New Zealand | NIWA",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOERTVjB0UFVxdFVSLUp3Z0lPMEtHN0Nhc0RBSjJSbHRDTEFaTVF6RjlWMk5MSUcxTUIzQkJoMW82WDV6QWRXMEd3aUtBc1M4STFUQUYyaTlydGlSLUJEVVRuVG4yS1ROWW92cHZ2bzhRU0V4SGM4ZEs4SDh4YlNxOWJacGp5Z1dlNDkzcEZDZ0E5a2hmM2NGeEpGZXB2OEtWYkEweFFwQ3UwWmJE?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-25d7bffa4994",
-          "title": "Combined rattlesnake proteins prove 10 times more potent than current antivenom in lab tests",
-          "excerpt": "University of Maryland researchers discovered a new approach to treating venomous snakebites—using the same toxin-blocking proteins that snakes evolved to protect themselves. The team found that specific combinations of blood proteins from western diamondback rattlesnakes provided unprecedented…",
-          "url": "https://phys.org/news/2026-07-combined-rattlesnake-proteins-potent-current.html",
+          "id": "science-98df55aaa74c",
+          "title": "Rural runoff funnels hurricane floodwater toward coastal cities, model finds",
+          "excerpt": "Coastal cities are at increasing risk of compound flooding events, such as when heavy rainfall and storm surges occur simultaneously during hurricanes. However, the processes that contribute to urban compound flooding aren't well understood at smaller scales.",
+          "url": "https://phys.org/news/2026-07-rural-runoff-funnels-hurricane-floodwater.html",
           "kind": "article"
         },
         {
-          "id": "science-6d979b33d02c",
-          "title": "Notes on the Unseen: Photography’s Psychic Space - The Brooklyn Rail",
-          "excerpt": "Notes on the Unseen: Photography’s Psychic Space &nbsp;&nbsp; The Brooklyn Rail",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMWFlbmM3OXcwM1VpcXd3TjQ3a09WX2hlaTk5Rk15Vnp0RUJDcmNMVEtMWmpEZXNUNGN3LV9qNW9IMS1namJtdDNXaDRtZkM1RDV6RWpibGdGb1RJdzVLcHR5RVhaNUJlY3JfeU9TdFRyRjc3VVBwM1ZUdUI4YXVPQm1WV21wbkhPVmVrazBHR1FrcEtVN0FURmhLQmc?oc=5",
+          "id": "science-8f4187caea39",
+          "title": "Natural emulsion manages to stop fungus that threatens up to 80% of cocoa production",
+          "excerpt": "An innovative formulation based on natural compounds could become a sustainable alternative for controlling moniliasis, one of the most devastating diseases affecting cocoa in Latin America. A new study shows that emulsions combining fengycin—a lipopeptide produced by bacteria of the genus…",
+          "url": "https://phys.org/news/2026-07-natural-emulsion-fungus-threatens-cocoa.html",
           "kind": "article"
         },
         {
-          "id": "science-7c583c10f1bc",
-          "title": "How do scientists know if climate change made a heat wave, extreme storm or wildfire worse? - Japan Today",
-          "excerpt": "How do scientists know if climate change made a heat wave, extreme storm or wildfire worse? &nbsp;&nbsp; Japan Today",
-          "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNQ2QtbXN4YzQydU9ZUXlTVy0tV1JyYVZRcjJVOFA1aUVlaFZxelBhdHJDNldmaHJnTG9HR0NmakxpRTJFVVRMWVN5SlRvVFpLMGJiU0VJSVl2TzFVWklzaldudzQ5bWo3NTV4WWM3dXBvd1M0VmlkeENPU1RhTktCN0ZlWUxpc2p6cTRQblFZZ2l5NXNEYThBcnViZmMtVUliNnVvVk1ZSFpUQkJ4c0VVQmdUbFQxVXZJNTdyN0xEOVlkaWgwOWhBTEQyN2lNaUxhN0JTUUFGeTJ2UQ?oc=5",
+          "id": "science-2ef7ad589f0d",
+          "title": "Europe's wildfires 'up to 20 times more likely due to climate change' - thenationalnews.com",
+          "excerpt": "Europe's wildfires 'up to 20 times more likely due to climate change' &nbsp;&nbsp; thenationalnews.com",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMU9SalQyWW5SUjV3OEJXbzFmYi1VaUpXQU1fd29NN3UyOEhMeU9oNVpwWmItVXZDTldUZkNYcDE0VlhySTFfWENnaFRyaGE2a1FLOWtZZXREMkY1X0Q5RFl4V19oMTRuajJ2UG42N3BldGtqdlNvUmkxSVptQ2xuY192UnlNcHFvMFd0cVQ1Z3hJYTRJR25FZHNRNjRjVmI2U1FwRF82Yzc4UDZTY1JtRXF6SVNBdTVocl9zSzRsNA?oc=5",
           "kind": "article"
         },
         {
