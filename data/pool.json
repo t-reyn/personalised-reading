@@ -9,11 +9,14 @@
       "title": "Did Anthropic just kill the indie hacker...?",
       "url": "https://www.youtube.com/watch?v=jxGJT1weu4w",
       "source": "Fireship",
-      "excerpt": "Anthropic just dropped Opus 5 and it may be killing the indie hacker dream. Let's dive in.",
+      "excerpt": "A few days ago, Anthropic released Claude Opus 5, its fourth frontier model in eight weeks, which means Anthropic now slops out new models faster than JavaScript developers slop out new frameworks. In May, we got Opus 4.8, in June, we got Fable, then we lost Fable, then we got Fable back, then we got Sonnet 5, and now we have Opus 5. And things are moving so fast that Elon says we're living in the singularity, and that by 2036, money won't even matter anymore, and robots will be doing all the work. But of all the releases from Anthropic in 2026, Opus 5 might actually be the most important because it promises nearly Fable-level intelligence for half the price. It's also extremely good at writing code, but that's also a big problem for people who make a living writing code, especially indie hackers. In today's video, we'll take a look at Opus 5 and find out why the bootstrapped indie hacker is looking more and more like an endangered species. It is July 29th, 2026, and you're watching The Code Report. So, for most of July, Opus 5 was like the Bigfoot of AI Twitter. There were leaked screenshots saying Opus 5 was already live on Google Vertex. There was a mystery cursor model named Honeycomb, and it was pretty obvious that Opus 5 was coming soon. The model itself has a 1 million token context window, up to 128,000 [clears throat] output tokens, and five different thinking levels: low, medium, high, extra, and max, that allow you to control how much water and electricity you waste with your pointless prompts. That's pretty cool, but most people have noticed that Opus 5 is a bit more neurotic and anxious than previous models. It tends to produce longer responses, narrate its progress, verify its own work aggressively, and sometimes try to do more work than what was initially requested. And another interesting point is that on the artificial analysis knowledge test, Opus 5 became more accurate than Opus 4.8, but it's also more willing to answer questions when it doesn't know the answer because the hallucination rate increased by 14 percentage points to 50%. That doesn't mean half of everything Claude says is false, it just means that when Claude doesn't know something",
       "published_at": "2026-07-29T16:33:51+00:00",
       "added_at": "2026-07-29T20:43:11.076Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-30T12:16:36.730Z",
+      "transcript_at": "2026-07-30T12:16:36.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "software-ai-8d8d889677e3",
@@ -287,11 +290,14 @@
       "title": "The Hard Path Everyone Avoids (That Leads to Success)",
       "url": "https://www.youtube.com/watch?v=axkrL7UOxVw",
       "source": "The Futur",
-      "excerpt": "Niching down feels wrong because it forces you to say no to most of the market. But that’s exactly why it works. In this live business coaching session, we break down why most entrepreneurs, creators, consultants, and service providers struggle to pick a niche — and why trying to serve everyone usually means serving no one. If you’ve ever felt stuck choosing your ideal client, defining your ICP, o",
+      "excerpt": "I have a huge challenge niching down. >> Most people try to serve too many people and when you serve too many people you serve no one. I find that almost everybody that I know with exception of a very small percent, the more specialized they become, the more successful they become. See, I like things that are difficult cuz it means there's less competition. Down here it just feels like so much work and it's no longer fun. So, what do we do? We quit right before gold. So, if I am just persistent and determined, I will get that result. And I've done this over and over again. I'll give you an example, okay? Hello. >> Hi. >> I do AI and software development and I have a huge challenge niching down. >> What's your challenge? >> I don't know what niche to pick. >> Have you tried? >> Yeah. I tried education because that was my previous business and it was pretty terrible because most of coaches turns out don't make enough money for my services. >> Okay. So, you tried education and it didn't work out? >> Yes. >> How long did you try it for? >> A few months. >> That's a good effort. Are you married? >> Yes. >> Was it easy? >> No. >> How long did you try for? >> 3 years and going. >> So, you really wanted her. So, 3 years was a good time. How long would you have tried? >> Forever. >> Right, that's a good answer. Is she here? >> No. >> [laughter] >> Cuz I would [snorts] say blink twice if you feel safe. Okay. I thought that was a lady I could I didn't know I didn't know Okay, fine. She's not here. She didn't want to be here? >> She has a more successful business, so >> [cheering] >> Good catch, bro. Good catch. >> [laughter] >> He was running fast after her cuz she was running faster, but eventually he caught her. Right? >> Yeah. >> I think that's how tigers eat deer. They eventually get tired. >> [laughter] >> If you keep running. I like that. You know, a side note here, I have this theory Are there any single men here? Raise your hand. Give it up for the single men. >> [laughter] >> Oh my god, that was so sad. It was like, single men. >> [laughter] >> Holy cow, no judgement. There's like five single guys here. Any single women here? Raise your hand. Let's hear it up for ",
       "published_at": "2026-07-29T19:30:59+00:00",
       "added_at": "2026-07-29T20:43:13.419Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-30T12:16:36.730Z",
+      "transcript_at": "2026-07-30T12:16:36.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "design-1983b6f4a405",
@@ -301,11 +307,14 @@
       "title": "Demo video of my most ambitious product",
       "url": "https://www.youtube.com/watch?v=_UYUAaAfvdA",
       "source": "DesignCourse",
-      "excerpt": "Super excited about this project, as there's a lot of validation and interest already. There's nothing on the consumer market like this with the amount of features, and for the pricing. It's also the type of advanced project that AI can't 1-shot. I've spent 8-9 months using AI on this thing (opus, fable, gpt sol), and the system is so complex that I feel very confident that few will try to compete",
+      "excerpt": "Everybody, what's up? In this video, I'm going to be showing you the software I've been working on for the past like 2 years or so called Fusion Q. And it's live ball tracking and projection all-in-one meant for home use and pool halls and all that good stuff. And it's for people who are serious about getting better at pool. It's not just about glitzy graphics. It's about drills. It's about a lot of stuff. So, in this video, I'm going to be showing you a lot of really cool features. There is internet multiplayer. You can actually play with people over the internet who have the same system and play them and challenge them in drills and different types of games. So, when it comes to hardware requirements, you need a projector, a camera, and a PC, which we help you all with that figuring out what will work in your environment. And then also for pricing, I'll get to that at the end, but it is way more affordable than any of the alternatives. And most of the alternatives, if not all of them, are way feature lacking compared to this. So, let's get started. All right. So, this is the actual Fusion Q software. And in a second, you're going to see me use the system on my pool table demonstrating the different drills and such and game modes. Um but first, I really wanted to quickly just go over the UI. So, this is like a the main dashboard where you have a community feed and you can share videos. You can just talk and have a discussion with other pool players. You can ask for tips and all that good stuff. So, everybody can comment on each other's. One of the really cool things I'll show you in a second is the view session analysis with all your stats for each session that you play. Over here is the latest drills that maybe people created and shared with the community. Here's the latest clips from people and the latest activity as well. Now, over here, we have um our player profile. So, on your system, if you have multiple people who play at your table, um cuz we also allow for local multiplayer, um you can have profiles kind of like Netflix. So, whichever one is selected will um change the stats uh that it's associated with. And then over here, who is currently online, um",
       "published_at": "2026-07-29T16:03:41+00:00",
       "added_at": "2026-07-29T20:43:13.618Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-30T12:16:36.730Z",
+      "transcript_at": "2026-07-30T12:16:36.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "design-57507e1d0948",
@@ -570,11 +579,14 @@
       "title": "Alexandr Wang: From Los Alamos to Superintelligence",
       "url": "https://www.youtube.com/watch?v=sJ4VJWycX9M",
       "source": "Y Combinator",
-      "excerpt": "Alexandr Wang's advice to his 18-year-old self: develop your own internal compass for how the future will unfold, and hold conviction in it against the noise. At Startup School 2026, the Scale AI (YC S16) founder — now leading Meta's superintelligence lab — talks with Garry Tan about rebuilding a frontier lab from scratch, why talent density compounds, and how to spot the exponential worth betting",
+      "excerpt": "All right, full rockstar treatment for Alexander Wang, everyone. All right, so why don't we start out uh backstage? were saying, you know, one of the cool ways to think about this event is like, you know, this room is actually full of people who are just like us, but when we were 18 or 20 or, you know, there's some 16 year olds in this audience, you know. Um, let's jump to your story. I mean, you got it came up always really smart like math olympiad like jump us to, you know, the Alex of that time like what were you feeling? What were you thinking? And what drove you down this road? Yeah, I um uh well I grew up in New Mexico, Los New Mexico um which now Oenheimimer famous, but um it really was the middle of nowhere. And uh I remember I did all these math competitions, all these um computer science competitions, but then um I knew I wanted to do really big things and it was like not exactly clear how or what the exact paths to do that would be. Um, and I had a friend who was really into programming. Um, and you know, after high school got an internship in the valley, worked, I think his first internship was at Palunteer. And, um, and he, you know, he was kind of this, um, influence for me. And so, after I finished, uh, high school, I ended up working at Quora, um, here in Silicon Valley. And then, um, I worked there for a year. I took a gap year to work there. Um and then I went to MIT. Um and this was I was 19 when I worked at Quora. I was 18 when I went to MIT. And I was 19 when I started um scale. And I remember this period from like 17 to 19. It was um uh I felt like I was constantly changing like you know exactly what I want to do was constantly changing you know I was learning so much just from the people around me and it was just like I felt like I was drinking from the fire hose pretty constantly during that time. Um and um I would definitely recommend you know the two things that were really important. One is I think working at a company was really valuable because like I think from the outside in you have no idea how companies work. You have no idea what it looks like to actually build something. You have no idea what it looks like to iterate on somethi",
       "published_at": "2026-07-29T19:37:05+00:00",
       "added_at": "2026-07-29T20:43:14.998Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-30T12:16:36.730Z",
+      "transcript_at": "2026-07-30T12:16:36.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-fb330462e716",
@@ -1814,11 +1826,14 @@
       "title": "The $1/Hour Robot Is Coming: Four Industry Leaders Explain What’s Next",
       "url": "https://www.youtube.com/watch?v=TqNiSTeNtb0",
       "source": "All-In Podcast",
-      "excerpt": "(0:00) Intro: Humanoids, Robots, & AI+ (0:57) ANYbotics' Dr. Péter Fankhauser: Why ANYbotics Bet the Company on Four-Legged Robot Dogs, Not Humanoids (13:18) Dr. Péter Fankhauser: China's Armed Robot Dogs Are \"Stupid and Risky\" — Inside the Terminator Debate (15:01) NEO’s Bernt Børnich: Neo Ships in 2026 and Becomes an Open Robot Platform (22:18) Bernt Børnich: Robots Building Robots in Just 3 Yea",
+      "excerpt": "Hey everybody, it's your boy Jay Cal. I'm here in Paris, [music] France at a conference called Machina. It's basically AI in the real world. [music] [music] Pardon my robot. Thanks for tuning in and uh let's get started. I'm going all in. >> Apploven started with an $8 domain and no VC funding and became one of the largest ad platforms in the world. Now that same engine powers AppL ads for e-commerce. Your ads run inside mobile games reaching over a billion people with full screen distraction-free attention. The platform finds buyers and optimizes for profit. You set the target, it does the rest. One cookware brand went from$4 million to $16 million, turned profitable, and is on pace for 80 million this year. Visit apploven.com/allin to launch your first campaign today. [music] >> All right, everybody. Our interviews with the number one companies in robotics today continue here in Paris. Really excited to have Dr. Peter Funkhouser on the program. You're the co-founder and CEO of Anyotics. Uh you make the ENM mo. Get it? A lot of you have puns. Uh but you've been working in this uh space for close to 20 years. The company's been around for 10. First five years kind of a research lab. Last 5 years your what do you call these dog based robots? >> Well, it's an inspection solution, right? It's about data collection and understanding in critical infrastructure. >> But the form factor is >> a four-legged robot or a dog as you We like to call it a dog Obot, but >> why did that dog format become the standard? You're not the only person making it. There's many people making it now. Why did that one become the first one to hit, you know, relative scale and for a deployment? >> Yeah, in nature, you know, a lot of animals have four legs, so there's a reason to that. So, for sure, you have a great mobility. You can climb stairs. You can go anywhere a person can go. So dexterity and balance, >> mobility, right? Balance, but also stability. Four legs if you wide footprint, a lot of footooth holes hold on to because we work in nasty environments, slippery floors, there's, you know, rainforming, this snow falling down, grass growing. So four legs is a real good format. >> Well, ",
       "published_at": "2026-07-29T12:49:19+00:00",
       "added_at": "2026-07-29T20:43:24.463Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-07-30T12:16:36.730Z",
+      "transcript_at": "2026-07-30T12:16:36.730Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "finance-47fa42e8d040",
@@ -2747,7 +2762,21 @@
       "added_at": "2026-07-16T20:48:34.183Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-608b7a2f532f",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "The Australian Government Just Passed Legislation Supporting Insider Trading.",
+      "url": "https://invisiblebalancesheet.substack.com/p/the-australian-government-just-passed-309",
+      "excerpt": "It’s only legal in one market. The life insurance market. That probably sounds ridiculous. After all, insider trading is one of the most serious offences in financial markets. If you buy or sell shares while possessing material information that the rest of the market doesn’t have, you can face enormous fines and years in prison. Why? Markets don’t run on money. They run on information. Prices are simply the market’s opinion of that information. When one participant possesses material information that the other side doesn’t, markets stop rewarding good decisions and start rewarding information asymmetry. Governments don’t simply discourage insider trading. They criminalise it. Because confidence in markets depends on participants competing on reasonably equal information. Now imagine a different market. The government launches a national lottery. Every ticket costs $10. Before buying your first ticket, only some people are offered a once-off $10 test. The test doesn’t tell you the winning numbers. Instead, it tells you things like: The winning numbers are all prime numbers. The number 3 appears three times. None of the numbers are greater than 25. You still don’t know the winning numbers. But every lottery ticket you buy for the rest of your life comes with information that nobody else has. Should you still pay the same $10 as everyone else? Most people would instinctively say no. Because you aren’t buying the same lottery ticket anymore. You’re buying it with information. Now think about a casino. Card counting isn’t illegal. If you have an exceptional memory, you’re free to do it. But casinos will politely escort you to the door the moment they realise you’re doing it. Why? Because information changes the odds. You are no longer playing the same game as everyone else. Life insurance isn’t that different. Every month, you and the insurer are making a deal based on your expected future risk. The insurer prices that risk using the information available to both parties. You decide whether the premium is worth paying based on what you know about yourself. The entire system depends on both sides having access to the information needed to make a fair assessment. Which",
+      "enriched_at": "2026-07-30T12:16:36.730Z",
+      "published_at": "Thu, 30 Jul 2026 08:22:36 GMT",
+      "added_at": "2026-07-30T12:16:36.730Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-07-29T20:43:28.026Z"
+  "updatedAt": "2026-07-30T12:16:42.296Z"
 }
