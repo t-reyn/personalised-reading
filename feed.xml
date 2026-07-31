@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Thu, 30 Jul 2026 22:59:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 21:07:47 GMT</lastBuildDate>
+    <item>
+      <title>Your Ankle Can Pass a Hop Test and Still Not Be Ready for Basketball</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-01/clearing-the-hop-test-isnt-the-same-as-being-ready-to-cut.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-08-01/clearing-the-hop-test-isnt-the-same-as-being-ready-to-cut.html</guid>
+      <category>health</category>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Hop tests and a rebuilt training base clear a comeback on slow, controlled loading. Basketball loads the ankle in under a quarter of a second. That gap is real, measurable, and the most common thing a return-to-play checklist misses.</description>
+    </item>
     <item>
       <title>The Four Questions That Tell You What to Actually Charge</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-31/the-four-questions-that-tell-you-what-to-actually-charge.html</link>
@@ -396,14 +404,6 @@
       <category>mortgage-broking</category>
       <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
       <description>Three developments every AU broker needs to track as the financial year closes: lenders revising servicing calculators after Labor&#39;s investor tax reforms, APRA proposing new presale rules for development finance, and SME payment arrears on the rise.</description>
-    </item>
-    <item>
-      <title>Your First 10 Users: The Only Number That Matters at Launch</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-29/first-ten-users.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-29/first-ten-users.html</guid>
-      <category>indie-income</category>
-      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Getting early users for a consumer app is less about marketing and more about manual, targeted outreach — and in an AI world, taste is the skill that separates winners.</description>
     </item>
   </channel>
 </rss>

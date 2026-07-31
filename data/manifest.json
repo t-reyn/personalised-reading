@@ -1,8 +1,44 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-30T22:59:16.388Z",
-  "count": 61,
+  "generatedAt": "2026-07-31T21:07:47.410Z",
+  "count": 62,
   "articles": [
+    {
+      "id": "2026-08-01-clearing-the-hop-test-isnt-the-same-as-being-ready-to-cut",
+      "slug": "clearing-the-hop-test-isnt-the-same-as-being-ready-to-cut",
+      "interest": "health",
+      "interests": [
+        "health"
+      ],
+      "mode": "learn",
+      "title": "Your Ankle Can Pass a Hop Test and Still Not Be Ready for Basketball",
+      "summary": "Hop tests and a rebuilt training base clear a comeback on slow, controlled loading. Basketball loads the ankle in under a quarter of a second. That gap is real, measurable, and the most common thing a return-to-play checklist misses.",
+      "tags": [
+        "injury rehab",
+        "return to play",
+        "plyometrics",
+        "sports science",
+        "ankle"
+      ],
+      "created_at": "2026-08-01",
+      "expire_at": "2026-09-15",
+      "concepts_taught": [
+        "stretch-shortening-cycle",
+        "tendon-remodelling-timeline"
+      ],
+      "concepts_assumed": [
+        "hop-test-battery",
+        "limb-symmetry-index"
+      ],
+      "concepts_reinforced": [
+        "sleep-stages"
+      ],
+      "source_count": 3,
+      "word_count": 683,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-08-01/clearing-the-hop-test-isnt-the-same-as-being-ready-to-cut.html"
+    },
     {
       "id": "2026-07-31-the-four-questions-that-tell-you-what-to-actually-charge",
       "slug": "the-four-questions-that-tell-you-what-to-actually-charge",

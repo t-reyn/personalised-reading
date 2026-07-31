@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-30T22:47:56.467Z",
+  "generatedAt": "2026-07-31T20:54:31.471Z",
   "interests": {
     "software-ai": {
-      "days_since_last_article": 4,
+      "days_since_last_article": 5,
       "items": [
         {
           "id": "software-ai-42b08cef6bcb",
@@ -67,20 +67,27 @@
       ]
     },
     "design": {
-      "days_since_last_article": 7,
+      "days_since_last_article": 8,
       "items": [
+        {
+          "id": "design-e19253c464e8",
+          "title": "No New Name Has Replaced “UX”",
+          "excerpt": "A survey of 604 tech and design professionals found that “UX” remains the default name for our field, while alternative names remain fragmented.",
+          "url": "https://www.nngroup.com/articles/no-new-name-ux/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+          "kind": "article"
+        },
+        {
+          "id": "design-b33631a5a77c",
+          "title": "Why You Need Mentorship and How to Get It Right",
+          "excerpt": "Mentorship is an essential growth tool that offers substantial personal and career benefits, but only if you engage in it properly.",
+          "url": "https://www.nngroup.com/articles/mentorship/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+          "kind": "article"
+        },
         {
           "id": "design-8d2f31091c79",
           "title": "Jakob’s law: How to apply it as AI collapses surfaces into one chat box",
           "excerpt": "",
           "url": "https://uxdesign.cc/jakobs-law-how-to-apply-it-as-ai-collapses-surfaces-into-one-chat-box-d8ebc9a727db?source=rss----138adf9c44c---4",
-          "kind": "article"
-        },
-        {
-          "id": "design-abee95eff21f",
-          "title": "Rethinking friction in an AI world",
-          "excerpt": "",
-          "url": "https://uxdesign.cc/rethinking-friction-in-an-ai-world-8f361d62ab5e?source=rss----138adf9c44c---4",
           "kind": "article"
         },
         {
@@ -107,13 +114,6 @@
           "kind": "article"
         },
         {
-          "id": "design-378a5e42198e",
-          "title": "UX-Context Design: Using UX Knowledge to Inform AI-Generated Design",
-          "excerpt": "As more interface work is AI-generated, the output of research and design shifts from documents written for humans to curated context that guides AI.",
-          "url": "https://www.nngroup.com/articles/ux-context-design/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
-          "kind": "article"
-        },
-        {
           "id": "design-399e8e1b4b7a",
           "title": "AI systems are demanding new interaction models. Are designers ready?",
           "excerpt": "",
@@ -131,8 +131,23 @@
       ]
     },
     "indie-income": {
-      "days_since_last_article": 5,
+      "days_since_last_article": 0,
       "items": [
+        {
+          "id": "indie-income-e9e19b57a3ae",
+          "title": "Patrick Collison: \"What If You Succeed?\"",
+          "excerpt": "In 2009, Patrick and John Collison went to Startup School in Berkeley, got sushi in Potrero Hill afterward, and decided on the walk home to start Stripe. The reasoning, as Patrick remembers it, was that “we might as well because it probably won't be that hard.” It took two years to launch…",
+          "url": "https://www.youtube.com/watch?v=5d6y3poKwK4",
+          "kind": "video",
+          "source": "Y Combinator"
+        },
+        {
+          "id": "indie-income-a5ec8a6a04b8",
+          "title": "Why a $10 Million Solo Founder Ditched Claude for Chinese AI Models - Business Model Analyst",
+          "excerpt": "Why a $10 Million Solo Founder Ditched Claude for Chinese AI Models &nbsp;&nbsp; Business Model Analyst",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8ta0w5OFUxV0Y2TXlhTk11cE5VOTh5ZWJGY1Vib3hZVUlMWmRpV2hneUg1djJocEhDM3RDR1lUQVJwR0JudUJzMU9xVFUwZ0U0LXd3NkZna19GZmtocUNaOWRTTU9hRHRFblZYOEtfNGJSZXpHWHc?oc=5",
+          "kind": "article"
+        },
         {
           "id": "indie-income-9947af19da40",
           "title": "Jeff Dean: The 1% Rule for Building in AI",
@@ -142,25 +157,10 @@
           "source": "Y Combinator"
         },
         {
-          "id": "indie-income-9d6a85528403",
-          "title": "Multi-GPU Kernels, Intelligence per Watt, Heterogeneous Inference, and More | YC Paper Club",
-          "excerpt": "At our latest YC Paper Club, researchers and builders presented on multi-GPU kernel optimization, intelligence per watt for local inference, AI-generated GPU kernels and benchmarking, heterogeneous inference infrastructure design, and GPU-accelerated game engines for reinforcement learning. Thanks…",
-          "url": "https://www.youtube.com/watch?v=n8dz2FX0_uY",
-          "kind": "video",
-          "source": "Y Combinator"
-        },
-        {
-          "id": "indie-income-fb330462e716",
-          "title": "Give First Week: Six Non-Obvious Ways to Bootstrap Your Vision - Techstars",
-          "excerpt": "Give First Week: Six Non-Obvious Ways to Bootstrap Your Vision &nbsp;&nbsp; Techstars",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVmhFNmx4WkloVXJBMUdmZEdEWDNiNm5GbWlZV2t4a2ZLS2otcjNKUFN1MmZaMWc4WEJyellEVXpUbkJxV0Q4aUFIcUstT0lEZllzZjlGeXdIaXp1M2JmVnNURU1DSURKaUtRX1IxME1xTEFibUtleVYtallRR0MtejYwcEVYa1Q0ZGxyRkF3WjRIRUFfTkw4TE5mWnVXSTB6VGZTMVctTlI2eHc?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "indie-income-fbe00d6cc8ee",
-          "title": "Crypto industry consolidation: 2 projects own 67% of all app revenue, ARK warns - Cryptonews.net",
-          "excerpt": "Crypto industry consolidation: 2 projects own 67% of all app revenue, ARK warns &nbsp;&nbsp; Cryptonews.net",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9QQklFY1Q1OURwMnJuWTJCa1ZqY2JrYnhSeXJ6eVRWVXZ4RHFlRE9iX1BJOUFrY3RNMTJ0bWhOc0pJSG1CcnJZQkFmNUctSzVzNFJzUy04OEE?oc=5",
+          "id": "indie-income-0642ddeb7ee3",
+          "title": "How to Build a Unicorn with AI Agents: The Solo Founder's Guide to the Agentic Era - Founder Institute",
+          "excerpt": "How to Build a Unicorn with AI Agents: The Solo Founder's Guide to the Agentic Era &nbsp;&nbsp; Founder Institute",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNTJGU0FZcXdjWE5kSk5EcHM0ZTY3bktuME9fd19ZTUVtVldNbWtia21lMDNENGtPWUFYVWIxdGRJWFotVW9ncHlERHR2RVo3WTdEOHYtTzlQb2d1NHBfUFctdUJjN3FzLUR6azljVzhnaVlYVGE2VlBaTTRwd3dvUk4zRzU0UkVhOUlwZ0hvTmtLaGRPOWVuQU5INzhXMGNqeDY5cERB?oc=5",
           "kind": "article"
         },
         {
@@ -196,27 +196,34 @@
       ]
     },
     "mortgage-broking": {
-      "days_since_last_article": 3,
+      "days_since_last_article": 4,
       "items": [
         {
-          "id": "mortgage-broking-81a5631d4efa",
-          "title": "HSBC Sells $25.3B Australian Home Loan Portfolio to Blackstone - Global Banking & Finance Review",
-          "excerpt": "HSBC Sells $25.3B Australian Home Loan Portfolio to Blackstone &nbsp;&nbsp; Global Banking & Finance Review",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNVjRBcGY1NHU2cWU0RnZnVW8wYlBSLVo2WE1YV2JVVUowdS1yYUVfWF9PT2tXMGxIVzNKbjF5UzVhRjIxRTdvM2hnUHdDZ2NvcXIxYl9UMjczdkFURDRZUnQtM0NUUi1ieDFIdkYzRU9jc0JWaWpZYi1vV2hKNVFhaGZ6dDZQU2tCYWRnVHBrQnE4NVNfSjlCdWd3?oc=5",
+          "id": "mortgage-broking-95a7e4bf2777",
+          "title": "Mortgage refinancing: 4 lessons from 3 real homeowners | - Bankrate",
+          "excerpt": "Mortgage refinancing: 4 lessons from 3 real homeowners | &nbsp;&nbsp; Bankrate",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPNUpQTUMtU1NjbjBjelVGM09xS0hPckszVDlZS0hnMGY3VnNJbWZ1c1dBWWp1MlhNZUxVWnN0VUF1cXY0aVc2eTVXbFhvcDlmUGMzX1Ria0FKT1NiR19OQlZOMjhjdllIaFNMblVvNHllWERmeHZJVXU3S082YXZjVEJWOA?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-d91875592818",
-          "title": "HSBC to sell $25.3 billion Australian home loan portfolio to Blackstone - Reuters",
-          "excerpt": "HSBC to sell $25.3 billion Australian home loan portfolio to Blackstone &nbsp;&nbsp; Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWmNEbzNraXlwVEpqXzh4ZFBmZWlxQkk0Zk9WaVdhQ3owRHhzYWRUUnBjYnpyWG5ia3dlOTJNbFhNZzNPUGtZUVY5RkgtRzdYcklJUGp5MWRmWFhaT3RqcV80bS1JVnVBVm83UV9BWjdxSlVaUGlGVlJRQ0otYU5hVVI3TENKZ3o1UGFQTDdGenJTQjNJb2VjVUJXRnhGZlphdmkxQTBINXJVemZkU0pST2IwQlNyRFh2Vk13?oc=5",
+          "id": "mortgage-broking-3332ca450a88",
+          "title": "Headlam says refinancing progressing as looks to shore up finances - London South East",
+          "excerpt": "Headlam says refinancing progressing as looks to shore up finances &nbsp;&nbsp; London South East",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZmprbXV0dlV2RUdMNnB6NGdIWVEwNERrOGtoYVFwcTFPdVhXalVqaldsWmdCdW02QzJ1NlFlc2xOYVh4dzBoMXlIb3RRUE1iZEdaeEl4d2NqT3ZxUUNDVndITkZLUXpLb3lXa2duMHhWdzVfNzMxOHlRV3Rvb0JQYWY0QV9kYy1IdGE3UmFoOFczWXZpSGZNZ1dSYnVGSUFJYTJfY3ZEVzVXNFdRaXZZQVhOYjE?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-4aa5341f79ab",
-          "title": "HSBC to sell $25.3 billion Australian home loan portfolio to Blackstone - devdiscourse.com",
-          "excerpt": "HSBC to sell $25.3 billion Australian home loan portfolio to Blackstone &nbsp;&nbsp; devdiscourse.com",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPWXplT2Z3dFhva3Zvc2xFZTdfMU9fSlk2UTEyb1NqenVKZEZfMzlEMkNaTGlLNW9oM1lIM2VkR2l5MmhuZ21OaWhjZmtTMkphbHY4U3ZfOGtYZ1lkeENlcVNBVl9nVEdoS2swZ0ZjSFlLaU91cC1DR2Q1R1NKQXpGRFBtWlVGWU5HcmJfV3l1Y2JndVJGSWstb2kwYXZSM0o3UmN0YmxfTHM2WDRyNWkzMnlQd0gxaXIxa2wxU3JOU2bSAcYBQVVfeXFMTURMUzNPbG5nR3NjNHFSQzYyem9XQXJzUjhRRXZzbzNfZk9fQmYtVUF2clRKb3lma0ZLb1EzVldwU1FwWXNXTHNmQWhBSVBBazVwakNWV21odjloVV9sX09TVW4yeW1hZm94aWdHbjI2M3laRUdkT3FKODByNUlKTDZQdEJJRFc4Mm50ai1NZEtJaXFQbEtSV1NiT1FtMDlFT2FBMERYY0VXc2VUZ2FvSnFjQ3BYYWFhdUo1RklZc3JVNVVCUGNB?oc=5",
+          "id": "mortgage-broking-3a98f12ec85d",
+          "title": "Maisons du Monde announces the final completion of its refinancing - The Manila Times",
+          "excerpt": "Maisons du Monde announces the final completion of its refinancing &nbsp;&nbsp; The Manila Times",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNcGtTMVlIUFJDVU9tRTIzbVJRNmpKSjE3bUF3NV96T2lHajBrR2xnMF9za2s0TEI1OVdIRnR6bTJ1OVdUUXU0SHJVcmxOdlZLeE5TQnkzQXptVENEOVFWMFRJSVQ1Ykg0V0c2TzhkMklrLWhsUFFodElmX2EzdU1SNExHYzl6dDlsRTFwUGdZLWxENEF5ZXRmeEN0M21CZ0h3VEtjUkt1c3JzSHZYbWltaXVfNFFGZDVBdDhKWXBjSnd2clg4WEtKMThNUXNmQS1fT0owS3lpaw?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "mortgage-broking-f983b1019faf",
+          "title": "HSBC set to offload $36bn loan portfolio - Broker Daily",
+          "excerpt": "HSBC set to offload $36bn loan portfolio &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSVBhVmlJYTgtdU5NTjBQLWZHYnVRVlAyRVhUX3VQakQtV3F6V1BWM3lXVGVfUW14RXVhb0l1NXNScVBjdnkwcjVjQmZfbVNtN2JVRlp6WWpHaHFmVVJzUF9ab0NXV2lSRWYxYzBHMmNPRVlxbzQ4dWhDdXFSOW0zYU96eWNHT1JtRVdUYnROYnZoUEZiZTA3OVV2OHdmYUZUd0JOcg?oc=5",
           "kind": "article"
         },
         {
@@ -227,17 +234,10 @@
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-cea46118b977",
-          "title": "Broker policy round-up: Lender changes at a glance 24–31 July - Broker Daily",
-          "excerpt": "Broker policy round-up: Lender changes at a glance 24–31 July &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOUjZCYjE0N0tiVHRiOE1UZnFvNEYyb01qNW5OaFNxTTBSdjRTNDFfNTZ4WGo2OFI4MEFMS1ZOMWY3Yk5KZ3k2SmRrQmUwNjhrNzJxWHhTc2ZSejlmVmVtUDhDQVFWamh6ZUIyeFJzeTEyX2ZHS1U0OVhPUWVSTWlwNHdtcGFxeThsZEZtOFk2QVFhUEtzakt1WjRmZUFjc1VtODFFY3NRazY1dzlkRnY0?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "mortgage-broking-e5bc3c01689d",
-          "title": "Business Accelerator: Client success is a journey, not a destination - Broker Daily",
-          "excerpt": "Business Accelerator: Client success is a journey, not a destination &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcDdBODhKUmFpb3Ztalo2MzNCQmtYdHRaOE5FakN5OUFZRjRkME5QQU5xRElETmdnZHpKb0xScWRPWFJzRkF1X2laS2dFanc1dmlRRi1DWnlNWGxPNHhHb0MtVXRpbFdYd25ldVRhNkpQeVJfUWw2VEc3d05FVVpNSGhtMUo2a1I5Tm9CWURWZ1gzbjh0Sk0xeVlOV0xfeEJWUE02bXM3ZmFaZw?oc=5",
+          "id": "mortgage-broking-789bb2b96049",
+          "title": "New non-bank launches to challenge reverse mortgage market - Broker Daily",
+          "excerpt": "New non-bank launches to challenge reverse mortgage market &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMkZFQm9MbXRlNUlyeEVlZGdBcTBmcWRWMkNfWU8yUkttWGpWNHVRemg1RE0yZ05NSWRqVTZnOU95dXRkd0VvZ2hseHJSc2ZIMjVtU1N1Um8xRHhaTHY2dXlybWtkd2RQR2JEWFZnNVktajlTUDJpX3F0N2tlQmNwWVFhNmdib1NYV1ZZNkhxNllWOFQ4VTNnYw?oc=5",
           "kind": "article"
         },
         {
@@ -257,8 +257,15 @@
       ]
     },
     "property": {
-      "days_since_last_article": 0,
+      "days_since_last_article": 1,
       "items": [
+        {
+          "id": "property-7507f1640d1e",
+          "title": "Australia wanted cheaper homes. Now comes the hard part - AFR",
+          "excerpt": "Australia wanted cheaper homes. Now comes the hard part &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUU1mM0tkR1NzSm4zOXdtMVRZS01qQnRKZzlxYXN3RUJ1S0ZMd2ZUWFhYNk50SjZESm1Za2ZuQUx0aTdOcTJyUGZ3NXlCWTFiYUJYcWlRV0MwU2hWTmktYTJ4UEUtYXZ0WXFucmFwS2tmSUdZMzFkSDYwb2lGLU12Nm5jS2dsV0xRWmZlcnlvd2RoVkZyQWF4WlI2WmJWQi1GS0dYcEtuRzc?oc=5",
+          "kind": "article"
+        },
         {
           "id": "property-e2671d02d6c7",
           "title": "My No-Bullsh*t Advice | Should I Wait For Property Prices To Drop?",
@@ -291,13 +298,6 @@
           "source": "Personal Finance with Ravi Sharma"
         },
         {
-          "id": "property-b478f7708861",
-          "title": "Australian property still makes sense – but tax planning has changed - latest tax news - API Magazine - Australian Property Investor Magazine",
-          "excerpt": "Australian property still makes sense – but tax planning has changed - latest tax news - API Magazine &nbsp;&nbsp; Australian Property Investor Magazine",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOeG9lck1DZnRWU0FhckF4cndFNVRPM1FHUENtSmJsVklOM09aY1Z6TnRWc21pMHZCd2J1VUJGRkFkakRqN0V2c3BaTFJGUmFHeWNfMDdrZEFsYkg0VnU5T1hJZC1reTVOOVlBZ2dzaEpITXo3X3lOdGFvRm41SlFWdll6cVFDZ2c3eEpXWkd3T1hybHNuajZUXzJtcllmdzBSZVVLT3g5ZFBqb3pKbWFB?oc=5",
-          "kind": "article"
-        },
-        {
           "id": "property-c66c062a064e",
           "title": "How Diesel Mechanic Will Exit Job Through Property",
           "excerpt": "Hi everyone, my name's PK and here I have Zach Welsh who is a client of the Property Investment Accelerator. Zach lives in Perth and you know, on the southern side of Perth and that sort of broader Rockingham area, but more importantly he's bought two properties, two investment properties that is…",
@@ -323,13 +323,20 @@
       ]
     },
     "actuarial": {
-      "days_since_last_article": 1,
+      "days_since_last_article": 2,
       "items": [
         {
-          "id": "actuarial-5aa5ba7d9f96",
-          "title": "Taiwan life insurers reverse losses under IFRS 17 - Insurance Asia",
-          "excerpt": "Taiwan life insurers reverse losses under IFRS 17 &nbsp;&nbsp; Insurance Asia",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdE9BYnFpdS1vaTZ1czd4a3lVM09qem9kazVxNm5rSHhaWGcxbHZaOHd0SEJkZWdmaTY3NXV1dTROaTJmeE41UGdtb2tpNlZvMTFYSWp3ZzRLYm8yd0NsbDJpc0ZxeXlCNVNDd2g0VFV4TDZrSlo2ZEswTDl6dlZSblBWZ1NxUlV4LXJzaVlSYWxDdGdI?oc=5",
+          "id": "actuarial-df37f26db7cc",
+          "title": "MS Amlin names Laura Hobern chief actuary in dual leadership move - Insurance Business",
+          "excerpt": "MS Amlin names Laura Hobern chief actuary in dual leadership move &nbsp;&nbsp; Insurance Business",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQNDEzYXdUdzJWSnljZXlkNXJyWDZyYWhUMm9XcmdBWV9fUjVLSXBEM0lzOW5sbFgwS0F4Q1I0V2txUnc0cTRwSGY3ZkhTcWEwQUpIVWR0N0pjNmh6Q2wyUWZBWGsyS1oyR1FTSkZkSnM4Z2wtb2tzYXVkWWdKeUd2bGpXLXBHeUlWbFZOT3FjUW1SRTNiU1dwb1lQQldmSFRMemExeHRjRkVWdTl3LXp0cEE5cEk0OTQ2M1pJUVI4OXhXVHpaNkdXQ0VGZEVKY3I2eFFnRDFTV2gybDFZY3c?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "actuarial-fe435d9c92e3",
+          "title": "Liquidator probes Sphere trust account transactions",
+          "excerpt": "Sphere Insurance Group&rsquo;s liquidator has taken Federal Court action to freeze assets and gain information after finding on appointment that a client money trust account showed a balance of $44.15...",
+          "url": "https://www.insurancenews.com.au/daily/liquidator-probes-sphere-trust-account-transactions",
           "kind": "article"
         },
         {
@@ -337,13 +344,6 @@
           "title": "The Australian Government Just Passed Legislation Supporting Insider Trading.",
           "excerpt": "It’s only legal in one market. The life insurance market. That probably sounds ridiculous. After all, insider trading is one of the most serious offences in financial markets. If you buy or sell shares while possessing material information that the rest of the market doesn’t have, you can face…",
           "url": "https://invisiblebalancesheet.substack.com/p/the-australian-government-just-passed-309",
-          "kind": "article"
-        },
-        {
-          "id": "actuarial-d0b7f16efecc",
-          "title": "NIBA flags preferred ESL model, calls for broker recognition",
-          "excerpt": "Brokers have urged NSW to adopt an emergency services levy replacement model with enough finely graduated tiers to prevent &ldquo;material liability cliffs&rdquo;...",
-          "url": "https://www.insurancenews.com.au/daily/niba-calls-for-multilevel-esl-model-broker-recognition",
           "kind": "article"
         },
         {
@@ -393,41 +393,41 @@
       ]
     },
     "finance": {
-      "days_since_last_article": 2,
+      "days_since_last_article": 3,
       "items": [
         {
-          "id": "finance-2fb56e5c81d4",
-          "title": "Industry Super australia launches campaign against predatory superannuation tactics - Mi-3.com.au.",
-          "excerpt": "Industry Super australia launches campaign against predatory superannuation tactics &nbsp;&nbsp; Mi-3.com.au.",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOUJ4d0pYSk8zbmFkUS0zb2NYLTJKRzRfdzZBSUlRMWlQY0JVdlJhX0NSdHh6ZWgzR0dfSzF2QzFwZnlRbEFNdlBod0ZON0lCOHc1bTNpWFMxQ2hGZUwxbXJaYndWVXZmNV9uc05KT01QX2paYVNudFcwY3RFMlVJODlfcVZNcGNrci1PN0FiZFZld3A1a1VzU0NOVlF4OFJPUXBUYWs4ZHNFcnJDckZ6V0tEZW5BWnZaclE?oc=5",
+          "id": "finance-3522664d4e3d",
+          "title": "FIFA tests the limits of private equity in sports with World Cup subsidiary sale",
+          "excerpt": "UEFA and Concacaf's rejection of FIFA's plan to sell a 20% stake in the World Cup's commercial operations highlights uneasiness with private equity in sports.",
+          "url": "https://www.cnbc.com/2026/07/31/fifa-world-cup-private-equity-sports.html",
           "kind": "article"
         },
         {
-          "id": "finance-f9b7669e4a2a",
-          "title": "Microsoft's Xbox chief lays out plan to pass rivals on margin by 2030 in memo to employees",
-          "excerpt": "Microsoft's gaming unit wants to invest in its Minecraft franchise and expand through partnerships, including in China.",
-          "url": "https://www.cnbc.com/2026/07/30/microsoft-xbox-asha-sharma-2030-plans.html",
+          "id": "finance-8ac94f1b5e82",
+          "title": "How Leopold Aschenbrenner built a $45 billion AI hedge fund — and lost most of it in days",
+          "excerpt": "Leopold Aschenbrenner, a former OpenAI researcher-turned-hedge fund manager, saw a dramatic decline this week in his AI-focused fund, Situational Awareness.",
+          "url": "https://www.cnbc.com/2026/07/31/leopold-aschenbrenner-situational-awareness-fund-fire-sale.html",
           "kind": "article"
         },
         {
-          "id": "finance-31eee3f54e35",
-          "title": "Coinbase shares fall after crypto exchange posts disappointing second-quarter results",
-          "excerpt": "Coinbase's Thursday report marked its third straight quarter missing Wall Street's forecasts for revenue and earnings.",
-          "url": "https://www.cnbc.com/2026/07/30/coinbase-coin-earnings-q2-2026.html",
+          "id": "finance-5b86036ed5a4",
+          "title": "S&P cuts ZipRecruiter rating to B- on competitive pressure By Investing.com - Investing.com Australia",
+          "excerpt": "S&P cuts ZipRecruiter rating to B- on competitive pressure By Investing.com &nbsp;&nbsp; Investing.com Australia",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVjJtVUpTeXFiR2toM0xlTzZhTDZGR1RLUU9OcVBLU3Q2d3p1TFVJWC1wbmNlbzNGVWVJdWhYM2lHVWx3RERsTG52YmU3NGtXX2VfS3Mwb3NnUEpNTXp2S2s4N3dKY3lUUzBNemIzd1VwazZia3NGSXFMN3BTX2xFN0RQYTRxQTY4bzRaUnJhaGF6WjktZWs3cXQyaXFqcjRVUXI0bjdQZ29rYmtnY2xpY3hNTHREWjE4?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-5f52a34f91f6",
-          "title": "Mohawk Industries earnings beat by $1.09, revenue topped estimates - Investing.com Australia",
-          "excerpt": "Mohawk Industries earnings beat by $1.09, revenue topped estimates &nbsp;&nbsp; Investing.com Australia",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQ1kxWGdwb1hMdGtnNDlQQUVzY0ppOFpWcEkzbGJQNmJTTkk0a3FUWHZzaGZ2NGxrYXN2cjRoUldISW55aVczNjI3WnRjUDVxWDBCbTAwRHljTjYtMUdVNnBrSnhKS3dKUVZiTVdtaENxWV9ibVpRZlh0QW1vWURKai1uRFE0U1QxdjJoZXExVEV4WFJXUllCMk1ham8yWVd4NzlRWjdBUjJFaE91ZWMw?oc=5",
+          "id": "finance-f93bb1d5f56a",
+          "title": "Gold’s July Rebound Masks the Damage From a 16% Quarterly Collapse - Investing.com Australia",
+          "excerpt": "Gold’s July Rebound Masks the Damage From a 16% Quarterly Collapse &nbsp;&nbsp; Investing.com Australia",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSDRkQ0NyaldsbVdNSXhaUWlCYnViYTB6UFM4c1FVdWxSRkIwMkZPN2VDYTc1SFNmV1ljSUhxVG1MaHZpMmdpUDB0WElBN3VueEhLLUFncW96ZlZabG01cVV4NGE2QW9RczI1QTRSdDAtX1RpX013QlBXN2Etc2pWanNscWhLRHR1TDhWWEVhYXpkTWpaRGRJRUlHTU5HcTVSTE9iNUZjZFVZQzI3?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-f37efad5e0e8",
-          "title": "DeepSeek is developing a massive AI data centre in Inner Mongolia - AFR",
-          "excerpt": "DeepSeek is developing a massive AI data centre in Inner Mongolia &nbsp;&nbsp; AFR",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcjlZdm53RUMyek9mRTFic2p2MC1GUVpVQWZ0ZlVwRVlkb3dOY3FSaldMUUFKOEpvZ1RUcnlJMDgxSS1oTS1RZXR6a3NxUGxvd2V4eENGdWJrNW5XS2ZtY2pmanF4dnJpUkJsR0U5ZE5MWEVSM2RxMi1tVmtmRnIteWJCRTlyRU5RN0hoaXJPcnZrSHRIQ3I3QS1OVkFpSUNWbjJiRVJlS2FYN1lyS191azhR?oc=5",
+          "id": "finance-5d9bbfed41cc",
+          "title": "Firmus investors approve $2.9b for SA, Tasmania expansion - AFR",
+          "excerpt": "Firmus investors approve $2.9b for SA, Tasmania expansion &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQ2hieWo5UnIzWmZnVy1XcUZwclk1dkxKNnRQMm1ZQzYzTW9NSDFGd2owQkFMVTBOTWl2Y3dTSUg3TXVuRWU0UjR2M3hfNmNGZGxMUnlPY1pXQnVpOFZqdU0wemJVdm5VR2QyNXRxNmxzdmFxTnZ6R1pubFQzVHdfcE9ERjFfMHF4Z081ZTRUdDljSGNSWFN0REpPckJlcW13Q0wwUQ?oc=5",
           "kind": "article"
         },
         {
@@ -455,20 +455,20 @@
       ]
     },
     "health": {
-      "days_since_last_article": 9,
+      "days_since_last_article": 10,
       "items": [
         {
-          "id": "health-117a916d3c68",
-          "title": "Rewiring the Brain’s Sleep Circuitry With Electroacupuncture - Acupuncture Today",
-          "excerpt": "Rewiring the Brain’s Sleep Circuitry With Electroacupuncture &nbsp;&nbsp; Acupuncture Today",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTHZNbUEzQndXR1k1TE1lZHM5ellQa1lQMHFIUVdfdHRfQ3JfSlpaWnZObVpTeXdERVZCSHlUNnJUU09QNjhhWVVpMzRuVV9ReXAwUTZ3VWRVWDJ0ZUxZdHlQNk5JbXFTQ1JoUXJaSDZoU1VUVENVSTMyckg4UFozblJOaVhQS0JfVEc0WWR0Nkh6dFVjcnhIUktYUGU1LUhpeG4zdw?oc=5",
+          "id": "health-fe61dfa376c3",
+          "title": "Protein Restriction Improves Metabolism and Longevity - Neuroscience News",
+          "excerpt": "Protein Restriction Improves Metabolism and Longevity &nbsp;&nbsp; Neuroscience News",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBQMFQ2VEJJeDBkYzJEUld2UHdfaF9xUlpudTI3SFlZTHRpUzNGQkdBZTg2TEItenRsVUxhRG1oR3ZGcElmcTZXWmE5QVc2cF9lcS1oWnNDbFpfZEtGZTh2RFdlMFJqV25hR2pqakdPaF9VZw?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-75ba672eb45b",
-          "title": "Ping An launches AI longevity coaching across China - Insurance Asia",
-          "excerpt": "Ping An launches AI longevity coaching across China &nbsp;&nbsp; Insurance Asia",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTGtVcW5xanNyN3pwelZDNjktb2ZlSC1wOG5VNEt2c2xBX2xmSE9MT19xb3ZDeTdGd2I5LWkySVJRRWIyYkhUWnRYRXktNXVJZmZaZUZJS3VVb2FhS2gxZ2NudmFqSll3UUQzZUlCYXMtT09zb01ZZldHdm5qWXZOZ2hMZG5nUTdNTU5JaldKSHFBclE?oc=5",
+          "id": "health-5b4d8fc8aa7e",
+          "title": "Integrating Medicine into Sleep Care: A Holistic Approach to OSA Management - American Academy of Sleep Medicine | AASM",
+          "excerpt": "Integrating Medicine into Sleep Care: A Holistic Approach to OSA Management &nbsp;&nbsp; American Academy of Sleep Medicine | AASM",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOUtxR1lNbEhmblZsMlNaZlFBMXRKYkh6TVQzdUU1ZW1PY2ZubWU1czJoZ3VNNDMyUjRJM2FUYkVKTl96X1JUUTJBSFFRUms3MWlISDZLeTJMU25hN0h0eXBDYXBiaVVWLTl4TjI0UnFXX2N0c3laMEFZZlRLaHpYU09Gak9aSlFtVHQtZmdUVHI1QzIzQmxVQ3ZMTUVFWlk?oc=5",
           "kind": "article"
         },
         {
@@ -520,34 +520,34 @@
       ]
     },
     "videography": {
-      "days_since_last_article": 15,
+      "days_since_last_article": 16,
       "items": [
         {
-          "id": "videography-fa5cf7791b98",
-          "title": "The Filmmakers at Wonder Dynamics Building AI for Filmmakers",
-          "excerpt": "In this episode of the No Film School Podcast , Wonder Dynamics co-founders Tye Sheridan and Nikola Todorovic join GG Hawkins to explain how their filmmaking backgrounds shaped the development of AI-powered production tools for artists. They trace the company’s evolution from an interactive…",
-          "url": "https://nofilmschool.com/filmmakers-at-wonder-dynamics-building-ai-for-filmmakers",
+          "id": "videography-fd7df8b01b6f",
+          "title": "See What Atlas Lens Co.’s Mercury Series Anamorphics Look Like on the New Sony FX5",
+          "excerpt": "Well, this is a camera-and-lens combination we’re looking forward to seeing the cinematic results of. Spoilers: it looks awesome. Ever since the Sony FX5 was first officially announced , it’s been clear that this camera is something special. Powered by a 16.6MP full-frame stacked Exmor RS CMOS…",
+          "url": "https://nofilmschool.com/sony-fx5-lens-test-footage",
           "kind": "article"
         },
         {
-          "id": "videography-54ca15b212a6",
-          "title": "Stop Trying to Write a Hit, Says a Veteran Hollywood Screenwriter",
-          "excerpt": "I was just talking to my creative partner this week about the feature we want to make, and we hemmed and hawed about comps, how ours was unique, and whether it mattered. I told him we’re at the point in the process where we’re wondering if there was any point to what we were doing. I’ve been there…",
-          "url": "https://nofilmschool.com/glenn-gers-embrace-insignificance",
+          "id": "videography-de57344ec14c",
+          "title": "The 1948 Gregory Peck Western Movie That Became One of His Most Underrated Classics (Yellow Sky)",
+          "excerpt": "There are so many famous Westerns out there that are easy to find, but today, I want to talk about a lesser-known one that I consider to be a hidden gem. During the '40s and '50s, Hollywood was pumping out so many of these that they were easy to miss and even easier to forget. But hidden between…",
+          "url": "https://nofilmschool.com/yellow-sky",
           "kind": "article"
         },
         {
-          "id": "videography-ecbcd964f7f0",
-          "title": "Summer blockbusters that changed filmmaking forever - qz.com",
-          "excerpt": "Summer blockbusters that changed filmmaking forever &nbsp;&nbsp; qz.com",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9obDIzVUlZdVNsU2JqSUVQdkJldjMzeVdaMU1NeTIxLXNVRDMySFBZRFhUamN4QmxqamtvVzZZcGxGY09UUDdHMG1LSzRGN3FSUGVMdEh3clZLOWtBVE40YUtzc3MySzJPSHc?oc=5",
+          "id": "videography-8f01936150f1",
+          "title": "Filmmaking teams revealed for Australia's Film Lab: New Voices 2026 - IMDb",
+          "excerpt": "Filmmaking teams revealed for Australia's Film Lab: New Voices 2026 &nbsp;&nbsp; IMDb",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5PZmVrckNGYUJUQ1JLTzdPNm1PS1IwNUZ5VVZmR1lIbDgxeFpLVndGS3BzOHJvOWlaZ3VFbDFsQnJSckc1aFlrLVpSS0pEYUh1MnN3SGVWWlJEMHRqSnd6RHpPaElsdw?oc=5",
           "kind": "article"
         },
         {
-          "id": "videography-85eda0f76705",
-          "title": "Building Cinema Beyond Hollywood: Inside Yalan Hu’s Vision for Independent Filmmaking - MovieMaker Magazine",
-          "excerpt": "Building Cinema Beyond Hollywood: Inside Yalan Hu’s Vision for Independent Filmmaking &nbsp;&nbsp; MovieMaker Magazine",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSkppc3l4QURjMTByYVVMTkpiWHVBZDdNN1p1Zm1IVFFVU2lraHJuRWM4eDNxZU5fQ1FBenJ4Q0NiUWYzVHUzc1NWNUlrNGxBSGN5TlYwMXIxbk4zU05xNE4yS2czWWR4ZDJPcG56eEROMVBwNkREejNQdW9GTXR2VHJwd2wtMklBUXh0MjRpWDJWWXVZd3djZmNIaGxLVmNMbmctbG1BRmFFTDlVS3R0ZA?oc=5",
+          "id": "videography-5c07b2715e4e",
+          "title": "The Success of ‘The Odyssey’ Sends a Message About What Movie Lovers Want to See (And Make) - My Modern Met",
+          "excerpt": "The Success of ‘The Odyssey’ Sends a Message About What Movie Lovers Want to See (And Make) &nbsp;&nbsp; My Modern Met",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1xazZqUjVlNXdqNWktOXBVVkc5YXhjWUpOOXB6MWZGNVNjTVNKVzh4ZXNwUWxUbGxLN1ZQT3k1ZmVvamhRZmwybFV3SUs3ZUNnNDIzLVY0WUdwQlpndl94a3NtOVFhVVdiNzg2OA?oc=5",
           "kind": "article"
         },
         {
@@ -583,34 +583,41 @@
       ]
     },
     "science": {
-      "days_since_last_article": 16,
+      "days_since_last_article": 17,
       "items": [
         {
-          "id": "science-00759ae4bb55",
-          "title": "Seasonal Climate Outlook August - October 2026 - Earth Sciences New Zealand | NIWA",
-          "excerpt": "Seasonal Climate Outlook August - October 2026 &nbsp;&nbsp; Earth Sciences New Zealand | NIWA",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOERTVjB0UFVxdFVSLUp3Z0lPMEtHN0Nhc0RBSjJSbHRDTEFaTVF6RjlWMk5MSUcxTUIzQkJoMW82WDV6QWRXMEd3aUtBc1M4STFUQUYyaTlydGlSLUJEVVRuVG4yS1ROWW92cHZ2bzhRU0V4SGM4ZEs4SDh4YlNxOWJacGp5Z1dlNDkzcEZDZ0E5a2hmM2NGeEpGZXB2OEtWYkEweFFwQ3UwWmJE?oc=5",
+          "id": "science-2bc88ca20cc5",
+          "title": "From research to policy: Study turns EU wildfire assessments into a tool for better governance",
+          "excerpt": "Climate change, land-use change and socioeconomic pressures are turning wildfires from a primarily ecological process into a complex, systemic risk that cuts across ecosystems, infrastructure, public health, water resources, cultural heritage and rural livelihoods. Despite substantial investments…",
+          "url": "https://phys.org/news/2026-07-policy-eu-wildfire-tool.html",
           "kind": "article"
         },
         {
-          "id": "science-98df55aaa74c",
-          "title": "Rural runoff funnels hurricane floodwater toward coastal cities, model finds",
-          "excerpt": "Coastal cities are at increasing risk of compound flooding events, such as when heavy rainfall and storm surges occur simultaneously during hurricanes. However, the processes that contribute to urban compound flooding aren't well understood at smaller scales.",
-          "url": "https://phys.org/news/2026-07-rural-runoff-funnels-hurricane-floodwater.html",
+          "id": "science-61c285622113",
+          "title": "Newly discovered mechanism protects DNA during cell division",
+          "excerpt": "Every time a cell divides, it must accurately copy and distribute its DNA between two new cells. However, in some cases, chromosomes do not fully separate, leaving behind thin strands of DNA known as DNA bridges that connect the two newly formed cells.",
+          "url": "https://phys.org/news/2026-07-newly-mechanism-dna-cell-division.html",
           "kind": "article"
         },
         {
-          "id": "science-8f4187caea39",
-          "title": "Natural emulsion manages to stop fungus that threatens up to 80% of cocoa production",
-          "excerpt": "An innovative formulation based on natural compounds could become a sustainable alternative for controlling moniliasis, one of the most devastating diseases affecting cocoa in Latin America. A new study shows that emulsions combining fengycin—a lipopeptide produced by bacteria of the genus…",
-          "url": "https://phys.org/news/2026-07-natural-emulsion-fungus-threatens-cocoa.html",
+          "id": "science-322b1fb1c7ce",
+          "title": "Synthetic Biology Sheds Light On Microbial Evolution - miragenews.com",
+          "excerpt": "Synthetic Biology Sheds Light On Microbial Evolution &nbsp;&nbsp; miragenews.com",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMWVDc2VNUXFvTmxGTEJxQndGYTNyX1VLQ3FYSkpxeWlmUEt1bWwxVS1sSTZYanNLXzJocEUwOFg1X2lQUWRuT0tlVnVNZVBKa3F5eC1FZlZlNS12SXQyTWpJYWZBZjlVLUxyWTl1N25pTzg1clplSE1nbzNnTzhRVUduT0U?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-2ef7ad589f0d",
-          "title": "Europe's wildfires 'up to 20 times more likely due to climate change' - thenationalnews.com",
-          "excerpt": "Europe's wildfires 'up to 20 times more likely due to climate change' &nbsp;&nbsp; thenationalnews.com",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMU9SalQyWW5SUjV3OEJXbzFmYi1VaUpXQU1fd29NN3UyOEhMeU9oNVpwWmItVXZDTldUZkNYcDE0VlhySTFfWENnaFRyaGE2a1FLOWtZZXREMkY1X0Q5RFl4V19oMTRuajJ2UG42N3BldGtqdlNvUmkxSVptQ2xuY192UnlNcHFvMFd0cVQ1Z3hJYTRJR25FZHNRNjRjVmI2U1FwRF82Yzc4UDZTY1JtRXF6SVNBdTVocl9zSzRsNA?oc=5",
+          "id": "science-f2d085c33bcd",
+          "title": "Coral reef experts press on, with climate looming over international conference - news - Mongabay",
+          "excerpt": "Coral reef experts press on, with climate looming over international conference &nbsp;&nbsp; news - Mongabay",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdFpacDVmRDlrX0hkVHBmZFlvLVpocXNHcDdiOGIzdnhwenNwZGpDREh4cEx2T2hOYzNSQXZxV3Rpd1BoMWJwQ2stR2F2dU4zVjUwX1Y5S3ZxaWZpOUlDRjZ1cGVYRjA3NVNkODZFU0xZWTBOR3dmeEN5c21IQkpKMFUtUmpBRXBrdG5HV2lEaF9hYURQT1FiQVN5OE9Qd2lQM0pVUGh3REdLMURyUnlUYkY5RdIBuAFBVV95cUxNN2t5S3l4N3BPbHY3ZFM2RmtmN0xZdE9kdG1XcENuMnp0TmpwaVlpa29Jc2o2NXdBU3lOdHdWWmwwa2ZmRjVMOHJBNTM2dkpNSkRJVWtZVHFPakRpVkJHcVk0V3FTeTlnM05uQkphSFBoZEtBbVVZeUw4WFhFX095Wm9JV1Q1bGRLc01pSTFWNndKSXlHOVJLc242ZFF4X3FaVkl5NV9OcllDN05taWRuU3FBVDltT3U2?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "science-22964c82f3f9",
+          "title": "Is AI Reasoning Right for the Wrong Reasons?",
+          "excerpt": "The idea that artificial intelligence can “reason” is more intuitive than ever. But intuitions can be wrong, and the science is far from settled. The post Is AI Reasoning Right for the Wrong Reasons? first appeared on Quanta Magazine",
+          "url": "https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/",
           "kind": "article"
         },
         {
@@ -618,13 +625,6 @@
           "title": "What if the brain does not create consciousness?",
           "excerpt": "Christof Koch is taking on one of science’s deepest mysteries: how the brain creates conscious experience, or whether it creates it at all. He argues that materialism has yet to solve this “hard problem” and will explore puzzling phenomena such as near-death experiences and terminal lucidity. His…",
           "url": "https://www.sciencedaily.com/releases/2026/07/260729043829.htm",
-          "kind": "article"
-        },
-        {
-          "id": "science-ba8013846daa",
-          "title": "This 4,000-year-old city defied the rules of history",
-          "excerpt": "As Mohenjo-daro prospered, the gap between its richest and poorest households actually shrank. Its shared infrastructure, fair trade systems, and lack of powerful royal elites suggest that equality may have helped fuel the ancient city’s success.",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260729010730.htm",
           "kind": "article"
         },
         {
