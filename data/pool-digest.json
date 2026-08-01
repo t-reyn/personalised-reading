@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-31T20:54:31.471Z",
+  "generatedAt": "2026-08-01T20:41:03.983Z",
   "interests": {
     "software-ai": {
-      "days_since_last_article": 5,
+      "days_since_last_article": 6,
       "items": [
         {
           "id": "software-ai-42b08cef6bcb",
@@ -67,8 +67,22 @@
       ]
     },
     "design": {
-      "days_since_last_article": 8,
+      "days_since_last_article": 9,
       "items": [
+        {
+          "id": "design-00a1a875700c",
+          "title": "Why airlines are finally waking up to context-aware design",
+          "excerpt": "Your boarding pass has been sitting in that app for three days. But right now, as you sprint through Terminal 5, it’s the last thing you… Continue reading on UX Collective »",
+          "url": "https://uxdesign.cc/why-airlines-are-finally-waking-up-to-context-aware-design-9cdb67722d03?source=rss----138adf9c44c---4",
+          "kind": "article"
+        },
+        {
+          "id": "design-750f605c9d89",
+          "title": "Perplexity diverges with color",
+          "excerpt": "Building data color schemes with Generative AI. Continue reading on UX Collective »",
+          "url": "https://uxdesign.cc/perplexity-diverges-with-color-cad28cbe7bad?source=rss----138adf9c44c---4",
+          "kind": "article"
+        },
         {
           "id": "design-e19253c464e8",
           "title": "No New Name Has Replaced “UX”",
@@ -77,17 +91,10 @@
           "kind": "article"
         },
         {
-          "id": "design-b33631a5a77c",
-          "title": "Why You Need Mentorship and How to Get It Right",
-          "excerpt": "Mentorship is an essential growth tool that offers substantial personal and career benefits, but only if you engage in it properly.",
-          "url": "https://www.nngroup.com/articles/mentorship/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
-          "kind": "article"
-        },
-        {
-          "id": "design-8d2f31091c79",
-          "title": "Jakob’s law: How to apply it as AI collapses surfaces into one chat box",
-          "excerpt": "",
-          "url": "https://uxdesign.cc/jakobs-law-how-to-apply-it-as-ai-collapses-surfaces-into-one-chat-box-d8ebc9a727db?source=rss----138adf9c44c---4",
+          "id": "design-eb62bc5d20f2",
+          "title": "Small Joys And Big Adventures (August 2026 Wallpapers Edition)",
+          "excerpt": "Whether you’re enjoying some well-earned time off this August or are jumping headfirst into a new project, how about some new desktop wallpapers to accompany you on all those big and small adventures the month might bring? Well, we’ve got you covered!",
+          "url": "https://smashingmagazine.com/2026/07/desktop-wallpaper-calendars-august-2026/",
           "kind": "article"
         },
         {
@@ -107,13 +114,6 @@
           "source": "DesignCourse"
         },
         {
-          "id": "design-57507e1d0948",
-          "title": "The Bull And Bear Case For Digital Design In The Age Of AI",
-          "excerpt": "As AI reshapes product design, it could give designers greater autonomy or expose the gaps that autonomy makes harder to hide. Exploring both the bull and bear cases, Andy Budd examines what happens when designers need less permission to act.",
-          "url": "https://smashingmagazine.com/2026/07/bull-and-bear-case-digital-design-age-ai/",
-          "kind": "article"
-        },
-        {
           "id": "design-399e8e1b4b7a",
           "title": "AI systems are demanding new interaction models. Are designers ready?",
           "excerpt": "",
@@ -131,8 +131,22 @@
       ]
     },
     "indie-income": {
-      "days_since_last_article": 0,
+      "days_since_last_article": 1,
       "items": [
+        {
+          "id": "indie-income-25874bcaf5eb",
+          "title": "India's Mobile App Revenue Hits Record $345 Million in Q2 2026, Up 35% YoY: Report - ETV Bharat",
+          "excerpt": "India's Mobile App Revenue Hits Record $345 Million in Q2 2026, Up 35% YoY: Report &nbsp;&nbsp; ETV Bharat",
+          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNZGg4VUkxS0NXeXUyZFh5M1QxUE03OXRXTUFCM2RwYkFWVFJLRFhJRk1jejJudWhJSXRqU05PYlZDN0Fqa20wTDF1LTJ6NVdCSWVHTGdyWllsTFhtUl8ySjl3eTVsRTlRTV9fek9QX3ZkOEk4dEpGQll5RWlfTGYya2hsZ1h3TENBN28zTW5RVFRwU0xqUU90OWhHb3dYVVlmVVdPVHZORFYtTE1fZlZxZ1BVcnpkX0dqZDg4WHZTX0NYSm9ZaHlEbDRhQzlpS0trWWpBT2w2cVBNdDFVYUREWlRFV01vN0dxVEFrZkJnY1hNN03SAfgBQVVfeXFMT3ZRb09WdHR2S2xTdDMtLTREOVJsTHlpWlhBSnVvY3VrbnA2X19Jd2FjX2h3N2ljUG1fLUtsOUpoWXlNUVJQcDg0NG9SeHlIZnpaRnB5UTJtdWc2eXpOSkExcmphUHFBT291Q0FqOVhXSVpHaTZxeUNlckU0VmhkT2ZLNk1CcXhSUmZfX0FiZFZOUTd6ZEJBQnI3ek5QZzdEV3pQdWVhdF9mZHo5Q1pKdUdGRG44VVprTWJNcmdDOHV2anR5cmpaSHJPWlhJb3RxZ1p1cC0zNUlyMm5lVkJ5a3hSclV5cFBsZ1JQcW1lcjBPWXRFSUhoR1A?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "indie-income-25304ed7b53b",
+          "title": "India app revenue jumps 35% to record $345m in Q2 - Tech in Asia",
+          "excerpt": "India app revenue jumps 35% to record $345m in Q2 &nbsp;&nbsp; Tech in Asia",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5Fd0Qydnl4akFMV2RxZkNDX25kVkp4RnIyT19tRUhJRzFUUWo2dWVSOXFaSncxX0hYLWtYUjVIeF9nUHFnNGZPZGRJWDFOVjZsWG15eHI1UDhldkpvXzc1QXREVUFoTENDaGFqVzBSd2M1OVRzT053?oc=5",
+          "kind": "article"
+        },
         {
           "id": "indie-income-e9e19b57a3ae",
           "title": "Patrick Collison: \"What If You Succeed?\"",
@@ -142,26 +156,12 @@
           "source": "Y Combinator"
         },
         {
-          "id": "indie-income-a5ec8a6a04b8",
-          "title": "Why a $10 Million Solo Founder Ditched Claude for Chinese AI Models - Business Model Analyst",
-          "excerpt": "Why a $10 Million Solo Founder Ditched Claude for Chinese AI Models &nbsp;&nbsp; Business Model Analyst",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8ta0w5OFUxV0Y2TXlhTk11cE5VOTh5ZWJGY1Vib3hZVUlMWmRpV2hneUg1djJocEhDM3RDR1lUQVJwR0JudUJzMU9xVFUwZ0U0LXd3NkZna19GZmtocUNaOWRTTU9hRHRFblZYOEtfNGJSZXpHWHc?oc=5",
-          "kind": "article"
-        },
-        {
           "id": "indie-income-9947af19da40",
           "title": "Jeff Dean: The 1% Rule for Building in AI",
           "excerpt": "In 2001, Jeff Dean and Sanjay Ghemawat did the math and realized Google’s entire search index would fit in RAM — then shipped it in a few days, and search got fast. In 2013, another napkin calculation showed that three minutes of daily speech recognition per user would require doubling Google’s…",
           "url": "https://www.youtube.com/watch?v=CxXgV54KzpQ",
           "kind": "video",
           "source": "Y Combinator"
-        },
-        {
-          "id": "indie-income-0642ddeb7ee3",
-          "title": "How to Build a Unicorn with AI Agents: The Solo Founder's Guide to the Agentic Era - Founder Institute",
-          "excerpt": "How to Build a Unicorn with AI Agents: The Solo Founder's Guide to the Agentic Era &nbsp;&nbsp; Founder Institute",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNTJGU0FZcXdjWE5kSk5EcHM0ZTY3bktuME9fd19ZTUVtVldNbWtia21lMDNENGtPWUFYVWIxdGRJWFotVW9ncHlERHR2RVo3WTdEOHYtTzlQb2d1NHBfUFctdUJjN3FzLUR6azljVzhnaVlYVGE2VlBaTTRwd3dvUk4zRzU0UkVhOUlwZ0hvTmtLaGRPOWVuQU5INzhXMGNqeDY5cERB?oc=5",
-          "kind": "article"
         },
         {
           "id": "indie-income-32b3cb9a9aa1",
@@ -196,27 +196,27 @@
       ]
     },
     "mortgage-broking": {
-      "days_since_last_article": 4,
+      "days_since_last_article": 5,
       "items": [
         {
-          "id": "mortgage-broking-95a7e4bf2777",
-          "title": "Mortgage refinancing: 4 lessons from 3 real homeowners | - Bankrate",
-          "excerpt": "Mortgage refinancing: 4 lessons from 3 real homeowners | &nbsp;&nbsp; Bankrate",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPNUpQTUMtU1NjbjBjelVGM09xS0hPckszVDlZS0hnMGY3VnNJbWZ1c1dBWWp1MlhNZUxVWnN0VUF1cXY0aVc2eTVXbFhvcDlmUGMzX1Ria0FKT1NiR19OQlZOMjhjdllIaFNMblVvNHllWERmeHZJVXU3S082YXZjVEJWOA?oc=5",
+          "id": "mortgage-broking-1ef79c3409bd",
+          "title": "Why a one-year home loan fix may be better than two right now - RNZ",
+          "excerpt": "Why a one-year home loan fix may be better than two right now &nbsp;&nbsp; RNZ",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPekZfQXVSWHdFODh3OVNZUWdCdzI0OF9FNnB5ZnhYV2FoaUdwQTdhMkIwZXhJbHprZFNqTTV1Ni1zNW8tWXowZVB4Tk1BSERfN1ZjZjJfY19KRXRKbmFmRzFyNXRvb0ZxckFjYzlnYjNJSFB6dmlrdWtJU1dwb0lLcllmYlhiWUs1SVFtMVl4UEJZTExzS3ZxZ04wV1V0VGt3Rjctc0pQUi1EWlk3WnFaeWVn?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-3332ca450a88",
-          "title": "Headlam says refinancing progressing as looks to shore up finances - London South East",
-          "excerpt": "Headlam says refinancing progressing as looks to shore up finances &nbsp;&nbsp; London South East",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZmprbXV0dlV2RUdMNnB6NGdIWVEwNERrOGtoYVFwcTFPdVhXalVqaldsWmdCdW02QzJ1NlFlc2xOYVh4dzBoMXlIb3RRUE1iZEdaeEl4d2NqT3ZxUUNDVndITkZLUXpLb3lXa2duMHhWdzVfNzMxOHlRV3Rvb0JQYWY0QV9kYy1IdGE3UmFoOFczWXZpSGZNZ1dSYnVGSUFJYTJfY3ZEVzVXNFdRaXZZQVhOYjE?oc=5",
+          "id": "mortgage-broking-9f21615f559e",
+          "title": "Hurst projects $500,000 savings through bond refinancing - Fort Worth Report",
+          "excerpt": "Hurst projects $500,000 savings through bond refinancing &nbsp;&nbsp; Fort Worth Report",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUzhWWm55emRuTnlxZ0w0V3JUZFduQ3ZVWVpnS2RSeG0wZTV0NUZGOEFNVVV1Xzg5N3BVYTQ4dWxaYnpVX0k3dVZBeGJtVGFtb2lFb0JRRjk4cmNOYTAwb2k5bS1hRWstUFdmQzNkNmpiVTVRWmVtQ1R5UW9ieUFfSklMcDR5c2V5Z18ycm1EUHZZUlFicG1pbkNB?oc=5",
           "kind": "article"
         },
         {
-          "id": "mortgage-broking-3a98f12ec85d",
-          "title": "Maisons du Monde announces the final completion of its refinancing - The Manila Times",
-          "excerpt": "Maisons du Monde announces the final completion of its refinancing &nbsp;&nbsp; The Manila Times",
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNcGtTMVlIUFJDVU9tRTIzbVJRNmpKSjE3bUF3NV96T2lHajBrR2xnMF9za2s0TEI1OVdIRnR6bTJ1OVdUUXU0SHJVcmxOdlZLeE5TQnkzQXptVENEOVFWMFRJSVQ1Ykg0V0c2TzhkMklrLWhsUFFodElmX2EzdU1SNExHYzl6dDlsRTFwUGdZLWxENEF5ZXRmeEN0M21CZ0h3VEtjUkt1c3JzSHZYbWltaXVfNFFGZDVBdDhKWXBjSnd2clg4WEtKMThNUXNmQS1fT0owS3lpaw?oc=5",
+          "id": "mortgage-broking-cc59573413f0",
+          "title": "HomeBank, Federal Home Loan Bank to award $322,000 to Missouri nonprofits - whig.com",
+          "excerpt": "HomeBank, Federal Home Loan Bank to award $322,000 to Missouri nonprofits &nbsp;&nbsp; whig.com",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVkdNT3FMRUgyNkxhOWRCdkJOQkhGZVFLR1Bydkd5OXN1d3FvbkNqYkM0NXQyYWtLWHVoVTQxT2k4MnFWQVBZV2VWZnhfRy1zaHhFUi1fbGdON2tEOGlhWnEwRG5iY1JyV2N5My1ZUUdiWkgzQ2RkZmY0a1RWNlZobl9XUmNrdlBxbDUxNGNacFRwRDRvN3VqUk1mLVJhcUVU?oc=5",
           "kind": "article"
         },
         {
@@ -257,8 +257,16 @@
       ]
     },
     "property": {
-      "days_since_last_article": 1,
+      "days_since_last_article": 2,
       "items": [
+        {
+          "id": "property-acbef6555ff8",
+          "title": "The Trend That Will Crash The Aussie Housing Market?",
+          "excerpt": "Is the rise of buyer's agents actually putting the Australian property market at risk? I've built a community around a straightforward argument: most Australian investors do not need a buyer's agent. Reece Beddall from Follio Property Podcast discusses the pros & cons with me. LEARN MORE 👇 ❤️ JOIN…",
+          "url": "https://www.youtube.com/watch?v=OOCIGtADQJQ",
+          "kind": "video",
+          "source": "Australian Property Mastery with PK Gupta"
+        },
         {
           "id": "property-7507f1640d1e",
           "title": "Australia wanted cheaper homes. Now comes the hard part - AFR",
@@ -298,14 +306,6 @@
           "source": "Personal Finance with Ravi Sharma"
         },
         {
-          "id": "property-c66c062a064e",
-          "title": "How Diesel Mechanic Will Exit Job Through Property",
-          "excerpt": "Hi everyone, my name's PK and here I have Zach Welsh who is a client of the Property Investment Accelerator. Zach lives in Perth and you know, on the southern side of Perth and that sort of broader Rockingham area, but more importantly he's bought two properties, two investment properties that is…",
-          "url": "https://www.youtube.com/watch?v=GcRH1AN-D5Q",
-          "kind": "video",
-          "source": "Australian Property Mastery with PK Gupta"
-        },
-        {
           "id": "property-34711da334b4",
           "title": "The Rental Crisis Gets Worse!",
           "excerpt": "Australians are about to go and experience the biggest rental crisis that we've ever seen. And it feels like this is more pain on top of the pain that we've already felt over the last couple of years. You may remember that the government actually came out and said, \"Our modeling suggests that rents…",
@@ -323,13 +323,13 @@
       ]
     },
     "actuarial": {
-      "days_since_last_article": 2,
+      "days_since_last_article": 3,
       "items": [
         {
-          "id": "actuarial-df37f26db7cc",
-          "title": "MS Amlin names Laura Hobern chief actuary in dual leadership move - Insurance Business",
-          "excerpt": "MS Amlin names Laura Hobern chief actuary in dual leadership move &nbsp;&nbsp; Insurance Business",
-          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQNDEzYXdUdzJWSnljZXlkNXJyWDZyYWhUMm9XcmdBWV9fUjVLSXBEM0lzOW5sbFgwS0F4Q1I0V2txUnc0cTRwSGY3ZkhTcWEwQUpIVWR0N0pjNmh6Q2wyUWZBWGsyS1oyR1FTSkZkSnM4Z2wtb2tzYXVkWWdKeUd2bGpXLXBHeUlWbFZOT3FjUW1SRTNiU1dwb1lQQldmSFRMemExeHRjRkVWdTl3LXp0cEE5cEk0OTQ2M1pJUVI4OXhXVHpaNkdXQ0VGZEVKY3I2eFFnRDFTV2gybDFZY3c?oc=5",
+          "id": "actuarial-7eea90d9362c",
+          "title": "Actuary Permit Policy Extended to 2027 - Bernews",
+          "excerpt": "Actuary Permit Policy Extended to 2027 &nbsp;&nbsp; Bernews",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBnTDAxVEc5cG5IXzg2Q0dEUkxERWwyRUhKZm5wWUZETnJxQkU3NUJ4dHFNWEt4ajVLb0s5SU1PQkVNZGgyOWZyb3dhV3BTMVdKeHBKU0Z1aTFPYjVvczU5TU5aekFEQjF3TzhnbFBIdVZ4UQ?oc=5",
           "kind": "article"
         },
         {
@@ -393,50 +393,50 @@
       ]
     },
     "finance": {
-      "days_since_last_article": 3,
+      "days_since_last_article": 4,
       "items": [
         {
-          "id": "finance-3522664d4e3d",
-          "title": "FIFA tests the limits of private equity in sports with World Cup subsidiary sale",
-          "excerpt": "UEFA and Concacaf's rejection of FIFA's plan to sell a 20% stake in the World Cup's commercial operations highlights uneasiness with private equity in sports.",
-          "url": "https://www.cnbc.com/2026/07/31/fifa-world-cup-private-equity-sports.html",
+          "id": "finance-2d3f0f231021",
+          "title": "Goldman traders are on pace for a record year. A close-up look at how they're doing it",
+          "excerpt": "In a new interview with CNBC, a Goldman exec breaks down what's driving stocks, where markets are headed, and how the bank’s equities desk fuels its growth.",
+          "url": "https://www.cnbc.com/2026/08/01/goldman-traders-are-on-pace-for-a-record-year-a-close-up-look-at-how-theyre-doing-it.html",
           "kind": "article"
         },
         {
-          "id": "finance-8ac94f1b5e82",
-          "title": "How Leopold Aschenbrenner built a $45 billion AI hedge fund — and lost most of it in days",
-          "excerpt": "Leopold Aschenbrenner, a former OpenAI researcher-turned-hedge fund manager, saw a dramatic decline this week in his AI-focused fund, Situational Awareness.",
-          "url": "https://www.cnbc.com/2026/07/31/leopold-aschenbrenner-situational-awareness-fund-fire-sale.html",
+          "id": "finance-588855af9d62",
+          "title": "Berkshire Hathaway shares hit eight-month high",
+          "excerpt": "The conglomerate that Warren Buffett built rallied to an eight-month high this week. There could be more gains ahead if they play catch up with the S&P 500.",
+          "url": "https://www.cnbc.com/2026/08/01/-berkshire-hathaway-shares-hit-eight-month-high.html",
           "kind": "article"
         },
         {
-          "id": "finance-5b86036ed5a4",
-          "title": "S&P cuts ZipRecruiter rating to B- on competitive pressure By Investing.com - Investing.com Australia",
-          "excerpt": "S&P cuts ZipRecruiter rating to B- on competitive pressure By Investing.com &nbsp;&nbsp; Investing.com Australia",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVjJtVUpTeXFiR2toM0xlTzZhTDZGR1RLUU9OcVBLU3Q2d3p1TFVJWC1wbmNlbzNGVWVJdWhYM2lHVWx3RERsTG52YmU3NGtXX2VfS3Mwb3NnUEpNTXp2S2s4N3dKY3lUUzBNemIzd1VwazZia3NGSXFMN3BTX2xFN0RQYTRxQTY4bzRaUnJhaGF6WjktZWs3cXQyaXFqcjRVUXI0bjdQZ29rYmtnY2xpY3hNTHREWjE4?oc=5",
+          "id": "finance-5c3e3d6e6168",
+          "title": "Warren Buffett Has Endorsed Passive Investing for Decades. Here's the Exact Investment He Recommends Most People Buy. - Yahoo Finance",
+          "excerpt": "Warren Buffett Has Endorsed Passive Investing for Decades. Here's the Exact Investment He Recommends Most People Buy. &nbsp;&nbsp; Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcFV6SUUwMHp5MUd2VnhEM3FHQmFCRmtYSGwwaVpWeTZRODdNY1Jndkk5b0dOTEU1b0ZUQzBtY0sxZG5EU1lhMWZFaDViOGktYVk0aThkbEhYUFpxLXFBZXp4NnhTVk1TcWEwd0FYM2JqWHRRVndNcXlqam5vRk1wYnV1RkxHVzdjMzZUTlRuM05IOEVaOTIyVW9MNTJhajJFcTdkbHhjdTlrUQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-f93bb1d5f56a",
-          "title": "Gold’s July Rebound Masks the Damage From a 16% Quarterly Collapse - Investing.com Australia",
-          "excerpt": "Gold’s July Rebound Masks the Damage From a 16% Quarterly Collapse &nbsp;&nbsp; Investing.com Australia",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSDRkQ0NyaldsbVdNSXhaUWlCYnViYTB6UFM4c1FVdWxSRkIwMkZPN2VDYTc1SFNmV1ljSUhxVG1MaHZpMmdpUDB0WElBN3VueEhLLUFncW96ZlZabG01cVV4NGE2QW9RczI1QTRSdDAtX1RpX013QlBXN2Etc2pWanNscWhLRHR1TDhWWEVhYXpkTWpaRGRJRUlHTU5HcTVSTE9iNUZjZFVZQzI3?oc=5",
+          "id": "finance-0e4177bb8b14",
+          "title": "Should you invest in the stock market now? UBS weighs in By Investing.com - Investing.com",
+          "excerpt": "Should you invest in the stock market now? UBS weighs in By Investing.com &nbsp;&nbsp; Investing.com",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQSlZqWkllY0ZMOFZYWDExSFpWZ2cwU1BTNDB2bTVHTTlkTE1hVkl4UDgtOW5hZ24wN0hLZzdXdDBqbFEyS1BPdjBxS2pRUzBsdy1SRHRGMUMxcVRmT0dLVlN2X2c3akZHcGQ3NndmMTAzOGc1b3BQSXpNdVpTWFNSQlhWeFZzLXNQRVdhQmVVelZxVHRJMmNRdlRMdmRDX1Bqc1F3N2Y4U09OeTN2R2RPdldn?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-5d9bbfed41cc",
-          "title": "Firmus investors approve $2.9b for SA, Tasmania expansion - AFR",
-          "excerpt": "Firmus investors approve $2.9b for SA, Tasmania expansion &nbsp;&nbsp; AFR",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQ2hieWo5UnIzWmZnVy1XcUZwclk1dkxKNnRQMm1ZQzYzTW9NSDFGd2owQkFMVTBOTWl2Y3dTSUg3TXVuRWU0UjR2M3hfNmNGZGxMUnlPY1pXQnVpOFZqdU0wemJVdm5VR2QyNXRxNmxzdmFxTnZ6R1pubFQzVHdfcE9ERjFfMHF4Z081ZTRUdDljSGNSWFN0REpPckJlcW13Q0wwUQ?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "finance-8b2f0ded52c6",
-          "title": "The $1/Hour Robot Is Coming: Four Industry Leaders Explain What’s Next",
-          "excerpt": "Hey everybody, it's your boy Jay Cal. I'm here in Paris, [music] France at a conference called Machina. It's basically AI in the real world. [music] [music] Pardon my robot. Thanks for tuning in and uh let's get started. I'm going all in. >> Apploven started with an $8 domain and no VC funding and…",
-          "url": "https://www.youtube.com/watch?v=TqNiSTeNtb0",
+          "id": "finance-ed29de692187",
+          "title": "Chip Stocks Crash, $20B Fund Margin Called, Frontier Labs: SLOW DOWN AI, Mamdani's Grocery Stores",
+          "excerpt": "(0:00) Bestie intros (1:19) Chip stocks crash, Leopold Aschenbrenner's $20B fund gets margin called (20:20) China's advantage and green shoots for the US economy (34:12) Frontier Labs say \"SLOW DOWN AI\" (1:01:15) Why are frontier labs \"burning books\"? (1:14:45) Socialism Corner: Mamdani's grocery…",
+          "url": "https://www.youtube.com/watch?v=ViqYWhLimGg",
           "kind": "video",
           "source": "All-In Podcast"
+        },
+        {
+          "id": "finance-0fddbffddb03",
+          "title": "‘Unprecedented deluge’ of migrants sparks European backlash - AFR",
+          "excerpt": "‘Unprecedented deluge’ of migrants sparks European backlash &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcl80dWdhWE5QQzliX1dPSmpZQjMtSy1aWXk1OERKb1VoOXI3aXd1UlM0Q3JtdGVxVDNhMThFaUtPZ0loMW81QURkXzRhbnpPQ3dBbjRWMVNHSkZERHNGcW55c3Z5QnRMLTc0MjhEMHJSTjVlV2QzNzltR01mMURYLXA3dDZnRWZGdV94VjJ6a3BxX1BxamJTNWVGS3hGRi1ETVAxRTZETFhaZw?oc=5",
+          "kind": "article"
         },
         {
           "id": "finance-d031faa938e8",
@@ -455,27 +455,34 @@
       ]
     },
     "health": {
-      "days_since_last_article": 10,
+      "days_since_last_article": 0,
       "items": [
         {
-          "id": "health-fe61dfa376c3",
-          "title": "Protein Restriction Improves Metabolism and Longevity - Neuroscience News",
-          "excerpt": "Protein Restriction Improves Metabolism and Longevity &nbsp;&nbsp; Neuroscience News",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBQMFQ2VEJJeDBkYzJEUld2UHdfaF9xUlpudTI3SFlZTHRpUzNGQkdBZTg2TEItenRsVUxhRG1oR3ZGcElmcTZXWmE5QVc2cF9lcS1oWnNDbFpfZEtGZTh2RFdlMFJqV25hR2pqakdPaF9VZw?oc=5",
+          "id": "health-78f0a48c4aee",
+          "title": "11 Fitness: Guide to resistance bands and bodyweight training - WBAL-TV",
+          "excerpt": "11 Fitness: Guide to resistance bands and bodyweight training &nbsp;&nbsp; WBAL-TV",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNUkJjWkxDU1MxX1VEOXpIUDZkbTZrM3NiMlgtaExiRkJ6M1djWk8xejlZZl9KUmRmUUpvaHZuMDYtMWRmaWxhY2dIaENRbS1tVnRmSmJmcTExdE9sbWpvYVc4ZHYyZ2paWmVydG5nLUY3TzlUZ0JEUm5iRmxxbjg2cWkxWndVUQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-5b4d8fc8aa7e",
-          "title": "Integrating Medicine into Sleep Care: A Holistic Approach to OSA Management - American Academy of Sleep Medicine | AASM",
-          "excerpt": "Integrating Medicine into Sleep Care: A Holistic Approach to OSA Management &nbsp;&nbsp; American Academy of Sleep Medicine | AASM",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOUtxR1lNbEhmblZsMlNaZlFBMXRKYkh6TVQzdUU1ZW1PY2ZubWU1czJoZ3VNNDMyUjRJM2FUYkVKTl96X1JUUTJBSFFRUms3MWlISDZLeTJMU25hN0h0eXBDYXBiaVVWLTl4TjI0UnFXX2N0c3laMEFZZlRLaHpYU09Gak9aSlFtVHQtZmdUVHI1QzIzQmxVQ3ZMTUVFWlk?oc=5",
+          "id": "health-4b0862d559da",
+          "title": "Hundreds of minors sleep rough in Ceuta migrant crisis - Inquirer.net",
+          "excerpt": "Hundreds of minors sleep rough in Ceuta migrant crisis &nbsp;&nbsp; Inquirer.net",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZ1NzVUZiQ28zQndVYm9EZ201RTZnVlF2OUp3bmdtY1lOQWhZT1kzNjk1UkJIemRKMklHdzZ6MTJJLTBWOG14RVZiV0l4Q0dueHE3LVN5Z1d5bEFYRzdnVGk1dXptYWtnNTA1NER5WUhoRVlpYjVGYklPYXAwb21QY1ZmN0lfRHJHa0J3N3N0Z210cjd2UVQxSWt1UdIBoAFBVV95cUxNZl9LaFNGSkJHMlNnc1ZqVWJsUFFIOVJ4dkloUjI3R21BSDlWT3h4blF0ZTUxelRRS2NPOFhXYU80Z280TlZqR2I1ZWJmV2RxTkwwd25WM2lvTDB1V2lCa0xXWlRsNURiSl9oYjdSaHFDLTNVcktMX1VOYS1hUVFZMGV6bXZOUF9jalpVZjFDRllJNmItUDRnY3Y4S296M2tU?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-87ce44f52403",
-          "title": "Rice bran compound may help ease irritable bowel symptoms",
-          "excerpt": "A compound in rice bran may help calm an overactive gut by reducing the calcium signals that cause intestinal muscles to contract. Ferulic acid suppressed contractions triggered by several chemical messengers in laboratory experiments. The discovery could eventually support new dietary approaches…",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260729010742.htm",
+          "id": "health-5127a5c918f1",
+          "title": "Eating one avocado a day may lower heart disease risk",
+          "excerpt": "A daily avocado may help lower heart disease risk in adults with obesity by reducing the number of LDL particles circulating in the blood. After six months, participants who ate an avocado each day experienced a decline associated with an estimated 4% reduction in cardiovascular risk.",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260731034155.htm",
+          "kind": "article"
+        },
+        {
+          "id": "health-02e7469287d6",
+          "title": "Scientists may have found a way to prevent statin muscle pain",
+          "excerpt": "Scientists have identified an immune response that may explain why statins cause muscle pain, weakness, and exercise intolerance in some people. The finding could eventually lead to treatments that protect muscles while preserving the drugs’ lifesaving cardiovascular benefits.",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260731034152.htm",
           "kind": "article"
         },
         {
@@ -485,13 +492,6 @@
           "url": "https://www.youtube.com/watch?v=lxDf8uEypJU",
           "kind": "video",
           "source": "Andrew Huberman"
-        },
-        {
-          "id": "health-dc0cbeb6e2eb",
-          "title": "Daily multivitamin may help older adults stay independent",
-          "excerpt": "Taking a daily multivitamin may help older adults preserve the strength and stamina needed for everyday activities. After three years, users reported better functional health than those taking a placebo, although the preliminary findings still require peer review.",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260729010716.htm",
-          "kind": "article"
         },
         {
           "id": "health-760a07799a48",
@@ -520,34 +520,34 @@
       ]
     },
     "videography": {
-      "days_since_last_article": 16,
+      "days_since_last_article": 17,
       "items": [
         {
-          "id": "videography-fd7df8b01b6f",
-          "title": "See What Atlas Lens Co.’s Mercury Series Anamorphics Look Like on the New Sony FX5",
-          "excerpt": "Well, this is a camera-and-lens combination we’re looking forward to seeing the cinematic results of. Spoilers: it looks awesome. Ever since the Sony FX5 was first officially announced , it’s been clear that this camera is something special. Powered by a 16.6MP full-frame stacked Exmor RS CMOS…",
-          "url": "https://nofilmschool.com/sony-fx5-lens-test-footage",
+          "id": "videography-2220099ea809",
+          "title": "AI-Obsessed Filmmakers Are Making a Crucial Miscalculation - Bloomberg.com",
+          "excerpt": "AI-Obsessed Filmmakers Are Making a Crucial Miscalculation &nbsp;&nbsp; Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxON3BrLVhxN0ZBNHZUZU9mY3RLcWpyb2xOT3BqdXMwN0MxTDl2QW9xUl9UV0hfbG1rUHJhallLTUVGdU5LcFR3bElmNEF1ZzYzUEpjWElwU0xRdkJrOFViMEJKRzBEalhiSHdGb3lHT3JUUTVpdzc1Z2tiV2pHLTJaMkhrd2FBSW80aFp6dU1kR01DMXBSLVZfeGZYcU81Ti1kMEdSUXNHYmt5Wkl1REZtenBodFo1QQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "videography-de57344ec14c",
-          "title": "The 1948 Gregory Peck Western Movie That Became One of His Most Underrated Classics (Yellow Sky)",
-          "excerpt": "There are so many famous Westerns out there that are easy to find, but today, I want to talk about a lesser-known one that I consider to be a hidden gem. During the '40s and '50s, Hollywood was pumping out so many of these that they were easy to miss and even easier to forget. But hidden between…",
-          "url": "https://nofilmschool.com/yellow-sky",
+          "id": "videography-741b78601489",
+          "title": "How a bilingual production model is helping a British-Spanish filmmaking team stand out - IMDb",
+          "excerpt": "How a bilingual production model is helping a British-Spanish filmmaking team stand out &nbsp;&nbsp; IMDb",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9kU3l2VUdJbmdyYU5GTFZ4RzdjUmVkUHI1TXlwSlZsN0JpYlE2b3hfQ2liVHk0bUhFNGhDeVdzWkd0WlIwYlcweXVXU3NUaS1EdlhEMFMxQXczRFNSTmtMU3hrYWJlQQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "videography-8f01936150f1",
-          "title": "Filmmaking teams revealed for Australia's Film Lab: New Voices 2026 - IMDb",
-          "excerpt": "Filmmaking teams revealed for Australia's Film Lab: New Voices 2026 &nbsp;&nbsp; IMDb",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5PZmVrckNGYUJUQ1JLTzdPNm1PS1IwNUZ5VVZmR1lIbDgxeFpLVndGS3BzOHJvOWlaZ3VFbDFsQnJSckc1aFlrLVpSS0pEYUh1MnN3SGVWWlJEMHRqSnd6RHpPaElsdw?oc=5",
+          "id": "videography-c374ce407dbd",
+          "title": "This 1985 Soviet-Era War Film Remains the Most Powerful of All Time",
+          "excerpt": "The American perspective on war films is an interesting one, and it’s not one that general audiences tend to shy away from when experiencing war films. With that said, Elem Klimov’s 1985 Soviet masterpiece, Come and See, offers perhaps the most terrifying glimpse into the horrors of war in…",
+          "url": "https://nofilmschool.com/soviet-era-war-film-come-and-see",
           "kind": "article"
         },
         {
-          "id": "videography-5c07b2715e4e",
-          "title": "The Success of ‘The Odyssey’ Sends a Message About What Movie Lovers Want to See (And Make) - My Modern Met",
-          "excerpt": "The Success of ‘The Odyssey’ Sends a Message About What Movie Lovers Want to See (And Make) &nbsp;&nbsp; My Modern Met",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1xazZqUjVlNXdqNWktOXBVVkc5YXhjWUpOOXB6MWZGNVNjTVNKVzh4ZXNwUWxUbGxLN1ZQT3k1ZmVvamhRZmwybFV3SUs3ZUNnNDIzLVY0WUdwQlpndl94a3NtOVFhVVdiNzg2OA?oc=5",
+          "id": "videography-5e7324b58766",
+          "title": "5 Most Chilling Horror Documentaries About American History",
+          "excerpt": "The shower scene in Psycho (1960) didn’t just abruptly kill off Marion (Janet Leigh), who was seemingly the main character of the movie. It was a horrific set piece meticulously constructed by director Alfred Hitchcock to send shockwaves across moviegoers. Jumping ahead into the 1990s, it would be…",
+          "url": "https://nofilmschool.com/horror-documentaries-american-history",
           "kind": "article"
         },
         {
@@ -583,34 +583,48 @@
       ]
     },
     "science": {
-      "days_since_last_article": 17,
+      "days_since_last_article": 18,
       "items": [
         {
-          "id": "science-2bc88ca20cc5",
-          "title": "From research to policy: Study turns EU wildfire assessments into a tool for better governance",
-          "excerpt": "Climate change, land-use change and socioeconomic pressures are turning wildfires from a primarily ecological process into a complex, systemic risk that cuts across ecosystems, infrastructure, public health, water resources, cultural heritage and rural livelihoods. Despite substantial investments…",
-          "url": "https://phys.org/news/2026-07-policy-eu-wildfire-tool.html",
+          "id": "science-661c348f908d",
+          "title": "AI opens new era in cognitive studies of wild primates",
+          "excerpt": "Scientists created an AI system that uses facial recognition and real-time touchscreen testing to automate cognitive studies of capuchin monkeys in the wild. The American Journal of Primatology published a proof-of-concept for the novel method—dubbed CapuchinAI—developed by researchers at Emory…",
+          "url": "https://phys.org/news/2026-07-ai-era-cognitive-wild-primates.html",
           "kind": "article"
         },
         {
-          "id": "science-61c285622113",
-          "title": "Newly discovered mechanism protects DNA during cell division",
-          "excerpt": "Every time a cell divides, it must accurately copy and distribute its DNA between two new cells. However, in some cases, chromosomes do not fully separate, leaving behind thin strands of DNA known as DNA bridges that connect the two newly formed cells.",
-          "url": "https://phys.org/news/2026-07-newly-mechanism-dna-cell-division.html",
+          "id": "science-d1ed3be6aa19",
+          "title": "Mediterranean countries face new wildfires era, climate risks intensify - eKathimerini.com",
+          "excerpt": "Mediterranean countries face new wildfires era, climate risks intensify &nbsp;&nbsp; eKathimerini.com",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSzVqWXExbXh6M1lsZmw1N3ZEMHlGYzJhV0NuMExaQzN3ZjBEWkNlVDE4ZzNFc1JWSU9FZDdLWTZBUUJCemVkMXl6VW45ZjVCUFlDdDRvYksyTjFLYjVHMXhEUnU1QzJNVjM0c0lWdUJ1N1N5UVRlLThCbE9kSGZCQm85eVpiYTVueUZOaHdHSnJQTGx0R1RoajZZSEdDODFFMEsyMlloeWFfWFd5VEZRblpubWNUNXpYTklqcGdlbEplNE0?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-322b1fb1c7ce",
-          "title": "Synthetic Biology Sheds Light On Microbial Evolution - miragenews.com",
-          "excerpt": "Synthetic Biology Sheds Light On Microbial Evolution &nbsp;&nbsp; miragenews.com",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMWVDc2VNUXFvTmxGTEJxQndGYTNyX1VLQ3FYSkpxeWlmUEt1bWwxVS1sSTZYanNLXzJocEUwOFg1X2lQUWRuT0tlVnVNZVBKa3F5eC1FZlZlNS12SXQyTWpJYWZBZjlVLUxyWTl1N25pTzg1clplSE1nbzNnTzhRVUduT0U?oc=5",
+          "id": "science-6e013a5b47f1",
+          "title": "Electron cooling tames highly charged ions in Penning trap for first time",
+          "excerpt": "Researchers at Technical University of Darmstadt and the GSI Helmholtz Center for Heavy Ion Research have succeeded for the first time in decelerating highly charged ions from the GSI accelerator to low energies and subsequently storing them in a Penning trap. They were also successful in…",
+          "url": "https://phys.org/news/2026-07-electron-cooling-highly-ions-penning.html",
           "kind": "article"
         },
         {
-          "id": "science-f2d085c33bcd",
-          "title": "Coral reef experts press on, with climate looming over international conference - news - Mongabay",
-          "excerpt": "Coral reef experts press on, with climate looming over international conference &nbsp;&nbsp; news - Mongabay",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdFpacDVmRDlrX0hkVHBmZFlvLVpocXNHcDdiOGIzdnhwenNwZGpDREh4cEx2T2hOYzNSQXZxV3Rpd1BoMWJwQ2stR2F2dU4zVjUwX1Y5S3ZxaWZpOUlDRjZ1cGVYRjA3NVNkODZFU0xZWTBOR3dmeEN5c21IQkpKMFUtUmpBRXBrdG5HV2lEaF9hYURQT1FiQVN5OE9Qd2lQM0pVUGh3REdLMURyUnlUYkY5RdIBuAFBVV95cUxNN2t5S3l4N3BPbHY3ZFM2RmtmN0xZdE9kdG1XcENuMnp0TmpwaVlpa29Jc2o2NXdBU3lOdHdWWmwwa2ZmRjVMOHJBNTM2dkpNSkRJVWtZVHFPakRpVkJHcVk0V3FTeTlnM05uQkphSFBoZEtBbVVZeUw4WFhFX095Wm9JV1Q1bGRLc01pSTFWNndKSXlHOVJLc242ZFF4X3FaVkl5NV9OcllDN05taWRuU3FBVDltT3U2?oc=5",
+          "id": "science-30c07a8330b0",
+          "title": "Cause for hope in the face of climate change | Opinion - The Portland Press Herald",
+          "excerpt": "Cause for hope in the face of climate change | Opinion &nbsp;&nbsp; The Portland Press Herald",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVl9rZ3dzYk5mUVZPMm4xQnVHNF9uSFUtQlZNLTFfSDVoNS1zQ0NRRmtjS3docFp3N3Jmc1JQSnhGbEswZHNqTFpEU3M3bHQ3NkxlM0pXYm1MUDNZakRkem9QbEpFLTBaa3lhUGQ3Q05CZXJDa09iakRCeFlraHhpQTRFZDVydmVLbWNyQ0NOMVBlZlFPeDJR?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "science-e9ed16fba4b2",
+          "title": "NASA’s Curiosity rover finds a mysterious honeycomb landscape on Mars",
+          "excerpt": "NASA’s Curiosity rover has entered a Martian valley covered by an astonishing “sea” of tiny polygon-shaped fractures. The honeycomb patterns, each only a few inches wide, stretch across the landscape and even wrap around a nearby 20-foot-tall butte.",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260731034142.htm",
+          "kind": "article"
+        },
+        {
+          "id": "science-9685dc4fdab4",
+          "title": "Tiny black holes may be secretly exploding stars across the Milky Way",
+          "excerpt": "Primordial black holes may occasionally pass through white dwarf stars and trigger enormous Type Ia supernova explosions. Researchers found that these events could explain chemical patterns seen in supernova remnants, nearby explosions, and stars across the Milky Way.",
+          "url": "https://www.sciencedaily.com/releases/2026/07/260729051515.htm",
           "kind": "article"
         },
         {
@@ -618,20 +632,6 @@
           "title": "Is AI Reasoning Right for the Wrong Reasons?",
           "excerpt": "The idea that artificial intelligence can “reason” is more intuitive than ever. But intuitions can be wrong, and the science is far from settled. The post Is AI Reasoning Right for the Wrong Reasons? first appeared on Quanta Magazine",
           "url": "https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/",
-          "kind": "article"
-        },
-        {
-          "id": "science-313c367b49c8",
-          "title": "What if the brain does not create consciousness?",
-          "excerpt": "Christof Koch is taking on one of science’s deepest mysteries: how the brain creates conscious experience, or whether it creates it at all. He argues that materialism has yet to solve this “hard problem” and will explore puzzling phenomena such as near-death experiences and terminal lucidity. His…",
-          "url": "https://www.sciencedaily.com/releases/2026/07/260729043829.htm",
-          "kind": "article"
-        },
-        {
-          "id": "science-e176f15398a4",
-          "title": "Physicists Solve a Big Quantum Mystery. Now, Old Results Don’t Add Up.",
-          "excerpt": "New calculations seem to have put a 25-year-old particle physics puzzle to rest. But they’ve also created a clash with other experimental results. The post Physicists Solve a Big Quantum Mystery. Now, Old Results Don’t Add Up. first appeared on Quanta Magazine",
-          "url": "https://www.quantamagazine.org/physicists-solve-a-muon-mystery-now-old-results-dont-add-up-20260729/",
           "kind": "article"
         },
         {

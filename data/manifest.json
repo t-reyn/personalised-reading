@@ -1,8 +1,43 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-31T21:07:47.410Z",
-  "count": 62,
+  "generatedAt": "2026-08-01T20:49:53.988Z",
+  "count": 63,
   "articles": [
+    {
+      "id": "2026-08-02-line-length-and-leading-the-typography-your-type-scale-skipped",
+      "slug": "line-length-and-leading-the-typography-your-type-scale-skipped",
+      "interest": "design",
+      "interests": [
+        "design",
+        "software-ai"
+      ],
+      "mode": "learn",
+      "title": "The Line-Length Rule WCAG Enforces And Most Apps Ignore",
+      "summary": "A type scale fixes size, but two more numbers decide whether anyone finishes reading a paragraph: how many characters sit on a line, and how much space separates it from the next. One of them carries a hard accessibility cap most interfaces blow straight through.",
+      "tags": [
+        "typography",
+        "readability",
+        "accessibility",
+        "ux-fundamentals",
+        "css"
+      ],
+      "created_at": "2026-08-02",
+      "expire_at": "2026-10-01",
+      "concepts_taught": [
+        "line-length-measure",
+        "line-height-leading"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "type-scale",
+        "whitespace-rhythm"
+      ],
+      "source_count": 3,
+      "word_count": 782,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-08-02/line-length-and-leading-the-typography-your-type-scale-skipped.html"
+    },
     {
       "id": "2026-08-01-clearing-the-hop-test-isnt-the-same-as-being-ready-to-cut",
       "slug": "clearing-the-hop-test-isnt-the-same-as-being-ready-to-cut",

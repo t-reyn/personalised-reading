@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Line-Length Rule WCAG Enforces And Most Apps Ignore</title>
+  <meta name="description" content="A type scale fixes size, but two more numbers decide whether anyone finishes reading a paragraph: how many characters sit on a line, and how much space separates it from the next. One of them carries a hard accessibility cap most interfaces blow straight through." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="design">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-08-02-line-length-and-leading-the-typography-your-type-scale-skipped">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>🎨 Design &amp; Craft</p>
+        <h1>The Line-Length Rule WCAG Enforces And Most Apps Ignore</h1>
+        <p class="doc-meta">2 August 2026 · synthesised from 3 sources</p>
+        <p class="doc-summary">A type scale fixes size, but two more numbers decide whether anyone finishes reading a paragraph: how many characters sit on a line, and how much space separates it from the next. One of them carries a hard accessibility cap most interfaces blow straight through.</p>
+      </header>
+
+      <div class="doc-body">
+        <p>Pick the perfect type scale, nail the contrast ratio, and a paragraph can still feel exhausting to read. Size, weight and colour were never the whole typography story: two more numbers decide whether a reader's eye can actually track a line of body text — how many characters sit on that line, and how much space separates it from the next. One of those numbers carries a hard accessibility cap, and most interfaces built without it in mind blow straight through it.</p>
+
+        <h2>How long a line should run</h2>
+        <p>Typographers call a line's width the <strong>measure</strong>, and the working range hasn't moved much since it was first formalised in print: roughly 45 to 90 characters, tested with the two-alphabet trick (if a line comfortably fits two to three runs of the alphabet, it's in range). Go shorter and the eye breaks rhythm every few words; go longer and it loses the start of the line on the way back, the same problem a road sign creates at highway width. The Web Content Accessibility Guidelines make the long side non-negotiable: success criterion 1.4.8 caps a block of text at 80 characters per line (40 for CJK scripts), because low-vision and cognitive-disability readers are the first to lose their place when a line runs wide. A text container with no max-width set, the default on plain HTML, routinely produces 150-plus characters per line on a desktop monitor. Nothing about the words changed; only the browser window did. It's also why a comfortable desktop measure needs its own max-width rather than a fixed pixel width carried down from mobile: character count is what the eye is tracking, not physical screen space.</p>
+
+        <h2>Leading has to move with it</h2>
+        <p><strong>Line-height</strong>, still called leading after the strips of lead typesetters once used to space rows of metal type, is the second number, and it isn't independent of the first. The working rule of thumb sits at 120–145% of the font size, so 16px body text wants roughly 19–23px between baselines. WCAG's accessibility floor sits higher again, at 150%, because the extra vertical air is what lets a reader's eye find the start of the next line without hunting for it. Run the arithmetic on a default: a 16px paragraph at most CSS resets' 1.2 line-height gets only 19.2px of leading, more than 4px short of the accessible floor before a single style has been customised. The two numbers also trade off against each other: a short measure can get away with tighter leading, since the eye doesn't travel far to get back; stretch the measure toward 80 characters and leading needs to sit at or above that 150% floor, or the paragraph turns into a wall.</p>
+
+        <h2>Paragraphs need their own gap</h2>
+        <p>Whitespace rhythm already established that spacing signals structure rather than decoration; the same logic applies one level up, between paragraphs rather than between form fields. WCAG requires the gap above a paragraph to be at least 1.5 times the line spacing itself, so 24px of leading needs a paragraph gap of at least 36px. Most browser and CSS-reset defaults ship well under that: a bare paragraph tag gets roughly 16px of margin, under the floor before a line of custom CSS is written. That's why paragraph breaks in unstyled text still read as one grey block, even once the sentences technically end.</p>
+
+        <h2>Three numbers to set once</h2>
+        <p>AI-generated components are especially prone to skipping all three: a scaffolded form or card looks fine against placeholder text and only reveals a cramped, wall-like paragraph once real content replaces the lorem ipsum. None of this needs a design tool to fix. In CSS: cap the body copy's container at <code>max-width: 65ch</code> (the middle of the measure range, and a unit that tracks the font rather than a guess in pixels), set <code>line-height: 1.6</code> on paragraph text, and give paragraphs a bottom margin of at least one and a half times that line-height in real units. On a 16px base that's line-height 25.6px and a paragraph gap of at least 38px, comfortably inside WCAG's floor with room to spare. Set it once in a base stylesheet and every screen built afterwards inherits it, the same discipline a token file already gives colours and type scale, applied to the two numbers that actually decide whether someone finishes reading.</p>
+
+        <h2>Measure your longest paragraph tonight</h2>
+        <p>Open the screen in your own app with the most body text (a settings description, an onboarding step, an about page) and count characters across its widest line. Clear 90, or run a line-height tighter than one and a half times the font size, and that's the fix worth making before the next feature, not after it.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://practicaltypography.com/line-length.html" target="_blank" rel="noopener">Line Length — Practical Typography</a></li>
+          <li><a href="https://practicaltypography.com/line-spacing.html" target="_blank" rel="noopener">Line Spacing — Practical Typography</a></li>
+          <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html" target="_blank" rel="noopener">Understanding SC 1.4.8: Visual Presentation — W3C WAI</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-08-02-line-length-and-leading-the-typography-your-type-scale-skipped",
+  "slug": "line-length-and-leading-the-typography-your-type-scale-skipped",
+  "interest": "design",
+  "interests": ["design", "software-ai"],
+  "mode": "learn",
+  "title": "The Line-Length Rule WCAG Enforces And Most Apps Ignore",
+  "summary": "A type scale fixes size, but two more numbers decide whether anyone finishes reading a paragraph: how many characters sit on a line, and how much space separates it from the next. One of them carries a hard accessibility cap most interfaces blow straight through.",
+  "tags": ["typography", "readability", "accessibility", "ux-fundamentals", "css"],
+  "created_at": "2026-08-02",
+  "expire_at": "2026-10-01",
+  "concepts_taught": ["line-length-measure", "line-height-leading"],
+  "concepts_assumed": [],
+  "concepts_reinforced": ["type-scale", "whitespace-rhythm"],
+  "sources": [
+    { "title": "Line Length — Practical Typography", "url": "https://practicaltypography.com/line-length.html" },
+    { "title": "Line Spacing — Practical Typography", "url": "https://practicaltypography.com/line-spacing.html" },
+    { "title": "Understanding SC 1.4.8: Visual Presentation — W3C WAI", "url": "https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "A settings screen's body paragraph runs edge-to-edge on a widescreen monitor, hitting roughly 140 characters per line. Applying the measure guidance, what's the likely reading experience?",
+      "options": [
+        "Faster reading, since more words are visible in each glance",
+        "No effect — measure only matters in print layouts, not on screens",
+        "The eye loses its place tracking back to the start of each line, making the paragraph feel exhausting even though nothing else changed",
+        "It will fail a colour-contrast check, since long lines reduce contrast"
+      ],
+      "correct": 2,
+      "concept": "line-length-measure"
+    },
+    {
+      "q": "Body text sits at 16px with the browser's default ~1.2 line-height, and its paragraphs run close to the 80-character WCAG cap. What should change, applying the leading guidance?",
+      "options": [
+        "Line-height should rise to at least 1.5 (24px+), since a longer measure needs more vertical air for the eye to track back to the next line",
+        "Nothing — line-height only affects headings, not body copy",
+        "The font size should shrink instead, which fixes leading automatically",
+        "Switching to a serif typeface removes the need for extra leading"
+      ],
+      "correct": 0,
+      "concept": "line-height-leading"
+    },
+    {
+      "q": "An app's body and headings use a type scale of 16 / 20 / 25 / 31px. A teammate says the 16px body copy also needs its container width and line-height set deliberately. Why doesn't the type scale alone cover this?",
+      "options": [
+        "It does — once size is fixed, measure and leading are automatically correct",
+        "Type scale is only relevant to headings, never to body text",
+        "A type scale is measured in pixels, and CSS can't apply pixel values to line-height",
+        "Type scale only controls how big each level of text is; how wide a line runs and how much space separates lines are separate decisions it doesn't make"
+      ],
+      "correct": 3,
+      "concept": "type-scale"
+    },
+    {
+      "q": "Following whitespace rhythm, form fields are already spaced deliberately. Applying the same logic to paragraphs of body text, what does WCAG's guidance imply about the gap above each paragraph?",
+      "options": [
+        "Paragraphs don't need spacing rules — only form fields do",
+        "The gap should be at least 1.5 times the line spacing itself, the same 'space signals structure' logic applied one level up",
+        "Paragraph spacing should always equal exactly the font size in pixels",
+        "Whitespace between paragraphs actively hurts readability and should be minimised"
+      ],
+      "correct": 1,
+      "concept": "whitespace-rhythm"
+    }
+  ]
+}
+  </script>
+</body>
+</html>
