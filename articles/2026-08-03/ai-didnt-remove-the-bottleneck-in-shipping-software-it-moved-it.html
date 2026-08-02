@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>AI Didn't Remove the Bottleneck in Shipping Software. It Moved It.</title>
+  <meta name="description" content="When an agent can write code faster than any person can read it, the limit on how much you can safely automate stops being model quality and starts being how cheaply you can check what came out, and that number is set by your architecture, not your AI." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="software-ai">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-08-03-ai-didnt-remove-the-bottleneck-in-shipping-software-it-moved-it">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>💻 Software, AI &amp; App-building</p>
+        <h1>AI Didn't Remove the Bottleneck in Shipping Software. It Moved It.</h1>
+        <p class="doc-meta">3 August 2026 · synthesised from 3 sources</p>
+        <p class="doc-summary">When an agent can write code faster than any person can read it, the limit on how much you can safely automate stops being model quality and starts being how cheaply you can check what came out, and that number is set by your architecture, not your AI.</p>
+      </header>
+
+      <div class="doc-body">
+        <h2>The mouth got wider; the neck didn't</h2>
+        <p>Claude Code and Codex can turn out a working pull request faster than any person can read one, and that has quietly relocated the real constraint on vibecoded software. It used to be how fast the AI could generate code. Writing on 20 July, Google's Addy Osmani framed what replaced it: "the fundamental constraint in a software factory isn't how much code we can churn out: it's how quickly we can verify it." He borrows the factory metaphor deliberately. A "loop" is one agent doing a single job on repeat: gather context, take an action, check the result, go again. A "harness" is the sandbox, tools and memory around that loop. A "factory" is many harnessed loops running at once, fed by a queue and drained through a review gate. Manufacturing has run this exact trade-off since FANUC's fully automated "lights-out" plants in 2001 and Xiaomi's 2024 facility, where the lights stay off because only machines are working. Osmani calls the automation-with-no-human-review version a <strong>dark factory</strong>, and the version where a person still reads the output before it ships a <strong>light factory</strong>.</p>
+
+        <h2>The quiet, late reckoning</h2>
+        <p>Osmani cites Dex Horthy, founder of HumanLayer, who ran a fully autonomous dark factory for four months with no human code review at all. When something eventually broke, it wasn't dramatic. As Horthy put it, "it required painstaking manual debugging to pinpoint." That's the mechanism Osmani names <strong>comprehension debt</strong>: the widening gap between how much code exists and how much any human still understands. A dark factory doesn't pay that debt down. It borrows against it as fast as it can generate. "The ultimate reckoning, when it comes, will not be a dramatic 'it all goes sideways' moment. It will be quiet and late." Generation is a wide funnel mouth; verification is the narrow neck it all has to pass through. Speeding up the mouth just deepens the pile at the neck; it doesn't widen it.</p>
+
+        <h2>Architecture is what sets your verification bill</h2>
+        <p>This is where advice you've probably already half-absorbed gets a price tag attached. Engineering blogger CodeOpinion lists the coupling patterns that quietly make a codebase expensive to check: entity models built around plain CRUD, where an order object is just an ID, a status and a total, and "the business logic... often stays in the end users' heads" instead of the code; a shared database table used as the integration point between parts of a system, so nobody can say who owns a column or what breaks when it changes; and an abstraction wrapped around a single implementation: as CodeOpinion puts it, "you hide coupling behind interfaces rather than removing it." None of that is new advice. What's new is why it now matters more: every hidden coupling widens the blast radius of a change, and blast radius is exactly what an agent's check has to cover before you can trust its diff. An operation named <code>CancelOrder</code> instead of a generic <code>UpdateOrder</code> isn't a style preference any more: it's the difference between a check that can verify one intent and a check that has to reason about everything an "update" might mean.</p>
+
+        <h2>Where the rule actually bites</h2>
+        <p>YouTuber Chris Raroque's own build shows the boundary. His iMessage-based agent, Boop, already reached hundreds of tools through the integration platform Composio. The features people kept requesting instead were iMessage, Apple Notes and Apple Reminders, services with no public API at all, which Raroque says is "the reason... even ChatGPT and Claude don't have access to these things." He got there anyway, using Claude Code to reverse-engineer the access, and found it "a lot easier than I expected." That's precisely the move Osmani's rule warns about: "you can only hand a loop as much autonomy as you can cheaply and reliably verify, and not one inch more." An undocumented, unofficial integration has no contract to test against — the check on it can't be cheap or automatic, only manual and ad hoc, one feature at a time. Horthy's own "12-Factor Agents" guidance backs this with a number: agent loops hold together for roughly three to ten steps and reliably start losing the thread past twenty. A dozen small, checkable tasks beat one long unsupervised run, even when the long run would technically finish faster.</p>
+
+        <h2>Where to put the switch</h2>
+        <p>Osmani's closing image is a factory floor where you can't find the light switch. The fix isn't reviewing every line an agent writes; it's deciding, loop by loop, which ones have earned darkness. Pick one part of whatever you're building right now that currently ships without you reading the diff: a background job, a webhook handler, a data migration. Ask if the check on it is cheap, runs often and is hard to fake out. If it isn't, that's the light to turn back on first: not by babysitting the agent, but by adding the type, the test seam or the schema contract that lets a machine catch the mistake before it reaches you.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://addyosmani.com/blog/software-factories/" target="_blank" rel="noopener">Software Factories, Light and Dark — Addy Osmani</a></li>
+          <li><a href="https://codeopinion.com/5-software-architecture-mistakes/" target="_blank" rel="noopener">5 Software Architecture Mistakes That Make Systems Hard to Change — CodeOpinion</a></li>
+          <li><a href="https://www.youtube.com/watch?v=8R6fYMJLI5E" target="_blank" rel="noopener">I built an AI agent I actually use every day — Chris Raroque</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-08-03-ai-didnt-remove-the-bottleneck-in-shipping-software-it-moved-it",
+  "slug": "ai-didnt-remove-the-bottleneck-in-shipping-software-it-moved-it",
+  "interest": "software-ai",
+  "interests": ["software-ai"],
+  "mode": "current",
+  "title": "AI Didn't Remove the Bottleneck in Shipping Software. It Moved It.",
+  "summary": "When an agent can write code faster than any person can read it, the limit on how much you can safely automate stops being model quality and starts being how cheaply you can check what came out, and that number is set by your architecture, not your AI.",
+  "tags": ["ai-agents", "software-architecture", "verification", "vibecoding", "agentic-coding"],
+  "created_at": "2026-08-03",
+  "expire_at": "2026-08-24",
+  "concepts_taught": ["verification-bottleneck", "comprehension-debt"],
+  "concepts_assumed": [],
+  "concepts_reinforced": [],
+  "sources": [
+    { "title": "Software Factories, Light and Dark", "url": "https://addyosmani.com/blog/software-factories/" },
+    { "title": "5 Software Architecture Mistakes That Make Systems Hard to Change", "url": "https://codeopinion.com/5-software-architecture-mistakes/" },
+    { "title": "I built an AI agent I actually use every day", "url": "https://www.youtube.com/watch?v=8R6fYMJLI5E" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "You've told Claude Code to auto-merge any change to your app's billing logic as long as the existing test suite passes, but that suite has almost no coverage of billing edge cases yet. What does the verification-bottleneck argument say about this setup?",
+      "options": [
+        "It's risky, since the check isn't reliable for that path yet, exceeding what you can cheaply verify",
+        "It's fine, since a passing test suite is always a cheap and reliable check regardless of what it covers",
+        "It's fine, since comprehension debt only applies to fully autonomous dark-factory setups, not test-gated merges",
+        "It's risky, but only because the model might be too slow for billing-critical changes to run"
+      ],
+      "correct": 0,
+      "concept": "verification-bottleneck"
+    },
+    {
+      "q": "A team runs a fully autonomous coding pipeline for months with no human reviewing the generated code, similar to Dex Horthy's dark-factory experience. Based on comprehension debt, what should they expect when something finally goes wrong?",
+      "options": [
+        "A single dramatic failure, immediately obvious and easy to trace back to its root cause",
+        "Nothing at all, since comprehension debt only affects code style, never runtime behaviour",
+        "Faster debugging than usual, since the agents that wrote the code can explain any part of it instantly",
+        "A problem that surfaces quietly and late, hard to pin down since no one kept pace with the code"
+      ],
+      "correct": 3,
+      "concept": "comprehension-debt"
+    }
+  ]
+}
+  </script>
+</body>
+</html>

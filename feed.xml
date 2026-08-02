@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Sat, 01 Aug 2026 20:49:53 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2026 20:52:53 GMT</lastBuildDate>
+    <item>
+      <title>AI Didn&#39;t Remove the Bottleneck in Shipping Software. It Moved It.</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-03/ai-didnt-remove-the-bottleneck-in-shipping-software-it-moved-it.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-08-03/ai-didnt-remove-the-bottleneck-in-shipping-software-it-moved-it.html</guid>
+      <category>software-ai</category>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
+      <description>When an agent can write code faster than any person can read it, the limit on how much you can safely automate stops being model quality and starts being how cheaply you can check what came out, and that number is set by your architecture, not your AI.</description>
+    </item>
     <item>
       <title>The Line-Length Rule WCAG Enforces And Most Apps Ignore</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-02/line-length-and-leading-the-typography-your-type-scale-skipped.html</link>
@@ -396,14 +404,6 @@
       <category>software-ai</category>
       <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
       <description>AI capability is uneven across domains and tasks — what works brilliantly in one context fails unpredictably in another. Here&#39;s how to build a lightweight eval set so you know your AI feature actually works, instead of hoping it does.</description>
-    </item>
-    <item>
-      <title>The Life Insurance Code Gets 85 New Teeth — Kell&#39;s Final Report Lands</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-30/life-insurance-code-kell-review.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-30/life-insurance-code-kell-review.html</guid>
-      <category>actuarial</category>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Peter Kell&#39;s final review of the Life Insurance Code of Practice lands with 85 recommendations — up from 72 in April — centred on mental health claims handling, plus same-day evidence that code governance committees are actively enforcing, not just writing rules.</description>
     </item>
   </channel>
 </rss>

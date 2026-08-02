@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T20:41:04.560Z",
-  "asOf": "2 Aug 2026, 6:41 am AEST",
+  "updatedAt": "2026-08-02T20:43:23.585Z",
+  "asOf": "3 Aug 2026, 6:43 am AEST",
   "markets": [
     {
       "symbol": "^AXJO",
@@ -26,9 +26,9 @@
       "label": "AUD/USD",
       "currency": "USD",
       "unit": null,
-      "price": 0.7025,
-      "changePct": 0.95,
-      "display": "0.7025 (+0.9%)"
+      "price": 0.7055,
+      "changePct": 1.38,
+      "display": "0.7055 (+1.4%)"
     },
     {
       "symbol": "GC=F",
@@ -36,8 +36,8 @@
       "currency": "USD",
       "unit": "USD/oz",
       "price": 4107,
-      "changePct": 0.17,
-      "display": "4,107.0 (+0.2%)"
+      "changePct": 1.43,
+      "display": "4,107.0 (+1.4%)"
     },
     {
       "symbol": "CL=F",
@@ -45,8 +45,8 @@
       "currency": "USD",
       "unit": "USD/bbl",
       "price": 84.67,
-      "changePct": 1.29,
-      "display": "84.67 (+1.3%)"
+      "changePct": 0,
+      "display": "84.67 (+0.0%)"
     },
     {
       "symbol": "^VIX",
@@ -62,19 +62,19 @@
     {
       "id": "bitcoin",
       "label": "Bitcoin",
-      "aud": 89149,
-      "usd": 62529,
-      "changePct": -0.22,
-      "display": "A$89,149 (-0.2%)"
+      "aud": 89868,
+      "usd": 63366,
+      "changePct": 0.8,
+      "display": "A$89,868 (+0.8%)"
     },
     {
       "id": "ethereum",
       "label": "Ethereum",
-      "aud": 2613.36,
-      "usd": 1833.01,
-      "changePct": -1.25,
-      "display": "A$2,613 (-1.3%)"
+      "aud": 2665.77,
+      "usd": 1879.63,
+      "changePct": 2,
+      "display": "A$2,666 (+2.0%)"
     }
   ],
-  "summary": "ASX 200 8,976.8 (-0.7%) · S&P 500 7,489.7 (+2.4%) · AUD/USD 0.7025 (+0.9%) · Gold 4,107.0 (+0.2%) · WTI 84.67 (+1.3%) · VIX 15.99 (-6.4%) · Bitcoin A$89,149 (-0.2%) · Ethereum A$2,613 (-1.3%)"
+  "summary": "ASX 200 8,976.8 (-0.7%) · S&P 500 7,489.7 (+2.4%) · AUD/USD 0.7055 (+1.4%) · Gold 4,107.0 (+1.4%) · WTI 84.67 (+0.0%) · VIX 15.99 (-6.4%) · Bitcoin A$89,868 (+0.8%) · Ethereum A$2,666 (+2.0%)"
 }

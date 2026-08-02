@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-01T20:49:53.988Z",
-  "count": 63,
+  "generatedAt": "2026-08-02T20:52:53.793Z",
+  "count": 64,
   "articles": [
+    {
+      "id": "2026-08-03-ai-didnt-remove-the-bottleneck-in-shipping-software-it-moved-it",
+      "slug": "ai-didnt-remove-the-bottleneck-in-shipping-software-it-moved-it",
+      "interest": "software-ai",
+      "interests": [
+        "software-ai"
+      ],
+      "mode": "current",
+      "title": "AI Didn't Remove the Bottleneck in Shipping Software. It Moved It.",
+      "summary": "When an agent can write code faster than any person can read it, the limit on how much you can safely automate stops being model quality and starts being how cheaply you can check what came out, and that number is set by your architecture, not your AI.",
+      "tags": [
+        "ai-agents",
+        "software-architecture",
+        "verification",
+        "vibecoding",
+        "agentic-coding"
+      ],
+      "created_at": "2026-08-03",
+      "expire_at": "2026-08-24",
+      "concepts_taught": [
+        "verification-bottleneck",
+        "comprehension-debt"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 839,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-08-03/ai-didnt-remove-the-bottleneck-in-shipping-software-it-moved-it.html"
+    },
     {
       "id": "2026-08-02-line-length-and-leading-the-typography-your-type-scale-skipped",
       "slug": "line-length-and-leading-the-typography-your-type-scale-skipped",
