@@ -605,11 +605,14 @@
       "title": "Patrick Collison: \"What If You Succeed?\"",
       "url": "https://www.youtube.com/watch?v=5d6y3poKwK4",
       "source": "Y Combinator",
-      "excerpt": "In 2009, Patrick and John Collison went to Startup School in Berkeley, got sushi in Potrero Hill afterward, and decided on the walk home to start Stripe. The reasoning, as Patrick remembers it, was that “we might as well because it probably won't be that hard.” It took two years to launch. Seventeen years later, at Startup School 2026, he talks with YC's Harj Taggar about dropping out of MIT twice",
+      "excerpt": "Okay, Patrick. Thanks so much for being here. Welcome to Startup School. >> Great to be here. Harj and I first met 20 years ago and um uh he um we started a company together. I was going to give away the introduction. >> Yeah, I I thought this was my interview, but keep going. You're doing a good job. >> Well, we started a company together many many years ago and uh I learned a huge amount from Harj. So it's a it's really fun to do this. >> All right, let's um Well, actually I mean speaking of that. So when I think when I first met you 20 something years ago at the time your most impressive achievement I would argue was Chroma, your dialect of Lisp. >> Any Lisp programmers here? Oh, wow. Okay, that was um I think I heard one whoop, which is more than I expected. Um but uh yeah, I I really liked Lisp when I was in high school. >> Yeah, so what I was going to ask is um a prolific 16-year-old today could presumably just like prompt Claude to write their their Lisp dialect. Would you would you advise them to not do that and still still do it? Is there Is there any value in such things? >> I don't know. I wonder a lot. Um Yeah, like I was saying on the one hand uh it used to be really fun to write all this assembly and machine code and to optimize your instructions and make layout in memory and everything and now we don't have to do that anymore. Compilers do it for us. We don't mourn it too much. And so maybe in the same way we shouldn't mourn source code. We should just transcend the plane of uh instructions to Claude at all, but um but emotionally I miss it. >> Um How about I you think just like as I've been hanging out here um with these students like they're so like maybe the question behind it is many of them are just wondering what should they be learning at college? Like what is sort of in this sort of AI world like how much how much should they be trying to learn and derive from first principles and how much should they just outsource to the to the AI? >> Right. Um, I mean, my model of this is, um, is cache. Um, you know, the c h not an s h, where Jeff Dean has this, uh, famous set of numbers that every programmer should know, uh, bandwidths and latencies an",
       "published_at": "2026-07-31T17:29:06+00:00",
       "added_at": "2026-07-31T20:54:22.227Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-02T12:27:38.632Z",
+      "transcript_at": "2026-08-02T12:27:38.632Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-a5ec8a6a04b8",
@@ -632,11 +635,14 @@
       "title": "Jeff Dean: The 1% Rule for Building in AI",
       "url": "https://www.youtube.com/watch?v=CxXgV54KzpQ",
       "source": "Y Combinator",
-      "excerpt": "In 2001, Jeff Dean and Sanjay Ghemawat did the math and realized Google’s entire search index would fit in RAM — then shipped it in a few days, and search got fast. In 2013, another napkin calculation showed that three minutes of daily speech recognition per user would require doubling Google’s server fleet. That one became the TPU. At Startup School 2026, Google’s Chief Scientist talks with YC’s ",
+      "excerpt": "All right. Should we go Should we get started, Jeff? >> Sure. Sounds great. >> All right. Jeff, welcome. And again, thank you so much for being here. Especially I just got a cold and thank you for being here. >> Yeah, I'm afraid I've lost my voice. I don't normally sound quite like this, but we'll we'll do what we can. >> So, um, you built map reduce, big table, tensorflow, the TPU, Gemini. We could spend a whole hour on all the things you've done, but what I love is that you're still making bold predictions in public. Last year, yes, last year in May 2025 at AI Ascent, you said that AI is at the level of a junior engineer. That was about a year ago. It's been How close are we to that prediction? Yeah, I mean I feel like uh the models have been getting a lot better at sort of agent-based longer running coding tasks and it seems pretty clear that they are now actually pretty capable and depending on exactly your definition of of junior engineer it seems pretty spot-on I would say. >> What did you underestimate from that prediction? Um I mean I think the the ability to do more and more complex tasks has been growing faster than I thought. Um and I also think uh outside of coding these these agent-based systems are are really starting to shine in other domains and I I think uh you know uh that's that's going to be an important trend in the future. >> So [snorts] give us another bold prediction. What do you think is going to be the 2027 edition? >> Uh I think you will see a lot more automation of uh ML systems themselves. um basically getting ML systems to improve their capabilities by running lots of experiments, breaking things down into subpros, you know, running those subpros in a tight automatic experimentation loop, putting the results together and being able to then uh you know, get some improved system uh out from that uh sort of fully automated problem decomposition and and automated experimentation that I think that's going to be really exciting. M >> I think that also applies not just to ML but also to other fields of science and engineering. Um basically anything where you can have a measurable objective uh I I think you can uh actually make a lot of pro",
       "published_at": "2026-07-30T21:03:53+00:00",
       "added_at": "2026-07-30T22:47:46.484Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-02T12:27:38.632Z",
+      "transcript_at": "2026-08-02T12:27:38.632Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-0642ddeb7ee3",
@@ -672,11 +678,14 @@
       "title": "Multi-GPU Kernels, Intelligence per Watt, Heterogeneous Inference, and More | YC Paper Club",
       "url": "https://www.youtube.com/watch?v=n8dz2FX0_uY",
       "source": "Y Combinator",
-      "excerpt": "At our latest YC Paper Club, researchers and builders presented on multi-GPU kernel optimization, intelligence per watt for local inference, AI-generated GPU kernels and benchmarking, heterogeneous inference infrastructure design, and GPU-accelerated game engines for reinforcement learning. Thanks to the following presenters: Stuart Sol (Stanford / Cursor), John (Stanford), Mark (PyTorch / GPU Mod",
+      "excerpt": "[music] Welcome to uh YC Mountain View special edition of YC Paper Club. I'm thinking about some of the feedback was like kind of making it theme related. So today it's the YC kernel and chip club. So the trend that I see in lab with Stu and John that we talk about all the time is this like specialization that's happening. Uh we saw it with um TPU8 the I and the T version zebra fish and sunfish. Is that what it's called? It's like to make an ASIC you need such activation energy. Um and now and there wasn't enough demand for there to be such a split. But we just see that at the chip level there's going to be massive specialization. The specs that you would need for a training data center are going to be very different than the specs for a uh inference data center. You don't need any bandwidth in and out for a training data center. You can literally send a spaceship to the sun, come back with a weight file and like it's it's the same, right? You can't do that with inference. And there's so many things like that that we'll talk about. And there's so much juice left to squeeze on the CUDA side, on the kernel side. And so I'm really excited to have um some folks talk about that. And there's juice to squeeze on the algorithm side. And so like you know do we need to go to the big heavy model every single time for every single query if I'm asking it one plus one why do I have to do n flops every single time. So it doesn't there's so much juice to squeeze still on the algorithm side on the uh um on let's call it software side and on the chip side and on the data center side. And so first we'll have um Stuart Soul out of uh my lab at at Stanford one of my lab mates. Uh he is which is the strip mall research lab now um used to be called hazy formerly called hazy uh research scientist at curser um and trains composer and then we have John uh CSPHD labm mate with me as well also co-advised by Aelia focused on LMS MLIS and hardware and really focuses uh really I would say pioneers this idea of intelligence efficiency intelligence per watt intelligence per jewel um he'll be talking about And then uh we have Mark coming up next, a former PyTorch maintainer uh co-founded uh GPU ",
       "published_at": "2026-07-29T23:46:52+00:00",
       "added_at": "2026-07-30T20:56:45.532Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-02T12:27:38.632Z",
+      "transcript_at": "2026-08-02T12:27:38.632Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-741db8d0e068",
@@ -1112,11 +1121,14 @@
       "title": "The Trend That Will Crash The Aussie Housing Market?",
       "url": "https://www.youtube.com/watch?v=OOCIGtADQJQ",
       "source": "Australian Property Mastery with PK Gupta",
-      "excerpt": "Is the rise of buyer's agents actually putting the Australian property market at risk? I've built a community around a straightforward argument: most Australian investors do not need a buyer's agent. Reece Beddall from Follio Property Podcast discusses the pros & cons with me. LEARN MORE 👇 ❤️ JOIN THE COMMUNITY & GET FREE SUBURB TIPS + STRATEGIES DISCLAIMER: No Legal, Financial & Taxation Advice ",
+      "excerpt": "Since 2015, the rise of the buyers agent industry has been phenomenal. Historically, before buyers agents blew up, people were buying perfectly great properties, accruing large portfolios since the 60s, 70s, 80s, 90s, early 2000s, retiring early, earning passive income, all the rest of it. Ones that use data but then misinterpret it or distort it to aid the business model of their own organization, those are the dangerous types of buyers agents. >> This particular person had a budget about 1.1 mil and this buyers agent service was pitching two highly speculative assets, 500k each. So, that's probably where we see the risk and we've run into those types of clients pretty regularly. >> The Australian property market has matured and evolved. Investors can genuinely move markets and sustain that movement. I mention a suburb on a YouTube video, that thing's going to go up 40k in the next 2-3 months. I don't know what to do about that, but like you Reece, I really question the ones that don't use data correctly. So, I really encourage people to listen to podcasts like yours, which is very data heavy, and make up their own mind on these things. >> You're listening to the Folio Property Podcast. I'm Reece Biddle. I want to welcome PK Gupta. For those that don't know PK, uh he's built up a a big online community in the property investment space and particularly more focus on the do-it-yourself model rather than going through the buyers agent services that there's a lot of uh investor groups out there. So, I thought it'd be great to pick his brain on on the model and where he sees the industry and also a little bit on on where the Australian market is. So, PK, it's a good morning for me, but it's a good afternoon to to you. >> Thanks so much for having me, Reece. I'm very grateful that you reached out and we could make this happen. And yes, sorry you had to hire a studio to have me on. >> [laughter] >> It's all right. This is the uh fourth time I think I've been in the studio this week. So, I'm I'm now probably the number one client. So, it's all good, mate. They'll be looking after me. PK, I thought, \"Look, let's just touch base and and I'd love to get your thoughts on w",
       "published_at": "2026-08-01T08:00:12+00:00",
       "added_at": "2026-08-01T20:40:56.382Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-02T12:27:38.632Z",
+      "transcript_at": "2026-08-02T12:27:38.632Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-7507f1640d1e",
@@ -1139,11 +1151,14 @@
       "title": "My No-Bullsh*t Advice | Should I Wait For Property Prices To Drop?",
       "url": "https://www.youtube.com/watch?v=QWgI0d0cOlk",
       "source": "Personal Finance with Ravi Sharma",
-      "excerpt": "AFR, Sunrise Show - Channel 7, Channel 7 News, Business News Australia AFR Best Place to Work - 2026 Finalist Financial Times High-Growth Companies Asia-Pacific 2026 - #43 REB's Buyers Agent of The Year 2025 - Finalist \"FAST 100 AFR 2025 | #15 Fasting Growing Company\" “REB’s Best Buyer’s Agency 2024 - Finalist” “REB’s Best Buyer’s Agency 2023 - Finalist” “REB’s Rising Star 2023 - Finalist” “Austra",
+      "excerpt": "I'm going to give you the no BS approach, the complete blunt advice as to what you should be doing in 2026 to get further ahead. Most people are going to get caught out because they are so worried about what the next headline is, what inflation looks like, and talking to every person that actually has no runs on the board to go and do something. So, in this video, I'm going to share with you exactly what my thoughts are. Now, this is the no BS approach, which means you might get offended by some of the stuff I have to say. Now, the reason I can make this no BS approach playbook for you guys is because I've literally been doing this for 12 years. Been buying property, rent vesting, and now I've just recently bought my dream house, which you can definitely go and cover off here, and it cost me about 8 million bucks in Sydney. The best part is now I've got the portfolio as well as my dream home. So, straight away, you can see the difference between people that make the mistake and people who don't. And I want to teach you everything about it. So, while some of you may see this as cocky, and some of you guys may say like, \"Who is this guy?\" all I want to do is go, \"Hey, maybe you should listen to me because I've done X, Y, and Z, and I can help you get there as well.\" Just give me the next 10 to 15 minutes, and I hope you can learn a thing or two. Now, the age-old saying is the best time to buy property or assets was yesterday, the second best time is today. Every day that you wait, it is you betting against the market and saying, \"I believe in the Australian dollar or saving my money, that's going to be better than me attaching my worthless dollars to assets.\" Now, you might be of the opinion that, \"Oh, well, it's the top of the market. You can't go and buy now because the property market's going to crash. Well, I can't buy gold, I can't buy silver, I can't invest in the stock market because we're at all-time highs.\" Guess what? That's exactly what people have been saying for the better part of the last 5 years. And since the pandemic, we've had more than 40% of all currency in the world being printed in just the last 6 years. And every year, you may have thought a",
       "published_at": "2026-07-30T09:30:37+00:00",
       "added_at": "2026-07-30T20:56:47.905Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-02T12:27:38.632Z",
+      "transcript_at": "2026-08-02T12:27:38.632Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-ac2e58305e24",
@@ -1153,11 +1168,14 @@
       "title": "How To Invest During A Housing Downturn With @thathomeloandude",
       "url": "https://www.youtube.com/watch?v=iz0v1mwEyWA",
       "source": "Australian Property Mastery with PK Gupta",
-      "excerpt": "How to buy in a housing downturn to build generation wealth. AND cultural money mindsets! Check out my conversation with @thathomeloandude LEARN MORE 👇 ❤️ JOIN THE COMMUNITY & GET FREE SUBURB TIPS + STRATEGIES DISCLAIMER: No Legal, Financial & Taxation Advice The Listener, Reader or Viewer acknowledges and agrees that:",
+      "excerpt": "Hey guys, my name's PK and here I have Q. I found him on my feed. He is otherwise known as that home loan guy and he's kind of gone viral cuz he's really funny. In this episode, I really don't have it planned out, but I reached out to him cuz I thought it was really cool and he kindly agreed and we're going to talk about all sorts of random things. Like there was this episode or this reel I saw him do which was all about how different nationalities, Samoans, Koreans, Chinese, Indians, Australians approach property, approach mortgage brokers. Like technically he's a mortgage broker, but we're not going to talk about finance too much. We'll talk about things that he's passionate about, things that make him laugh. And one thing that I did want to pick his brain at about is this concept of Gen W and how they can get rich and I'm going to let him explain it. But thanks so much Q for coming on. >> Thanks PK. Thanks for, you know, inviting me on. Lovely to finally put a face to a name. >> [laughter] >> Um yeah, so Gen W is a concept I've coined where, you know, if you follow my socials, I always talk about ending the generational poverty curse in everyone's family, right? So every family has a a mindset about money and then that mindset gets passed on from generation to generation. And if that mindset is sort of like, you know, degenerating your wealth, then it's sort of a curse, right? So we all fit into different categories. We all get labeled. For example, we're either a Gen X, a Gen Y, or Gen Z. No, I want to sort of coin a term that everyone can associate with which is Gen W which is generational wealth, right? So rather Generation X, Generation Y, you'd be Generation Wealth. And it's a generation where you're trying to build wealth uh in Australia and you're trying to, you know, build wealth for the next generation rather than just like, you know, driving a McLaren and being rich and look at me kind of vibe. So it's sort of uh a lot of my clients have been associated as being the Gen W crew and it's sort of our movement that I'm trying to educate the Australian public that, you know, you don't need to stick to just your your social status. You can just become mor",
       "published_at": "2026-07-30T08:30:35+00:00",
       "added_at": "2026-07-30T20:56:48.152Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-02T12:27:38.632Z",
+      "transcript_at": "2026-08-02T12:27:38.632Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-c8123bc6e41a",
@@ -1788,11 +1806,14 @@
       "title": "Chip Stocks Crash, $20B Fund Margin Called, Frontier Labs: SLOW DOWN AI, Mamdani's Grocery Stores",
       "url": "https://www.youtube.com/watch?v=ViqYWhLimGg",
       "source": "All-In Podcast",
-      "excerpt": "(0:00) Bestie intros (1:19) Chip stocks crash, Leopold Aschenbrenner's $20B fund gets margin called (20:20) China's advantage and green shoots for the US economy (34:12) Frontier Labs say \"SLOW DOWN AI\" (1:01:15) Why are frontier labs \"burning books\"? (1:14:45) Socialism Corner: Mamdani's grocery stores and the \"Socialist Spectacle\" (1:24:44) Science Corner: Understanding and mapping the brain App",
+      "excerpt": "All right, everybody. Welcome back. Welcome back to the number one podcast in the world. The Core Four, Fantastic Four. The original Quartet is here. Did we peak at like uh number two or number three last week? Is that what happened? >> I think it was number four in the world. So, yeah, usually we're trending. >> US trending. >> US trend. We're usually number one globally, but yeah, and sometimes number four US. >> I forgot my Starlink. So, let me apologize to everybody. That was a critical error when you're on the road or on the water, but you know, it'll be fine. >> I had five huge leads come in this week. >> The Glengar Glenn enterprise leads. Enterprise sales is a bear because it's super chunky, but the deals are ginormous. >> Sax, you got any advice for Chimat from your uh enterprise sales days? You closed some of those big seven figure deals when you were doing Yammer? >> No leverage. Don't put on leverage. >> No leverage of the show today. Leverage equals risk of ruin. >> PSA, [laughter] no leverage. >> I have the situational awareness to not lever up. >> That's good. Yeah, you want that. That situational awareness. >> I mean, it's kind of out there. I mean, if you name your fund situational awareness, that's >> Yeah. Come on the pot anytime, Lualt. All right, everybody. We got to talk about chip stocks crashing after an alltime runup. And we had a major hedge fund get margin called and some incredible margin calls happening in South Korea. Leopold Ashen Brener is a 25-year-old hedge fund manager. He left OpenAI two years ago to start his own fund and apparently according to reports, this is breaking news on Thursday when we tape, he got margin called and had to sell his entire public portfolio to cover massive losses caused by his leverage. And who bought them? none other than Citadel's Ken Griffin. We don't know if it was Ken Griffin himself, but Citadel bought it according to the early reports. Leopold had insane returns and he rode the wave of AI and chips and Frontier Labs as recently as this month. Uh, and he started the fund with $225 million in 2024. He grew it 100x to 20 billion this year or so. Ran it all the way up to 45 billion. Now he's at 20",
       "published_at": "2026-07-31T22:51:01+00:00",
       "added_at": "2026-08-01T20:41:01.305Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-02T12:27:38.632Z",
+      "transcript_at": "2026-08-02T12:27:38.632Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "finance-0fddbffddb03",
@@ -2080,11 +2101,14 @@
       "title": "Essentials: How to Become Resilient, Forge Your Identity & Lead Others | Jocko Willink",
       "url": "https://www.youtube.com/watch?v=lxDf8uEypJU",
       "source": "Andrew Huberman",
-      "excerpt": "In this Huberman Lab Essentials episode, my guest is Jocko Willink, a retired U.S. Navy SEAL officer, author and host of the Jocko Podcast. We discuss why discipline, rather than motivation, is the reliable driver of daily action, and how taking action is the most effective way to move through adversity, loss and setbacks. We also discuss how exercise generates energy, the leader’s role as a count",
+      "excerpt": "Welcome to Huberman Lab Essentials, [music] where we revisit past episodes for the most potent and actionable science-based tools for mental health, physical health, and performance. >> [music] >> I'm Andrew Huberman, and I'm a professor of neurobiology and ophthalmology at Stanford School of Medicine. And now for my discussion with Jocko Willink. Jocko Willink, welcome. >> Thanks for having me, man. >> In my view, and I think in the view of a lot of people, you embody discipline. So, today I definitely want to talk about routines, but also mindsets, but also things that you do and ways that you approach things that might not contradict, but not be so obvious to people. Might um be a little bit counterintuitive. There are generators and projectors. And generators are people that are just from a very young age, they realize they can impact other people. They want to create things in the world. And then there are these projectors that like to just kind of reflect on what they see. And it's not that generators are good and projectors are bad. The world needs both. That they really work in a kind of symbiotic way. But your story captures the essence of what it is to be a generator, which is that by doing certain things you can have an impact and it feeds back to you and it's likely that they receive something from it as well. >> Yeah, and where this all came to fruition, as I as I now piece together as you're talking through this stuff. Look, when I joined the military, you join the military and you get a blank slate. No one cares what you got on the SATs or the No one cares about anything. You're a blank slate. And then with that blank slate, it is, \"Hey, if you do this thing, if you perform this task and you perform it well, you will get recognition. You will hopefully get more control over your own destiny.\" Which is the ultimate in compensation for for human beings, to have more control over your own destiny. You can have all the money in the world, but if you don't control what you're doing every day, or at least you don't control most of what you're doing, then it's then it's not worth it. The reason people try and make money is so they can have more autonomy ",
       "published_at": "2026-07-30T12:00:03+00:00",
       "added_at": "2026-07-30T20:56:52.993Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-02T12:27:38.632Z",
+      "transcript_at": "2026-08-02T12:27:38.632Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "health-760a07799a48",
@@ -2737,5 +2761,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-08-01T20:41:03.970Z"
+  "updatedAt": "2026-08-02T12:27:48.602Z"
 }
