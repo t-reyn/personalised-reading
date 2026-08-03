@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Mon, 03 Aug 2026 21:07:05 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 22:54:13 GMT</lastBuildDate>
+    <item>
+      <title>The Best Interests Duty Is a Tie-Break Rule, Not a Vibe Check</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-04/best-interests-duty-is-a-tie-break-not-a-vibe-check.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-08-04/best-interests-duty-is-a-tie-break-not-a-vibe-check.html</guid>
+      <category>mortgage-broking</category>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Cert IV teaches best interests duty as an ethical standard. The actual law is a narrow conflict-priority rule that only activates when a broker&#39;s pay and a client&#39;s outcome genuinely point different ways, and the 2020 commission reforms exist to stop that fight from starting in the first place.</description>
+    </item>
     <item>
       <title>AI Didn&#39;t Remove the Bottleneck in Shipping Software. It Moved It.</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-03/ai-didnt-remove-the-bottleneck-in-shipping-software-it-moved-it.html</link>
@@ -396,14 +404,6 @@
       <category>property</category>
       <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
       <description>The negative gearing and CGT reform has passed — then the government announced small-business carve-outs and denied it&#39;s a backdown. What&#39;s actually different, what isn&#39;t, and what to check before you act.</description>
-    </item>
-    <item>
-      <title>The Jagged Frontier: Why Your AI Feature Needs an Eval, Not Just a Vibe Check</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-06-30/ai-evals-jagged-frontier.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-06-30/ai-evals-jagged-frontier.html</guid>
-      <category>software-ai</category>
-      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
-      <description>AI capability is uneven across domains and tasks — what works brilliantly in one context fails unpredictably in another. Here&#39;s how to build a lightweight eval set so you know your AI feature actually works, instead of hoping it does.</description>
     </item>
   </channel>
 </rss>

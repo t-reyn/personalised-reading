@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-03T20:55:59.536Z",
+  "generatedAt": "2026-08-03T22:43:05.605Z",
   "interests": {
     "software-ai": {
       "days_since_last_article": 0,
@@ -12,6 +12,13 @@
           "url": "https://www.youtube.com/watch?v=oZBGAuANX6I",
           "kind": "video",
           "source": "Dwarkesh Patel"
+        },
+        {
+          "id": "software-ai-f74490c612dd",
+          "title": "Next.js 16.3",
+          "excerpt": "Next.js 16.3 introduces Instant Navigations, a suite of tools for single-page-app responsiveness, plus a faster dev server, faster builds, and improved tooling for AI agents.",
+          "url": "https://nextjs.org/blog/next-16-3",
+          "kind": "article"
         },
         {
           "id": "software-ai-064f3c89661b",
@@ -34,13 +41,6 @@
           "title": "PostgreSQL's MVCC is bad. So is everyone else's.",
           "excerpt": "The first thing you will probably learn about Postgres, if you follow people who don't like Postgres, is that MVCC is bad. The 40-year-old design mistake. It's signatures are everywhere. Bloated tables that double in size, 32-bit transaction counter limit, the never ending struggle with VACCUM…",
           "url": "https://boringsql.com/posts/mvcc-bad-bad/",
-          "kind": "article"
-        },
-        {
-          "id": "software-ai-069ffe07eb96",
-          "title": "July 2026 Security Release",
-          "excerpt": "The July 2026 security release for Next.js is now available",
-          "url": "https://nextjs.org/blog/july-2026-security-release",
           "kind": "article"
         },
         {
@@ -84,10 +84,10 @@
           "kind": "article"
         },
         {
-          "id": "design-e19253c464e8",
-          "title": "No New Name Has Replaced “UX”",
-          "excerpt": "A survey of 604 tech and design professionals found that “UX” remains the default name for our field, while alternative names remain fragmented.",
-          "url": "https://www.nngroup.com/articles/no-new-name-ux/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+          "id": "design-41a779a01e93",
+          "title": "Job Opening: People & Culture Generalist (Remote, US Based)",
+          "excerpt": "NN/G is hiring a People & Culture Generalist. This is a fully remote, permanent role running the day-to-day of our People function. Three to five years of People Operations or HR generalist experience. Applications close Friday, August 28.",
+          "url": "https://www.nngroup.com/news/item/people-culture-generalist-remote/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
           "kind": "article"
         },
         {
@@ -199,6 +199,27 @@
       "days_since_last_article": 7,
       "items": [
         {
+          "id": "mortgage-broking-ebe2bcf8c2c3",
+          "title": "Business lending growth hits 6-year high - Broker Daily",
+          "excerpt": "Business lending growth hits 6-year high &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOU25SclR1aTR6TjZCRjNsWWk5Tk9EcW05SXBRaHc2N0pMRHdTVmtrQWZUSFRFbmFwUXFyUEt1UGFWejRwWXVzelFLNmVNeG90UEZseXVhWGpSX04zOE5NQzlWYXc5MS1HQnlOamR3TERVLW5hblcxb0s4SzZ3eWktclY0ck5zYjA?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "mortgage-broking-8e169f70af46",
+          "title": "InstantAPPLY launches with ‘10-minute home loan’ goal - Broker Daily",
+          "excerpt": "InstantAPPLY launches with ‘10-minute home loan’ goal &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNVTEteV9lenBYM2piUGxaZE54VzVTcHQyRmg5Z0dEdDN2czNHNDZjZUVnSmtZclhXLVZKeHJVXzRKdmtncEhvRFhHX3FvZGFId3pVZEVkN1hCSmtobEdFSFRyTjh1UHNLSTlBQXJxUkRJY3pLLXd3YUhyOEdoQi1NVURXX1BvZUVCdTRxLVhXSUVidTBMT054SmxPTQ?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "mortgage-broking-f610a562ab7d",
+          "title": "Loanworks Lending completes largest RMBS deal to date - Broker Daily",
+          "excerpt": "Loanworks Lending completes largest RMBS deal to date &nbsp;&nbsp; Broker Daily",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOa0M5R3VvYndfbEhDVVo4elcyUzhHZXVheDZSZVgwdnF4ZFNwcDVnYWV5TlRVV1A3ek9pWXdZSUdxcWI4Rm5fYzZvSzRab3lRTTExbGdmS0RMZlpJMW5Ya3B1Y1ZnQnI2S2Jfenpra0E2S0xURHZsTjFMbnp4TjlBUEtqOUpjamtyX3daV3BINFdTYkR5eGpQWQ?oc=5",
+          "kind": "article"
+        },
+        {
           "id": "mortgage-broking-7d79d6ab8d6e",
           "title": "Institutional appetite for CMBS remains strong, despite refinancing headwinds - Structured Credit Investor",
           "excerpt": "Institutional appetite for CMBS remains strong, despite refinancing headwinds &nbsp;&nbsp; Structured Credit Investor",
@@ -217,27 +238,6 @@
           "title": "Finance Specialist: Is your pipeline running dry? - Broker Daily",
           "excerpt": "Finance Specialist: Is your pipeline running dry? &nbsp;&nbsp; Broker Daily",
           "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQT20wV0x1VElHZWJDeDdna2V4dl9udjhLUndpc2plSERSajNZeS1uVElfR0dVOGxXdE1jTEdBZjVZRENrc2lMVkdYLWs0bVRVdzNCcjdPbk82dkRCdElQRVBuM3FHUzJzMFB0ME1kSlk4Vmx3M0RpMlMzc0MwLTg0RVNrM29JZXdTVDlmU3VrWkM?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "mortgage-broking-457aefac7030",
-          "title": "HSBC offloads $25b home‑loan portfolio amidst Australia retail banking exit - Asian Banking & Finance",
-          "excerpt": "HSBC offloads $25b home‑loan portfolio amidst Australia retail banking exit &nbsp;&nbsp; Asian Banking & Finance",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZEJabk1yY2QxbGptSTE5TXJGeFVDN1N1SWlLMm9UMUJ5YzNmT3pXT3lFT2JDM0lZWEtFaFp5dnhOUFYtUU93SnRCcWxPaS1id2pOeEVZaHJjaTJiajJUM3NIcXRMOUZKOUlwZHo3YmgwaDVJdmI3QVBVUS1aZkRjV2RUcWJPNmprbzR6d2QyZTNaa2R3clVrd3p5Q1V0MTR0NjEzZ2Vka2VwUTEzdzU1VjR2UFg?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "mortgage-broking-319667d286e0",
-          "title": "5% Deposit Scheme welcomes first non-bank lender - Broker Daily",
-          "excerpt": "5% Deposit Scheme welcomes first non-bank lender &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNc2xpNEU1QlV3d3V6RkZoSHhpemFjZ2Q3TENaVmU2b0w2ejFaTjgySzV4czd2eHV4MlpqdWFqY2xGVFBJQzREVjRpZjNZQVQtdGZ3el9Ga0JtaFd4eU1OYmd0V3RLY0dCT1VsRUNoNGE1T2RZY0FjdzlzWU9NYTFVMmRWRXpXR3JwcGc?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "mortgage-broking-adfe9d7d1994",
-          "title": "House price downturn widens as Brisbane and Adelaide turn negative - Broker Daily",
-          "excerpt": "House price downturn widens as Brisbane and Adelaide turn negative &nbsp;&nbsp; Broker Daily",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ3M5TUJLaEg0OEc0QWZ2eGNCeVVvdmZ0YXYzVDJDdnFhZlJ5VDlCaDgtUE1wd3cyNENiTDN0eWRXdWxqNEgzOUlheGsxNFhLbHpJbVo4SGZjQmk3OEtLa2Y3ZFF3RE5rX0hHVjQ0bFZoc3k4OXkxTTA2c2hNVmVpUElxMEg3MWtqeXYyTFpQN0JDM1k1YUg0TTJDN3NHcFNjcHJ1VnhYbWNzc0k?oc=5",
           "kind": "article"
         },
         {
@@ -395,38 +395,38 @@
       "days_since_last_article": 6,
       "items": [
         {
-          "id": "finance-5dfff23893fd",
-          "title": "Snap's stock jumps 10% on earnings beat and strong sales forecast",
-          "excerpt": "Snap beat analysts' estimates across the board in its second-quarter earnings report.",
-          "url": "https://www.cnbc.com/2026/08/03/snap-q2-earnings-report-2026.html",
+          "id": "finance-7509ee129f94",
+          "title": "Analysis: Federal Reserve may be pulled into Bessent’s effort to support Japan’s yen",
+          "excerpt": "Treasury Secretary Scott Bessent wants to defend the yen without selling Treasuries into a sensitive U.S. bond market. The Federal Reserve could help.",
+          "url": "https://www.cnbc.com/2026/08/03/bessent-fed-japan-yen-fima-repo-facility.html",
           "kind": "article"
         },
         {
-          "id": "finance-0d6075250449",
-          "title": "Palantir soars 12% on blowout quarter, with U.S. commercial revenue soaring nearly 150%",
-          "excerpt": "Palantir's second-quarter earnings beat expectations, and the AI software company lifted revenue guidance.",
-          "url": "https://www.cnbc.com/2026/08/03/palantir-pltr-earnings-q2-2026.html",
+          "id": "finance-e7e41732ecd5",
+          "title": "Insurance, wages and interest rates drive 25% jump in small business costs - SmartCompany",
+          "excerpt": "Insurance, wages and interest rates drive 25% jump in small business costs &nbsp;&nbsp; SmartCompany",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQa2hYOWZ6d1BBWVhzN2xWbDF2b09mektMa0Y1VGNjS2NvcTkySFFBQWZzdjUtQVc3NXZ5UEhETGMzMEdkVjVWSktWN1ctZlcwVWJabHg0ZXN5ZFNWU05CZTlGQ1dKWndrd0xDV0dRVDZVanlMMmJod3RaTHB6a09OZWNhM1JLTExwLWExMXFhUUFraVNQaHY1cjc2ZVR6NkEtOG1oTk84Vng4dw?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-6616d04ec294",
-          "title": "The RBA meets on 11 August. What could this mean for ASX bank shares? - The Motley Fool Australia",
-          "excerpt": "The RBA meets on 11 August. What could this mean for ASX bank shares? &nbsp;&nbsp; The Motley Fool Australia",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQVVFfOXo2WkNIZEpKSkNBUWo3LWRzSWxSeTZsb25RNFBPTm1yR3prUGJ5MDB3Y2ViNG43WllpdG9WWXFkZkdnWm5EYWxpMF9VRUlXeVQ1azhqMC1VUzNWcEQ5dHNDZVMxWkx0NUhyOHdFQ25KRjZOekduWmxodk5GcFZuOHNsVE45Tm9KWjVJTXNpdG50MWw0U1JqX0M4bExsd2FMZUxB?oc=5",
+          "id": "finance-d900880ba738",
+          "title": "ANZ to increase interest rates on some fixed home loans, term deposits - RNZ",
+          "excerpt": "ANZ to increase interest rates on some fixed home loans, term deposits &nbsp;&nbsp; RNZ",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbzl5RE0tR3NPelFjdTB4NDdyeGRRaHNWX0pKRl84ZGdFT3k4Nkx2VDJhWWtZUVpKYVdSbDFla3BnVlBmblZHV0Z6T05mY3RoOGh4aHMwVDVCaGdBSWhBUF9TX3BURGxEVEFZY2Z0RjVma1l1cjZFa21BSks3NU80ZVdJMTdPRS1XSkl3elY2UEw3N0ZfT3dOZTh4TmRlVGR0Si1tRVNsZmRuQldSOFFQUXV3?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-216bb523dfae",
-          "title": "Why Active Expertise Is Essential for CLO Investing - ETF Database",
-          "excerpt": "Why Active Expertise Is Essential for CLO Investing &nbsp;&nbsp; ETF Database",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcWl1UUJfeDZYOWwxbGNINlkyYW1pLWRFQ0ZOMndSbUJJX1ZyVnVWX1dVdzRpOTJpQkRmZ0tsVXFLay16OWpCdk5ieHoxbmNId1RfYVBjSVJ5TG5ic09OU2IwOGdETW9pSHdKVU5sYmU2WDBSQmR5REpKUWV5TVh6SVk5Z0FySHFKbXZoOWNYOFpnS19nb0twcHlB?oc=5",
+          "id": "finance-816b056ecf2c",
+          "title": "Jim Cramer says the market has warmed up to Big Tech's AI spending. Here's what flipped the switch",
+          "excerpt": "Cramer said Amazon CEO Andy Jassy finally explained how Amazon's massive AI spending will generate long-term returns.",
+          "url": "https://www.cnbc.com/2026/08/03/jim-cramer-market-warmed-up-big-tech-ai-spending.html",
           "kind": "article"
         },
         {
-          "id": "finance-b443f9fc1566",
-          "title": "KPMG’s chief purpose officer rides into the sunset - AFR",
-          "excerpt": "KPMG’s chief purpose officer rides into the sunset &nbsp;&nbsp; AFR",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWWswcldDREVlWE5FY0oyTXJURnYyZV9mcXV1cjJuVXluNmswZjlLMnd3blNqeWpKUVFlLTBXSlVITi1vTThPdy1lU2xpTXlpZXhqaGp2WngxbjZTcER3WHo2Vl9jVDZJN1NPMzh5NkNzd2kyV2lOM09LbEtfbUY4OVlaZjhibFI1M0hxUFpSWkt2Y3VuS0JodWdWelhodDQ?oc=5",
+          "id": "finance-2b047906e11a",
+          "title": "New Winning CEO Anthony Heraghty jumps from sports to ritzy kitchens - AFR",
+          "excerpt": "New Winning CEO Anthony Heraghty jumps from sports to ritzy kitchens &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSmxzSk1jS0tPSnZIYnVrMHR0TGVwMG5QcjdVTjQzQ2JyZHAwQkVUR0pNRHIyU1dSME5WR0Vja3pmQVQ0MFAxemIwXy1ncHpISks5TmI4OVU2MGFqZ1JsOWItY1l5ZDNiTUtuNVJvbTl2UjJaN2pac0JIeWhvS0IxVjBYaUlvSVktQWlkTXRMQkl5V1dyQU5meGp2em1tRjFwZ1BldWFuMWt2LTJ2Z3RQM3FmWm1GODRDWHJCcWl3?oc=5",
           "kind": "article"
         },
         {
@@ -457,17 +457,17 @@
       "days_since_last_article": 2,
       "items": [
         {
-          "id": "health-e06fdb9d3f07",
-          "title": "This Organ Plays a Far More Profound Role in Human Longevity Than We Realized, Study Finds - sciencealert.com",
-          "excerpt": "This Organ Plays a Far More Profound Role in Human Longevity Than We Realized, Study Finds &nbsp;&nbsp; sciencealert.com",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPcERhVU0taTBtUjhCVWZRMERRdndTbE1JR3FzYkdxLVJuZUY4dWJTbk5OMF9sMG1kMUdKTjRibmotdWlKWjBZMEJPSjJqWHJzcnVGVV9tZkhOTFVfOEh6WUJaa25ibFpVVHNYT3dnV3V2Q2w4VzRWM0Y5bnR2cVhsay1wX1cxUTJXMk5weW1tYVlkTF82RlRwRnJLcFRCaHlpQ2xoSTNfQlI1bVNFbW9NTl9xd1NoMXpCY2c?oc=5",
+          "id": "health-b516f6873880",
+          "title": "Elon students help bring culturally tailored nutrition education to the Alamance community through ThriveWell - Elon University",
+          "excerpt": "Elon students help bring culturally tailored nutrition education to the Alamance community through ThriveWell &nbsp;&nbsp; Elon University",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPTkJFVjBWUlo5MkJtd0VhdHc5UHpsQWhtUEw4aFlqdzdycGNVeHJpZGlIeFVHdk45RWZsQUpGUFZCZlJ3NzFhUmplXy12YTdDU2x0OHdaV0Z4aHhTVVVzRThESnBHUldKdkpidTVodDFpc2tFRmcwUGFBR1diYmJ2N014eVFRbW9aVUFfSFI2YUJZQmwxYUFHYWE3cldpRDV4a1o0SUpvMjg1bFpmVXlIOWJLSV9wb1g1ZWNoQURVM2h3dEdlSkdPTlp4NmtYSXBndHVTZnJob1hMeU16TWxndm5JUQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-b776d3132332",
-          "title": "Emma Raducanu to miss US Open with leg injury in latest fitness setback - The Guardian",
-          "excerpt": "Emma Raducanu to miss US Open with leg injury in latest fitness setback &nbsp;&nbsp; The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQUndLd01lWEVlcnE3T0hqblRkYlYwU0Y2aG50Y21IVS1VdGVCeEFQRmRFejFfMHlFc2lISTZiMktzTWlUQ1ItNmJnS3NROGNDdlhRa090N0JfaEo0ZWpGWGR4bGZabG9IQ1VrWWFQWlpTaXlkODJUSkxwSTU3bWtqVHByQ1kxQjRhaU5oZVZ3?oc=5",
+          "id": "health-79a3507c52c1",
+          "title": "The relationship between the look of streets, feelings of safety, and sleep - Medical Xpress",
+          "excerpt": "The relationship between the look of streets, feelings of safety, and sleep &nbsp;&nbsp; Medical Xpress",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE8wZGI1eUR1Q2Fibl9zVlY5eUhSZTJlbWExa0JwVVBOUmpEOUNnVzQxaEZRclFZYzJKbHRPNzdjMnl5Vkk1enRzSGlUVExCUngzOFU1ZWVqQk81NGI1a1dGdVB4ZWVVbU8xZDl1MjQ2cVZNNnNoSEVDQkFycw?oc=5",
           "kind": "article"
         },
         {
@@ -522,17 +522,17 @@
       "days_since_last_article": 19,
       "items": [
         {
-          "id": "videography-8e5c6086a62c",
-          "title": "Saramonic’s SG MS1 Stereo Shotgun Microphone Brings 3 Output Modes and Adjustable Stereo Width",
-          "excerpt": "A new stereo condenser shotgun microphone is on the market, and this one is worth a look if you’re interested in finding new ways to enhance audio recording across your various video and filmmaking setups. Released by Saramonic, the SG MS1 is an ultra-compact and lightweight stereo condenser…",
-          "url": "https://nofilmschool.com/saramonic-sg-ms1-stereo-condenser-shotgun-microphone",
+          "id": "videography-c632a2471e37",
+          "title": "5 Screenwriting and Storytelling Tips From 'Dungeon Crawler Carl'",
+          "excerpt": "It's kind of crazy to think about, but maybe the biggest panel at this year's Comic-Con was for a giant book series that just sold to Peacock and will become a live-action show very soon. Yes, I'm talking about everyone's favorite boxer-clag hero and his loyal feline friend. If you haven’t wandered…",
+          "url": "https://nofilmschool.com/dungeon-crawler-carl-writing-tips",
           "kind": "article"
         },
         {
-          "id": "videography-7e1db8b2121d",
-          "title": "Capture Tiny Subjects in Tack-Sharp Detail With These New Laowa Aksen Ultra Macro Lenses",
-          "excerpt": "While in many cases, more of a niche for photographers than videographers, shooting up-close and hyper-macro videography can be a fun, if not highly challenging, pastime if you’re up for it. The key, of course, is to have the right gear, and these new Laowa Aksen Ultra Macro lenses are here to…",
-          "url": "https://nofilmschool.com/laowa-aksen-ultra-macro-lens-series",
+          "id": "videography-3c01db44d935",
+          "title": "The Anthology Trick for Making Your First Feature Film",
+          "excerpt": "Making stuff is hard. There are obstacles every step of the way. But at so many points of your filmmaking journey, the thing holding you back might just be… you. You have to finish the script. You have to be brave enough to pitch. You need to build momentum. You need to make connections. It’s all…",
+          "url": "https://nofilmschool.com/make-first-feature-anthology",
           "kind": "article"
         },
         {
@@ -586,31 +586,31 @@
       "days_since_last_article": 20,
       "items": [
         {
-          "id": "science-0dd45ed1f9a3",
-          "title": "Light controls nanoscale 'bubble' domains in a ferroelectric crystal",
-          "excerpt": "Researchers at Flinders University have discovered an unexpected way light can control tiny electronic structures inside advanced materials, a development that could help pave the way for more energy-efficient memory devices, sensors and future computing technologies.",
-          "url": "https://phys.org/news/2026-08-nanoscale-domains-ferroelectric-crystal.html",
+          "id": "science-8f2a11705adb",
+          "title": "Bringing it all into focus—computational microscope captures 25.2 billion pixels per second across a wide field of view",
+          "excerpt": "When designing microscopes, optical engineers have long faced a trade-off between speed, field of view and resolution. But improving one of these properties typically comes at the expense of another. Now, a UC Berkeley–led team of researchers has found a way to address this challenge, opening the…",
+          "url": "https://phys.org/news/2026-08-focus-microscope-captures-billion-pixels.html",
           "kind": "article"
         },
         {
-          "id": "science-7d554e187436",
-          "title": "How to keep the Earth habitable when the sun dies",
-          "excerpt": "In a billion years, the sun will start to run out of fuel and expand to become a red giant. Earth's oceans and atmosphere will be burned away, and Earth will likely be engulfed by the sun altogether. The sun will then shrink to a dim white dwarf, and all light and warmth in the solar system will…",
-          "url": "https://phys.org/news/2026-08-earth-habitable-sun-dies.html",
+          "id": "science-0cbc1a43e978",
+          "title": "Child Migrants Exposed to Toxic Contamination at Florida Detention Site - Inside Climate News",
+          "excerpt": "Child Migrants Exposed to Toxic Contamination at Florida Detention Site &nbsp;&nbsp; Inside Climate News",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQcnRBZVZZbW5IYm9TdlMwR28yN1ROWVlkcl9XYktwcU5VbzBGQ3JGbER6UTBtbFJobnBNQ1JBakdqM3FoeENhdGI5RzhrQURRdkdLU0VzTVVOTWJ6RnN0amEzekFYY2NfSk5aaFhnbW9senhneEY0LWZSR2RFSjA4QlJHaV9ZUHpRZTA0T0NyYzdzSmVVQ1VBc1g5VWFsdXJrYlNsNWpBOA?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-0ba10ff782f0",
-          "title": "Newspaper space for political cartoons is shrinking – but we need these artists as much as ever - The Conversation",
-          "excerpt": "Newspaper space for political cartoons is shrinking – but we need these artists as much as ever &nbsp;&nbsp; The Conversation",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPcU00dkl3SHJTRGVwSXh3UzRMaDJvTVBiS041U2tjeDBxOTRjTTNKbHdTWHk0VUZxdXNpTnRNRU5xbHo2RC04Tm01cnJJQ1lIbzhNVkZXdWhLWS1QRGsyUThISWZodzJWQXpiblRRS0lBTDlIR0ZDWDRNWHZjOHVXV0VqcV8tNGg4REJFS2VJbE9jcWxkcjFnaTd4Z0l3ZXAxOWdqNDk3UHBLZHBfNkpPbzlxNmR4eGVKd0hVV2dEeHN4Z2tYbFBj?oc=5",
+          "id": "science-b62de52b604b",
+          "title": "Discarded rice husks capture toxic dyes, offering a reusable water filter",
+          "excerpt": "Rice is the most-eaten food on the planet, and its discarded outer husk results in some 300 billion pounds of waste per year. FIU chemistry researcher Islam Ibrahim Hussein says the inedible castoffs could be the key to cleaner water.",
+          "url": "https://phys.org/news/2026-08-discarded-rice-husks-capture-toxic.html",
           "kind": "article"
         },
         {
-          "id": "science-bb7bb7c64112",
-          "title": "Climate strategy doesn’t confront wood heaters - Canberra CityNews",
-          "excerpt": "Climate strategy doesn’t confront wood heaters &nbsp;&nbsp; Canberra CityNews",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQYzhxRWxxV3FucHpXQzVoMnpZNmRLZmNsNGNTaGNVU2NYX0hmLW95N2ZNSjUxTGc4UE52ejhPdTNPQjgtSXE1MUhkdzh0QXNnZFNWMl9sd3cwejJaeUtoaGg0aFE2aVFmd25BX3VTcmgtYjZKdW5qUmI3QVgycThTSQ?oc=5",
+          "id": "science-8cd3a20c230e",
+          "title": "UK health secretary: Climate change driving severe heat waves - Yeni Safak English",
+          "excerpt": "UK health secretary: Climate change driving severe heat waves &nbsp;&nbsp; Yeni Safak English",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQMGF6dW52SDZVNWNhZnZhUVhHUWxtaFBCejkxWFNqQXpid3lXNk1kTDYyWExuSEx4aEN5aFk1dVpKNkRYXzg1dkRneTJuNFVkaUxNbnZQUTFnZVN3NjFUaG4yd0VPV09UQ202Sy1FbWdBcDZwOHViM1hKT3J3V0RLSU9pVnJPUHFESUhpNDNja1BXNGxxNENHajNCZTI1T0VL?oc=5",
           "kind": "article"
         },
         {

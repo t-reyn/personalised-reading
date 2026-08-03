@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-03T21:07:05.747Z",
-  "count": 64,
+  "generatedAt": "2026-08-03T22:54:13.639Z",
+  "count": 65,
   "articles": [
+    {
+      "id": "2026-08-04-best-interests-duty-is-a-tie-break-not-a-vibe-check",
+      "slug": "best-interests-duty-is-a-tie-break-not-a-vibe-check",
+      "interest": "mortgage-broking",
+      "interests": [
+        "mortgage-broking"
+      ],
+      "mode": "learn",
+      "title": "The Best Interests Duty Is a Tie-Break Rule, Not a Vibe Check",
+      "summary": "Cert IV teaches best interests duty as an ethical standard. The actual law is a narrow conflict-priority rule that only activates when a broker's pay and a client's outcome genuinely point different ways, and the 2020 commission reforms exist to stop that fight from starting in the first place.",
+      "tags": [
+        "mortgage broking",
+        "NCCP",
+        "best interests duty",
+        "conflicted remuneration",
+        "compliance",
+        "Australia"
+      ],
+      "created_at": "2026-08-04",
+      "expire_at": "2026-08-25",
+      "concepts_taught": [
+        "best-interests-duty",
+        "conflicted-remuneration"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 2,
+      "word_count": 737,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-08-04/best-interests-duty-is-a-tie-break-not-a-vibe-check.html"
+    },
     {
       "id": "2026-08-03-ai-didnt-remove-the-bottleneck-in-shipping-software-it-moved-it",
       "slug": "ai-didnt-remove-the-bottleneck-in-shipping-software-it-moved-it",
