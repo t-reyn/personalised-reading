@@ -9,11 +9,14 @@
       "title": "Why smarter AI models could drive up compute prices 10x",
       "url": "https://www.youtube.com/watch?v=oZBGAuANX6I",
       "source": "Dwarkesh Patel",
-      "excerpt": "This is a video version of a post I wrote last week. If you want to read the original you can check it out here:",
+      "excerpt": "Today I want to talk about what the compute situation for the labs will look like over the next few years. For the last three consecutive years, Anthropic's revenue has 10x'd year over year, and it's likely to do so again this year. They ended last year with nine billion in revenue. I think they'll probably end this year with somewhere between one hundred billion to one hundred and fifty billion dollars in revenue. Now, for this trend to continue, Anthropic would need to make one trillion dollars in revenue by the end of next year. Of course, there's no deep reason why this has to be true. It's a very wild conclusion, and it's ultimately a question of AI capabilities. Does AI get that useful by the end of next year? But suppose the trend does continue. I want to think through what happens in that world. The other big trend in AI is that lab compute only 3x's year over year. For a lab to keep 10x'ing revenue year over year while compute only 3x's, one of the following three things needs to happen, or some combination of the three: One, lab margins have to increase. Two, the price of compute has to increase. Or three, the percentage of compute that labs spend on inference rather than training has to increase. My understanding is that basically all three of these things are already happening. With regards to the margins, Anthropic's inference margins reportedly went from forty percent in the middle of last year to upwards of eighty percent now for Fable. With regards to compute, the spot prices for compute are more than forty percent higher than they were in the February trough that we had earlier this year. And with regards to the share of compute that goes to training versus inference, in 2024, according to Epoch, OpenAI was spending just a quarter of its compute on inference, and that number is likely closer to fifty percent, if not higher, now. Now, labs would prefer not to do this final thing of increasing the share of compute they spend on inference. The way the labs see the world, the whole point of inference revenue is to help convince investors to give you more money in order to train the next bigger, better model. And if you're spending most of your compu",
       "published_at": "2026-08-03T17:36:16+00:00",
       "added_at": "2026-08-03T20:55:43.266Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-04T00:14:40.015Z",
+      "transcript_at": "2026-08-04T00:14:40.015Z",
+      "transcript_kind": "manual"
     },
     {
       "id": "software-ai-f74490c612dd",
@@ -36,11 +39,14 @@
       "title": "How I Make Apps FEEL 10x Better (5 examples)",
       "url": "https://www.youtube.com/watch?v=MXLF8b15GhQ",
       "source": "Chris Raroque",
-      "excerpt": "Hi my name is Chris and I build productivity apps 👋 and this is a few tips on how I make my apps FEEL 10x better (animations, illustrations, etc...)",
+      "excerpt": "The number one question I've been getting is how do I make my apps feel so good to use? If you're new here, welcome to the video. My name is Chris and I build productivity apps. I've been doing this for years and I'm finally making the video that you guys have been asking for, which is everything I do to make my apps feel premium. We're going to go through practical examples in my own apps that you can apply today. Let's hop right into it. The first thing that I do that genuinely makes a pretty big difference is animations. Now, instead of talking about this abstractly, let me show you a real example of something I just shipped so you can see that there are levels to animations. I was working on a new feature for Amy and quick context, Amy is a calorie tracking app in the style of Apple Notes. You type the food that you ate on the left and the calories magically appear on the right. The problem with letting users input whatever they want is the text can get pretty long. It gets kind of cluttered so I shipped a feature where it'll summarize long entries for you. I asked Claude Code to build it and it did actually pull it off. Like it technically works, but watch closely. [music] If you look closely, the text just changes instantly. There's like no feedback at all. And if you blink and you missed it, you'll have no idea that the app actually did something. Technically, the feature is working. It is summarizing the entries, but the user can't feel that it's working. And that's a problem. So that's level one, there's no feedback, there's no animation, the user just has to guess what happened. A pretty junior developer would stop right there and just ship it as is. But someone one level up would see this and say, \"Okay, we need to add some feedback.\" So let's just add a toast. A toast is a little pop-up that's going to appear and say something like the meal was summarized. That way the user knows something happened. It does get the job done and I think it's okay to ship as is, but we can [music] do better. So the next level is to add some animation to convey that the change happened. So I asked Claude Code, \"Can you make an animation?\" And after a bit, it did add an ",
       "published_at": "2026-08-03T15:05:24+00:00",
       "added_at": "2026-08-03T20:55:43.436Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-04T00:14:40.015Z",
+      "transcript_at": "2026-08-04T00:14:40.015Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "software-ai-42b08cef6bcb",
@@ -2049,11 +2055,14 @@
       "title": "How Your Immune System Works & How to Improve It | Dr. Max Krummel",
       "url": "https://www.youtube.com/watch?v=s_tkMm5U9aY",
       "source": "Andrew Huberman",
-      "excerpt": "My guest is Dr. Matthew (Max) Krummel, PhD, professor at UCSF and one of the world’s leading immunologists. We discuss how your immune system works and how sleep, emotions, and even memories shape immune function. We also explore thymus function, its role in autoimmunity, and its potential role in combating cancer. And we discuss how the type and timing of immunization can impact health. This epis",
+      "excerpt": "a famous um marinologist in the 1970s drew this parallel in wartime and said in World War II submarines had two sets of books. One of them was a book that gave them the sound profile of all the US submarines and so they could listen to the were of the engines and if they heard a were of the engine that had the certain cycle of a general mo you know motors engine they wouldn't fire. So that's the sort of like self I know what self is. And then they had another book that was the engine sounds of the known diesel engines of whatever engines of the German submarines. And if they heard that then they absolutely would fire. And that's a self versus non-self-discrimination problem just like the immune system has to do. But what I bring you with it aging is this concept that as you get weirder and different your body is getting like more complex then that those books you know start to have every possible possibly every possible permutation of every biomolelecule could could could be made by your body at that point and then a virus doesn't necessarily have anything unique about it. >> Welcome to the Huberman Lab podcast where we discuss science [music] and science-based tools for everyday life. >> [music] >> I'm Andrew Huberman and I'm a professor of neurobiology and opthalmology at Stanford School of Medicine. My guest today is Dr. Max Kuml, a professor and leading expert in immunology and cancer biology at the University of California, San Francisco. Today we discuss your immune system, how it works, what it needs to function at its best, and how things like aging, vaccines, sleep, and even your thoughts and emotions shape immune function. For instance, most everybody knows that being sleepd deprived makes you more prone to getting sick. But why? Meaning mechanistically why? Well, it turns out there's a specific set of cells that need to migrate in a particular way during sleep. And we talk about how you can reinforce that process in ways other than sleep. We also discuss incredible findings that certain brain states and memories can be associated with an immune system status you had when those memories formed and evidence that just recalling those memories, thinking a",
       "published_at": "2026-08-03T12:00:30+00:00",
       "added_at": "2026-08-03T20:55:54.536Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-04T00:14:40.015Z",
+      "transcript_at": "2026-08-04T00:14:40.015Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "health-82eceeb92f9f",
@@ -2768,5 +2777,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-08-03T22:43:05.595Z"
+  "updatedAt": "2026-08-04T00:14:43.096Z"
 }
