@@ -1,8 +1,41 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-03T22:54:13.639Z",
-  "count": 65,
+  "generatedAt": "2026-08-04T21:14:37.688Z",
+  "count": 66,
   "articles": [
+    {
+      "id": "2026-08-05-an-80-year-old-erdos-conjecture-just-fell-to-ai",
+      "slug": "an-80-year-old-erdos-conjecture-just-fell-to-ai",
+      "interest": "science",
+      "interests": [
+        "science",
+        "software-ai"
+      ],
+      "mode": "current",
+      "title": "An 80-Year-Old Erdős Conjecture Just Fell to AI — and a Backlog Nobody Can Read Is Piling Up Behind It",
+      "summary": "OpenAI's unreleased model produced a proof of an 80-year-old Erdős conjecture strong enough that a Fields medallist says it would pass peer review at the world's top maths journal; most of the hundreds of other AI-generated \"solutions\" now flooding the field's central problem tracker haven't been checked by anyone qualified to catch a mistake.",
+      "tags": [
+        "artificial intelligence",
+        "mathematics",
+        "Erdős problems",
+        "formal verification",
+        "large language models"
+      ],
+      "created_at": "2026-08-05",
+      "expire_at": "2026-08-26",
+      "concepts_taught": [
+        "autoformalisation"
+      ],
+      "concepts_assumed": [
+        "verification-bottleneck"
+      ],
+      "concepts_reinforced": [],
+      "source_count": 1,
+      "word_count": 719,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-08-05/an-80-year-old-erdos-conjecture-just-fell-to-ai.html"
+    },
     {
       "id": "2026-08-04-best-interests-duty-is-a-tie-break-not-a-vibe-check",
       "slug": "best-interests-duty-is-a-tie-break-not-a-vibe-check",

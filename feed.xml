@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Mon, 03 Aug 2026 22:54:13 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 21:14:37 GMT</lastBuildDate>
+    <item>
+      <title>An 80-Year-Old Erdős Conjecture Just Fell to AI — and a Backlog Nobody Can Read Is Piling Up Behind It</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-05/an-80-year-old-erdos-conjecture-just-fell-to-ai.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-08-05/an-80-year-old-erdos-conjecture-just-fell-to-ai.html</guid>
+      <category>science</category>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
+      <description>OpenAI&#39;s unreleased model produced a proof of an 80-year-old Erdős conjecture strong enough that a Fields medallist says it would pass peer review at the world&#39;s top maths journal; most of the hundreds of other AI-generated &quot;solutions&quot; now flooding the field&#39;s central problem tracker haven&#39;t been checked by anyone qualified to catch a mistake.</description>
+    </item>
     <item>
       <title>The Best Interests Duty Is a Tie-Break Rule, Not a Vibe Check</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-04/best-interests-duty-is-a-tie-break-not-a-vibe-check.html</link>
@@ -396,14 +404,6 @@
       <category>design</category>
       <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
       <description>Visual hierarchy told you what to make loud. Colour is how you decide which loud thing means what. Hue/saturation/lightness, harmony schemes, and the semantic-colour rule most beginner palettes break.</description>
-    </item>
-    <item>
-      <title>Negative Gearing Reform Is Law — What the Carve-Outs Actually Change</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-01/cgt-negative-gearing-carve-outs.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-01/cgt-negative-gearing-carve-outs.html</guid>
-      <category>property</category>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
-      <description>The negative gearing and CGT reform has passed — then the government announced small-business carve-outs and denied it&#39;s a backdown. What&#39;s actually different, what isn&#39;t, and what to check before you act.</description>
     </item>
   </channel>
 </rss>
