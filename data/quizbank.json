@@ -227,6 +227,16 @@
           "Paid ads, since manual outreach can never produce reliable customers"
         ],
         "correct": 2
+      },
+      {
+        "q": "A founder finishes their MVP and immediately spends $500 on a broad Instagram ad campaign, skipping any direct outreach. What does the early customer acquisition principle predict?",
+        "options": [
+          "Broad paid reach outperforms manual outreach at every stage of a product's life",
+          "Skipping close, individual outreach for a broad paid channel is likely to underperform, since early traction comes from narrow, direct engagement with the right people",
+          "The ad spend guarantees product-market fit regardless of targeting",
+          "Paid reach and personal outreach are interchangeable at zero users, so either works equally well"
+        ],
+        "correct": 1
       }
     ],
     "product-taste": [

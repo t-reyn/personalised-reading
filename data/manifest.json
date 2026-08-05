@@ -1,8 +1,42 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-04T21:14:37.688Z",
-  "count": 66,
+  "generatedAt": "2026-08-05T21:10:02.471Z",
+  "count": 67,
   "articles": [
+    {
+      "id": "2026-08-06-google-play-reads-your-description-the-app-store-doesnt",
+      "slug": "google-play-reads-your-description-the-app-store-doesnt",
+      "interest": "indie-income",
+      "interests": [
+        "indie-income"
+      ],
+      "mode": "learn",
+      "title": "Apple Never Reads Your App Description — Google Play Ranks You on It",
+      "summary": "App Store and Play Store search run on almost entirely different inputs, so the keyword strategy that works on one platform can quietly sink you on the other.",
+      "tags": [
+        "aso",
+        "app-store-optimisation",
+        "distribution",
+        "indie-apps",
+        "mobile"
+      ],
+      "created_at": "2026-08-06",
+      "expire_at": "2026-11-04",
+      "concepts_taught": [
+        "aso-keyword-field",
+        "aso-behavioural-ranking",
+        "store-listing-conversion-testing"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [
+        "early-customer-acquisition"
+      ],
+      "source_count": 3,
+      "word_count": 686,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-08-06/google-play-reads-your-description-the-app-store-doesnt.html"
+    },
     {
       "id": "2026-08-05-an-80-year-old-erdos-conjecture-just-fell-to-ai",
       "slug": "an-80-year-old-erdos-conjecture-just-fell-to-ai",

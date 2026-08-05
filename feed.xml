@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Tue, 04 Aug 2026 21:14:37 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 21:10:02 GMT</lastBuildDate>
+    <item>
+      <title>Apple Never Reads Your App Description — Google Play Ranks You on It</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-06/google-play-reads-your-description-the-app-store-doesnt.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-08-06/google-play-reads-your-description-the-app-store-doesnt.html</guid>
+      <category>indie-income</category>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description>App Store and Play Store search run on almost entirely different inputs, so the keyword strategy that works on one platform can quietly sink you on the other.</description>
+    </item>
     <item>
       <title>An 80-Year-Old Erdős Conjecture Just Fell to AI — and a Backlog Nobody Can Read Is Piling Up Behind It</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-05/an-80-year-old-erdos-conjecture-just-fell-to-ai.html</link>
@@ -396,14 +404,6 @@
       <category>health</category>
       <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
       <description>The three-grade system, why RICE alone is outdated, and the return-to-play numbers that matter more than how many weeks have passed since the injury.</description>
-    </item>
-    <item>
-      <title>Colour Theory for Interfaces: Picking a Palette That Actually Works</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-01/color-theory-for-interfaces.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-01/color-theory-for-interfaces.html</guid>
-      <category>design</category>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
-      <description>Visual hierarchy told you what to make loud. Colour is how you decide which loud thing means what. Hue/saturation/lightness, harmony schemes, and the semantic-colour rule most beginner palettes break.</description>
     </item>
   </channel>
 </rss>
