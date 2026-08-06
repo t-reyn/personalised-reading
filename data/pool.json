@@ -22,11 +22,14 @@
       "title": "The safest way to store Bitcoin was just hacked...",
       "url": "https://www.youtube.com/watch?v=2X2V3xv_jik",
       "source": "Fireship",
-      "excerpt": "Last week the most secure way to store Bitcoin quickly became the least secure. Let's investigate.",
+      "excerpt": "As if last year hasn't been hard enough on the holdlers, last week what used to be the safest way to store Bitcoin turned out to be the fastest way to lose it when Cold Card, a securityobsessed airgapped Bitcoin hardware wallet, was hacked. The bad news is that a lot of people lost a lot of money. But the good news is that it's only about half as much as they would have lost if the same thing happened a year ago. Since July 30th, attackers have drained over 1,600 Bitcoin worth about $und00 million from over 7,000 wallets. And the craziest part is that they pulled it off without any malware, fishing, or lead pipes. The victims weren't your typical degenerates clicking random Discord links either. They were the responsible ones with the not your keys, not your crypto tattoos, lecturing you about how you don't actually deserve freedom if your coins were on an exchange. In today's video, we'll dive into how the hack works and learn why victims are now bidding against the hackers in real time to try to buy back their own money. It is August 5th, 2026, and you're watching the Code Report. If you've never seen your net worth drop 60% in a day, you may not know that the way Bitcoin works is that your coins are controlled by a private key, which comes from a 12-word seed phrase. If you have those words, you have the Bitcoin. And since the entire security model depends on those words being unguessable, they're chosen by your wallet using a random number generator. A properly generated seed phrase has 128 bits of entropy, which means if you tried a billion guesses per second, the universe would end before you got close. And this principle is exactly why hardware wallets exist in the first place. To generate keys on a dedicated offline device with a special chip whose entire job is to harvest genuine randomness from the physical universe. And no device took this more seriously than Cold Card made by Canadian company Coite. It's airgapped, open- source, and marketed to people who were worried the government is going to make you get a license to make toast in your own damn toaster. But it doesn't matter how sophisticated your random number generator is if you never actually u",
       "published_at": "2026-08-05T18:08:46+00:00",
       "added_at": "2026-08-05T20:57:49.966Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-06T04:19:31.192Z",
+      "transcript_at": "2026-08-06T04:19:31.192Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "software-ai-eeefc66cb440",
@@ -584,11 +587,14 @@
       "title": "The Case for Data Centers in Space",
       "url": "https://www.youtube.com/watch?v=A9JDkiYEhfY",
       "source": "Y Combinator",
-      "excerpt": "Philip Johnston is the co-founder and CEO of Starcloud, the company building data centers in space. In November 2025, Starcloud launched an Nvidia H100 GPU into orbit and trained the first large language model in space. They've since raised $200 million, hit a billion-dollar valuation just 17 months after YC demo day and filed with the FCC to deploy 88,000 more satellites. In this episode, Philip ",
+      "excerpt": "First thing every space company should do is book the first available launch they can [laughter] >> before they built the thing that they're going to launch >> before they built the thing. Before they probably even know what they're going to launch. Booking a launch is such a good forcing function for a space company. So we founded the company January 1st 2024. January 2nd we booked the first available SpaceX ride share uh launch and we were like okay something is going to be on that rocket. I'm not sure 100% sure what it's going to be at this point but something is going to be [laughter] on there. >> Sounds like the same advice for all the software companies. He's just going to keep launching and launching. Same thing. >> Welcome back to another episode of the Light Cone. Today we're sitting down with Philip Johnston, the co-founder and CEO of StarCloud. StarCloud is building data centers in space to address the energy bottleneck that AI is creating here on Earth. Earlier this year, they raised $170 million led by Benchmark and became the fastest growing unicorn in YC history just 17 months after demo day. Philillip, welcome to the light cone. >> Thanks so much for having me. >> So to start off, why data centers in space? >> So we are very quickly running up on constraints on where we can build new energy projects terrestrially. And so by building them in space, we get access to this almost unlimited lowcost energy in the form of solar. Um, of course there's other costs like the cost of launch and the cost of launch is actually very rapidly trending down, you know, with new launch vehicles coming online, the Falcon 9 program and and Starship on the horizon. Um, and so that's the reason we're building data centers in space. >> How did you come up with the idea? It's not sort of like the typical idea that I feel um people come up with. [laughter] I'd actually been working uh I was with Mckenzie for a few years working with the space agencies of different governments and I could see that the launch cost was very rapidly trending down and actually in early 2023 I decided randomly on a weekend to take a trip down to Starbase Texas where they're building the Starship",
       "published_at": "2026-08-05T14:00:08+00:00",
       "added_at": "2026-08-05T20:58:02.498Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-06T04:19:31.192Z",
+      "transcript_at": "2026-08-06T04:19:31.192Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-980b6e8ac064",
@@ -624,11 +630,14 @@
       "title": "Waymo Co-CEO Dmitri Dolgov: The Demo Is Only 1% Of The Work",
       "url": "https://www.youtube.com/watch?v=Gp4zrV3-6N8",
       "source": "Y Combinator",
-      "excerpt": "Waymo’s first autonomous demo took eighteen months. The product took fifteen years. Today, the Waymo Driver runs 500,000 trips a week — four million fully autonomous miles across fifteen cities, with 17 times fewer serious-injury crashes than human drivers. At Startup School 2026, Waymo co-CEO Dmitri Dolgov shares the seven lessons behind that journey, from bridging the gap between a demo and a re",
+      "excerpt": "Good afternoon everyone. It's great to be here. Uh we talk a lot about AI that lives on your screen uh lives in the digital world. And today I'd like to talk to you about a different kind of AI that we've been building at Whimo. AI that lives in the real physical world. How many of you by the way have been in a Whimo? Just raise your arms. Wow. Okay, that is impressive. Especially I understand many of you are out of town. Uh the folks who are visiting and have not had a chance to check out Whimo, I hope while you're here in the Bay Area, give it a try. Uh so this being a startup school, I structured this presentation as a sequence of lessons, seven lessons that we've learned over the years at Whimo around what it takes to build and safely ship today's most mature application of AI in the physical world, the Whimo driver. Uh let me start with a short video. Uh this is a clip from a ride that I recently took in a Whimo with my kids. Uh so as you see here, you know, we're moving uh forward. We're proceeding through an intersection and a couple of human drivers just decide to cut in right in front of us and the Whimo driver reacted safely, reacted smoothly. In fact, so much so that the kids, my kids were preoccupied in the back seat. They didn't even notice that anything happened. And to me, this was a pretty powerful moment. I've been working on this technology and this product for close to two decades, and you know, it just did something fairly important. It acted safely. It kept my kids safe. It kept everybody safe and nobody noticed. And that I think will be a bit of a theme in general when it comes to physical AI that the best AI moments will look like nothing happened. It's just the task got done safely and smoothly. And these sort of moments where the Whimo driver kept everyone safe are happening daily across our fleet. Today the Whimo driver is serving around 500 trips per week and driving over 4 million fully autonomous miles every week in 15 cities across the United States. Just for a comparison, that's over 300 years every week of an average American driver per year. And the Whimo driver is accomplishing that with a superhuman safety record. So what what ",
       "published_at": "2026-08-03T22:42:52+00:00",
       "added_at": "2026-08-04T21:02:27.723Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-06T04:19:31.192Z",
+      "transcript_at": "2026-08-06T04:19:31.192Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-33670b854f55",
@@ -1199,11 +1208,14 @@
       "title": "Major Bank Announces 40 Year Mortgages! | Boost Your Borrowing Capacity",
       "url": "https://www.youtube.com/watch?v=yd2VRbxlF6A",
       "source": "Personal Finance with Ravi Sharma",
-      "excerpt": "AFR, Sunrise Show - Channel 7, Channel 7 News, Business News Australia AFR Best Place to Work - 2026 Finalist Financial Times High-Growth Companies Asia-Pacific 2026 - #43 REB's Buyers Agent of The Year 2025 - Finalist \"FAST 100 AFR 2025 | #15 Fasting Growing Company\" “REB’s Best Buyer’s Agency 2024 - Finalist” “REB’s Best Buyer’s Agency 2023 - Finalist” “REB’s Rising Star 2023 - Finalist” “Austra",
+      "excerpt": "There we have it. 40-year mortgage loans. This is what one of the banks have come out and suggested is the right move forward. And I think it's the first step of many banks starting to make this move. Now, I'm going to go through exactly what this change is. What does a 40-year loan mean for you? And why do you want to take on debt over 40 years as opposed to 30 years? And then we're going to see what the ramifications of something like this are. Because I predicted this would happen about 2 to 3 years ago that this is coming. I don't know when. It's not a matter of if, it's a matter of when. So, let's go through it. All right. So, a non- major bank has launched a new 40-year investor loan that offers borrowers up to 10 years of interestonly repayments without requiring reassessment during that period. AM Bank has officially introduced a brand new investor loan structure across its wider broker network today, which is the 30th of July, launching a 40-year loan term with an initial interestonly period of up to 10 years without requiring a reassessment. The product, it's called Equity Flex, officially launched for full roll out following a pilot phase with select brokers in recent months. Designed for investment borrowers with a maximum LTV of 80%. The offering applies to loan sizes of 100K or more. Eligible customers can lock in interestonly terms ranging between 6 and 10 years. So the product overview, so at a 60% LTV, you're looking at 6.54. At 80% LVR, 6.59. Now the principal and interest rates are fixed at 6.39%. Now this is not the only piece of good news because we have many lenders. The big four, the second tier banks as well as third tier lenders and non-bank lenders all are going ahead cutting various products when it comes to their interest rates on fixed rate products. That gives you an indication of where the banks think interest rates are headed. Now of course I've explained this before. So why would a bank actually offer a fixed rate that's going to be lower than where the variable rate is today? And that's because they expect rate cuts to come into play. So let's say, for example, your interest rate today is 6.8%, but they're offering a 2-year fixe",
       "published_at": "2026-08-04T09:30:10+00:00",
       "added_at": "2026-08-04T21:02:30.051Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-06T04:19:31.192Z",
+      "transcript_at": "2026-08-06T04:19:31.192Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "property-c0c7d558dd72",
@@ -2710,11 +2722,14 @@
       "title": "Why Humanity Will Never Leave The Solar System",
       "url": "https://www.youtube.com/watch?v=Cyl3X88KEgg",
       "source": "Kurzgesagt – In a Nutshell",
-      "excerpt": "Only 10,000 exist, and each one is individually numbered. And it’s our first ever animated pin! Tilt it and witness the end of everything. Sources & further reading: After exploring most of Earth, venturing into space and exploring other planets, stars and galaxies seemed like an exciting, and even obvious next step. But the deeper we look, the more the universe reveals a hidden barrier between ou",
+      "excerpt": "The latest limited Edition Pin is here. Now available on the kurzgesagt Shop. You will never leave the solar system. Nobody alive today will. And maybe no human ever. Locked in by an invisible barrier, impossible to overcome for carbon based animals like us. And not just us – there may be millions of alien civilizations in the universe, none of them ever able to venture into deep space in a meaningful way. Ok but how can this be? We've made countless videos imagining how the exploration of the galaxy and beyond should just be a question of time. Sort of mandatory for civilizations at a certain point. But there is a catch: We are pushing up against fundamental physics. What is this barrier, made of dust and nothingness? And why is it so hard to overcome? You Don’t Understand How Large Space Is. We Don’t Either. Conceptualizing the size of space is impossible for our ape brains that evolved to understand distances like “right here” and “over the next hill”. Space is so absurdly huge that we just check out and just hear “very far”. “Very far” and “A million times very far” feels the same but it is not. To help our brains, let us start with what makes us cross distances: speed. The fastest a human ever traveled in space were Astronauts at 40,000 km/h, returning from the Moon in 1969. Not bad, but way too slow. The fastest thing humans have ever built by far is the Parker Solar Probe, which at this moment uses a physics cheatcode, hurling around the gravity well of Venus, accelerating to get closer to the sun. After seven years of doing this, the probe is shooting through space at a breathtaking 635,000 km/h. Fast enough to go around the world in 4 minutes or to cover the distance from Earth to the moon in 36. So let’s pretend we had a spaceship that fast, with a human crew ready to explore the universe! Current rockets would need 7-10 months to reach Mars, but our new spaceship covers the distance in just two weeks! Pretty good! The next stop is Pluto which we will reach after about a year – ok much longer, but still ok! It only takes two more years to pass the heliopause and one more to pass Voyager II, which traveled over 50 years to get this far. Great! The next ",
       "published_at": "2026-08-04T13:59:53+00:00",
       "added_at": "2026-08-04T21:02:38.930Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-06T04:19:31.192Z",
+      "transcript_at": "2026-08-06T04:19:31.192Z",
+      "transcript_kind": "manual"
     },
     {
       "id": "science-b15419220599",
@@ -2792,5 +2807,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-08-05T20:58:11.872Z"
+  "updatedAt": "2026-08-06T04:19:34.434Z"
 }
