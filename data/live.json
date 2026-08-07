@@ -1,80 +1,80 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-05T20:58:12.400Z",
-  "asOf": "6 Aug 2026, 6:58 am AEST",
+  "updatedAt": "2026-08-07T00:50:42.475Z",
+  "asOf": "7 Aug 2026, 10:50 am AEST",
   "markets": [
     {
       "symbol": "^AXJO",
       "label": "ASX 200",
       "currency": "AUD",
       "unit": null,
-      "price": 9227.8,
-      "changePct": 2.31,
-      "display": "9,227.8 (+2.3%)"
+      "price": 9238.3,
+      "changePct": 0.11,
+      "display": "9,238.3 (+0.1%)"
     },
     {
       "symbol": "^GSPC",
       "label": "S&P 500",
       "currency": "USD",
       "unit": null,
-      "price": 7723.6,
-      "changePct": 1.62,
-      "display": "7,723.6 (+1.6%)"
+      "price": 7710,
+      "changePct": -0.34,
+      "display": "7,710.0 (-0.3%)"
     },
     {
       "symbol": "AUDUSD=X",
       "label": "AUD/USD",
       "currency": "USD",
       "unit": null,
-      "price": 0.706,
-      "changePct": 0.89,
-      "display": "0.7060 (+0.9%)"
+      "price": 0.703,
+      "changePct": -0.38,
+      "display": "0.7030 (-0.4%)"
     },
     {
       "symbol": "GC=F",
       "label": "Gold",
       "currency": "USD",
       "unit": "USD/oz",
-      "price": 4304.8,
-      "changePct": 5.11,
-      "display": "4,304.8 (+5.1%)"
+      "price": 4293,
+      "changePct": 1.11,
+      "display": "4,293.0 (+1.1%)"
     },
     {
       "symbol": "CL=F",
       "label": "WTI",
       "currency": "USD",
       "unit": "USD/bbl",
-      "price": 75.07,
-      "changePct": -0.92,
-      "display": "75.07 (-0.9%)"
+      "price": 78.4,
+      "changePct": 4.23,
+      "display": "78.40 (+4.2%)"
     },
     {
       "symbol": "^VIX",
       "label": "VIX",
       "currency": "USD",
       "unit": null,
-      "price": 15.81,
-      "changePct": -4.18,
-      "display": "15.81 (-4.2%)"
+      "price": 15.15,
+      "changePct": -4.17,
+      "display": "15.15 (-4.2%)"
     }
   ],
   "crypto": [
     {
       "id": "bitcoin",
       "label": "Bitcoin",
-      "aud": 91846,
-      "usd": 64814,
-      "changePct": 0.67,
-      "display": "A$91,846 (+0.7%)"
+      "aud": 91395,
+      "usd": 64231,
+      "changePct": -0.1,
+      "display": "A$91,395 (-0.1%)"
     },
     {
       "id": "ethereum",
       "label": "Ethereum",
-      "aud": 2717.13,
-      "usd": 1917.42,
-      "changePct": 2.14,
-      "display": "A$2,717 (+2.1%)"
+      "aud": 2704.73,
+      "usd": 1900.86,
+      "changePct": 0.06,
+      "display": "A$2,705 (+0.1%)"
     }
   ],
-  "summary": "ASX 200 9,227.8 (+2.3%) · S&P 500 7,723.6 (+1.6%) · AUD/USD 0.7060 (+0.9%) · Gold 4,304.8 (+5.1%) · WTI 75.07 (-0.9%) · VIX 15.81 (-4.2%) · Bitcoin A$91,846 (+0.7%) · Ethereum A$2,717 (+2.1%)"
+  "summary": "ASX 200 9,238.3 (+0.1%) · S&P 500 7,710.0 (-0.3%) · AUD/USD 0.7030 (-0.4%) · Gold 4,293.0 (+1.1%) · WTI 78.40 (+4.2%) · VIX 15.15 (-4.2%) · Bitcoin A$91,395 (-0.1%) · Ethereum A$2,705 (+0.1%)"
 }

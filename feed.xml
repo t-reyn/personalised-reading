@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Wed, 05 Aug 2026 21:10:02 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 01:03:56 GMT</lastBuildDate>
+    <item>
+      <title>Credibility Theory Is Machine Learning&#39;s Shrinkage Estimator</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-07/credibility-theory-is-machine-learnings-shrinkage-estimator.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-08-07/credibility-theory-is-machine-learnings-shrinkage-estimator.html</guid>
+      <category>actuarial</category>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Bühlmann credibility — the formula that blends a scheme&#39;s own claims experience with the industry table — is mathematically identical to the shrinkage estimators behind ridge regression and empirical Bayes, which is exactly why a pricing model without it misprices every small scheme.</description>
+    </item>
     <item>
       <title>Apple Never Reads Your App Description — Google Play Ranks You on It</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-06/google-play-reads-your-description-the-app-store-doesnt.html</link>
@@ -396,14 +404,6 @@
       <category>science</category>
       <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
       <description>New James Webb spectroscopy on 3I/Atlas, only the third confirmed interstellar visitor, shows chemistry that doesn&#39;t match anything born in our solar system, and puts its age at up to 12 billion years.</description>
-    </item>
-    <item>
-      <title>What Actually Speeds Up Recovery From a Bad Ankle Sprain</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-02/ankle-sprain-rehab-return-to-play.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-02/ankle-sprain-rehab-return-to-play.html</guid>
-      <category>health</category>
-      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
-      <description>The three-grade system, why RICE alone is outdated, and the return-to-play numbers that matter more than how many weeks have passed since the injury.</description>
     </item>
   </channel>
 </rss>
