@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-07T01:03:56.419Z",
-  "count": 68,
+  "generatedAt": "2026-08-07T20:39:58.062Z",
+  "count": 69,
   "articles": [
+    {
+      "id": "2026-08-08-the-exposure-triangle-decides-what-a-colour-grade-cant-fix",
+      "slug": "the-exposure-triangle-decides-what-a-colour-grade-cant-fix",
+      "interest": "videography",
+      "interests": [
+        "videography"
+      ],
+      "mode": "learn",
+      "title": "The Exposure Triangle Decides What a Colour Grade Can't Fix",
+      "summary": "Aperture, shutter speed and ISO set the raw material every colour grade works from: get the shutter speed or ISO wrong on set and no LUT gets it back. Here's how the three trade off, and the one rule video adds that stills never needed.",
+      "tags": [
+        "cinematography",
+        "exposure",
+        "shutter-speed",
+        "iso",
+        "videography-fundamentals"
+      ],
+      "created_at": "2026-08-08",
+      "expire_at": null,
+      "concepts_taught": [
+        "exposure-triangle",
+        "180-degree-shutter-rule",
+        "iso-noise-tradeoff"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 793,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-08-08/the-exposure-triangle-decides-what-a-colour-grade-cant-fix.html"
+    },
     {
       "id": "2026-08-07-credibility-theory-is-machine-learnings-shrinkage-estimator",
       "slug": "credibility-theory-is-machine-learnings-shrinkage-estimator",

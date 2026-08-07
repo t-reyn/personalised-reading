@@ -4,7 +4,15 @@
     <title>Cortex</title>
     <link>https://t-reyn.github.io/personalised-reading/</link>
     <description>A reading list that writes itself, and learns what you know.</description>
-    <lastBuildDate>Fri, 07 Aug 2026 01:03:56 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 20:39:58 GMT</lastBuildDate>
+    <item>
+      <title>The Exposure Triangle Decides What a Colour Grade Can&#39;t Fix</title>
+      <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-08/the-exposure-triangle-decides-what-a-colour-grade-cant-fix.html</link>
+      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-08-08/the-exposure-triangle-decides-what-a-colour-grade-cant-fix.html</guid>
+      <category>videography</category>
+      <pubDate>Sat, 08 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Aperture, shutter speed and ISO set the raw material every colour grade works from: get the shutter speed or ISO wrong on set and no LUT gets it back. Here&#39;s how the three trade off, and the one rule video adds that stills never needed.</description>
+    </item>
     <item>
       <title>Credibility Theory Is Machine Learning&#39;s Shrinkage Estimator</title>
       <link>https://t-reyn.github.io/personalised-reading/articles/2026-08-07/credibility-theory-is-machine-learnings-shrinkage-estimator.html</link>
@@ -396,14 +404,6 @@
       <category>finance</category>
       <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
       <description>US payrolls badly missed forecasts overnight and Fed rate-hike odds collapsed — a shift that reaches Australian bank funding costs before the RBA does anything at all.</description>
-    </item>
-    <item>
-      <title>The Third Interstellar Comet Turns Out to Be 12 Billion Years Old</title>
-      <link>https://t-reyn.github.io/personalised-reading/articles/2026-07-02/third-interstellar-comet-3i-atlas.html</link>
-      <guid isPermaLink="true">https://t-reyn.github.io/personalised-reading/articles/2026-07-02/third-interstellar-comet-3i-atlas.html</guid>
-      <category>science</category>
-      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
-      <description>New James Webb spectroscopy on 3I/Atlas, only the third confirmed interstellar visitor, shows chemistry that doesn&#39;t match anything born in our solar system, and puts its age at up to 12 billion years.</description>
     </item>
   </channel>
 </rss>

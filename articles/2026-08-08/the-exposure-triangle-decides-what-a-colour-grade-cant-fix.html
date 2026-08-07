@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Exposure Triangle Decides What a Colour Grade Can't Fix</title>
+  <meta name="description" content="Aperture, shutter speed and ISO set the raw material every colour grade works from: get the shutter speed or ISO wrong on set and no LUT gets it back. Here's how the three trade off, and the one rule video adds that stills never needed." />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@100..900&family=VT323&display=swap" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script>window.PR_BASE = "../../";</script>
+</head>
+<body data-page="article" data-interest="videography">
+  <main class="doc-wrap">
+    <a class="doc-back" href="../../index.html?article=2026-08-08-the-exposure-triangle-decides-what-a-colour-grade-cant-fix">← Back to reading</a>
+
+    <article class="doc">
+      <header class="doc-head">
+        <p class="eyebrow"><span class="dot"></span>🎬 Videography</p>
+        <h1>The Exposure Triangle Decides What a Colour Grade Can't Fix</h1>
+        <p class="doc-meta">8 August 2026 · synthesised from 3 sources</p>
+        <p class="doc-summary">Aperture, shutter speed and ISO set the raw material every colour grade works from: get the shutter speed or ISO wrong on set and no LUT gets it back. Here's how the three trade off, and the one rule video adds that stills never needed.</p>
+      </header>
+
+      <div class="doc-body">
+        <p>Every colour-grading tutorial worth watching shares one unstated assumption: the shot was exposed correctly before anyone opened an editor. A grade can push a clean image toward a mood, but it can't invent motion blur that was never recorded, and it can't remove noise without also scrubbing away the fine detail that made the shot worth grading in the first place. That work happens in-camera, in the seconds before you hit record, governed by three settings that trade off against each other: aperture, shutter speed and ISO, together the exposure triangle.</p>
+
+        <h2>The triangle: light traded for a side effect</h2>
+        <p>Exposure is a light budget. Aperture controls how much light the lens lets in per instant; its side effect is depth of field, so a wider aperture means more light but a shallower zone of focus. Shutter speed controls how long the sensor collects light; its side effect is motion, so a slower shutter means more light but more blur on anything moving. ISO doesn't gather more light at all. It amplifies the signal the sensor already captured, and amplifying the signal amplifies the sensor's noise floor along with it.</p>
+        <p>Because all three feed the same total exposure, you can hold the picture's brightness constant while swapping which one does the work: open the aperture, and you can drop the shutter speed or ISO by the same amount and land on an identical exposure. What changes isn't the brightness. It's which side effect you're now living with: less depth of field, more blur, or more noise. Every exposure decision on a shoot is really a decision about which of those three costs you're willing to pay.</p>
+
+        <h2>Video adds a rule stills never needed</h2>
+        <p>In stills, shutter speed is a free dial: you pick whatever freezes or blurs a single frame the way you want. Video removes that freedom, because every frame is being compared to the ones either side of it, 24, 30 or 60 times a second, and human eyes have strong expectations about how much blur a "normal" moving frame should carry.</p>
+        <p>The convention that meets those expectations is the 180-degree shutter rule: set the shutter speed to roughly double the frame rate. At 24fps, that's a shutter around 1/48, rounded in practice to 1/50. At 30fps it's 1/60; at 60fps, 1/120. Push the shutter much faster than that, say 1/500 at 24fps, and each frame freezes sharply, so motion between frames looks stroboscopic and juddery rather than fluid; that's the deliberately harsh, hyper-real look Saving Private Ryan used for its battle scenes, achieved by breaking the rule on purpose. Go slower than the rule and motion smears into an excessive blur. Once you know the ratio, a phone or camera's manual video mode lets you set it directly rather than trusting whatever the auto mode defaults to.</p>
+
+        <h2>ISO: the lever you reach for last</h2>
+        <p>With aperture set for the depth of field you want and shutter speed locked to the 180-degree rule, ISO is what's left to fix a shot that's still too dark, and it's the one with the steepest cost. Digital sensors generally hold up cleanly to around ISO 1600 before noise becomes visible, especially in shadow detail, but push past that and the amplified noise floor starts eating the image the same way high-speed film grain used to.</p>
+        <p>That noise can't be cleanly undone afterwards. Denoising in a grade trades noise for softness, smoothing away exactly the fine detail a good grade is meant to bring out. Pushing shadows up in the grade to compensate for underexposure does the same thing in reverse: it's mathematically the same as raising ISO after the fact, except now you're amplifying whatever noise was already baked into the shadows rather than gathering more real light. This is the actual reason every proper colour-grading workflow starts from a correctly exposed plate: the grade has clean data to shape, instead of noise to hide.</p>
+
+        <h2>Test it before you touch a grade</h2>
+        <p>Put a phone or camera in manual video mode and film ten seconds of someone walking, checking what shutter speed the auto mode picked against double your frame rate; most defaults land well off the 180-degree ratio. Lock the shutter to the correct value manually, then deliberately shoot a second clip with the shutter set three or four times too fast, and play them back side by side. The strobing in the second clip is not subtle once you know what you're looking at. If the correctly exposed version still looks dark at that shutter speed, open the aperture before you touch ISO, and only push ISO past 1600 as a last resort. Get those three right on set and the grade becomes the fun part: pushing a mood, not repairing a mistake.</p>
+      </div>
+
+      <footer class="doc-foot">
+        <h2 class="doc-foot-title">Sources</h2>
+        <ul class="doc-sources">
+          <li><a href="https://en.wikipedia.org/wiki/Exposure_(photography)" target="_blank" rel="noopener">Exposure (photography) — Wikipedia</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Shutter_speed" target="_blank" rel="noopener">Shutter speed — Wikipedia</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Film_speed" target="_blank" rel="noopener">Film speed — Wikipedia</a></li>
+        </ul>
+        <p class="doc-poweredby">Written for you by Claude · this article adapts to what you've learnt.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script type="application/json" id="meta">
+{
+  "id": "2026-08-08-the-exposure-triangle-decides-what-a-colour-grade-cant-fix",
+  "slug": "the-exposure-triangle-decides-what-a-colour-grade-cant-fix",
+  "interest": "videography",
+  "interests": ["videography"],
+  "mode": "learn",
+  "title": "The Exposure Triangle Decides What a Colour Grade Can't Fix",
+  "summary": "Aperture, shutter speed and ISO set the raw material every colour grade works from: get the shutter speed or ISO wrong on set and no LUT gets it back. Here's how the three trade off, and the one rule video adds that stills never needed.",
+  "tags": ["cinematography", "exposure", "shutter-speed", "iso", "videography-fundamentals"],
+  "created_at": "2026-08-08",
+  "concepts_taught": ["exposure-triangle", "180-degree-shutter-rule", "iso-noise-tradeoff"],
+  "concepts_assumed": [],
+  "concepts_reinforced": [],
+  "sources": [
+    { "title": "Exposure (photography)", "url": "https://en.wikipedia.org/wiki/Exposure_(photography)" },
+    { "title": "Shutter speed", "url": "https://en.wikipedia.org/wiki/Shutter_speed" },
+    { "title": "Film speed", "url": "https://en.wikipedia.org/wiki/Film_speed" }
+  ],
+  "merged_from": [],
+  "merged_into": null,
+  "quick_check": [
+    {
+      "q": "You're filming an interview by a window and open the aperture wide for shallow depth of field, but the shot is now blown out. Without touching the aperture, what actually fixes the exposure?",
+      "options": [
+        "Raise the ISO, since a more sensitive sensor will balance out the extra light",
+        "Slow the shutter speed down further, letting even more light reach the sensor",
+        "Speed up the shutter and/or lower the ISO, the two exposure controls still open to you",
+        "Nothing can be fixed here; shallow depth of field and correct exposure are mutually exclusive"
+      ],
+      "correct": 2,
+      "concept": "exposure-triangle"
+    },
+    {
+      "q": "You're shooting at 30fps and want motion to look natural rather than stroboscopic. Per the 180-degree shutter rule, what shutter speed should you set?",
+      "options": [
+        "1/60 second",
+        "1/500 second",
+        "1/15 second",
+        "1/30 second"
+      ],
+      "correct": 0,
+      "concept": "180-degree-shutter-rule"
+    },
+    {
+      "q": "Your indoor shot is a stop underexposed, and instead of raising ISO on set you plan to just push it up a stop in the colour grade. What's the actual tradeoff of doing it that way?",
+      "options": [
+        "There's no real difference between the two at all, a stop is a stop wherever it's added",
+        "Grading always produces a cleaner, sharper result than raising ISO in-camera ever could",
+        "This exposure trade-off only ever applies to still photography, never to video work at all",
+        "It bakes in the same shadow noise ISO would have added, without the highlight detail exposure keeps"
+      ],
+      "correct": 3,
+      "concept": "iso-noise-tradeoff"
+    }
+  ]
+}
+  </script>
+</body>
+</html>
