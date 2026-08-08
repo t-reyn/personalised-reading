@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-07T20:30:41.794Z",
+  "generatedAt": "2026-08-08T20:18:23.584Z",
   "interests": {
     "software-ai": {
-      "days_since_last_article": 4,
+      "days_since_last_article": 5,
       "items": [
         {
           "id": "software-ai-a07de9ea8c64",
           "title": "8 Predictions for the Era of Continual Learning",
-          "excerpt": "Read the essay here: https://www.dwarkesh.com/p/era-of-continual-learning",
+          "excerpt": "I've explained elsewhere why I think actual continual learning is needed. I don't think you can have AIs that perform whole jobs as competently as humans if they are forced to just write markdown files from session to session. Just to give an illustrative example, imagine if this is the way that…",
           "url": "https://www.youtube.com/watch?v=iewm45atodE",
           "kind": "video",
           "source": "Dwarkesh Patel"
@@ -68,7 +68,7 @@
       ]
     },
     "design": {
-      "days_since_last_article": 5,
+      "days_since_last_article": 6,
       "items": [
         {
           "id": "design-cca24c420fe1",
@@ -132,13 +132,21 @@
       ]
     },
     "indie-income": {
-      "days_since_last_article": 1,
+      "days_since_last_article": 2,
       "items": [
         {
-          "id": "indie-income-2d4ae221c9f8",
-          "title": "How To Design In The Agent Era",
-          "excerpt": "AI isn't just changing the tools designers use. It's changing how they build, ship, and stand out. In this episode of Design Review, Stephen Haney, founder of AI-native design tool Paper, joins YC General Partner Aaron Epstein to demo the agent-first workflow that's making Paper one of the…",
-          "url": "https://www.youtube.com/watch?v=P06RgnUKX_I",
+          "id": "indie-income-db10a63de5eb",
+          "title": "Why Robotics Still Isn't Solved - But Could Be Soon | YC Paper Club",
+          "excerpt": "This week's Paper Club is all about robotics. Every year for the last decade, someone has promised that the era of robotics is just around the corner. But we're still waiting. So we gathered a bunch of the top researchers working in AI and robotics to present the latest findings on where we are and…",
+          "url": "https://www.youtube.com/watch?v=myDCd0hNqQU",
+          "kind": "video",
+          "source": "Y Combinator"
+        },
+        {
+          "id": "indie-income-eb63118516f3",
+          "title": "Max Hodak: Average Is Not Good Enough",
+          "excerpt": "Science is building a retinal implant that restores vision to people who have gone blind. One patient has already used it to read a 300-page novel. Building a company like that requires a lot more than getting the technology right. At Startup School 2026, Science CEO Max Hodak explains how the…",
+          "url": "https://www.youtube.com/watch?v=Xc4klGbq8v8",
           "kind": "video",
           "source": "Y Combinator"
         },
@@ -148,14 +156,6 @@
           "excerpt": "Careem super app revenue rises but losses deepen &nbsp;&nbsp; Arabian Gulf Business Insight | AGBI",
           "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPdTNUNzk5QUQwSTNjRHliUkF4dzdhdjdXZ3oyUlQtTVpYaFZzUzNYeEJqSmNzaU5CX3kyeGVZNlc2TVlGOFppcm1uUEJNNGRxX1JSU0J1bjNUVm1nT2pxQ0hHZ3FXcVBKVFoxYlo0b1F0NndETGRsQlFqeXJsX2dfdm5jUlRwMDlXbUo0?oc=5",
           "kind": "article"
-        },
-        {
-          "id": "indie-income-cb9ef3c16e22",
-          "title": "Garry Tan: \"Personal AGI Is How You Stay Under Your Own Power\"",
-          "excerpt": "So the internet calls me one of the most AI psychotic people online. So it's only right that I start my talk with a story about one of the most cancelled men in history. His name was Baroo Spininoza. And in case the philosophy elective wasn't your thing, here are the highlights you need to know. In…",
-          "url": "https://www.youtube.com/watch?v=eRrc1pUY5oU",
-          "kind": "video",
-          "source": "Y Combinator"
         },
         {
           "id": "indie-income-073a1fdd6d66",
@@ -197,8 +197,22 @@
       ]
     },
     "mortgage-broking": {
-      "days_since_last_article": 3,
+      "days_since_last_article": 4,
       "items": [
+        {
+          "id": "mortgage-broking-d1313ee0dc67",
+          "title": "Auto Loan Refinancing: How to Lower Monthly Payments in 2026 - News and Statistics - IndexBox",
+          "excerpt": "Auto Loan Refinancing: How to Lower Monthly Payments in 2026 - News and Statistics &nbsp;&nbsp; IndexBox",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORGFabml0eDZNQ0YxLXVvNURoWF8zNVktUnQ5WjVmUEcwNGUtbFY2WUxkRXVTWUpXVmpsRW1FT1VBeGh2S051ZHQteGhCcF9DckhPRWlsWFVMajZXNDhnY3dSNG5RWDY3dlBqSEFPWU9jRUwzR2dRRExHaGpWWk4xYmV5dDI2bXVOS1B6MUZLNjRJQWIxdU1qMU8tcw?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "mortgage-broking-45d448d21b13",
+          "title": "Auto loan refinancing: How it works and when it could save you money - Fox Business",
+          "excerpt": "Auto loan refinancing: How it works and when it could save you money &nbsp;&nbsp; Fox Business",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNN0kycUtQZzZCMl9HX0R6UGszSHhlVmhOMXI5ZHdkMkVqejJveVJjM09KZ0R2UjktRE9xXzd2Mjg5WTBkdVJjRHN0dTd2bm1CNjc5aVlIUzBRUi1Kd1pPRlRhSTNpWnk1d2c5bldjeVY3NldIcHU0VklwOHFIRGxqUlhlSXNfeGdwTnJ3UHp6LWNJTVNZaDZZRdIBngFBVV95cUxNS3lKUGVyb2llN3RnZ1hnYUd6UTVfRWxfLVpWTW1mZUxEdWk1SGJab1JoeWdSLTJCaHd0WFIzUmtwQW5QZlQ5dkNmUk9MNHhaTmtsWDFUTU9EUjJ2UlBCdGtoQy0xSEV5cW53cDJOQW9ya0tTRGFjc1diWkF1dU1lZlE3OUIzQkN3VXAxYTk4bFJBWWpjOVZSenpranpOUQ?oc=5",
+          "kind": "article"
+        },
         {
           "id": "mortgage-broking-3c9184974442",
           "title": "Three steps to protect your home loan from a falling market - SMH.com.au",
@@ -211,20 +225,6 @@
           "title": "Olympian and HGP's Centre Court PBSA refinancing revealed at £75m - PBSA News",
           "excerpt": "Olympian and HGP's Centre Court PBSA refinancing revealed at £75m &nbsp;&nbsp; PBSA News",
           "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxObDltVEd0LVBrYjE5RUVRUXRxSGoxLUxaRno2STFCcXMzbjdmbG5kZzRSU3psTi1heDB4aHB2bFFHQ0hBc3dOWkttSE1oaDl2WlJvQ1F3eFVhVmt1ZC0wekxPTzhuOEVBSDJzY29zOHN6MWhRLXc4eVNJQUxJd29DZnRWX083Qjd4ZTZWLW5pb0huZHZFb19QQUp1bw?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "mortgage-broking-dd81fc7b04ca",
-          "title": "Veritas-Backed Firm Begins Year’s Biggest Software Refinancing - Bloomberg.com",
-          "excerpt": "Veritas-Backed Firm Begins Year’s Biggest Software Refinancing &nbsp;&nbsp; Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdl9IdGVXaVZIcUhnS01teldVRG1QVjRwbGtwNi1ESFItUjRPT2ZGenlGdnRUWmk0VU1ZVlEwQm1Ja3BQTENKV2FLaEZlY2dwdHljSUZxeXo3X2I5eHRUSzQwQ21tS01EYm41VEozREZRa0p2Z1FlZUFBWmczWlZZLUdELXVxMmRManZac2NHVXMyYWNPck9iOVRwS1BxcVEwUDI3b3ZTRlBHc2g2bkJ3VkhBbw?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "mortgage-broking-1157b5ea1d3d",
-          "title": "Top 10 most read mortgage broker stories this week – 07/08/2026 - mortgagesolutions.co.uk",
-          "excerpt": "Top 10 most read mortgage broker stories this week – 07/08/2026 &nbsp;&nbsp; mortgagesolutions.co.uk",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPeWVuVUo4dXAzWHZvYmVibDkxTzJ5SjZxNl94bEo2bUp4VTZsZjB3X2Qxck5Ucm41TkJnQXhzbndZRGIxLUpTWWw2clJJcDZTVHQzZmNoajFCbW9jbWFkREowMzFpRVBTdnZCRGg5cVNTVjhrVHA0cVNiSUxzNDNmTzZ2Wmd6Z2R6dGNTUDdUQ3YxamduQzJlbHo3ODc4UWtBY05UZVpUdnpCU3FVblUydHpZa3gxajcyVllITEd2VWo?oc=5",
           "kind": "article"
         },
         {
@@ -258,7 +258,7 @@
       ]
     },
     "property": {
-      "days_since_last_article": 8,
+      "days_since_last_article": 9,
       "items": [
         {
           "id": "property-15e52ded6754",
@@ -323,8 +323,15 @@
       ]
     },
     "actuarial": {
-      "days_since_last_article": 0,
+      "days_since_last_article": 1,
       "items": [
+        {
+          "id": "actuarial-94cb88975a77",
+          "title": "Homeowner’s insurance tips from an Indiana actuary - nwitimes.com",
+          "excerpt": "Homeowner’s insurance tips from an Indiana actuary &nbsp;&nbsp; nwitimes.com",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTFFCRTg5MkFwWWhCVXRWNXRyVjYyRXJid1pYMElDMzRDN1hiSlNDR0hsZmVhR2dVa2JmalpHcFRyWHRsSXBmcUM1OHFIYS1qaWVMenJ0VGo2NHZJekhJazF6SUl6VmtldnZLWDd4MVkyekU3clA0Ujg3OXZkMzVFcEtPSERJMzloN05XZ2ljUjJuWjZ2RVYtYjl1WU5TaXJEalZaUQ?oc=5",
+          "kind": "article"
+        },
         {
           "id": "actuarial-869cb1671240",
           "title": "‘Court isn’t a claims handler’: judges reject class action over BI row",
@@ -344,13 +351,6 @@
           "title": "TPR uses anti-avoidance powers to protect plumbers’ pensions - The Actuary",
           "excerpt": "TPR uses anti-avoidance powers to protect plumbers’ pensions &nbsp;&nbsp; The Actuary",
           "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOeW1NVlplVVZMSlkwZVdmdXJ2QnFxalRaV1JQOUpkMExPbkpZcEREQ0xlcWQ2bHFIZU1NWE5RNUFKTXFqZHRVZUdQQ05KREYwYmg4OFd2UW9OSU1RQ2pueE1nM0dFcWp1ZGJ3dERvRkN2d1k4akxBaE55V0Y3UFRQS00zNUMzRHJnVE1EQ1lnWldhajN5UjhCVkFR?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "actuarial-fea1bcfb4060",
-          "title": "Guernsey and Alderney set split personal injury discount rate - The Actuary",
-          "excerpt": "Guernsey and Alderney set split personal injury discount rate &nbsp;&nbsp; The Actuary",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPN2U0VExtbUZnSzVYbmlvWGxZdzNQSjM4MjF2d2c1MVktdDZUeF96eFE0ekxBSFdUT0djMHBVYUtpNi1pOERYUEZNS1hGRG1xQUIzakMtZTBMYWpzZ21aNGNxYlJkeVB6Vm9oc0IwWXNzazR4Y1hyTWJHUnQ5OE8ySThQeVJhZ3RnNTR4VzN6V2FZck9YSlFack5zZi1hOXdF?oc=5",
           "kind": "article"
         },
         {
@@ -389,48 +389,49 @@
       ]
     },
     "finance": {
-      "days_since_last_article": 10,
+      "days_since_last_article": 11,
       "items": [
         {
-          "id": "finance-f73cc8877271",
-          "title": "Rockstar Energy founder builds Celsius stake, wants to take over as CEO",
-          "excerpt": "Rockstar Energy founder Russ Savage told CNBC he now controls 12 million shares of Celsius Holdings, amounting to roughly 4.7% of the energy drink company.",
-          "url": "https://www.cnbc.com/2026/08/07/rockstar-energy-founder-celsius-stake-ceo.html",
+          "id": "finance-b08b0ae79076",
+          "title": "Stock Market Research & Investor Analysis Tools - TIKR - TIKR.com",
+          "excerpt": "Stock Market Research & Investor Analysis Tools - TIKR &nbsp;&nbsp; TIKR.com",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZDY4cmllcHVIWDNCbVRMeHpvZmhCZnQxZlZScWxFVUw1d0FFNW1mODh1NzJYVlA2R1IwSWRhY09kUjJuRjM0LTUwcWtYUnBMbUtGY3JsdlVqaGljUEVmYXhtajRIQk91MlpVOEdqRWtyQWM5OUVuY2hOTWxHRmFMaVlwQlJiNnNVenItbFRxRTRhNjRHWjJUVDNkUkQ2akRtVVhpcnc2WHg1OVM4?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-50bb3e432e89",
-          "title": "‘SaaSpocalypse’ debate intensifies as software stocks swing wildly",
-          "excerpt": "This week saw massive moves in both directions for software stocks, as investors try to figure out which names are best insulated from artificial intelligence.",
-          "url": "https://www.cnbc.com/2026/08/07/saaspocalypse-debate-intensifies-as-software-stocks-swing-wildly.html",
+          "id": "finance-81147ac23b3e",
+          "title": "Iran sets conditions for opening Strait of Hormuz after UAE says one of its ships was targeted by airstrike",
+          "excerpt": "Iran's military stressed that the crucial waterway would only be reopened when the U.S. accepts Iran's conditions.",
+          "url": "https://www.cnbc.com/2026/08/08/uae-ship-targeted-missile-us-iran-tensions-stay-high.html",
           "kind": "article"
         },
         {
-          "id": "finance-b2e880bd8847",
-          "title": "Watch Investing View is Glass 'More Than Half-Full': Kelly - Bloomberg.com",
-          "excerpt": "Watch Investing View is Glass 'More Than Half-Full': Kelly &nbsp;&nbsp; Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPX1MxQjdLQXBYb25OT0ZsU251anVTVVp1R1c3cGFWUjNHc0pmNUY2WUNPaHlNYWIzOV80X1BNckhGclp2M0hMRnJoazZCZlFiS0tpUlNoTXRiZFVRcXJod3ZySW1Idi12Yk5WcS1ZWU1uNzFKZXVsdHZZTnJac1Z3UmRic2JsbWpSb0ZDRXRqREpoUWFxQ08tNHlnanVlTktOaElaLUtNYw?oc=5",
+          "id": "finance-64a1834cea29",
+          "title": "AGNC’s Premium Valuation And Dividend Debate Might Change The Case For Investing In AGNC (AGNC) - simplywall.st",
+          "excerpt": "AGNC’s Premium Valuation And Dividend Debate Might Change The Case For Investing In AGNC (AGNC) &nbsp;&nbsp; simplywall.st",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQbG1wMTRlQ1RadTJxSFpLNHlPZ0luQlZjNzJHZURiRGpER2I3RWtUU2FkWl9nVW9FQXlIUV91amZIYWplT0JkMTlQLVNNcFVjOXBGUlpCNzVXUm5QenlPNzJSVEcyNlIxMmFBVGp0Qm1xUDE1RzZScUp3RG15UHM3Nk12Y0dzcHN2UDdaVnE3cUVkSGVMSmJwZ3BZcmVyRGpJUUxGVFNTT2I4NG1lM3lFU01NWHJ4Nmg5SG9KZ09Tc284TWt5Sll0ZERvZnFiZzJMOVlKUTF6REltbzA1VV81c2ZR0gHnAUFVX3lxTE1yMXFudEcySXlYWUcwWUwtQmhSbm1tWlJUdkJHX2VhQWxyTHBKckdmczBQU29aTTMyMmpNTzhqVURxYmtFUXBRTkNvX0xWSFNpdElETkoybGZPTWRxeFZsbHRleF9BNmJXb0dBRUp3aEFGeHhMRVhxcWJtaEVBM3FodlV5bkdzcVRMbE1FM1JUb19OS1NGM19yYWlNSm90TVIxcmttdVl1eWt0dEtKajczbndTd0ZXVS1OQjM3Rmd2cGpSWC0zMENPRWRfcFRHc0JMTGpvaTNhR1BDTjA5M2tJUmJqb2h5Zw?oc=5",
           "kind": "article"
         },
         {
-          "id": "finance-4c023c6eee24",
-          "title": "Could Copper Lose Its Tariff Premium? - Investing.com Australia",
-          "excerpt": "Could Copper Lose Its Tariff Premium? &nbsp;&nbsp; Investing.com Australia",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZWpVTnRVU0RrOXJRc2JzQlp3ZVR3eWZiQlAtOEJMd2NSU3VOY2VhMWcyOHk2RmhYX2VtV0ZjWXlOTUpmMVFTTjc3eEduZzNxNF9FeGxHUkVRb2xNRFg4SzJnYkR3cUZRUDJqVzh2SEFEQW1BNFoxeGUxR1pndVJ0OEFrMG96eUU?oc=5",
+          "id": "finance-246e738d7dce",
+          "title": "Hunter Biden says Joe Biden’s cancer has spread further and is ‘very painful’",
+          "excerpt": "\"The cancer has spread, is metastasized into his bones and further. It's very painful. It's very debilitating in many respects,\" Hunter Biden said.",
+          "url": "https://www.cnbc.com/2026/08/08/hunter-biden-says-joe-bidens-cancer-has-spread-is-very-debilitating.html",
           "kind": "article"
         },
         {
-          "id": "finance-e68015a1ae92",
-          "title": "Coles confirms outsourcing, says keeping costs down is ‘critical’ - afr.com",
-          "excerpt": "Coles confirms outsourcing, says keeping costs down is ‘critical’ &nbsp;&nbsp; afr.com",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcC1RTzBEYWl3cFpHcG1kZnRBUEp1ODZvUVR4M1c2QmZpeGJVTl9VSVYxNW9tcnplUEZRZ0lyQ25CNGZ4UHQwNjZQeHJzR0J3dWFvU3M1VWJjeEF2V3hrWGstRGVxcGZFdGJLUUpPd1pGakhZdDA5ek1rYksxSmZjOERyVWhtUlNDbGt0Q0pQUThfbjR1ZWFVb0F2TXZKdUU5X0c5MW54NEFJQk5K?oc=5",
-          "kind": "article"
+          "id": "finance-93b365363bdc",
+          "title": "Google’s AI Brain Drain, SpaceX's Huge Quarter, Airtable’s 90% Collapse, US Data Fuels China AI",
+          "excerpt": "(0:00) Bestie intros! Brad Gerstner fills in for Chamath (2:16) Major shakeups at Google: AI brain drain or better strategy? (20:39) SpaceX's big quarter: Terafab, AI Capex, $1T revenue projection? (45:44) All-In Summit Speaker Announcements! (48:01) Airtable sells for a 90% discount…",
+          "url": "https://www.youtube.com/watch?v=muRIXCDw-k0",
+          "kind": "video",
+          "source": "All-In Podcast"
         },
         {
-          "id": "finance-ecd5be09e71c",
-          "title": "Ley breaks silence on the spill, flying and the corporate ‘black box’ - afr.com",
-          "excerpt": "Ley breaks silence on the spill, flying and the corporate ‘black box’ &nbsp;&nbsp; afr.com",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOT1FxMjZIQnJ2d2t0SGJLQXVyQnRBaWlzRll6TjQ2MWtjMXZEbnJQMmM1UUMzcG1JTTVRVzFBanJxRWVTcGFONHZxLWdDZm9kZFFoOHJCS1pjUHJ1VnhhNHFjb0dDcGpTbC1kcW13SjhzcVp6V3NkcHdjeHkwYk84ZnBPdEcwTWZYdVAxV1M2VERFcF9pOWZOYTRCYXlNbFM1U2I0X2dfam5talNKZnRsOXA4Slo5SHJZamFB?oc=5",
+          "id": "finance-26af25421e8a",
+          "title": "Sunrise CEO reveals next steps after securing $566m Trump loan - AFR",
+          "excerpt": "Sunrise CEO reveals next steps after securing $566m Trump loan &nbsp;&nbsp; AFR",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdkM2TnFCU3dBcllUNFVPVWRTVXR6RDZVSWpaOEo2czlhN2VIaVhZLWNzN2ZBMzB2Q2NmUGY0YWZ1c3Bqb3hiV0cwN1JFWHI5R281cjNHVUhHeFo4elJLOXlGMGdyUS1Oakk4N21reFVTVU1KRFR6Mm90ajhEMmtmaGhkaHVLWlpjeW9qaGw3b045YUh0NmU5T2s4am9ZamFkMXh0b1dwX1E2QjFGTHpF?oc=5",
           "kind": "article"
         },
         {
@@ -451,41 +452,41 @@
       ]
     },
     "health": {
-      "days_since_last_article": 6,
+      "days_since_last_article": 7,
       "items": [
         {
-          "id": "health-9cece10fbec0",
-          "title": "Is Nutrition Impairing Sow Health and Livability? - Pork Business",
-          "excerpt": "Is Nutrition Impairing Sow Health and Livability? &nbsp;&nbsp; Pork Business",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOVVdwZXZZS0szQm5MdHAwWDMxQUZ3eGpjdS05eEJUWkx1RjNzN2IxT2NYTm96SnpJbTZmdWhJQ2lzSGE0dVp4MDZZR3J2OTVHS1pBeFN4UWtzbEt1clNZa0lQcDNLanZFZnlCMUpCSkN6YWRFV1ZEN05Rc0ZBUlJBM2lWZGF2Zw?oc=5",
+          "id": "health-a922410564e9",
+          "title": "A Wearable Ultrasound Patch That Supercharges REM Sleep - Hackster.io",
+          "excerpt": "A Wearable Ultrasound Patch That Supercharges REM Sleep &nbsp;&nbsp; Hackster.io",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNT1RQSUNleDI1WHNPc0hVLWR1NDFkd3diYUhoU29FbHFqNGJaM0FyZDJ0Z21LVXRtZ2JkNlBrdG1TemhZaXpNQ1VQNnBFVjlscmxSMjktb3I3V25XTHBpT3NBb3hJVThhRDQtdnV1em5wdkZpc1pwUElaLWVoOTdJMmJpZC1PQmRKbnlCTjNSbHFlVjQ5WXdIQ0hDT3VrUQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-0b3999ed1a21",
-          "title": "Getting Child's Sleep Schedule Back on Track for School - Cleveland Clinic Newsroom",
-          "excerpt": "Getting Child's Sleep Schedule Back on Track for School &nbsp;&nbsp; Cleveland Clinic Newsroom",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOR0kyM256WlRTVXdxMHVfSmhYdUhvWWt3UDRUUFIzaFRNY210ajZaeS1XT1BuZ01WaldIVUtwa2x0dURwSlh1UGRUX295UXdpMm0xTHJncjBQdmpEdkZYcXFqdGRDZVU2Uno5QmtwWkVTenM1b2gyb2VSOGx0ZmJoQ3R6RjFIZy1ZNzJERllPMUhrSGlSM3dDM3BfTTB2cU9xb2FGNlBOY2ZlZDA?oc=5",
+          "id": "health-246e10623566",
+          "title": "Adelaide Football Club names Anytime Fitness as official and exclusive gym partner - Australasian Leisure Management Magazine",
+          "excerpt": "Adelaide Football Club names Anytime Fitness as official and exclusive gym partner &nbsp;&nbsp; Australasian Leisure Management Magazine",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaEtYVVBRVXlWX2ZfQlRVeXFDcmdaRURqOGhmODdNTllXRmhxdUJ2UHd5SzgtSHNSaFI0eFY2N2NUVWcyS1hZam5LRUhjRXdyOGZwRDZhV2M4OVhhNEVzcVYyaFdMYUlTWUQtazhzekppWnJzV3RSSkdlN0p6M0xwbWNUcVJhR0JEaVRWXzhObFUyc1Q2SmJYZmdId1lPTjZ4RzVmNGNrM2tMay0wVjNqRWVMS00tQkFj?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-efc521f06bb1",
-          "title": "What doctors want you to know about ‘catch-up’ sleep - The Washington Post",
-          "excerpt": "What doctors want you to know about ‘catch-up’ sleep &nbsp;&nbsp; The Washington Post",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQQTF0RE1tZ3N4UmRtZkdUWGhwSE1iZ3FBdjBFaGpvaWxHV2x0VjB2UEJWYXlDVXNaamV1Tk9nVVlWU3dxZVpBZEZxdWFBb0UxSG9CLTNDbS1yQWdQYW9RRTlGX21Db0h6VkJqNDRXbE1MQzZXdGtUSS0xVVNreVAwdHFUSkFETFVoRU5ETzZ1XzRsYlcwQ1V2THJjRVZiX2hK?oc=5",
+          "id": "health-30efc4ecf20b",
+          "title": "The Mental Toll of Being Obsessed With Living Longer - Robb Report",
+          "excerpt": "The Mental Toll of Being Obsessed With Living Longer &nbsp;&nbsp; Robb Report",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQjJPSVVDcjE0cnBuOEQzeTNfSmRvN0xkR3o0UC1ORVA1OWRvMWl3bFlGUVpLM2NtX0plaVUtc2dhSUtuUjFCMWh0NWxXek1jTFRjWHM0LXBJX1NuYzZtZnpqM2EtTGNiZ0YtWDhXQmMwN01pQ0twcmR4cDVBTWwxU0JmZnlVWVhNd0JiSTBpbXBvcktsWFp0XzAzYUE2eW1zM2F3WDViN3doRVNS?oc=5",
           "kind": "article"
         },
         {
-          "id": "health-9bb294a84211",
-          "title": "Vitamin C may fight cancer — but not the way scientists once thought",
-          "excerpt": "Linus Pauling was widely mocked for claiming that vitamin C could fight cancer, especially after trials using vitamin C pills showed no benefit. Researchers now know that intravenous vitamin C reaches vastly higher concentrations and can behave more like an experimental cancer drug than an ordinary…",
-          "url": "https://www.sciencedaily.com/releases/2026/08/260806050717.htm",
+          "id": "health-4247080bd15a",
+          "title": "Scientists reveal how much exercise you really need to protect your heart",
+          "excerpt": "Getting the recommended 150 minutes of moderate-to-vigorous exercise each week may offer only modest protection against heart attacks and strokes. A large study suggests that substantially greater benefits may require roughly 560 to 610 minutes a week—nearly 9 to 10 hours of brisk walking, running…",
+          "url": "https://www.sciencedaily.com/releases/2026/08/260806050724.htm",
           "kind": "article"
         },
         {
-          "id": "health-fa720e9cd014",
-          "title": "New autism therapy shows surprising benefits even in adult mice",
-          "excerpt": "Blocking the glycine transporter SLC6A20 restored important brain signaling and improved social, communication, and repetitive behaviors in autism-related mouse models. The treatment also worked in human brain organoids and showed lasting effects in adult mice, suggesting the brain may remain more…",
-          "url": "https://www.sciencedaily.com/releases/2026/08/260805082508.htm",
+          "id": "health-e8dcb4ff1097",
+          "title": "A protein older than blood circulation could transform cancer immunotherapy",
+          "excerpt": "A protein that evolved long before the human circulatory system may help unlock stronger cancer treatments. When C3 is produced inside tumors, it blocks immune-suppressing cells and gives immunotherapy a better chance to work. Researchers were even able to recreate this effect in resistant tumors…",
+          "url": "https://www.sciencedaily.com/releases/2026/08/260806050702.htm",
           "kind": "article"
         },
         {
@@ -515,34 +516,34 @@
       ]
     },
     "videography": {
-      "days_since_last_article": 23,
+      "days_since_last_article": 0,
       "items": [
+        {
+          "id": "videography-c9e6b22f03f6",
+          "title": "From YouTube to the Big Screen: How ‘Simon Says’ Signals the Next Evolution of Digital Filmmaking - Time Magazine",
+          "excerpt": "From YouTube to the Big Screen: How ‘Simon Says’ Signals the Next Evolution of Digital Filmmaking &nbsp;&nbsp; Time Magazine",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSzVyOXZ5cTAwZFI2LXliVDFEcjZnbDhSaHNWZ1NxWnpuOXl1TDN1ZkdVc2dWSndHV3NoVko1S3dISXdSc3NyMlRFTFM4NWtUWXlMU3FnWDhRRVNnQWRIclU3ekxZYnZhV0hGellsTV9paHVUcVI1MFo1UUhBQl9PTDZFc2h1U2pBbVM3ZzFFdkExbkpyMlBTRjJGX3RKTWJqaDRtd2lfVnFhMVRZQ21vZlVhLUFvUmNaNEdINHRTcHBqbGxIOC1FRjdNdHg?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "videography-df67b0c9d803",
+          "title": "Rare ‘Mighty Joe Young’ puppet surfaces after 70 years: ‘One of the most historically significant filmmaking artifacts’ - Gold Derby",
+          "excerpt": "Rare ‘Mighty Joe Young’ puppet surfaces after 70 years: ‘One of the most historically significant filmmaking artifacts’ &nbsp;&nbsp; Gold Derby",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPOFBDRTBGY3VNWmNJYU5XZkstanlEcWtucWlycVlGejVmLWttdXdhSEZUdlc1YmtzbnN6ZllpOURZXzBzRFFTdy1mc2thazlzT285VzVvb3lwanV2RU5YX2xrVlRFY18yVEpMMnV6R2lOaGdmNjdmMkNJdVBUaTlnYU5wdER5ZURHLUdVZUdadHdIWWs?oc=5",
+          "kind": "article"
+        },
+        {
+          "id": "videography-736516badacc",
+          "title": "Ready to Add One of These On-Sale Tilta Matte Boxes to Your Camera Setups?",
+          "excerpt": "Think you're ready to upgrade your camera setups with a tough and rugged, yet lightweight and compact, matte box? Well, you're in luck, as these Tilta Matte Box options are on sale and ready for your cameras. For this week's \" Deals of the Week \" roundup, we have several variations of this popular…",
+          "url": "https://nofilmschool.com/tilta-matte-box-deals",
+          "kind": "article"
+        },
         {
           "id": "videography-0faa5255282a",
           "title": "How to Write a Romance Built on Character, Not Beats",
           "excerpt": "There are no real shortcuts to writing something good, especially since there are so many ways to attack story. The closest you can probably get if you're writing in a specific genre is to look at that genre's story tropes and just copy the steps. I'm thinking in this case specifically of Lifetime…",
           "url": "https://nofilmschool.com/heart-framework-writing-romance",
-          "kind": "article"
-        },
-        {
-          "id": "videography-f9c7da8541e2",
-          "title": "The Real Skill Behind Getting a Movie Made",
-          "excerpt": "Making a movie is brutal. It's hard. We know. But the lead-up to the green light might even be worse. Before you get to hire actors or buy props, you often have to sit across from someone holding the money and talk them into parting with it. It's a skill that has almost nothing to do with…",
-          "url": "https://nofilmschool.com/how-directors-win-the-pitch",
-          "kind": "article"
-        },
-        {
-          "id": "videography-299c319f41c9",
-          "title": "Spark Story: Rewriting the old script to filmmaking - Jon Peddie Research",
-          "excerpt": "Spark Story: Rewriting the old script to filmmaking &nbsp;&nbsp; Jon Peddie Research",
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPYUVDUXRXT3huQldyOTI3Snlqdjk5MURMeTYxa1BrR3dmTXZUVUhMYUZhbzJWMjQ1bFllYl85VTVrOUVhQzYwWTVxVGZ0dG9ZNnYtN0gxMkM0NHhMR2NhZk96Sml5MkZSb0lKNUZseS1Zc093b3k4T2Z5dGM3Y04zdk5zc2FwTUktVWc?oc=5",
-          "kind": "article"
-        },
-        {
-          "id": "videography-8f90f12bb9c7",
-          "title": "Cinematography World teams-up with The Making Of (TMO) for IBC 2026 podcast series - cinematography.world",
-          "excerpt": "Cinematography World teams-up with The Making Of (TMO) for IBC 2026 podcast series &nbsp;&nbsp; cinematography.world",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnN6eXVtMVdaTHYwSWp5MENDdHE2Uk42Zk54QmRDa09KLUlCa1E0V1hBNFlwNng2V3lHNXNSOEk4Z284eWN2YWQtdEVaSDBPa0FPN0N3dE5DMWR2ZUw4R3c3VHhCX2hOODYyTFYtQ3BfTWFLbHk1MUJPVmF5bEtvajhoZkFCenBTbEk5UUszSUFSOVpWNnF3S3FiYWtZZXNIekRISmtwWkVCVENHbkxoZEsxWmE?oc=5",
           "kind": "article"
         },
         {
@@ -580,34 +581,48 @@
       ]
     },
     "science": {
-      "days_since_last_article": 2,
+      "days_since_last_article": 3,
       "items": [
         {
-          "id": "science-689d6c365452",
-          "title": "Tiny floating magnet detects ultrafaint magnetic fields at room temperature",
-          "excerpt": "Measuring faint magnetic fields is useful in a number of areas, including mapping brain activity, monitoring hearts and probing fundamental physics. Typically, picking up such weak signals requires expensive or bulky equipment, such as liquid-helium cooling tanks or specially shielded rooms that…",
-          "url": "https://phys.org/news/2026-08-tiny-magnet-ultrafaint-magnetic-fields.html",
+          "id": "science-e48291ffb2ad",
+          "title": "Underground gases may explain Earth’s most devastating climate changes and mass extinctions - The Brighter Side of News",
+          "excerpt": "Underground gases may explain Earth’s most devastating climate changes and mass extinctions &nbsp;&nbsp; The Brighter Side of News",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNYm1BeXRYN2xmanNvbHBycFZlMTlsd0o2cHc4VEFnaVQ0cmxlR21PdlByZzFCVVMxU2lRQV92X3dHWkdkYTZUWEtYc0wydC1DVGNGUjVxa3hzSW9Kd1NXbmJPcEdvckl0UWZMN0I3Rk5xZVdpVWFRLUJpTzY4OVNFMkRCSW9IX285RTEzTXEtMUZlNUJNQS1pbmN2WkZtOEpCTXhEZVFIdklGZFhzei1OWW5qM2FlR2ctZk1zRU1zVjhlaFRsY3BXTA?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-e78395e4e169",
-          "title": "Antenna-like cell appendage may help turtle embryos sense sex-deciding nest temperatures",
-          "excerpt": "When most baby turtles hatch, their sex depends on the temperature of the sand or soil where their mother laid her eggs. Warm incubation produces females, while cool nests produce males.",
-          "url": "https://phys.org/news/2026-08-antenna-cell-appendage-turtle-embryos.html",
+          "id": "science-957b8eddcea9",
+          "title": "'Flying focus' laser overcomes key limitation in plasma-based particle accelerators",
+          "excerpt": "In a new Nature Physics study, researchers accelerated electrons to more than twice the energy predicted by the traditional dephasing limit for laser-plasma accelerators operating over the same distance. This was made possible by a specially engineered laser pulse called a flying focus, which…",
+          "url": "https://phys.org/news/2026-08-flying-focus-laser-key-limitation.html",
           "kind": "article"
         },
         {
-          "id": "science-24334d2db235",
-          "title": "Sky Country: Indigenous fashion weaves culture and climate together - The Guardian",
-          "excerpt": "Sky Country: Indigenous fashion weaves culture and climate together &nbsp;&nbsp; The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPRU9GQm5PbTZUbUx6SkNnYXpMZC1Gb1N2NTZVZjkzT3lLTjlwUXNxb0ZKVk0zOXJtNjVCLVFCNHhIMFJxd2xzRThTeFhxcy1JeVYxdmdGV2hHNWhDa2piTjg3aDhlNEtIdUJ5SjlicVpRQ200T3h3SERia2ZVTWhXT2tmVy1UdV9CMERlMEhxYlZuU1NmOGlGOHM2aTRhN291RktaM0FRcHF3Y2JWcVcySE5XNDVjWE0zWXVWUmRVZnh3TDhpeEczSA?oc=5",
+          "id": "science-adeac27270b8",
+          "title": "‘Super El Niño’ could bring wet winter and flooding to western US, climate scientists warn - The Guardian",
+          "excerpt": "‘Super El Niño’ could bring wet winter and flooding to western US, climate scientists warn &nbsp;&nbsp; The Guardian",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORHdnSkREV1FFeHlrdnY1YlU4aVQwTlE4bEJGRi1QWXlvSHRhSGgzSkw2eFkxT1EwSS1XS0x5YUItRmFEMkJKbEwtYXhrOVFFYW5MY3hVS2hvQVllcVl6Wi1EM041aDlMVFZIQUdVbkZFMUpxVFFuRGZiV3BkeWFsV2NaWQ?oc=5",
           "kind": "article"
         },
         {
-          "id": "science-4760ba0265cf",
-          "title": "‘Never seen so many grown men cry’: The everyday Aussies who can’t afford another disaster - SMH.com.au",
-          "excerpt": "‘Never seen so many grown men cry’: The everyday Aussies who can’t afford another disaster &nbsp;&nbsp; SMH.com.au",
-          "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNQzh5NDZ5cVJuWHNxNjdtc0lvVnpUZ0NnWDVWVDV1ZEZ0NWJ4al9maVRmdWlJYjZXVGpCdGpKdjNBWDMyOF9GU3lyRXFkVFY5eHdlcU1OOGFkZFBZZ0s3elhTOXpGVEFpVVdBUFVsVWdDWW15M2t4QW5jOGtMeWpTR3RjTkZkT1VrOThfb0xmQzZFTmo0X2xEVy1FeldhbEZ6VUQweHZUOFI0RjdXVTBiVWQ1NTNHRWp2ekVNaURKdWxQdWVyUzl3N3M5UTN3c1JwMi00M2JFUy1IRXh0M0I0Z3hBTDZYeF9uUFNZR01Pdw?oc=5",
+          "id": "science-c7ac87aaf50c",
+          "title": "Butterfly ranges shift worldwide amid climate change, with most species expanding their reach",
+          "excerpt": "A global analysis of range-shift records for 1,758 butterfly species—10% of known butterfly species—found that 80% had expanded their range and that 79% of all recorded range shifts were linked to climate change and extreme weather events. The new study, published in Nature Ecology & Evolution…",
+          "url": "https://phys.org/news/2026-08-butterfly-ranges-shift-worldwide-climate.html",
+          "kind": "article"
+        },
+        {
+          "id": "science-29d6fe1f1f48",
+          "title": "Meteorite that smashed through a New Jersey roof reveals clues to life’s origins",
+          "excerpt": "A rare meteorite that crashed through a New Jersey roof contains evidence of ancient salty fluids, organic compounds, and amino acids from a primitive asteroid. Its pristine chemistry could offer new clues about how space rocks helped supply early Earth with some of the ingredients needed for life.",
+          "url": "https://www.sciencedaily.com/releases/2026/08/260807035145.htm",
+          "kind": "article"
+        },
+        {
+          "id": "science-65183b6b8f12",
+          "title": "This tiny gold crystal could bring quantum technology out of the deep freeze",
+          "excerpt": "Scientists have created the first quantum material that can sort and transport different quantum states of light at room temperature, potentially removing the need for bulky, ultra-cold refrigeration systems. Built from a gold film carved with hundreds of microscopic structures, the ultrathin…",
+          "url": "https://www.sciencedaily.com/releases/2026/08/260806050706.htm",
           "kind": "article"
         },
         {
@@ -615,20 +630,6 @@
           "title": "Neutrinos From Deep Inside Earth Provide a New Picture of the Mantle",
           "excerpt": "A global constellation of neutrino detectors is creating a never-before-seen view of the radioactive elements that power Earth’s tectonic heat engine. The post Neutrinos From Deep Inside Earth Provide a New Picture of the Mantle first appeared on Quanta Magazine",
           "url": "https://www.quantamagazine.org/neutrinos-from-deep-inside-earth-provide-a-new-picture-of-the-mantle-20260807/",
-          "kind": "article"
-        },
-        {
-          "id": "science-07d139ba2522",
-          "title": "Earth’s molten core suddenly reversed direction — and scientists don’t know why",
-          "excerpt": "Earth’s molten iron core unexpectedly reversed direction beneath the Pacific, revealing a dramatic change in the hidden engine that creates our planet’s magnetic field. Satellite data suggest the surge is already weakening, raising the possibility that the deep-Earth upheaval is part of a…",
-          "url": "https://www.sciencedaily.com/releases/2026/08/260806050713.htm",
-          "kind": "article"
-        },
-        {
-          "id": "science-43d2a4b8312b",
-          "title": "How Does Touch Lead To Pain Or Pleasure?",
-          "excerpt": "Neuroscientist Ishmail Abdus-Saboor discusses efforts to understand how skin contact can be painful or pleasurable, and what touch-obsessed naked mole rats might teach us about human social behavior. The post How Does Touch Lead To Pain Or Pleasure? first appeared on Quanta Magazine",
-          "url": "https://www.quantamagazine.org/how-does-touch-lead-to-pain-or-pleasure-20260806/",
           "kind": "article"
         },
         {

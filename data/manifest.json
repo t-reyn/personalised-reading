@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-07T20:39:58.062Z",
-  "count": 69,
+  "generatedAt": "2026-08-08T20:31:39.082Z",
+  "count": 70,
   "articles": [
+    {
+      "id": "2026-08-09-oil-stopped-pricing-the-hormuz-war-months-ago",
+      "slug": "oil-stopped-pricing-the-hormuz-war-months-ago",
+      "interest": "finance",
+      "interests": [
+        "finance"
+      ],
+      "mode": "current",
+      "title": "Oil Stopped Pricing the Hormuz War Months Ago",
+      "summary": "Brent spiked 65% to US$126 a barrel when Iran shut the Strait of Hormuz in March; six months and fresh tanker strikes later, oil sits near US$78 — because a Saudi pipeline quietly did what diplomacy couldn't.",
+      "tags": [
+        "finance",
+        "markets",
+        "oil",
+        "geopolitics",
+        "strait-of-hormuz",
+        "gold"
+      ],
+      "created_at": "2026-08-09",
+      "expire_at": "2026-08-30",
+      "concepts_taught": [
+        "marginal-barrel-pricing",
+        "safe-haven-demand"
+      ],
+      "concepts_assumed": [],
+      "concepts_reinforced": [],
+      "source_count": 3,
+      "word_count": 664,
+      "merged_from": [],
+      "merged_into": null,
+      "path": "articles/2026-08-09/oil-stopped-pricing-the-hormuz-war-months-ago.html"
+    },
     {
       "id": "2026-08-08-the-exposure-triangle-decides-what-a-colour-grade-cant-fix",
       "slug": "the-exposure-triangle-decides-what-a-colour-grade-cant-fix",

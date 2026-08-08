@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-07T20:30:42.378Z",
-  "asOf": "8 Aug 2026, 6:30 am AEST",
+  "updatedAt": "2026-08-08T20:18:25.102Z",
+  "asOf": "9 Aug 2026, 6:18 am AEST",
   "markets": [
     {
       "symbol": "^AXJO",
@@ -26,27 +26,27 @@
       "label": "AUD/USD",
       "currency": "USD",
       "unit": null,
-      "price": 0.7068,
-      "changePct": 0.16,
-      "display": "0.7068 (+0.2%)"
+      "price": 0.7071,
+      "changePct": 0.2,
+      "display": "0.7071 (+0.2%)"
     },
     {
       "symbol": "GC=F",
       "label": "Gold",
       "currency": "USD",
       "unit": "USD/oz",
-      "price": 4398.2,
-      "changePct": 3.68,
-      "display": "4,398.2 (+3.7%)"
+      "price": 4399.7,
+      "changePct": 3.72,
+      "display": "4,399.7 (+3.7%)"
     },
     {
       "symbol": "CL=F",
       "label": "WTI",
       "currency": "USD",
       "unit": "USD/bbl",
-      "price": 77.04,
-      "changePct": -0.32,
-      "display": "77.04 (-0.3%)"
+      "price": 78.18,
+      "changePct": 1.15,
+      "display": "78.18 (+1.2%)"
     },
     {
       "symbol": "^VIX",
@@ -62,19 +62,19 @@
     {
       "id": "bitcoin",
       "label": "Bitcoin",
-      "aud": 91910,
-      "usd": 64946,
-      "changePct": 0.32,
-      "display": "A$91,910 (+0.3%)"
+      "aud": 92027,
+      "usd": 65035,
+      "changePct": 0.17,
+      "display": "A$92,027 (+0.2%)"
     },
     {
       "id": "ethereum",
       "label": "Ethereum",
-      "aud": 2711.68,
-      "usd": 1916.14,
-      "changePct": 0.08,
-      "display": "A$2,712 (+0.1%)"
+      "aud": 2715.41,
+      "usd": 1918.98,
+      "changePct": 0.14,
+      "display": "A$2,715 (+0.1%)"
     }
   ],
-  "summary": "ASX 200 9,263.6 (+0.4%) · S&P 500 7,757.6 (+0.4%) · AUD/USD 0.7068 (+0.2%) · Gold 4,398.2 (+3.7%) · WTI 77.04 (-0.3%) · VIX 14.90 (-1.7%) · Bitcoin A$91,910 (+0.3%) · Ethereum A$2,712 (+0.1%)"
+  "summary": "ASX 200 9,263.6 (+0.4%) · S&P 500 7,757.6 (+0.4%) · AUD/USD 0.7071 (+0.2%) · Gold 4,399.7 (+3.7%) · WTI 78.18 (+1.2%) · VIX 14.90 (-1.7%) · Bitcoin A$92,027 (+0.2%) · Ethereum A$2,715 (+0.1%)"
 }
