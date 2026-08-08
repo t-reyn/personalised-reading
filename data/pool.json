@@ -9,11 +9,14 @@
       "title": "8 Predictions for the Era of Continual Learning",
       "url": "https://www.youtube.com/watch?v=iewm45atodE",
       "source": "Dwarkesh Patel",
-      "excerpt": "Read the essay here: https://www.dwarkesh.com/p/era-of-continual-learning",
+      "excerpt": "I've explained elsewhere why I think actual continual learning is needed. I don't think you can have AIs that perform whole jobs as competently as humans if they are forced to just write markdown files from session to session. Just to give an illustrative example, imagine if this is the way that students learn to play the saxophone. You have one student, he's never played the saxophone before. He goes into the music hall, he tries to play it. Of course, this is his first time, so he fails, and he writes down a bunch of notes about what went wrong. And there's a next student who's waiting outside the music hall. He comes in, he reads all these notes. He's also never played, so of course he messes up, and he continues to add on to these notes. And you have an infinity of students outside the music hall who keep writing notes to the next person. I don't think there's any sequence of text they could write to each other that would allow the subsequent student to just nail the saxophone from the first try. At some point, you actually have to accumulate the relevant experience into your brain. I think the same thing will be true for a lot of skills that we want AIs to actually accumulate from all the different workplaces in which they're deployed. Okay, so what changes once we have actual continual learning? One, I think that a lot of proposals that have been put forward about regulating AI assume that you train a model and then you deploy it. And therefore, if you run a bunch of checks on the model before it is deployed, we can make sure that it's not going to aid in cyber attacks or do something crazy. I don't think this assumption necessarily makes sense in the future, and this is one of the many reasons I'm worried about locking in some kind of safety regulatory regime right now — because we don't know what kind of technology we're going to be dealing with even within a year, let alone within five or ten years. What if the model is improving every single day based on the millions of sessions of work it does in that day? If that happens, we could potentially be locking in an archaic and potentially counterproductive approach to dealing with the threats from AI. To t",
       "published_at": "2026-08-07T17:33:15+00:00",
       "added_at": "2026-08-07T20:30:28.873Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-08T13:43:59.441Z",
+      "transcript_at": "2026-08-08T13:43:59.441Z",
+      "transcript_kind": "manual"
     },
     {
       "id": "software-ai-ff1f5ee38ebe",
@@ -491,11 +494,14 @@
       "title": "How To Design In The Agent Era",
       "url": "https://www.youtube.com/watch?v=P06RgnUKX_I",
       "source": "Y Combinator",
-      "excerpt": "AI isn't just changing the tools designers use. It's changing how they build, ship, and stand out. In this episode of Design Review, Stephen Haney, founder of AI-native design tool Paper, joins YC General Partner Aaron Epstein to demo the agent-first workflow that's making Paper one of the fastest-growing design tools since Figma. Using live redesigns of user-submitted websites as examples, they b",
+      "excerpt": "The agents can speed you up. They can save you a lot of work, and they can do tasks like translation or resizing for you. But I we're a big believers in the human element of design and and how important that is. And so, we're trying to create a tool that lets humans work really fast with agents. It's probably very tempting to use whatever Cloud Design spits out. I don't think it helps you stand out from the crowd. And so, I think design is this great differentiator. And if you look at every great company of the last 10 20 years, basically all of them have exceptional design. And so, I think if you want to be one of those really great companies, you have to put the care in on design and and make sure that you stand out. >> Today, I'm excited to welcome Steven Haney, the founder of Paper, an AI-native design tool that's been taking the design world by storm. We're already using Paper a ton here at YC for all of the design work that we're doing internally, and I'm excited for him to show off how the product works to everybody out there. So, Steven, thank you so much for joining. >> Yeah, I'm honored to be here. I've watched the show a lot, and so, it's it's really really nice to be to be on. Thank you for having me. >> Maybe to start, uh, tell people what is Paper. >> Yeah, well, Paper is a design tool. It's an agent-native design tool. And what that means is we use HTML and CSS as the actual rendering engine, and that makes it very, uh, easy for agents to use because they understand HTML and CSS really well. And historically, a lot of design tools have custom rendering engines, and those, uh, are a lot harder for agents to use. And so, you'll see higher token spend, slower times, lower accuracy. So, what we're building with Paper is basically it's a group of people. It's about 12 of us now. All designers and engineers. Uh, we were basically started this out of love for design, and now we're just trying to build the best design tool possible for this next era. >> Yeah, it's crazy to think you're only 12 people because I hear about you all the time from everybody who's using you, and especially from so many founders that are just picking the design tool that they wa",
       "published_at": "2026-08-07T14:00:34+00:00",
       "added_at": "2026-08-07T20:30:31.052Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-08T13:43:59.441Z",
+      "transcript_at": "2026-08-08T13:43:59.441Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-aec2009da539",
@@ -2715,5 +2721,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-08-07T20:30:41.774Z"
+  "updatedAt": "2026-08-08T13:44:01.645Z"
 }
