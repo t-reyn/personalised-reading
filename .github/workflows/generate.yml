@@ -37,10 +37,34 @@ jobs:
         with:
           node-version: "20"
 
-      # 0a. Catch-up guard: if today's issue already exists, skip authoring so a re-run (the second
-      #     cron, or a duplicate delivery) is a cheap no-op. workflow_dispatch always forces a run.
-      #     Checks both the Sydney date and the UTC date to cover the day-boundary transition.
-      - name: Guard — skip if today's issue exists
+      # 0a. Materialise the reader's private STATE (reading-state, knowledge, corpus) from the
+      #     cortex-state repo — they are no longer in this public checkout. Load-bearing: authoring
+      #     personalisation and register-concepts read these, so a missing key HARD-FAILS the run
+      #     (authoring blind would silently unpersonalise, and the knowledge push-back could clobber).
+      #     Runs BEFORE the guard because the backlog check below reads reading-state.json.
+      - name: Fetch private state (cortex-state)
+        env:
+          STATE_DEPLOY_KEY: ${{ secrets.STATE_DEPLOY_KEY }}
+        run: |
+          if [ -z "$STATE_DEPLOY_KEY" ]; then echo "STATE_DEPLOY_KEY secret not set — see CLOUD_SETUP.md"; exit 1; fi
+          mkdir -p ~/.ssh
+          printf '%s\n' "$STATE_DEPLOY_KEY" > ~/.ssh/cortex_state
+          chmod 600 ~/.ssh/cortex_state
+          ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
+          GIT_SSH_COMMAND="ssh -i ~/.ssh/cortex_state -o IdentitiesOnly=yes" \
+            git clone --quiet git@github.com:t-reyn/cortex-state.git "$RUNNER_TEMP/cortex-state"
+          cp "$RUNNER_TEMP/cortex-state"/data/*.json data/
+          echo "state materialised from cortex-state"
+
+      # 0b. Guard. Two independent reasons to skip, both cheap and deterministic:
+      #     (1) today's issue already exists — makes the second (catch-up) cron a no-op;
+      #     (2) the reader is behind — see scripts/lib/backlog.mjs. Measured 2026-08-09: 22 of 70
+      #         articles read, 11 expired unread, last read a week earlier. Writing daily into a
+      #         backlog nobody clears burns ~6.2M tokens a day to grow the pile, so the run now
+      #         pauses when 3 of the last 5 issues are still unread and resumes by itself once
+      #         they're read. Tunable via config.json -> backlog.{window,threshold}.
+      #     workflow_dispatch always forces a run, bypassing both.
+      - name: Guard — skip if today's issue exists or the reader is behind
         id: guard
         run: |
           skip=false
@@ -51,6 +75,10 @@ jobs:
             d="$(TZ=Australia/Sydney date +%F)"
             if ls articles/"$d"/*.html >/dev/null 2>&1; then
               echo "today's issue already exists ($d) — skipping"
+              skip=true
+            fi
+            node scripts/backlog.mjs --github
+            if [ "$skip" != "true" ] && grep -q '^backlog_skip=true$' "$GITHUB_OUTPUT"; then
               skip=true
             fi
           fi
@@ -86,25 +114,6 @@ jobs:
           else
             echo "no READER_PROFILE secret set — generic authoring"
           fi
-
-      # 2b. Materialise the reader's private STATE (reading-state, knowledge, corpus) from the
-      #     cortex-state repo — they are no longer in this public checkout. Load-bearing: authoring
-      #     personalisation and register-concepts read these, so a missing key HARD-FAILS the run
-      #     (authoring blind would silently unpersonalise, and the knowledge push-back could clobber).
-      - name: Fetch private state (cortex-state)
-        if: steps.guard.outputs.skip != 'true'
-        env:
-          STATE_DEPLOY_KEY: ${{ secrets.STATE_DEPLOY_KEY }}
-        run: |
-          if [ -z "$STATE_DEPLOY_KEY" ]; then echo "STATE_DEPLOY_KEY secret not set — see CLOUD_SETUP.md"; exit 1; fi
-          mkdir -p ~/.ssh
-          printf '%s\n' "$STATE_DEPLOY_KEY" > ~/.ssh/cortex_state
-          chmod 600 ~/.ssh/cortex_state
-          ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
-          GIT_SSH_COMMAND="ssh -i ~/.ssh/cortex_state -o IdentitiesOnly=yes" \
-            git clone --quiet git@github.com:t-reyn/cortex-state.git "$RUNNER_TEMP/cortex-state"
-          cp "$RUNNER_TEMP/cortex-state"/data/*.json data/
-          echo "state materialised from cortex-state"
 
       # 3. Author today's article on your subscription. Bounded turns + the run timeout above keep it
       #    well under the headless-token window. One article per run (config.maxArticlesPerRun) leaves

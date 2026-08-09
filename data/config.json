@@ -10,6 +10,8 @@
   },
   "passThreshold": 0.75,
   "maxArticlesPerRun": 1,
+  "_comment_backlog": "Adaptive cadence: generate.yml skips the run when `threshold` of the last `window` issues are still unread, and resumes on its own once they're read. Raise threshold (or set it above window) to publish more often; window=5/threshold=3 matches a measured ~1-in-3 read rate.",
+  "backlog": { "window": 5, "threshold": 3 },
   "_comment_cadence": "cadenceDays = the target gap between articles for an interest — the single knob that sets how often a topic comes up. One article per day is the whole issue, so the author picks the interest that is most overdue relative to its cadence (days_since_last_article / cadenceDays, highest wins). Lower = more often. Raise a number to see a topic less; lower it to see it more.",
   "interests": [
     { "id": "software-ai",     "label": "Software, AI & App-building", "emoji": "💻", "accent": "#5a93f0", "ttlDays": 21,   "mode": "both",    "cadenceDays": 7 },

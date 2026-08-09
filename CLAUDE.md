@@ -63,6 +63,13 @@ authoring time, and the finished articles + synced state are what reach the phon
 never holds the profile. Cloud runs on the Claude subscription (no API key); keep them short (token
 limits). See `CLOUD_SETUP.md`.
 
+0. **Adaptive cadence gate** (`scripts/backlog.mjs`, deterministic + zero tokens). The run skips
+   entirely when `backlog.threshold` of the last `backlog.window` issues are still unread
+   (`data/config.json`, default 3 of 5) — writing daily into a backlog the reader isn't clearing
+   costs ~6.2M tokens a day to grow the pile. It resumes by itself once those issues are read, and
+   a `workflow_dispatch` always forces a run. A **rolling window**, deliberately, not a count of the
+   whole unread pile: on 2026-08-09 that pile was 37, so an absolute threshold would have paused
+   the product permanently. If `reading-state.json` is missing it writes rather than going quiet.
 1. `node scripts/ingest.mjs` — refresh `data/pool.json` from feeds. Then
    `node scripts/fetch-live.mjs` — refresh `data/live.json` (keyless live market datapoints for
    grounding time-sensitive pieces; best-effort, never fatal).
