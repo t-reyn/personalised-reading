@@ -22,7 +22,9 @@ concurrency:
 jobs:
   scout:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # Backstop only. The proposal step is bounded at the STEP level below — a job-level timeout
+    # would cancel Validate + Commit and throw away candidates Claude had already written.
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -40,12 +42,23 @@ jobs:
           if [ -n "$READER_PROFILE" ]; then printf '%s' "$READER_PROFILE" > data/profile.local.json; fi
 
       - name: Propose candidate feeds (Claude, subscription)
+        # The action fails the step when Claude exceeds --max-turns EVEN IF it finished the job
+        # ("Claude reported a successful result after 29 turns, exceeding the configured maximum
+        # of 20" — the first real run, 2026-08-09). Without this the candidates it had already
+        # written were discarded by the skipped Validate + Commit steps. Same shape as the author
+        # step in generate.yml: bound it, then let the deterministic steps salvage the work.
+        continue-on-error: true
+        timeout-minutes: 8
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: "Read skills/SCOUT.md and follow it exactly: propose new candidate feeds into data/source-candidates.json, then stop."
-          claude_args: "--max-turns 20 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep"
+          # 35, not 20: the first successful run needed 29. Validation is deterministic and free,
+          # so the cost of a few extra proposal turns is far below the cost of a wasted weekly run.
+          claude_args: "--max-turns 35 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep"
 
+      # Deterministic + free: fetch-tests every proposal and appends only the ones that work.
+      # Runs even when the step above was cut short, so partial proposals still land.
       - name: Validate candidates + append the working ones
         run: node scripts/validate-sources.mjs
 
