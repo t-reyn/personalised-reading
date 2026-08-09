@@ -11,27 +11,33 @@
     "https://addyosmani.com/rss.xml",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCXl4i9dYBrFOabk0xGmbkRA",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UC4x3CR25WSlvMJUtSPPzwwg"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC4x3CR25WSlvMJUtSPPzwwg",
+    "https://danluu.com/atom.xml"
   ],
   "finance": [
     "https://www.cnbc.com/id/100003114/device/rss/rss.html",
     "https://news.google.com/rss/search?q=site:boredombaron.substack.com&hl=en-AU&gl=AU&ceid=AU:en",
     "https://news.google.com/rss/search?q=investing%20OR%20%22stock%20market%22%20OR%20%22interest%20rates%22%20OR%20superannuation%20OR%20RBA&hl=en-AU&gl=AU&ceid=AU:en",
     "https://news.google.com/rss/search?q=site:afr.com&hl=en-AU&gl=AU&ceid=AU:en",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCESLZhusAkFfsNsApnjF_Cg"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCESLZhusAkFfsNsApnjF_Cg",
+    "https://news.google.com/rss/search?q=site:asx.com.au&hl=en-AU&gl=AU&ceid=AU:en"
   ],
   "health": [
     "https://www.sciencedaily.com/rss/health_medicine.xml",
     "https://news.google.com/rss/search?q=%22health%20research%22%20OR%20nutrition%20OR%20fitness%20OR%20longevity%20OR%20sleep&hl=en-AU&gl=AU&ceid=AU:en",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC2D2CMWXMOVWx7giW1n3LIg",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UC68TLK0mAEzUyHx5x5k-S1Q"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC68TLK0mAEzUyHx5x5k-S1Q",
+    "https://www.strongerbyscience.com/feed/",
+    "https://news.google.com/rss/search?q=%22injury%20rehab%22%20OR%20%22return%20to%20play%22%20OR%20%22ankle%20sprain%22%20OR%20biohacking&hl=en-AU&gl=AU&ceid=AU:en"
   ],
   "science": [
     "https://www.sciencedaily.com/rss/top/science.xml",
     "https://www.quantamagazine.org/feed/",
     "https://news.google.com/rss/search?q=%22scientific%20research%22%20OR%20physics%20OR%20space%20OR%20biology%20OR%20climate&hl=en-AU&gl=AU&ceid=AU:en",
     "https://phys.org/rss-feed/",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q",
+    "https://www.nature.com/nature.rss",
+    "https://arstechnica.com/science/feed/"
   ],
   "_comment_actuarial": "The Actuaries Institute is the anchor source. It publishes no RSS (actuaries.digital folded into actuaries.asn.au; /feed and every sitemap path 503), so the first two entries are its public keyless Kontent.ai Delivery API — richer than RSS: editor-written description, real dates, and a practice_areas taxonomy (Life Insurance, Superannuation and Investments, …) carried onto the pool item as `topics`. Entry 1 = system.type=resource, the POLICY LIBRARY (submissions, dialogue/discussion papers, reports, media releases) — the profession's own positions, ~8/month, PDFs on content.actuaries.asn.au which ingest.mjs extracts text from. Entry 2 = system.type=article, the Actuaries Digital magazine. Entry 3 catches press coverage of Institute research that neither API carries.",
   "_comment_actuarial_taxonomy": "GOTCHA: content_types is a NESTED taxonomy and Kontent's [any] filter does NOT roll up child terms, so the policy query must list CHILD codenames explicitly — filtering on the 'Publication' parent silently returns zero Submissions. The terms below are: Submission, Dialogue Paper, Discussion Paper, Public Policy Position Statement, Report (all children of Publication), plus top-level Papers and Media Release. Deliberately excluded: Job Ad, Presentation slides, Podcast, Photos, Video, and the Education/Governance/Membership document trees. Re-derive with: curl https://deliver.kontent.ai/4f4649d8-6df9-023d-bb6c-14e842b8aadb/taxonomies/content_types",
@@ -41,7 +47,8 @@
     "https://news.google.com/rss/search?q=%22Actuaries%20Institute%22&hl=en-AU&gl=AU&ceid=AU:en",
     "https://insurancenews.com.au/rss/daily",
     "https://news.google.com/rss/search?q=%22group%20life%20insurance%22%20OR%20actuary%20OR%20%22IFRS%2017%22&hl=en-AU&gl=AU&ceid=AU:en",
-    "https://www.apra.gov.au/rss.xml"
+    "https://www.apra.gov.au/rss.xml",
+    "https://news.google.com/rss/search?q=%22Solvency%20II%22%20OR%20%22global%20actuarial%22%20OR%20%22IFoA%22&hl=en-AU&gl=AU&ceid=AU:en"
   ],
   "design": [
     "https://www.nngroup.com/feed/rss/",
@@ -50,7 +57,8 @@
     "https://www.joshwcomeau.com/rss.xml",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC-b3c7kxa5vU-bnmaROgvog",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCVyRiMvfUNMA1UPlDPzG5Ow",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UC8WLg9gshrtZA1-swL5D9Kg"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC8WLg9gshrtZA1-swL5D9Kg",
+    "https://uxmovement.com/feed/"
   ],
   "indie-income": [
     "https://news.google.com/rss/search?q=%22indie%20hacker%22%20OR%20bootstrapped%20OR%20microsaas%20OR%20%22app%20revenue%22%20OR%20%22solo%20founder%22&hl=en-AU&gl=AU&ceid=AU:en",
@@ -60,19 +68,24 @@
   ],
   "mortgage-broking": [
     "https://news.google.com/rss/search?q=%22mortgage%20broker%22%20OR%20%22home%20loan%22%20OR%20refinancing%20OR%20%22serviceability%22%20OR%20%22lending%20policy%22&hl=en-AU&gl=AU&ceid=AU:en",
-    "https://news.google.com/rss/search?q=site:brokerdaily.au%20OR%20site:mortgagebusiness.com.au%20OR%20site:theadviser.com.au&hl=en-AU&gl=AU&ceid=AU:en"
+    "https://news.google.com/rss/search?q=site:brokerdaily.au%20OR%20site:mortgagebusiness.com.au%20OR%20site:theadviser.com.au&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://www.rba.gov.au/rss/rss-cb-media-releases.xml",
+    "https://news.google.com/rss/search?q=site:brokernews.com.au&hl=en-AU&gl=AU&ceid=AU:en"
   ],
   "property": [
     "https://news.google.com/rss/search?q=%22investment%20property%22%20OR%20%22negative%20gearing%22%20OR%20%22capital%20gains%20tax%22%20OR%20%22property%20investing%22%20Australia&hl=en-AU&gl=AU&ceid=AU:en",
     "https://news.google.com/rss/search?q=site:yourinvestmentpropertymag.com.au%20OR%20site:apimagazine.com.au&hl=en-AU&gl=AU&ceid=AU:en",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCo_nWik261ZKSnjgoaIjz0w",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCcnw6T6HoHau4zwXq5PQbUQ"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCcnw6T6HoHau4zwXq5PQbUQ",
+    "https://www.propertyupdate.com.au/feed/",
+    "https://news.google.com/rss/search?q=site:smartpropertyinvestment.com.au&hl=en-AU&gl=AU&ceid=AU:en"
   ],
   "videography": [
     "https://nofilmschool.com/rss.xml",
     "https://news.google.com/rss/search?q=cinematography%20OR%20%22colour%20grading%22%20OR%20%22color%20grading%22%20OR%20filmmaking%20OR%20%22video%20composition%22&hl=en-AU&gl=AU&ceid=AU:en",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC3DkFux8Iv-aYnTRWzwaiBA",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCUodELQsFwF8dq0X-bK9FQQ"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCUodELQsFwF8dq0X-bK9FQQ",
+    "https://www.premiumbeat.com/blog/feed/"
   ],
   "_comment_design": "YouTube channel_ids: UC8WLg9gshrtZA1-swL5D9Kg = Tim Gabe (research-style product-design breakdowns — onboarding, paywalls, retention psychology; ~3-4/mo; reader-vetted 2026-07-18).",
   "_comment_property": "YouTube channel_ids: UCcnw6T6HoHau4zwXq5PQbUQ = PK Gupta / Australian Property Mastery (AU data-driven suburb selection, negative gearing/CGT, lending; long-form ~8-12/mo + daily Shorts the ingest filters — round-robin caps its digest share; reader-vetted 2026-07-18)."
