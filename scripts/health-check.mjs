@@ -43,6 +43,31 @@ const bodyText = (html) => {
     .replace(/\s+/g, " ")
     .trim();
 };
+// The author's own PROSE — a narrower region than bodyText(), for checks that judge writing voice.
+// Deliberately NOT used for word counts: those thresholds are calibrated against bodyText()'s
+// region (see the note at the length checks), and quietly changing the region would shift the
+// length bands without anyone touching them.
+//
+// Excludes two things that produced permanent false "US spelling" warnings, both of which would
+// have been WRONG to correct in the article:
+//   <footer class="doc-foot">  cited source TITLES are quoted material — "AI data center
+//                              emissions" is Phys.org's headline, not our spelling.
+//   <code> / <pre>             identifiers, not prose — the CSS token `color-primary` is spelt
+//                              correctly; `colour-primary` would simply not exist.
+const proseText = (html) => {
+  const art = /<article\b[^>]*>([\s\S]*?)<\/article>/i.exec(html);
+  return (art ? art[1] : html)
+    .replace(/<!--[\s\S]*?-->/g, " ")
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<footer\b[\s\S]*?<\/footer>/gi, " ")
+    .replace(/<pre\b[\s\S]*?<\/pre>/gi, " ")
+    .replace(/<code\b[\s\S]*?<\/code>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/https?:\/\/\S+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+};
 const wordCount = (text) => (text ? text.split(" ").length : 0);
 
 function readJson(rel) {
@@ -124,7 +149,7 @@ if (manifest && Array.isArray(manifest.articles)) {
       if (wc < 450) fail(`${a.id}: body word count ${wc} < 450`);
       else if (position && wc < 1100) warn(`${a.id}: position piece word count ${wc} — under the ~1,000-word floor`);
       else if (wc > ceiling) warn(`${a.id}: body word count ${wc} > ${ceiling}`);
-      if (AU_DRIFT.test(body)) warn(`${a.id}: body contains US spelling (color/center/organiz/analyz/behavior)`);
+      if (AU_DRIFT.test(proseText(html))) warn(`${a.id}: body contains US spelling (color/center/organiz/analyz/behavior)`);
     }
   }
 

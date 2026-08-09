@@ -36,7 +36,16 @@ async function feedHasItems(url) {
 async function main() {
   const candidates = await readJson("data/source-candidates.json", {});
   const sources = await readJson("data/sources.json", {});
-  const existing = new Set(Object.values(sources).flatMap((v) => (Array.isArray(v) ? v : [])));
+  // sources-local.json feeds are fetched by ingest-local.mjs, but ingest.mjs counts them as LIVE and
+  // they compete for the same 8 digest slots. Counting only sources.json let the cap be exceeded
+  // silently: on 2026-08-09 actuarial sat at 7 cloud + 2 local = 9 active feeds against 8 slots, so
+  // one feed was one pending item away from never being read again.
+  const local = await readJson("data/sources-local.json", {});
+  const localFor = (interest) => (Array.isArray(local[interest]) ? local[interest] : []);
+  const activeCount = (interest) => sources[interest].length + localFor(interest).length;
+  const existing = new Set(
+    [...Object.values(sources), ...Object.values(local)].flatMap((v) => (Array.isArray(v) ? v : [])),
+  );
 
   let added = 0, rejected = 0, skipped = 0;
   for (const [interest, urls] of Object.entries(candidates)) {
@@ -45,7 +54,12 @@ async function main() {
     for (const url of urls || []) {
       if (typeof url !== "string" || !url.startsWith("http")) { rejected++; continue; }
       if (existing.has(url)) { skipped++; continue; }
-      if (sources[interest].length >= MAX_FEEDS_PER_INTEREST) { console.log(`· ${interest} at cap, skipping ${url}`); skipped++; continue; }
+      if (activeCount(interest) >= MAX_FEEDS_PER_INTEREST) {
+        const l = localFor(interest).length;
+        console.log(`· ${interest} at cap (${sources[interest].length} cloud${l ? ` + ${l} local` : ""} = ${activeCount(interest)}/${MAX_FEEDS_PER_INTEREST}), skipping ${url}`);
+        skipped++;
+        continue;
+      }
       if (await feedHasItems(url)) {
         sources[interest].push(url);
         existing.add(url);

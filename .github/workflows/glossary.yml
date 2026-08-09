@@ -27,8 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: "20"
 
@@ -58,12 +58,23 @@ jobs:
 
       - name: Author term batch (Claude, subscription)
         if: steps.runway.outputs.needed == 'true'
+        # Same salvage pattern as generate.yml and scout.yml: the action fails the step when Claude
+        # exceeds --max-turns EVEN IF the work succeeded. Scout hit exactly that on 2026-08-09 (29
+        # turns against a cap of 20) and lost the output because the steps after it were skipped.
+        # Here that would have skipped Validate + Commit, so a finished batch would be thrown away
+        # and the runway would just keep shrinking. Validate still gates the commit, so salvaging a
+        # partial batch is safe: a malformed or non-append-only glossary fails there and commits
+        # nothing.
+        continue-on-error: true
         timeout-minutes: 10
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: "Read skills/GLOSSARY.md, then append one top-up batch to data/glossary.json exactly as it instructs. Today's date is ${{ steps.runway.outputs.syd }} (AEST) — use it for the batches log entry. Stop when data/glossary.json is updated."
-          claude_args: "--max-turns 16 --model sonnet --allowedTools Read,Write,Edit"
+          # 30, not 16: 16 was never exercised (the runway gate has skipped this step every week
+          # since it was written), and the one comparable measured run — scout, a smaller job —
+          # needed 29. An unvalidated cap is the thing most likely to silently kill the first real run.
+          claude_args: "--max-turns 30 --model sonnet --allowedTools Read,Write,Edit"
 
       # Gate: structure, no dupes, append-only vs the snapshot. Nothing commits if this fails.
       - name: Validate batch

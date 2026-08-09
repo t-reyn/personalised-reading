@@ -26,8 +26,8 @@ jobs:
     # would cancel Validate + Commit and throw away candidates Claude had already written.
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: "20"
 
