@@ -1,0 +1,76 @@
+name: Notify test
+
+# Send the Telegram nudge on demand, using the real secrets, without spending a Claude run.
+#
+# Why this exists: the nudge was only reachable at the end of generate.yml, so the only way to
+# test it was a full ~6M-token authoring run — and it swallows its own failure there by design
+# (the issue has already shipped; a broken nudge must not fail the run). The result was that it
+# 400'd with "chat not found" on EVERY run from 2026-07-20 to 2026-08-09 and nobody noticed.
+# Since the adaptive cadence guard it is also gated behind a skip, so it can go untested for
+# weeks at a time. Ten seconds here beats another three-week silence.
+#
+# Unlike generate.yml this FAILS LOUDLY — testing a notifier that hides its errors is pointless.
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Issue date to nudge about (YYYY-MM-DD, AEST). Blank = today."
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: notify-test
+  cancel-in-progress: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Check the secrets are present
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          missing=""
+          [ -n "$TELEGRAM_BOT_TOKEN" ] || missing="$missing TELEGRAM_BOT_TOKEN"
+          [ -n "$TELEGRAM_CHAT_ID" ] || missing="$missing TELEGRAM_CHAT_ID"
+          if [ -n "$missing" ]; then echo "missing secret(s):$missing — see CLOUD_SETUP.md §6"; exit 1; fi
+          echo "both secrets present"
+
+      # Confirms the token is live and the chat is reachable BEFORE composing a message, so a
+      # revoked token and a wrong chat id produce different, obvious errors. Nothing is echoed
+      # that would leak the token — only Telegram's own ok/description fields.
+      - name: Probe the bot and the chat
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          me=$(curl -sS "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getMe")
+          echo "$me" | grep -q '"ok":true' || { echo "getMe failed — the bot token looks invalid or revoked"; echo "$me" | sed 's/[0-9]\{6,\}:[A-Za-z0-9_-]*/<redacted>/g'; exit 1; }
+          echo "bot ok: $(echo "$me" | sed -n 's/.*"username":"\([^"]*\)".*/@\1/p')"
+          chat=$(curl -sS "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getChat?chat_id=${TELEGRAM_CHAT_ID}")
+          echo "$chat" | grep -q '"ok":true' || {
+            echo "getChat failed — TELEGRAM_CHAT_ID is wrong, or you have never sent the bot /start"
+            echo "$chat" | sed 's/[0-9]\{6,\}:[A-Za-z0-9_-]*/<redacted>/g'
+            exit 1
+          }
+          echo "chat reachable"
+
+      - name: Send the nudge
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          d="${{ inputs.date }}"
+          [ -n "$d" ] || d="$(TZ=Australia/Sydney date +%F)"
+          echo "nudging for $d"
+          node scripts/notify-telegram.mjs "$d"

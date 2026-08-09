@@ -1,13 +1,22 @@
 // Zero-LLM, zero-dependency integrity check for the generated site + state.
 // Exits non-zero on any problem so the GitHub Action fails and emails the owner.
 // Run: node scripts/health-check.mjs   (env: HEALTH_FRESH_DAYS default 2; HEALTH_REQUIRE_TODAY=1 to
-//                                       also require an article dated today, Sydney or UTC)
+//                                       also require an article dated today, Sydney or UTC;
+//                                       HEALTH_PAUSED=1 when the backlog guard is intentionally
+//                                       holding publishing — see below)
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
 const ROOT = process.cwd();
-const FRESH_DAYS = Number(process.env.HEALTH_FRESH_DAYS) || 2;
+// NOT `Number(x) || 2` — that maps HEALTH_FRESH_DAYS=0, the STRICTEST setting, to the default.
+const FRESH_RAW = process.env.HEALTH_FRESH_DAYS;
+const FRESH_DAYS = FRESH_RAW && Number.isFinite(Number(FRESH_RAW)) ? Number(FRESH_RAW) : 2;
 const REQUIRE_TODAY = process.env.HEALTH_REQUIRE_TODAY === "1";
+// Since the adaptive cadence guard (2026-08-09) a missing article is often CORRECT: generate.yml
+// skips when the reader is behind. Without this flag every paused day would email a false failure,
+// which is how you train someone to ignore the alert that matters. Integrity checks still run —
+// only the two freshness assertions stand down, because they carry no signal while paused.
+const PAUSED = process.env.HEALTH_PAUSED === "1";
 const HARDEN_FROM = "2026-07-02"; // stricter source/length/spelling rules apply to articles created on/after this
 const problems = [];
 const notes = [];
@@ -121,10 +130,12 @@ if (manifest && Array.isArray(manifest.articles)) {
 
   // 6. Same-day freshness (opt-in): after the morning run, at least one article should carry today's
   //    date (Sydney or UTC, for the transition). A hard fail so a silently-skipped run is caught.
-  if (REQUIRE_TODAY) {
+  if (REQUIRE_TODAY && !PAUSED) {
     const hasToday = arts.some((a) => TODAY.has(a.created_at));
     if (hasToday) ok(`same-day freshness OK — an article is dated ${[...TODAY].join(" or ")}`);
     else fail(`no article dated today (${[...TODAY].join(" or ")}) — today's run may have been skipped`);
+  } else if (PAUSED) {
+    ok("publishing paused by the backlog guard — a same-day article is not expected");
   }
 
   // 7. Freshness: the newest article should be recent, or the morning run likely failed.
@@ -132,7 +143,8 @@ if (manifest && Array.isArray(manifest.articles)) {
   if (!newest) fail("no article has a created_at date");
   else {
     const ageDays = Math.floor((Date.now() - new Date(newest + "T00:00:00Z").getTime()) / 86400000);
-    if (ageDays > FRESH_DAYS) fail(`newest article is ${ageDays} days old (> ${FRESH_DAYS}) — the daily generator may be failing. Newest: ${newest}`);
+    if (ageDays > FRESH_DAYS && !PAUSED) fail(`newest article is ${ageDays} days old (> ${FRESH_DAYS}) — the daily generator may be failing. Newest: ${newest}`);
+    else if (ageDays > FRESH_DAYS) ok(`newest article ${newest} is ${ageDays}d old — expected while publishing is paused`);
     else ok(`freshness OK — newest article ${newest} (${ageDays}d old)`);
   }
 

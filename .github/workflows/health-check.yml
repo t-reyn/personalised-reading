@@ -5,7 +5,11 @@ name: Health check
 # was produced, the job fails and GitHub emails the repo owner.
 on:
   schedule:
-    - cron: "30 21 * * *" # 21:30 UTC, ~1.5h after the 20:00 UTC generate run
+    # 22:30 UTC (8:30am AEST). MUST sit after the generate CATCH-UP cron (21:45 UTC), not just the
+    # primary (20:00). At 21:30 it ran 15 minutes BEFORE the catch-up, so any day the primary run's
+    # author step died this job emailed a failure for an issue the catch-up then published moments
+    # later — observed 2026-08-07, health failed 01:03Z, catch-up fixed it 01:04Z.
+    - cron: "30 22 * * *"
   workflow_dispatch:
 
 permissions:
@@ -33,7 +37,14 @@ jobs:
           GIT_SSH_COMMAND="ssh -i ~/.ssh/cortex_state -o IdentitiesOnly=yes" \
             git clone --quiet --depth 1 git@github.com:t-reyn/cortex-state.git "$RUNNER_TEMP/cortex-state"
           cp "$RUNNER_TEMP/cortex-state"/data/*.json data/
+      # Ask the same question generate.yml asked this morning. If the reader is behind, today's
+      # missing article is the guard working, not the pipeline breaking — don't email about it.
+      - name: Is publishing paused by the backlog guard?
+        id: backlog
+        run: node scripts/backlog.mjs --github
+
       - name: Run integrity + freshness check
         env:
           HEALTH_REQUIRE_TODAY: "1"
+          HEALTH_PAUSED: ${{ steps.backlog.outputs.backlog_skip == 'true' && '1' || '0' }}
         run: node scripts/health-check.mjs
