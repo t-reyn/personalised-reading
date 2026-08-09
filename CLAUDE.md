@@ -29,13 +29,17 @@ app.js, styles.css      the app layer (hub UI, reader overlay, quiz, state sync)
 manifest.webmanifest, sw.js, favicon.svg
 articles/YYYY-MM-DD/<slug>.html   committed articles (from templates/article.html); inline #meta JSON
 templates/article.html  styling + structure source of truth + the #meta contract
-skills/AUTHORING.md          daily authoring contract
+skills/RESEARCH.md           daily research contract (networked step — writes the brief)
+skills/AUTHORING.md          daily authoring contract (offline step — writes the article)
 skills/SCOUT.md              feed-discovery contract
 skills/GLOSSARY.md           glossary top-up contract (dev term of the day)
 scripts/
   generate-index.mjs    scan articles/ → build index.html, feed.xml, sitemap.xml, data/manifest.json
   ingest.mjs            fetch RSS per source → dedup (data/seen.json) → append to data/pool.json
-  lib/                  shared zero-dep helpers (text, articles, feed, interests)
+  pick-interest.mjs     cadence rule in code → data/digest-today.json (today's tab + one fallback)
+  consume-pool.mjs      brief's used_item_ids → data/pool.json statuses (pending → used)
+  record-usage.mjs      both Claude steps' token counts → data/usage-log.jsonl (one row per run)
+  lib/                  shared zero-dep helpers (text, articles, feed, interests, brief, backlog)
 data/
   config.json           interests (tabs), siteUrl, passThreshold, freshness, cadenceDays — single source of truth
   sources.json          feeds per interest (user-editable). Mostly RSS/Atom; a
@@ -43,6 +47,10 @@ data/
                         Delivery API instead (it publishes no RSS) — see ingest.mjs.
   seen.json             ingest dedup keys
   pool.json             the living pool of ingested-but-not-yet-published items
+  digest-today.json     GENERATED per run by pick-interest.mjs — the research step's whole input.
+                        PRIVATE (carries read status + taste votes): gitignored, never published
+  brief-today.md        the research step's only output; the author's whole input. PRIVATE, same
+                        rules — archived to cortex-state/briefs/<date>.md, scrubbed before deploy
   manifest.json         GENERATED catalog the app reads
   knowledge.json        concept graph + learnt state (the model the generator reads) — PRIVATE:
                         lives in t-reyn/cortex-state, materialised into data/ at runtime (gitignored here)
@@ -73,40 +81,55 @@ limits). See `CLOUD_SETUP.md`.
 1. `node scripts/ingest.mjs` — refresh `data/pool.json` from feeds. Then
    `node scripts/fetch-live.mjs` — refresh `data/live.json` (keyless live market datapoints for
    grounding time-sensitive pieces; best-effort, never fatal).
-2. Read `data/pool-digest.json` (pre-digested candidate items per interest; fall back to
-   `data/pool.json` if absent), `data/knowledge.json` (what's learnt),
-   `data/reading-state.json` (read/quiz history — a failed quiz is the strongest re-teach signal;
-   per-article `feedback: "up"|"down"` taste votes steer the angle within a tab, see AUTHORING.md),
-   `data/corpus.json` (the reader's durable hand-picked sources — vetted signal to weave in),
-   `data/live.json` (current figures for `current` finance/markets/property pieces), and
-   **`data/profile.local.json` if present** (gitignored reader profile: background + per-tab pitch
-   level + concepts already known — don't re-explain those; pitch each tab to the stated level).
-3. **Author ONE article** — the day's whole issue (`config.maxArticlesPerRun` = 1). Its interest is
-   chosen by the cadence rule (highest `days_since_last_article / cadenceDays`, see
-   `skills/AUTHORING.md`); its angle comes from the strongest cluster of pending items in that
-   interest:
+2. **Pick** — `node scripts/pick-interest.mjs`. Deterministic, zero tokens: it applies the cadence
+   rule (highest `days_since_last_article / cadenceDays`, never yesterday's tab, a `current` tab with
+   an empty pool can't be served) and writes **`data/digest-today.json`** — the chosen interest plus
+   one fallback, each carrying its candidate items and the reader's recent signals for that tab.
+3. **Research** — contract: **`skills/RESEARCH.md`**. The only networked step. It reads
+   `digest-today.json`, `config.json` (audience), `profile.local.json` if present, `knowledge.json`,
+   `corpus.json` and `live.json`, picks the angle, fetches **3–6** sources, and writes exactly one
+   file: **`data/brief-today.md`** — a meta header (`interest`, `pick`, `mode`, `shape`, `angle`,
+   `used_item_ids`) then the angle, the reader signals it's applying, and per source the resolved URL,
+   verbatim facts and short quotes. It must not write articles or touch any state file.
+4. **Author ONE article** — contract: **`skills/AUTHORING.md`**. The day's whole issue
+   (`config.maxArticlesPerRun` = 1), written **offline from the brief alone** (the workflow withholds
+   WebFetch, so a source it never read cannot be cited):
    - Copy `templates/article.html` → `articles/YYYY-MM-DD/<slug>.html`, fill every `{{PLACEHOLDER}}`
-     and the `#meta` JSON.
+     and the `#meta` JSON. Every `sources` URL must be one the brief supplies, verbatim.
    - **Knowledge rules:** read `knowledge.json`. Do **not** re-explain concepts where `is_learnt`.
      Do **not** assume concepts that are not learnt — either teach an assumed prerequisite briefly
      inline, or hold the article if it depends on an unlearnt prereq (list assumed concepts so the
      app can gate it). Record `concepts_taught` / `concepts_assumed` / `concepts_reinforced` (stable
      kebab-case ids).
-   - **Synthesis:** merge multiple sources into one original piece; list them in `sources`.
+   - **Synthesis:** the brief's sources become one original piece structured by the author's own
+     analysis, not by the source list.
    - **Carry-forward:** suspended for now — write fresh pieces; leave `merged_from: []` and
      `merged_into: null` (see `skills/AUTHORING.md`).
-   - **Quick-check:** add 1–2 MCQs in `quick_check`, each tagged with the `concept` it tests.
-4. Update `data/knowledge.json` with any **new** concepts (default `is_learnt:false`, plus a
+   - **Quick-check:** one MCQ per taught concept, each tagged with the `concept` it tests.
+5. Update `data/knowledge.json` with any **new** concepts (default `is_learnt:false`, plus a
    `difficulty` of `easy`/`medium`/`hard` judged against the reader's pitch level — it sets how soon,
-   if ever, the concept comes up for review). Update `data/pool.json` item statuses (`pending`→`used`).
+   if ever, the concept comes up for review).
    **Reviews no longer resurface old articles** — instead, for each learnt concept whose
    `next_review_at` falls within the **next 14 days**, weave it into a topically-suitable article from
    today's run (reference and build on it, list it in that article's `concepts_reinforced`, add one
    application-level `quick_check` question tagged with it) and/or add a fresh MCQ for it to
    `data/quizbank.json`; carry it if nothing fits today. See `skills/AUTHORING.md`.
-5. `node scripts/generate-index.mjs --strict` — rebuild the hub/feed/sitemap/manifest; fix any
+6. **Consume** — `node scripts/consume-pool.mjs` marks the brief's `used_item_ids` `pending`→`used`
+   in `data/pool.json` (the author no longer touches the pool). It no-ops unless an article actually
+   published, so a failed authoring run doesn't burn its own candidates.
+7. `node scripts/generate-index.mjs --strict` — rebuild the hub/feed/sitemap/manifest; fix any
    extraction warnings before committing.
-6. Commit + push `main`.
+8. Commit + push `main`. `brief-today.md` and `digest-today.json` are **never** committed here — they
+   quote the reader's read history and taste votes, so they're archived to the private
+   `cortex-state/briefs/<date>.md` and deleted before the Pages upload.
+
+**Why the split (2026-08-09).** One step used to pick the topic, do the reading and write the piece.
+Three things were wrong with that: the cadence arithmetic was prose the model re-derived each morning
+from all ten tabs' digests (a judgement call that is really a division); the same context held both
+fetched source text and the draft, so a half-remembered figure could reach the page; and there was no
+artifact between "what the sources said" and "what got published", which made a bad article
+impossible to diagnose. Now the pick is code, the research is auditable, and the author has no
+network — it cannot cite what it did not read.
 
 ## The `#meta` contract (inline in every article)
 

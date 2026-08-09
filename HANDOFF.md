@@ -1,7 +1,7 @@
 # Cortex — project handoff / state
 
-Continuation notes so a fresh chat can pick up Cortex without prior context. Last updated 2026-06-29.
-(For the daily authoring contract, see `CLAUDE.md` + `skills/AUTHORING.md`.)
+Continuation notes so a fresh chat can pick up Cortex without prior context. Last updated 2026-08-09.
+(For the daily contracts, see `CLAUDE.md` + `skills/RESEARCH.md` + `skills/AUTHORING.md`.)
 
 ## What it is
 **Cortex** — a personal, single-user "reading list that writes itself and learns what you know." A
@@ -34,12 +34,18 @@ scripts/
   lib/render.mjs        the actual builders (buildIndexHtml, buildManifest, buildServiceWorker, feed)
   lib/{text,articles}.mjs, lib/*.test.mjs
   ingest.mjs            RSS/Atom → data/pool.json (browser UA, dedup via seen.json, per-interest cap)
+  pick-interest.mjs     cadence rule in code → data/digest-today.json (today's tab + one fallback)
+  consume-pool.mjs      brief's used_item_ids → pool.json statuses (pending → used), post-publish
+  record-usage.mjs      research + author token counts → one data/usage-log.jsonl row per run
+  lib/pick-interest.mjs scoreInterests / buildDigestToday / feedbackSummary (pure, tested)
+  lib/brief.mjs         parseBriefMeta — the research→author handoff header (pure, tested)
   health-check.mjs      zero-dep integrity + freshness check (fails → emails owner)
   validate-sources.mjs  scout: validate candidate feeds → sources.json
   serve.mjs             dev-only static server (PORT via argv[2] or env; default 4317)
 templates/article.html  article template + the inline #meta contract
 articles/YYYY-MM-DD/*.html   committed articles, each with a <script id="meta"> JSON block
-skills/AUTHORING.md     daily author contract (profile-driven, mode-aware, multi-topic)
+skills/RESEARCH.md      daily research contract (networked; writes data/brief-today.md)
+skills/AUTHORING.md     daily author contract (offline; writes the article from the brief)
 skills/SCOUT.md         feed-discovery contract
 skills/GLOSSARY.md      glossary top-up contract (dev term-of-the-day banner)
 data/
@@ -48,6 +54,10 @@ data/
   sources.json          feeds per interest — RSS/Atom, plus deliver.kontent.ai JSON (the Actuaries
                         Institute publishes no RSS; ingest.mjs detects the host)
   pool.json             ingested-but-unpublished items (the Discover queue reads this)
+  digest-today.json     PER-RUN, PRIVATE: the research step's input (today's tab + fallback, their
+                        items, and the reader's recent signals for those tabs). Gitignored.
+  brief-today.md        PER-RUN, PRIVATE: the research step's only output and the author's only
+                        input. Gitignored; archived to cortex-state/briefs/<date>.md.
   manifest.json         GENERATED catalog the app reads
   knowledge.json        concept graph + is_learnt state
   reading-state.json    user read/quiz state (synced from the browser)
@@ -280,11 +290,68 @@ Reworked 2026-07-02 — reviews no longer resurface old articles; they're woven 
   `conceptLearntDue`, `REVIEW_INTERVALS`, and the Library "Review due" tier are all gone; Library now
   splits only into Learnt / Read.
 
-## How the daily run works
-`.github/workflows/generate.yml` — cron `0 20 * * *` (6am AEST) + manual dispatch:
-tests → `ingest.mjs` → materialise profile from `READER_PROFILE` secret → **Author** (claude-code-action,
-`CLAUDE_CODE_OAUTH_TOKEN` secret, subscription) → record usage → `generate-index.mjs --strict` →
-commit + push main → Pages deploy. `health-check.yml` runs ~1.5h later and emails the owner on failure.
+## How the daily run works — the split pipeline (2026-08-09)
+`.github/workflows/generate.yml` — cron `0 20 * * *` (6am AEST) + a 21:45 catch-up + manual dispatch:
+
+```
+fetch cortex-state → guard (issue exists? reader behind?) → tests → ingest → fetch-live
+  → pick-interest.mjs        deterministic, 0 tokens  → data/digest-today.json
+  → RESEARCH (Claude, WebFetch ON,  30 turns, 9m)     → data/brief-today.md
+  → enforce research boundaries + check the brief
+  → AUTHOR   (Claude, WebFetch OFF, 35 turns, 12m)    → articles/<date>/<slug>.html
+  → register-concepts → quarantine → consume-pool.mjs → build → commit + push main
+  → push knowledge + briefs/<date>.md to cortex-state → SCRUB private files → Pages deploy → Telegram
+```
+`health-check.yml` runs ~1.5h later (22:30Z) and emails the owner on failure.
+
+**Why it's split.** One step used to pick the topic, do the reading and write the piece:
+- The **cadence rule was prose** the model re-derived every morning from all ten tabs' digests —
+  arithmetic paid for in tokens, and free to come out differently on identical inputs. It is now
+  `scripts/lib/pick-interest.mjs` (unit-tested), and only the chosen tab plus one fallback reach the
+  model: `digest-today.json` is **18KB against pool-digest.json's 49KB**, and that saving is paid on
+  every turn of the run (fixed inputs cost size × turns — see the cache-read note below).
+- **The author had a network.** Fetched source text and the draft shared one context, so a
+  half-remembered figure could reach the page and a plausible URL could be reconstructed rather than
+  recorded. The author step's `--allowedTools` now omits WebFetch — that, not an instruction, is what
+  makes "work only from the brief" true. Verbatim accuracy became one job (research) instead of a
+  side-effect of another.
+- **Nothing sat between the sources and the article**, and claude-code-action hides its own output,
+  so a wrong article could not be diagnosed. The brief is now archived to
+  `cortex-state/briefs/<date>.md` — private, because it quotes the reader's feedback and read history.
+
+**Rules that fall out of the split, don't undo them:**
+- Each Claude step needs `continue-on-error` **and** a step-level timeout: a turn overrun is reported
+  as step failure even when the work succeeded (this is what silently binned scout's output for six
+  weeks). A job-level timeout would cancel Build + Commit and publish nothing.
+- The author step is **gated on the brief existing** (`steps.brief.outputs.ok`) — no brief means it
+  would refuse to write anyway, so skipping saves a whole Claude step instead of spending one to
+  produce nothing.
+- **"Told not to" is not a boundary.** The research step is contractually barred from writing
+  articles or state, so the *Enforce research boundaries* step reverts whatever it touched. Two
+  different restore sources, and the difference is load-bearing:
+  - `articles/` is restored **from git** (`git checkout` + `git clean` on today's folder), keyed on
+    `git status --porcelain` being non-empty — i.e. on what CHANGED, never on the folder existing.
+    **`workflow_dispatch` bypasses the guard's "today's issue already exists" check**, so on a manual
+    run that folder normally holds an already-published article; a bare `rm -rf` would stage a
+    deletion that the Commit step pushes to main, and if research then produced no brief the author
+    is skipped and nothing replaces it. (Caught in review before the first dispatch — it would have
+    deleted the live 2026-08-09 issue.)
+  - `pool.json`/`pool-digest.json`/`quizbank.json` are restored from a snapshot taken **after**
+    ingest — *not* from git, because ingest legitimately rewrote them this run and HEAD is stale.
+- **`upload-pages-artifact` does not read `.gitignore`.** It tars the working directory, and by then
+  this job has materialised `profile.local.json`, the cortex-state files, the digest and the brief
+  into `data/`. The *Scrub private runtime files* step removes them before packaging and fails the
+  run if one survives. (Fixed 2026-08-09 with the split; before that those files were in every
+  generate-run Pages artifact, publicly readable until `deploy.yml`'s next deploy replaced it.
+  `deploy.yml` itself is clean — it builds from a fresh checkout.)
+  A fixed denylist can't anticipate a file a Claude step invented, so the step then deletes anything
+  still **untracked** under `data/` (`git ls-files --others`, which without `--exclude-standard`
+  covers ignored files in the same pass) — the run's real outputs were committed two steps earlier.
+  That sweep **deletes and logs rather than exiting non-zero**: failing here would skip the Pages
+  deploy, and a `GITHUB_TOKEN` push does not trigger `deploy.yml`, so the day's article would commit
+  but never publish. The six known-private paths keep their hard `exit 1` — that one is an emergency.
+- `consume-pool.mjs` runs **after** quarantine and **no-ops unless an article published**, so a good
+  brief followed by a dead author step doesn't burn its own candidates.
 
 **Secrets (GitHub Actions):** `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`; ~annual rotation) and
 `READER_PROFILE` (= contents of `data/profile.local.json`). Update the profile secret after editing the
@@ -304,7 +371,14 @@ node scripts/generate-index.mjs --strict     # rebuild
 node --test scripts/lib/*.test.mjs            # tests (CI uses this exact glob)
 node scripts/health-check.mjs                 # integrity + freshness (exit 1 = problem)
 node scripts/ingest.mjs --dry-run             # test feeds
+node scripts/pick-interest.mjs --dry-run      # who's due today, and why (no file written)
+node scripts/consume-pool.mjs --dry-run       # what today's brief would retire from the pool
 ```
+Running the pipeline by hand (the local fallback — state must be materialised from cortex-state
+first, see Privacy): `pick-interest.mjs` → follow `skills/RESEARCH.md` → follow `skills/AUTHORING.md`
+→ `consume-pool.mjs` → `generate-index.mjs --strict`. `pick-interest.mjs` warns and carries on when
+`reading-state.json` is absent — every article reads as "unknown", which is honest but means the
+brief gets no taste signals.
 Preview: `.claude/launch.json` has `reading` (port 4317) + `reading2` (4319, if 4317 is busy). Verify at
 **1320px desktop AND 375px mobile**; check console for errors. (`.claude/` is gitignored.)
 
@@ -373,6 +447,11 @@ then regenerate. It MUST preserve (or update `app.js` in lockstep with) these lo
     `data/*.json` in (they're gitignored here).
   - **History caveat**: pre-split state (and the once-leaked Substack share token) remains in the
     PUBLIC repo's git history. Rewriting history is a separate, disruptive decision — not done.
+  - **The per-run handoff files are private too (2026-08-09).** `data/digest-today.json` and
+    `data/brief-today.md` quote read status, taste votes and failed quizzes, so they are gitignored,
+    archived only to `cortex-state/briefs/`, and deleted by generate.yml's scrub step before Pages
+    packaging. If you ever add another runtime-materialised file under `data/`, add it to that scrub
+    list — `upload-pages-artifact` publishes whatever is in the working tree.
 
 ## Staged / next (not built)
 - Let the new model run a few days, then tune: swap thin new-topic feeds (indie-income / mortgage-broking

@@ -25,9 +25,10 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
-    # Backstop only — authoring is bounded by the step-level timeout below so a slow run
-    # still reaches Build + Commit (a job-level timeout would cancel those and commit nothing).
-    timeout-minutes: 22
+    # Backstop only — the two Claude steps are bounded individually below so a slow one still
+    # reaches Build + Commit (a job-level timeout would cancel those and commit nothing).
+    # 30 = research (9) + author (12) + the deterministic steps, with room to spare.
+    timeout-minutes: 30
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
@@ -115,62 +116,131 @@ jobs:
             echo "no READER_PROFILE secret set — generic authoring"
           fi
 
-      # 3. Author today's article on your subscription. Bounded turns + the run timeout above keep it
-      #    well under the headless-token window. One article per run (config.maxArticlesPerRun) leaves
-      #    the turn budget to be spent on research + editing rather than a second piece.
-      - name: Author article (Claude, subscription)
-        id: author
+      # 2b. Choose today's interest — deterministic, zero tokens. The cadence arithmetic used to be
+      #     prose the author re-derived each morning from all ten tabs' digests; now it is code, and
+      #     only the chosen tab (plus one fallback) reaches the model. Writes data/digest-today.json.
+      #     Hard-fails if the pool digest is missing: researching against an empty menu means
+      #     inventing a topic, which is the drift this pipeline exists to stop.
+      - name: Pick today's interest
+        id: pick
         if: steps.guard.outputs.skip != 'true'
-        continue-on-error: true # a partial/over-budget authoring run should still commit what it wrote
-        timeout-minutes: 13 # stop authoring under the headless-token window; the run continues to Build + Commit
+        run: |
+          node scripts/pick-interest.mjs --github
+          # Snapshot the derived files the research step is forbidden to touch. They can't be restored
+          # with `git checkout` — the ingest step above legitimately rewrote both, and reverting to
+          # HEAD would throw that away along with anything the research step did.
+          mkdir -p "$RUNNER_TEMP/pre-research"
+          cp data/pool.json data/pool-digest.json data/quizbank.json "$RUNNER_TEMP/pre-research/"
+
+      # 3. RESEARCH (Claude, networked). Picks the angle, reads the sources, writes ONE file:
+      #    data/brief-today.md — resolved URLs, verbatim facts, quotes. This is the only step with
+      #    WebFetch, so it is the only step that can be wrong about what a source says.
+      - name: Research the brief (Claude, subscription)
+        id: research
+        if: steps.guard.outputs.skip != 'true'
+        continue-on-error: true # a turn overrun is reported as step failure even when the brief was written
+        timeout-minutes: 9 # each Claude step gets its own headless-token window; keep both well inside it
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          prompt: "Read CLAUDE.md and skills/AUTHORING.md, then write today's issue exactly as they instruct. It is ONE article — pick its interest by the cadence rule in AUTHORING.md, research it properly, and run the full Editor pass on it. Today's issue date is ${{ steps.guard.outputs.syd }} (AEST) — put the article in that dated folder. Stop when the article, knowledge.json, pool.json and quizbank.json are updated."
-          # 60, not 44: usage-log.jsonl shows nine consecutive runs pinning exactly 45 turns against the
-          # old 44 cap (16 of 20 runs >= 40), i.e. the cap was binding and 4 of 26 runs shipped nothing.
-          # One article frees some of that, but a position piece spends it back on 3-6 source fetches and
-          # a real editor pass. The 13-min step timeout still bounds wall-clock inside the headless-token
-          # window — turns are the budget being raised here, not time.
-          claude_args: "--max-turns 60 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep,WebFetch"
+          prompt: "Read skills/RESEARCH.md and data/digest-today.json, then research today's issue exactly as RESEARCH.md instructs. Today's issue date is ${{ steps.guard.outputs.syd }} (AEST); the interest is already chosen (picks[0]). Write exactly one file, data/brief-today.md, and stop. Do NOT create or edit anything under articles/, and do not touch data/knowledge.json, data/quizbank.json, data/pool.json or data/pool-digest.json."
+          claude_args: "--max-turns 30 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep,WebFetch"
 
-      # 3b. Record this run's tokens + cost estimate to data/usage-log.jsonl (token counts are the
-      #     reliable figures; cost_usd is a client-side estimate, fine for trend analysis).
-      - name: Record usage
+      - name: Capture research usage
         if: always() && steps.guard.outputs.skip != 'true'
         run: |
-          DATE=$(date -u +%Y-%m-%d)
-          # Issues are dated in AEST (pinned in the author prompt) — count that folder only.
-          SYD=$(TZ=Australia/Sydney date +%F)
-          ART=$(ls articles/"$SYD"/*.html 2>/dev/null | wc -l | tr -d ' ')
-          # The action declares the path as an output; fall back to searching the runner temp for
-          # timed-out runs where the output may be unset — a missing file was logging null token rows.
-          FILE="${{ steps.author.outputs.execution_file }}"
-          [ -n "$FILE" ] && [ -f "$FILE" ] || FILE=$(find "$RUNNER_TEMP" -name 'claude-execution-output*.json' 2>/dev/null | head -1)
-          COST=null; IN=null; OUT=null; CR=null; CC=null; TURNS=null
-          if [ -n "$FILE" ] && [ -f "$FILE" ]; then
-            R=$(jq -s 'flatten | map(select(.type=="result")) | last // {}' "$FILE" 2>/dev/null || echo '{}')
-            COST=$(printf '%s' "$R" | jq -r '.total_cost_usd // "null"')
-            IN=$(printf  '%s' "$R" | jq -r '.usage.input_tokens // "null"')
-            OUT=$(printf '%s' "$R" | jq -r '.usage.output_tokens // "null"')
-            CR=$(printf  '%s' "$R" | jq -r '.usage.cache_read_input_tokens // "null"')
-            CC=$(printf  '%s' "$R" | jq -r '.usage.cache_creation_input_tokens // "null"')
-            TURNS=$(printf '%s' "$R" | jq -r '.num_turns // "null"')
-          else
-            echo "no claude-execution-output.json under $RUNNER_TEMP — logging counts only"
-          fi
-          printf '{"date":"%s","articles":%s,"cost_usd":%s,"input":%s,"output":%s,"cache_read":%s,"cache_creation":%s,"turns":%s,"model":"sonnet"}\n' \
-            "$DATE" "${ART:-0}" "$COST" "$IN" "$OUT" "$CR" "$CC" "$TURNS" >> data/usage-log.jsonl
-          echo "usage row: $(tail -1 data/usage-log.jsonl)"
+          F="${{ steps.research.outputs.execution_file }}"
+          [ -n "$F" ] && [ -f "$F" ] || F=$(find "$RUNNER_TEMP" -name 'claude-execution-output*.json' 2>/dev/null | xargs -r ls -t 2>/dev/null | head -1)
+          if [ -n "$F" ] && [ -f "$F" ]; then cp "$F" "$RUNNER_TEMP/usage-research.json"; else echo "no execution output for research"; fi
 
-      # 3b2. Register any taught/assumed concepts the author forgot to add to knowledge.json
+      # 3a. Hold the research step to its contract. It is told not to write articles or state, but
+      #     "told not to" is not a boundary — and a stray article here would be published unedited
+      #     by the Build step below. pool.json/pool-digest.json come back from the post-ingest
+      #     snapshot (NOT git — ingest rewrote them legitimately this run), and the private state
+      #     files come back from the cortex-state clone they were materialised from.
+      - name: Enforce research boundaries
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          d="${{ steps.guard.outputs.syd }}"
+          # Key on what CHANGED, never on the folder existing. workflow_dispatch bypasses the guard's
+          # "today's issue already exists" check (line ~72), so on a manual run this folder routinely
+          # holds an already-committed, already-published article — deleting it would stage a
+          # deletion that the Commit step pushes to main, and if the research step then failed to
+          # produce a brief the author is skipped entirely and nothing replaces it.
+          if [ -n "$(git status --porcelain "articles/$d" 2>/dev/null)" ]; then
+            echo "! research step touched articles/$d — reverting (the author writes the article)"
+            git checkout -- "articles/$d" 2>/dev/null || true   # undo edits to tracked articles
+            git clean -fdxq "articles/$d" 2>/dev/null || true   # remove ones it created
+          fi
+          # git is the right restore source for articles/ ONLY — nothing earlier in the job rewrites
+          # it. pool.json/pool-digest.json must come from the post-ingest snapshot instead, because
+          # ingest legitimately rewrote both this run and HEAD is stale for them.
+          cp "$RUNNER_TEMP/pre-research/"*.json data/
+          cp "$RUNNER_TEMP/cortex-state"/data/*.json data/
+          echo "articles + pool + private state restored to their pre-research contents"
+
+      # 3b. No brief, no author run. The author is contractually unable to work without one (it has
+      #     no network and must not invent sources), so skipping here saves a whole Claude step
+      #     rather than spending it to produce nothing.
+      - name: Check the brief
+        id: brief
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          if [ -s data/brief-today.md ] && head -c 400 data/brief-today.md | grep -q '<!--[[:space:]]*meta:'; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+            echo "brief: $(wc -w < data/brief-today.md) words"
+            head -1 data/brief-today.md
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "! no usable data/brief-today.md — skipping the author step (no issue today)"
+          fi
+
+      # 3c. AUTHOR (Claude, OFFLINE). No WebFetch in --allowedTools: that is the enforcement behind
+      #     AUTHORING.md's "work only from the brief". An author that cannot fetch cannot cite a
+      #     source it never read, which is the failure the split is here to make impossible.
+      - name: Author article (Claude, subscription)
+        id: author
+        if: steps.guard.outputs.skip != 'true' && steps.brief.outputs.ok == 'true'
+        continue-on-error: true # a partial/over-budget authoring run should still commit what it wrote
+        timeout-minutes: 12 # stop authoring under the headless-token window; the run continues to Build + Commit
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: "Read skills/AUTHORING.md and data/brief-today.md, then write today's issue exactly as AUTHORING.md instructs. It is ONE article, built only from the brief — you have no network, so never fetch and never invent a source, figure or URL. Today's issue date is ${{ steps.guard.outputs.syd }} (AEST) — put the article in that dated folder. Run the full Editor pass. Stop when the article, knowledge.json and quizbank.json are updated; do not touch data/pool.json."
+          # Turns are split across the two steps (30 research + 35 author) rather than the single
+          # 60-turn budget: the author no longer spends turns on fetching, and the editor pass is
+          # where its budget should go.
+          claude_args: "--max-turns 35 --model sonnet --allowedTools Read,Write,Edit,Glob,Grep"
+
+      - name: Capture author usage
+        if: always() && steps.guard.outputs.skip != 'true'
+        run: |
+          F="${{ steps.author.outputs.execution_file }}"
+          if [ -z "$F" ] || [ ! -f "$F" ]; then
+            # Timed-out steps leave the output unset. Fall back to the newest execution file that
+            # isn't the one research already claimed — with two Claude steps, "newest" alone would
+            # log the research run's tokens twice.
+            F=""
+            for c in $(find "$RUNNER_TEMP" -name 'claude-execution-output*.json' 2>/dev/null | xargs -r ls -t 2>/dev/null); do
+              if [ ! -f "$RUNNER_TEMP/usage-research.json" ] || ! cmp -s "$c" "$RUNNER_TEMP/usage-research.json"; then F="$c"; break; fi
+            done
+          fi
+          if [ -n "$F" ] && [ -f "$F" ]; then cp "$F" "$RUNNER_TEMP/usage-author.json"; else echo "no execution output for author"; fi
+
+      # 3d. Record this run's tokens + cost estimate to data/usage-log.jsonl. Top-level fields are the
+      #     run TOTALS (comparable with every earlier row); `phases` splits research vs author.
+      - name: Record usage
+        if: always() && steps.guard.outputs.skip != 'true'
+        run: node scripts/record-usage.mjs research="$RUNNER_TEMP/usage-research.json" author="$RUNNER_TEMP/usage-author.json"
+
+      # 3e. Register any taught/assumed concepts the author forgot to add to knowledge.json
       #      (additive only). Both first contract-v2 runs skipped this step, failing the morning
       #      health check — don't let it depend on author discipline.
       - name: Register concepts
         if: steps.guard.outputs.skip != 'true'
         run: node scripts/register-concepts.mjs
 
-      # 3c. Quarantine unpublishable drafts. A timed-out author step can leave a half-written
+      # 3f. Quarantine unpublishable drafts. A timed-out author step can leave a half-written
       #     article (e.g. no #meta block); --strict would then fail the Build and discard the WHOLE
       #     issue, good articles included. Delete today's defective drafts so the rest publishes.
       - name: Quarantine defective drafts
@@ -192,6 +262,15 @@ jobs:
               fi
             done
           done
+
+      # 3g. Retire the pool items the brief drew on (status -> "used"). Deliberately AFTER the
+      #     quarantine step: it no-ops unless an article actually published today, so a research run
+      #     whose author then died never burns its own candidates. continue-on-error because a
+      #     bookkeeping problem must never cost an issue that is already written.
+      - name: Consume pool items
+        if: steps.guard.outputs.skip != 'true'
+        continue-on-error: true
+        run: node scripts/consume-pool.mjs --date=${{ steps.guard.outputs.syd }}
 
       # 4. Build the hub/feed/sitemap/manifest from the new articles.
       - name: Build
@@ -249,15 +328,54 @@ jobs:
           cd "$RUNNER_TEMP/cortex-state"
           cp "$GITHUB_WORKSPACE/data/knowledge.json" data/knowledge.json
           git add data/knowledge.json
-          if git diff --cached --quiet; then echo "knowledge unchanged"; exit 0; fi
+          # Archive the day's brief alongside it. It is the only record of WHY a topic was chosen and
+          # what facts the author was handed — the Claude steps hide their own output, so without
+          # this there is no way to tell a bad article's research apart from its writing. It goes
+          # here, not into the public repo, because it quotes the reader's feedback and read history.
+          if [ -s "$GITHUB_WORKSPACE/data/brief-today.md" ]; then
+            mkdir -p briefs
+            cp "$GITHUB_WORKSPACE/data/brief-today.md" "briefs/$(TZ=Australia/Sydney date +%F).md"
+            git add briefs
+          fi
+          if git diff --cached --quiet; then echo "knowledge + brief unchanged"; exit 0; fi
           git config user.name "reading-bot"
           git config user.email "noreply@users.noreply.github.com"
-          git commit -m "knowledge: $(TZ=Australia/Sydney date +%F)"
+          git commit -m "knowledge + brief: $(TZ=Australia/Sydney date +%F)"
           for i in 1 2 3; do
             if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
             sleep 10
           done
           echo "cortex-state push failed after retries"; exit 1
+
+      # 5c. Scrub the run's private working files before anything is packaged for Pages.
+      #     upload-pages-artifact tars the working directory as-is — it has no idea about
+      #     .gitignore — so every file materialised earlier in this job (the reader profile, the
+      #     state clone, and now the day's brief and digest, which carry read/skip/taste signals)
+      #     would otherwise be uploaded to a PUBLIC site. Runs after the cortex-state push, which is
+      #     the last step that needs knowledge.json.
+      - name: Scrub private runtime files before publish
+        if: always() && steps.guard.outputs.skip != 'true'
+        run: |
+          private="data/profile.local.json data/reading-state.json data/knowledge.json data/corpus.json data/brief-today.md data/digest-today.json"
+          rm -f $private
+          # One list for both the removal and the check, so they can't drift apart, and one test per
+          # path: a single `ls` over the whole set returns non-zero when ANY path is missing, which
+          # would make the guard pass at exactly the moment one file survived.
+          for f in $private; do
+            if [ -e "$f" ]; then echo "! $f survived the scrub — refusing to publish"; exit 1; fi
+          done
+          # A denylist can't anticipate a file a Claude step invented (data/brief-notes.md,
+          # data/research-scratch.md). Anything still UNTRACKED under data/ at this point is not
+          # ours to publish — the run's real outputs were committed two steps ago — and a stray
+          # holding brief/digest content would be served publicly while the run looked like a quiet
+          # skip. Omitting --exclude-standard makes this list ignored files too, in one pass.
+          # Deletes rather than exits: failing here would skip the Pages deploy, and a GITHUB_TOKEN
+          # push does not trigger deploy.yml, so the day's article would commit but never publish.
+          git ls-files --others -- data/ | while read -r f; do
+            echo "! removing unexpected file before publish: $f"
+            rm -f "$f"
+          done
+          echo "private runtime files removed from the publish tree"
 
       # 6. Publish. Gated on the guard too: a skipped catch-up run has nothing new to publish
       #    (the run that wrote today's issue already deployed it).

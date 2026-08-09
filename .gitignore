@@ -16,6 +16,12 @@ data/reading-state.json
 data/knowledge.json
 data/corpus.json
 
+# the day's research handoff (pick -> research -> author). Both quote the reader's read history,
+# taste votes and failed quizzes, so they are as private as reading-state.json itself. Rebuilt from
+# scratch every run, archived to cortex-state/briefs/, and deleted before the Pages upload.
+data/digest-today.json
+data/brief-today.md
+
 # unpublished drafts
 articles/**/_drafts/
 
