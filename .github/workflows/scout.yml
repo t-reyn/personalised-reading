@@ -9,6 +9,11 @@ on:
 
 permissions:
   contents: write
+  # REQUIRED by anthropics/claude-code-action@v1 — it fetches an OIDC token before invoking
+  # Claude. Without it every run dies at "Could not fetch an OIDC token" *before* any tokens
+  # are spent, which is exactly how this workflow failed 6/6 silently from 2026-06-28 to
+  # 2026-08-09 (green-looking weekly failure emails, sources.json never grew).
+  id-token: write
 
 concurrency:
   group: scout

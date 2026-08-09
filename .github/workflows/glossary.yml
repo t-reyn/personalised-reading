@@ -12,6 +12,11 @@ on:
 
 permissions:
   contents: write
+  # REQUIRED by anthropics/claude-code-action@v1 (OIDC fetch before invoking Claude). This was
+  # missing here too, but hidden: the runway gate below skips the Claude step almost every week,
+  # so the run reported green without ever exercising it. It would have failed the first time a
+  # top-up was actually due (~Jan 2027 at the 2026-08-09 runway of 162 days).
+  id-token: write
 
 concurrency:
   group: glossary
