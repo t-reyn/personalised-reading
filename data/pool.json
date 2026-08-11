@@ -494,11 +494,14 @@
       "title": "Why Robotics Still Isn't Solved - But Could Be Soon | YC Paper Club",
       "url": "https://www.youtube.com/watch?v=myDCd0hNqQU",
       "source": "Y Combinator",
-      "excerpt": "This week's Paper Club is all about robotics. Every year for the last decade, someone has promised that the era of robotics is just around the corner. But we're still waiting. So we gathered a bunch of the top researchers working in AI and robotics to present the latest findings on where we are and what comes next. We open with a discussion of the biggest roadblocks still in the way: the sim-to-re",
+      "excerpt": "[music] >> Welcome to YC Paper Club. How are you guys doing today? Woo. >> [laughter] >> Okay. How do you guys like this one? We're We're We're going to change it every time now. So So today it's actually YC Robotics Club. Okay. So this is the 10th year of next year robotics will be solved that I've encountered in my career. Um I remember when AlphaGo came out 10 years ago, everyone said next year, you know, clearly we have the algorithm. All we need to do is scale it up. And then Mujoco came, and then we had, you know, literally in in 3,000 uh iterations where we we can train a robot to uh to walk. This is quite amazing. Clearly next year robotics is going to be solved. This time it's different, all right? We've figured out UMi uh data collection, okay? Uh and so the Aloha was like the big breakout. Everyone thought next year we're going to have robotics. Now, I mean, look at this. We can water [snorts] our plants, we can fix our bike up, we can do my Keurig here. >> [laughter] >> Even shave me, right? We have the algorithm. All we need to do is scale it up. And then 2026 was promised. They promised me that this would be the year of of the robots. I was very convinced. I I read the diffusion policy paper. I even played around with it a little bit myself. I'm like, this is surely the year of the robotics. We have multi-step reasoning. This is like totally going to happen. Um we have VLAs. They're amazing. Um you just need teleops data, and then you're good to go. Um and I would say honestly it were halfway through 2026, and you still can't Yeah, you can pre-order Neo 1X. Um I can't buy a Pi or Figure robot just yet. Um we've had some success in work cells, but Rosie the robot is still not here. Um, and I I you know, we'll we have 6 months left. It's only July. So, maybe maybe it will be. Maybe I'll be wrong. But, it's definitely the year of the demos. I know that for certain. So, the reason why is because, you know, raise your hand if you've ever done teleops collect data collection. Is it easy or hard? I mean, it's remarkably hard. You especially if you have this, you know, uh uh little gripper thing that's all you have. You have the wrist cameras and all that ",
       "published_at": "2026-08-08T14:00:16+00:00",
       "added_at": "2026-08-08T20:18:12.839Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-11T02:04:01.303Z",
+      "transcript_at": "2026-08-11T02:04:01.303Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-eb63118516f3",
@@ -508,11 +511,14 @@
       "title": "Max Hodak: Average Is Not Good Enough",
       "url": "https://www.youtube.com/watch?v=Xc4klGbq8v8",
       "source": "Y Combinator",
-      "excerpt": "Science is building a retinal implant that restores vision to people who have gone blind. One patient has already used it to read a 300-page novel. Building a company like that requires a lot more than getting the technology right. At Startup School 2026, Science CEO Max Hodak explains how the company buys things and hires people, and why those systems determine how fast it can move. He also gets ",
+      "excerpt": "My name is Max Hodak. I'm the CEO of a company called Science. Um, we're going to talk a little bit about infrastructure at startups. So, I've spent most of my life working on brain computer interfaces. This is almost 20 years ago now. Um, I started my career as an undergrad working in a lab at Duke. This is from our very first Society for Neuroscience conference. The experiment I was working on back then was if you put electrodes in the brain of a monkey and then give a monkey a joystick and you record the neural activity as it's playing a game. If you make the joystick say go the cursor go sideways when the when they push forward on the joystick which does the brain do? Does the brain represent the joystick or the screen or something else? Um there turns out that there are neurons that do both. At our company science our main product is a retinal prostthesis. It's a chip that's implanted under the retina in the back of the eye to restore vision to patients that have gone blind due to loss of the rods and cones in their eye. Um on the left, this is one of our patients on the cover of Time last uh last November. Um on the right, you can see there's a picture of the implant with the glasses. So every little one of those hex grids that you see on the implant is essentially a solar cell. So when this is implanted under the retina, the patient wears glasses that have a camera that sees the world and a laser projector that projects onto the implant. And wherever the when it projects the image in infrared, wherever the light is absorbed on the implant, it creates a little electric field to excite the retina, thereby directly bypassing the dead rods and cones to stimulate um this visual signal back into the into the retina at the first possible opportunity. And this is this is pretty this is a pretty cool product. It finished major clinical trials uh last year. It's been in three clinical trials now. Um was covered in the the BBC last fall. One of our patients finished a 300page novel with the device and mailed us the book. But I'm I'm not going to talk about this work for the most part for the next 30 minutes. Um, we're going to talk about infrastructure and lessons. ",
       "published_at": "2026-08-07T21:30:32+00:00",
       "added_at": "2026-08-08T20:18:12.839Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-11T02:04:01.303Z",
+      "transcript_at": "2026-08-11T02:04:01.303Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "indie-income-2d4ae221c9f8",
@@ -1738,11 +1744,14 @@
       "title": "Google’s AI Brain Drain, SpaceX's Huge Quarter, Airtable’s 90% Collapse, US Data Fuels China AI",
       "url": "https://www.youtube.com/watch?v=muRIXCDw-k0",
       "source": "All-In Podcast",
-      "excerpt": "(0:00) Bestie intros! Brad Gerstner fills in for Chamath (2:16) Major shakeups at Google: AI brain drain or better strategy? (20:39) SpaceX's big quarter: Terafab, AI Capex, $1T revenue projection? (45:44) All-In Summit Speaker Announcements! (48:01) Airtable sells for a 90% discount: SaaSpocalypse? (1:05:56) Chinese AI labs are buying US training data to catch up Apply for Summit 2026: Follow Bra",
+      "excerpt": "All right, everybody welcome back. To your favorite podcast. It's the All-in podcast. It's the summer. It's August 6th. Having a hard time getting a quorum here on the podcast, but David Friedberg is here. David Friedberg is back. Our Sultan of Science. How you doing, brother? >> Great to be with you. >> It's great to be with you. And everybody loves when Brad Gerstner is here. He's your Bruce Wayne if markets are your game. He brings that non-mistake to your payday. >> Yeah, I see >> passes at discount and he gets you one of those [laughter] fancy Trump accounts. All right. Welcome back to the program, Brad. >> I love it. I love it. You bring the rhymes back. >> I bring a little intro back. We've been trying Chamath is on the road right now. Chamath is on the road, but we will get a field report from Chamath and I I called Daniel somehow Sachs is going to be here, but you know how he is. He's always late because you know, he can get a phone call from very important people, but he will break in at some point. Oh, wait I see in the text There he is. >> HEY [laughter] GUYS. >> YOU MADE IT. >> HOW DO YOU like my beautiful summer gilet? [laughter] >> Uh, it's incredible. It fits perfectly. You look warm. >> I don't know how Chamath does this. >> [laughter] [music] [music] [music] >> Well, here's the report everybody. As everybody knows, Chamath is on the road. He Oh, here he is. He This is a photo. Sachs he went he went to check his data center progress. I think that's in Colorado or Nevada where he was building a data center. >> that's on Dune. >> Oh, it's on Dune. Yes, Dune 4. Ah, yes. Here he is admiring himself. Oh, look. Here's Nat. >> [laughter] >> You know when a meme has reached its peak when your wife starts dunking on you. There it is. And here we are. This was at the Christmas party, I think. Oh, Brad, you were on CNBC with Andrew Ross Sorkin. There you go. >> I wasn't sure if it was my Twitter feed that was just selecting into it, but it clearly hit everyone, right? >> This is a viral thing. This has hit everything. All right, listen, >> [laughter] >> we got a lot to get to. Enough with the shenanigans and the small talk. Google had two major shakeups to",
       "published_at": "2026-08-08T01:33:14+00:00",
       "added_at": "2026-08-08T20:18:20.486Z",
       "status": "pending",
-      "used_in": []
+      "used_in": [],
+      "transcript_tried_at": "2026-08-11T02:04:01.303Z",
+      "transcript_at": "2026-08-11T02:04:01.303Z",
+      "transcript_kind": "auto"
     },
     {
       "id": "finance-26af25421e8a",
@@ -2715,5 +2724,5 @@
       "used_in": []
     }
   ],
-  "updatedAt": "2026-08-08T20:18:23.571Z"
+  "updatedAt": "2026-08-11T02:04:04.957Z"
 }
