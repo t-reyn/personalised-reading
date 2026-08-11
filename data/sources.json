@@ -14,6 +14,16 @@
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC4x3CR25WSlvMJUtSPPzwwg",
     "https://danluu.com/atom.xml"
   ],
+  "_comment_llm_internals": "Internals-first curriculum tab (how LLMs actually work: tokenization → attention → training → RLHF → inference). All feeds fetch-tested 2026-08-11. YouTube channel_ids: UCXUPKJO5MZQN11PqgIvyuvQ = Andrej Karpathy (Zero-to-Hero / LLM deep dives; NEAR-DORMANT — newest upload 2025-02 — kept as a reader-picked evergreen anchor), UCYO_jab_esuFRV4b17AJtAw = 3Blue1Brown (~3 videos/mo; also posts general-math videos — the author should pick the neural-net/transformer ones). lilianweng.github.io/index.xml carries one FAQ-page item with a bogus year-0001 date — harmless, dedup pools it once. transformer-circuits.pub: use feed.xml, NOT rss.xml (rss.xml 403s AccessDenied from S3). Raschka's Ahead of AI is Substack-hosted (hard IP ban from GitHub runners) so it rides a Google News mirror — indexing lags (newest indexed item was ~4 months old when added). Tested and REJECTED 2026-08-11, don't retry blind: Welch Labs (@WelchLabs = UConVfxXodg78Tzh5nNu85Ew — YouTube's own feed backend 404/500s for this channel specifically; worth a retry in a few months), jalammar.github.io/feed.xml (abandoned — final entry is 'Moving To Substack', 2025-03), anthropic.com (no RSS at any of rss.xml / news/rss / feed.xml), interconnects.ai Google-News mirror (~12.5 items/mo firehose vs ≤1/mo for everything else here — would crowd the round-robin), eugeneyan.com (applied ML / recsys register, not internals).",
+  "llm-internals": [
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw",
+    "https://lilianweng.github.io/index.xml",
+    "https://transformer-circuits.pub/feed.xml",
+    "https://news.google.com/rss/search?q=site:magazine.sebastianraschka.com&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://huyenchip.com/feed.xml",
+    "https://thegradient.pub/rss/"
+  ],
   "finance": [
     "https://www.cnbc.com/id/100003114/device/rss/rss.html",
     "https://news.google.com/rss/search?q=site:boredombaron.substack.com&hl=en-AU&gl=AU&ceid=AU:en",
