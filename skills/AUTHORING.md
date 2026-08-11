@@ -142,6 +142,20 @@ carries `"shape":"position"`, write an argued piece, not a report. A position pi
 
 ## House style
 - Voice: confident, plain, Australian — a sharp analyst briefing a smart friend. No throat-clearing.
+- **Simplified Technical English (reader instruction 2026-08-11).** Write the body, summary, and quiz
+  text to the core rules of ASD-STE100 STE, because the reader finds STE easier to understand:
+  - Active voice. The subject does the action ("APRA raised the buffer", not "the buffer was raised").
+  - One idea per sentence. Keep sentences to about 20 words or fewer.
+  - Keep paragraphs to about 6 sentences or fewer.
+  - Simple verbs: "use", "start", "show", "make sure" — not "utilise", "initiate", "indicate", "ensure".
+  - One term for one thing, used the same way through the article. Do not rotate synonyms for variety.
+  - No idioms, no metaphors, no wordplay.
+  - No noun clusters longer than 3 nouns — break them apart with prepositions.
+  - Keep the articles "the" and "a"; do not compress them out.
+  - Technical names stay unchanged: products, tickers, laws, standards, people, concept ids.
+  STE constrains the sentence, not the analysis. The argument, the numbers, the en-AU lens, and the
+  "earn the open" card rules below all still apply — write the same sharp piece in shorter, plainer
+  sentences.
 - Open with the single most newsworthy or useful sentence. Close with a specific next action or a
   dated thing to watch, under a heading you have NOT used this week ("The bottom line" is worn out).
 - **Earn the open.** The `title` and `summary` are the ONLY things the reader sees on the hub card
@@ -182,7 +196,9 @@ pass/fail line per check. One pass, no fetching.
 7. **Sources** — every URL in `sources` is **exactly** a URL from the brief, https, on the publisher's
    own domain, with no redirect tokens and no placeholders. Verify by **string inspection against the
    brief** — you cannot fetch, and a URL you can't find in the brief must be removed.
-8. **Voice** — house style above: banned-phrase count, fresh closing heading, ≤2 em-dash constructions.
+8. **Voice + STE** — house style above: banned-phrase count, fresh closing heading, ≤2 em-dash
+   constructions. Then scan every paragraph against the STE rules: rewrite passive constructions,
+   split sentences over ~20 words, collapse synonym rotation to one term, and delete idioms.
 9. **Quiz** — one question per taught concept; correct indices vary; correct option not the longest;
    distractors plausible.
 10. **Length** — 450–1,100 words of body text (target 600–900), after the cut in step 2. For
