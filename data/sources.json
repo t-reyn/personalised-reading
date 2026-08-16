@@ -23,7 +23,8 @@
     "https://transformer-circuits.pub/feed.xml",
     "https://news.google.com/rss/search?q=site:magazine.sebastianraschka.com&hl=en-AU&gl=AU&ceid=AU:en",
     "https://huyenchip.com/feed.xml",
-    "https://thegradient.pub/rss/"
+    "https://thegradient.pub/rss/",
+    "https://simonwillison.net/atom/everything/"
   ],
   "_comment_finance": "YouTube channel_ids: UCESLZhusAkFfsNsApnjF_Cg = All-In Podcast (named 2026-08-11 from pool attribution).",
   "finance": [
@@ -86,7 +87,8 @@
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCcefcZRL2oaA_uBNeo5UOWg",
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC6t1O76G0jYXOAoYCm153dA",
     "https://www.saastr.com/feed/",
-    "https://news.google.com/rss/search?q=%22app%20store%20optimization%22%20OR%20%22conversion%20rate%22%20OR%20churn%20OR%20retention%20app&hl=en-AU&gl=AU&ceid=AU:en"
+    "https://news.google.com/rss/search?q=%22app%20store%20optimization%22%20OR%20%22conversion%20rate%22%20OR%20churn%20OR%20retention%20app&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://levels.io/rss/"
   ],
   "mortgage-broking": [
     "https://news.google.com/rss/search?q=%22mortgage%20broker%22%20OR%20%22home%20loan%22%20OR%20refinancing%20OR%20%22serviceability%22%20OR%20%22lending%20policy%22&hl=en-AU&gl=AU&ceid=AU:en",
@@ -115,7 +117,8 @@
     "https://www.youtube.com/feeds/videos.xml?channel_id=UCUodELQsFwF8dq0X-bK9FQQ",
     "https://www.premiumbeat.com/blog/feed/",
     "https://blog.frame.io/feed/",
-    "https://news.google.com/rss/search?q=%22DaVinci%20Resolve%22%20OR%20%22colour%20grading%22%20OR%20LUT%20OR%20composition%20filmmaking&hl=en-AU&gl=AU&ceid=AU:en"
+    "https://news.google.com/rss/search?q=%22DaVinci%20Resolve%22%20OR%20%22colour%20grading%22%20OR%20LUT%20OR%20composition%20filmmaking&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://cined.com/feed/"
   ],
   "_comment_design": "YouTube channel_ids: UC8WLg9gshrtZA1-swL5D9Kg = Tim Gabe (research-style product-design breakdowns — onboarding, paywalls, retention psychology; ~3-4/mo; reader-vetted 2026-07-18), UC-b3c7kxa5vU-bnmaROgvog = The Futur, UCVyRiMvfUNMA1UPlDPzG5Ow = DesignCourse (both named 2026-08-11 from pool attribution).",
   "_comment_property": "YouTube channel_ids: UCcnw6T6HoHau4zwXq5PQbUQ = PK Gupta / Australian Property Mastery (AU data-driven suburb selection, negative gearing/CGT, lending; long-form ~8-12/mo + daily Shorts the ingest filters — round-robin caps its digest share; reader-vetted 2026-07-18), UCo_nWik261ZKSnjgoaIjz0w = Personal Finance with Ravi Sharma (named 2026-08-11 from pool attribution)."
