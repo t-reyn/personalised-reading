@@ -88,7 +88,8 @@
     "https://www.youtube.com/feeds/videos.xml?channel_id=UC6t1O76G0jYXOAoYCm153dA",
     "https://www.saastr.com/feed/",
     "https://news.google.com/rss/search?q=%22app%20store%20optimization%22%20OR%20%22conversion%20rate%22%20OR%20churn%20OR%20retention%20app&hl=en-AU&gl=AU&ceid=AU:en",
-    "https://levels.io/rss/"
+    "https://levels.io/rss/",
+    "https://www.kalzumeus.com/feed/"
   ],
   "mortgage-broking": [
     "https://news.google.com/rss/search?q=%22mortgage%20broker%22%20OR%20%22home%20loan%22%20OR%20refinancing%20OR%20%22serviceability%22%20OR%20%22lending%20policy%22&hl=en-AU&gl=AU&ceid=AU:en",
@@ -97,7 +98,8 @@
     "https://news.google.com/rss/search?q=site:brokernews.com.au&hl=en-AU&gl=AU&ceid=AU:en",
     "https://news.google.com/rss/search?q=site:asic.gov.au%20mortgage%20broker%20OR%20NCCP&hl=en-AU&gl=AU&ceid=AU:en",
     "https://news.google.com/rss/search?q=site:mfaa.com.au&hl=en-AU&gl=AU&ceid=AU:en",
-    "https://news.google.com/rss/search?q=%22responsible%20lending%22%20OR%20%22serviceability%20buffer%22%20OR%20%22best%20interests%20duty%22%20mortgage&hl=en-AU&gl=AU&ceid=AU:en"
+    "https://news.google.com/rss/search?q=%22responsible%20lending%22%20OR%20%22serviceability%20buffer%22%20OR%20%22best%20interests%20duty%22%20mortgage&hl=en-AU&gl=AU&ceid=AU:en",
+    "https://digitalfinanceanalytics.com/blog/feed/"
   ],
   "property": [
     "https://news.google.com/rss/search?q=%22investment%20property%22%20OR%20%22negative%20gearing%22%20OR%20%22capital%20gains%20tax%22%20OR%20%22property%20investing%22%20Australia&hl=en-AU&gl=AU&ceid=AU:en",
