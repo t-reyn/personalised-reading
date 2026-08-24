@@ -2722,7 +2722,21 @@
       "added_at": "2026-07-31T20:54:30.702Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-3fdf6365ef8b",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "Should We Care That Australians No Longer Own Their Life Insurers?",
+      "url": "https://invisiblebalancesheet.substack.com/p/should-we-care-that-australians-no",
+      "excerpt": "Another Australian life insurer has left the ASX. On 20 August, Zurich completed its acquisition of ClearView Wealth, with ClearView becoming part of the global insurance group. ClearView ceased to be listed on the ASX from 21 August. There is nothing inherently concerning about the transaction. Global ownership can bring capital, scale, diversification and expertise, and there are good commercial reasons why an Australian life insurer may be better off as part of a larger international group. But it does raise a question that I think we should be asking more seriously: Should we care that Australians no longer own their life insurers? I don’t mean that Australian ownership is automatically better. Nor do I think there is a case for preventing international insurers from buying Australian businesses. The question is about alignment. If I am a policyholder and my insurer pays more in claims than it receives in premiums, I might reasonably think that is a good thing. I am getting more out than I am putting in. If my claim is paid fairly and my premium is affordable, why would I worry about whether the insurer is making money? But insurance doesn’t work one policy at a time. It works as a market. Insurers need to price risk sustainably, hold capital and earn a return that makes continuing to provide insurance worthwhile. If they cannot, eventually premiums rise, products change, underwriting tightens, capital leaves or insurers withdraw from parts of the market. What is good for an individual customer today can therefore undermine the market that customer needs tomorrow. And that raises the bigger question: who actually has an incentive to care about the sustainability of Australia’s life insurance market? Where does Australian attention go? This is where ownership becomes interesting. Australia has created an enormous pool of long-term domestic capital through compulsory superannuation. Millions of Australians are indirect owners of Australian businesses, including banks, insurers and infrastructure. We complain about the banks, but we also own them through our super. We worry about their profits, but we participate in those profits through dividends and capital g",
+      "enriched_at": "2026-08-24T08:46:10.795Z",
+      "published_at": "Mon, 24 Aug 2026 06:13:39 GMT",
+      "added_at": "2026-08-24T08:46:10.795Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-08-11T02:04:04.957Z"
+  "updatedAt": "2026-08-24T08:46:11.826Z"
 }
