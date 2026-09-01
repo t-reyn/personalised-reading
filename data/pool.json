@@ -2736,7 +2736,21 @@
       "added_at": "2026-08-24T08:46:10.795Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-ec2d7437458d",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "The Cost of Simplicity",
+      "url": "https://invisiblebalancesheet.substack.com/p/the-cost-of-simplicity",
+      "excerpt": "There is something I have always found interesting about the way we measure investment risk in life insurance. It isn’t that we use prescribed stresses. In many cases, that makes perfect sense. The interesting question is what happens when we move from an asset class where we have a great deal of information about the underlying risk to one where the capital framework has much less information to work with. That distinction matters because life insurers don’t just invest in one type of asset. They have bonds, equities, property and a range of other investments, all supporting long-dated insurance liabilities. And yet the level of sophistication with which we assess the risks of those investments can be very different. This isn’t an argument that everything needs to become more complicated. It is a question of whether some of our simplest assumptions are too simple . We are very comfortable with prescription when the data is granular I remember this particularly clearly from work I did on a large Australian life insurer. The analysis of the fixed interest portfolio was extraordinarily detailed. We didn’t just look at the total value of the bond portfolio. We looked through the investment structures to understand what was actually sitting underneath them. We considered the individual exposures, their credit quality, duration and interest rate characteristics. We looked at how the assets would respond to changes in interest rates and credit spreads, and how those movements interacted with the liabilities they were supporting. This makes sense. A life insurer may have liabilities extending decades into the future. If the insurer owns a portfolio of long-duration bonds, a change in interest rates can affect both sides of the balance sheet. The question isn’t simply whether the bond falls in value. It is what happens to the asset relative to the liability . A ten-year bond and a one-year bond don’t carry the same interest rate risk. A highly rated government exposure isn’t the same as a lower-rated corporate exposure. A fixed-rate security isn’t the same as a floating-rate instrument. And so the capital framework uses the information available to differentiate between",
+      "enriched_at": "2026-09-01T02:11:13.981Z",
+      "published_at": "Mon, 31 Aug 2026 06:04:14 GMT",
+      "added_at": "2026-09-01T02:11:13.981Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-08-24T08:46:11.826Z"
+  "updatedAt": "2026-09-01T02:11:15.020Z"
 }
