@@ -2750,7 +2750,21 @@
       "added_at": "2026-09-01T02:11:13.981Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-9cae47a2e45e",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "The New Float",
+      "url": "https://invisiblebalancesheet.substack.com/p/the-new-float",
+      "excerpt": "When Warren Buffett built Berkshire Hathaway into an insurance powerhouse, he understood something that went well beyond underwriting. Insurance companies collect premiums today and pay claims in the future. Between those two events sits a pool of capital that can be invested. Buffett recognised that this “float” could become an important source of economic value, particularly when the cost of generating it through insurance was low or negative. The idea remains fundamental to insurance. But the investment side of the balance sheet has changed considerably. After years of low interest rates, insurers have increasingly looked beyond traditional government and investment-grade bonds for assets capable of generating the returns required to support long-duration liabilities. Private markets have become an important part of that search, and private credit in particular has attracted significant attention. The attraction is straightforward. Private credit can provide higher yields than traditional fixed income, longer-duration cash flows and an illiquidity premium that can be well suited to an insurer that does not need to sell its assets tomorrow. There is another attraction that may be even more important for insurers: capital efficiency . An insurer does not simply ask whether an asset will return 8% or 5%. It needs to consider how much capital is required to support the investment, how well the cash flows match its liabilities and how the asset interacts with the rest of the balance sheet. If an insurer can generate a higher investment return from an asset that remains compatible with its liabilities and capital requirements, the economics can be considerably more attractive than simply taking more equity risk. This is why private credit is becoming more than another asset class. It is becoming part of the changing economics of the insurance balance sheet. Why insurers are attracted to private credit Private credit is a broad category. It can include direct lending to companies, senior secured loans, unitranche and subordinated debt, asset-backed lending, infrastructure and real estate debt, privately placed corporate bonds and other forms of financing outside tra",
+      "enriched_at": "2026-09-08T01:20:09.665Z",
+      "published_at": "Mon, 07 Sep 2026 06:13:33 GMT",
+      "added_at": "2026-09-08T01:20:09.665Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-09-01T02:11:15.020Z"
+  "updatedAt": "2026-09-08T01:20:11.016Z"
 }
