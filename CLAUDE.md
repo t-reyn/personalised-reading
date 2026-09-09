@@ -6,6 +6,12 @@ Guidance for Claude Code working in this repo — **and the authoring contract f
 > project state: architecture, the profile-driven content model, how the daily run works, local-dev +
 > verify commands, redesign guardrails, and the solved gotchas.
 
+## Memory
+
+Project memory for this repo lives in the claude-sync repo and is imported below. It loads only when a session works in this project. When a fact about this project changes, update that file in place (Status, Open items, Key decisions). Dated history goes in the ARCHIVE.md or dated project file beside it, never the workspace MEMORY.md. Cross-project rules stay in the root `claude-sync/memory/MEMORY.md`.
+
+@../claude-sync/memory/personalised-reading/MEMORY.md
+
 ## What this is
 
 A personal, single-user "reading list that writes itself and learns what you know." It is a **static
