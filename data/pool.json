@@ -2764,7 +2764,21 @@
       "added_at": "2026-09-08T01:20:09.665Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-1db4bc794c43",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "Which CEO Sleeps Safer at Night?",
+      "url": "https://invisiblebalancesheet.substack.com/p/which-ceo-sleeps-safer-at-night",
+      "excerpt": "There is something slightly counterintuitive about comparing a life insurer with a bank. A life insurer appears to be taking an enormous amount of risk. It accepts premiums today in return for promises that might not be called upon for decades. People die, people become disabled, people live longer than expected and people cancel their policies. Behind those promises sit actuaries, underwriters, investment managers and risk teams trying to work out what is likely to happen and how much capital is needed if they get it wrong. A bank, on the other hand, seems much simpler. Customers put their money into an account and the bank lends it to someone else, usually through a mortgage or a business loan. The bank earns a margin between what it charges its borrowers and what it pays its depositors. Most people would probably feel more comfortable leaving their savings with the bank. But I wonder whether the risks are actually as straightforward as they appear. Two different types of uncertainty One useful way of thinking about risk is to distinguish between uncertainty that can be measured and uncertainty where the underlying behaviour is much harder to predict. Life insurance contains a surprising amount of the first type. An insurer doesn’t know which individual policyholder will die next year. It doesn’t know which customer will make a claim or which policyholder will lapse. But with a large enough portfolio, it can make a reasonably good estimate of how many claims it should expect. Mortality is uncertain for the individual, but across millions of people it becomes remarkably predictable. That is one of the great ideas behind insurance. We don’t need to know what will happen to each person. We need to understand what is likely to happen across the pool. There are, of course, risks that don’t fit neatly into this model. Investment markets can behave differently from history, medical advances can change longevity and a pandemic can alter mortality. But much of the core insurance risk is still something that can be observed, modelled, pooled and priced. This is quite different from risks where the system itself can change, particularly when the behaviour of other partic",
+      "enriched_at": "2026-09-14T08:59:58.312Z",
+      "published_at": "Mon, 14 Sep 2026 06:17:10 GMT",
+      "added_at": "2026-09-14T08:59:58.312Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-09-08T01:20:11.016Z"
+  "updatedAt": "2026-09-14T08:59:59.845Z"
 }
