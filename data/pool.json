@@ -2778,7 +2778,21 @@
       "added_at": "2026-09-14T08:59:58.312Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-319f9e692db7",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "Small Numbers, Big Problems",
+      "url": "https://invisiblebalancesheet.substack.com/p/small-numbers-big-problems",
+      "excerpt": "We work with millions of policies, billions of dollars of premiums and enough spreadsheets to bring down a moderately sized laptop. We talk about “big data” quite comfortably, and there is an understandable assumption that the bigger the dataset, the bigger or more difficult the problem. But I have always been fascinated by the fact that big numbers and big problems aren’t necessarily the same thing. This came to mind recently during a presentation from Swiss Re on TPD. It was a genuinely interesting presentation, but one number stuck with me. 4,000. Roughly 4,000 TPD claims. Four thousand people being unable to work is obviously significant. It is enough to generate experience studies, pricing discussions, sustainability questions, capital analysis, reinsurance discussions and, eventually, several board papers. Small number, big problem. But this isn’t really about TPD. It just made me think about the opposite: small problems, big numbers . As an actuary, this is much more fun. So what actually counts as a big number? I once attended a lecture for an ICE get together, where some very smart mathematicians gave a really cool presentation on big numbers and small problems that stuck with me. I should probably clarify that ICE stands for Intercontinental Exchange. This was back when I was moonlighting trading Sugar and Coffee futures, not necessarily deporting illegals. The presentation got me thinking about the different ways something can become “big”. Sometimes it is simply the number of things that exist. Sometimes it is the number of ways a small number of things can be arranged. Sometimes it is the number of things a computer could theoretically do. And eventually mathematics gets to the point where it can create enormous numbers simply because it is fun to see how far the idea can be pushed. When actuaries had big data If we want to think about genuinely big numbers, perhaps actuaries aren’t the worst place to start. Insurance companies were some of the early commercial adopters of computers in the 1960s and 1970s. We had millions of policies, huge calculations and datasets that were becoming far too large and tedious to deal with by hand. For a while, that ",
+      "enriched_at": "2026-09-22T01:52:02.854Z",
+      "published_at": "Mon, 21 Sep 2026 06:17:41 GMT",
+      "added_at": "2026-09-22T01:52:02.854Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-09-14T08:59:59.845Z"
+  "updatedAt": "2026-09-22T01:52:04.303Z"
 }
