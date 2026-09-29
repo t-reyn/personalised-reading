@@ -2792,7 +2792,21 @@
       "added_at": "2026-09-22T01:52:02.854Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-122ff57c9968",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "The Insurance Bond: The Old Product That Keeps on Chugging",
+      "url": "https://invisiblebalancesheet.substack.com/p/the-insurance-bond-the-old-product",
+      "excerpt": "There is an obscure pattern in life insurance. Whenever changes to superannuation are being discussed: contribution caps, access rules, taxes on large balances - advisers start dusting off this forgotten drawer of financial products and asking whether something that seemed irrelevant a few years ago might now be useful again. And now Albo has almost certainly changed the CGT rules as well. That makes the drawer worth opening. Insurance bonds have been around for decades They aren’t a new investment innovation and they aren’t some clever loophole that has somehow escaped the attention of the tax office. They are an old structure sitting at the intersection of investment, life insurance and tax law and and have survived successive changes to the tax system. What makes them topical again is that the rules around the more well-trodden roads are changing yet again. From 1 July 2026, the tax treatment of very large super balances has become less concessional, with a 30% rate applying to earnings on balances between $3 million and $10 million and 40% above $10 million. The thresholds are indexed. Then from 1 July 2027, the Government is replacing the 50% CGT discount with an inflation-based approach and a minimum 30% tax rate on real capital gains. The changes are prospective, applying to gains accruing from 1 July 2027. Which makes the question of where the next dollar should live a little more interesting. What exactly is an insurance bond? The name is slightly confusing because an insurance bond isn’t really a bond at all. You aren’t lending money to a company or the Government. Instead, it is an investment held within a life insurance policy. You contribute money to the policy and the insurer invests it in the investment options you select. The interesting part is what happens to the tax. The insurer pays tax on the investment earnings within the policy, generally at up to 30%. The actual outcome can be lower depending on the investments and things such as franking credits. The investor doesn’t generally receive taxable income from the bond each year in the way they would from directly owning shares or managed funds. This is why investment bonds are often described",
+      "enriched_at": "2026-09-29T01:12:16.943Z",
+      "published_at": "Mon, 28 Sep 2026 06:15:57 GMT",
+      "added_at": "2026-09-29T01:12:16.943Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-09-22T01:52:04.303Z"
+  "updatedAt": "2026-09-29T01:12:17.886Z"
 }
