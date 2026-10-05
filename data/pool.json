@@ -2806,7 +2806,21 @@
       "added_at": "2026-09-29T01:12:16.943Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-bae450fbc3ab",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "The Missing Middle of Financial Advice",
+      "url": "https://invisiblebalancesheet.substack.com/p/the-missing-middle-of-financial-advice",
+      "excerpt": "On 19 August 2026, the Australian Government announced the next stage of its reforms to financial advice. I think this is one of the more important developments for the advice industry in recent years, not because it represents a retreat from professional standards, but because it recognises a problem that has been building for some time. We have made financial advice more professional. We have also made it more difficult and expensive to provide. The Government is now trying to address that balance by progressing a new class of adviser, initially restricted to APRA-regulated superannuation funds and life insurers. It also intends to make changes to the best interests duty to make scaled advice easier for existing qualified advisers. The new class will initially be limited to three years before the Government reviews how it is working. It is important to be clear about where this currently sits. The announcement on 19 August is a policy commitment. The legislation to establish the new class has not yet passed Parliament. But the direction is now clear and I think the direction is a good one. The reason is fairly simple. Not every financial question requires comprehensive financial advice. We have spent years making advice better. We also made it harder to get. There is a lot that has changed in financial advice over the past decade and much of it was necessary. The Royal Commission exposed serious problems with conflicts, remuneration and the quality of advice being provided to consumers. The response was to increase professional standards, strengthen obligations on advisers and put much greater emphasis on documentation, process and compliance. The industry responded. Advisers went back to university. They completed additional qualifications, sat exams and undertook professional years. Advice businesses invested heavily in compliance systems and processes. There is nothing wrong with that. If I am going to pay someone to provide comprehensive advice about my retirement, investments, insurance, tax and estate planning, I want that person to be properly qualified. I also want strong consumer protections around the advice they provide. The problem is that not ever",
+      "enriched_at": "2026-10-05T23:07:00.829Z",
+      "published_at": "Mon, 05 Oct 2026 05:11:39 GMT",
+      "added_at": "2026-10-05T23:07:00.829Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-09-29T01:12:17.886Z"
+  "updatedAt": "2026-10-05T23:07:02.118Z"
 }
