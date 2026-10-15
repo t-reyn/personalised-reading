@@ -2820,7 +2820,21 @@
       "added_at": "2026-10-05T23:07:00.829Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-04e79bf53726",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "The Life Insurers That Paid for Their Own Sale",
+      "url": "https://invisiblebalancesheet.substack.com/p/the-life-insurers-that-paid-for-their",
+      "excerpt": "There is a story in Australian life insurance that deserves to be remembered. It involves two life insurers, a heavily geared owner, a $132 million sale, a mysterious overseas investor, a two-dollar shelf company, a man operating under an alias and $65 million removed from statutory funds. It would be easy to tell it as one of Australia’s great insurance frauds. The fraud is only part of the story. Occidental and Regal were already in financial difficulty before the fraud occurred. The $65 million transaction triggered the crisis, but the underlying problems had been building for several years. By the time the sale took place, the companies were already looking for a way out of a difficult financial position. It is also a story about professional responsibility. The actuaries did not cause the failure. The harder question is what is expected of an actuary when an insurer’s financial position is deteriorating and the warning signs are building, yet no single event tells everyone that the business is in danger. The way we manage risk today was shaped partly by lessons like this one. That is why the question still matters. The businesses behind the story Occidental had been operating in Australia since 1968 and had grown into a medium-sized life insurer. Its principal strength was risk insurance. By the late 1970s, it was one of the five largest insurers in Australia in term life and disability insurance. That business represented only around 10% of Occidental’s actuarial liabilities but generated a significant proportion of the company’s expense support, profit and surplus. The other side of the business was much larger in balance-sheet terms. Occidental had built a substantial investment business, including capital-guaranteed and market-linked products, with approximately $350 million of actuarial liabilities across four statutory funds by 1990. Regal had traditionally concentrated on whole-of-life and endowment business. It moved increasingly towards investment products during the 1980s and had approximately $170 million of policy liabilities by 1990. Battery Group acquired Occidental in 1987 for $105 million and Regal in 1988 for $22 million. Both companies had",
+      "enriched_at": "2026-10-15T12:31:06.463Z",
+      "published_at": "Wed, 14 Oct 2026 05:16:04 GMT",
+      "added_at": "2026-10-15T12:31:06.463Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-10-05T23:07:02.118Z"
+  "updatedAt": "2026-10-15T12:31:07.612Z"
 }
