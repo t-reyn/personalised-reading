@@ -2834,7 +2834,21 @@
       "added_at": "2026-10-15T12:31:06.463Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-e14c88e2e131",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "The Best Manager in 2036 Is an Actuary",
+      "url": "https://invisiblebalancesheet.substack.com/p/the-best-manager-in-2036-is-an-actuary",
+      "excerpt": "There is an old joke about actuaries. How do you spot the extrovert actuary? He looks at your shoes when he talks to you. For most of my career the joke had a quiet message. Actuaries are good with numbers and less good with people. So when the leadership roles come up we are the safe pair of hands in the corner. We are rarely the person at the front of the room. I have started to wonder if the joke is about to turn. A team that never gets upset It is 2036. I run a reinsurance team. Four of us are people. The other forty are AI agents. My agents do not need a morale boost. They have never asked about the offsite. The engagement survey came back at 100% and I have never trusted a result less. What they need is different. They need a clear objective. They need assumptions written down. They need tolerances so they know when to stop and ask. Their output needs validating and someone has to watch for drift. Above all they need a manager who is comfortable saying the model is wrong. I know a profession that has been doing exactly that for a long time. One-on-ones In 2036 my weekly one-on-one with the claims agent takes eleven seconds. I ask how it is going. It sends me a reconciliation. I ask if anything is worrying it. It sends me a second reconciliation with the differences highlighted. Performance reviews are easier too. I do them as an experience study. Actual versus expected. If the agent closed more files than expected and the accuracy held up, it gets a good review. If it was wrong more often than we assumed, we strengthen the assumption. Nobody cries. Nobody asks for a pay rise. Then there is the agent that hallucinates. In the old world this would be a difficult conversation. In my new world it is a margin. The agent invents a treaty clause now and then, so we treat its output as a best estimate with a loading on top. We monitor the rate. If it gets worse we strengthen again. I have written that sentence about mortality improvement many times. I never thought I would write it about a colleague. The Christmas party is quiet. I booked a room for forty-four. Two of us turned up. The other two were working from home. The agents were invited. They sent a summary ",
+      "enriched_at": "2026-11-09T02:05:23.170Z",
+      "published_at": "Fri, 06 Nov 2026 02:29:28 GMT",
+      "added_at": "2026-11-09T02:05:23.170Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-10-15T12:31:07.612Z"
+  "updatedAt": "2026-11-09T02:05:24.437Z"
 }
