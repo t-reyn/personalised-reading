@@ -2848,7 +2848,21 @@
       "added_at": "2026-11-09T02:05:23.170Z",
       "status": "pending",
       "used_in": []
+    },
+    {
+      "id": "actuarial-7d3941fa6509",
+      "interest": "actuarial",
+      "feed": "https://invisiblebalancesheet.substack.com/feed",
+      "kind": "article",
+      "title": "What Should TPD Actually Insure?",
+      "url": "https://invisiblebalancesheet.substack.com/p/what-should-tpd-actually-insure",
+      "excerpt": "Suppose a client can afford $1,000 a year for TPD. That buys $1,000,000 of cover under a narrower definition. Under a broader definition it buys about $500,000. Which should they choose? The broader cover may be more likely to pay. The narrower cover provides a larger benefit when it does. That tension sits at the center of the challenge facing the Australian TPD market. There is broad recognition that traditional TPD has a sustainability problem, but there is no agreed view on what the solution should look like. With income protection, the industry ultimately moved in a relatively common direction. APRA intervened between 2019 and 2021, agreed-value contracts ended and replacement ratios were capped. The reforms were not without trade-offs, but they gave the market a clearer framework within which to operate. TPD is taking a longer path. Rather than moving towards one common product framework, insurers have been required to independently develop their own responses. Some have introduced additional assessment criteria for particular conditions. Some use impairment-based tests. Others pay benefits progressively instead of as one lump sum. Each approach reflects a different view of how TPD should balance the severity and permanence of disability, the ability to work, the amount paid and the cost of cover. But developing a more sustainable product is only part of the challenge. The bigger question may be whether advisers and customers will actually adopt these alternatives while traditional TPD remains available. The market isn’t simply deciding which product is best. It is deciding whether it is ready to move away from the product structures it has relied on for decades. So what are advisers and customers supposed to make of all these choices? TPD doesn’t have one problem TPD has traditionally tried to do a lot of different jobs at once. For some clients it is essentially income replacement. For others it is there to repay a mortgage, pay for home modifications, medical treatment, rehabilitation or long-term care. For business owners the loss can be different again. These risks don’t line up neatly with one definition of “totally and permanently disabled”. Someone",
+      "enriched_at": "2026-11-13T01:36:56.525Z",
+      "published_at": "Thu, 12 Nov 2026 04:52:30 GMT",
+      "added_at": "2026-11-13T01:36:56.525Z",
+      "status": "pending",
+      "used_in": []
     }
   ],
-  "updatedAt": "2026-11-09T02:05:24.437Z"
+  "updatedAt": "2026-11-13T01:36:57.371Z"
 }
